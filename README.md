@@ -26,8 +26,9 @@ node tools/render.js --pattern jungle_amen_01 --bars 8 --bpm 172 \
 
 ## Help
 
-Пошаговая инструкция на русском: [docs/HELP.ru.md](docs/HELP.ru.md)
-Drum rack setup guide: [docs/drum-rack-setup.md](docs/drum-rack-setup.md)
+- Step-by-step guide: [docs/HELP.md](docs/HELP.md)
+- Пошаговая инструкция (RU): [docs/HELP.ru.md](docs/HELP.ru.md)
+- Drum rack setup: [docs/drum-rack-setup.md](docs/drum-rack-setup.md)
 
 ## Structure
 
