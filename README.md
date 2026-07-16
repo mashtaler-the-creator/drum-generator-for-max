@@ -24,6 +24,11 @@ node tools/render.js --pattern jungle_amen_01 --bars 8 --bpm 172 \
 
 `--seed` makes output reproducible; omit it for a fresh variation each run.
 
+## Help
+
+Пошаговая инструкция на русском: [docs/HELP.ru.md](docs/HELP.ru.md)
+Drum rack setup guide: [docs/drum-rack-setup.md](docs/drum-rack-setup.md)
+
 ## Structure
 
 - `js/engine.js` — rendering engine (ticks @ 480 PPQ, durations, chokes)
