@@ -1,0 +1,40 @@
+{
+  "_comment": "Humanization presets. Values grounded in drum-programming best practices: velocity jitter ~4% (+/-5 of 127), timing jitter <= ~10 ticks with kick/crash anchored to the grid, hi-hat hand cycle (down-beat loud, off-beats soft), backbeat snare accent, ghost notes at low velocity biased to the step before a main snare, fills that ramp velocity, and a two-hand simultaneity limit.",
+
+  "machine": {
+    "_desc": "No humanization. Grid-perfect. For techno/electro where robotic IS the style.",
+    "velocityJitter": 0,
+    "humanizeTicks": 0,
+    "hatCycleDepth": 0,
+    "backbeatAccent": 0,
+    "ghostProbability": 0,
+    "fillRamp": 0,
+    "maxSimultaneousHands": 0
+  },
+
+  "tight": {
+    "_desc": "Session drummer: subtle velocity/timing variation, hat cycle, anchored kick.",
+    "velocityJitter": 4,
+    "humanizeTicks": 6,
+    "hatCycleDepth": 0.6,
+    "backbeatAccent": 8,
+    "ghostProbability": 0.04,
+    "preSnareGhostBias": 4,
+    "fillRamp": 0.7,
+    "maxSimultaneousHands": 2,
+    "rolePushTicks": { "hihat": -3 }
+  },
+
+  "breaks": {
+    "_desc": "Jungle/breakbeat feel: looser timing, laid-back snare, active ghosts, strong hat cycle.",
+    "velocityJitter": 6,
+    "humanizeTicks": 10,
+    "hatCycleDepth": 0.8,
+    "backbeatAccent": 10,
+    "ghostProbability": 0.09,
+    "preSnareGhostBias": 5,
+    "fillRamp": 1.0,
+    "maxSimultaneousHands": 2,
+    "rolePushTicks": { "snare": 5, "hihat": -4 }
+  }
+}

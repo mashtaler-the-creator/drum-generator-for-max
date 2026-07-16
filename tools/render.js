@@ -34,7 +34,7 @@ function main() {
     for (const p of patterns) {
       console.log(`  ${p.id}  [${p.style}]${(p.tags || []).includes("fill") ? " (fill)" : ""}`);
     }
-    console.log("\nUsage: node tools/render.js --pattern <id> [--bars 8] [--bpm 172] [--density 0.85] [--ghosts 0.08] [--seed 42] [--out file.mid]");
+    console.log("\nUsage: node tools/render.js --pattern <id> [--preset tight|breaks|machine] [--bars 8] [--bpm 172] [--density 0.85] [--ghosts 0.08] [--humanize 6] [--hat-cycle 0.6] [--backbeat 8] [--vel-jitter 4] [--seed 42] [--out file.mid]");
     process.exit(1);
   }
 
@@ -52,11 +52,27 @@ function main() {
   const bpm = parseInt(arg("bpm", "172"), 10);
   const seedArg = arg("seed");
 
-  const state = makeState(pattern, mapping, {
+  // Preset first, explicit flags override it.
+  const presets = JSON.parse(
+    fs.readFileSync(path.join(ROOT, "js", "presets.json"), "utf8")
+  );
+  const presetName = arg("preset", "tight");
+  const preset = presets[presetName];
+  if (!preset) {
+    console.error(`Unknown preset "${presetName}". Available: ${Object.keys(presets).filter((k) => k[0] !== "_").join(", ")}`);
+    process.exit(1);
+  }
+  const overrides = Object.assign({}, preset, {
     density: parseFloat(arg("density", "1.0")),
-    ghostProbability: parseFloat(arg("ghosts", "0")),
-    humanizeTicks: parseInt(arg("humanize", "0"), 10),
   });
+  delete overrides._desc;
+  if (arg("ghosts") !== undefined) overrides.ghostProbability = parseFloat(arg("ghosts"));
+  if (arg("humanize") !== undefined) overrides.humanizeTicks = parseInt(arg("humanize"), 10);
+  if (arg("hat-cycle") !== undefined) overrides.hatCycleDepth = parseFloat(arg("hat-cycle"));
+  if (arg("backbeat") !== undefined) overrides.backbeatAccent = parseInt(arg("backbeat"), 10);
+  if (arg("vel-jitter") !== undefined) overrides.velocityJitter = parseFloat(arg("vel-jitter"));
+
+  const state = makeState(pattern, mapping, overrides);
 
   const fillPatterns = findByStyle(patterns, pattern.style).filter(
     (p) => (p.tags || []).includes("fill") && p.id !== pattern.id
@@ -71,7 +87,7 @@ function main() {
   const out = arg("out", `${id}_${bars}bars.mid`);
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
   fs.writeFileSync(out, midi);
-  console.log(`Wrote ${events.length} notes (${bars} bars @ ${bpm} bpm) -> ${out}`);
+  console.log(`Wrote ${events.length} notes (${bars} bars @ ${bpm} bpm, preset: ${presetName}) -> ${out}`);
   if (fillPatterns.length) {
     console.log(`Fill candidates used: ${fillPatterns.map((p) => p.id).join(", ")}`);
   }

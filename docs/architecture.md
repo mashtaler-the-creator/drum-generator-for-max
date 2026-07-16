@@ -69,3 +69,36 @@ a classic GM-style layout or a custom one, no pattern rewrite needed.
   polling (accurate, more complex) — recommend starting with `metro` for v1
 - Clip-write vs live-only: start live-only (simpler), add clip-write once
   the engine and pattern library are solid
+
+## Humanization settings (v0.3)
+
+Grounded in drum-programming best practice research (Splice, Loopmasters,
+Attack Magazine, Ableton manual). All default to OFF; presets in
+`js/presets.json` bundle sensible values (`tight`, `breaks`, `machine`).
+
+| Setting | What it does | Practice it encodes |
+|---|---|---|
+| `velocityJitter` | random +/- on every hit | ~4% velocity variation (+/-5 of 127) reads as human, more reads as sloppy |
+| `humanizeTicks` | random timing offset | <= ~10 ticks; drummers are tight, jitter should be subliminal |
+| `anchorRoles` | roles excluded from jitter | kicks and crashes carry accents and stay ON the grid |
+| `rolePushTicks` | constant per-role offset | laid-back snare (+ticks), pushed hats (-ticks) create feel, not noise |
+| `hatCycleDepth` | 4-step hat velocity cycle | real hand pattern: down-beat loud (~90), off-beats soft (~65) |
+| `backbeatAccent` | snare boost on beats 2 & 4 | the backbeat hits harder than everything around it |
+| `ghostProbability` + `preSnareGhostBias` | low-velocity inserts, biased to the step before a main snare | ghosts at vel 18-45; the pre-snare "suck-in" ghost makes the main hit feel bigger |
+| `fillRamp` | velocity build across fill bars | fills grow (90 -> 110 -> 120), they don't sit flat |
+| `maxSimultaneousHands` | cap non-kick notes per tick | a drummer has two hands; 4 simultaneous hand hits is physically fake |
+
+Pattern authoring guideline that follows from the same research: program
+hi-hats in the 60-95 velocity range with occasional accents to 100, main
+snares 100-115, and reserve everything below ~70 for ghosts, because the
+density dial treats velocity >= 90 as an accent that always fires.
+
+## Drum rack setup on the Live side
+
+The engine cuts openHat note lengths when a closed hat lands (see
+`applyChokes`), but the authoritative choke lives in the drum rack itself:
+open the rack's Chain List -> Input/Output section, and set the same Choke
+group (1-16) for the closed and open hat chains so the closed hat silences
+the open one at audio level. Do the same for any long-tail sounds that
+shouldn't overlap themselves. This matters because MIDI note-off doesn't
+stop a one-shot sample — only the choke group does.
