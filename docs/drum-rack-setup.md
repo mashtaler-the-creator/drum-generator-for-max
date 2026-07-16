@@ -6,19 +6,53 @@ it only sends notes. The rack must have the right sound on the right note.
 
 ## Note layout (matches mapping-default.json, GM-style)
 
+### Core kit
+
 | Note | MIDI # | Role      | Sound |
 |------|--------|-----------|-------|
 | C1   | 36     | kick      | main kick |
+| C#1  | 37     | rim       | rimshot / sidestick |
 | D1   | 38     | snare     | main snare |
-| D#1  | 39     | perc      | clap / rimshot / percussion |
+| D#1  | 39     | perc      | clap |
 | F#1  | 42     | hihat     | closed hat |
 | A#1  | 46     | openHat   | open hat |
 | C#2  | 49     | crash     | crash cymbal |
 | D#2  | 51     | ride      | ride cymbal |
 
-7 pads is the complete kit for the current pattern library. Don't build a
-40-pad rack "just in case" — every extra pad is a pad the generator never
-triggers.
+### Toms and percussion (optional — add as patterns need them)
+
+| Note | MIDI # | Role       | Classic drum machine source |
+|------|--------|------------|------------------------------|
+| G1   | 43     | tomLow     | 909/808 low tom |
+| B1   | 47     | tomMid     | 909/808 mid tom |
+| D2   | 50     | tomHigh    | 909/808 high tom |
+| F#2  | 54     | tambourine | CR-78 / 727 tambourine |
+| G#2  | 56     | cowbell    | 808 cowbell |
+| D#3  | 63     | congaHigh  | 808 high conga / 727 |
+| E3   | 64     | congaLow   | 808 mid-low conga / 727 |
+| A#3  | 70     | shaker     | 727 maracas / CR-78 |
+| D#4  | 75     | clave      | 808 clave / rimshot-clave |
+
+Notes follow the GM percussion map, so rendered .mid files open correctly
+in any DAW or hardware sampler. Classic drum machine one-shots (808, 909,
+CR-78, 727) are ideal for the percussion tier: they're short, mono-ish,
+and read clearly at low velocity.
+
+Build order that keeps the rack manageable: core 8 pads first, then add
+percussion pads only when a pattern actually uses the role. The generator
+silently skips unmapped roles, and roles with no pad in the rack simply
+produce a note nothing answers — no errors either way, but a lean rack is
+easier to mix.
+
+Engine behavior for the new roles:
+- **shaker** gets the same hand-cycle velocity shaping as hihat/ride
+  (`hatCycleRoles` setting) — shakers played by a human always breathe
+- **rim** can host ghost notes (`ghostRoles`) — classic sidestick texture
+- **toms** are normal voices: program them mostly in fills, descending
+  high -> mid -> low reads as the classic fill move (see
+  `patterns/jungle/jungle_fill_toms_01.json`)
+- congas/clave/cowbell/tambourine get velocity jitter and timing humanize
+  like everything else, no special casing
 
 ## Which samples to pick (jungle/dnb-oriented)
 

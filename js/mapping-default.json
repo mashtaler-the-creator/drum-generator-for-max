@@ -1,9 +1,19 @@
 {
   "kick": 36,
+  "rim": 37,
   "snare": 38,
+  "perc": 39,
+  "tomLow": 43,
   "hihat": 42,
+  "tomMid": 47,
   "openHat": 46,
-  "ride": 51,
+  "tomHigh": 50,
   "crash": 49,
-  "perc": 39
+  "ride": 51,
+  "tambourine": 54,
+  "cowbell": 56,
+  "congaHigh": 63,
+  "congaLow": 64,
+  "shaker": 70,
+  "clave": 75
 }

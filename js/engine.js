@@ -20,8 +20,9 @@ const DEFAULTS = {
   density: 1.0,            // 0..1, thins out non-accent hits
   accentThreshold: 90,     // velocity >= this always fires regardless of density
   ghostProbability: 0.0,   // 0..1, chance to insert a ghost in a silent step
-  ghostRoles: ["snare", "hihat"], // ghosts make musical sense only here
+  ghostRoles: ["snare", "hihat", "rim"], // ghosts make musical sense only here
   ghostVelocityRange: [18, 45],
+  hatCycleRoles: ["hihat", "ride", "shaker"], // roles that get the hand-cycle shaping
   preSnareGhostBias: 3,    // multiply ghost odds on the step right before a snare hit
   fillEveryNBars: 4,       // consider a fill on every Nth bar
   fillProbability: 0.5,    // chance the fill actually happens on those bars
@@ -187,7 +188,7 @@ function render(state, bars, opts) {
 // --- velocity shaping -------------------------------------------------------
 // Order: hat hand-cycle -> backbeat accent -> fill ramp -> jitter -> clamp.
 function shapeVelocity(state, role, velocity, step, beatSteps, rampScale, rng) {
-  if (state.hatCycleDepth > 0 && (role === "hihat" || role === "ride")) {
+  if (state.hatCycleDepth > 0 && state.hatCycleRoles.indexOf(role) !== -1) {
     const mult = HAT_CYCLE[step % HAT_CYCLE.length];
     velocity = velocity * (1 - state.hatCycleDepth * (1 - mult));
   }
