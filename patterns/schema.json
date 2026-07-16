@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DrumPattern",
+  "type": "object",
+  "required": ["id", "style", "bars", "stepsPerBar", "tracks"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "style": { "type": "string" },
+    "bars": { "type": "integer", "minimum": 1 },
+    "stepsPerBar": { "type": "integer", "enum": [8, 16, 32] },
+    "swing": { "type": "number", "minimum": 0, "maximum": 0.5, "default": 0 },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "tracks": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "integer", "minimum": 0, "maximum": 127 }
+      }
+    }
+  }
+}

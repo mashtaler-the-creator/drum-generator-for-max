@@ -1,0 +1,12 @@
+{
+  "name": "m4l-drum-generator",
+  "version": "0.1.0",
+  "description": "Max for Live device that generates MIDI drum parts from a style-tagged pattern library",
+  "main": "js/engine.js",
+  "scripts": {
+    "validate": "node tools/validate-patterns.js",
+    "demo": "node -e \"require('./js/engine').demo()\""
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
