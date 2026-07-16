@@ -1,119 +1,203 @@
-// engine.js
-// Host-agnostic drum pattern engine. Pure functions over plain data so it
-// can run identically inside Node (for testing) or inside a Max `js`
-// object (Max's js engine supports this subset fine: no async/await used,
-// no Node-only globals in the hot path).
+// engine.js (v2)
+// Renders a style-tagged drum pattern into concrete note events:
+//   { role, note, velocity, startTick, durationTick }
+// at PPQ = 480 (ticks per quarter note).
+//
+// Host-agnostic and deterministic when given a seeded RNG. Runs in Node for
+// testing/CLI rendering, and is written to also run inside Max's `v8` object
+// (modern JS engine, Max 8.6+ / Live 12). It will NOT run in the legacy
+// `js` object (ES5 only) — that is a deliberate choice, see docs.
 
-/**
- * @typedef {Object} EngineState
- * @property {Object} pattern      active pattern object (see schema.json)
- * @property {Object} mapping      role -> MIDI note
- * @property {number} density     0-1, probability multiplier for non-accent hits
- * @property {number} fillEveryNBars
- * @property {number} fillProbability 0-1
- * @property {number} ghostProbability 0-1, chance to insert a ghost note in a gap
- */
+"use strict";
 
-function defaultState(pattern, mapping) {
-  return {
-    pattern,
-    mapping,
-    density: 1.0,
-    fillEveryNBars: 4,
-    fillProbability: 0.3,
-    ghostProbability: 0.0,
+const PPQ = 480;
+
+// ---------------------------------------------------------------------------
+// Config / state
+// ---------------------------------------------------------------------------
+
+const DEFAULTS = {
+  density: 1.0,            // 0..1, thins out non-accent hits
+  accentThreshold: 90,     // velocity >= this always fires regardless of density
+  ghostProbability: 0.0,   // 0..1, chance to insert a ghost in a silent step
+  ghostRoles: ["snare", "hihat"], // ghosts make musical sense only here
+  ghostVelocityRange: [18, 34],
+  fillEveryNBars: 4,       // consider a fill on every Nth bar
+  fillProbability: 0.5,    // chance the fill actually happens on those bars
+  humanizeTicks: 0,        // +/- random timing jitter in ticks (0 = off)
+  gate: 0.5,               // note length as a fraction of one step
+};
+
+function makeState(pattern, mapping, overrides) {
+  const state = Object.assign({}, DEFAULTS, overrides || {});
+  state.pattern = pattern;
+  state.mapping = mapping;
+  return state;
+}
+
+// Simple seedable RNG (mulberry32) so renders are reproducible.
+function makeRng(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
 
-// Returns swing offset in steps (fractional) for a given step index.
-function swingOffset(pattern, stepIndex) {
+// ---------------------------------------------------------------------------
+// Timing helpers
+// ---------------------------------------------------------------------------
+
+function ticksPerStep(pattern) {
+  // stepsPerBar of 16 in 4/4 => one step = a 16th = PPQ/4 ticks.
+  return (PPQ * 4) / pattern.stepsPerBar;
+}
+
+// Swing: delay every 2nd subdivision. pattern.swing is 0..0.5 where
+// 0 = straight, ~0.33 = classic triplet feel. Expressed in ticks.
+function swingTicks(pattern, stepInBar) {
   const swing = pattern.swing || 0;
-  const isOffBeat = stepIndex % 2 === 1;
-  return isOffBeat ? swing : 0;
+  if (stepInBar % 2 === 0) return 0;
+  return Math.round(ticksPerStep(pattern) * swing);
 }
 
-// Decide whether a scheduled hit at `velocity` should actually fire,
-// given the density dial. Accents (velocity >= 90) always fire; weaker
-// hits are thinned out as density drops.
-function shouldFire(velocity, density, rng) {
+// ---------------------------------------------------------------------------
+// Per-hit decisions
+// ---------------------------------------------------------------------------
+
+function shouldFire(velocity, state, rng) {
   if (velocity <= 0) return false;
-  if (velocity >= 90) return true;
-  return rng() < density;
+  if (velocity >= state.accentThreshold) return true;
+  return rng() < state.density;
 }
 
-// Maybe insert a ghost note into a currently-silent step.
-function maybeGhost(ghostProbability, rng) {
-  return rng() < ghostProbability;
+function ghostVelocity(state, rng) {
+  const [lo, hi] = state.ghostVelocityRange;
+  return lo + Math.floor(rng() * (hi - lo + 1));
 }
+
+// ---------------------------------------------------------------------------
+// Fill selection
+// ---------------------------------------------------------------------------
+// A fill is just another pattern with the same style, tagged "fill".
+// pickPatternForBar decides which pattern supplies the notes for a given bar.
+
+function pickPatternForBar(state, barIndex, fillPatterns, rng) {
+  const n = state.fillEveryNBars;
+  const isFillBar = n > 0 && barIndex > 0 && (barIndex + 1) % n === 0;
+  if (!isFillBar || !fillPatterns || fillPatterns.length === 0) {
+    return state.pattern;
+  }
+  if (rng() >= state.fillProbability) return state.pattern;
+  return fillPatterns[Math.floor(rng() * fillPatterns.length)];
+}
+
+// ---------------------------------------------------------------------------
+// Rendering
+// ---------------------------------------------------------------------------
 
 /**
- * Compute the note events for a single step across all tracks.
- * @param {EngineState} state
- * @param {number} stepIndex  absolute step index (0-based, wraps per pattern length)
- * @param {function():number} rng  injectable RNG for testability (default Math.random)
- * @returns {Array<{role:string, note:number, velocity:number, offset:number}>}
+ * Render `bars` bars of drums into note events.
+ *
+ * @param {object} state        from makeState()
+ * @param {number} bars         how many bars to render
+ * @param {object} [opts]
+ * @param {Array}  [opts.fillPatterns]  candidate fill patterns (same style)
+ * @param {number} [opts.seed]          RNG seed for reproducible output
+ * @returns {Array<{role,note,velocity,startTick,durationTick}>}
  */
-function stepEvents(state, stepIndex, rng = Math.random) {
-  const { pattern, mapping, density, ghostProbability } = state;
-  const len = pattern.bars * pattern.stepsPerBar;
-  const idx = ((stepIndex % len) + len) % len;
-  const offset = swingOffset(pattern, idx);
+function render(state, bars, opts) {
+  opts = opts || {};
+  const rng = opts.seed !== undefined ? makeRng(opts.seed) : Math.random;
   const events = [];
+  const base = state.pattern;
+  const tps = ticksPerStep(base);
+  const stepDur = Math.max(1, Math.round(tps * state.gate));
 
-  for (const role of Object.keys(pattern.tracks)) {
-    const velocity = pattern.tracks[role][idx] || 0;
-    const note = mapping[role];
-    if (note === undefined) continue; // unmapped role, skip silently
+  for (let bar = 0; bar < bars; bar++) {
+    const pattern = pickPatternForBar(state, bar, opts.fillPatterns, rng);
+    const barStartTick = bar * base.stepsPerBar * tps;
 
-    if (velocity > 0) {
-      if (shouldFire(velocity, density, rng)) {
-        events.push({ role, note, velocity, offset });
+    for (let step = 0; step < base.stepsPerBar; step++) {
+      // Patterns may span multiple bars; index into them cyclically.
+      const patLen = pattern.bars * pattern.stepsPerBar;
+      const patIdx = (bar * base.stepsPerBar + step) % patLen;
+
+      const jitter = state.humanizeTicks
+        ? Math.round((rng() * 2 - 1) * state.humanizeTicks)
+        : 0;
+      const startTick =
+        barStartTick + step * tps + swingTicks(pattern, step) + jitter;
+
+      for (const role of Object.keys(pattern.tracks)) {
+        const note = state.mapping[role];
+        if (note === undefined) continue;
+
+        const velocity = pattern.tracks[role][patIdx] || 0;
+
+        if (velocity > 0 && shouldFire(velocity, state, rng)) {
+          events.push({
+            role,
+            note,
+            velocity,
+            startTick: Math.max(0, startTick),
+            durationTick: stepDur,
+          });
+        } else if (
+          velocity === 0 &&
+          state.ghostRoles.indexOf(role) !== -1 &&
+          rng() < state.ghostProbability
+        ) {
+          events.push({
+            role,
+            note,
+            velocity: ghostVelocity(state, rng),
+            startTick: Math.max(0, startTick),
+            durationTick: stepDur,
+          });
+        }
       }
-    } else if (maybeGhost(ghostProbability, rng)) {
-      events.push({ role, note, velocity: 25, offset });
     }
   }
+
+  applyChokes(events, state);
+  events.sort((a, b) => a.startTick - b.startTick || a.note - b.note);
   return events;
 }
 
-/**
- * Decide, at the start of a bar, whether a fill variant should be used.
- * Expects fill patterns to be tagged "fill" and share the base pattern's
- * style; caller supplies the candidate fill pattern.
- */
-function shouldTriggerFill(state, barIndex, rng = Math.random) {
-  if (barIndex === 0) return false;
-  if (barIndex % state.fillEveryNBars !== 0) return false;
-  return rng() < state.fillProbability;
-}
+// Closed hat chokes open hat: when a closed-hat hit starts, any still-ringing
+// openHat note gets its duration cut at that point.
+function applyChokes(events, state) {
+  const openNote = state.mapping.openHat;
+  const closedNote = state.mapping.hihat;
+  if (openNote === undefined || closedNote === undefined) return;
 
-function demo() {
-  const pattern = require("../patterns/jungle/jungle_amen_01.json");
-  const mapping = require("./mapping-default.json");
-  const state = defaultState(pattern, mapping);
-  state.density = 0.85;
-  state.ghostProbability = 0.05;
-
-  const totalSteps = pattern.bars * pattern.stepsPerBar;
-  for (let i = 0; i < totalSteps; i++) {
-    const ev = stepEvents(state, i);
-    if (ev.length) {
-      console.log(
-        `step ${i}:`,
-        ev.map((e) => `${e.role}@${e.velocity}`).join(", ")
-      );
+  const opens = events.filter((e) => e.note === openNote);
+  const closes = events.filter((e) => e.note === closedNote);
+  for (const o of opens) {
+    for (const c of closes) {
+      if (c.startTick > o.startTick && c.startTick < o.startTick + o.durationTick) {
+        o.durationTick = c.startTick - o.startTick;
+      }
     }
   }
 }
 
+// ---------------------------------------------------------------------------
+
 if (typeof module !== "undefined") {
   module.exports = {
-    defaultState,
-    swingOffset,
+    PPQ,
+    DEFAULTS,
+    makeState,
+    makeRng,
+    ticksPerStep,
+    swingTicks,
     shouldFire,
-    maybeGhost,
-    stepEvents,
-    shouldTriggerFill,
-    demo,
+    pickPatternForBar,
+    render,
   };
 }
