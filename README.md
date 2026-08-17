@@ -4,15 +4,30 @@ Style-tagged drum pattern library + rendering engine that generates MIDI
 drum parts (jungle, dnb, techno, ...) with musical randomization on top:
 density, swing, ghost notes (snare/hat only), fills, humanization.
 
-Two delivery targets, one engine:
+Three delivery targets, one engine:
 
-1. **CLI (works now):** render patterns straight into `.mid` files at 480
-   PPQ — drag onto a drum rack track in Live, done.
-2. **Max for Live device (planned):** same engine hosted in Max's `v8`
+1. **Web UI (works now):** local web app — tweak knobs, audition the beat
+   with a built-in synthesized preview kit, download the `.mid`, drop it
+   on a drum rack track in Live.
+2. **CLI (works now):** render patterns straight into `.mid` files at 480
+   PPQ from the terminal.
+3. **Max for Live device (planned):** same engine hosted in Max's `v8`
    object (Max 8.6+ / Live 12), "Generate" button writes a clip via Live
    API. The legacy `js` object is NOT supported (ES5-only engine).
 
-## Quickstart
+## Quickstart (web UI)
+
+```bash
+npm start                     # then open http://localhost:8834
+```
+
+Pick a pattern and feel preset, hit **New variation** until you like what
+you hear, **Download .mid**, drag the file onto your drum rack track.
+The seed shown in the UI is baked into the download URL, so the file you
+download is exactly the variation you auditioned. Preview sounds are
+synthesized approximations — your drum rack samples will sound better.
+
+## Quickstart (CLI)
 
 ```bash
 npm test                      # engine unit tests
@@ -37,6 +52,8 @@ node tools/render.js --pattern jungle_amen_01 --bars 8 --bpm 172 \
 - `js/pattern-loader.js` — pattern lookup helpers
 - `js/mapping-default.json` — role -> MIDI note (edit per drum rack)
 - `patterns/<style>/*.json` — pattern library; tag `"fill"` marks fills
+- `web/server.js` + `web/index.html` — local web UI (zero-dep Node server,
+  Web Audio preview kit, `.mid` download)
 - `tools/render.js` — CLI renderer
 - `tools/validate-patterns.js` — library validator
 - `test/` — engine tests (node:test, no deps)

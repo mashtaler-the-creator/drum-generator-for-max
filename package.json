@@ -1,12 +1,13 @@
 {
   "name": "m4l-drum-generator",
-  "version": "0.2.0",
-  "description": "Drum MIDI generator: style-tagged pattern library + rendering engine. Targets: .mid files (CLI) and Max for Live device (v8 object).",
+  "version": "0.5.0",
+  "description": "Drum MIDI generator: style-tagged pattern library + rendering engine. Targets: local web UI (audition + .mid download), CLI, and Max for Live device (v8 object).",
   "main": "js/engine.js",
   "scripts": {
     "test": "node test/engine.test.js",
     "validate": "node tools/validate-patterns.js",
-    "render": "node tools/render.js"
+    "render": "node tools/render.js",
+    "start": "node web/server.js"
   },
   "license": "UNLICENSED",
   "private": true

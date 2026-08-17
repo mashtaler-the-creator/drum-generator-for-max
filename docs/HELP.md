@@ -43,6 +43,26 @@ them once you start using patterns that need those roles.
 
 ## Step 2. Generate a part (each time, ~1 min)
 
+### Option A: web UI (recommended)
+
+```bash
+cd path/to/m4l-drum-generator
+npm start
+```
+
+Open http://localhost:8834 in your browser:
+
+1. Pick a **pattern** and a **feel preset**, set bars/BPM/density.
+2. Hit **▶ Play** to audition. Don't judge the sound quality — the preview
+   kit is synthesized from scratch in the browser; your drum rack samples
+   will sound much better. Judge the groove.
+3. Hit **🎲 New variation** until you like the take. The seed shown on the
+   right identifies the exact variation you're hearing.
+4. Hit **⬇ Download .mid** — you get exactly the variation you auditioned
+   (same seed) — and drag the file from Downloads onto the drum rack track.
+
+### Option B: terminal
+
 ```bash
 cd path/to/m4l-drum-generator
 
