@@ -1,0 +1,28 @@
+{
+  "id": "dubstep_loefah_808_space",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 140,
+  "tags": ["halfstep", "minimal", "808", "sub"],
+  "_approach": "Loefah-style stripped 808 halfstep: rim shot carries beat 3 instead of a snare, two kicks per bar, a lone clave, and negative space treated as an instrument in its own right.",
+  "tracks": {
+    "kick": [
+      106,0,0,0, 0,0,0,0, 0,0,88,0, 0,0,0,0,
+      106,0,0,0, 0,0,0,0, 0,0,86,0, 0,66,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,30
+    ],
+    "hihat": [
+      0,0,0,0, 38,0,0,0, 0,0,0,0, 40,0,0,0,
+      0,0,0,0, 36,0,0,0, 0,0,0,0, 38,0,22,0
+    ],
+    "clave": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,44,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

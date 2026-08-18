@@ -9,6 +9,7 @@
     "bars": { "type": "integer", "minimum": 1 },
     "stepsPerBar": { "type": "integer", "enum": [8, 16, 32] },
     "swing": { "type": "number", "minimum": 0, "maximum": 0.5, "default": 0 },
+    "bpm": { "type": "integer", "minimum": 40, "maximum": 300, "description": "Suggested tempo hint for UIs; not baked into rendering" },
     "tags": { "type": "array", "items": { "type": "string" } },
     "tracks": {
       "type": "object",

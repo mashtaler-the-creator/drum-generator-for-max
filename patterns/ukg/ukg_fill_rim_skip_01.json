@@ -1,0 +1,18 @@
+{
+  "id": "ukg_fill_rim_skip_01",
+  "style": "ukg",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 134,
+  "tags": ["fill", "rim", "revival", "skip"],
+  "_approach": "One-bar modern-revival rim-skip fill (Interplanetary Criminal-style rim runs): groove holds through beat 2, then rising rim shots trade with mid/low toms into the turnaround.",
+  "tracks": {
+    "kick":   [110,0,0,0, 0,0,0,90, 0,0,96,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 114,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim":    [0,0,0,0, 0,0,52,58, 0,64,0,0, 0,74,0,88],
+    "tomMid": [0,0,0,0, 0,0,0,0, 0,0,0,62, 0,0,0,0],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 68,0,76,0],
+    "hihat":  [64,0,72,0, 0,0,74,0, 62,0,0,0, 0,0,0,0]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ukfunky_tom_tumble_fill_01",
+  "style": "ukfunky",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 129,
+  "tags": ["fill", "toms", "tresillo"],
+  "_approach": "Tribal tom tumble: a high-to-low tom cascade phrased on the 3+3+2 tresillo cell, capped with snare stabs on the last beat - the percussion-break turnaround used all over tribal-leaning UK funky sets.",
+  "tracks": {
+    "kick":    [94,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0],
+    "tomHigh": [0,0,0,82, 0,0,78,0, 0,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,76,84,0, 0,0,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 88,0,80,0],
+    "snare":   [0,0,0,0, 90,0,0,0, 0,0,0,0, 0,92,0,96],
+    "cowbell": [64,0,0,0, 0,0,58,0, 0,0,0,0, 60,0,0,0],
+    "shaker":  [54,30,42,34, 58,32,44,48, 56,32,45,38, 62,36,50,56]
+  }
+}

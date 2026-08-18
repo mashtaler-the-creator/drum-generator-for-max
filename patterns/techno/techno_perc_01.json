@@ -3,6 +3,7 @@
   "style": "techno",
   "bars": 1,
   "stepsPerBar": 16,
+  "bpm": 132,
   "swing": 0.02,
   "tags": ["percussive", "latin", "909"],
   "tracks": {

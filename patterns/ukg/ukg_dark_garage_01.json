@@ -1,0 +1,22 @@
+{
+  "id": "ukg_dark_garage_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 130,
+  "tags": ["dark", "2step", "sparse", "proto-dubstep"],
+  "_approach": "Dark garage (Zed Bias / El-B / Horsepower Productions): sparse syncopated kicks with a low ghost, heavy snare on 2 and 4, rim-led skip language and only a few lonely hats leaving dub space.",
+  "tracks": {
+    "kick":    [108,0,0,0, 0,0,0,90, 0,0,0,44, 0,0,0,0,
+                106,0,0,36, 0,0,0,0, 0,0,92,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 112,0,0,0, 0,0,0,0, 110,0,0,0,
+                0,0,0,0, 112,0,0,0, 0,0,0,0, 114,0,26,0],
+    "rim":     [0,0,52,0, 0,0,0,46, 0,58,0,0, 0,0,48,0,
+                0,0,54,0, 0,44,0,0, 0,56,0,0, 0,50,0,28],
+    "hihat":   [0,0,0,0, 0,0,58,0, 0,0,0,0, 0,0,62,0,
+                0,0,60,0, 0,0,0,0, 0,0,56,0, 0,0,64,38],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,52,0, 0,0,0,0, 0,0,0,0]
+  }
+}

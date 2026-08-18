@@ -1,0 +1,30 @@
+{
+  "id": "dubstep_dub_space_fill",
+  "style": "dubstep",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 140,
+  "tags": ["fill", "dub", "sparse"],
+  "_approach": "Sparse dub-wise fill for the meditative end of the style: a decaying rim 'delay tail' after the beat-3 snare and a single low tom pickup — a fill made of space, not notes.",
+  "tracks": {
+    "kick": [
+      102,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,0,64,0, 48,0,32,0
+    ],
+    "tomLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,58
+    ],
+    "shaker": [
+      0,0,36,0, 0,0,38,0, 0,0,0,0, 0,0,0,0
+    ],
+    "openHat": [
+      0,0,0,0, 44,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

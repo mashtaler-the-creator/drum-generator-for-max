@@ -1,0 +1,22 @@
+{
+  "id": "ukg_minimal_dub_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.26,
+  "bpm": 129,
+  "tags": ["minimal", "dubby", "2step", "sparse"],
+  "_approach": "Minimal dubby garage (late-era 2-step stripped to its skeleton, the space Burial later inhabited): kick only on 1 and one syncopation per bar, deepest swing in the set, whispering rim ghosts, sparse shaker, unchoked open hats left to ring.",
+  "tracks": {
+    "kick":    [104,0,0,0, 0,0,0,0, 0,0,92,0, 0,0,0,0,
+                102,0,0,0, 0,0,0,86, 0,0,0,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 108,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,0,0, 106,0,0,0, 0,0,0,0, 108,0,0,0],
+    "rim":     [0,0,0,24, 0,0,0,0, 0,28,0,0, 0,0,22,0,
+                0,0,26,0, 0,0,0,22, 0,0,0,28, 0,0,0,0],
+    "shaker":  [0,0,48,0, 0,0,44,0, 0,0,50,0, 0,0,46,0,
+                0,0,46,0, 0,0,50,0, 0,0,44,0, 0,42,52,0],
+    "openHat": [0,0,0,0, 0,0,54,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,50,0]
+  }
+}

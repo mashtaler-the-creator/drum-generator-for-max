@@ -1,0 +1,17 @@
+{
+  "id": "sg_rip_groove_pump",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.22,
+  "bpm": 138,
+  "tags": ["classic", "4x4", "shuffle", "anthem"],
+  "_approach": "The 1997 anchor groove a la Double 99 'RIP Groove': relentless 4x4 kick with an extra offbeat kick in bar 2, dominant backbeat snare+clap, offbeat open hats and a shuffled closed-hat contour with skippy snare ghosts at the bar ends.",
+  "tracks": {
+    "kick":    [112,0,0,0, 104,0,0,0, 108,0,0,0, 106,0,0,0,  112,0,0,0, 104,0,0,0, 108,0,84,0, 106,0,0,0],
+    "snare":   [0,0,0,0, 100,0,0,26, 0,0,0,0, 102,0,0,30,  0,0,0,0, 100,0,0,28, 0,0,0,0, 102,0,0,34],
+    "perc":    [0,0,0,0, 85,0,0,0, 0,0,0,0, 87,0,0,0,  0,0,0,0, 85,0,0,0, 0,0,0,0, 87,0,0,0],
+    "openHat": [0,0,74,0, 0,0,70,0, 0,0,76,0, 0,0,70,0,  0,0,74,0, 0,0,72,0, 0,0,76,0, 0,0,64,0],
+    "hihat":   [58,34,0,48, 52,30,0,50, 60,36,0,46, 54,32,0,62,  56,36,0,46, 52,28,0,52, 62,34,0,44, 54,38,0,66]
+  }
+}

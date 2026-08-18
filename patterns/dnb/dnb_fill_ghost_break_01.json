@@ -1,0 +1,33 @@
+{
+  "id": "dnb_fill_ghost_break_01",
+  "style": "dnb",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 172,
+  "tags": ["fill", "rolling", "ghost", "toms"],
+  "_approach": "Roller/liquid turnaround fill with amen DNA: ghost-snare chatter around the backbeats, a displaced mid-velocity snare on the and-of-3, and a high-to-low tom cascade over the last three 16ths as the ride fades out.",
+  "tracks": {
+    "kick": [
+      102,0,0,0, 0,0,0,86, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,26, 110,0,30,0, 0,34,80,0, 108,0,0,0
+    ],
+    "hihat": [
+      46,0,40,26, 0,0,42,0, 44,0,0,0, 0,0,0,0
+    ],
+    "ride": [
+      56,0,0,0, 52,0,0,0, 50,0,0,0, 0,0,0,0
+    ],
+    "tomHigh": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,74,0,0
+    ],
+    "tomMid": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,70,0
+    ],
+    "tomLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,78
+    ]
+  }
+}

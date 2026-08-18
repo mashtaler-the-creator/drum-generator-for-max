@@ -254,7 +254,12 @@ function stop() {
 $("btnPlay").onclick = () => (playing ? stop() : play());
 $("btnNew").onclick = () => { seed = Math.floor(Math.random() * 1e9); rerender(); };
 $("btnDownload").onclick = () => { window.location = "/api/render.mid?" + params(); };
-for (const id of ["pattern", "preset", "bars", "bpm"]) $(id).onchange = rerender;
+for (const id of ["preset", "bars", "bpm"]) $(id).onchange = rerender;
+$("pattern").onchange = () => {
+  const p = META.patterns.find((x) => x.id === $("pattern").value);
+  if (p && p.bpm) $("bpm").value = p.bpm;
+  rerender();
+};
 $("density").oninput = () => { $("densityVal").textContent = (+$("density").value).toFixed(2); };
 $("density").onchange = rerender;
 $("ghosts").oninput = () => {
@@ -265,11 +270,22 @@ $("ghosts").onchange = rerender;
 
 (async function init() {
   META = await (await fetch("/api/patterns")).json();
-  for (const p of META.patterns) {
-    const o = document.createElement("option");
-    o.value = p.id;
-    o.textContent = `${p.id}  [${p.style}]${p.fill ? " (fill)" : ""}`;
-    $("pattern").appendChild(o);
+  const styles = [...new Set(META.patterns.map((p) => p.style))].sort();
+  for (const style of styles) {
+    const g = document.createElement("optgroup");
+    g.label = style;
+    for (const p of META.patterns.filter((x) => x.style === style)) {
+      const o = document.createElement("option");
+      o.value = p.id;
+      o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${p.fill ? " (fill)" : ""}`;
+      g.appendChild(o);
+    }
+    $("pattern").appendChild(g);
+  }
+  const firstGroove = META.patterns.find((p) => !p.fill);
+  if (firstGroove) {
+    $("pattern").value = firstGroove.id;
+    if (firstGroove.bpm) $("bpm").value = firstGroove.bpm;
   }
   for (const name of META.presets) {
     const o = document.createElement("option");

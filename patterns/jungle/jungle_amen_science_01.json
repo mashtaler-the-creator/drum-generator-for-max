@@ -1,0 +1,18 @@
+{
+  "id": "jungle_amen_science_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0.05,
+  "bpm": 165,
+  "tags": ["amen", "choppage", "94", "break-science"],
+  "_approach": "93-94 amen chop-science (Remarc/Dillinja lineage): bar 1 states the near-canonical Amen skeleton, bar 2 rearranges it with a displaced kick chop, a double-snare edit and a 32nd snare flam, over steady ride eighths.",
+  "tracks": {
+    "kick":  [104,0,0,0, 82,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 95,0,0,0, 0,0,0,0, 0,0,0,0,
+              102,0,0,0, 0,0,80,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 92,0,70,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,28,0, 0,0,24,0, 0,0,0,0, 98,0,0,0, 0,0,20,0,
+              0,0,0,0, 0,0,0,0, 98,0,0,0, 30,0,84,0, 0,0,26,0, 0,0,0,0, 96,88,0,0, 34,0,76,0],
+    "ride":  [56,0,0,0, 44,0,0,0, 52,0,0,0, 44,0,0,0, 56,0,0,0, 44,0,0,0, 52,0,0,0, 46,0,0,0,
+              56,0,0,0, 44,0,0,0, 52,0,0,0, 44,0,0,0, 56,0,0,0, 44,0,0,0, 52,0,0,0, 46,0,0,0]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "dnb_foghorn_stomp_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 176,
+  "tags": ["jump-up", "foghorn", "stripped", "modern"],
+  "_approach": "Foghorn-era modern jump-up (Hedex / Bou drop grammar): drums stripped to maximum weight - kick on 1 and the and-of-3, huge clap-layered snares, barely-there offbeat hats and a dancehall conga bounce, leaving all midrange space for the foghorn bass.",
+  "tracks": {
+    "kick": [
+      112,0,0,0, 0,0,0,0, 0,0,102,0, 0,0,0,0,
+      112,0,0,0, 0,0,0,0, 0,0,102,0, 0,0,88,0
+    ],
+    "snare": [
+      0,0,0,0, 118,0,0,0, 0,0,0,0, 116,0,0,0,
+      0,0,0,0, 118,0,0,0, 0,0,0,0, 116,0,0,28
+    ],
+    "perc": [
+      0,0,0,0, 84,0,0,0, 0,0,0,0, 82,0,0,0,
+      0,0,0,0, 84,0,0,0, 0,0,0,0, 82,0,0,0
+    ],
+    "hihat": [
+      0,0,38,0, 0,0,40,0, 0,0,38,0, 0,0,42,0,
+      0,0,38,0, 0,0,40,0, 0,0,39,0, 0,0,0,0
+    ],
+    "openHat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,50,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,0,48, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,48, 0,0,0,44, 0,0,0,0
+    ],
+    "crash": [
+      88,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

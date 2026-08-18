@@ -1,0 +1,30 @@
+{
+  "id": "dubstep_crossover_rush_fill",
+  "style": "dubstep",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 142,
+  "tags": ["fill", "buildup", "crossover"],
+  "_approach": "Modern crossover-era (Hamdi-style) energy fill: double-speed hat rush into a rising snare build with tom accents, ending hot on the last 16th to slam back into the drop.",
+  "tracks": {
+    "kick": [
+      100,0,0,70, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 95,0,44,0, 58,66,78,92
+    ],
+    "hihat": [
+      0,0,0,0, 40,46,52,58, 0,40,50,60, 0,0,0,0
+    ],
+    "perc": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 52,0,60,0
+    ],
+    "tomHigh": [
+      0,0,0,0, 0,0,0,0, 0,58,0,0, 0,0,0,0
+    ],
+    "tomMid": [
+      0,0,0,0, 0,0,0,0, 0,0,0,62, 0,0,0,0
+    ]
+  }
+}

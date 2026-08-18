@@ -1,0 +1,16 @@
+{
+  "id": "grime_weightless_drift",
+  "style": "grime",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["weightless", "minimal", "ambient", "modern"],
+  "_approach": "Weightless / Boxed-era instrumental grime (Logos, Mumdance, Mr. Mitch): the beat almost dissolves — bars alternate between a stated halftime pulse and near-silence with stray rims and late snares drifting off-grid.",
+  "tracks": {
+    "kick":  [96,0,0,0, 0,0,66,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,66,0, 0,0,0,0, 0,0,0,58, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 88,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,60, 0,0,0,0, 0,0,0,0, 0,0,0,0, 88,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,72,0],
+    "rim":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,34,0,0, 0,0,0,0, 0,0,26,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,32,0, 0,0,0,0, 0,38,0,0, 0,0,0,0, 0,0,0,0],
+    "shaker": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,28,0, 0,0,0,22, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,26,0, 0,0,0,0, 0,20,0,0, 0,0,0,0]
+  }
+}

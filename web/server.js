@@ -58,7 +58,7 @@ function renderFromQuery(q) {
   );
 
   const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
-  const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || "172", 10)));
+  const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
   const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
 
   const events = render(state, bars, { fillPatterns, seed });
@@ -83,6 +83,7 @@ const server = http.createServer((req, res) => {
         patterns: patterns.map((p) => ({
           id: p.id,
           style: p.style,
+          bpm: p.bpm,
           fill: (p.tags || []).includes("fill"),
         })),
         presets: Object.keys(presets).filter((k) => k[0] !== "_"),

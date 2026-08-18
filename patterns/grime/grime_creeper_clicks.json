@@ -1,0 +1,16 @@
+{
+  "id": "grime_creeper_clicks",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["eski", "rim", "displaced", "dark"],
+  "_approach": "Danny Weed 'Creeper' school: rimshot clicks carry the rhythm instead of hats, the snare is displaced off the strict backbeat in bar 2, kicks creep on late off-beats — menace through what is missing.",
+  "tracks": {
+    "kick":  [108,0,0,0, 0,0,0,88, 0,0,0,0, 0,0,0,0, 108,0,0,84, 0,0,0,0, 0,0,76,0, 0,0,0,0],
+    "rim":   [0,0,74,0, 0,58,0,0, 0,0,0,0, 66,0,0,42, 0,0,74,0, 0,58,0,0, 0,0,0,0, 0,0,60,0],
+    "snare": [0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,98, 0,0,0,0],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 70,0,0,0]
+  }
+}

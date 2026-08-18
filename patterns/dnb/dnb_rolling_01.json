@@ -3,6 +3,7 @@
   "style": "dnb",
   "bars": 1,
   "stepsPerBar": 16,
+  "bpm": 174,
   "swing": 0.04,
   "tags": ["two-step", "rolling", "neutral"],
   "tracks": {

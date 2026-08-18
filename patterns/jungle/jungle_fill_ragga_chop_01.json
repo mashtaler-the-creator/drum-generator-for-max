@@ -1,0 +1,18 @@
+{
+  "id": "jungle_fill_ragga_chop_01",
+  "style": "jungle",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 170,
+  "tags": ["fill", "ragga", "toms", "bounce"],
+  "_approach": "Ragga jungle turnaround fill: rim clicks answer the backbeat, then snare and toms trade a bouncing chop down the kit into an accented last hit - dancehall lick vocabulary at jungle tempo.",
+  "tracks": {
+    "kick":    [100,0,0,0, 0,0,80,0, 0,0,0,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 95,0,0,0, 0,0,88,0, 98,30,0,100],
+    "rim":     [0,0,0,58, 0,0,0,56, 0,0,0,0, 0,0,0,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 76,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,72,0,0, 0,0,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,80, 0,0,86,0]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "bh_night_ride",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 128,
+  "tags": ["groove", "ride", "dark", "ghosts"],
+  "_approach": "Dark warehouse roller (Taiki Nulight / late-night Night Bass sets): the offbeat energy moves to a contoured 8th-note ride wash, snare ghosts smear around the clap, and a single ghost kick on the 'and' of 2 in bar 2 gives it the limp.",
+  "tracks": {
+    "kick":    [101,0,0,0, 98,0,0,0, 100,0,0,0, 99,0,0,0,  101,0,0,0, 98,0,0,72, 100,0,0,0, 99,0,0,0],
+    "perc":    [0,0,0,0, 103,0,0,0, 0,0,0,0, 105,0,0,0,  0,0,0,0, 103,0,0,0, 0,0,0,0, 105,0,0,0],
+    "ride":    [66,0,52,0, 68,0,54,0, 65,0,53,0, 69,0,55,0,  66,0,52,0, 68,0,54,0, 65,0,53,44, 69,0,55,0],
+    "snare":   [0,0,0,0, 0,0,30,0, 0,0,0,24, 0,0,0,0,  0,0,0,26, 0,0,30,0, 0,0,0,0, 0,0,32,0],
+    "openHat": [0,0,0,0, 0,0,90,0, 0,0,0,0, 0,0,92,0,  0,0,0,0, 0,0,90,0, 0,0,0,0, 0,0,92,0],
+    "hihat":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,  0,0,0,0, 0,0,0,0, 0,0,0,40, 0,0,0,0]
+  }
+}

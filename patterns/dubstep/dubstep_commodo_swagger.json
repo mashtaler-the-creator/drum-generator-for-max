@@ -1,0 +1,40 @@
+{
+  "id": "dubstep_commodo_swagger",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.22,
+  "bpm": 138,
+  "tags": ["modern", "hiphop", "deepmedi", "swagger"],
+  "_approach": "Modern Deep Medi swagger (Commodo school): hip-hop-inflected 140 with a lazily swung late kick pushed against beat 3, loose tambourine, rim doubles and stray conga — groove built from timing feel more than density.",
+  "tracks": {
+    "kick": [
+      105,0,0,0, 0,0,0,68, 0,0,90,0, 0,0,0,0,
+      105,0,0,62, 0,0,0,0, 0,0,90,0, 0,0,0,56
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 97,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 97,0,0,0, 0,22,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,0,0,58, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,56, 34,0,0,0
+    ],
+    "tambourine": [
+      0,0,0,0, 50,0,0,0, 0,0,0,0, 46,0,0,0,
+      0,0,0,0, 48,0,0,0, 0,0,0,0, 50,0,36,0
+    ],
+    "hihat": [
+      0,0,0,0, 0,0,58,0, 0,0,0,0, 0,0,50,0,
+      0,0,44,0, 0,0,56,0, 0,0,0,0, 0,0,52,0
+    ],
+    "congaHigh": [
+      0,0,0,0, 0,40,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,46,0,0
+    ]
+  }
+}

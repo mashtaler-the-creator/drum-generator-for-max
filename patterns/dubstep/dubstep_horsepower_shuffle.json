@@ -1,0 +1,32 @@
+{
+  "id": "dubstep_horsepower_shuffle",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.25,
+  "bpm": 138,
+  "tags": ["garage", "2step", "shuffle", "early"],
+  "_approach": "Early garage-descended dark 2-step (El-B / Horsepower Productions): heavily swung skippy hats with velocity ladders, paired rim shots next to each other, syncopated kicks and ghost snares around the beat-3 backbone.",
+  "tracks": {
+    "kick": [
+      102,0,0,0, 0,0,72,0, 0,0,86,0, 0,0,0,0,
+      102,0,0,0, 0,0,0,0, 0,0,86,0, 0,68,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 95,0,0,26, 0,0,0,20,
+      0,0,0,0, 0,24,0,0, 95,0,0,28, 0,0,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,55,40,0,
+      0,0,0,0, 0,52,38,0, 0,0,0,0, 0,50,0,0
+    ],
+    "hihat": [
+      40,0,62,0, 46,0,70,0, 0,42,64,0, 48,0,72,0,
+      42,0,60,0, 48,0,68,0, 0,44,62,0, 46,0,0,34
+    ],
+    "openHat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,56,0
+    ]
+  }
+}

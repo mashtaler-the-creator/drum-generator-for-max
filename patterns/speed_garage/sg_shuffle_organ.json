@@ -1,0 +1,18 @@
+{
+  "id": "sg_shuffle_organ",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.28,
+  "bpm": 136,
+  "tags": ["shuffle", "skippy_hats", "shaker"],
+  "_approach": "Maximum-shuffle hat language from the garage-shuffle school (Attack Magazine's 60-65% swing zone): full 16th closed hats with a strong e-and-a accent contour, a counter-accented shaker underneath, straight 4x4 kick with one ghost pickup.",
+  "tracks": {
+    "kick":    [110,0,0,0, 106,0,0,0, 108,0,0,0, 104,0,0,34,  110,0,0,0, 106,0,0,0, 108,0,0,0, 104,0,0,0],
+    "snare":   [0,0,0,0, 100,0,0,0, 0,24,0,0, 102,0,0,28,  0,0,0,0, 100,0,0,26, 0,0,0,0, 102,0,0,0],
+    "perc":    [0,0,0,0, 84,0,0,0, 0,0,0,0, 86,0,0,0,  0,0,0,0, 84,0,0,0, 0,0,0,0, 86,0,0,0],
+    "hihat":   [66,38,80,46, 62,34,84,50, 68,36,78,44, 60,40,86,52,  64,36,82,48, 60,38,80,46, 66,34,84,50, 62,42,0,54],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,74,0],
+    "shaker":  [42,56,34,52, 40,58,36,50, 44,54,32,56, 40,60,38,48,  42,56,34,50, 40,58,36,52, 44,54,32,54, 40,62,38,50]
+  }
+}

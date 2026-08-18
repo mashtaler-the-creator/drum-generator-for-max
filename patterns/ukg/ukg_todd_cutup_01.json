@@ -1,0 +1,22 @@
+{
+  "id": "ukg_todd_cutup_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 131,
+  "tags": ["todd-edwards", "cut-up", "us-garage", "tambourine"],
+  "_approach": "Todd Edwards-style US garage cut-up feel: four-to-the-floor kick that drops and displaces beat 3 in bar 2, rolling 16th tambourine with strong accent contour, and conga stabs syncopated like chopped vocal snippets.",
+  "tracks": {
+    "kick":      [114,0,0,0, 106,0,0,0, 110,0,0,0, 108,0,0,0,
+                  114,0,0,0, 106,0,0,0, 0,0,96,0, 108,0,0,0],
+    "perc":      [0,0,0,0, 102,0,0,0, 0,0,0,0, 104,0,0,0,
+                  0,0,0,0, 102,0,0,0, 0,0,0,0, 104,0,0,0],
+    "tambourine":[70,34,52,38, 74,36,54,40, 72,34,56,38, 76,36,58,42,
+                  72,36,54,40, 76,34,56,38, 74,38,58,36, 78,40,60,46],
+    "congaHigh": [0,0,0,56, 0,0,62,0, 0,58,0,0, 0,0,66,0,
+                  0,0,58,0, 0,60,0,0, 0,0,64,0, 0,62,0,68],
+    "snare":     [0,0,0,0, 0,0,0,26, 0,0,0,0, 0,0,30,0,
+                  0,0,0,0, 0,0,26,0, 0,0,0,0, 0,0,0,32]
+  }
+}

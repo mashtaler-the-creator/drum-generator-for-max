@@ -1,0 +1,17 @@
+{
+  "id": "grime_gunshot_8bar",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 140,
+  "tags": ["8bar", "aggressive", "gunshot", "clash"],
+  "_approach": "8-bar / devil-mix clash energy: gunshot snare on beat 3 with a flam tail and a second late shot, busy angular kicks, crash marking the phrase — built for MC bars, everything hits hard.",
+  "tracks": {
+    "kick":  [110,0,0,0, 0,94,0,0, 0,0,90,0, 0,0,75,0, 110,0,0,90, 0,0,94,0, 0,0,0,85, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 115,80,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 115,0,0,0, 0,0,105,0],
+    "perc":  [0,0,0,0, 0,0,0,0, 85,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 85,0,0,0, 0,0,0,0],
+    "hihat": [0,0,52,0, 0,0,45,0, 0,0,55,0, 0,0,48,0, 0,0,52,0, 0,0,45,0, 0,0,55,0, 0,0,48,0],
+    "crash": [95,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

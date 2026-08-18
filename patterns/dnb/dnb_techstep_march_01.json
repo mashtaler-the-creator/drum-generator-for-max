@@ -1,0 +1,32 @@
+{
+  "id": "dnb_techstep_march_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 172,
+  "tags": ["techstep", "industrial", "cold", "march"],
+  "_approach": "Techstep heritage march (Ed Rush & Optical / early Bad Company): hard unswung two-step with cold mechanical 16th hats at near-flat alternation, quarter-note ride ticks, a single industrial low-tom stab and almost no ghost warmth.",
+  "tracks": {
+    "kick": [
+      108,0,0,0, 0,0,0,0, 0,0,100,0, 0,0,0,0,
+      108,0,0,0, 0,0,0,0, 0,0,100,0, 0,0,86,0
+    ],
+    "snare": [
+      0,0,0,0, 114,0,0,0, 0,0,0,0, 112,0,0,0,
+      0,0,0,0, 114,0,0,24, 0,0,0,0, 112,0,0,0
+    ],
+    "hihat": [
+      54,36,50,36, 54,35,50,37, 53,36,51,36, 54,37,52,38,
+      54,36,50,36, 54,36,51,37, 53,35,50,36, 55,38,53,40
+    ],
+    "ride": [
+      60,0,0,0, 56,0,0,0, 58,0,0,0, 56,0,0,0,
+      60,0,0,0, 56,0,0,0, 58,0,0,0, 57,0,0,0
+    ],
+    "tomLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,66, 0,0,0,0
+    ]
+  }
+}

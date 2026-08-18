@@ -1,0 +1,32 @@
+{
+  "id": "fg_triplet_stumble",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.26,
+  "bpm": 136,
+  "tags": ["two-step", "snare-stumble", "burial", "broken"],
+  "_approach": "2-step with Burial's documented snare 'triples': the backbeat snare stumbles into ghost-then-accent doubles at a different spot each bar, like un-quantized hand placements landing early and late.",
+  "tracks": {
+    "kick": [
+      96,0,0,0, 0,0,0,81, 0,0,89,0, 0,0,0,0,
+      94,0,0,0, 0,0,0,0, 0,0,87,0, 79,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 95,0,38,64, 0,0,0,0, 96,0,0,0,
+      0,0,0,0, 96,0,0,0, 0,0,0,0, 95,0,33,70
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,45,0,0, 0,0,36,0,
+      0,0,0,42, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "hihat": [
+      0,0,47,0, 0,0,0,0, 0,0,0,53, 0,0,43,0,
+      0,0,45,0, 0,0,50,0, 0,0,0,48, 0,0,0,0
+    ],
+    "clave": [
+      0,20,0,0, 0,0,0,0, 0,24,0,0, 0,0,0,18,
+      0,0,22,0, 0,0,0,26, 0,0,0,0, 0,19,0,0
+    ]
+  }
+}

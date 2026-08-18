@@ -1,0 +1,22 @@
+{
+  "id": "ukg_classic_2step_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.25,
+  "bpm": 132,
+  "tags": ["2step", "classic", "shuffle", "swung"],
+  "_approach": "Classic late-90s 2-step shuffle (MJ Cole / Artful Dodger): kick on 1 plus the a-of-2 and and-of-3, heavy ~62% MPC swing, skippy accented hats with a bar-end open hat, rim ghosts filling the pocket.",
+  "tracks": {
+    "kick":    [112,0,0,0, 0,0,0,34, 0,0,96,0, 0,0,0,0,
+                110,0,0,0, 0,0,0,88, 0,0,98,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 118,0,0,0, 0,0,0,0, 114,0,0,28,
+                0,0,0,0, 116,0,0,0, 0,0,0,32, 118,0,0,0],
+    "hihat":   [56,0,74,42, 0,0,76,0, 58,0,80,44, 0,0,0,0,
+                58,0,76,44, 0,0,0,0, 60,0,82,46, 0,42,70,50],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,64,0,
+                0,0,0,0, 0,0,66,0, 0,0,0,0, 0,0,0,0],
+    "rim":     [0,0,0,26, 0,0,0,0, 0,0,0,24, 0,0,0,0,
+                0,0,0,26, 0,0,0,0, 0,24,0,0, 0,0,30,0]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "sg_tom_drop_fill",
+  "style": "speed_garage",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 137,
+  "tags": ["fill", "toms"],
+  "_approach": "Sub-drop signpost fill: hats fall away, a descending tom cascade (high-mid-low) mimics the bassline dive, and doubled 16th kicks at the bar end slam into the next downbeat.",
+  "tracks": {
+    "kick":    [110,0,0,0, 104,0,0,0, 106,0,0,0, 0,0,86,88],
+    "snare":   [0,0,0,0, 98,0,0,42, 0,0,0,0, 100,0,0,0],
+    "tomHigh": [0,0,0,0, 0,0,72,58, 0,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,76,0,64, 0,0,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,84,0,70],
+    "hihat":   [50,0,62,0, 48,0,0,0, 0,0,0,0, 0,0,0,0],
+    "openHat": [0,0,0,0, 0,0,68,0, 0,0,0,0, 0,0,0,0]
+  }
+}

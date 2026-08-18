@@ -1,0 +1,22 @@
+{
+  "id": "ukg_4x4_bump_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.13,
+  "bpm": 130,
+  "tags": ["4x4", "garage-house", "clap", "bounce"],
+  "_approach": "4x4 garage hybrid (DJ EZ era / speed garage floor patterns): four-on-the-floor kick under a garage clap backbeat, offbeat open hats bumped by light swung 16th closed hats and snare ghost skips.",
+  "tracks": {
+    "kick":    [116,0,0,0, 108,0,0,0, 112,0,0,0, 110,0,0,0,
+                116,0,0,0, 108,0,0,0, 112,0,0,34, 110,0,0,0],
+    "perc":    [0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,72,0],
+    "snare":   [0,0,0,0, 0,0,0,30, 0,0,0,26, 0,0,0,0,
+                0,0,0,0, 0,0,0,30, 0,0,26,0, 0,0,0,34],
+    "openHat": [0,0,78,0, 0,0,80,0, 0,0,78,0, 0,0,82,0,
+                0,0,78,0, 0,0,80,0, 0,0,78,0, 0,0,86,0],
+    "hihat":   [0,44,0,52, 0,46,0,54, 0,44,0,56, 0,48,0,58,
+                0,46,0,52, 0,44,0,56, 0,48,0,54, 0,50,0,60]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ukfunky_clap_chatter_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 130,
+  "tags": ["groove", "soca", "clap", "syncopation"],
+  "_approach": "Soca-derived clap chatter: the backbeat snare stays planted on 2 and 4 while a clap answers on the 1a/2&/3a/4& sixteenth cell (steps 3, 6, 11, 14) - the off-beat 3+3+2 accent language UK funky lifted from soca.",
+  "tracks": {
+    "kick":    [95,0,0,0, 90,0,0,0, 93,0,0,0, 90,0,0,0,  95,0,0,0, 0,0,88,0, 93,0,0,0, 90,0,0,0],
+    "snare":   [0,0,0,0, 96,0,0,0, 0,0,0,0, 94,0,0,0,  0,0,0,0, 96,0,0,0, 0,0,0,0, 94,0,0,0],
+    "perc":    [0,0,0,80, 0,0,74,0, 0,0,0,82, 0,0,72,0,  0,0,0,82, 0,0,76,0, 0,0,0,84, 0,0,74,52],
+    "cowbell": [0,0,0,0, 0,0,0,0, 0,0,58,0, 0,0,0,0,  0,0,55,0, 0,0,0,0, 0,0,60,0, 0,0,0,0],
+    "hihat":   [55,0,48,0, 57,0,49,0, 55,0,50,0, 58,0,52,0,  55,0,48,0, 58,0,50,0, 56,0,51,0, 60,0,54,0],
+    "rim":     [0,26,0,0, 0,0,0,30, 0,0,0,0, 0,28,0,0,  0,25,0,0, 0,0,0,32, 0,0,0,0, 0,30,0,0]
+  }
+}

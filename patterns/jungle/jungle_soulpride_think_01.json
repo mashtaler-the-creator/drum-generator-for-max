@@ -1,0 +1,18 @@
+{
+  "id": "jungle_soulpride_think_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0.1,
+  "bpm": 160,
+  "tags": ["soul-pride", "think", "ghost-notes", "layered"],
+  "_approach": "Coco Bryce's favourite pairing - Soul Pride's dense 32nd ghost-snare chatter laid under a Think-style backbeat and tambourine eighths; bar 2 answers with an accent chop and a 32nd snare double.",
+  "tracks": {
+    "kick":       [102,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0, 0,0,0,0,
+                   102,0,0,0, 0,0,74,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare":      [0,0,0,0, 0,0,0,0, 100,0,0,0, 0,26,34,0, 0,0,22,0, 0,30,0,0, 98,0,0,24, 0,0,32,0,
+                   0,0,0,0, 0,0,0,0, 100,0,0,0, 28,0,82,0, 0,20,0,0, 0,30,0,0, 96,86,0,0, 0,26,0,34],
+    "tambourine": [50,0,0,0, 42,0,0,0, 56,0,0,0, 42,0,0,0, 50,0,0,0, 44,0,0,0, 56,0,0,0, 46,0,0,0,
+                   50,0,0,0, 42,0,0,0, 56,0,0,0, 42,0,0,0, 50,0,0,0, 44,0,0,0, 56,0,0,0, 46,0,0,0]
+  }
+}

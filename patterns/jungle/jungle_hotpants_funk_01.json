@@ -1,0 +1,22 @@
+{
+  "id": "jungle_hotpants_funk_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 162,
+  "tags": ["hot-pants", "funk", "hats", "swing"],
+  "_approach": "Hot Pants break grammar (Bobby Byrd): heavily swung tight-hat funk with an open-hat breath before the turnaround, kick on 1 / a-of-2 / and-of-3, funk ghost snares between backbeats, and a clap doubling the second backbeat.",
+  "tracks": {
+    "kick":    [102,0,0,0, 0,0,0,80, 0,0,92,0, 0,0,0,0,
+                102,0,0,0, 0,0,0,80, 0,0,92,0, 0,74,0,0],
+    "snare":   [0,0,0,0, 98,0,25,0, 0,0,0,30, 96,0,22,0,
+                0,0,0,0, 98,0,25,0, 0,32,0,0, 96,0,0,80],
+    "hihat":   [58,0,44,0, 56,0,44,0, 58,0,44,0, 56,0,0,0,
+                58,0,44,0, 56,0,0,0, 58,0,44,0, 56,0,44,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,52,0,
+                0,0,0,0, 0,0,52,0, 0,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 68,0,0,0]
+  }
+}

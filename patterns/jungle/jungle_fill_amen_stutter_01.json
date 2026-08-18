@@ -1,0 +1,15 @@
+{
+  "id": "jungle_fill_amen_stutter_01",
+  "style": "jungle",
+  "bars": 1,
+  "stepsPerBar": 32,
+  "swing": 0.05,
+  "bpm": 165,
+  "tags": ["fill", "amen", "stutter", "snare-roll"],
+  "_approach": "Amen edit-style fill: the groove holds for two beats, then the snare stutters into an accelerating 16th-to-32nd roll with a velocity ramp - the classic tape-edit run-up into a drop.",
+  "tracks": {
+    "kick":  [102,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 86,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 98,0,0,0, 0,0,28,0, 62,0,68,0, 0,0,74,0, 84,0,90,0, 96,88,104,80],
+    "ride":  [56,0,0,0, 44,0,0,0, 52,0,0,0, 44,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

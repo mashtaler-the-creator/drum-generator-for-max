@@ -1,0 +1,24 @@
+{
+  "id": "ukg_modern_revival_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 134,
+  "tags": ["revival", "2step", "rim-run", "modern"],
+  "_approach": "2020s revival bounce (Interplanetary Criminal / Sammy Virji): tighter swing than the classic era, heavy kick on 1 with a-of-2 and and-of-3 syncopation, huge layered snare+clap backbeat, offbeat hats, and ascending rim-shot runs into the downbeats.",
+  "tracks": {
+    "kick":    [118,0,0,0, 0,0,0,92, 0,0,100,0, 0,0,0,0,
+                118,0,0,34, 0,0,0,92, 0,0,100,0, 0,36,0,0],
+    "snare":   [0,0,0,0, 120,0,0,0, 0,0,0,0, 118,0,0,0,
+                0,0,0,0, 120,0,0,0, 0,0,0,0, 118,0,0,0],
+    "perc":    [0,0,0,0, 88,0,0,0, 0,0,0,0, 86,0,0,0,
+                0,0,0,0, 88,0,0,0, 0,0,0,0, 86,0,0,44],
+    "rim":     [0,0,0,0, 0,0,46,52, 0,0,0,0, 0,58,64,70,
+                0,0,0,0, 0,44,50,0, 0,0,0,0, 52,58,66,74],
+    "hihat":   [0,0,72,0, 0,0,74,0, 0,0,72,0, 0,0,0,0,
+                0,0,74,0, 0,0,76,0, 0,0,72,0, 0,0,78,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,76,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ukfunky_afro_log_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 126,
+  "tags": ["groove", "afro-swing", "amapiano", "sparse"],
+  "_approach": "The modern afro-swing/amapiano-tinged revival of the UK funky palette: sparse displaced kick, low toms playing a log-drum-style melodic answer, a soft rim instead of a big backbeat, heavy swing and a shaker doing most of the driving.",
+  "tracks": {
+    "kick":    [96,0,0,0, 0,0,0,88, 0,0,90,0, 0,0,0,0,  96,0,0,0, 0,0,0,88, 0,0,90,0, 0,0,86,0],
+    "tomLow":  [0,0,0,78, 0,74,0,0, 0,0,0,80, 0,76,0,0,  0,0,0,78, 0,74,0,0, 82,0,0,80, 0,0,76,70],
+    "rim":     [0,0,0,0, 80,0,0,0, 0,0,0,0, 78,0,0,0,  0,0,0,0, 80,0,0,0, 0,34,0,0, 78,0,0,0],
+    "shaker":  [66,30,42,34, 70,32,44,50, 66,30,43,36, 72,33,46,54,  66,31,42,35, 70,32,45,51, 68,31,44,38, 74,35,48,56],
+    "hihat":   [0,0,44,0, 0,0,0,0, 0,0,42,0, 0,0,0,0,  0,0,44,0, 0,0,0,0, 0,0,43,0, 0,0,0,0],
+    "openHat": [0,0,0,0, 0,0,55,0, 0,0,0,0, 0,0,58,0,  0,0,0,0, 0,0,55,0, 0,0,0,0, 0,0,60,0]
+  }
+}

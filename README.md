@@ -45,6 +45,29 @@ node tools/render.js --pattern jungle_amen_01 --bars 8 --bpm 172 \
 - Пошаговая инструкция (RU): [docs/HELP.ru.md](docs/HELP.ru.md)
 - Drum rack setup: [docs/drum-rack-setup.md](docs/drum-rack-setup.md)
 
+## Pattern library — UK bass styles
+
+105 patterns across 11 styles, ~10 construction approaches per style, each
+grounded in researched production practice (see the per-style doc for the
+approach list and sources):
+
+| Style | BPM | Doc |
+|---|---|---|
+| UK garage / 2-step (`ukg`) | 130–135 | [docs/styles/ukg.md](docs/styles/ukg.md) |
+| Speed garage (`speed_garage`) | 135–140 | [docs/styles/speed_garage.md](docs/styles/speed_garage.md) |
+| Bassline / niche (`bassline`) | 138–142 | [docs/styles/bassline.md](docs/styles/bassline.md) |
+| Grime (`grime`) | 138–142 | [docs/styles/grime.md](docs/styles/grime.md) |
+| Dubstep / UK 140 (`dubstep`) | 138–142 | [docs/styles/dubstep.md](docs/styles/dubstep.md) |
+| Future garage (`future_garage`) | 125–140 | [docs/styles/future_garage.md](docs/styles/future_garage.md) |
+| UK funky (`ukfunky`) | 128–132 | [docs/styles/ukfunky.md](docs/styles/ukfunky.md) |
+| Bass house (`bass_house`) | 125–130 | [docs/styles/bass_house.md](docs/styles/bass_house.md) |
+| Jungle (`jungle`) | 160–175 | [docs/styles/jungle.md](docs/styles/jungle.md) |
+| Drum & bass (`dnb`) | 170–176 | [docs/styles/dnb.md](docs/styles/dnb.md) |
+| Techno (`techno`) | 128–135 | — |
+
+Each pattern carries a `bpm` hint (the web UI and CLI pick it up
+automatically) and an `_approach` note explaining the idea behind it.
+
 ## Structure
 
 - `js/engine.js` — rendering engine (ticks @ 480 PPQ, durations, chokes)

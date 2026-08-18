@@ -1,0 +1,19 @@
+{
+  "id": "ukfunky_soca_engine_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 132,
+  "tags": ["groove", "soca", "snare-rolls", "carnival"],
+  "_approach": "Soca engine-room translation: the kick keeps a strict four-on-the-floor (soca never drops the floor) while the snare does the work - backbeats plus rolling double-sixteenth pickups into the beats, the carnival snare-line feel behind tracks like Roska's 'Squark'.",
+  "tracks": {
+    "kick":       [97,0,0,0, 92,0,0,0, 94,0,0,0, 92,0,0,0,  97,0,0,0, 92,0,0,0, 94,0,0,0, 92,0,0,0],
+    "snare":      [0,0,0,0, 95,0,0,0, 0,0,62,70, 93,0,66,78,  0,0,58,66, 95,0,0,0, 0,0,64,72, 93,0,80,88],
+    "congaHigh":  [0,0,70,0, 0,0,76,0, 0,0,72,0, 0,0,78,0,  0,0,72,0, 0,0,78,0, 0,0,74,0, 0,80,0,68],
+    "congaLow":   [0,66,0,0, 0,0,0,64, 0,68,0,0, 0,0,0,0,  0,66,0,0, 0,0,0,66, 0,70,0,0, 0,0,0,60],
+    "tambourine": [62,0,48,0, 64,0,50,0, 62,0,49,0, 66,0,52,0,  62,0,48,0, 65,0,51,0, 63,0,50,0, 68,0,54,0],
+    "hihat":      [0,0,52,0, 0,0,50,0, 0,0,53,0, 0,0,0,0,  0,0,52,0, 0,0,50,0, 0,0,54,0, 0,0,0,0],
+    "openHat":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,56,0,  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,58,0]
+  }
+}

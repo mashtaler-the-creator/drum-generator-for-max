@@ -1,0 +1,21 @@
+{
+  "id": "bh_tom_bounce",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 126,
+  "tags": ["groove", "toms", "percussive", "bounce-cell"],
+  "_approach": "Tom/perc bounce cells (My Nu Leng and the darker Night Bass rollers): a melodic low-mid-high tom conversation with congas answering, over the standard kick/clap frame, open hats reduced to the first and third offbeats so the toms own the bounce.",
+  "tracks": {
+    "kick":      [100,0,0,0, 97,0,0,0, 102,0,0,0, 98,0,0,0,  100,0,0,0, 97,0,0,0, 102,0,0,0, 98,0,0,0],
+    "perc":      [0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,0,0,  0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,0,0],
+    "tomLow":    [0,0,0,74, 0,0,0,0, 0,0,0,70, 0,0,0,0,  0,0,0,74, 0,0,0,0, 0,0,0,0, 0,0,72,0],
+    "tomMid":    [0,0,0,0, 0,0,0,68, 0,0,0,0, 0,0,0,0,  0,0,0,0, 0,0,0,68, 0,0,66,0, 0,0,0,0],
+    "tomHigh":   [0,0,0,0, 0,0,0,0, 0,64,0,0, 0,0,0,0,  0,64,0,0, 0,0,0,0, 0,0,0,0, 0,66,0,0],
+    "congaHigh": [0,0,0,0, 0,0,58,0, 0,0,0,0, 0,54,0,0,  0,0,0,0, 0,0,58,0, 0,0,0,0, 0,0,0,52],
+    "congaLow":  [0,0,0,0, 0,46,0,0, 0,0,0,0, 0,0,48,0,  0,0,0,0, 0,46,0,0, 0,0,0,0, 0,0,48,0],
+    "openHat":   [0,0,92,0, 0,0,0,0, 0,0,93,0, 0,0,0,0,  0,0,92,0, 0,0,0,0, 0,0,93,0, 0,0,0,0],
+    "hihat":     [0,0,0,50, 0,0,0,54, 0,0,0,48, 0,0,0,56,  0,0,0,50, 0,0,0,54, 0,0,0,48, 0,0,0,56]
+  }
+}

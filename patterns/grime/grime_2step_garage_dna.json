@@ -1,0 +1,18 @@
+{
+  "id": "grime_2step_garage_dna",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 140,
+  "tags": ["2step", "garage", "swing", "shuffle"],
+  "_approach": "Grime's UK garage inheritance: proper 2-step with backbeat snares on 2 and 4, shuffled 8th hats with an open hat answer, and a light swing — the pirate-radio bridge between UKG and eski.",
+  "tracks": {
+    "kick":  [104,0,0,0, 0,0,0,86, 0,0,0,0, 0,0,0,0, 104,0,0,0, 0,0,82,0, 0,0,0,0, 0,74,0,0],
+    "snare": [0,0,0,0, 96,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0, 100,0,0,0],
+    "hihat": [66,0,58,0, 70,0,55,0, 66,0,58,0, 70,0,0,0, 66,0,58,0, 70,0,55,0, 66,0,58,0, 70,0,55,0],
+    "openHat": [0,0,0,0, 0,0,0,64, 0,0,0,0, 0,0,62,0, 0,0,0,0, 0,0,0,64, 0,0,0,0, 0,0,0,0],
+    "rim":   [0,0,0,0, 0,0,0,0, 0,0,0,28, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,30, 0,0,0,0],
+    "shaker": [0,34,0,30, 0,38,0,0, 0,34,0,30, 0,38,0,0, 0,34,0,30, 0,38,0,0, 0,34,0,30, 0,38,0,44]
+  }
+}

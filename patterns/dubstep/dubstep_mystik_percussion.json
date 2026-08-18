@@ -1,0 +1,44 @@
+{
+  "id": "dubstep_mystik_percussion",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 140,
+  "tags": ["percussive", "meditative", "layered"],
+  "_approach": "Attack Magazine 'Mystik Dubstep' percussion-layer construction: 16th shaker that pauses on beat 3 to let the snare/clap breathe, two-velocity tambourine, congas, late-bar offbeat kicks with a soft final kick, and one dub-delay rim per two bars.",
+  "tracks": {
+    "kick": [
+      102,0,0,0, 0,0,0,0, 0,0,0,80, 0,0,58,0,
+      102,0,0,0, 0,0,0,0, 0,0,0,78, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 95,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 95,0,0,0, 0,0,0,0
+    ],
+    "perc": [
+      0,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0
+    ],
+    "shaker": [
+      52,28,44,30, 50,28,44,32, 0,0,46,28, 52,30,46,34,
+      50,30,46,28, 52,30,42,30, 0,0,44,26, 54,32,48,36
+    ],
+    "tambourine": [
+      0,0,46,0, 0,0,52,0, 0,0,48,0, 0,0,54,0,
+      0,0,48,0, 0,0,50,0, 0,0,46,0, 0,0,56,0
+    ],
+    "congaHigh": [
+      0,0,0,0, 0,58,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,56,0,0, 0,0,0,0, 0,40,0,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,62,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 50,0,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,66
+    ]
+  }
+}

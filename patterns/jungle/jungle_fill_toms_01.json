@@ -3,6 +3,7 @@
   "style": "jungle",
   "bars": 1,
   "stepsPerBar": 16,
+  "bpm": 172,
   "swing": 0.08,
   "tags": ["fill", "toms", "descending"],
   "tracks": {

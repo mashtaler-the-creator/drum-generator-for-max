@@ -1,0 +1,17 @@
+{
+  "id": "sg_gunman_skip",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.25,
+  "bpm": 137,
+  "tags": ["classic", "skipped_kick", "rim"],
+  "_approach": "187 Lockdown-style skip grammar ('Gunman'/'Kung-Fu'): bar 1 adds the classic and-of-3 kick, bar 2 skips beat 3 entirely and replaces it with a doubled 16th kick pair, over timbale-flavoured skippy rim chatter.",
+  "tracks": {
+    "kick":    [110,0,0,0, 102,0,0,0, 106,0,80,0, 104,0,0,0,  110,0,0,0, 102,0,0,0, 0,0,86,78, 108,0,0,0],
+    "snare":   [0,0,0,0, 98,0,0,0, 0,0,0,0, 102,0,0,0,  0,0,0,0, 98,0,0,32, 0,0,0,0, 102,0,74,0],
+    "rim":     [0,0,0,42, 0,36,0,52, 0,0,0,0, 0,44,0,38,  0,0,0,44, 0,0,48,0, 0,38,0,0, 0,46,58,40],
+    "hihat":   [40,0,58,0, 42,0,60,0, 44,0,56,0, 42,0,0,0,  40,0,58,0, 42,0,0,0, 44,0,56,0, 42,0,62,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,70,0,  0,0,0,0, 0,0,72,0, 0,0,0,0, 0,0,0,0]
+  }
+}

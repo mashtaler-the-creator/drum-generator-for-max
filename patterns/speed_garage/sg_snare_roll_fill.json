@@ -1,0 +1,17 @@
+{
+  "id": "sg_snare_roll_fill",
+  "style": "speed_garage",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.22,
+  "bpm": 138,
+  "tags": ["fill", "snare_roll"],
+  "_approach": "Classic garage turnaround: kick stays 4x4 while a skippy snare roll ramps up through the second half of the bar into the next phrase, hats thinning out to make room.",
+  "tracks": {
+    "kick":    [108,0,0,0, 102,0,0,0, 104,0,0,0, 100,0,0,0],
+    "snare":   [0,0,0,26, 96,0,0,34, 46,0,54,62, 100,70,80,92],
+    "perc":    [0,0,0,0, 84,0,0,0, 0,0,0,0, 86,0,0,88],
+    "hihat":   [52,0,64,0, 50,0,66,0, 54,0,0,0, 0,0,0,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,72,0, 0,0,0,0]
+  }
+}

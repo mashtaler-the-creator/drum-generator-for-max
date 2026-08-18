@@ -1,0 +1,18 @@
+{
+  "id": "grime_offkilter_perc",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 140,
+  "tags": ["instrumental", "percussion", "offkilter", "modern"],
+  "_approach": "Modern instrumental grime (Slackk, Spooky Bizzle school): angular conga and cowbell stabs on awkward 16ths replace hats entirely, over a stable halftime kick/snare spine — percussion as melody.",
+  "tracks": {
+    "kick":  [108,0,0,0, 0,90,0,0, 0,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,88, 0,0,0,0, 74,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 108,0,0,0, 0,86,0,0],
+    "congaLow":  [0,0,0,70, 0,0,0,0, 0,0,0,64, 0,0,0,0, 0,0,0,70, 0,0,0,0, 0,0,0,0, 0,0,58,0],
+    "congaHigh": [0,0,0,0, 0,0,76,0, 0,0,0,0, 0,0,58,0, 0,0,0,0, 0,0,76,0, 0,0,0,0, 0,0,0,52],
+    "cowbell": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,50,0, 0,0,0,0, 0,0,0,44, 0,0,0,0],
+    "clave": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,44,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,40,0,0]
+  }
+}

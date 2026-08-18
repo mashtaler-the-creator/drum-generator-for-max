@@ -1,0 +1,17 @@
+{
+  "id": "grime_ruffsqwad_bounce",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 142,
+  "tags": ["ruffsqwad", "bounce", "clap", "energetic"],
+  "_approach": "Ruff Sqwad bounce: kick doubles on the front of the bar drive forward motion, snare layered with a clap on beat 3, tambourine ticking loose offbeats — rawer and more youthful than the eski chill.",
+  "tracks": {
+    "kick":  [106,0,0,88, 0,0,0,0, 0,0,0,84, 0,0,0,0, 106,0,0,88, 0,0,76,0, 0,0,0,84, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 110,0,0,0, 0,36,0,0],
+    "perc":  [0,0,0,0, 0,0,0,0, 82,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 82,0,0,0, 0,0,0,0],
+    "tambourine": [0,0,48,0, 0,0,55,0, 0,0,42,0, 0,0,55,0, 0,0,48,0, 0,0,55,0, 0,0,42,0, 0,0,52,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,68]
+  }
+}

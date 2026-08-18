@@ -1,0 +1,16 @@
+{
+  "id": "ukg_fill_snare_run_01",
+  "style": "ukg",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 132,
+  "tags": ["fill", "snare-run", "build"],
+  "_approach": "One-bar swung snare-run fill in the classic garage MC-drop style: backbeat holds on 2, then an accelerating crescendo of snares climbs through the last beat into the next downbeat.",
+  "tracks": {
+    "kick":  [106,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 112,0,0,58, 0,64,0,72, 96,80,104,116],
+    "hihat": [60,0,70,0, 0,0,72,0, 62,0,74,0, 0,0,0,0],
+    "perc":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,90]
+  }
+}

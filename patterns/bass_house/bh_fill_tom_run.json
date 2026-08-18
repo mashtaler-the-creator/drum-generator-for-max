@@ -1,0 +1,19 @@
+{
+  "id": "bh_fill_tom_run",
+  "style": "bass_house",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 128,
+  "tags": ["fill", "toms", "build"],
+  "_approach": "Phrase-end tom descent with a rising clap run: the groove holds for two beats, then high-to-low toms tumble into an accelerating clap crescendo that lands the next downbeat, a staple bass house transition move.",
+  "tracks": {
+    "kick":    [100,0,0,0, 98,0,0,0, 96,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 104,0,0,0, 0,0,0,0, 86,0,94,106],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 72,0,68,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,74,0,70, 0,0,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,78,0,82],
+    "openHat": [0,0,92,0, 0,0,90,0, 0,0,0,0, 0,0,0,0],
+    "hihat":   [0,0,0,54, 0,0,0,56, 0,0,0,0, 0,0,0,0]
+  }
+}

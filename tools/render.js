@@ -49,7 +49,7 @@ function main() {
   );
 
   const bars = parseInt(arg("bars", "8"), 10);
-  const bpm = parseInt(arg("bpm", "172"), 10);
+  const bpm = parseInt(arg("bpm", String(pattern.bpm || 172)), 10);
   const seedArg = arg("seed");
 
   // Preset first, explicit flags override it.

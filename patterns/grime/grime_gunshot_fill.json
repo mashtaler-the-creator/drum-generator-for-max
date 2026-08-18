@@ -1,0 +1,16 @@
+{
+  "id": "grime_gunshot_fill",
+  "style": "grime",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 140,
+  "tags": ["fill", "gunshot", "reload"],
+  "_approach": "Reload-signal fill: first half stays empty like the groove, second half fires a ragged gunshot snare salute with a tom drop into the next bar — the wheel-up moment of a clash set.",
+  "tracks": {
+    "kick":  [104,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 96,0,0,88, 104,0,118,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,76,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,84]
+  }
+}

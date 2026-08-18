@@ -1,0 +1,19 @@
+{
+  "id": "bh_fidget_stab",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 127,
+  "tags": ["groove", "fidget", "stabs", "cowbell"],
+  "_approach": "Fidget-house chop (Jack Beats / Jamie Jones-adjacent tech edge): tighter, nearly straight swing, extra syncopated clap stabs off the backbeat, cowbell and high-tom jabs answering each other across the two bars, sparse hats leaving space for chopped vocals.",
+  "tracks": {
+    "kick":    [102,0,0,0, 98,0,0,0, 100,0,0,0, 97,0,0,68,  102,0,0,0, 98,0,0,0, 100,0,0,0, 97,0,0,0],
+    "perc":    [0,0,0,0, 108,0,0,78, 0,0,0,0, 106,0,0,0,  0,0,0,0, 108,0,0,0, 0,0,0,0, 106,0,0,80],
+    "cowbell": [0,0,0,0, 0,0,66,0, 0,0,0,0, 0,0,0,0,  0,0,0,58, 0,0,0,0, 0,0,64,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,0,0,72, 0,0,0,0,  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,74,0,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,76,0,0,  0,0,0,0, 0,0,0,0, 0,0,0,70, 0,0,0,0],
+    "hihat":   [0,0,72,0, 0,0,70,0, 0,0,73,0, 0,0,0,0,  0,0,72,0, 0,0,0,0, 0,0,73,0, 0,0,0,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,90,0,  0,0,0,0, 0,0,91,0, 0,0,0,0, 0,0,90,0]
+  }
+}

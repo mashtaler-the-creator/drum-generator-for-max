@@ -1,0 +1,16 @@
+{
+  "id": "grime_eski_stutter_fill",
+  "style": "grime",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 140,
+  "tags": ["fill", "eski", "stutter"],
+  "_approach": "Eski-style stutter fill: the kick trips over itself in doubled 16ths, rim clicks answer in the gap, snare stays on beat 3 then jabs once more late — turbulence without abandoning the halftime spine.",
+  "tracks": {
+    "kick":  [106,0,78,92, 0,0,0,0, 0,0,85,70, 0,0,0,0],
+    "rim":   [0,0,0,0, 0,0,60,45, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 110,0,0,0, 0,0,96,0],
+    "clave": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,50]
+  }
+}

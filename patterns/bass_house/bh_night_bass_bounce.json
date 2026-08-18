@@ -1,0 +1,17 @@
+{
+  "id": "bh_night_bass_bounce",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 128,
+  "tags": ["groove", "bounce", "offbeat-hat", "classic"],
+  "_approach": "The canonical Night Bass bounce (AC Slater lineage): 4x4 kick, big clap on 2 and 4, loud offbeat open hats as the anchor, skippy closed-hat pickups on the swung 16ths, with a kick pickup and clap flam appearing only in bar 2.",
+  "tracks": {
+    "kick":    [100,0,0,0, 98,0,0,0, 101,0,0,0, 99,0,0,0,  100,0,0,0, 98,0,0,0, 101,0,0,0, 99,0,74,0],
+    "perc":    [0,0,0,0, 106,0,0,0, 0,0,0,0, 104,0,0,0,  0,0,0,0, 106,0,0,0, 0,0,0,0, 104,45,0,0],
+    "openHat": [0,0,94,0, 0,0,92,0, 0,0,95,0, 0,0,93,0,  0,0,94,0, 0,0,92,0, 0,0,95,0, 0,0,93,0],
+    "hihat":   [0,0,0,55, 0,0,0,58, 0,48,0,60, 0,0,0,62,  0,0,0,55, 0,44,0,58, 0,48,0,60, 0,52,0,64],
+    "rim":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,  0,0,0,0, 0,0,0,30, 0,0,0,0, 0,0,0,0]
+  }
+}

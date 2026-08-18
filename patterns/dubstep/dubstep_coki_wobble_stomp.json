@@ -1,0 +1,36 @@
+{
+  "id": "dubstep_coki_wobble_stomp",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 140,
+  "tags": ["wobble", "heavy", "mid2000s"],
+  "_approach": "Wobble-era stomp (Coki / mid-2000s tearout): near-straight grid, kick on 1 plus the classic '& of 3' kick, clap layered under the snare, driving 8th hats with an open-hat lift — the loudest, most mechanical corner of the lineage.",
+  "tracks": {
+    "kick": [
+      110,0,0,0, 0,0,0,0, 0,0,92,0, 0,0,0,0,
+      110,0,0,0, 0,0,76,0, 0,0,92,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0
+    ],
+    "perc": [
+      0,0,0,0, 0,0,0,0, 82,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 82,0,0,0, 0,0,0,0
+    ],
+    "hihat": [
+      0,0,64,0, 50,0,68,0, 0,0,52,0, 0,0,56,0,
+      0,0,62,0, 52,0,66,0, 0,0,50,0, 60,0,0,44
+    ],
+    "openHat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 64,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,66,0
+    ],
+    "crash": [
+      70,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

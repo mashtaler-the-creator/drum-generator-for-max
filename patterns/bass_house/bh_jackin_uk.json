@@ -1,0 +1,17 @@
+{
+  "id": "bh_jackin_uk",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.22,
+  "bpm": 126,
+  "tags": ["groove", "jackin", "claps", "swing"],
+  "_approach": "Jackin'-house clap grammar pulled into UK bass house (the Beat Dissected jackin' recipe): mid-velocity claps reinforcing beats 1 and 3 under the loud backbeat, a dirty low perc 'jack' on the 15th step, heavily swung, with an extra 16th open-hat pair sneaking into bar 2.",
+  "tracks": {
+    "kick":     [99,0,0,0, 102,0,0,0, 98,0,0,0, 101,0,0,0,  99,0,0,0, 102,0,0,0, 98,0,0,0, 101,0,0,0],
+    "perc":     [74,0,0,0, 108,0,0,0, 76,0,0,0, 104,0,0,0,  74,0,0,0, 108,0,0,42, 76,0,0,0, 104,0,45,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,66,0,  0,0,0,0, 0,0,0,0, 0,0,62,0, 0,0,66,0],
+    "openHat":  [0,0,93,0, 0,0,90,0, 0,0,94,0, 0,0,91,0,  0,0,93,0, 0,0,90,0, 0,52,94,0, 0,0,91,0],
+    "hihat":    [0,0,0,58, 0,0,0,0, 0,0,0,60, 0,0,0,0,  0,0,0,58, 0,0,0,0, 0,0,0,60, 0,44,0,0]
+  }
+}

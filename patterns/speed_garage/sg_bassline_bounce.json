@@ -1,0 +1,18 @@
+{
+  "id": "sg_bassline_bounce",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 140,
+  "tags": ["bassline", "bounce", "cowbell"],
+  "_approach": "Bassline-leaning revival bounce (Silva Bumpa, Higgo): loud offbeat open hats carry the groove, closed hats only on the 'a' pickups, doubled 16th kick pushing into beat 3, snare bounce on the and-of-4 and sparse cowbell accents.",
+  "tracks": {
+    "kick":    [112,0,0,0, 106,0,0,78, 108,0,0,0, 104,0,0,0,  112,0,0,0, 106,0,0,0, 108,0,0,0, 104,0,78,0],
+    "snare":   [0,0,0,0, 104,0,0,0, 0,0,0,0, 100,0,72,0,  0,0,0,0, 104,0,0,28, 0,0,0,0, 100,0,0,0],
+    "perc":    [0,0,0,0, 82,0,0,0, 0,0,0,0, 84,0,0,0,  0,0,0,0, 82,0,0,0, 0,0,0,0, 84,0,0,0],
+    "openHat": [0,0,78,0, 0,0,74,0, 0,0,80,0, 0,0,72,0,  0,0,78,0, 0,0,74,0, 0,0,80,0, 0,0,76,0],
+    "hihat":   [0,0,0,44, 0,0,0,40, 0,0,0,46, 0,0,0,42,  0,0,0,44, 0,0,0,40, 0,0,0,46, 0,0,0,48],
+    "cowbell": [0,0,0,56, 0,0,0,0, 0,0,0,60, 0,0,0,0,  0,0,0,0, 0,0,58,0, 0,0,0,62, 0,0,0,0]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "fg_fill_snare_stutter",
+  "style": "future_garage",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.24,
+  "bpm": 132,
+  "tags": ["fill", "snare-stutter", "burial"],
+  "_approach": "One-bar stumble fill: the first half keeps the 2-step intact, then the snare stutters through uneven ghost-accent-ghost velocities with holes, the un-quantized 'dropped sticks' ending Burial uses to turn a section.",
+  "tracks": {
+    "kick": [95,0,0,0, 0,0,0,80, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 93,0,0,0, 0,0,44,68, 0,90,28,74],
+    "rim": [0,0,0,0, 0,0,34,0, 0,42,0,0, 0,0,0,0],
+    "hihat": [0,0,46,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "shaker": [0,26,0,0, 0,30,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

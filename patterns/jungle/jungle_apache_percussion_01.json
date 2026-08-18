@@ -1,0 +1,22 @@
+{
+  "id": "jungle_apache_percussion_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 170,
+  "tags": ["apache", "bongos", "percussion", "tribal"],
+  "_approach": "Apache-break grammar (Incredible Bongo Band): the groove lives in the rolling conga/bongo sixteenth lattice and shaker, with a sparse anchored kick and plain backbeat snare underneath - the percussion IS the chop.",
+  "tracks": {
+    "kick":      [98,0,0,0, 0,0,0,0, 0,0,90,0, 0,0,0,0,
+                  98,0,0,0, 0,0,0,0, 74,0,90,0, 0,0,0,0],
+    "snare":     [0,0,0,0, 95,0,0,26, 0,0,0,0, 93,0,0,20,
+                  0,0,0,0, 95,0,0,0, 0,24,0,0, 93,0,0,20],
+    "congaHigh": [0,62,0,58, 0,60,0,64, 0,62,0,58, 0,60,66,0,
+                  0,62,0,58, 0,60,64,0, 0,62,0,58, 66,0,60,0],
+    "congaLow":  [72,0,0,52, 0,0,58,0, 68,0,0,0, 0,0,60,0,
+                  72,0,0,0, 56,0,58,0, 68,0,0,52, 0,0,62,0],
+    "shaker":    [48,35,42,36, 50,35,42,38, 48,35,42,36, 50,36,42,40,
+                  48,35,42,36, 50,35,42,38, 48,35,42,36, 50,36,42,40]
+  }
+}

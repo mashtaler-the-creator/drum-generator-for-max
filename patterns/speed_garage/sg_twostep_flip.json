@@ -1,0 +1,17 @@
+{
+  "id": "sg_twostep_flip",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.24,
+  "bpm": 136,
+  "tags": ["hybrid", "2step", "skipped_kick"],
+  "_approach": "The 4x4-to-2-step hinge that speed garage sat on: bar 1 rides a full four-to-the-floor, bar 2 drops the beat-3 kick and displaces it to the offbeat (proto-2-step), with broken skippy hats and a snare bounce answering the gap.",
+  "tracks": {
+    "kick":   [110,0,0,0, 104,0,0,0, 106,0,0,0, 102,0,0,0,  110,0,0,0, 104,0,0,0, 0,0,84,0, 102,0,0,0],
+    "snare":  [0,0,0,0, 100,0,0,30, 0,0,66,0, 102,0,0,0,  0,0,0,0, 100,0,0,0, 0,0,0,0, 102,0,70,26],
+    "hihat":  [54,0,70,32, 50,0,72,0, 56,30,68,0, 52,0,74,36,  56,0,72,0, 52,34,70,0, 58,0,66,30, 54,0,76,40],
+    "shaker": [40,0,56,0, 38,0,60,0, 42,0,58,0, 38,0,62,0,  40,0,58,0, 38,0,60,0, 42,0,56,0, 40,0,64,0],
+    "perc":   [0,0,0,0, 86,0,0,0, 0,0,0,0, 88,0,0,0,  0,0,0,0, 86,0,0,0, 0,0,0,0, 88,0,0,0]
+  }
+}
