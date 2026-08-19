@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drum Generator</title>
+<style>
+  :root {
+    --bg: #16181d; --panel: #1f2229; --line: #2e323b;
+    --text: #e8eaf0; --dim: #9aa1ae; --accent: #ffb43a; --accent2: #4fc3f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.5 -apple-system, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column; align-items: center; padding: 24px 16px;
+  }
+  h1 { font-size: 18px; margin: 0 0 4px; letter-spacing: .04em; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--dim); margin: 0 0 20px; font-size: 12.5px; }
+  .app { width: 100%; max-width: 860px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  label { display: block; font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+  select, input[type=number] {
+    width: 100%; background: var(--bg); color: var(--text); border: 1px solid var(--line);
+    border-radius: 6px; padding: 7px 8px; font-size: 14px;
+  }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .rangeval { color: var(--accent); font-variant-numeric: tabular-nums; }
+  .buttons { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
+  button {
+    border: 0; border-radius: 8px; padding: 10px 18px; font-size: 14px; font-weight: 600;
+    cursor: pointer; background: var(--line); color: var(--text);
+  }
+  button:hover { filter: brightness(1.15); }
+  #btnNew { background: var(--accent); color: #1a1200; }
+  #btnPlay { background: var(--accent2); color: #002233; min-width: 96px; }
+  #btnDownload { background: #3ddc84; color: #00220f; }
+  .seed { color: var(--dim); font-size: 12.5px; margin-left: auto; }
+  .seed b { color: var(--text); font-variant-numeric: tabular-nums; }
+  #grid { width: 100%; height: auto; display: block; border-radius: 6px; background: var(--bg); }
+  .legend { color: var(--dim); font-size: 12px; margin-top: 8px; }
+  #status { color: var(--dim); font-size: 12.5px; min-height: 18px; margin-top: 6px; }
+  .loopwrap { display: flex; align-items: center; gap: 6px; color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>DRUM <span>GENERATOR</span></h1>
+  <p class="sub">Generate a beat, listen with the built-in preview kit, download the .mid and drop it on your Drum Rack in Live.</p>
+
+  <div class="panel">
+    <div class="controls">
+      <div><label>Pattern</label><select id="pattern"></select></div>
+      <div><label>Feel preset</label><select id="preset"></select></div>
+      <div><label>Bars</label><input type="number" id="bars" min="1" max="64" value="8"></div>
+      <div><label>BPM</label><input type="number" id="bpm" min="40" max="300" value="172"></div>
+      <div><label>Density <span class="rangeval" id="densityVal">1.00</span></label>
+        <input type="range" id="density" min="0.3" max="1" step="0.05" value="1"></div>
+      <div><label>Ghosts <span class="rangeval" id="ghostsVal">preset</span></label>
+        <input type="range" id="ghosts" min="0" max="0.25" step="0.01" value="-0.01"></div>
+    </div>
+    <div class="buttons">
+      <button id="btnNew">🎲 New variation</button>
+      <button id="btnPlay">▶ Play</button>
+      <button id="btnDownload">⬇ Download .mid</button>
+      <span class="loopwrap"><input type="checkbox" id="loop" checked> loop</span>
+      <span class="seed">seed <b id="seedVal">–</b></span>
+    </div>
+    <div id="status"></div>
+  </div>
+
+  <div class="panel">
+    <canvas id="grid" width="1660" height="440"></canvas>
+    <div class="legend">Row brightness = velocity. Preview sounds are synthesized approximations — your Drum Rack samples will sound better.</div>
+  </div>
+</div>
+
+<script>
+window.STATIC_DATA = (function () {
+  var __mods = {};
+  function __require(p) { return __mods[p.replace(/^\.\//, "")]; }
+__mods["engine"] = (function () {
+  var module = { exports: {} };
+  (function (module, require, exports) {
+// engine.js (v2)
+// Renders a style-tagged drum pattern into concrete note events:
+//   { role, note, velocity, startTick, durationTick }
+// at PPQ = 480 (ticks per quarter note).
+//
+// Host-agnostic and deterministic when given a seeded RNG. Runs in Node for
+// testing/CLI rendering, and is written to also run inside Max's `v8` object
+// (modern JS engine, Max 8.6+ / Live 12). It will NOT run in the legacy
+// `js` object (ES5 only) — that is a deliberate choice, see docs.
+
+"use strict";
+
+const PPQ = 480;
+
+// ---------------------------------------------------------------------------
+// Config / state
+// ---------------------------------------------------------------------------
+
+const DEFAULTS = {
+  density: 1.0,            // 0..1, thins out non-accent hits
+  accentThreshold: 90,     // velocity >= this always fires regardless of density
+  ghostProbability: 0.0,   // 0..1, chance to insert a ghost in a silent step
+  ghostRoles: ["snare", "hihat", "rim"], // ghosts make musical sense only here
+  ghostVelocityRange: [18, 45],
+  hatCycleRoles: ["hihat", "ride", "shaker"], // roles that get the hand-cycle shaping
+  preSnareGhostBias: 3,    // multiply ghost odds on the step right before a snare hit
+  fillEveryNBars: 4,       // consider a fill on every Nth bar
+  fillProbability: 0.5,    // chance the fill actually happens on those bars
+  fillRamp: 0,             // 0..1: velocity build through a fill bar (0 = off)
+  humanizeTicks: 0,        // +/- random timing jitter in ticks (0 = off)
+  anchorRoles: ["kick", "crash"], // roles that stay ON the grid (no timing jitter)
+  rolePushTicks: {},       // per-role constant offset, e.g. { snare: 6, hihat: -4 }
+  velocityJitter: 0,       // +/- random velocity variation (typical realistic max: 5)
+  hatCycleDepth: 0,        // 0..1: hihat hand-cycle emphasis (down-beat loud, off-beats soft)
+  backbeatAccent: 0,       // velocity boost for snare hits on beats 2 & 4
+  maxSimultaneousHands: 0, // 0 = off; 2 = realistic drummer (kick excluded from count)
+  gate: 0.5,               // note length as a fraction of one step
+};
+
+// Velocity multipliers for a 4-step hihat hand cycle (down, off, mid, off) —
+// scaled by hatCycleDepth. Full depth roughly maps 90 -> 90/65/80/65.
+const HAT_CYCLE = [1.0, 0.72, 0.89, 0.72];
+
+function makeState(pattern, mapping, overrides) {
+  const state = Object.assign({}, DEFAULTS, overrides || {});
+  state.pattern = pattern;
+  state.mapping = mapping;
+  return state;
+}
+
+// Simple seedable RNG (mulberry32) so renders are reproducible.
+function makeRng(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Timing helpers
+// ---------------------------------------------------------------------------
+
+function ticksPerStep(pattern) {
+  // stepsPerBar of 16 in 4/4 => one step = a 16th = PPQ/4 ticks.
+  return (PPQ * 4) / pattern.stepsPerBar;
+}
+
+// Swing: delay every 2nd subdivision. pattern.swing is 0..0.5 where
+// 0 = straight, ~0.33 = classic triplet feel. Expressed in ticks.
+function swingTicks(pattern, stepInBar) {
+  const swing = pattern.swing || 0;
+  if (stepInBar % 2 === 0) return 0;
+  return Math.round(ticksPerStep(pattern) * swing);
+}
+
+// ---------------------------------------------------------------------------
+// Per-hit decisions
+// ---------------------------------------------------------------------------
+
+function shouldFire(velocity, state, rng) {
+  if (velocity <= 0) return false;
+  if (velocity >= state.accentThreshold) return true;
+  return rng() < state.density;
+}
+
+function ghostVelocity(state, rng) {
+  const [lo, hi] = state.ghostVelocityRange;
+  return lo + Math.floor(rng() * (hi - lo + 1));
+}
+
+// ---------------------------------------------------------------------------
+// Fill selection
+// ---------------------------------------------------------------------------
+// A fill is just another pattern with the same style, tagged "fill".
+// pickPatternForBar decides which pattern supplies the notes for a given bar.
+
+function pickPatternForBar(state, barIndex, fillPatterns, rng) {
+  const n = state.fillEveryNBars;
+  const isFillBar = n > 0 && barIndex > 0 && (barIndex + 1) % n === 0;
+  if (!isFillBar || !fillPatterns || fillPatterns.length === 0) {
+    return state.pattern;
+  }
+  if (rng() >= state.fillProbability) return state.pattern;
+  return fillPatterns[Math.floor(rng() * fillPatterns.length)];
+}
+
+// ---------------------------------------------------------------------------
+// Rendering
+// ---------------------------------------------------------------------------
+
+/**
+ * Render `bars` bars of drums into note events.
+ *
+ * @param {object} state        from makeState()
+ * @param {number} bars         how many bars to render
+ * @param {object} [opts]
+ * @param {Array}  [opts.fillPatterns]  candidate fill patterns (same style)
+ * @param {number} [opts.seed]          RNG seed for reproducible output
+ * @returns {Array<{role,note,velocity,startTick,durationTick}>}
+ */
+function render(state, bars, opts) {
+  opts = opts || {};
+  const rng = opts.seed !== undefined ? makeRng(opts.seed) : Math.random;
+  const events = [];
+  const base = state.pattern;
+  const tps = ticksPerStep(base);
+  const stepDur = Math.max(1, Math.round(tps * state.gate));
+  const beatSteps = base.stepsPerBar / 4; // steps per quarter note (4/4 assumed)
+
+  for (let bar = 0; bar < bars; bar++) {
+    const pattern = pickPatternForBar(state, bar, opts.fillPatterns, rng);
+    const isFill = pattern !== state.pattern;
+    const barStartTick = bar * base.stepsPerBar * tps;
+
+    for (let step = 0; step < base.stepsPerBar; step++) {
+      // Patterns may span multiple bars; index into them cyclically.
+      const patLen = pattern.bars * pattern.stepsPerBar;
+      const patIdx = (bar * base.stepsPerBar + step) % patLen;
+      const gridTick = barStartTick + step * tps + swingTicks(pattern, step);
+
+      // Fill velocity ramp: build energy through the fill bar (90 -> 110 feel).
+      const rampScale = isFill && state.fillRamp
+        ? 1 - state.fillRamp * 0.15 + state.fillRamp * 0.3 * (step / base.stepsPerBar)
+        : 1;
+
+      for (const role of Object.keys(pattern.tracks)) {
+        const note = state.mapping[role];
+        if (note === undefined) continue;
+
+        let velocity = pattern.tracks[role][patIdx] || 0;
+
+        if (velocity > 0 && shouldFire(velocity, state, rng)) {
+          velocity = shapeVelocity(state, role, velocity, step, beatSteps, rampScale, rng);
+          events.push({
+            role,
+            note,
+            velocity,
+            startTick: hitTick(state, role, gridTick, rng),
+            durationTick: stepDur,
+          });
+        } else if (
+          velocity === 0 &&
+          state.ghostRoles.indexOf(role) !== -1 &&
+          rng() < ghostOdds(state, pattern, role, patIdx)
+        ) {
+          events.push({
+            role,
+            note,
+            velocity: ghostVelocity(state, rng),
+            startTick: hitTick(state, role, gridTick, rng),
+            durationTick: stepDur,
+          });
+        }
+      }
+    }
+  }
+
+  limitHands(events, state);
+  applyChokes(events, state);
+  events.sort((a, b) => a.startTick - b.startTick || a.note - b.note);
+  return events;
+}
+
+// --- velocity shaping -------------------------------------------------------
+// Order: hat hand-cycle -> backbeat accent -> fill ramp -> jitter -> clamp.
+function shapeVelocity(state, role, velocity, step, beatSteps, rampScale, rng) {
+  if (state.hatCycleDepth > 0 && state.hatCycleRoles.indexOf(role) !== -1) {
+    const mult = HAT_CYCLE[step % HAT_CYCLE.length];
+    velocity = velocity * (1 - state.hatCycleDepth * (1 - mult));
+  }
+  if (state.backbeatAccent > 0 && role === "snare") {
+    const isBackbeat = step === beatSteps || step === 3 * beatSteps; // beats 2 & 4
+    if (isBackbeat) velocity += state.backbeatAccent;
+  }
+  velocity *= rampScale;
+  if (state.velocityJitter > 0) {
+    velocity += (rng() * 2 - 1) * state.velocityJitter;
+  }
+  return Math.max(1, Math.min(127, Math.round(velocity)));
+}
+
+// --- timing -----------------------------------------------------------------
+// Anchor roles (kick, crash) stay on the grid; others get per-role push/pull
+// plus random jitter.
+function hitTick(state, role, gridTick, rng) {
+  let tick = gridTick;
+  const push = state.rolePushTicks[role];
+  if (push) tick += push;
+  const isAnchor = state.anchorRoles.indexOf(role) !== -1;
+  if (!isAnchor && state.humanizeTicks) {
+    tick += Math.round((rng() * 2 - 1) * state.humanizeTicks);
+  }
+  return Math.max(0, tick);
+}
+
+// --- ghosts -----------------------------------------------------------------
+// The step right before a main snare hit is the classic ghost spot ("suck-in"),
+// so it gets boosted odds.
+function ghostOdds(state, pattern, role, patIdx) {
+  let p = state.ghostProbability;
+  if (role === "snare" && pattern.tracks.snare) {
+    const len = pattern.bars * pattern.stepsPerBar;
+    const next = pattern.tracks.snare[(patIdx + 1) % len] || 0;
+    if (next >= state.accentThreshold) p *= state.preSnareGhostBias;
+  }
+  return Math.min(1, p);
+}
+
+// --- limb limiter ------------------------------------------------------------
+// A drummer has two hands. Kick is a foot and doesn't count. If more than
+// maxSimultaneousHands hand-played notes land on the same tick, keep the
+// loudest ones and drop the rest.
+function limitHands(events, state) {
+  const max = state.maxSimultaneousHands;
+  if (!max) return;
+  const byTick = {};
+  for (const e of events) {
+    if (e.role === "kick") continue;
+    (byTick[e.startTick] = byTick[e.startTick] || []).push(e);
+  }
+  for (const tick of Object.keys(byTick)) {
+    const group = byTick[tick];
+    if (group.length <= max) continue;
+    group.sort((a, b) => b.velocity - a.velocity);
+    for (const drop of group.slice(max)) {
+      const i = events.indexOf(drop);
+      if (i !== -1) events.splice(i, 1);
+    }
+  }
+}
+
+// Closed hat chokes open hat: when a closed-hat hit starts, any still-ringing
+// openHat note gets its duration cut at that point.
+function applyChokes(events, state) {
+  const openNote = state.mapping.openHat;
+  const closedNote = state.mapping.hihat;
+  if (openNote === undefined || closedNote === undefined) return;
+
+  const opens = events.filter((e) => e.note === openNote);
+  const closes = events.filter((e) => e.note === closedNote);
+  for (const o of opens) {
+    for (const c of closes) {
+      if (c.startTick > o.startTick && c.startTick < o.startTick + o.durationTick) {
+        o.durationTick = c.startTick - o.startTick;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+
+if (typeof module !== "undefined") {
+  module.exports = {
+    PPQ,
+    DEFAULTS,
+    HAT_CYCLE,
+    makeState,
+    makeRng,
+    ticksPerStep,
+    swingTicks,
+    shouldFire,
+    pickPatternForBar,
+    shapeVelocity,
+    hitTick,
+    ghostOdds,
+    limitHands,
+    render,
+  };
+}
+
+  })(module, __require, module.exports);
+  return module.exports;
+})();
+__mods["midi-writer"] = (function () {
+  var module = { exports: {} };
+  (function (module, require, exports) {
+// midi-writer.js
+// Minimal zero-dependency Standard MIDI File (format 0) writer.
+// Takes engine.render() events and produces a Uint8Array with a valid .mid
+// file. Uint8Array (not Buffer) so the same code runs in Node (fs and
+// http.res both accept it) and in the browser (Blob download).
+
+"use strict";
+
+const { PPQ } = require("./engine");
+
+function vlq(value) {
+  // variable-length quantity encoding
+  const bytes = [value & 0x7f];
+  value >>= 7;
+  while (value > 0) {
+    bytes.unshift((value & 0x7f) | 0x80);
+    value >>= 7;
+  }
+  return bytes;
+}
+
+/**
+ * @param {Array<{note,velocity,startTick,durationTick}>} events
+ * @param {object} [opts]
+ * @param {number} [opts.bpm=170]
+ * @param {number} [opts.channel=9]  MIDI channel 10 (drums) by default
+ * @returns {Uint8Array}
+ */
+function eventsToMidi(events, opts) {
+  opts = opts || {};
+  const bpm = opts.bpm || 170;
+  const channel = opts.channel !== undefined ? opts.channel : 9;
+
+  // Expand into absolute-time on/off messages
+  const messages = [];
+  for (const e of events) {
+    messages.push({ tick: e.startTick, type: 0x90, note: e.note, vel: e.velocity });
+    messages.push({
+      tick: e.startTick + e.durationTick,
+      type: 0x80,
+      note: e.note,
+      vel: 0,
+    });
+  }
+  messages.sort((a, b) => a.tick - b.tick || a.type - b.type);
+
+  const track = [];
+  // tempo meta event
+  const usPerQuarter = Math.round(60000000 / bpm);
+  track.push(0x00, 0xff, 0x51, 0x03,
+    (usPerQuarter >> 16) & 0xff, (usPerQuarter >> 8) & 0xff, usPerQuarter & 0xff);
+
+  let lastTick = 0;
+  for (const m of messages) {
+    track.push(...vlq(m.tick - lastTick));
+    lastTick = m.tick;
+    track.push(m.type | channel, m.note & 0x7f, m.vel & 0x7f);
+  }
+  // end of track
+  track.push(0x00, 0xff, 0x2f, 0x00);
+
+  const header = [
+    0x4d, 0x54, 0x68, 0x64, // MThd
+    0, 0, 0, 6,             // header length
+    0, 0,                   // format 0
+    0, 1,                   // one track
+    (PPQ >> 8) & 0xff, PPQ & 0xff,
+    0x4d, 0x54, 0x72, 0x6b, // MTrk
+    (track.length >> 24) & 0xff, (track.length >> 16) & 0xff,
+    (track.length >> 8) & 0xff, track.length & 0xff,
+  ];
+
+  const out = new Uint8Array(header.length + track.length);
+  out.set(header, 0);
+  out.set(track, header.length);
+  return out;
+}
+
+if (typeof module !== "undefined") {
+  module.exports = { eventsToMidi, vlq };
+}
+
+  })(module, __require, module.exports);
+  return module.exports;
+})();
+  return {
+    lib: {
+      engine: __mods["engine"],
+      eventsToMidi: __mods["midi-writer"].eventsToMidi,
+      PPQ: __mods["engine"].PPQ,
+    },
+    presets: {
+  "_comment": "Humanization presets. Values grounded in drum-programming best practices: velocity jitter ~4% (+/-5 of 127), timing jitter <= ~10 ticks with kick/crash anchored to the grid, hi-hat hand cycle (down-beat loud, off-beats soft), backbeat snare accent, ghost notes at low velocity biased to the step before a main snare, fills that ramp velocity, and a two-hand simultaneity limit.",
+
+  "machine": {
+    "_desc": "No humanization. Grid-perfect. For techno/electro where robotic IS the style.",
+    "velocityJitter": 0,
+    "humanizeTicks": 0,
+    "hatCycleDepth": 0,
+    "backbeatAccent": 0,
+    "ghostProbability": 0,
+    "fillRamp": 0,
+    "maxSimultaneousHands": 0
+  },
+
+  "tight": {
+    "_desc": "Session drummer: subtle velocity/timing variation, hat cycle, anchored kick.",
+    "velocityJitter": 4,
+    "humanizeTicks": 6,
+    "hatCycleDepth": 0.6,
+    "backbeatAccent": 8,
+    "ghostProbability": 0.04,
+    "preSnareGhostBias": 4,
+    "fillRamp": 0.7,
+    "maxSimultaneousHands": 2,
+    "rolePushTicks": { "hihat": -3 }
+  },
+
+  "breaks": {
+    "_desc": "Jungle/breakbeat feel: looser timing, laid-back snare, active ghosts, strong hat cycle.",
+    "velocityJitter": 6,
+    "humanizeTicks": 10,
+    "hatCycleDepth": 0.8,
+    "backbeatAccent": 10,
+    "ghostProbability": 0.09,
+    "preSnareGhostBias": 5,
+    "fillRamp": 1.0,
+    "maxSimultaneousHands": 2,
+    "rolePushTicks": { "snare": 5, "hihat": -4 }
+  }
+},
+    mapping: {
+  "kick": 36,
+  "rim": 37,
+  "snare": 38,
+  "perc": 39,
+  "tomLow": 43,
+  "hihat": 42,
+  "tomMid": 47,
+  "openHat": 46,
+  "tomHigh": 50,
+  "crash": 49,
+  "ride": 51,
+  "tambourine": 54,
+  "cowbell": 56,
+  "congaHigh": 63,
+  "congaLow": 64,
+  "shaker": 70,
+  "clave": 75
+},
+    patterns: [{"id":"bh_fidget_stab","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.08,"bpm":127,"tags":["groove","fidget","stabs","cowbell"],"_approach":"Fidget-house chop (Jack Beats / Jamie Jones-adjacent tech edge): tighter, nearly straight swing, extra syncopated clap stabs off the backbeat, cowbell and high-tom jabs answering each other across the two bars, sparse hats leaving space for chopped vocals.","tracks":{"kick":[102,0,0,0,98,0,0,0,100,0,0,0,97,0,0,68,102,0,0,0,98,0,0,0,100,0,0,0,97,0,0,0],"perc":[0,0,0,0,108,0,0,78,0,0,0,0,106,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,106,0,0,80],"cowbell":[0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,64,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0],"tomHigh":[0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0],"hihat":[0,0,72,0,0,0,70,0,0,0,73,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,73,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,91,0,0,0,0,0,0,0,90,0]}},{"id":"bh_fill_garage_snap","style":"bass_house","bars":1,"stepsPerBar":16,"swing":0.24,"bpm":128,"tags":["fill","garage","skippy"],"_approach":"Skippy garage snare fill: rim skips keep the shuffle running while syncopated snare snaps build from a ghost to two hard swung hits on the last beat, with a kick pickup on the final 16th, straight out of the UKG playbook.","tracks":{"kick":[101,0,0,0,98,0,0,0,100,0,0,0,0,0,0,72],"perc":[0,0,0,0,103,0,0,0,0,0,0,0,99,0,0,0],"snare":[0,0,0,0,0,0,0,34,0,0,62,0,0,92,0,105],"rim":[0,0,0,44,0,50,0,0,0,46,0,52,0,0,48,0],"openHat":[0,0,91,0,0,0,93,0,0,0,0,0,0,0,90,0],"hihat":[0,0,0,0,0,0,0,42,0,0,0,46,0,0,0,0]}},{"id":"bh_fill_tom_run","style":"bass_house","bars":1,"stepsPerBar":16,"swing":0.14,"bpm":128,"tags":["fill","toms","build"],"_approach":"Phrase-end tom descent with a rising clap run: the groove holds for two beats, then high-to-low toms tumble into an accelerating clap crescendo that lands the next downbeat, a staple bass house transition move.","tracks":{"kick":[100,0,0,0,98,0,0,0,96,0,0,0,0,0,0,0],"perc":[0,0,0,0,104,0,0,0,0,0,0,0,86,0,94,106],"tomHigh":[0,0,0,0,0,0,0,0,72,0,68,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,74,0,70,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,78,0,82],"openHat":[0,0,92,0,0,0,90,0,0,0,0,0,0,0,0,0],"hihat":[0,0,0,54,0,0,0,56,0,0,0,0,0,0,0,0]}},{"id":"bh_jackin_uk","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.22,"bpm":126,"tags":["groove","jackin","claps","swing"],"_approach":"Jackin'-house clap grammar pulled into UK bass house (the Beat Dissected jackin' recipe): mid-velocity claps reinforcing beats 1 and 3 under the loud backbeat, a dirty low perc 'jack' on the 15th step, heavily swung, with an extra 16th open-hat pair sneaking into bar 2.","tracks":{"kick":[99,0,0,0,102,0,0,0,98,0,0,0,101,0,0,0,99,0,0,0,102,0,0,0,98,0,0,0,101,0,0,0],"perc":[74,0,0,0,108,0,0,0,76,0,0,0,104,0,0,0,74,0,0,0,108,0,0,42,76,0,0,0,104,0,45,0],"congaLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,66,0],"openHat":[0,0,93,0,0,0,90,0,0,0,94,0,0,0,91,0,0,0,93,0,0,0,90,0,0,52,94,0,0,0,91,0],"hihat":[0,0,0,58,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,60,0,44,0,0]}},{"id":"bh_lean_drop","style":"bass_house","bars":4,"stepsPerBar":16,"swing":0.12,"bpm":128,"tags":["groove","drop","minimal","vocal-space"],"_approach":"Bassline-led drop discipline (AC Slater / Chris Lorenzo drops): drums stripped to kick, clap and the offbeat open-hat anchor so the bass riff and vocal chops carry the section; hats and rim ghosts creep in bar by bar, with a clap double and kick pickup only at the phrase turnaround.","tracks":{"kick":[101,0,0,0,98,0,0,0,100,0,0,0,99,0,0,0,101,0,0,0,98,0,0,0,100,0,0,0,99,0,0,0,101,0,0,0,98,0,0,0,100,0,0,0,99,0,0,0,101,0,0,0,98,0,0,0,100,0,0,0,99,0,70,0],"perc":[0,0,0,0,107,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,107,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,107,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,107,0,0,0,0,0,0,0,105,48,0,0],"openHat":[0,0,95,0,0,0,93,0,0,0,94,0,0,0,92,0,0,0,95,0,0,0,93,0,0,0,94,0,0,0,92,0,0,0,95,0,0,0,93,0,0,0,94,0,0,0,92,0,0,0,95,0,0,0,93,0,0,0,94,0,0,0,92,0],"hihat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,56,0,0,0,44,0,0,0,52,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,52,0,46,0,0,0,0,0,60],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0]}},{"id":"bh_night_bass_bounce","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.14,"bpm":128,"tags":["groove","bounce","offbeat-hat","classic"],"_approach":"The canonical Night Bass bounce (AC Slater lineage): 4x4 kick, big clap on 2 and 4, loud offbeat open hats as the anchor, skippy closed-hat pickups on the swung 16ths, with a kick pickup and clap flam appearing only in bar 2.","tracks":{"kick":[100,0,0,0,98,0,0,0,101,0,0,0,99,0,0,0,100,0,0,0,98,0,0,0,101,0,0,0,99,0,74,0],"perc":[0,0,0,0,106,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,104,45,0,0],"openHat":[0,0,94,0,0,0,92,0,0,0,95,0,0,0,93,0,0,0,94,0,0,0,92,0,0,0,95,0,0,0,93,0],"hihat":[0,0,0,55,0,0,0,58,0,48,0,60,0,0,0,62,0,0,0,55,0,44,0,58,0,48,0,60,0,52,0,64],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0]}},{"id":"bh_night_ride","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.18,"bpm":128,"tags":["groove","ride","dark","ghosts"],"_approach":"Dark warehouse roller (Taiki Nulight / late-night Night Bass sets): the offbeat energy moves to a contoured 8th-note ride wash, snare ghosts smear around the clap, and a single ghost kick on the 'and' of 2 in bar 2 gives it the limp.","tracks":{"kick":[101,0,0,0,98,0,0,0,100,0,0,0,99,0,0,0,101,0,0,0,98,0,0,72,100,0,0,0,99,0,0,0],"perc":[0,0,0,0,103,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,103,0,0,0,0,0,0,0,105,0,0,0],"ride":[66,0,52,0,68,0,54,0,65,0,53,0,69,0,55,0,66,0,52,0,68,0,54,0,65,0,53,44,69,0,55,0],"snare":[0,0,0,0,0,0,30,0,0,0,0,24,0,0,0,0,0,0,0,26,0,0,30,0,0,0,0,0,0,0,32,0],"openHat":[0,0,0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,92,0],"hihat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0]}},{"id":"bh_speed_garage_44","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":130,"tags":["groove","speed-garage","4x4","energy"],"_approach":"Speed-garage 4x4 energy (the bassline/niche end that feeds Taiki Nulight): real snare backbeat instead of clap, crash marking the phrase, tambourine offbeats, rim skips and a snare ghost pickup pushing into the loop.","tracks":{"kick":[103,0,0,0,99,0,0,0,101,0,0,0,100,0,0,0,103,0,0,0,99,0,0,0,101,0,0,0,100,0,0,0],"snare":[0,0,0,0,105,0,0,0,0,0,0,0,107,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,107,0,0,38],"rim":[0,0,0,0,0,0,0,50,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,44,0,0,0,54,0,0],"hihat":[58,0,0,66,0,0,56,0,60,0,0,68,0,0,58,42,58,0,0,66,0,40,56,0,60,0,0,68,0,0,58,0],"openHat":[0,0,93,0,0,0,0,0,0,0,91,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,91,0,0,0,0,0],"crash":[84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"tambourine":[0,0,48,0,0,0,50,0,0,0,46,0,0,0,52,0,0,0,48,0,0,0,50,0,0,0,46,0,0,0,52,0]}},{"id":"bh_tom_bounce","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.16,"bpm":126,"tags":["groove","toms","percussive","bounce-cell"],"_approach":"Tom/perc bounce cells (My Nu Leng and the darker Night Bass rollers): a melodic low-mid-high tom conversation with congas answering, over the standard kick/clap frame, open hats reduced to the first and third offbeats so the toms own the bounce.","tracks":{"kick":[100,0,0,0,97,0,0,0,102,0,0,0,98,0,0,0,100,0,0,0,97,0,0,0,102,0,0,0,98,0,0,0],"perc":[0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0],"tomLow":[0,0,0,74,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,72,0],"tomMid":[0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,66,0,0,0,0,0],"tomHigh":[0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,66,0,0],"congaHigh":[0,0,0,0,0,0,58,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,52],"congaLow":[0,0,0,0,0,46,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,48,0],"openHat":[0,0,92,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,93,0,0,0,0,0],"hihat":[0,0,0,50,0,0,0,54,0,0,0,48,0,0,0,56,0,0,0,50,0,0,0,54,0,0,0,48,0,0,0,56]}},{"id":"bh_ukg_skip","style":"bass_house","bars":2,"stepsPerBar":16,"swing":0.24,"bpm":128,"tags":["groove","garage","skippy","shuffle"],"_approach":"The UK garage inheritance (My Nu Leng / Chris Lorenzo side of the sound): heavy 60%-style swing, a full skippy 16th closed-hat lattice with strong velocity contour, rim skips and a shaker bed, open hats only on the second and fourth offbeats to break monotony.","tracks":{"kick":[100,0,0,0,97,0,0,0,102,0,0,0,98,0,0,0,101,0,0,0,97,0,0,0,102,0,0,0,98,0,0,0],"perc":[0,0,0,0,103,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,103,0,0,0,0,0,0,32,105,0,0,0],"hihat":[62,0,40,68,0,36,58,0,64,0,42,70,0,38,60,44,62,0,40,68,0,36,58,30,64,0,42,70,0,38,60,0],"openHat":[0,0,0,0,0,0,92,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,94,0],"rim":[0,0,0,46,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,52,0,0,28,0,0],"shaker":[44,0,34,0,46,0,36,0,45,0,35,0,47,0,38,0,44,0,34,0,46,0,36,0,45,0,35,0,47,0,38,0]}},{"id":"bassline_dark_rim_roller","style":"bassline","bars":2,"stepsPerBar":16,"swing":0.08,"bpm":140,"tags":["dark","rim","ride","minimal"],"_approach":"Dark modern bassline (Notion / Darkzy lane): the offbeat is held by a quiet metallic ride instead of an open hat, a syncopated rim line becomes the lead groove voice, and snare+clap are layered on the backbeat for weight.","tracks":{"kick":[115,0,0,0,109,0,0,0,113,0,0,0,109,0,0,0,115,0,0,0,109,0,0,0,113,0,0,0,110,0,0,0],"snare":[0,0,0,0,106,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,108,0,0,0],"perc":[0,0,0,0,96,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0],"ride":[0,0,44,0,0,0,48,0,0,0,42,0,0,0,50,0,0,0,45,0,0,0,49,0,0,0,43,0,0,0,52,0],"rim":[0,0,0,62,0,0,0,76,0,0,0,58,0,0,70,0,0,0,0,64,0,0,0,78,0,0,0,60,0,72,0,34],"hihat":[0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,50],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0]}},{"id":"bassline_fill_clap_stutter","style":"bassline","bars":1,"stepsPerBar":16,"swing":0.15,"bpm":140,"tags":["fill","clap-stutter","toms"],"_approach":"MC-friendly clap-stutter fill: the groove runs normally for half a bar, then the clap stutters in syncopated pairs over a falling tom line and the last kick is dropped to snap the next downbeat harder - a niche-era DJ-tool turnaround.","tracks":{"kick":[116,0,0,0,110,0,0,0,112,0,0,0,0,0,0,0],"perc":[0,0,0,0,118,0,0,0,0,72,84,0,104,80,96,112],"openHat":[0,0,60,0,0,0,62,0,0,0,0,0,0,0,0,0],"hihat":[0,0,0,74,0,0,0,78,0,0,0,46,0,0,0,0],"tomHigh":[0,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0]}},{"id":"bassline_fill_snare_rush","style":"bassline","bars":1,"stepsPerBar":32,"swing":0,"bpm":140,"tags":["fill","snare-rush","buildup"],"_approach":"Classic bassline turnaround fill: kick holds the floor for the first half, then a straight 16th-into-32nd snare rush crescendos across beats 3-4 into the next phrase - the standard 4/8-bar transition move in both niche and modern sets.","tracks":{"kick":[116,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"openHat":[0,0,0,0,60,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"hihat":[0,0,0,0,0,0,72,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,74,0,0,0,82,0,88,0,96,102,110,118]}},{"id":"bassline_kick_flex_phrase","style":"bassline","bars":4,"stepsPerBar":16,"swing":0.1,"bpm":139,"tags":["4bar","kick-variation","switch-up"],"_approach":"Four-bar phrase built on kick grammar: two bars of strict 4x4, bar 3 adds a syncopated kick on the 'and of 4', bar 4 drops the beat-3 kick for a tom-marked gap and double-16th kick pickup - the switch-up phrasing modern bassline DJs mix around.","tracks":{"kick":[114,0,0,0,107,0,0,0,111,0,0,0,108,0,0,0,114,0,0,0,107,0,0,0,111,0,0,0,108,0,0,0,115,0,0,0,107,0,0,0,111,0,0,0,109,0,72,0,116,0,0,0,108,0,0,0,0,0,0,0,110,0,74,66],"perc":[0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,119,0,0,0,0,0,0,0,117,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,118,0,0,0],"openHat":[0,0,58,0,0,0,62,0,0,0,57,0,0,0,63,0,0,0,58,0,0,0,62,0,0,0,57,0,0,0,64,0,0,0,60,0,0,0,63,0,0,0,58,0,0,0,65,0,0,0,61,0,0,0,64,0,0,0,59,0,0,0,0,0],"hihat":[0,0,0,74,0,0,0,78,0,0,0,72,0,0,0,80,0,0,0,75,0,42,0,79,0,0,0,73,0,0,0,82,0,0,0,76,0,0,0,80,0,0,0,74,0,44,0,83,0,0,0,77,0,0,0,81,0,0,0,46,0,40,52,85],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,0,62,0,0,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"bassline_micro_rush_roller","style":"bassline","bars":2,"stepsPerBar":32,"swing":0.08,"bpm":142,"tags":["snare-rush","32nds","modern"],"_approach":"Modern bassline roller on a 32nd grid: straight 4x4 kick and clap, skippy hats, plus the genre's signature 32nd-note snare micro-rushes stitched into each bar turnaround (small into bar 2, full crescendo into the loop).","tracks":{"kick":[116,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,113,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,117,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,113,0,0,0,0,0,0,0,111,0,0,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,119,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,117,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0],"openHat":[0,0,0,0,60,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,59,0,0,0,0,0,0,0,0,0,0,0],"hihat":[0,0,0,0,0,0,74,0,0,0,44,0,0,0,78,0,0,0,0,0,0,0,76,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,44,0,0,0,79,0,0,0,0,0,0,0,77,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,48,60,74,88],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"bassline_niche_conga_bounce","style":"bassline","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":140,"tags":["niche","percussion","conga","tambourine"],"_approach":"Niche organ-tune percussion palette: 4x4 kick and clap kept simple while syncopated congas and offbeat tambourine carry the shuffle - the Latin-tinged top layer heard across Jamie Duggan-era bassline mixes.","tracks":{"kick":[113,0,0,0,106,0,0,0,110,0,0,0,107,0,0,0,114,0,0,0,106,0,0,0,110,0,0,0,108,0,0,0],"perc":[0,0,0,0,116,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,117,0,0,0,0,0,0,0,118,0,0,0],"tambourine":[0,0,48,0,0,0,54,0,0,0,46,0,0,0,57,0,0,0,50,0,0,0,55,0,0,0,47,0,0,0,59,0],"congaHigh":[0,0,0,58,0,0,0,64,0,0,0,54,0,0,0,0,0,0,0,60,0,0,0,66,0,0,0,0,0,0,50,0],"congaLow":[0,0,0,0,0,0,50,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,52,0,0,0,0,46,0,58,0,0],"hihat":[0,0,0,0,0,40,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,0,52],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0]}},{"id":"bassline_niche_organ_bounce","style":"bassline","bars":2,"stepsPerBar":16,"swing":0.18,"bpm":140,"tags":["niche","classic","organ","shuffled"],"_approach":"Classic mid-2000s Niche-club 4x4: strict four-to-the-floor kick, big clap on 2 and 4, open hats on every offbeat with skippy syncopated closed hats between them, heavy swing - the T2 'Heartbroken' / DJ Q blueprint.","tracks":{"kick":[114,0,0,0,106,0,0,0,110,0,0,0,107,0,0,0,115,0,0,0,105,0,0,0,111,0,0,0,108,0,0,0],"perc":[0,0,0,0,118,0,0,0,0,0,0,0,115,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,121,0,0,0],"openHat":[0,0,58,0,0,0,62,0,0,0,56,0,0,0,64,0,0,0,60,0,0,0,63,0,0,0,57,0,0,0,66,0],"hihat":[0,0,0,74,0,46,0,80,0,0,0,72,0,44,0,82,0,42,0,76,0,0,0,81,0,40,0,73,0,0,0,86],"rim":[0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0],"shaker":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,30,0,42,0,32,0,40,0,30,0,44,0,34,0]}},{"id":"bassline_skippy_hat_carpet","style":"bassline","bars":2,"stepsPerBar":16,"swing":0.14,"bpm":141,"tags":["skippy","hats","16ths","rim-layer"],"_approach":"Hat-language study: a full 16th closed-hat carpet with an aggressive accent contour, gaps left on the offbeats so the open hat rings and gets choked by the next closed hit - the skippy top-end that defines DJ Q-style bassline.","tracks":{"kick":[112,0,0,0,108,0,0,0,111,0,0,0,108,0,0,0,113,0,0,0,108,0,0,0,111,0,0,0,109,0,0,0],"perc":[0,0,0,0,117,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,117,0,0,0,0,0,0,0,119,0,0,0],"rim":[0,0,0,0,74,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,76,0,0,0],"openHat":[0,0,58,0,0,0,54,0,0,0,60,0,0,0,64,0,0,0,58,0,0,0,56,0,0,0,60,0,0,0,66,0],"hihat":[62,34,0,80,58,30,0,84,60,36,0,78,56,32,0,86,64,0,0,82,60,38,0,80,62,0,0,84,58,36,44,90]}},{"id":"bassline_speed_garage_shuffle","style":"bassline","bars":2,"stepsPerBar":16,"swing":0.26,"bpm":138,"tags":["speed-garage","shuffle","double-kick"],"_approach":"Proto-bassline speed garage: 4x4 kick with low-velocity double-kick pickups before downbeats, snare backbeat with an end-of-bar ghost, and heavily swung syncopated hats - the Sheffield sound bassline grew out of.","tracks":{"kick":[114,0,0,0,106,0,0,0,112,0,0,0,108,0,0,66,116,0,0,0,106,0,0,0,112,0,68,0,110,0,0,0],"snare":[0,0,0,0,112,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,113,0,0,0,0,0,0,0,116,0,30,0],"openHat":[0,0,60,0,0,0,64,0,0,0,58,0,0,0,66,0,0,0,62,0,0,0,65,0,0,0,59,0,0,0,67,0],"hihat":[0,0,0,82,0,46,0,78,0,38,0,80,0,44,0,74,0,0,0,84,0,48,0,79,0,0,0,82,0,42,0,76],"rim":[0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,42,0,0,0,0,0,0]}},{"id":"bassline_warehouse_stomp","style":"bassline","bars":2,"stepsPerBar":16,"swing":0.05,"bpm":140,"tags":["modern","minimal","warehouse","bass-house"],"_approach":"Modern bassline house (TQD / Skepsis / Holy Goof): near-straight, deliberately sparse and punchy drums - hard 4x4 kick, huge clap, dominant offbeat open hat and almost nothing else, leaving all the groove space for the warped bass.","tracks":{"kick":[118,0,0,0,112,0,0,0,116,0,0,0,112,0,0,0,118,0,0,0,112,0,0,0,116,0,0,0,113,0,0,0],"perc":[0,0,0,0,122,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,122,0,0,0,0,0,0,0,123,0,0,0],"openHat":[0,0,66,0,0,0,68,0,0,0,65,0,0,0,69,0,0,0,66,0,0,0,68,0,0,0,65,0,0,0,69,0],"hihat":[0,0,0,0,0,0,0,45,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,58],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,52,0,0,0],"crash":[92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0]}},{"id":"dnb_dancefloor_drive_01","style":"dnb","bars":4,"stepsPerBar":16,"swing":0.02,"bpm":174,"tags":["dancefloor","anthem","driving","16th-hats"],"_approach":"Big-room dancefloor drive (Sub Focus / Dimension / Culture Shock): crash-marked downbeat, relentless accented 16th hats plus offbeat tambourine, clap-layered backbeats, and a bar-4 push with open hats and a snare pickup into the next phrase.","tracks":{"kick":[106,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,107,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,95,0,0,0,80,0],"snare":[0,0,0,0,116,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,114,0,26,0,0,0,0,0,117,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,115,0,28,32],"perc":[0,0,0,0,85,0,0,0,0,0,0,0,83,0,0,0,0,0,0,0,85,0,0,0,0,0,0,0,83,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,83,0,0,0,0,0,0,0,85,0,0,0,0,0,0,0,84,0,0,0],"hihat":[45,32,58,33,46,31,59,34,45,30,57,33,47,32,60,35,44,31,57,32,46,32,58,33,45,31,58,34,46,33,61,36,45,32,58,33,47,31,59,34,44,30,57,33,48,32,60,35,45,31,58,33,46,32,0,34,45,31,57,33,47,34,0,38],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,57,0],"tambourine":[0,0,50,0,0,0,48,0,0,0,51,0,0,0,49,0,0,0,49,0,0,0,48,0,0,0,50,0,0,0,50,0,0,0,50,0,0,0,47,0,0,0,51,0,0,0,49,0,0,0,50,0,0,0,48,0,0,0,52,0,0,0,51,0],"crash":[92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dnb_deep_roller_01","style":"dnb","bars":4,"stepsPerBar":16,"swing":0.05,"bpm":172,"tags":["rolling","deep","two-step","ride","ghost"],"_approach":"Ride-driven deep roller in the Alix Perez / Skeptical / Halogenix mold: strict two-step skeleton (kick on 1 and the and-of-3), 8th-note ride carrying the roll, 16th hat shading, and a migrating ghost-snare conversation between the backbeats.","tracks":{"kick":[104,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,95,0,0,74,0,0,104,0,0,0,0,0,0,0,0,0,97,0,0,0,0,0,103,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0],"snare":[0,0,0,22,112,0,0,28,0,0,0,0,110,0,24,0,0,0,0,0,113,0,26,0,0,20,0,0,111,0,0,30,0,0,0,24,112,0,0,27,0,0,18,0,110,0,25,0,0,0,0,0,114,0,0,26,0,0,0,0,112,0,31,35],"ride":[58,0,46,0,60,0,47,0,56,0,45,0,60,0,48,0,57,0,45,0,61,0,48,0,55,0,46,0,59,0,50,0,58,0,47,0,60,0,46,0,57,0,45,0,61,0,49,0,59,0,46,0,60,0,48,0,56,0,47,0,62,0,52,0],"hihat":[0,34,0,40,0,36,0,42,0,33,0,41,0,37,0,44,0,33,0,39,0,35,0,41,0,34,0,42,0,36,0,43,0,35,0,41,0,34,0,40,0,33,0,42,0,38,0,45,0,34,0,40,0,36,0,42,0,35,0,41,0,39,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0]}},{"id":"dnb_fill_ghost_break_01","style":"dnb","bars":1,"stepsPerBar":16,"swing":0.05,"bpm":172,"tags":["fill","rolling","ghost","toms"],"_approach":"Roller/liquid turnaround fill with amen DNA: ghost-snare chatter around the backbeats, a displaced mid-velocity snare on the and-of-3, and a high-to-low tom cascade over the last three 16ths as the ride fades out.","tracks":{"kick":[102,0,0,0,0,0,0,86,0,0,0,0,0,0,0,0],"snare":[0,0,0,26,110,0,30,0,0,34,80,0,108,0,0,0],"hihat":[46,0,40,26,0,0,42,0,44,0,0,0,0,0,0,0],"ride":[56,0,0,0,52,0,0,0,50,0,0,0,0,0,0,0],"tomHigh":[0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78]}},{"id":"dnb_fill_snare_roll_01","style":"dnb","bars":1,"stepsPerBar":16,"swing":0,"bpm":174,"tags":["fill","dancefloor","snare-roll","build"],"_approach":"Dancefloor snare-roll fill: the groove holds through beat 2, then a 16th snare roll ramps in velocity from ghost-soft to full slam across the back half of the bar - the classic Sub Focus/Dimension phrase-end lift.","tracks":{"kick":[104,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0],"snare":[0,0,0,0,112,0,0,0,48,54,60,68,76,86,96,108],"perc":[0,0,0,0,84,0,0,0,0,0,0,0,0,0,88,0],"hihat":[50,0,44,0,48,0,45,0,0,0,0,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58]}},{"id":"dnb_foghorn_stomp_01","style":"dnb","bars":2,"stepsPerBar":16,"swing":0,"bpm":176,"tags":["jump-up","foghorn","stripped","modern"],"_approach":"Foghorn-era modern jump-up (Hedex / Bou drop grammar): drums stripped to maximum weight - kick on 1 and the and-of-3, huge clap-layered snares, barely-there offbeat hats and a dancehall conga bounce, leaving all midrange space for the foghorn bass.","tracks":{"kick":[112,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,102,0,0,0,88,0],"snare":[0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,28],"perc":[0,0,0,0,84,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,82,0,0,0],"hihat":[0,0,38,0,0,0,40,0,0,0,38,0,0,0,42,0,0,0,38,0,0,0,40,0,0,0,39,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0],"congaLow":[0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,44,0,0,0,0],"crash":[88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dnb_halftime_ghost_01","style":"dnb","bars":4,"stepsPerBar":16,"swing":0.08,"bpm":170,"tags":["halftime","autonomic","minimal","sparse"],"_approach":"85/170 halftime after dBridge / Instra:mental's Autonomic blueprint: the one exception to the 2-and-4 law - snare lands only on beat 3, drums stay skeletal and glassy with rim ticks, clave pings and broken hats framing the negative space.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0,102,0,0,74,0,0,0,0,0,0,85,0,0,0,0,0,103,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,86,0,0,74,0,0],"snare":[0,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,0,0,0,0,0,26,18],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"hihat":[0,0,40,0,0,26,0,44,0,0,38,0,0,28,0,46,0,0,41,0,0,25,0,43,0,0,39,0,0,27,0,0,0,0,40,0,0,26,0,44,0,0,37,0,0,29,0,47,0,0,41,0,0,26,0,44,0,0,38,0,0,30,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0],"shaker":[30,0,22,0,28,0,24,0,30,0,22,0,28,0,25,0,29,0,21,0,28,0,23,0,30,0,22,0,27,0,24,0,30,0,22,0,29,0,24,0,30,0,21,0,28,0,26,0,29,0,22,0,28,0,23,0,30,0,22,0,28,0,27,0],"clave":[0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dnb_jumpup_bounce_01","style":"dnb","bars":2,"stepsPerBar":16,"swing":0,"bpm":174,"tags":["jump-up","bounce","punchy","openhat-skank"],"_approach":"Classic jump-up bounce (DJ Hazard lineage into Bou/Hedex): kicks on beat 1 and the and-of-2, snares slammed on 2 and 4 with a clap layer, on-beat closed hats choking an offbeat open-hat skank, almost no ghosts - direct and punchy.","tracks":{"kick":[110,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,98,0,0,0,90,0,0,0,0,0],"snare":[0,0,0,0,115,0,0,0,0,0,0,0,113,0,0,0,0,0,0,0,115,0,0,0,0,0,0,0,113,0,0,25],"perc":[0,0,0,0,84,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,82,0,0,0],"hihat":[64,0,0,0,60,0,0,0,62,0,0,0,61,0,0,0,63,0,0,0,60,0,0,0,62,0,0,0,60,0,0,0],"openHat":[0,0,56,0,0,0,54,0,0,0,57,0,0,0,55,0,0,0,55,0,0,0,54,0,0,0,58,0,0,0,60,0]}},{"id":"dnb_liquid_flow_01","style":"dnb","bars":4,"stepsPerBar":16,"swing":0.12,"bpm":174,"tags":["liquid","smooth","two-step","swing","shaker"],"_approach":"Liquid flow after Calibre / Lenzman / LSB: smooth swung two-step with ghost snares at the 2.5 and 4.5 positions, flowing 16th shaker, offbeat open-ish hats and soft rim/conga colour that leaves room for pads and vocals.","tracks":{"kick":[100,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,93,0,0,0,0,0,101,0,0,0,0,0,0,72,0,0,92,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0],"snare":[0,0,0,0,108,0,24,0,0,0,0,0,106,0,26,0,0,0,0,0,108,0,25,0,0,0,20,0,107,0,28,0,0,0,0,0,109,0,24,0,0,0,0,0,106,0,27,0,0,0,0,18,108,0,26,0,0,0,0,0,107,0,30,22],"rim":[0,0,0,30,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0],"hihat":[0,0,48,0,0,0,50,0,0,0,47,0,0,0,52,0,0,0,47,0,0,0,0,0,0,0,48,0,0,0,51,0,0,0,49,0,0,0,50,0,0,0,47,0,0,0,53,0,0,0,48,0,0,0,51,0,0,0,49,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0],"shaker":[38,26,44,30,40,27,46,31,38,25,45,29,41,28,48,34,37,25,43,29,41,28,45,30,39,26,46,31,40,27,47,33,38,26,44,30,40,26,45,30,38,25,46,30,42,29,49,35,37,25,43,29,41,27,46,31,39,26,45,30,43,30,50,36],"congaHigh":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0],"congaLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dnb_neuro_engine_01","style":"dnb","bars":2,"stepsPerBar":32,"swing":0,"bpm":172,"tags":["neurofunk","tech","micro-edit","mechanical"],"_approach":"Neurofunk engine (Noisia school / Mefjus): dead-simple kick-snare placement kept dry and tight, but tension built from 32nd-note ghost-snare chatter and stuttered hat micro-edits - the machine groove lives in the edits, not the skeleton.","tracks":{"kick":[108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,76,0],"snare":[0,0,0,0,0,0,0,0,116,0,0,0,0,26,0,30,0,0,0,0,0,0,20,0,114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,116,0,0,24,0,0,28,34,0,0,0,0,0,0,0,0,114,0,0,0,0,26,32,38],"perc":[0,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0],"hihat":[62,0,42,0,58,0,44,19,60,0,43,0,57,0,45,0,61,0,41,0,59,22,46,0,60,0,44,0,58,0,47,25,62,0,43,0,58,0,0,0,61,0,42,18,57,0,45,0,60,0,41,0,59,0,46,21,61,0,44,26,58,0,48,28],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0]}},{"id":"dnb_rolling_01","style":"dnb","bars":1,"stepsPerBar":16,"bpm":174,"swing":0.04,"tags":["two-step","rolling","neutral"],"tracks":{"kick":[100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0],"hihat":[70,0,70,0,70,0,70,70,70,0,70,0,70,0,70,70],"ride":[0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0]}},{"id":"dnb_techstep_march_01","style":"dnb","bars":2,"stepsPerBar":16,"swing":0,"bpm":172,"tags":["techstep","industrial","cold","march"],"_approach":"Techstep heritage march (Ed Rush & Optical / early Bad Company): hard unswung two-step with cold mechanical 16th hats at near-flat alternation, quarter-note ride ticks, a single industrial low-tom stab and almost no ghost warmth.","tracks":{"kick":[108,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,100,0,0,0,86,0],"snare":[0,0,0,0,114,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,114,0,0,24,0,0,0,0,112,0,0,0],"hihat":[54,36,50,36,54,35,50,37,53,36,51,36,54,37,52,38,54,36,50,36,54,36,51,37,53,35,50,36,55,38,53,40],"ride":[60,0,0,0,56,0,0,0,58,0,0,0,56,0,0,0,60,0,0,0,56,0,0,0,58,0,0,0,57,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0]}},{"id":"dubstep_bandulu_gunfinger","style":"dubstep","bars":2,"stepsPerBar":16,"swing":0.1,"bpm":140,"tags":["grime","bristol","gunfinger"],"_approach":"Bristol Bandulu-school grime-140 (Kahn & Neek, Boofy): the grime 'Pulse X' kick cell (1, the a-of-1, & of 3) as structural backbone under the beat-3 snare+clap, with almost nothing else — sparse hats and a single swung clave blip.","tracks":{"kick":[106,0,0,92,0,0,0,0,0,0,94,0,0,0,0,0,106,0,0,92,0,0,0,0,0,0,94,0,0,0,72,0],"snare":[0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,40,0,0,0],"hihat":[0,0,0,0,0,0,0,0,0,0,0,0,55,0,42,0,0,0,0,0,0,0,38,0,0,0,0,0,54,0,44,0],"openHat":[0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"clave":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,0,0]}},{"id":"dubstep_coki_wobble_stomp","style":"dubstep","bars":2,"stepsPerBar":16,"swing":0.05,"bpm":140,"tags":["wobble","heavy","mid2000s"],"_approach":"Wobble-era stomp (Coki / mid-2000s tearout): near-straight grid, kick on 1 plus the classic '& of 3' kick, clap layered under the snare, driving 8th hats with an open-hat lift — the loudest, most mechanical corner of the lineage.","tracks":{"kick":[110,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,110,0,0,0,0,0,76,0,0,0,92,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0],"hihat":[0,0,64,0,50,0,68,0,0,0,52,0,0,0,56,0,0,0,62,0,52,0,66,0,0,0,50,0,60,0,0,44],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0],"crash":[70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dubstep_commodo_swagger","style":"dubstep","bars":2,"stepsPerBar":16,"swing":0.22,"bpm":138,"tags":["modern","hiphop","deepmedi","swagger"],"_approach":"Modern Deep Medi swagger (Commodo school): hip-hop-inflected 140 with a lazily swung late kick pushed against beat 3, loose tambourine, rim doubles and stray conga — groove built from timing feel more than density.","tracks":{"kick":[105,0,0,0,0,0,0,68,0,0,90,0,0,0,0,0,105,0,0,62,0,0,0,0,0,0,90,0,0,0,0,56],"snare":[0,0,0,0,0,0,0,0,97,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,0,22,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,34,0,0,0],"tambourine":[0,0,0,0,50,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,50,0,36,0],"hihat":[0,0,0,0,0,0,58,0,0,0,0,0,0,0,50,0,0,0,44,0,0,0,56,0,0,0,0,0,0,0,52,0],"congaHigh":[0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"congaLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0]}},{"id":"dubstep_crossover_rush_fill","style":"dubstep","bars":1,"stepsPerBar":16,"swing":0.08,"bpm":142,"tags":["fill","buildup","crossover"],"_approach":"Modern crossover-era (Hamdi-style) energy fill: double-speed hat rush into a rising snare build with tom accents, ending hot on the last 16th to slam back into the drop.","tracks":{"kick":[100,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,95,0,44,0,58,66,78,92],"hihat":[0,0,0,0,40,46,52,58,0,40,50,60,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,0,0,0,0,52,0,60,0],"tomHigh":[0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0]}},{"id":"dubstep_dmz_meditative_halfstep","style":"dubstep","bars":4,"stepsPerBar":16,"swing":0.12,"bpm":140,"tags":["halfstep","dmz","meditative","deep"],"_approach":"DMZ-era meditative halfstep (Mala school): one anchoring kick per bar with a swung late-bar kick creeping in every other bar, beat-3 snare, rims and a breathing shaker filling the void without ever crowding it.","tracks":{"kick":[104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,78,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,104,0,0,0,0,0,0,0,0,0,80,0,0,74,0,0],"snare":[0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,0,0,26,0],"rim":[0,0,0,0,0,48,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,34,0],"shaker":[44,0,52,0,42,0,54,0,0,0,46,0,52,0,44,0,42,0,54,0,44,0,50,0,0,0,44,0,54,0,46,0,44,0,52,0,40,0,56,0,0,0,48,0,50,0,42,0,46,0,54,0,44,0,52,0,0,0,46,0,56,0,48,24],"hihat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,26],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dubstep_dub_space_fill","style":"dubstep","bars":1,"stepsPerBar":16,"swing":0.12,"bpm":140,"tags":["fill","dub","sparse"],"_approach":"Sparse dub-wise fill for the meditative end of the style: a decaying rim 'delay tail' after the beat-3 snare and a single low tom pickup — a fill made of space, not notes.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,64,0,48,0,32,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58],"shaker":[0,0,36,0,0,0,38,0,0,0,0,0,0,0,0,0],"openHat":[0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"dubstep_dungeon_glitch_32","style":"dubstep","bars":2,"stepsPerBar":32,"swing":0.06,"bpm":140,"tags":["dungeon","modern","glitch"],"_approach":"Modern dungeon-140 with the odd-grid trick: sparse halfstep frame, but a few 32nd-note rim ruffs and hat stutters kept toward the end of the bar for that glitchy off-kilter feel (32-step grid needed for the detail).","tracks":{"kick":[104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,60,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,44,0,0,34,50,0],"hihat":[0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,30,42,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"clave":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,0,0]}},{"id":"dubstep_horsepower_shuffle","style":"dubstep","bars":2,"stepsPerBar":16,"swing":0.25,"bpm":138,"tags":["garage","2step","shuffle","early"],"_approach":"Early garage-descended dark 2-step (El-B / Horsepower Productions): heavily swung skippy hats with velocity ladders, paired rim shots next to each other, syncopated kicks and ghost snares around the beat-3 backbone.","tracks":{"kick":[102,0,0,0,0,0,72,0,0,0,86,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,86,0,0,68,0,0],"snare":[0,0,0,0,0,0,0,0,95,0,0,26,0,0,0,20,0,0,0,0,0,24,0,0,95,0,0,28,0,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,55,40,0,0,0,0,0,0,52,38,0,0,0,0,0,0,50,0,0],"hihat":[40,0,62,0,46,0,70,0,0,42,64,0,48,0,72,0,42,0,60,0,48,0,68,0,0,44,62,0,46,0,0,34],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0]}},{"id":"dubstep_loefah_808_space","style":"dubstep","bars":2,"stepsPerBar":16,"swing":0.08,"bpm":140,"tags":["halfstep","minimal","808","sub"],"_approach":"Loefah-style stripped 808 halfstep: rim shot carries beat 3 instead of a snare, two kicks per bar, a lone clave, and negative space treated as an instrument in its own right.","tracks":{"kick":[106,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,86,0,0,66,0,0],"rim":[0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,30],"hihat":[0,0,0,0,38,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,38,0,22,0],"clave":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0]}},{"id":"dubstep_mystik_percussion","style":"dubstep","bars":2,"stepsPerBar":16,"swing":0.15,"bpm":140,"tags":["percussive","meditative","layered"],"_approach":"Attack Magazine 'Mystik Dubstep' percussion-layer construction: 16th shaker that pauses on beat 3 to let the snare/clap breathe, two-velocity tambourine, congas, late-bar offbeat kicks with a soft final kick, and one dub-delay rim per two bars.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,0,80,0,0,58,0,102,0,0,0,0,0,0,0,0,0,0,78,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0],"shaker":[52,28,44,30,50,28,44,32,0,0,46,28,52,30,46,34,50,30,46,28,52,30,42,30,0,0,44,26,54,32,48,36],"tambourine":[0,0,46,0,0,0,52,0,0,0,48,0,0,0,54,0,0,0,48,0,0,0,50,0,0,0,46,0,0,0,56,0],"congaHigh":[0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,40,0,0],"congaLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66]}},{"id":"fg_archangel_2step","style":"future_garage","bars":4,"stepsPerBar":16,"swing":0.28,"bpm":134,"tags":["two-step","burial","melancholic","core-groove"],"_approach":"Canonical Burial-style 2-step (Archangel/Untrue era): displaced kicks around a 2-and-4 backbeat, clave ticks standing in for vinyl crackle, each bar a slightly different hand-placed variation to fake the Sound Forge no-grid feel.","tracks":{"kick":[98,0,0,0,0,0,0,80,0,0,88,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,86,0,0,78,0,0,97,0,0,0,0,0,0,82,0,0,90,0,0,0,0,0,96,0,0,0,0,0,0,80,0,0,87,0,0,0,0,0],"snare":[0,0,0,0,96,0,0,0,0,0,0,0,97,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,96,0,0,35,0,0,0,0,97,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,97,32,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0],"hihat":[0,0,46,0,0,0,55,0,0,0,0,50,0,0,44,0,0,0,44,0,0,0,52,0,0,0,0,48,0,0,42,0,0,0,48,0,0,0,57,0,0,0,0,52,0,0,46,0,0,0,45,0,0,0,54,0,0,0,0,49,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0],"clave":[0,25,0,0,0,0,0,22,0,28,0,0,0,20,0,0,0,22,0,0,0,0,26,0,0,0,0,24,0,0,0,18,0,26,0,0,0,0,0,20,0,24,0,0,0,22,0,0,0,24,0,0,0,0,21,0,0,27,0,0,0,0,19,0]}},{"id":"fg_blake_negative_space","style":"future_garage","bars":4,"stepsPerBar":16,"swing":0.18,"bpm":128,"tags":["sparse","james-blake","negative-space","minimal"],"_approach":"Early James Blake / post-dubstep negative space: one kick, one late clap per bar and almost nothing else, with each bar adding a single new event so silence does the work (CMYK / Klavierwerke era).","tracks":{"kick":[97,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,91,0,0,35],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0],"hihat":[0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0]}},{"id":"fg_fill_rim_cascade","style":"future_garage","bars":1,"stepsPerBar":16,"swing":0.26,"bpm":134,"tags":["fill","cascade","found-sound"],"_approach":"One-bar fill that dissolves the groove into a rising clicky cascade — rim, congas, then toms — like a handful of found-sound hits tumbling down a stairwell into the next section.","tracks":{"kick":[96,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,94,0,0,0,0,0,0,0,0,88,0,0],"rim":[0,0,38,0,0,0,52,0,70,0,76,0,0,0,0,0],"congaHigh":[0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,0],"congaLow":[0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,0,80,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48]}},{"id":"fg_fill_snare_stutter","style":"future_garage","bars":1,"stepsPerBar":16,"swing":0.24,"bpm":132,"tags":["fill","snare-stutter","burial"],"_approach":"One-bar stumble fill: the first half keeps the 2-step intact, then the snare stutters through uneven ghost-accent-ghost velocities with holes, the un-quantized 'dropped sticks' ending Burial uses to turn a section.","tracks":{"kick":[95,0,0,0,0,0,0,80,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,93,0,0,0,0,0,44,68,0,90,28,74],"rim":[0,0,0,0,0,0,34,0,0,42,0,0,0,0,0,0],"hihat":[0,0,46,0,0,0,0,0,0,0,0,0,0,0,0,0],"shaker":[0,26,0,0,0,30,0,0,0,0,0,0,0,0,0,0]}},{"id":"fg_ghost_hardware_four","style":"future_garage","bars":2,"stepsPerBar":16,"swing":0.22,"bpm":125,"tags":["four-to-the-floor","burial","rim-texture","hypnotic"],"_approach":"Four-to-the-floor with an extra kick on the last eighth and a scattered multi-velocity rim texture instead of a snare, modeled on Attack Magazine's Beat Dissected of Burial's 'Ghost Hardware' (offbeat shaker in bar one only).","tracks":{"kick":[96,0,0,0,90,0,0,0,93,0,0,0,88,0,76,0,95,0,0,0,88,0,0,0,92,0,0,0,86,0,79,0],"rim":[0,0,0,58,0,0,62,0,0,0,0,48,0,55,0,0,0,0,0,52,0,0,65,0,0,60,0,0,0,0,50,0],"hihat":[0,0,42,0,0,0,50,0,0,0,44,0,0,0,47,0,0,0,44,0,0,0,48,0,0,0,41,0,0,0,45,0],"shaker":[0,0,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"clave":[0,18,0,0,0,22,0,0,0,16,0,0,0,20,0,0,0,20,0,0,0,17,0,0,0,23,0,0,0,15,0,0]}},{"id":"fg_halftime_drift","style":"future_garage","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":138,"tags":["halftime","atmospheric","crackle-bed","sorrow"],"_approach":"Half-time drift in the Sorrow/Vacant vein: lone snare on beat three over a continuous low-velocity shaker bed imitating rain-crackle, kicks pushed to odd sixteenths for a slow undertow at fast tempo.","tracks":{"kick":[95,0,0,0,0,0,78,0,0,0,0,0,0,72,0,0,93,0,0,0,0,0,80,0,0,0,74,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,0,0,0,30],"shaker":[30,18,24,16,28,17,22,34,26,15,23,19,31,16,25,20,29,17,25,15,27,19,21,33,24,16,26,18,30,15,22,36],"rim":[0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,34,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"fg_kimbie_clatter","style":"future_garage","bars":2,"stepsPerBar":16,"swing":0.24,"bpm":132,"tags":["found-sound","percussive","mount-kimbie","clatter"],"_approach":"Mount Kimbie-style found-sound clatter: congas, rims and clave ticks carry the rhythm like tapped household objects while kick and snare stay sparse and lopsided between bars (Crooks & Lovers era).","tracks":{"kick":[94,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,92,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,93,0,0,0],"congaHigh":[0,0,68,0,0,0,0,72,0,60,0,0,0,0,55,0,0,0,64,0,0,0,0,66,0,0,58,0,0,0,62,0],"congaLow":[0,0,0,0,0,58,0,0,0,0,64,0,0,0,0,50,0,0,0,55,0,0,60,0,0,0,0,52,0,48,0,0],"rim":[0,45,0,0,0,0,52,0,0,0,0,0,0,38,0,0,0,40,0,0,0,0,0,48,0,0,0,42,0,0,0,35],"clave":[0,0,0,30,0,0,0,0,26,0,0,0,0,0,20,0,24,0,0,0,0,0,28,0,0,0,0,0,22,0,0,0],"hihat":[0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0]}},{"id":"fg_openhat_choke","style":"future_garage","bars":2,"stepsPerBar":16,"swing":0.25,"bpm":134,"tags":["two-step","openhat","breathing","garage-shuffle"],"_approach":"Breathing hat construction from classic garage shuffle: open hats swell on offbeats and get choked by a closed hat a sixteenth later, over a displaced 2-step kick — the exhale-inhale motion that carries modern atmospheric garage.","tracks":{"kick":[97,0,0,0,0,0,0,83,0,0,88,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,86,0,0,80,0,0],"snare":[0,0,0,0,95,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,95,0,0,0],"openHat":[0,0,58,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,55,0,0,0,0,60,0,0,0,0,0,0,64,0],"hihat":[0,0,0,44,0,0,49,0,0,0,0,46,0,0,52,0,0,0,0,42,0,0,47,0,0,50,0,0,0,0,0,0],"clave":[0,20,0,0,0,0,0,23,0,18,0,0,0,21,0,0,0,19,0,0,0,22,0,0,0,0,0,17,0,0,0,20]}},{"id":"fg_rain_crackle_bed","style":"future_garage","bars":2,"stepsPerBar":16,"swing":0.3,"bpm":130,"tags":["texture-first","crackle-bed","ambient","burial"],"_approach":"Texture-first construction: clave and shaker weave a broken ghost-velocity lattice standing in for Burial's rain-recording crackle, while the kick/snare skeleton stays minimal and lands differently in each bar.","tracks":{"kick":[93,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,91,0,0,0,0,0,0,76,0,0,84,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,92,0,0,0],"clave":[22,0,17,28,0,19,0,24,16,0,26,0,20,0,15,23,0,18,25,0,21,0,16,27,0,23,0,19,24,0,17,0],"shaker":[0,32,0,0,38,0,29,0,0,35,0,27,0,31,0,0,34,0,0,30,0,28,0,0,36,0,26,0,0,33,0,29],"rim":[0,0,0,0,0,48,0,0,0,0,0,0,0,0,40,0,0,0,42,0,0,0,0,0,0,0,0,46,0,0,0,0]}},{"id":"fg_triplet_stumble","style":"future_garage","bars":2,"stepsPerBar":16,"swing":0.26,"bpm":136,"tags":["two-step","snare-stumble","burial","broken"],"_approach":"2-step with Burial's documented snare 'triples': the backbeat snare stumbles into ghost-then-accent doubles at a different spot each bar, like un-quantized hand placements landing early and late.","tracks":{"kick":[96,0,0,0,0,0,0,81,0,0,89,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,87,0,79,0,0,0],"snare":[0,0,0,0,95,0,38,64,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,95,0,33,70],"rim":[0,0,0,0,0,0,0,0,0,45,0,0,0,0,36,0,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0],"hihat":[0,0,47,0,0,0,0,0,0,0,0,53,0,0,43,0,0,0,45,0,0,0,50,0,0,0,0,48,0,0,0,0],"clave":[0,20,0,0,0,0,0,0,0,24,0,0,0,0,0,18,0,0,22,0,0,0,0,26,0,0,0,0,0,19,0,0]}},{"id":"grime_2step_garage_dna","style":"grime","bars":2,"stepsPerBar":16,"swing":0.12,"bpm":140,"tags":["2step","garage","swing","shuffle"],"_approach":"Grime's UK garage inheritance: proper 2-step with backbeat snares on 2 and 4, shuffled 8th hats with an open hat answer, and a light swing — the pirate-radio bridge between UKG and eski.","tracks":{"kick":[104,0,0,0,0,0,0,86,0,0,0,0,0,0,0,0,104,0,0,0,0,0,82,0,0,0,0,0,0,74,0,0],"snare":[0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0],"hihat":[66,0,58,0,70,0,55,0,66,0,58,0,70,0,0,0,66,0,58,0,70,0,55,0,66,0,58,0,70,0,55,0],"openHat":[0,0,0,0,0,0,0,64,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0],"shaker":[0,34,0,30,0,38,0,0,0,34,0,30,0,38,0,0,0,34,0,30,0,38,0,0,0,34,0,30,0,38,0,44]}},{"id":"grime_creeper_clicks","style":"grime","bars":2,"stepsPerBar":16,"swing":0,"bpm":138,"tags":["eski","rim","displaced","dark"],"_approach":"Danny Weed 'Creeper' school: rimshot clicks carry the rhythm instead of hats, the snare is displaced off the strict backbeat in bar 2, kicks creep on late off-beats — menace through what is missing.","tracks":{"kick":[108,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,108,0,0,84,0,0,0,0,0,0,76,0,0,0,0,0],"rim":[0,0,74,0,0,58,0,0,0,0,0,0,66,0,0,42,0,0,74,0,0,58,0,0,0,0,0,0,0,0,60,0],"snare":[0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0]}},{"id":"grime_eski_halftime","style":"grime","bars":2,"stepsPerBar":16,"swing":0,"bpm":140,"tags":["eski","halftime","sparse","classic"],"_approach":"The core eskibeat blueprint (Wiley 'Eskimo' school): halftime snare anchored on beat 3, angular syncopated kicks landing on off-16ths, no hats at all — the empty space IS the groove.","tracks":{"kick":[105,0,0,0,0,0,92,0,0,0,78,0,0,0,0,0,105,0,0,85,0,0,92,0,0,0,0,0,0,0,0,70],"snare":[0,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,55,0,0,0,0,0,0,0,48,0,0]}},{"id":"grime_eski_stutter_fill","style":"grime","bars":1,"stepsPerBar":16,"swing":0,"bpm":140,"tags":["fill","eski","stutter"],"_approach":"Eski-style stutter fill: the kick trips over itself in doubled 16ths, rim clicks answer in the gap, snare stays on beat 3 then jabs once more late — turbulence without abandoning the halftime spine.","tracks":{"kick":[106,0,78,92,0,0,0,0,0,0,85,70,0,0,0,0],"rim":[0,0,0,0,0,0,60,45,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,110,0,0,0,0,0,96,0],"clave":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50]}},{"id":"grime_gunshot_8bar","style":"grime","bars":2,"stepsPerBar":16,"swing":0,"bpm":140,"tags":["8bar","aggressive","gunshot","clash"],"_approach":"8-bar / devil-mix clash energy: gunshot snare on beat 3 with a flam tail and a second late shot, busy angular kicks, crash marking the phrase — built for MC bars, everything hits hard.","tracks":{"kick":[110,0,0,0,0,94,0,0,0,0,90,0,0,0,75,0,110,0,0,90,0,0,94,0,0,0,0,85,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,115,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,115,0,0,0,0,0,105,0],"perc":[0,0,0,0,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,0,0,0,0,0,0,0],"hihat":[0,0,52,0,0,0,45,0,0,0,55,0,0,0,48,0,0,0,52,0,0,0,45,0,0,0,55,0,0,0,48,0],"crash":[95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"grime_gunshot_fill","style":"grime","bars":1,"stepsPerBar":16,"swing":0,"bpm":140,"tags":["fill","gunshot","reload"],"_approach":"Reload-signal fill: first half stays empty like the groove, second half fires a ragged gunshot snare salute with a tom drop into the next bar — the wheel-up moment of a clash set.","tracks":{"kick":[104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,96,0,0,88,104,0,118,0],"tomHigh":[0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84]}},{"id":"grime_icerink_space","style":"grime","bars":2,"stepsPerBar":16,"swing":0,"bpm":140,"tags":["eski","minimal","space","icerink"],"_approach":"'Ice Rink' radical minimalism: one kick, one snare, a couple of icy clave clicks per bar and nothing else — the audacity of emptiness that shocked pirate radio, leaving maximum room for the MC.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0],"clave":[0,0,0,0,0,0,64,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,40],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0]}},{"id":"grime_offkilter_perc","style":"grime","bars":2,"stepsPerBar":16,"swing":0,"bpm":140,"tags":["instrumental","percussion","offkilter","modern"],"_approach":"Modern instrumental grime (Slackk, Spooky Bizzle school): angular conga and cowbell stabs on awkward 16ths replace hats entirely, over a stable halftime kick/snare spine — percussion as melody.","tracks":{"kick":[108,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,88,0,0,0,0,74,0,0,0],"snare":[0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,86,0,0],"congaLow":[0,0,0,70,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,58,0],"congaHigh":[0,0,0,0,0,0,76,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,52],"cowbell":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,44,0,0,0,0],"clave":[0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0]}},{"id":"grime_ruffsqwad_bounce","style":"grime","bars":2,"stepsPerBar":16,"swing":0,"bpm":142,"tags":["ruffsqwad","bounce","clap","energetic"],"_approach":"Ruff Sqwad bounce: kick doubles on the front of the bar drive forward motion, snare layered with a clap on beat 3, tambourine ticking loose offbeats — rawer and more youthful than the eski chill.","tracks":{"kick":[106,0,0,88,0,0,0,0,0,0,0,84,0,0,0,0,106,0,0,88,0,0,76,0,0,0,0,84,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,36,0,0],"perc":[0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0],"tambourine":[0,0,48,0,0,0,55,0,0,0,42,0,0,0,55,0,0,0,48,0,0,0,55,0,0,0,42,0,0,0,52,0],"tomHigh":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68]}},{"id":"grime_weightless_drift","style":"grime","bars":4,"stepsPerBar":16,"swing":0,"bpm":138,"tags":["weightless","minimal","ambient","modern"],"_approach":"Weightless / Boxed-era instrumental grime (Logos, Mumdance, Mr. Mitch): the beat almost dissolves — bars alternate between a stated halftime pulse and near-silence with stray rims and late snares drifting off-grid.","tracks":{"kick":[96,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,66,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0],"rim":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0],"shaker":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,20,0,0,0,0,0,0]}},{"id":"jungle_amen_01","style":"jungle","bars":2,"stepsPerBar":16,"bpm":172,"swing":0.08,"tags":["amen","break","classic"],"tracks":{"kick":[100,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0],"snare":[0,0,0,0,100,0,0,0,0,0,0,20,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,20,100,0,0,0],"hihat":[60,0,50,0,60,0,50,60,60,0,50,0,60,0,50,60,60,0,50,0,60,0,50,60,60,0,50,0,60,0,50,60]}},{"id":"jungle_amen_science_01","style":"jungle","bars":2,"stepsPerBar":32,"swing":0.05,"bpm":165,"tags":["amen","choppage","94","break-science"],"_approach":"93-94 amen chop-science (Remarc/Dillinja lineage): bar 1 states the near-canonical Amen skeleton, bar 2 rearranges it with a displaced kick chop, a double-snare edit and a 32nd snare flam, over steady ride eighths.","tracks":{"kick":[104,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,70,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,100,0,0,0,0,0,28,0,0,0,24,0,0,0,0,0,98,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,98,0,0,0,30,0,84,0,0,0,26,0,0,0,0,0,96,88,0,0,34,0,76,0],"ride":[56,0,0,0,44,0,0,0,52,0,0,0,44,0,0,0,56,0,0,0,44,0,0,0,52,0,0,0,46,0,0,0,56,0,0,0,44,0,0,0,52,0,0,0,44,0,0,0,56,0,0,0,44,0,0,0,52,0,0,0,46,0,0,0]}},{"id":"jungle_apache_percussion_01","style":"jungle","bars":2,"stepsPerBar":16,"swing":0.1,"bpm":170,"tags":["apache","bongos","percussion","tribal"],"_approach":"Apache-break grammar (Incredible Bongo Band): the groove lives in the rolling conga/bongo sixteenth lattice and shaker, with a sparse anchored kick and plain backbeat snare underneath - the percussion IS the chop.","tracks":{"kick":[98,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,98,0,0,0,0,0,0,0,74,0,90,0,0,0,0,0],"snare":[0,0,0,0,95,0,0,26,0,0,0,0,93,0,0,20,0,0,0,0,95,0,0,0,0,24,0,0,93,0,0,20],"congaHigh":[0,62,0,58,0,60,0,64,0,62,0,58,0,60,66,0,0,62,0,58,0,60,64,0,0,62,0,58,66,0,60,0],"congaLow":[72,0,0,52,0,0,58,0,68,0,0,0,0,0,60,0,72,0,0,0,56,0,58,0,68,0,0,52,0,0,62,0],"shaker":[48,35,42,36,50,35,42,38,48,35,42,36,50,36,42,40,48,35,42,36,50,35,42,38,48,35,42,36,50,36,42,40]}},{"id":"jungle_coldsweat_revival_01","style":"jungle","bars":4,"stepsPerBar":16,"swing":0.03,"bpm":172,"tags":["cold-sweat","revival","rides","tim-reaper"],"_approach":"Modern revival roller built on Tim Reaper's underrated favourite, the Cold Sweat break: bright accented ride with 16th pickups, snappy 2-and-4 snare, and a kick that migrates each bar (early push, late double, a-of-2 anchor) - tight, almost swingless grid.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,102,0,0,0,0,72,0,0,0,0,90,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,90,68,0,0,0,0,102,0,0,0,0,0,0,0,76,0,90,0,0,0,0,0],"snare":[0,0,0,0,100,0,0,28,0,0,0,0,98,0,0,24,0,0,0,0,100,0,0,28,0,26,0,0,98,0,0,24,0,0,0,0,100,0,0,28,0,0,0,0,98,0,0,24,0,0,0,0,100,0,0,28,0,26,0,0,98,78,0,34],"ride":[64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44,64,0,48,0,58,0,48,44],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0],"crash":[66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"jungle_fill_01","style":"jungle","bars":1,"stepsPerBar":16,"bpm":172,"swing":0.08,"tags":["fill","snare-roll"],"tracks":{"kick":[100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,100,0,60,70,80,0,90,95,100,105,110,120],"hihat":[60,0,50,0,60,0,0,0,0,0,0,0,0,0,0,0],"crash":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"jungle_fill_amen_stutter_01","style":"jungle","bars":1,"stepsPerBar":32,"swing":0.05,"bpm":165,"tags":["fill","amen","stutter","snare-roll"],"_approach":"Amen edit-style fill: the groove holds for two beats, then the snare stutters into an accelerating 16th-to-32nd roll with a velocity ramp - the classic tape-edit run-up into a drop.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,98,0,0,0,0,0,28,0,62,0,68,0,0,0,74,0,84,0,90,0,96,88,104,80],"ride":[56,0,0,0,44,0,0,0,52,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"jungle_fill_ragga_chop_01","style":"jungle","bars":1,"stepsPerBar":16,"swing":0.15,"bpm":170,"tags":["fill","ragga","toms","bounce"],"_approach":"Ragga jungle turnaround fill: rim clicks answer the backbeat, then snare and toms trade a bouncing chop down the kit into an accented last hit - dancehall lick vocabulary at jungle tempo.","tracks":{"kick":[100,0,0,0,0,0,80,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,95,0,0,0,0,0,88,0,98,30,0,100],"rim":[0,0,0,58,0,0,0,56,0,0,0,0,0,0,0,0],"tomHigh":[0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,80,0,0,86,0]}},{"id":"jungle_fill_toms_01","style":"jungle","bars":1,"stepsPerBar":16,"bpm":172,"swing":0.08,"tags":["fill","toms","descending"],"tracks":{"kick":[100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0],"tomHigh":[0,0,0,0,0,0,90,95,0,0,0,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,92,0,98,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,95,0,105,110],"hihat":[60,0,50,0,60,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"jungle_hotpants_funk_01","style":"jungle","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":162,"tags":["hot-pants","funk","hats","swing"],"_approach":"Hot Pants break grammar (Bobby Byrd): heavily swung tight-hat funk with an open-hat breath before the turnaround, kick on 1 / a-of-2 / and-of-3, funk ghost snares between backbeats, and a clap doubling the second backbeat.","tracks":{"kick":[102,0,0,0,0,0,0,80,0,0,92,0,0,0,0,0,102,0,0,0,0,0,0,80,0,0,92,0,0,74,0,0],"snare":[0,0,0,0,98,0,25,0,0,0,0,30,96,0,22,0,0,0,0,0,98,0,25,0,0,32,0,0,96,0,0,80],"hihat":[58,0,44,0,56,0,44,0,58,0,44,0,56,0,0,0,58,0,44,0,56,0,0,0,58,0,44,0,56,0,44,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0]}},{"id":"jungle_intelligent_rides_01","style":"jungle","bars":4,"stepsPerBar":16,"swing":0.08,"bpm":165,"tags":["intelligent","ambient","rides","atmospheric"],"_approach":"Ambient/intelligent jungle a la LTJ Bukem / Good Looking: flowing ride eighths and a soft shaker wash carry the motion, deep sparse kick, and a low-velocity brushed ghost-snare language instead of aggressive chops - bar 4 slides the second kick late for drift.","tracks":{"kick":[96,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,96,0,0,0,0,0,0,72,0,0,88,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0],"snare":[0,0,0,0,92,0,24,0,0,28,0,0,90,0,0,20,0,0,0,0,92,0,0,26,0,0,0,30,90,0,0,20,0,0,0,0,92,0,24,0,0,28,0,0,90,0,22,0,0,0,0,0,92,0,0,26,0,0,30,0,90,0,28,34],"ride":[58,0,44,0,52,0,44,0,58,0,44,0,52,0,46,0,58,0,44,0,52,0,44,0,58,0,44,0,52,0,46,0,58,0,44,0,52,0,44,0,58,0,44,0,52,0,46,0,58,0,44,0,52,0,44,0,58,0,44,0,52,0,46,40],"shaker":[40,30,34,30,42,30,34,32,40,30,34,30,42,32,34,32,40,30,34,30,42,30,34,32,40,30,34,30,42,32,34,32,40,30,34,30,42,30,34,32,40,30,34,30,42,32,34,32,40,30,34,30,42,30,34,32,40,30,34,30,42,32,34,32],"crash":[48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"jungle_ragga_bounce_01","style":"jungle","bars":4,"stepsPerBar":16,"swing":0.15,"bpm":170,"tags":["ragga","toms","dancehall","bounce"],"_approach":"Ragga jungle tom bounce (Shy FX / Remarc RIP-style): dancehall 3-3-2 kick syncopation with rimshot answers, jungle backbeat kept on top, and tom pickup phrases bouncing into bars 3 and 1 - bar 4 lurches the snare early for the ragga skank.","tracks":{"kick":[100,0,0,0,0,0,78,0,0,0,94,0,0,0,0,0,100,0,0,0,0,0,78,0,0,0,94,0,0,0,0,0,100,0,0,76,0,0,0,0,0,0,94,0,0,0,0,0,100,0,0,0,0,0,78,0,0,0,94,0,0,0,0,0],"snare":[0,0,0,0,96,0,0,0,0,26,0,0,94,0,0,0,0,0,0,0,96,0,0,28,0,0,0,0,94,0,0,0,0,0,0,0,96,0,0,0,0,26,0,0,94,0,0,22,0,0,0,0,96,0,0,28,0,0,0,90,0,0,0,0],"rim":[0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0],"tomHigh":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,78,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86],"hihat":[0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0,0,0,48,0]}},{"id":"jungle_soulpride_think_01","style":"jungle","bars":2,"stepsPerBar":32,"swing":0.1,"bpm":160,"tags":["soul-pride","think","ghost-notes","layered"],"_approach":"Coco Bryce's favourite pairing - Soul Pride's dense 32nd ghost-snare chatter laid under a Think-style backbeat and tambourine eighths; bar 2 answers with an accent chop and a 32nd snare double.","tracks":{"kick":[102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,0,0,0,0,100,0,0,0,0,26,34,0,0,0,22,0,0,30,0,0,98,0,0,24,0,0,32,0,0,0,0,0,0,0,0,0,100,0,0,0,28,0,82,0,0,20,0,0,0,30,0,0,96,86,0,0,0,26,0,34],"tambourine":[50,0,0,0,42,0,0,0,56,0,0,0,42,0,0,0,50,0,0,0,44,0,0,0,56,0,0,0,46,0,0,0,50,0,0,0,42,0,0,0,56,0,0,0,42,0,0,0,50,0,0,0,44,0,0,0,56,0,0,0,46,0,0,0]}},{"id":"jungle_think_stepper_01","style":"jungle","bars":4,"stepsPerBar":16,"swing":0.12,"bpm":160,"tags":["think","stepper","tambourine","revival"],"_approach":"Think-break stepper in the Sully/Coco Bryce revival mold: rock-solid 2-and-4 backbeat with rotating a-of-2 and e-of-3 ghost chatter, the Think tambourine sixteenth layer on top, and a bar-4 double-snare turnaround.","tracks":{"kick":[100,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,100,0,0,0,0,0,0,76,0,0,92,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,92,0,0,0,70,0],"snare":[0,0,0,0,98,0,0,30,0,22,0,0,96,0,0,18,0,0,0,0,98,0,0,30,0,0,0,28,96,0,0,18,0,0,0,0,98,0,0,30,0,22,0,28,96,0,0,18,0,0,0,0,98,0,0,30,0,22,0,0,96,82,0,34],"tambourine":[55,40,48,40,58,40,48,42,55,40,48,40,58,42,48,44,55,40,48,40,58,40,48,42,55,40,48,40,58,42,48,44,55,40,48,40,58,40,48,42,55,40,48,40,58,42,48,44,55,40,48,40,58,40,48,42,55,40,48,40,58,42,48,44],"hihat":[46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,0,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,42,0,46,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0]}},{"id":"sg_bassline_bounce","style":"speed_garage","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":140,"tags":["bassline","bounce","cowbell"],"_approach":"Bassline-leaning revival bounce (Silva Bumpa, Higgo): loud offbeat open hats carry the groove, closed hats only on the 'a' pickups, doubled 16th kick pushing into beat 3, snare bounce on the and-of-4 and sparse cowbell accents.","tracks":{"kick":[112,0,0,0,106,0,0,78,108,0,0,0,104,0,0,0,112,0,0,0,106,0,0,0,108,0,0,0,104,0,78,0],"snare":[0,0,0,0,104,0,0,0,0,0,0,0,100,0,72,0,0,0,0,0,104,0,0,28,0,0,0,0,100,0,0,0],"perc":[0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0],"openHat":[0,0,78,0,0,0,74,0,0,0,80,0,0,0,72,0,0,0,78,0,0,0,74,0,0,0,80,0,0,0,76,0],"hihat":[0,0,0,44,0,0,0,40,0,0,0,46,0,0,0,42,0,0,0,44,0,0,0,40,0,0,0,46,0,0,0,48],"cowbell":[0,0,0,56,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,62,0,0,0,0]}},{"id":"sg_gunman_skip","style":"speed_garage","bars":2,"stepsPerBar":16,"swing":0.25,"bpm":137,"tags":["classic","skipped_kick","rim"],"_approach":"187 Lockdown-style skip grammar ('Gunman'/'Kung-Fu'): bar 1 adds the classic and-of-3 kick, bar 2 skips beat 3 entirely and replaces it with a doubled 16th kick pair, over timbale-flavoured skippy rim chatter.","tracks":{"kick":[110,0,0,0,102,0,0,0,106,0,80,0,104,0,0,0,110,0,0,0,102,0,0,0,0,0,86,78,108,0,0,0],"snare":[0,0,0,0,98,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,98,0,0,32,0,0,0,0,102,0,74,0],"rim":[0,0,0,42,0,36,0,52,0,0,0,0,0,44,0,38,0,0,0,44,0,0,48,0,0,38,0,0,0,46,58,40],"hihat":[40,0,58,0,42,0,60,0,44,0,56,0,42,0,0,0,40,0,58,0,42,0,0,0,44,0,56,0,42,0,62,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0]}},{"id":"sg_nyc_pump","style":"speed_garage","bars":2,"stepsPerBar":16,"swing":0.1,"bpm":135,"tags":["house","congas","tambourine"],"_approach":"The US-house side of speed garage's DNA (Armand Van Helden's 1996-97 UK remixes): near-straight swing, heavy pumping kick, tambourine offbeats and a two-bar conga conversation instead of shuffled hats.","tracks":{"kick":[114,0,0,0,108,0,0,0,110,0,0,0,108,0,0,0,114,0,0,0,108,0,0,0,110,0,0,0,106,0,0,0],"snare":[0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,22],"perc":[0,0,0,0,86,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,88,0,0,0],"tambourine":[0,0,66,0,0,0,62,0,0,0,68,0,0,0,60,0,0,0,64,0,0,0,62,0,0,0,68,0,0,0,58,0],"hihat":[48,28,56,30,46,26,58,32,50,28,54,30,46,28,60,34,48,28,56,30,46,26,58,32,50,28,54,30,46,30,0,36],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0],"congaHigh":[0,0,0,64,0,0,58,0,0,0,0,66,0,60,0,0,0,0,0,62,0,0,60,0,0,58,0,0,0,0,64,0],"congaLow":[0,0,0,0,0,0,0,0,72,0,0,0,0,0,68,0,0,0,0,0,0,70,0,0,72,0,0,0,0,0,0,66]}},{"id":"sg_peaktime_ride","style":"speed_garage","bars":4,"stepsPerBar":16,"swing":0.15,"bpm":137,"tags":["peaktime","ride","toms"],"_approach":"Peak-time rave-room construction (the big-room end of '97, Tuff Jam / Serious Danger territory): crash-marked phrase, driving accented 8th ride instead of closed hats, low tom answering the sub line, doubled kicks into the loop restart and a snare build in bar 4.","tracks":{"kick":[112,0,0,0,106,0,0,0,108,0,0,0,104,0,0,0,112,0,0,0,106,0,0,0,108,0,0,0,104,0,80,0,112,0,0,0,106,0,0,0,108,0,0,0,104,0,0,0,112,0,0,0,106,0,0,0,108,0,0,0,104,0,82,88],"snare":[0,0,0,0,98,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,102,70,78,86],"perc":[0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0],"ride":[58,0,72,0,56,0,74,0,60,0,70,0,56,0,76,0,56,0,74,0,58,0,72,0,60,0,74,0,54,0,78,0,58,0,72,0,56,0,74,0,60,0,70,0,56,0,76,0,0,0,74,0,0,0,72,0,0,0,76,0,0,0,70,0],"crash":[96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"hihat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"sg_revival_sparse","style":"speed_garage","bars":4,"stepsPerBar":16,"swing":0.18,"bpm":138,"tags":["revival","minimal","space"],"_approach":"2020s revival minimalism (Interplanetary Criminal, Bklava): offbeat hats with quiet 16th 'delay-throw' echoes, huge space left for the sub, a glitchy consecutive-rim run in bar 2, and a skipped beat-4 kick displaced late in bar 4.","tracks":{"kick":[108,0,0,0,100,0,0,0,104,0,0,0,98,0,0,0,106,0,0,0,102,0,0,0,104,0,0,0,100,0,0,0,108,0,0,0,100,0,0,0,104,0,0,0,98,0,0,0,106,0,0,0,102,0,0,0,104,0,0,0,0,0,90,0],"snare":[0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,98,0,0,24,0,0,0,0,100,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,104,0,0,30],"rim":[0,0,0,0,56,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,56,36,50,64,0,0,0,0,56,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,56,0,0,0,0,34,0,0,56,0,0,0],"hihat":[0,0,68,26,0,0,62,24,0,0,70,28,0,0,60,22,0,0,68,26,0,0,62,24,0,0,70,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,28,0,0,60,22,0,0,68,26,0,0,0,0,0,0,70,28,0,0,64,30],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0]}},{"id":"sg_rip_groove_pump","style":"speed_garage","bars":2,"stepsPerBar":16,"swing":0.22,"bpm":138,"tags":["classic","4x4","shuffle","anthem"],"_approach":"The 1997 anchor groove a la Double 99 'RIP Groove': relentless 4x4 kick with an extra offbeat kick in bar 2, dominant backbeat snare+clap, offbeat open hats and a shuffled closed-hat contour with skippy snare ghosts at the bar ends.","tracks":{"kick":[112,0,0,0,104,0,0,0,108,0,0,0,106,0,0,0,112,0,0,0,104,0,0,0,108,0,84,0,106,0,0,0],"snare":[0,0,0,0,100,0,0,26,0,0,0,0,102,0,0,30,0,0,0,0,100,0,0,28,0,0,0,0,102,0,0,34],"perc":[0,0,0,0,85,0,0,0,0,0,0,0,87,0,0,0,0,0,0,0,85,0,0,0,0,0,0,0,87,0,0,0],"openHat":[0,0,74,0,0,0,70,0,0,0,76,0,0,0,70,0,0,0,74,0,0,0,72,0,0,0,76,0,0,0,64,0],"hihat":[58,34,0,48,52,30,0,50,60,36,0,46,54,32,0,62,56,36,0,46,52,28,0,52,62,34,0,44,54,38,0,66]}},{"id":"sg_shuffle_organ","style":"speed_garage","bars":2,"stepsPerBar":16,"swing":0.28,"bpm":136,"tags":["shuffle","skippy_hats","shaker"],"_approach":"Maximum-shuffle hat language from the garage-shuffle school (Attack Magazine's 60-65% swing zone): full 16th closed hats with a strong e-and-a accent contour, a counter-accented shaker underneath, straight 4x4 kick with one ghost pickup.","tracks":{"kick":[110,0,0,0,106,0,0,0,108,0,0,0,104,0,0,34,110,0,0,0,106,0,0,0,108,0,0,0,104,0,0,0],"snare":[0,0,0,0,100,0,0,0,0,24,0,0,102,0,0,28,0,0,0,0,100,0,0,26,0,0,0,0,102,0,0,0],"perc":[0,0,0,0,84,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,86,0,0,0],"hihat":[66,38,80,46,62,34,84,50,68,36,78,44,60,40,86,52,64,36,82,48,60,38,80,46,66,34,84,50,62,42,0,54],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0],"shaker":[42,56,34,52,40,58,36,50,44,54,32,56,40,60,38,48,42,56,34,50,40,58,36,52,44,54,32,54,40,62,38,50]}},{"id":"sg_snare_roll_fill","style":"speed_garage","bars":1,"stepsPerBar":16,"swing":0.22,"bpm":138,"tags":["fill","snare_roll"],"_approach":"Classic garage turnaround: kick stays 4x4 while a skippy snare roll ramps up through the second half of the bar into the next phrase, hats thinning out to make room.","tracks":{"kick":[108,0,0,0,102,0,0,0,104,0,0,0,100,0,0,0],"snare":[0,0,0,26,96,0,0,34,46,0,54,62,100,70,80,92],"perc":[0,0,0,0,84,0,0,0,0,0,0,0,86,0,0,88],"hihat":[52,0,64,0,50,0,66,0,54,0,0,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0]}},{"id":"sg_tom_drop_fill","style":"speed_garage","bars":1,"stepsPerBar":16,"swing":0.2,"bpm":137,"tags":["fill","toms"],"_approach":"Sub-drop signpost fill: hats fall away, a descending tom cascade (high-mid-low) mimics the bassline dive, and doubled 16th kicks at the bar end slam into the next downbeat.","tracks":{"kick":[110,0,0,0,104,0,0,0,106,0,0,0,0,0,86,88],"snare":[0,0,0,0,98,0,0,42,0,0,0,0,100,0,0,0],"tomHigh":[0,0,0,0,0,0,72,58,0,0,0,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,76,0,64,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,70],"hihat":[50,0,62,0,48,0,0,0,0,0,0,0,0,0,0,0],"openHat":[0,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0]}},{"id":"sg_twostep_flip","style":"speed_garage","bars":2,"stepsPerBar":16,"swing":0.24,"bpm":136,"tags":["hybrid","2step","skipped_kick"],"_approach":"The 4x4-to-2-step hinge that speed garage sat on: bar 1 rides a full four-to-the-floor, bar 2 drops the beat-3 kick and displaces it to the offbeat (proto-2-step), with broken skippy hats and a snare bounce answering the gap.","tracks":{"kick":[110,0,0,0,104,0,0,0,106,0,0,0,102,0,0,0,110,0,0,0,104,0,0,0,0,0,84,0,102,0,0,0],"snare":[0,0,0,0,100,0,0,30,0,0,66,0,102,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,102,0,70,26],"hihat":[54,0,70,32,50,0,72,0,56,30,68,0,52,0,74,36,56,0,72,0,52,34,70,0,58,0,66,30,54,0,76,40],"shaker":[40,0,56,0,38,0,60,0,42,0,58,0,38,0,62,0,40,0,58,0,38,0,60,0,42,0,56,0,40,0,64,0],"perc":[0,0,0,0,86,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,88,0,0,0]}},{"id":"techno_perc_01","style":"techno","bars":1,"stepsPerBar":16,"bpm":132,"swing":0.02,"tags":["percussive","latin","909"],"tracks":{"kick":[110,0,0,0,110,0,0,0,110,0,0,0,110,0,0,0],"hihat":[0,0,80,0,0,0,80,0,0,0,80,0,0,0,80,0],"openHat":[0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70],"shaker":[85,65,75,65,85,65,75,65,85,65,75,65,85,65,75,65],"congaHigh":[0,0,0,72,0,0,68,0,0,0,0,72,0,66,0,0],"congaLow":[0,0,0,0,0,0,0,0,78,0,0,0,0,0,74,0],"clave":[0,0,0,88,0,0,88,0,0,0,0,0,88,0,0,0],"rim":[0,0,0,0,82,0,0,0,0,0,0,0,82,0,0,0]}},{"id":"ukfunky_afro_log_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":126,"tags":["groove","afro-swing","amapiano","sparse"],"_approach":"The modern afro-swing/amapiano-tinged revival of the UK funky palette: sparse displaced kick, low toms playing a log-drum-style melodic answer, a soft rim instead of a big backbeat, heavy swing and a shaker doing most of the driving.","tracks":{"kick":[96,0,0,0,0,0,0,88,0,0,90,0,0,0,0,0,96,0,0,0,0,0,0,88,0,0,90,0,0,0,86,0],"tomLow":[0,0,0,78,0,74,0,0,0,0,0,80,0,76,0,0,0,0,0,78,0,74,0,0,82,0,0,80,0,0,76,70],"rim":[0,0,0,0,80,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,80,0,0,0,0,34,0,0,78,0,0,0],"shaker":[66,30,42,34,70,32,44,50,66,30,43,36,72,33,46,54,66,31,42,35,70,32,45,51,68,31,44,38,74,35,48,56],"hihat":[0,0,44,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,43,0,0,0,0,0],"openHat":[0,0,0,0,0,0,55,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,60,0]}},{"id":"ukfunky_broken_4x4_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.12,"bpm":130,"tags":["groove","broken-kick","classic","roska"],"_approach":"The signature UK funky kick grammar: bar 1 holds a strict four-on-the-floor, bar 2 breaks into a tresillo-fronted kick (1, 1a, 2a, 3&, 4) the way Roska-era rollers pull the floor out from under the dancer without losing drive.","tracks":{"kick":[96,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,96,0,0,88,0,0,86,0,0,0,90,0,92,0,0,0],"perc":[0,0,0,0,97,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,97,0,0,0],"snare":[0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,30,0],"rim":[0,0,28,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,25,0,0,0,0,0,0,30,0,0,0,0,0,26],"hihat":[0,0,62,0,0,0,58,0,0,0,64,0,0,0,0,0,0,0,60,0,0,0,56,0,0,0,62,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0],"shaker":[58,34,44,36,62,35,46,52,58,33,45,38,64,36,48,55,60,35,45,37,63,34,47,53,59,34,46,40,65,38,50,57]}},{"id":"ukfunky_clap_chatter_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.1,"bpm":130,"tags":["groove","soca","clap","syncopation"],"_approach":"Soca-derived clap chatter: the backbeat snare stays planted on 2 and 4 while a clap answers on the 1a/2&/3a/4& sixteenth cell (steps 3, 6, 11, 14) - the off-beat 3+3+2 accent language UK funky lifted from soca.","tracks":{"kick":[95,0,0,0,90,0,0,0,93,0,0,0,90,0,0,0,95,0,0,0,0,0,88,0,93,0,0,0,90,0,0,0],"snare":[0,0,0,0,96,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,94,0,0,0],"perc":[0,0,0,80,0,0,74,0,0,0,0,82,0,0,72,0,0,0,0,82,0,0,76,0,0,0,0,84,0,0,74,52],"cowbell":[0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,60,0,0,0,0,0],"hihat":[55,0,48,0,57,0,49,0,55,0,50,0,58,0,52,0,55,0,48,0,58,0,50,0,56,0,51,0,60,0,54,0],"rim":[0,26,0,0,0,0,0,30,0,0,0,0,0,28,0,0,0,25,0,0,0,0,0,32,0,0,0,0,0,30,0,0]}},{"id":"ukfunky_clave_bell_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.08,"bpm":131,"tags":["groove","clave","cowbell","latin"],"_approach":"Sticky-style Latin cell: a full 3-2 son clave (1, 1a, 2&, 3&, 4) runs as the melodic timeline with a cowbell answering in the gaps, over a floor that holds in bar 1 and breaks around the clave in bar 2.","tracks":{"kick":[95,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,95,0,0,0,90,0,0,86,0,0,88,0,92,0,0,0],"clave":[72,0,0,76,0,0,74,0,0,0,70,0,74,0,0,0,74,0,0,78,0,0,76,0,0,0,72,0,76,0,0,0],"cowbell":[0,0,58,0,0,62,0,0,60,0,0,0,0,0,64,0,0,0,58,0,0,64,0,0,62,0,0,0,0,0,66,0],"perc":[0,0,0,0,93,0,0,0,0,0,0,0,91,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,91,0,0,0],"hihat":[0,0,54,0,0,0,52,0,0,0,55,0,0,0,56,0,0,0,54,0,0,0,52,0,0,0,56,0,0,0,58,0],"snare":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0],"shaker":[52,30,40,32,56,31,42,46,52,30,41,34,58,32,44,50,52,30,40,32,56,31,42,46,54,31,42,36,60,34,46,52]}},{"id":"ukfunky_dembow_lean_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.1,"bpm":130,"tags":["groove","dembow","no-backbeat","stabbing"],"_approach":"The dembow lean documented in UK funky's DNA: no snare on 2 and 4 at all - the snare rides the dembow cell (1a/2&/3a/4&) over a four-to-the-floor that breaks tresillo-style in bar 2, Roska's 'stabbing drums' with mid-tom jabs.","tracks":{"kick":[96,0,0,0,90,0,0,0,93,0,0,0,90,0,0,0,96,0,0,86,0,0,88,0,93,0,88,0,92,0,0,0],"snare":[0,0,0,92,0,0,76,0,0,0,0,90,0,0,74,0,0,0,0,92,0,0,78,0,0,0,0,90,0,72,0,66],"tomMid":[0,0,0,0,0,68,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,72],"congaLow":[0,60,0,0,0,0,0,64,0,62,0,0,0,0,0,0,0,60,0,0,0,0,0,64,0,64,0,0,0,0,58,0],"hihat":[56,0,46,0,58,0,48,0,56,0,47,0,60,0,50,0,56,0,46,0,58,0,48,0,57,0,48,0,62,0,52,0],"rim":[0,0,0,0,0,0,0,28,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,28,0,0]}},{"id":"ukfunky_snare_skank_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.05,"bpm":128,"tags":["groove","snare-led","sparse","lil-silva"],"_approach":"Lil Silva 'Night Skanker' school: the snare leads with stabbing accents around a deliberately sparse, displaced kick - almost no four-on-the-floor left, punchy and barely swung, all tension from negative space.","tracks":{"kick":[95,0,0,0,0,0,0,84,0,0,86,0,0,0,0,0,95,0,0,0,0,0,82,0,0,0,86,0,0,88,0,0],"snare":[0,0,0,0,98,0,0,85,0,0,0,0,96,0,70,0,0,0,0,0,98,0,0,0,0,86,0,0,96,0,74,82],"rim":[0,0,30,0,0,0,26,0,0,32,0,0,0,0,0,28,0,0,28,0,0,0,0,30,0,0,34,0,0,0,0,26],"hihat":[50,0,44,0,52,0,45,0,50,0,46,0,54,0,47,0,50,0,0,0,52,0,45,0,51,0,46,0,55,0,48,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,74,0,0]}},{"id":"ukfunky_soca_engine_01","style":"ukfunky","bars":2,"stepsPerBar":16,"swing":0.06,"bpm":132,"tags":["groove","soca","snare-rolls","carnival"],"_approach":"Soca engine-room translation: the kick keeps a strict four-on-the-floor (soca never drops the floor) while the snare does the work - backbeats plus rolling double-sixteenth pickups into the beats, the carnival snare-line feel behind tracks like Roska's 'Squark'.","tracks":{"kick":[97,0,0,0,92,0,0,0,94,0,0,0,92,0,0,0,97,0,0,0,92,0,0,0,94,0,0,0,92,0,0,0],"snare":[0,0,0,0,95,0,0,0,0,0,62,70,93,0,66,78,0,0,58,66,95,0,0,0,0,0,64,72,93,0,80,88],"congaHigh":[0,0,70,0,0,0,76,0,0,0,72,0,0,0,78,0,0,0,72,0,0,0,78,0,0,0,74,0,0,80,0,68],"congaLow":[0,66,0,0,0,0,0,64,0,68,0,0,0,0,0,0,0,66,0,0,0,0,0,66,0,70,0,0,0,0,0,60],"tambourine":[62,0,48,0,64,0,50,0,62,0,49,0,66,0,52,0,62,0,48,0,65,0,51,0,63,0,50,0,68,0,54,0],"hihat":[0,0,52,0,0,0,50,0,0,0,53,0,0,0,0,0,0,0,52,0,0,0,50,0,0,0,54,0,0,0,0,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0]}},{"id":"ukfunky_soca_roll_fill_01","style":"ukfunky","bars":1,"stepsPerBar":16,"swing":0.06,"bpm":130,"tags":["fill","soca","snare-roll"],"_approach":"Carnival snare-line fill: an accelerating soca-style snare roll that gathers density and velocity through the bar, congas doubling underneath and the kick dropping out for the last beat to make the return of the floor hit harder.","tracks":{"kick":[95,0,0,0,90,0,0,0,92,0,0,0,0,0,0,0],"snare":[0,0,0,0,92,0,58,64,70,0,78,84,96,100,108,114],"congaHigh":[0,0,70,0,0,0,74,0,0,72,0,78,0,84,0,88],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,85,0,0,0],"tambourine":[60,0,48,0,62,0,50,0,64,0,54,0,68,0,60,0]}},{"id":"ukfunky_tom_tumble_fill_01","style":"ukfunky","bars":1,"stepsPerBar":16,"swing":0.12,"bpm":129,"tags":["fill","toms","tresillo"],"_approach":"Tribal tom tumble: a high-to-low tom cascade phrased on the 3+3+2 tresillo cell, capped with snare stabs on the last beat - the percussion-break turnaround used all over tribal-leaning UK funky sets.","tracks":{"kick":[94,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0],"tomHigh":[0,0,0,82,0,0,78,0,0,0,0,0,0,0,0,0],"tomMid":[0,0,0,0,0,0,0,0,0,76,84,0,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,88,0,80,0],"snare":[0,0,0,0,90,0,0,0,0,0,0,0,0,92,0,96],"cowbell":[64,0,0,0,0,0,58,0,0,0,0,0,60,0,0,0],"shaker":[54,30,42,34,58,32,44,48,56,32,45,38,62,36,50,56]}},{"id":"ukfunky_tribal_conga_01","style":"ukfunky","bars":4,"stepsPerBar":16,"swing":0.15,"bpm":128,"tags":["groove","tribal","conga","percussion-led"],"_approach":"DJ Gregory / Karizma tribal-house lineage: a four-bar conga call-and-response carries the groove over an 8th-note tresillo cowbell, with the kick staying four-to-the-floor for two bars, breaking in bar 3, and resolving with a pickup in bar 4.","tracks":{"kick":[94,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,94,0,0,0,90,0,0,0,92,0,0,0,90,0,74,0,94,0,0,0,90,0,0,76,0,0,88,0,92,0,0,0,94,0,0,0,90,0,0,0,92,0,0,0,90,0,0,70],"perc":[0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,68,0],"congaHigh":[0,0,0,72,0,0,78,0,0,0,74,0,0,0,80,0,0,0,0,74,0,0,80,0,0,0,76,0,0,82,0,66,0,0,70,74,0,0,82,0,0,0,78,0,0,0,84,0,0,0,0,76,0,0,80,0,0,78,0,84,0,86,0,70],"congaLow":[0,0,66,0,0,72,0,0,0,0,68,0,0,74,0,0,0,0,66,0,0,72,0,0,0,0,70,0,0,76,0,0,0,0,68,0,0,74,0,0,62,0,70,0,0,76,0,0,0,0,66,0,0,72,0,0,0,0,70,0,74,0,0,78],"cowbell":[62,0,0,0,0,0,58,0,0,0,0,0,60,0,0,0,62,0,0,0,0,0,58,0,0,0,0,0,60,0,0,0,64,0,0,0,0,0,60,0,0,0,55,0,62,0,0,0,62,0,0,0,0,0,58,0,0,0,0,0,60,0,55,0],"shaker":[56,32,42,34,60,33,44,48,56,31,43,36,62,34,46,52,56,32,42,34,60,33,44,48,57,32,44,37,63,35,47,53,58,33,43,35,61,34,45,49,58,32,44,38,63,35,48,54,56,32,42,34,60,33,44,48,58,33,45,39,64,36,50,56],"rim":[0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,34]}},{"id":"ukg_4x4_bump_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.13,"bpm":130,"tags":["4x4","garage-house","clap","bounce"],"_approach":"4x4 garage hybrid (DJ EZ era / speed garage floor patterns): four-on-the-floor kick under a garage clap backbeat, offbeat open hats bumped by light swung 16th closed hats and snare ghost skips.","tracks":{"kick":[116,0,0,0,108,0,0,0,112,0,0,0,110,0,0,0,116,0,0,0,108,0,0,0,112,0,0,34,110,0,0,0],"perc":[0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,106,0,72,0],"snare":[0,0,0,0,0,0,0,30,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,30,0,0,26,0,0,0,0,34],"openHat":[0,0,78,0,0,0,80,0,0,0,78,0,0,0,82,0,0,0,78,0,0,0,80,0,0,0,78,0,0,0,86,0],"hihat":[0,44,0,52,0,46,0,54,0,44,0,56,0,48,0,58,0,46,0,52,0,44,0,56,0,48,0,54,0,50,0,60]}},{"id":"ukg_bumpy_organ_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.22,"bpm":133,"tags":["bumpy","organ","2step","bassline-era"],"_approach":"Bumpy organ-era garage (Wookie 'Battle' / early bassline bounce): kick bouncing between 1, the and-of-2 and the a-of-3, low-tom bumps mimicking the organ bass, driving 8th hats with swung 16th skips and clap accents.","tracks":{"kick":[114,0,0,30,0,0,96,0,0,0,0,88,0,0,0,0,112,0,0,0,0,0,94,0,0,34,0,90,0,0,0,0],"snare":[0,0,0,0,116,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,116,0,0,30],"tomLow":[0,0,0,0,0,0,0,54,0,44,0,0,0,0,58,0,0,0,0,46,0,0,0,52,0,0,0,0,0,48,0,0],"hihat":[62,0,48,0,66,0,74,40,58,0,50,0,68,0,76,0,60,0,46,0,64,0,72,42,56,0,52,0,66,0,78,44],"perc":[0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0]}},{"id":"ukg_classic_2step_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.25,"bpm":132,"tags":["2step","classic","shuffle","swung"],"_approach":"Classic late-90s 2-step shuffle (MJ Cole / Artful Dodger): kick on 1 plus the a-of-2 and and-of-3, heavy ~62% MPC swing, skippy accented hats with a bar-end open hat, rim ghosts filling the pocket.","tracks":{"kick":[112,0,0,0,0,0,0,34,0,0,96,0,0,0,0,0,110,0,0,0,0,0,0,88,0,0,98,0,0,0,0,0],"snare":[0,0,0,0,118,0,0,0,0,0,0,0,114,0,0,28,0,0,0,0,116,0,0,0,0,0,0,32,118,0,0,0],"hihat":[56,0,74,42,0,0,76,0,58,0,80,44,0,0,0,0,58,0,76,44,0,0,0,0,60,0,82,46,0,42,70,50],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0],"rim":[0,0,0,26,0,0,0,0,0,0,0,24,0,0,0,0,0,0,0,26,0,0,0,0,0,24,0,0,0,0,30,0]}},{"id":"ukg_dark_garage_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.2,"bpm":130,"tags":["dark","2step","sparse","proto-dubstep"],"_approach":"Dark garage (Zed Bias / El-B / Horsepower Productions): sparse syncopated kicks with a low ghost, heavy snare on 2 and 4, rim-led skip language and only a few lonely hats leaving dub space.","tracks":{"kick":[108,0,0,0,0,0,0,90,0,0,0,44,0,0,0,0,106,0,0,36,0,0,0,0,0,0,92,0,0,0,0,0],"snare":[0,0,0,0,112,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,114,0,26,0],"rim":[0,0,52,0,0,0,0,46,0,58,0,0,0,0,48,0,0,0,54,0,0,44,0,0,0,56,0,0,0,50,0,28],"hihat":[0,0,0,0,0,0,58,0,0,0,0,0,0,0,62,0,0,0,60,0,0,0,0,0,0,0,56,0,0,0,64,38],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0]}},{"id":"ukg_fill_rim_skip_01","style":"ukg","bars":1,"stepsPerBar":16,"swing":0.15,"bpm":134,"tags":["fill","rim","revival","skip"],"_approach":"One-bar modern-revival rim-skip fill (Interplanetary Criminal-style rim runs): groove holds through beat 2, then rising rim shots trade with mid/low toms into the turnaround.","tracks":{"kick":[110,0,0,0,0,0,0,90,0,0,96,0,0,0,0,0],"snare":[0,0,0,0,114,0,0,0,0,0,0,0,0,0,0,0],"rim":[0,0,0,0,0,0,52,58,0,64,0,0,0,74,0,88],"tomMid":[0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0],"tomLow":[0,0,0,0,0,0,0,0,0,0,0,0,68,0,76,0],"hihat":[64,0,72,0,0,0,74,0,62,0,0,0,0,0,0,0]}},{"id":"ukg_fill_snare_run_01","style":"ukg","bars":1,"stepsPerBar":16,"swing":0.2,"bpm":132,"tags":["fill","snare-run","build"],"_approach":"One-bar swung snare-run fill in the classic garage MC-drop style: backbeat holds on 2, then an accelerating crescendo of snares climbs through the last beat into the next downbeat.","tracks":{"kick":[106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,112,0,0,58,0,64,0,72,96,80,104,116],"hihat":[60,0,70,0,0,0,72,0,62,0,74,0,0,0,0,0],"perc":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90]}},{"id":"ukg_minimal_dub_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.26,"bpm":129,"tags":["minimal","dubby","2step","sparse"],"_approach":"Minimal dubby garage (late-era 2-step stripped to its skeleton, the space Burial later inhabited): kick only on 1 and one syncopation per bar, deepest swing in the set, whispering rim ghosts, sparse shaker, unchoked open hats left to ring.","tracks":{"kick":[104,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,102,0,0,0,0,0,0,86,0,0,0,0,0,0,0,0],"snare":[0,0,0,0,108,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,108,0,0,0],"rim":[0,0,0,24,0,0,0,0,0,28,0,0,0,0,22,0,0,0,26,0,0,0,0,22,0,0,0,28,0,0,0,0],"shaker":[0,0,48,0,0,0,44,0,0,0,50,0,0,0,46,0,0,0,46,0,0,0,50,0,0,0,44,0,0,42,52,0],"openHat":[0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0]}},{"id":"ukg_modern_revival_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.15,"bpm":134,"tags":["revival","2step","rim-run","modern"],"_approach":"2020s revival bounce (Interplanetary Criminal / Sammy Virji): tighter swing than the classic era, heavy kick on 1 with a-of-2 and and-of-3 syncopation, huge layered snare+clap backbeat, offbeat hats, and ascending rim-shot runs into the downbeats.","tracks":{"kick":[118,0,0,0,0,0,0,92,0,0,100,0,0,0,0,0,118,0,0,34,0,0,0,92,0,0,100,0,0,36,0,0],"snare":[0,0,0,0,120,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,118,0,0,0],"perc":[0,0,0,0,88,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,86,0,0,44],"rim":[0,0,0,0,0,0,46,52,0,0,0,0,0,58,64,70,0,0,0,0,0,44,50,0,0,0,0,0,52,58,66,74],"hihat":[0,0,72,0,0,0,74,0,0,0,72,0,0,0,0,0,0,0,74,0,0,0,76,0,0,0,72,0,0,0,78,0],"openHat":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}},{"id":"ukg_perc_organic_01","style":"ukg","bars":4,"stepsPerBar":16,"swing":0.18,"bpm":135,"tags":["percussive","organic","congas","revival"],"_approach":"Percussive organic garage (salute / Main Phase): a four-bar conversation between high and low congas over a 2-step kick whose syncopation migrates every bar, glued by a full 16th shaker with rolling accent contours.","tracks":{"kick":[110,0,0,0,0,0,0,88,0,0,94,0,0,0,0,0,108,0,0,0,0,0,0,86,0,0,92,0,0,0,34,0,110,0,0,30,0,0,0,88,0,0,0,94,0,0,0,0,108,0,0,0,0,0,90,0,0,0,92,0,0,32,0,0],"snare":[0,0,0,0,114,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,118,0,0,30],"shaker":[72,40,56,44,76,42,58,46,74,40,60,44,78,42,62,48,70,42,54,46,74,40,60,44,72,44,58,42,76,46,64,50,74,40,58,44,78,42,60,46,72,40,56,44,76,44,62,48,72,42,56,46,76,44,58,42,74,40,60,46,80,48,66,52],"congaHigh":[0,0,62,0,0,0,0,58,0,66,0,0,0,0,56,0,0,0,60,0,0,0,0,56,0,64,0,0,0,58,0,0,0,0,64,0,0,54,0,0,0,66,0,0,0,0,58,0,0,0,62,0,0,0,0,60,0,68,0,0,0,0,56,62],"congaLow":[0,0,0,0,0,0,58,0,0,0,0,52,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,58,0,0,0,0,56,0,0,0,0],"hihat":[0,0,0,0,0,0,74,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,76,0]}},{"id":"ukg_todd_cutup_01","style":"ukg","bars":2,"stepsPerBar":16,"swing":0.18,"bpm":131,"tags":["todd-edwards","cut-up","us-garage","tambourine"],"_approach":"Todd Edwards-style US garage cut-up feel: four-to-the-floor kick that drops and displaces beat 3 in bar 2, rolling 16th tambourine with strong accent contour, and conga stabs syncopated like chopped vocal snippets.","tracks":{"kick":[114,0,0,0,106,0,0,0,110,0,0,0,108,0,0,0,114,0,0,0,106,0,0,0,0,0,96,0,108,0,0,0],"perc":[0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0],"tambourine":[70,34,52,38,74,36,54,40,72,34,56,38,76,36,58,42,72,36,54,40,76,34,56,38,74,38,58,36,78,40,60,46],"congaHigh":[0,0,0,56,0,0,62,0,0,58,0,0,0,0,66,0,0,0,58,0,0,60,0,0,0,0,64,0,0,62,0,68],"snare":[0,0,0,0,0,0,0,26,0,0,0,0,0,0,30,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,32]}}],
+  };
+})();
+</script>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+let META = null;          // /api/patterns response
+let CUR = null;           // last /api/render response
+let seed = Math.floor(Math.random() * 1e9);
+
+// ---------------------------------------------------------------- data layer
+// Two backends: HTTP (local server, web/server.js) and static (no server —
+// engine + patterns bundled into the page by tools/build-site.js, which
+// defines window.STATIC_DATA).
+const IS_STATIC = typeof window.STATIC_DATA !== "undefined";
+
+async function apiMeta() {
+  if (!IS_STATIC) return (await fetch("/api/patterns")).json();
+  const D = window.STATIC_DATA;
+  return {
+    patterns: D.patterns.map((p) => ({
+      id: p.id, style: p.style, bpm: p.bpm,
+      fill: (p.tags || []).includes("fill"),
+    })),
+    presets: Object.keys(D.presets).filter((k) => k[0] !== "_"),
+    mapping: D.mapping,
+    ppq: D.lib.PPQ,
+  };
+}
+
+function staticRender(q) {
+  const D = window.STATIC_DATA;
+  const pattern = D.patterns.find((p) => p.id === q.get("pattern"));
+  if (!pattern) throw new Error(`Pattern "${q.get("pattern")}" not found`);
+  const presetName = q.get("preset") || "tight";
+  const overrides = Object.assign({}, D.presets[presetName]);
+  delete overrides._desc;
+  if (q.get("density") !== null) overrides.density = parseFloat(q.get("density"));
+  if (q.get("ghosts") !== null) overrides.ghostProbability = parseFloat(q.get("ghosts"));
+  const state = D.lib.engine.makeState(pattern, D.mapping, overrides);
+  const fillPatterns = D.patterns.filter(
+    (p) => p.style === pattern.style && (p.tags || []).includes("fill") && p.id !== pattern.id
+  );
+  const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
+  const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
+  const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
+  const events = D.lib.engine.render(state, bars, { fillPatterns, seed });
+  return { events, bars, bpm, patternId: pattern.id, presetName, ppq: D.lib.PPQ };
+}
+
+async function apiRender(q) {
+  if (IS_STATIC) return staticRender(q);
+  return (await fetch("/api/render?" + q)).json();
+}
+
+function apiDownload(q) {
+  if (!IS_STATIC) { window.location = "/api/render.mid?" + q; return; }
+  const r = staticRender(q);
+  const midi = window.STATIC_DATA.lib.eventsToMidi(r.events, { bpm: r.bpm });
+  const blob = new Blob([midi], { type: "audio/midi" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${r.patternId}_${r.bars}bars_${r.bpm}bpm.mid`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+}
+
+function params() {
+  const p = new URLSearchParams({
+    pattern: $("pattern").value,
+    preset: $("preset").value,
+    bars: $("bars").value,
+    bpm: $("bpm").value,
+    density: $("density").value,
+    seed: String(seed),
+  });
+  if (parseFloat($("ghosts").value) >= 0) p.set("ghosts", $("ghosts").value);
+  return p;
+}
+
+async function rerender() {
+  stop();
+  let data;
+  try {
+    data = await apiRender(params());
+  } catch (err) {
+    $("status").textContent = "Error: " + err.message;
+    return;
+  }
+  if (data.error) { $("status").textContent = "Error: " + data.error; return; }
+  CUR = data;
+  $("seedVal").textContent = seed;
+  $("status").textContent = `${data.events.length} notes · ${data.bars} bars @ ${data.bpm} bpm · ${data.patternId} / ${data.presetName}`;
+  drawGrid();
+}
+
+// ------------------------------------------------------------- grid drawing
+const ROLE_ORDER = ["crash","ride","openHat","hihat","shaker","tambourine","clave","cowbell","congaHigh","congaLow","perc","tomHigh","tomMid","tomLow","clap","rim","snare","kick"];
+function drawGrid(playTick) {
+  const cv = $("grid"), ctx = cv.getContext("2d");
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  if (!CUR) return;
+  const roles = ROLE_ORDER.filter((r) => CUR.events.some((e) => e.role === r));
+  const totalTicks = CUR.bars * 4 * CUR.ppq;
+  const left = 90, w = cv.width - left - 10, rowH = cv.height / Math.max(roles.length, 1);
+  ctx.font = "20px sans-serif";
+  roles.forEach((r, i) => {
+    ctx.fillStyle = "#9aa1ae";
+    ctx.fillText(r, 6, i * rowH + rowH / 2 + 7);
+    ctx.strokeStyle = "#2e323b"; ctx.beginPath();
+    ctx.moveTo(left, (i + 1) * rowH); ctx.lineTo(cv.width - 10, (i + 1) * rowH); ctx.stroke();
+  });
+  for (let bar = 0; bar <= CUR.bars; bar++) {
+    const x = left + (bar * 4 * CUR.ppq / totalTicks) * w;
+    ctx.strokeStyle = bar % 4 === 0 ? "#454b58" : "#2e323b";
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, cv.height); ctx.stroke();
+  }
+  for (const e of CUR.events) {
+    const i = roles.indexOf(e.role);
+    const x = left + (e.startTick / totalTicks) * w;
+    const bw = Math.max(3, (e.durationTick / totalTicks) * w * 0.8);
+    const a = 0.25 + 0.75 * (e.velocity / 127);
+    ctx.fillStyle = e.role === "kick" || e.role === "snare"
+      ? `rgba(255,180,58,${a})` : `rgba(79,195,247,${a})`;
+    ctx.fillRect(x, i * rowH + 5, bw, rowH - 10);
+  }
+  if (playTick !== undefined) {
+    const x = left + (playTick / totalTicks) * w;
+    ctx.strokeStyle = "#ff5f5f"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, cv.height); ctx.stroke();
+    ctx.lineWidth = 1;
+  }
+}
+
+// ---------------------------------------------------------- WebAudio drum kit
+let ac = null;
+function noiseBuf() {
+  const b = ac.createBuffer(1, ac.sampleRate, ac.sampleRate);
+  const d = b.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  return b;
+}
+let NOISE = null;
+function env(t, peak, dur) {
+  const g = ac.createGain();
+  g.gain.setValueAtTime(peak, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+  g.connect(ac.destination);
+  return g;
+}
+function noise(t, peak, dur, type, freq, q) {
+  const src = ac.createBufferSource(); src.buffer = NOISE; src.loop = true;
+  const f = ac.createBiquadFilter(); f.type = type; f.frequency.value = freq;
+  if (q) f.Q.value = q;
+  src.connect(f); f.connect(env(t, peak, dur));
+  src.start(t); src.stop(t + dur + 0.02);
+}
+function tone(t, peak, dur, type, f0, f1) {
+  const o = ac.createOscillator(); o.type = type;
+  o.frequency.setValueAtTime(f0, t);
+  if (f1) o.frequency.exponentialRampToValueAtTime(f1, t + dur * 0.8);
+  o.connect(env(t, peak, dur));
+  o.start(t); o.stop(t + dur + 0.02);
+}
+const KIT = {
+  kick:      (t, v) => { tone(t, v * 1.1, 0.32, "sine", 118, 42); noise(t, v * 0.25, 0.02, "lowpass", 4000); },
+  snare:     (t, v) => { noise(t, v * 0.8, 0.16, "highpass", 1400); tone(t, v * 0.5, 0.1, "triangle", 192, 130); },
+  rim:       (t, v) => { noise(t, v * 0.6, 0.035, "bandpass", 1700, 4); tone(t, v * 0.3, 0.02, "square", 1050); },
+  clap:      (t, v) => { for (let i = 0; i < 3; i++) noise(t + i * 0.009, v * 0.6, 0.09, "bandpass", 1250, 2); },
+  perc:      (t, v) => { for (let i = 0; i < 3; i++) noise(t + i * 0.009, v * 0.6, 0.09, "bandpass", 1250, 2); },
+  hihat:     (t, v) => noise(t, v * 0.5, 0.045, "highpass", 7500),
+  openHat:   (t, v, d) => noise(t, v * 0.5, Math.min(Math.max(d, 0.08), 0.5), "highpass", 7200),
+  crash:     (t, v) => noise(t, v * 0.7, 1.1, "highpass", 5200),
+  ride:      (t, v) => { noise(t, v * 0.35, 0.4, "highpass", 6500); tone(t, v * 0.2, 0.25, "sine", 520); },
+  tomLow:    (t, v) => tone(t, v * 0.9, 0.28, "sine", 105, 70),
+  tomMid:    (t, v) => tone(t, v * 0.9, 0.26, "sine", 145, 95),
+  tomHigh:   (t, v) => tone(t, v * 0.9, 0.24, "sine", 195, 130),
+  tambourine:(t, v) => { noise(t, v * 0.4, 0.1, "bandpass", 8000, 1.5); noise(t + 0.02, v * 0.25, 0.08, "bandpass", 8500, 1.5); },
+  cowbell:   (t, v) => { tone(t, v * 0.4, 0.14, "square", 560); tone(t, v * 0.3, 0.14, "square", 845); },
+  congaHigh: (t, v) => tone(t, v * 0.7, 0.14, "sine", 310, 240),
+  congaLow:  (t, v) => tone(t, v * 0.7, 0.16, "sine", 220, 165),
+  shaker:    (t, v) => noise(t, v * 0.35, 0.07, "bandpass", 5600, 1.2),
+  clave:     (t, v) => tone(t, v * 0.5, 0.05, "sine", 1180),
+};
+
+// ----------------------------------------------------------------- transport
+let playing = false, startTime = 0, schedTick = 0, timer = null, raf = null;
+function tick2sec(t) { return t * 60 / (CUR.bpm * CUR.ppq); }
+function scheduler() {
+  const totalTicks = CUR.bars * 4 * CUR.ppq;
+  const horizon = ac.currentTime + 0.12;
+  const loopLen = tick2sec(totalTicks);
+  while (true) {
+    const cycle = Math.floor(schedTick / totalTicks);
+    const tickInLoop = schedTick % totalTicks;
+    const evs = CUR.events.filter((e) => e.startTick === tickInLoop);
+    const when = startTime + cycle * loopLen + tick2sec(tickInLoop);
+    if (when > horizon) break;
+    for (const e of evs) {
+      const fn = KIT[e.role];
+      if (fn) fn(when, Math.pow(e.velocity / 127, 1.4), tick2sec(e.durationTick));
+    }
+    // advance to next tick that has any event (or bar end)
+    const next = CUR.events.map((e) => e.startTick).filter((t) => t > tickInLoop).sort((a, b) => a - b)[0];
+    if (next !== undefined) schedTick = cycle * totalTicks + next;
+    else if ($("loop").checked) schedTick = (cycle + 1) * totalTicks;
+    else { setTimeout(stop, (when - ac.currentTime + 0.6) * 1000); return; }
+  }
+}
+function animate() {
+  if (!playing) return;
+  const totalTicks = CUR.bars * 4 * CUR.ppq;
+  const elapsed = ac.currentTime - startTime;
+  const tickNow = (elapsed / tick2sec(totalTicks)) % 1 * totalTicks;
+  drawGrid(elapsed < 0 ? 0 : tickNow);
+  raf = requestAnimationFrame(animate);
+}
+function play() {
+  if (!CUR) return;
+  if (!ac) { ac = new AudioContext(); NOISE = noiseBuf(); }
+  ac.resume();
+  playing = true; schedTick = 0; startTime = ac.currentTime + 0.08;
+  timer = setInterval(scheduler, 30); scheduler();
+  raf = requestAnimationFrame(animate);
+  $("btnPlay").textContent = "■ Stop";
+}
+function stop() {
+  playing = false;
+  clearInterval(timer); cancelAnimationFrame(raf);
+  if (ac) { ac.close(); ac = null; }
+  $("btnPlay").textContent = "▶ Play";
+  if (CUR) drawGrid();
+}
+
+// -------------------------------------------------------------------- wiring
+$("btnPlay").onclick = () => (playing ? stop() : play());
+$("btnNew").onclick = () => { seed = Math.floor(Math.random() * 1e9); rerender(); };
+$("btnDownload").onclick = () => apiDownload(params());
+for (const id of ["preset", "bars", "bpm"]) $(id).onchange = rerender;
+$("pattern").onchange = () => {
+  const p = META.patterns.find((x) => x.id === $("pattern").value);
+  if (p && p.bpm) $("bpm").value = p.bpm;
+  rerender();
+};
+$("density").oninput = () => { $("densityVal").textContent = (+$("density").value).toFixed(2); };
+$("density").onchange = rerender;
+$("ghosts").oninput = () => {
+  const v = parseFloat($("ghosts").value);
+  $("ghostsVal").textContent = v < 0 ? "preset" : v.toFixed(2);
+};
+$("ghosts").onchange = rerender;
+
+(async function init() {
+  META = await apiMeta();
+  const styles = [...new Set(META.patterns.map((p) => p.style))].sort();
+  for (const style of styles) {
+    const g = document.createElement("optgroup");
+    g.label = style;
+    for (const p of META.patterns.filter((x) => x.style === style)) {
+      const o = document.createElement("option");
+      o.value = p.id;
+      o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${p.fill ? " (fill)" : ""}`;
+      g.appendChild(o);
+    }
+    $("pattern").appendChild(g);
+  }
+  const firstGroove = META.patterns.find((p) => !p.fill);
+  if (firstGroove) {
+    $("pattern").value = firstGroove.id;
+    if (firstGroove.bpm) $("bpm").value = firstGroove.bpm;
+  }
+  for (const name of META.presets) {
+    const o = document.createElement("option");
+    o.value = o.textContent = name;
+    $("preset").appendChild(o);
+  }
+  $("preset").value = META.presets.includes("breaks") ? "breaks" : META.presets[0];
+  await rerender();
+})();
+</script>
+</body>
+</html>

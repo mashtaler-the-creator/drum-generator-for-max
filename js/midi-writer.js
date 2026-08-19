@@ -1,6 +1,8 @@
 // midi-writer.js
 // Minimal zero-dependency Standard MIDI File (format 0) writer.
-// Takes engine.render() events and produces a Buffer with a valid .mid file.
+// Takes engine.render() events and produces a Uint8Array with a valid .mid
+// file. Uint8Array (not Buffer) so the same code runs in Node (fs and
+// http.res both accept it) and in the browser (Blob download).
 
 "use strict";
 
@@ -22,7 +24,7 @@ function vlq(value) {
  * @param {object} [opts]
  * @param {number} [opts.bpm=170]
  * @param {number} [opts.channel=9]  MIDI channel 10 (drums) by default
- * @returns {Buffer}
+ * @returns {Uint8Array}
  */
 function eventsToMidi(events, opts) {
   opts = opts || {};
@@ -57,20 +59,21 @@ function eventsToMidi(events, opts) {
   // end of track
   track.push(0x00, 0xff, 0x2f, 0x00);
 
-  const header = Buffer.from([
+  const header = [
     0x4d, 0x54, 0x68, 0x64, // MThd
     0, 0, 0, 6,             // header length
     0, 0,                   // format 0
     0, 1,                   // one track
     (PPQ >> 8) & 0xff, PPQ & 0xff,
-  ]);
+    0x4d, 0x54, 0x72, 0x6b, // MTrk
+    (track.length >> 24) & 0xff, (track.length >> 16) & 0xff,
+    (track.length >> 8) & 0xff, track.length & 0xff,
+  ];
 
-  const trackBuf = Buffer.from(track);
-  const trackHeader = Buffer.alloc(8);
-  trackHeader.write("MTrk", 0, "ascii");
-  trackHeader.writeUInt32BE(trackBuf.length, 4);
-
-  return Buffer.concat([header, trackHeader, trackBuf]);
+  const out = new Uint8Array(header.length + track.length);
+  out.set(header, 0);
+  out.set(track, header.length);
+  return out;
 }
 
 if (typeof module !== "undefined") {

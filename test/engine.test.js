@@ -88,11 +88,15 @@ test("midi writer produces a structurally valid SMF", () => {
   const state = makeState(pattern, mapping);
   const events = render(state, 2, { seed: 1 });
   const buf = eventsToMidi(events, { bpm: 172 });
-  assert.strictEqual(buf.slice(0, 4).toString("ascii"), "MThd");
-  assert.strictEqual(buf.readUInt16BE(8), 0); // format 0
-  assert.strictEqual(buf.readUInt16BE(12), PPQ);
-  assert.strictEqual(buf.slice(14, 18).toString("ascii"), "MTrk");
-  const trackLen = buf.readUInt32BE(18);
+  // eventsToMidi returns a Uint8Array (browser-compatible), so inspect it
+  // with DataView rather than Buffer methods.
+  const ascii = (from, to) => String.fromCharCode(...buf.slice(from, to));
+  const view = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
+  assert.strictEqual(ascii(0, 4), "MThd");
+  assert.strictEqual(view.getUint16(8), 0); // format 0
+  assert.strictEqual(view.getUint16(12), PPQ);
+  assert.strictEqual(ascii(14, 18), "MTrk");
+  const trackLen = view.getUint32(18);
   assert.strictEqual(buf.length, 14 + 8 + trackLen);
   // ends with end-of-track meta
   assert.deepStrictEqual([...buf.slice(buf.length - 3)], [0xff, 0x2f, 0x00]);

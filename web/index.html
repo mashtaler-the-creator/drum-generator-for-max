@@ -88,6 +88,62 @@ let CUR = null;           // last /api/render response
 let seed = Math.floor(Math.random() * 1e9);
 
 // ---------------------------------------------------------------- data layer
+// Two backends: HTTP (local server, web/server.js) and static (no server —
+// engine + patterns bundled into the page by tools/build-site.js, which
+// defines window.STATIC_DATA).
+const IS_STATIC = typeof window.STATIC_DATA !== "undefined";
+
+async function apiMeta() {
+  if (!IS_STATIC) return (await fetch("/api/patterns")).json();
+  const D = window.STATIC_DATA;
+  return {
+    patterns: D.patterns.map((p) => ({
+      id: p.id, style: p.style, bpm: p.bpm,
+      fill: (p.tags || []).includes("fill"),
+    })),
+    presets: Object.keys(D.presets).filter((k) => k[0] !== "_"),
+    mapping: D.mapping,
+    ppq: D.lib.PPQ,
+  };
+}
+
+function staticRender(q) {
+  const D = window.STATIC_DATA;
+  const pattern = D.patterns.find((p) => p.id === q.get("pattern"));
+  if (!pattern) throw new Error(`Pattern "${q.get("pattern")}" not found`);
+  const presetName = q.get("preset") || "tight";
+  const overrides = Object.assign({}, D.presets[presetName]);
+  delete overrides._desc;
+  if (q.get("density") !== null) overrides.density = parseFloat(q.get("density"));
+  if (q.get("ghosts") !== null) overrides.ghostProbability = parseFloat(q.get("ghosts"));
+  const state = D.lib.engine.makeState(pattern, D.mapping, overrides);
+  const fillPatterns = D.patterns.filter(
+    (p) => p.style === pattern.style && (p.tags || []).includes("fill") && p.id !== pattern.id
+  );
+  const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
+  const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
+  const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
+  const events = D.lib.engine.render(state, bars, { fillPatterns, seed });
+  return { events, bars, bpm, patternId: pattern.id, presetName, ppq: D.lib.PPQ };
+}
+
+async function apiRender(q) {
+  if (IS_STATIC) return staticRender(q);
+  return (await fetch("/api/render?" + q)).json();
+}
+
+function apiDownload(q) {
+  if (!IS_STATIC) { window.location = "/api/render.mid?" + q; return; }
+  const r = staticRender(q);
+  const midi = window.STATIC_DATA.lib.eventsToMidi(r.events, { bpm: r.bpm });
+  const blob = new Blob([midi], { type: "audio/midi" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${r.patternId}_${r.bars}bars_${r.bpm}bpm.mid`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+}
+
 function params() {
   const p = new URLSearchParams({
     pattern: $("pattern").value,
@@ -103,8 +159,13 @@ function params() {
 
 async function rerender() {
   stop();
-  const res = await fetch("/api/render?" + params());
-  const data = await res.json();
+  let data;
+  try {
+    data = await apiRender(params());
+  } catch (err) {
+    $("status").textContent = "Error: " + err.message;
+    return;
+  }
   if (data.error) { $("status").textContent = "Error: " + data.error; return; }
   CUR = data;
   $("seedVal").textContent = seed;
@@ -253,7 +314,7 @@ function stop() {
 // -------------------------------------------------------------------- wiring
 $("btnPlay").onclick = () => (playing ? stop() : play());
 $("btnNew").onclick = () => { seed = Math.floor(Math.random() * 1e9); rerender(); };
-$("btnDownload").onclick = () => { window.location = "/api/render.mid?" + params(); };
+$("btnDownload").onclick = () => apiDownload(params());
 for (const id of ["preset", "bars", "bpm"]) $(id).onchange = rerender;
 $("pattern").onchange = () => {
   const p = META.patterns.find((x) => x.id === $("pattern").value);
@@ -269,7 +330,7 @@ $("ghosts").oninput = () => {
 $("ghosts").onchange = rerender;
 
 (async function init() {
-  META = await (await fetch("/api/patterns")).json();
+  META = await apiMeta();
   const styles = [...new Set(META.patterns.map((p) => p.style))].sort();
   for (const style of styles) {
     const g = document.createElement("optgroup");

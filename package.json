@@ -7,7 +7,8 @@
     "test": "node test/engine.test.js",
     "validate": "node tools/validate-patterns.js",
     "render": "node tools/render.js",
-    "start": "node web/server.js"
+    "start": "node web/server.js",
+    "build:site": "node tools/build-site.js"
   },
   "license": "UNLICENSED",
   "private": true
