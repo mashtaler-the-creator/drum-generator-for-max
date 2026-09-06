@@ -47,9 +47,13 @@ function renderFromQuery(q) {
 
   const overrides = Object.assign({}, preset);
   delete overrides._desc;
-  if (q.get("density") !== null) overrides.density = parseFloat(q.get("density"));
-  if (q.get("ghosts") !== null) overrides.ghostProbability = parseFloat(q.get("ghosts"));
-  if (q.get("humanize") !== null) overrides.humanizeTicks = parseInt(q.get("humanize"), 10);
+  const clamp = (v, lo, hi) => (Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : undefined);
+  const density = clamp(parseFloat(q.get("density")), 0, 1);
+  if (density !== undefined) overrides.density = density;
+  const ghosts = clamp(parseFloat(q.get("ghosts")), 0, 0.5);
+  if (ghosts !== undefined) overrides.ghostProbability = ghosts;
+  const humanize = clamp(parseInt(q.get("humanize"), 10), 0, 60);
+  if (humanize !== undefined) overrides.humanizeTicks = humanize;
 
   const mapping = loadJson("js/mapping-default.json");
   const state = makeState(pattern, mapping, overrides);
@@ -109,6 +113,8 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, () => {
+// Bind to loopback only: this is a local tool, no reason to expose it to
+// the whole LAN. Use the published static site for anything shared.
+server.listen(PORT, "127.0.0.1", () => {
   console.log(`Drum generator UI: http://localhost:${PORT}`);
 });
