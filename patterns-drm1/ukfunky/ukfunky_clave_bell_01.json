@@ -1,0 +1,23 @@
+{
+  "id": "ukfunky_clave_bell_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 131,
+  "tags": [
+    "groove",
+    "clave",
+    "cowbell",
+    "latin"
+  ],
+  "_approach": "Sticky-style Latin cell: a full 3-2 son clave (1, 1a, 2&, 3&, 4) runs as the melodic timeline with a cowbell answering in the gaps, over a floor that holds in bar 1 and breaks around the clave in bar 2. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [95,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,95,0,0,0,90,0,0,86,0,0,88,0,92,0,0,0],
+    "multi": [65,0,55,68,0,59,67,0,57,0,63,0,67,0,61,0,67,0,55,70,0,61,68,0,59,0,65,0,68,0,63,0],
+    "clap": [0,0,0,0,93,0,0,0,0,0,0,0,91,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,91,0,0,0],
+    "hihat": [42,24,54,26,45,25,52,37,42,24,55,27,46,26,56,40,42,24,54,26,45,25,52,37,43,25,56,29,48,27,58,42],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0]
+  },
+  "kit": "drm1"
+}

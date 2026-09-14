@@ -49,24 +49,31 @@ function validatePattern(pattern, filePath, errors) {
 
 function main() {
   const schema = loadJSON(SCHEMA_PATH); // loaded for reference/future ajv swap
-  const styles = fs
-    .readdirSync(PATTERNS_DIR)
-    .filter((f) => fs.statSync(path.join(PATTERNS_DIR, f)).isDirectory());
-
   const errors = [];
   let count = 0;
 
-  for (const style of styles) {
-    const dir = path.join(PATTERNS_DIR, style);
-    for (const file of fs.readdirSync(dir)) {
-      if (!file.endsWith(".json")) continue;
-      count++;
-      const filePath = path.join(dir, file);
-      try {
-        const pattern = loadJSON(filePath);
-        validatePattern(pattern, filePath, errors);
-      } catch (e) {
-        errors.push(`${filePath}: JSON parse error - ${e.message}`);
+  // Every kit's pattern tree (patterns/, patterns-drm1/, ...) gets validated.
+  const kits = loadJSON(path.join(ROOT, "js", "kits.json"));
+  const roots = [...new Set(Object.values(kits).map((k) => path.join(ROOT, k.patternsDir)))];
+
+  for (const patternsRoot of roots) {
+    if (!fs.existsSync(patternsRoot)) continue;
+    const styles = fs
+      .readdirSync(patternsRoot)
+      .filter((f) => fs.statSync(path.join(patternsRoot, f)).isDirectory());
+
+    for (const style of styles) {
+      const dir = path.join(patternsRoot, style);
+      for (const file of fs.readdirSync(dir)) {
+        if (!file.endsWith(".json")) continue;
+        count++;
+        const filePath = path.join(dir, file);
+        try {
+          const pattern = loadJSON(filePath);
+          validatePattern(pattern, filePath, errors);
+        } catch (e) {
+          errors.push(`${filePath}: JSON parse error - ${e.message}`);
+        }
       }
     }
   }

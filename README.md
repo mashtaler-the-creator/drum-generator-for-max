@@ -44,6 +44,16 @@ node tools/render.js --pattern jungle_amen_01 --bars 8 --bpm 172 \
 - Step-by-step guide: [docs/HELP.md](docs/HELP.md)
 - Пошаговая инструкция (RU): [docs/HELP.ru.md](docs/HELP.ru.md)
 - Drum rack setup: [docs/drum-rack-setup.md](docs/drum-rack-setup.md)
+- Vermona DRM1 MKIII kit: [docs/vermona-drm1.md](docs/vermona-drm1.md)
+
+## Kits
+
+Two output kits, switchable in the web UI (Kit dropdown) and CLI (`--kit`):
+
+- **GM / Ableton Drum Rack** (default) — 17 roles on the General MIDI map.
+- **Vermona DRM1 MKIII** — the whole library re-voiced for the module's
+  8 analog channels on its factory MIDI notes (channel 10, no MIDI-learn
+  needed). See [docs/vermona-drm1.md](docs/vermona-drm1.md).
 
 ## Pattern library — UK bass styles
 

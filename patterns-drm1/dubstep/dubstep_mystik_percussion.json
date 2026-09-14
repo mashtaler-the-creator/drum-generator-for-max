@@ -1,0 +1,25 @@
+{
+  "id": "dubstep_mystik_percussion",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 140,
+  "tags": [
+    "percussive",
+    "meditative",
+    "layered"
+  ],
+  "_approach": "Attack Magazine 'Mystik Dubstep' percussion-layer construction: 16th shaker that pauses on beat 3 to let the snare/clap breathe, two-velocity tambourine, congas, late-bar offbeat kicks with a soft final kick, and one dub-delay rim per two bars. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [102,0,0,0,0,0,0,0,0,0,0,80,0,0,58,0,102,0,0,0,0,0,0,0,0,0,0,78,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0],
+    "hihat": [42,22,35,24,40,22,35,26,0,0,37,22,42,24,37,27,40,24,37,22,42,24,34,24,0,0,35,21,43,26,38,29],
+    "hh1Closed": [0,0,37,0,0,0,42,0,0,0,38,0,0,0,43,0,0,0,38,0,0,0,40,0,0,0,37,0,0,0,45,0],
+    "drum1": [0,0,0,0,0,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,0,0,38,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66]
+  },
+  "kit": "drm1"
+}

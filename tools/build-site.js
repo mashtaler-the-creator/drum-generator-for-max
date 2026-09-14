@@ -26,8 +26,8 @@ ${src}
 })();`;
 }
 
-function loadPatterns() {
-  const dir = path.join(ROOT, "patterns");
+function loadPatterns(dirName) {
+  const dir = path.join(ROOT, dirName);
   const out = [];
   for (const style of fs.readdirSync(dir)) {
     const styleDir = path.join(dir, style);
@@ -40,7 +40,18 @@ function loadPatterns() {
 }
 
 function main() {
-  const patterns = loadPatterns();
+  const kitsCfg = JSON.parse(read("js/kits.json"));
+  const kits = {};
+  let total = 0;
+  for (const [name, cfg] of Object.entries(kitsCfg)) {
+    const patterns = loadPatterns(cfg.patternsDir);
+    total += patterns.length;
+    kits[name] = {
+      label: cfg.label,
+      mapping: JSON.parse(read("js/" + cfg.mapping)),
+      patterns,
+    };
+  }
   const bundle = `window.STATIC_DATA = (function () {
   var __mods = {};
   function __require(p) { return __mods[p.replace(/^\\.\\//, "")]; }
@@ -53,8 +64,7 @@ ${wrapModule("midi-writer", read("js/midi-writer.js"))}
       PPQ: __mods["engine"].PPQ,
     },
     presets: ${read("js/presets.json").trim()},
-    mapping: ${read("js/mapping-default.json").trim()},
-    patterns: ${JSON.stringify(patterns)},
+    kits: ${JSON.stringify(kits)},
   };
 })();
 `;
@@ -72,7 +82,7 @@ ${wrapModule("midi-writer", read("js/midi-writer.js"))}
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "index.html"), html);
   const kb = (fs.statSync(path.join(outDir, "index.html")).size / 1024).toFixed(0);
-  console.log(`site/index.html written: ${patterns.length} patterns bundled, ${kb} KB`);
+  console.log(`site/index.html written: ${total} patterns across ${Object.keys(kits).length} kits, ${kb} KB`);
 }
 
 main();

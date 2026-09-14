@@ -1,0 +1,23 @@
+{
+  "id": "dubstep_dub_space_fill",
+  "style": "dubstep",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 140,
+  "tags": [
+    "fill",
+    "dub",
+    "sparse"
+  ],
+  "_approach": "Sparse dub-wise fill for the meditative end of the style: a decaying rim 'delay tail' after the beat-3 snare and a single low tom pickup — a fill made of space, not notes. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,64,0,48,0,32,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58],
+    "hihat": [0,0,29,0,0,0,30,0,0,0,0,0,0,0,0,0],
+    "openHat": [0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

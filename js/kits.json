@@ -1,0 +1,12 @@
+{
+  "gm": {
+    "label": "GM / Ableton Drum Rack",
+    "mapping": "mapping-default.json",
+    "patternsDir": "patterns"
+  },
+  "drm1": {
+    "label": "Vermona DRM1 MKIII",
+    "mapping": "mapping-drm1.json",
+    "patternsDir": "patterns-drm1"
+  }
+}

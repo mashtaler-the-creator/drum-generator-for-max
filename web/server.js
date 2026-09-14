@@ -33,10 +33,17 @@ function loadJson(rel) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8"));
 }
 
+function kitFromQuery(q) {
+  const kits = loadJson("js/kits.json");
+  const name = kits[q.get("kit")] ? q.get("kit") : "gm";
+  return Object.assign({ name }, kits[name]);
+}
+
 // Patterns and config are re-read on every request so edits to pattern
 // files show up on browser refresh without restarting the server.
 function renderFromQuery(q) {
-  const patterns = loadAllFromDisk(path.join(ROOT, "patterns"));
+  const kit = kitFromQuery(q);
+  const patterns = loadAllFromDisk(path.join(ROOT, kit.patternsDir));
   const pattern = findById(patterns, q.get("pattern"));
   if (!pattern) throw new Error(`Pattern "${q.get("pattern")}" not found`);
 
@@ -55,7 +62,7 @@ function renderFromQuery(q) {
   const humanize = clamp(parseInt(q.get("humanize"), 10), 0, 60);
   if (humanize !== undefined) overrides.humanizeTicks = humanize;
 
-  const mapping = loadJson("js/mapping-default.json");
+  const mapping = loadJson("js/" + kit.mapping);
   const state = makeState(pattern, mapping, overrides);
   const fillPatterns = findByStyle(patterns, pattern.style).filter(
     (p) => (p.tags || []).includes("fill") && p.id !== pattern.id
@@ -66,7 +73,7 @@ function renderFromQuery(q) {
   const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
 
   const events = render(state, bars, { fillPatterns, seed });
-  return { events, bars, bpm, patternId: pattern.id, presetName };
+  return { events, bars, bpm, patternId: pattern.id, presetName, kit: kit.name };
 }
 
 function json(res, code, obj) {
@@ -81,9 +88,13 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(fs.readFileSync(path.join(__dirname, "index.html")));
     } else if (url.pathname === "/api/patterns") {
-      const patterns = loadAllFromDisk(path.join(ROOT, "patterns"));
+      const kit = kitFromQuery(url.searchParams);
+      const kits = loadJson("js/kits.json");
+      const patterns = loadAllFromDisk(path.join(ROOT, kit.patternsDir));
       const presets = loadJson("js/presets.json");
       json(res, 200, {
+        kit: kit.name,
+        kits: Object.fromEntries(Object.entries(kits).map(([k, v]) => [k, v.label])),
         patterns: patterns.map((p) => ({
           id: p.id,
           style: p.style,
@@ -91,7 +102,7 @@ const server = http.createServer((req, res) => {
           fill: (p.tags || []).includes("fill"),
         })),
         presets: Object.keys(presets).filter((k) => k[0] !== "_"),
-        mapping: loadJson("js/mapping-default.json"),
+        mapping: loadJson("js/" + kit.mapping),
         ppq: PPQ,
       });
     } else if (url.pathname === "/api/render") {
@@ -99,7 +110,8 @@ const server = http.createServer((req, res) => {
     } else if (url.pathname === "/api/render.mid") {
       const r = renderFromQuery(url.searchParams);
       const midi = eventsToMidi(r.events, { bpm: r.bpm });
-      const name = `${r.patternId}_${r.bars}bars_${r.bpm}bpm.mid`;
+      const kitSuffix = r.kit === "gm" ? "" : `_${r.kit}`;
+      const name = `${r.patternId}_${r.bars}bars_${r.bpm}bpm${kitSuffix}.mid`;
       res.writeHead(200, {
         "Content-Type": "audio/midi",
         "Content-Disposition": `attachment; filename="${name}"`,

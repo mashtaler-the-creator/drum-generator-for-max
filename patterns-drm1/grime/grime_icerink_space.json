@@ -1,0 +1,21 @@
+{
+  "id": "grime_icerink_space",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 140,
+  "tags": [
+    "eski",
+    "minimal",
+    "space",
+    "icerink"
+  ],
+  "_approach": "'Ice Rink' radical minimalism: one kick, one snare, a couple of icy clave clicks per bar and nothing else — the audacity of emptiness that shocked pirate radio, leaving maximum room for the MC. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,58,0,0,0,0,0,0,43,0,0,0,0,0,0,0,0,58,0,0,0,0,52,0,0,0,36]
+  },
+  "kit": "drm1"
+}

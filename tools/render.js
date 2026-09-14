@@ -26,7 +26,14 @@ function arg(name, fallback) {
 
 function main() {
   const ROOT = path.join(__dirname, "..");
-  const patterns = loadAllFromDisk(path.join(ROOT, "patterns"));
+  const kits = JSON.parse(fs.readFileSync(path.join(ROOT, "js", "kits.json"), "utf8"));
+  const kitName = arg("kit", "gm");
+  const kit = kits[kitName];
+  if (!kit) {
+    console.error(`Unknown kit "${kitName}". Available: ${Object.keys(kits).join(", ")}`);
+    process.exit(1);
+  }
+  const patterns = loadAllFromDisk(path.join(ROOT, kit.patternsDir));
 
   const id = arg("pattern");
   if (!id) {
@@ -34,7 +41,7 @@ function main() {
     for (const p of patterns) {
       console.log(`  ${p.id}  [${p.style}]${(p.tags || []).includes("fill") ? " (fill)" : ""}`);
     }
-    console.log("\nUsage: node tools/render.js --pattern <id> [--preset tight|breaks|machine] [--bars 8] [--bpm 172] [--density 0.85] [--ghosts 0.08] [--humanize 6] [--hat-cycle 0.6] [--backbeat 8] [--vel-jitter 4] [--seed 42] [--out file.mid]");
+    console.log("\nUsage: node tools/render.js --pattern <id> [--kit gm|drm1] [--preset tight|breaks|machine] [--bars 8] [--bpm 172] [--density 0.85] [--ghosts 0.08] [--humanize 6] [--hat-cycle 0.6] [--backbeat 8] [--vel-jitter 4] [--seed 42] [--out file.mid]");
     process.exit(1);
   }
 
@@ -45,7 +52,7 @@ function main() {
   }
 
   const mapping = JSON.parse(
-    fs.readFileSync(path.join(ROOT, "js", "mapping-default.json"), "utf8")
+    fs.readFileSync(path.join(ROOT, "js", kit.mapping), "utf8")
   );
 
   const bars = parseInt(arg("bars", "8"), 10);

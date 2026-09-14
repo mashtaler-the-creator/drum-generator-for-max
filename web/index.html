@@ -55,6 +55,7 @@
 
   <div class="panel">
     <div class="controls">
+      <div><label>Kit</label><select id="kit"></select></div>
       <div><label>Pattern</label><select id="pattern"></select></div>
       <div><label>Feel preset</label><select id="preset"></select></div>
       <div><label>Bars</label><input type="number" id="bars" min="1" max="64" value="8"></div>
@@ -93,38 +94,48 @@ let seed = Math.floor(Math.random() * 1e9);
 // defines window.STATIC_DATA).
 const IS_STATIC = typeof window.STATIC_DATA !== "undefined";
 
-async function apiMeta() {
-  if (!IS_STATIC) return (await fetch("/api/patterns")).json();
+function staticKit(q) {
   const D = window.STATIC_DATA;
+  const name = D.kits[q.get("kit")] ? q.get("kit") : "gm";
+  return Object.assign({ name }, D.kits[name]);
+}
+
+async function apiMeta(q) {
+  if (!IS_STATIC) return (await fetch("/api/patterns?" + q)).json();
+  const D = window.STATIC_DATA;
+  const kit = staticKit(q);
   return {
-    patterns: D.patterns.map((p) => ({
+    kit: kit.name,
+    kits: Object.fromEntries(Object.entries(D.kits).map(([k, v]) => [k, v.label])),
+    patterns: kit.patterns.map((p) => ({
       id: p.id, style: p.style, bpm: p.bpm,
       fill: (p.tags || []).includes("fill"),
     })),
     presets: Object.keys(D.presets).filter((k) => k[0] !== "_"),
-    mapping: D.mapping,
+    mapping: kit.mapping,
     ppq: D.lib.PPQ,
   };
 }
 
 function staticRender(q) {
   const D = window.STATIC_DATA;
-  const pattern = D.patterns.find((p) => p.id === q.get("pattern"));
+  const kit = staticKit(q);
+  const pattern = kit.patterns.find((p) => p.id === q.get("pattern"));
   if (!pattern) throw new Error(`Pattern "${q.get("pattern")}" not found`);
   const presetName = q.get("preset") || "tight";
   const overrides = Object.assign({}, D.presets[presetName]);
   delete overrides._desc;
   if (q.get("density") !== null) overrides.density = parseFloat(q.get("density"));
   if (q.get("ghosts") !== null) overrides.ghostProbability = parseFloat(q.get("ghosts"));
-  const state = D.lib.engine.makeState(pattern, D.mapping, overrides);
-  const fillPatterns = D.patterns.filter(
+  const state = D.lib.engine.makeState(pattern, kit.mapping, overrides);
+  const fillPatterns = kit.patterns.filter(
     (p) => p.style === pattern.style && (p.tags || []).includes("fill") && p.id !== pattern.id
   );
   const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
   const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
   const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
   const events = D.lib.engine.render(state, bars, { fillPatterns, seed });
-  return { events, bars, bpm, patternId: pattern.id, presetName, ppq: D.lib.PPQ };
+  return { events, bars, bpm, patternId: pattern.id, presetName, kit: kit.name, ppq: D.lib.PPQ };
 }
 
 async function apiRender(q) {
@@ -139,13 +150,14 @@ function apiDownload(q) {
   const blob = new Blob([midi], { type: "audio/midi" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `${r.patternId}_${r.bars}bars_${r.bpm}bpm.mid`;
+  a.download = `${r.patternId}_${r.bars}bars_${r.bpm}bpm${r.kit === "gm" ? "" : "_" + r.kit}.mid`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 5000);
 }
 
 function params() {
   const p = new URLSearchParams({
+    kit: $("kit").value || "gm",
     pattern: $("pattern").value,
     preset: $("preset").value,
     bars: $("bars").value,
@@ -174,7 +186,7 @@ async function rerender() {
 }
 
 // ------------------------------------------------------------- grid drawing
-const ROLE_ORDER = ["crash","ride","openHat","hihat","shaker","tambourine","clave","cowbell","congaHigh","congaLow","perc","tomHigh","tomMid","tomLow","clap","rim","snare","kick"];
+const ROLE_ORDER = ["crash","ride","hh1Open","hh1Closed","openHat","hihat","shaker","tambourine","clave","cowbell","congaHigh","congaLow","perc","multi","tomHigh","tomMid","tomLow","drum1","drum2","clap","rim","snare","kick"];
 function drawGrid(playTick) {
   const cv = $("grid"), ctx = cv.getContext("2d");
   ctx.clearRect(0, 0, cv.width, cv.height);
@@ -260,6 +272,12 @@ const KIT = {
   congaLow:  (t, v) => tone(t, v * 0.7, 0.16, "sine", 220, 165),
   shaker:    (t, v) => noise(t, v * 0.35, 0.07, "bandpass", 5600, 1.2),
   clave:     (t, v) => tone(t, v * 0.5, 0.05, "sine", 1180),
+  // Vermona DRM1 kit voices (analog-flavoured approximations)
+  drum1:     (t, v) => tone(t, v * 0.9, 0.22, "sine", 175, 115),
+  drum2:     (t, v) => tone(t, v * 0.9, 0.28, "sine", 115, 72),
+  multi:     (t, v) => { tone(t, v * 0.6, 0.1, "square", 420, 90); noise(t, v * 0.25, 0.03, "bandpass", 2200, 3); },
+  hh1Closed: (t, v) => noise(t, v * 0.45, 0.06, "highpass", 6800),
+  hh1Open:   (t, v, d) => noise(t, v * 0.55, Math.min(Math.max(d, 0.15), 0.9), "highpass", 5800),
 };
 
 // ----------------------------------------------------------------- transport
@@ -328,9 +346,22 @@ $("ghosts").oninput = () => {
   $("ghostsVal").textContent = v < 0 ? "preset" : v.toFixed(2);
 };
 $("ghosts").onchange = rerender;
+$("kit").onchange = () => loadKit($("kit").value);
 
-(async function init() {
-  META = await apiMeta();
+// Load a kit's pattern library into the dropdown, keeping the current
+// pattern selected when it exists in the new kit (same ids in both).
+async function loadKit(kitName, keepPattern) {
+  const prev = keepPattern ? null : $("pattern").value;
+  META = await apiMeta(new URLSearchParams({ kit: kitName || "gm" }));
+  $("kit").replaceChildren();
+  for (const [k, label] of Object.entries(META.kits)) {
+    const o = document.createElement("option");
+    o.value = k;
+    o.textContent = label;
+    $("kit").appendChild(o);
+  }
+  $("kit").value = META.kit;
+  $("pattern").replaceChildren();
   const styles = [...new Set(META.patterns.map((p) => p.style))].sort();
   for (const style of styles) {
     const g = document.createElement("optgroup");
@@ -343,18 +374,23 @@ $("ghosts").onchange = rerender;
     }
     $("pattern").appendChild(g);
   }
-  const firstGroove = META.patterns.find((p) => !p.fill);
-  if (firstGroove) {
-    $("pattern").value = firstGroove.id;
-    if (firstGroove.bpm) $("bpm").value = firstGroove.bpm;
+  const pick = META.patterns.find((p) => p.id === prev) || META.patterns.find((p) => !p.fill);
+  if (pick) {
+    $("pattern").value = pick.id;
+    if (pick.bpm) $("bpm").value = pick.bpm;
   }
+  await rerender();
+}
+
+(async function init() {
+  META = await apiMeta(new URLSearchParams({ kit: "gm" }));
   for (const name of META.presets) {
     const o = document.createElement("option");
     o.value = o.textContent = name;
     $("preset").appendChild(o);
   }
   $("preset").value = META.presets.includes("breaks") ? "breaks" : META.presets[0];
-  await rerender();
+  await loadKit("gm", true);
 })();
 </script>
 </body>

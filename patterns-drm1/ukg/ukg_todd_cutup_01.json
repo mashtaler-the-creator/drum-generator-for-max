@@ -1,0 +1,23 @@
+{
+  "id": "ukg_todd_cutup_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 131,
+  "tags": [
+    "todd-edwards",
+    "cut-up",
+    "us-garage",
+    "tambourine"
+  ],
+  "_approach": "Todd Edwards-style US garage cut-up feel: four-to-the-floor kick that drops and displaces beat 3 in bar 2, rolling 16th tambourine with strong accent contour, and conga stabs syncopated like chopped vocal snippets. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [114,0,0,0,106,0,0,0,110,0,0,0,108,0,0,0,114,0,0,0,106,0,0,0,0,0,96,0,108,0,0,0],
+    "clap": [0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0],
+    "hh1Closed": [56,27,42,30,59,29,43,32,58,27,45,30,61,29,46,34,58,29,43,32,61,27,45,30,59,30,46,29,62,32,48,37],
+    "drum1": [0,0,0,53,0,0,59,0,0,55,0,0,0,0,63,0,0,0,55,0,0,57,0,0,0,0,61,0,0,59,0,65],
+    "snare": [0,0,0,0,0,0,0,26,0,0,0,0,0,0,30,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,32]
+  },
+  "kit": "drm1"
+}
