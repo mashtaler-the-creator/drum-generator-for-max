@@ -43,7 +43,21 @@
   .seed { color: var(--dim); font-size: 12.5px; margin-left: auto; }
   .seed b { color: var(--text); font-variant-numeric: tabular-nums; }
   #grid { width: 100%; height: auto; display: block; border-radius: 6px; background: var(--bg); }
-  .legend { color: var(--dim); font-size: 12px; margin-top: 8px; }
+  .gridnote { color: var(--dim); font-size: 12px; margin-top: 8px; }
+  details.legend { margin: 0 0 14px; font-size: 13px; color: var(--dim); }
+  details.legend summary {
+    cursor: pointer; color: var(--accent2); font-weight: 600;
+    list-style-position: inside; user-select: none;
+  }
+  details.legend dl {
+    margin: 10px 0 0; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 16px;
+    display: grid; grid-template-columns: max-content 1fr; gap: 8px 14px;
+  }
+  details.legend dt { font-weight: 600; color: var(--text); white-space: nowrap; }
+  details.legend dd { margin: 0; line-height: 1.45; }
+  details.legend b { color: var(--text); }
+  @media (max-width: 560px) { details.legend dl { grid-template-columns: 1fr; gap: 2px; } details.legend dd { margin-bottom: 8px; } }
   #status { color: var(--dim); font-size: 12.5px; min-height: 18px; margin-top: 6px; }
   .loopwrap { display: flex; align-items: center; gap: 6px; color: var(--dim); font-size: 13px; }
 </style>
@@ -51,7 +65,22 @@
 <body>
 <div class="app">
   <h1>DRUM <span>GENERATOR</span></h1>
-  <p class="sub">Generate a beat, listen with the built-in preview kit, download the .mid and drop it on your Drum Rack in Live.</p>
+  <p class="sub">Generate a drum part, audition it right here, download the .mid — for an Ableton Drum Rack or a Vermona DRM1 MKIII.</p>
+
+  <details class="legend">
+    <summary>How the controls work</summary>
+    <dl>
+      <dt>Kit</dt><dd>What the MIDI targets. <b>GM / Ableton Drum Rack</b> uses the General MIDI note map (kick C1, snare D1, hats F#1/A#1 — matches a Drum Rack built from C1 up). <b>Vermona DRM1 MKIII</b> re-voices every pattern onto the module's 8 channels using its factory notes on MIDI channel 10 — no MIDI-learn needed.</dd>
+      <dt>Pattern</dt><dd>The base groove, grouped by style. Entries marked <i>(fill)</i> are one-bar turnarounds — you can render them alone, but the engine also drops fills in automatically every few bars of any groove.</dd>
+      <dt>Feel preset</dt><dd>The humanization character. <b>machine</b> — grid-perfect, robotic on purpose. <b>tight</b> — subtle session-drummer timing and velocity drift. <b>breaks</b> — loose jungle/breakbeat feel: laid-back snare, pushed hats, active ghost notes.</dd>
+      <dt>Bars / BPM</dt><dd>Length and tempo of the rendered part. BPM auto-fills with the pattern's native tempo when you pick one — override it freely.</dd>
+      <dt>Density</dt><dd>Thins out the non-accent hits. 1.00 plays the full pattern; lower values keep the backbone (accents never drop) and remove decoration.</dd>
+      <dt>Ghosts</dt><dd>Probability of extra low-velocity ghost notes (snare/hat). <i>preset</i> keeps the feel preset's own amount; drag right for a busier, more human part.</dd>
+      <dt>🎲 New variation</dt><dd>Rolls a new random seed — a new take of the same part. The <b>seed</b> shown on the right identifies the take: the same seed with the same settings always reproduces it exactly.</dd>
+      <dt>▶ Play / loop</dt><dd>Audition with the built-in synthesized preview kit. It's an approximation for judging the groove — your real kit will sound better.</dd>
+      <dt>⬇ Download .mid</dt><dd>Downloads exactly the take you're hearing (the seed is baked in). Drag it onto your Drum Rack track in Live, or play it at the DRM1 from any DAW.</dd>
+    </dl>
+  </details>
 
   <div class="panel">
     <div class="controls">
@@ -77,7 +106,7 @@
 
   <div class="panel">
     <canvas id="grid" width="1660" height="440"></canvas>
-    <div class="legend">Row brightness = velocity. Preview sounds are synthesized approximations — your Drum Rack samples will sound better.</div>
+    <div class="gridnote">Row brightness = velocity. Preview sounds are synthesized approximations — the real kit will sound better.</div>
   </div>
 </div>
 
