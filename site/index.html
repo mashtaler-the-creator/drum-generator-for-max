@@ -44,6 +44,11 @@
   .seed b { color: var(--text); font-variant-numeric: tabular-nums; }
   #grid { width: 100%; height: auto; display: block; border-radius: 6px; background: var(--bg); }
   .gridnote { color: var(--dim); font-size: 12px; margin-top: 8px; }
+  .stats {
+    display: flex; gap: 22px; justify-content: center; flex-wrap: wrap;
+    color: var(--dim); font-size: 12.5px; margin: 6px 0 20px;
+  }
+  .stats b { color: var(--text); font-variant-numeric: tabular-nums; }
   details.legend { margin: 0 0 14px; font-size: 13px; color: var(--dim); }
   details.legend summary {
     cursor: pointer; color: var(--accent2); font-weight: 600;
@@ -88,7 +93,7 @@
       <div><label>Pattern</label><select id="pattern"></select></div>
       <div><label>Feel preset</label><select id="preset"></select></div>
       <div><label>Bars</label><input type="number" id="bars" min="1" max="64" value="8"></div>
-      <div><label>BPM</label><input type="number" id="bpm" min="40" max="300" value="172"></div>
+      <div><label>BPM <span class="rangeval" id="bpmHint" title="This pattern's style tempo — click to apply"></span></label><input type="number" id="bpm" min="40" max="300" value="172"></div>
       <div><label>Density <span class="rangeval" id="densityVal">1.00</span></label>
         <input type="range" id="density" min="0.3" max="1" step="0.05" value="1"></div>
       <div><label>Ghosts <span class="rangeval" id="ghostsVal">preset</span></label>
@@ -107,6 +112,12 @@
   <div class="panel">
     <canvas id="grid" width="1660" height="440"></canvas>
     <div class="gridnote">Row brightness = velocity. Preview sounds are synthesized approximations — the real kit will sound better.</div>
+  </div>
+
+  <div class="stats" id="stats" hidden>
+    <span><b id="statViews">–</b> views</span>
+    <span><b id="statPlays">–</b> plays</span>
+    <span><b id="statDownloads">–</b> downloads</span>
   </div>
 </div>
 
@@ -644,8 +655,14 @@ function params() {
   return p;
 }
 
+function setStatus(d, extra) {
+  $("status").textContent =
+    `${d.events.length} notes · ${d.bars} bars @ ${d.bpm} bpm · ${d.patternId} / ${d.presetName}${extra || ""}`;
+}
+
+// While playing, a change is queued and takes over when the current loop
+// ends (drum-machine style); when stopped it applies immediately.
 async function rerender() {
-  stop();
   let data;
   try {
     data = await apiRender(params());
@@ -654,20 +671,26 @@ async function rerender() {
     return;
   }
   if (data.error) { $("status").textContent = "Error: " + data.error; return; }
-  CUR = data;
   $("seedVal").textContent = seed;
-  $("status").textContent = `${data.events.length} notes · ${data.bars} bars @ ${data.bpm} bpm · ${data.patternId} / ${data.presetName}`;
-  drawGrid();
+  if (playing) {
+    NEXT = data;
+    setStatus(CUR, `  →  next: ${data.patternId} @ ${data.bpm}`);
+  } else {
+    CUR = data; NEXT = null;
+    setStatus(CUR);
+    drawGrid();
+  }
 }
 
 // ------------------------------------------------------------- grid drawing
 const ROLE_ORDER = ["crash","ride","hh1Open","hh1Closed","openHat","hihat","shaker","tambourine","clave","cowbell","congaHigh","congaLow","perc","multi","tomHigh","tomMid","tomLow","drum1","drum2","clap","rim","snare","kick"];
-function drawGrid(playTick) {
+function drawGrid(playTick, data) {
+  const D = data || CUR;
   const cv = $("grid"), ctx = cv.getContext("2d");
   ctx.clearRect(0, 0, cv.width, cv.height);
-  if (!CUR) return;
-  const roles = ROLE_ORDER.filter((r) => CUR.events.some((e) => e.role === r));
-  const totalTicks = CUR.bars * 4 * CUR.ppq;
+  if (!D) return;
+  const roles = ROLE_ORDER.filter((r) => D.events.some((e) => e.role === r));
+  const totalTicks = D.bars * 4 * D.ppq;
   const left = 90, w = cv.width - left - 10, rowH = cv.height / Math.max(roles.length, 1);
   ctx.font = "20px sans-serif";
   roles.forEach((r, i) => {
@@ -676,12 +699,12 @@ function drawGrid(playTick) {
     ctx.strokeStyle = "#2e323b"; ctx.beginPath();
     ctx.moveTo(left, (i + 1) * rowH); ctx.lineTo(cv.width - 10, (i + 1) * rowH); ctx.stroke();
   });
-  for (let bar = 0; bar <= CUR.bars; bar++) {
-    const x = left + (bar * 4 * CUR.ppq / totalTicks) * w;
+  for (let bar = 0; bar <= D.bars; bar++) {
+    const x = left + (bar * 4 * D.ppq / totalTicks) * w;
     ctx.strokeStyle = bar % 4 === 0 ? "#454b58" : "#2e323b";
     ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, cv.height); ctx.stroke();
   }
-  for (const e of CUR.events) {
+  for (const e of D.events) {
     const i = roles.indexOf(e.role);
     const x = left + (e.startTick / totalTicks) * w;
     const bw = Math.max(3, (e.durationTick / totalTicks) * w * 0.8);
@@ -757,7 +780,9 @@ const KIT = {
 
 // ----------------------------------------------------------------- transport
 let playing = false, startTime = 0, schedTick = 0, timer = null, raf = null;
-function tick2sec(t) { return t * 60 / (CUR.bpm * CUR.ppq); }
+let NEXT = null;                 // queued render, takes over at the loop boundary
+let PREV = null, prevStart = 0;  // what's still audible until startTime arrives
+function tick2sec(t, d) { d = d || CUR; return t * 60 / (d.bpm * d.ppq); }
 function scheduler() {
   const totalTicks = CUR.bars * 4 * CUR.ppq;
   const horizon = ac.currentTime + 0.12;
@@ -774,17 +799,31 @@ function scheduler() {
     }
     // advance to next tick that has any event (or bar end)
     const next = CUR.events.map((e) => e.startTick).filter((t) => t > tickInLoop).sort((a, b) => a - b)[0];
-    if (next !== undefined) schedTick = cycle * totalTicks + next;
-    else if ($("loop").checked) schedTick = (cycle + 1) * totalTicks;
+    if (next !== undefined) { schedTick = cycle * totalTicks + next; continue; }
+    const boundary = startTime + (cycle + 1) * loopLen;
+    if (NEXT) {
+      // Hand over exactly on the downbeat of the next cycle; the new
+      // pattern's own bars/BPM apply from there.
+      PREV = CUR; prevStart = startTime;
+      CUR = NEXT; NEXT = null;
+      startTime = boundary; schedTick = 0;
+      setStatus(CUR);
+      return scheduler();
+    }
+    if ($("loop").checked) schedTick = (cycle + 1) * totalTicks;
     else { setTimeout(stop, (when - ac.currentTime + 0.6) * 1000); return; }
   }
 }
 function animate() {
   if (!playing) return;
-  const totalTicks = CUR.bars * 4 * CUR.ppq;
-  const elapsed = ac.currentTime - startTime;
-  const tickNow = (elapsed / tick2sec(totalTicks)) % 1 * totalTicks;
-  drawGrid(elapsed < 0 ? 0 : tickNow);
+  // Keep showing the outgoing pattern until its last loop has actually played.
+  const showPrev = PREV && ac.currentTime < startTime;
+  if (!showPrev) PREV = null;
+  const d = showPrev ? PREV : CUR;
+  const totalTicks = d.bars * 4 * d.ppq;
+  const elapsed = ac.currentTime - (showPrev ? prevStart : startTime);
+  const tickNow = (elapsed / tick2sec(totalTicks, d)) % 1 * totalTicks;
+  drawGrid(elapsed < 0 ? 0 : tickNow, d);
   raf = requestAnimationFrame(animate);
 }
 function play() {
@@ -792,6 +831,7 @@ function play() {
   if (!ac) { ac = new AudioContext(); NOISE = noiseBuf(); }
   ac.resume();
   playing = true; schedTick = 0; startTime = ac.currentTime + 0.08;
+  NEXT = null; PREV = null;
   timer = setInterval(scheduler, 30); scheduler();
   raf = requestAnimationFrame(animate);
   $("btnPlay").textContent = "■ Stop";
@@ -800,20 +840,61 @@ function stop() {
   playing = false;
   clearInterval(timer); cancelAnimationFrame(raf);
   if (ac) { ac.close(); ac = null; }
+  // A change queued while playing becomes current once we stop.
+  if (NEXT) { CUR = NEXT; NEXT = null; }
+  PREV = null;
   $("btnPlay").textContent = "▶ Play";
-  if (CUR) drawGrid();
+  if (CUR) { setStatus(CUR); drawGrid(); }
+}
+
+// ------------------------------------------------------------------- counters
+// Public usage counters (views / plays / downloads) via the free Abacus
+// hit-counter API. Only the published static site counts — local dev and
+// the server version stay silent. Fire-and-forget: a blocked or dead
+// counter service must never break the page.
+const COUNT_NS = "drum-generator-for-max";
+const COUNTING = IS_STATIC && !/^(localhost|127\.0\.0\.1|)$/.test(location.hostname) && location.protocol !== "file:";
+const STAT_EL = { views: "statViews", plays: "statPlays", downloads: "statDownloads" };
+function showStat(key, value) {
+  if (typeof value !== "number") return;
+  $(STAT_EL[key]).textContent = value.toLocaleString("en-US");
+  $("stats").hidden = false;
+}
+async function counter(action, key) {
+  if (!COUNTING) return;
+  try {
+    const r = await fetch(`https://abacus.jasoncameron.dev/${action}/${COUNT_NS}/${key}`);
+    const j = await r.json();
+    showStat(key, j.error === "Key not found" ? 0 : j.value);
+  } catch (_) { /* counter unavailable — ignore */ }
+}
+function loadStats() {
+  counter("hit", "views");
+  counter("get", "plays");
+  counter("get", "downloads");
 }
 
 // -------------------------------------------------------------------- wiring
-$("btnPlay").onclick = () => (playing ? stop() : play());
+$("btnPlay").onclick = () => { if (playing) stop(); else { play(); counter("hit", "plays"); } };
 $("btnNew").onclick = () => { seed = Math.floor(Math.random() * 1e9); rerender(); };
-$("btnDownload").onclick = () => apiDownload(params());
+$("btnDownload").onclick = () => { apiDownload(params()); counter("hit", "downloads"); };
 for (const id of ["preset", "bars", "bpm"]) $(id).onchange = rerender;
-$("pattern").onchange = () => {
+// Switching patterns keeps the tempo you set; the style's own tempo is only
+// suggested next to the BPM label (click it to apply).
+function updateBpmHint() {
   const p = META.patterns.find((x) => x.id === $("pattern").value);
-  if (p && p.bpm) $("bpm").value = p.bpm;
-  rerender();
-};
+  const hint = $("bpmHint");
+  if (p && p.bpm && String(p.bpm) !== String($("bpm").value)) {
+    hint.textContent = `style · ${p.bpm}`;
+    hint.style.cursor = "pointer";
+    hint.onclick = () => { $("bpm").value = p.bpm; updateBpmHint(); rerender(); };
+  } else {
+    hint.textContent = "";
+    hint.onclick = null;
+  }
+}
+$("pattern").onchange = () => { updateBpmHint(); rerender(); };
+$("bpm").oninput = updateBpmHint;
 $("density").oninput = () => { $("densityVal").textContent = (+$("density").value).toFixed(2); };
 $("density").onchange = rerender;
 $("ghosts").oninput = () => {
@@ -852,8 +933,9 @@ async function loadKit(kitName, keepPattern) {
   const pick = META.patterns.find((p) => p.id === prev) || META.patterns.find((p) => !p.fill);
   if (pick) {
     $("pattern").value = pick.id;
-    if (pick.bpm) $("bpm").value = pick.bpm;
+    if (keepPattern && pick.bpm) $("bpm").value = pick.bpm; // first load only
   }
+  updateBpmHint();
   await rerender();
 }
 
@@ -866,6 +948,7 @@ async function loadKit(kitName, keepPattern) {
   }
   $("preset").value = META.presets.includes("breaks") ? "breaks" : META.presets[0];
   await loadKit("gm", true);
+  loadStats();
 })();
 </script>
 </body>
