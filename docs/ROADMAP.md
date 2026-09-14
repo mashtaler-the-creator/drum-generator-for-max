@@ -4,10 +4,14 @@ Feature plan for the drum generator, ordered by impact vs. effort. Each item
 has a definition of done so it can be picked up cold. Sizes are rough:
 **S** = a day or two, **M** = about a week, **L** = several weeks.
 
-Shipped so far (v0.7.x): style-researched library (210 patterns, 2 kits),
+Shipped so far (v0.8.0): style-researched library (210 patterns, 2 kits),
 humanization presets, seeded variations, web UI with in-browser preview and
 .mid download, Vermona DRM1 MKIII kit, seamless pattern switching, BPM hold
-with style hint, public usage counters, static site on GitHub Pages.
+with style hint, public usage counters, static site on GitHub Pages;
+**0.1 CI + auto-deploy, 0.2 folder build, 1.4 drag-to-DAW, 1.5 share links,
+1.6 OG card, 1.7 approach notes — done.** Open in phases 0–1: 0.3 analytics
+(needs an account), 1.1–1.3 sample kits / Live Pack / WAV export (need the
+sample-source decision).
 
 ---
 
