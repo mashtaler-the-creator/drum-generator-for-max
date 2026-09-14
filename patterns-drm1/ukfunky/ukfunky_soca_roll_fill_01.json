@@ -1,0 +1,22 @@
+{
+  "id": "ukfunky_soca_roll_fill_01",
+  "style": "ukfunky",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 130,
+  "tags": [
+    "fill",
+    "soca",
+    "snare-roll"
+  ],
+  "_approach": "Carnival snare-line fill: an accelerating soca-style snare roll that gathers density and velocity through the bar, congas doubling underneath and the kick dropping out for the last beat to make the return of the floor hit harder. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [95,0,0,0,90,0,0,0,92,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,92,0,58,64,70,0,78,84,96,100,108,114],
+    "drum1": [0,0,67,0,0,0,70,0,0,68,0,74,0,80,0,84],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,85,0,0,0],
+    "hh1Closed": [48,0,38,0,50,0,40,0,51,0,43,0,54,0,48,0]
+  },
+  "kit": "drm1"
+}

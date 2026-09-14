@@ -1,0 +1,22 @@
+{
+  "id": "fg_rain_crackle_bed",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.3,
+  "bpm": 130,
+  "tags": [
+    "texture-first",
+    "crackle-bed",
+    "ambient",
+    "burial"
+  ],
+  "_approach": "Texture-first construction: clave and shaker weave a broken ghost-velocity lattice standing in for Burial's rain-recording crackle, while the kick/snare skeleton stays minimal and lands differently in each bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [93,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,91,0,0,0,0,0,0,76,0,0,84,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,95,0,0,0,0,0,0,0,92,0,0,0],
+    "multi": [20,0,15,25,0,48,0,22,14,0,23,0,18,0,40,21,0,16,42,0,19,0,14,24,0,21,0,46,22,0,15,0],
+    "hihat": [0,26,0,0,30,0,23,0,0,28,0,22,0,25,0,0,27,0,0,24,0,22,0,0,29,0,21,0,0,26,0,23]
+  },
+  "kit": "drm1"
+}

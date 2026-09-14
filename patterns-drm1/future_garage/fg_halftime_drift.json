@@ -1,0 +1,23 @@
+{
+  "id": "fg_halftime_drift",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 138,
+  "tags": [
+    "halftime",
+    "atmospheric",
+    "crackle-bed",
+    "sorrow"
+  ],
+  "_approach": "Half-time drift in the Sorrow/Vacant vein: lone snare on beat three over a continuous low-velocity shaker bed imitating rain-crackle, kicks pushed to odd sixteenths for a slow undertow at fast tempo. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [95,0,0,0,0,0,78,0,0,0,0,0,0,72,0,0,93,0,0,0,0,0,80,0,0,0,74,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,0,0,0,30],
+    "hihat": [24,14,19,13,22,14,18,27,21,12,18,15,25,13,20,16,23,14,20,12,22,15,17,26,19,13,21,14,24,12,18,29],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,34,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

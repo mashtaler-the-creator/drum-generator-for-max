@@ -1,0 +1,23 @@
+{
+  "id": "bassline_niche_organ_bounce",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 140,
+  "tags": [
+    "niche",
+    "classic",
+    "organ",
+    "shuffled"
+  ],
+  "_approach": "Classic mid-2000s Niche-club 4x4: strict four-to-the-floor kick, big clap on 2 and 4, open hats on every offbeat with skippy syncopated closed hats between them, heavy swing - the T2 'Heartbroken' / DJ Q blueprint. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [114,0,0,0,106,0,0,0,110,0,0,0,107,0,0,0,115,0,0,0,105,0,0,0,111,0,0,0,108,0,0,0],
+    "clap": [0,0,0,0,118,0,0,0,0,0,0,0,115,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,121,0,0,0],
+    "openHat": [0,0,58,0,0,0,62,0,0,0,56,0,0,0,64,0,0,0,60,0,0,0,63,0,0,0,57,0,0,0,66,0],
+    "hihat": [0,0,0,74,0,46,0,80,0,0,0,72,0,44,0,82,30,42,24,76,34,0,26,81,32,40,24,73,35,0,27,86],
+    "multi": [0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0]
+  },
+  "kit": "drm1"
+}

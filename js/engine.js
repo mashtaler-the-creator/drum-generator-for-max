@@ -22,7 +22,8 @@ const DEFAULTS = {
   ghostProbability: 0.0,   // 0..1, chance to insert a ghost in a silent step
   ghostRoles: ["snare", "hihat", "rim"], // ghosts make musical sense only here
   ghostVelocityRange: [18, 45],
-  hatCycleRoles: ["hihat", "ride", "shaker"], // roles that get the hand-cycle shaping
+  hatCycleRoles: ["hihat", "ride", "shaker", "hh1Closed"], // roles that get the hand-cycle shaping
+  chokePairs: [["hihat", "openHat"], ["hh1Closed", "hh1Open"]], // closer role chokes the open one
   preSnareGhostBias: 3,    // multiply ghost odds on the step right before a snare hit
   fillEveryNBars: 4,       // consider a fill on every Nth bar
   fillProbability: 0.5,    // chance the fill actually happens on those bars
@@ -253,19 +254,22 @@ function limitHands(events, state) {
   }
 }
 
-// Closed hat chokes open hat: when a closed-hat hit starts, any still-ringing
-// openHat note gets its duration cut at that point.
+// Closed voice chokes its open pair (closed hat vs open hat, and on kits
+// with a second hat channel the same for that pair): when the closing hit
+// starts, any still-ringing open note gets its duration cut at that point.
 function applyChokes(events, state) {
-  const openNote = state.mapping.openHat;
-  const closedNote = state.mapping.hihat;
-  if (openNote === undefined || closedNote === undefined) return;
+  for (const [closedRole, openRole] of state.chokePairs || []) {
+    const openNote = state.mapping[openRole];
+    const closedNote = state.mapping[closedRole];
+    if (openNote === undefined || closedNote === undefined) continue;
 
-  const opens = events.filter((e) => e.note === openNote);
-  const closes = events.filter((e) => e.note === closedNote);
-  for (const o of opens) {
-    for (const c of closes) {
-      if (c.startTick > o.startTick && c.startTick < o.startTick + o.durationTick) {
-        o.durationTick = c.startTick - o.startTick;
+    const opens = events.filter((e) => e.note === openNote);
+    const closes = events.filter((e) => e.note === closedNote);
+    for (const o of opens) {
+      for (const c of closes) {
+        if (c.startTick > o.startTick && c.startTick < o.startTick + o.durationTick) {
+          o.durationTick = c.startTick - o.startTick;
+        }
       }
     }
   }

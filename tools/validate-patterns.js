@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Validates every pattern JSON under patterns/<style>/ against schema.json,
-// plus the style guides under styles/<style>.json.
+// Validates every kit's pattern tree (patterns/, patterns-drm1/, ...) against
+// schema.json, plus the style guides under styles/<style>.json.
 // Usage: node tools/validate-patterns.js
 
 const fs = require("fs");
@@ -10,7 +10,6 @@ const ROOT = path.join(__dirname, "..");
 const PATTERNS_DIR = path.join(ROOT, "patterns");
 const STYLES_DIR = path.join(ROOT, "styles");
 const SCHEMA_PATH = path.join(PATTERNS_DIR, "schema.json");
-const MAPPING_PATH = path.join(ROOT, "js", "mapping-default.json");
 
 // Section tags are mutually exclusive: the engine auto-injects "fill" patterns
 // into grooves, so a riser or breakdown must never also carry "fill".
@@ -26,7 +25,7 @@ function loadJSON(p) {
 
 // Minimal hand-rolled validator (no external deps). Covers the checks that
 // actually matter for this project: required fields, types, array length
-// consistency with bars * stepsPerBar, roles that exist in the mapping,
+// consistency with bars * stepsPerBar, roles that exist in the kit's mapping,
 // id/filename/folder agreement, section-tag exclusivity.
 function validatePattern(pattern, filePath, ctx, errors) {
   const rel = path.relative(ROOT, filePath);
@@ -42,6 +41,8 @@ function validatePattern(pattern, filePath, ctx, errors) {
     if (pattern.id !== path.basename(filePath, ".json")) {
       errors.push(`${rel}: id "${pattern.id}" does not match the filename`);
     }
+    // Ids are unique within a kit; the same id across kits is the same pattern
+    // re-voiced, which is exactly what tools/convert-to-drm1.js produces.
     if (ctx.seenIds.has(pattern.id)) {
       errors.push(`${rel}: duplicate id "${pattern.id}" (also in ${ctx.seenIds.get(pattern.id)})`);
     } else {
@@ -81,7 +82,7 @@ function validatePattern(pattern, filePath, ctx, errors) {
     let anyHit = false;
     for (const [role, arr] of Object.entries(tracks)) {
       if (!(role in ctx.mapping)) {
-        errors.push(`${rel}: unknown role "${role}" (not in js/mapping-default.json)`);
+        errors.push(`${rel}: unknown role "${role}" (not in js/${ctx.mappingFile})`);
       }
       if (!Array.isArray(arr)) {
         errors.push(`${rel}: track "${role}" is not an array`);
@@ -138,32 +139,47 @@ function validateGuide(guide, filePath, styleDirs, errors) {
 
 function main() {
   loadJSON(SCHEMA_PATH); // loaded for reference/future ajv swap
-  const mapping = loadJSON(MAPPING_PATH);
-  const styles = fs
-    .readdirSync(PATTERNS_DIR)
-    .filter((f) => fs.statSync(path.join(PATTERNS_DIR, f)).isDirectory());
-
   const errors = [];
-  const seenIds = new Map();
   let count = 0;
-  const perStyle = {};
 
-  for (const style of styles) {
-    const dir = path.join(PATTERNS_DIR, style);
-    const ctx = { styleDir: style, mapping, seenIds };
-    perStyle[style] = { groove: 0, fill: 0, riser: 0, breakdown: 0 };
-    for (const file of fs.readdirSync(dir)) {
-      if (!file.endsWith(".json")) continue;
-      count++;
-      const filePath = path.join(dir, file);
-      try {
-        const pattern = loadJSON(filePath);
-        validatePattern(pattern, filePath, ctx, errors);
-        const tags = Array.isArray(pattern.tags) ? pattern.tags : [];
-        const section = SECTION_TAGS.find((t) => tags.includes(t)) || "groove";
-        perStyle[style][section]++;
-      } catch (e) {
-        errors.push(`${path.relative(ROOT, filePath)}: JSON parse error - ${e.message}`);
+  // Every kit's pattern tree (patterns/, patterns-drm1/, ...) gets validated
+  // against that kit's own role mapping.
+  const kits = loadJSON(path.join(ROOT, "js", "kits.json"));
+  const seen = new Set();
+  const gmStyles = [];
+  const gmCounts = {};
+
+  for (const [kitName, kit] of Object.entries(kits)) {
+    const patternsRoot = path.join(ROOT, kit.patternsDir);
+    if (seen.has(patternsRoot) || !fs.existsSync(patternsRoot)) continue;
+    seen.add(patternsRoot);
+
+    const mapping = loadJSON(path.join(ROOT, "js", kit.mapping));
+    const seenIds = new Map(); // per kit: the same id in another kit is the same pattern re-voiced
+    const styles = fs
+      .readdirSync(patternsRoot)
+      .filter((f) => fs.statSync(path.join(patternsRoot, f)).isDirectory());
+
+    for (const style of styles) {
+      const dir = path.join(patternsRoot, style);
+      const ctx = { styleDir: style, mapping, mappingFile: kit.mapping, seenIds };
+      const counts = { groove: 0, fill: 0, riser: 0, breakdown: 0 };
+      for (const file of fs.readdirSync(dir)) {
+        if (!file.endsWith(".json")) continue;
+        count++;
+        const filePath = path.join(dir, file);
+        try {
+          const pattern = loadJSON(filePath);
+          validatePattern(pattern, filePath, ctx, errors);
+          const tags = Array.isArray(pattern.tags) ? pattern.tags : [];
+          counts[SECTION_TAGS.find((t) => tags.includes(t)) || "groove"]++;
+        } catch (e) {
+          errors.push(`${path.relative(ROOT, filePath)}: JSON parse error - ${e.message}`);
+        }
+      }
+      if (kitName === "gm") {
+        gmStyles.push(style);
+        gmCounts[style] = counts;
       }
     }
   }
@@ -175,19 +191,22 @@ function main() {
       guideCount++;
       const filePath = path.join(STYLES_DIR, file);
       try {
-        validateGuide(loadJSON(filePath), filePath, styles, errors);
+        validateGuide(loadJSON(filePath), filePath, gmStyles, errors);
       } catch (e) {
         errors.push(`${path.relative(ROOT, filePath)}: JSON parse error - ${e.message}`);
       }
     }
   }
 
-  console.log(`Checked ${count} pattern file(s) in ${styles.length} style(s), ${guideCount} style guide(s).`);
-  const width = Math.max(...styles.map((s) => s.length));
-  for (const style of styles.sort()) {
-    const c = perStyle[style];
+  console.log(
+    `Checked ${count} pattern file(s) across ${seen.size} kit(s), ${gmStyles.length} style(s), ${guideCount} style guide(s).`
+  );
+  const width = Math.max(...gmStyles.map((s) => s.length), 1);
+  for (const style of gmStyles.sort()) {
+    const c = gmCounts[style];
+    const noGuide = fs.existsSync(path.join(STYLES_DIR, style + ".json")) ? "" : "  (no style guide)";
     console.log(
-      `  ${style.padEnd(width)}  groove ${String(c.groove).padStart(2)}  fill ${String(c.fill).padStart(2)}  riser ${String(c.riser).padStart(2)}  breakdown ${String(c.breakdown).padStart(2)}${fs.existsSync(path.join(STYLES_DIR, style + ".json")) ? "" : "  (no style guide)"}`
+      `  ${style.padEnd(width)}  groove ${String(c.groove).padStart(2)}  riser ${String(c.riser).padStart(2)}  breakdown ${String(c.breakdown).padStart(2)}  fill ${String(c.fill).padStart(2)}${noGuide}`
     );
   }
   if (errors.length) {

@@ -1,0 +1,23 @@
+{
+  "id": "ukfunky_afro_log_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 126,
+  "tags": [
+    "groove",
+    "afro-swing",
+    "amapiano",
+    "sparse"
+  ],
+  "_approach": "The modern afro-swing/amapiano-tinged revival of the UK funky palette: sparse displaced kick, low toms playing a log-drum-style melodic answer, a soft rim instead of a big backbeat, heavy swing and a shaker doing most of the driving. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [96,0,0,0,0,0,0,88,0,0,90,0,0,0,0,0,96,0,0,0,0,0,0,88,0,0,90,0,0,0,86,0],
+    "drum2": [0,0,0,78,0,74,0,0,0,0,0,80,0,76,0,0,0,0,0,78,0,74,0,0,82,0,0,80,0,0,76,70],
+    "multi": [0,0,0,0,80,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,80,0,0,0,0,34,0,0,78,0,0,0],
+    "hihat": [53,24,44,27,56,26,35,40,53,24,42,29,58,26,37,43,53,25,44,28,56,26,36,41,54,25,43,30,59,28,38,45],
+    "openHat": [0,0,0,0,0,0,55,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,60,0]
+  },
+  "kit": "drm1"
+}

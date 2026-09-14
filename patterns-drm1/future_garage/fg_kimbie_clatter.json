@@ -1,0 +1,24 @@
+{
+  "id": "fg_kimbie_clatter",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.24,
+  "bpm": 132,
+  "tags": [
+    "found-sound",
+    "percussive",
+    "mount-kimbie",
+    "clatter"
+  ],
+  "_approach": "Mount Kimbie-style found-sound clatter: congas, rims and clave ticks carry the rhythm like tapped household objects while kick and snare stay sparse and lopsided between bars (Crooks & Lovers era). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [94,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,92,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,93,0,0,0],
+    "drum1": [0,0,65,0,0,0,0,68,0,57,0,0,0,0,52,0,0,0,61,0,0,0,0,63,0,0,55,0,0,0,59,0],
+    "drum2": [0,0,0,0,0,55,0,0,0,0,61,0,0,0,0,48,0,0,0,52,0,0,57,0,0,0,0,49,0,46,0,0],
+    "multi": [0,45,0,27,0,0,52,0,23,0,0,0,0,38,18,0,22,40,0,0,0,0,25,48,0,0,0,42,20,0,0,35],
+    "hihat": [0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

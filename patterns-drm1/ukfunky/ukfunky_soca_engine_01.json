@@ -1,0 +1,25 @@
+{
+  "id": "ukfunky_soca_engine_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 132,
+  "tags": [
+    "groove",
+    "soca",
+    "snare-rolls",
+    "carnival"
+  ],
+  "_approach": "Soca engine-room translation: the kick keeps a strict four-on-the-floor (soca never drops the floor) while the snare does the work - backbeats plus rolling double-sixteenth pickups into the beats, the carnival snare-line feel behind tracks like Roska's 'Squark'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [97,0,0,0,92,0,0,0,94,0,0,0,92,0,0,0,97,0,0,0,92,0,0,0,94,0,0,0,92,0,0,0],
+    "snare": [0,0,0,0,95,0,0,0,0,0,62,70,93,0,66,78,0,0,58,66,95,0,0,0,0,0,64,72,93,0,80,88],
+    "drum1": [0,0,67,0,0,0,72,0,0,0,68,0,0,0,74,0,0,0,68,0,0,0,74,0,0,0,70,0,0,76,0,65],
+    "drum2": [0,63,0,0,0,0,0,61,0,65,0,0,0,0,0,0,0,63,0,0,0,0,0,63,0,67,0,0,0,0,0,57],
+    "hh1Closed": [50,0,38,0,51,0,40,0,50,0,39,0,53,0,42,0,50,0,38,0,52,0,41,0,50,0,40,0,54,0,43,0],
+    "hihat": [0,0,52,0,0,0,50,0,0,0,53,0,0,0,0,0,0,0,52,0,0,0,50,0,0,0,54,0,0,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0]
+  },
+  "kit": "drm1"
+}

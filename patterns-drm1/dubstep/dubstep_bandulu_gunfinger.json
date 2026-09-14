@@ -1,0 +1,23 @@
+{
+  "id": "dubstep_bandulu_gunfinger",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 140,
+  "tags": [
+    "grime",
+    "bristol",
+    "gunfinger"
+  ],
+  "_approach": "Bristol Bandulu-school grime-140 (Kahn & Neek, Boofy): the grime 'Pulse X' kick cell (1, the a-of-1, & of 3) as structural backbone under the beat-3 snare+clap, with almost nothing else — sparse hats and a single swung clave blip. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [106,0,0,92,0,0,0,0,0,0,94,0,0,0,0,0,106,0,0,92,0,0,0,0,0,0,94,0,0,0,72,0],
+    "snare": [0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,40,0,0,0],
+    "hihat": [0,0,0,0,0,0,0,0,0,0,0,0,55,0,42,0,0,0,0,0,0,0,38,0,0,0,0,0,54,0,44,0],
+    "openHat": [0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

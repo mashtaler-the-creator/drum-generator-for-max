@@ -39,38 +39,79 @@
   button:hover { filter: brightness(1.15); }
   #btnNew { background: var(--accent); color: #1a1200; }
   #btnPlay { background: var(--accent2); color: #002233; min-width: 96px; }
-  #btnDownload { background: #3ddc84; color: #00220f; }
+  #btnDownload { background: #3ddc84; color: #00220f; cursor: grab; }
+  #btnDownload:active { cursor: grabbing; }
+  #btnShare.copied { background: var(--accent); color: #1a1200; }
+  .approach {
+    margin-top: 10px; padding: 10px 12px; border-left: 3px solid var(--accent);
+    background: var(--bg); border-radius: 6px; color: var(--dim); font-size: 13px; line-height: 1.45;
+  }
+  .approach b { color: var(--text); }
+  .approach a { color: var(--accent2); text-decoration: none; }
+  .approach a:hover { text-decoration: underline; }
+  .guide h2 { font-size: 15px; margin: 0 0 2px; }
+  .guide h2 small { color: var(--dim); font-weight: normal; font-size: 12px; margin-left: 8px; text-transform: uppercase; letter-spacing: .06em; }
+  .guide .meta { color: var(--accent); font-size: 12.5px; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+  .guide > p { margin: 0 0 12px; font-size: 13.5px; color: var(--dim); }
+  .guide .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .guide h3 { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+  .guide dl { margin: 0; font-size: 13px; line-height: 1.45; }
+  .guide dt { color: var(--accent2); display: inline; }
+  .guide dd { display: inline; margin: 0 0 0 4px; color: var(--dim); }
+  .guide dd::after { content: ""; display: block; margin-bottom: 5px; }
+  .guide ul { margin: 0; padding-left: 16px; font-size: 13px; color: var(--dim); line-height: 1.45; }
+  .guide a { color: var(--accent2); text-decoration: none; }
+  .guide a:hover { text-decoration: underline; }
   .seed { color: var(--dim); font-size: 12.5px; margin-left: auto; }
   .seed b { color: var(--text); font-variant-numeric: tabular-nums; }
   #grid { width: 100%; height: auto; display: block; border-radius: 6px; background: var(--bg); }
-  .legend { color: var(--dim); font-size: 12px; margin-top: 8px; }
+  .gridnote { color: var(--dim); font-size: 12px; margin-top: 8px; }
+  .stats {
+    display: flex; gap: 22px; justify-content: center; flex-wrap: wrap;
+    color: var(--dim); font-size: 12.5px; margin: 6px 0 20px;
+  }
+  .stats b { color: var(--text); font-variant-numeric: tabular-nums; }
+  details.legend { margin: 0 0 14px; font-size: 13px; color: var(--dim); }
+  details.legend summary {
+    cursor: pointer; color: var(--accent2); font-weight: 600;
+    list-style-position: inside; user-select: none;
+  }
+  details.legend dl {
+    margin: 10px 0 0; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 16px;
+    display: grid; grid-template-columns: max-content 1fr; gap: 8px 14px;
+  }
+  details.legend dt { font-weight: 600; color: var(--text); white-space: nowrap; }
+  details.legend dd { margin: 0; line-height: 1.45; }
+  details.legend b { color: var(--text); }
+  @media (max-width: 560px) { details.legend dl { grid-template-columns: 1fr; gap: 2px; } details.legend dd { margin-bottom: 8px; } }
   #status { color: var(--dim); font-size: 12.5px; min-height: 18px; margin-top: 6px; }
   .loopwrap { display: flex; align-items: center; gap: 6px; color: var(--dim); font-size: 13px; }
-  .approach { color: var(--dim); font-size: 12.5px; margin-top: 8px; font-style: italic; }
-  .guide h2 { font-size: 15px; margin: 0 0 2px; }
-  .guide h2 small { color: var(--dim); font-weight: normal; font-size: 12px; margin-left: 8px; }
-  .guide .meta { color: var(--accent); font-size: 12.5px; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
-  .guide p { margin: 0 0 10px; font-size: 13.5px; }
-  .guide .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-  .guide h3 { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
-  .guide dl { margin: 0; font-size: 13px; }
-  .guide dt { color: var(--accent2); display: inline; }
-  .guide dt::after { content: " — "; color: var(--dim); }
-  .guide dd { display: inline; margin: 0; }
-  .guide dd::after { content: ""; display: block; margin-bottom: 4px; }
-  .guide ul { margin: 0; padding-left: 18px; font-size: 13px; }
-  .guide li { margin-bottom: 3px; }
-  .guide a { color: var(--accent2); }
-  .guide .refs { color: var(--dim); }
 </style>
 </head>
 <body>
 <div class="app">
   <h1>DRUM <span>GENERATOR</span></h1>
-  <p class="sub">Generate a beat, listen with the built-in preview kit, download the .mid and drop it on your Drum Rack in Live.</p>
+  <p class="sub">Generate a drum part, audition it right here, download the .mid — for an Ableton Drum Rack or a Vermona DRM1 MKIII.</p>
+
+  <details class="legend">
+    <summary>How the controls work</summary>
+    <dl>
+      <dt>Kit</dt><dd>What the MIDI targets. <b>GM / Ableton Drum Rack</b> uses the General MIDI note map (kick C1, snare D1, hats F#1/A#1 — matches a Drum Rack built from C1 up). <b>Vermona DRM1 MKIII</b> re-voices every pattern onto the module's 8 channels using its factory notes on MIDI channel 10 — no MIDI-learn needed.</dd>
+      <dt>Pattern</dt><dd>The base groove, grouped by style. Entries marked <i>(fill)</i> are one-bar turnarounds — you can render them alone, but the engine also drops fills in automatically every few bars of any groove.</dd>
+      <dt>Feel preset</dt><dd>The humanization character. <b>machine</b> — grid-perfect, robotic on purpose. <b>tight</b> — subtle session-drummer timing and velocity drift. <b>breaks</b> — loose jungle/breakbeat feel: laid-back snare, pushed hats, active ghost notes.</dd>
+      <dt>Bars / BPM</dt><dd>Length and tempo of the rendered part. BPM auto-fills with the pattern's native tempo when you pick one — override it freely.</dd>
+      <dt>Density</dt><dd>Thins out the non-accent hits. 1.00 plays the full pattern; lower values keep the backbone (accents never drop) and remove decoration.</dd>
+      <dt>Ghosts</dt><dd>Probability of extra low-velocity ghost notes (snare/hat). <i>preset</i> keeps the feel preset's own amount; drag right for a busier, more human part.</dd>
+      <dt>🎲 New variation</dt><dd>Rolls a new random seed — a new take of the same part. The <b>seed</b> shown on the right identifies the take: the same seed with the same settings always reproduces it exactly.</dd>
+      <dt>▶ Play / loop</dt><dd>Audition with the built-in synthesized preview kit. It's an approximation for judging the groove — your real kit will sound better.</dd>
+      <dt>⬇ Download .mid</dt><dd>Downloads exactly the take you're hearing (the seed is baked in). Drag it onto your Drum Rack track in Live, or play it at the DRM1 from any DAW.</dd>
+    </dl>
+  </details>
 
   <div class="panel">
     <div class="controls">
+      <div><label>Kit</label><select id="kit"></select></div>
       <div><label>Style</label><select id="style"></select></div>
       <div><label>Section</label><select id="section">
         <option value="all">all</option>
@@ -82,7 +123,7 @@
       <div><label>Pattern</label><select id="pattern"></select></div>
       <div><label>Feel preset</label><select id="preset"></select></div>
       <div><label>Bars</label><input type="number" id="bars" min="1" max="64" value="8"></div>
-      <div><label>BPM</label><input type="number" id="bpm" min="40" max="300" value="172"></div>
+      <div><label>BPM <span class="rangeval" id="bpmHint" title="This pattern's style tempo — click to apply"></span></label><input type="number" id="bpm" min="40" max="300" value="172"></div>
       <div><label>Density <span class="rangeval" id="densityVal">1.00</span></label>
         <input type="range" id="density" min="0.3" max="1" step="0.05" value="1"></div>
       <div><label>Ghosts <span class="rangeval" id="ghostsVal">preset</span></label>
@@ -91,20 +132,27 @@
     <div class="buttons">
       <button id="btnNew">🎲 New variation</button>
       <button id="btnPlay">▶ Play</button>
-      <button id="btnDownload">⬇ Download .mid</button>
+      <button id="btnDownload" draggable="true" title="Click to download, or drag me straight onto a track in your DAW">⬇ Download .mid</button>
+      <button id="btnShare" title="Copy a link that reproduces exactly this take">🔗 Copy link</button>
       <span class="loopwrap"><input type="checkbox" id="loop" checked> loop</span>
       <span class="seed">seed <b id="seedVal">–</b></span>
     </div>
     <div id="status"></div>
-    <div id="approach" class="approach"></div>
+    <div id="approach" class="approach" hidden></div>
   </div>
 
   <div class="panel">
     <canvas id="grid" width="1660" height="440"></canvas>
-    <div class="legend">Row brightness = velocity. Preview sounds are synthesized approximations — your Drum Rack samples will sound better.</div>
+    <div class="gridnote">Row brightness = velocity. Preview sounds are synthesized approximations — the real kit will sound better.</div>
   </div>
 
   <div class="panel guide" id="guide" hidden></div>
+
+  <div class="stats" id="stats" hidden>
+    <span><b id="statViews">–</b> views</span>
+    <span><b id="statPlays">–</b> plays</span>
+    <span><b id="statDownloads">–</b> downloads</span>
+  </div>
 </div>
 
 <script>
@@ -120,39 +168,51 @@ let seed = Math.floor(Math.random() * 1e9);
 // defines window.STATIC_DATA).
 const IS_STATIC = typeof window.STATIC_DATA !== "undefined";
 
-async function apiMeta() {
-  if (!IS_STATIC) return (await fetch("/api/patterns")).json();
+function staticKit(q) {
   const D = window.STATIC_DATA;
+  const name = D.kits[q.get("kit")] ? q.get("kit") : "gm";
+  return Object.assign({ name }, D.kits[name]);
+}
+
+async function apiMeta(q) {
+  if (!IS_STATIC) return (await fetch("/api/patterns?" + q)).json();
+  const D = window.STATIC_DATA;
+  const kit = staticKit(q);
   return {
-    patterns: D.patterns.map((p) => ({
+    kit: kit.name,
+    kits: Object.fromEntries(Object.entries(D.kits).map(([k, v]) => [k, v.label])),
+    patterns: kit.patterns.map((p) => ({
       id: p.id, style: p.style, bpm: p.bpm,
       section: D.lib.sectionOf(p),
       fill: D.lib.sectionOf(p) === "fill",
-      approach: p._approach,
+      approach: p._approach || "",
     })),
     styles: D.styles || {},
     presets: Object.keys(D.presets).filter((k) => k[0] !== "_"),
-    mapping: D.mapping,
+    mapping: kit.mapping,
     ppq: D.lib.PPQ,
   };
 }
 
 function staticRender(q) {
   const D = window.STATIC_DATA;
-  const pattern = D.patterns.find((p) => p.id === q.get("pattern"));
+  const kit = staticKit(q);
+  const pattern = kit.patterns.find((p) => p.id === q.get("pattern"));
   if (!pattern) throw new Error(`Pattern "${q.get("pattern")}" not found`);
   const presetName = q.get("preset") || "tight";
   const overrides = Object.assign({}, D.presets[presetName]);
   delete overrides._desc;
   if (q.get("density") !== null) overrides.density = parseFloat(q.get("density"));
   if (q.get("ghosts") !== null) overrides.ghostProbability = parseFloat(q.get("ghosts"));
-  const state = D.lib.engine.makeState(pattern, D.mapping, overrides);
-  const fillPatterns = D.lib.sectionOf(pattern) === "groove" ? D.lib.fillsFor(D.patterns, pattern) : [];
+  const state = D.lib.engine.makeState(pattern, kit.mapping, overrides);
+  // Risers and breakdowns are self-contained sections: no fills injected.
+  const fillPatterns =
+    D.lib.sectionOf(pattern) === "groove" ? D.lib.fillsFor(kit.patterns, pattern) : [];
   const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
   const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
   const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
   const events = D.lib.engine.render(state, bars, { fillPatterns, seed });
-  return { events, bars, bpm, patternId: pattern.id, presetName, ppq: D.lib.PPQ };
+  return { events, bars, bpm, patternId: pattern.id, presetName, kit: kit.name, ppq: D.lib.PPQ };
 }
 
 async function apiRender(q) {
@@ -167,13 +227,14 @@ function apiDownload(q) {
   const blob = new Blob([midi], { type: "audio/midi" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `${r.patternId}_${r.bars}bars_${r.bpm}bpm.mid`;
+  a.download = `${r.patternId}_${r.bars}bars_${r.bpm}bpm${r.kit === "gm" ? "" : "_" + r.kit}.mid`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 5000);
 }
 
 function params() {
   const p = new URLSearchParams({
+    kit: $("kit").value || "gm",
     pattern: $("pattern").value,
     preset: $("preset").value,
     bars: $("bars").value,
@@ -185,8 +246,14 @@ function params() {
   return p;
 }
 
+function setStatus(d, extra) {
+  $("status").textContent =
+    `${d.events.length} notes · ${d.bars} bars @ ${d.bpm} bpm · ${d.patternId} / ${d.presetName}${extra || ""}`;
+}
+
+// While playing, a change is queued and takes over when the current loop
+// ends (drum-machine style); when stopped it applies immediately.
 async function rerender() {
-  stop();
   let data;
   try {
     data = await apiRender(params());
@@ -195,73 +262,75 @@ async function rerender() {
     return;
   }
   if (data.error) { $("status").textContent = "Error: " + data.error; return; }
-  CUR = data;
   $("seedVal").textContent = seed;
-  $("status").textContent = `${data.events.length} notes · ${data.bars} bars @ ${data.bpm} bpm · ${data.patternId} / ${data.presetName}`;
-  const meta = META.patterns.find((p) => p.id === data.patternId);
-  $("approach").textContent = meta && meta.approach ? meta.approach : "";
-  drawGrid();
-}
-
-// ---------------------------------------------------------------- style guide
-const DOC_BASE = "https://github.com/mashtaler-the-creator/drum-generator-for-max/blob/main/";
-const SECTION_LABEL = { groove: "", fill: " (fill)", riser: " (riser)", breakdown: " (breakdown)" };
-
-function esc(s) {
-  return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-}
-
-function renderGuide(style) {
-  const g = META.styles && META.styles[style];
-  const el = $("guide");
-  if (!g) { el.hidden = true; el.innerHTML = ""; return; }
-  const bpm = Array.isArray(g.bpm) ? `${g.bpm[0]}–${g.bpm[1]} BPM` : "";
-  const sounds = Object.entries(g.sounds || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
-  const machines = (g.machines || []).map((m) => `<li>${esc(m)}</li>`).join("");
-  const refs = (g.references || []).map((r) => `<li>${esc(r)}</li>`).join("");
-  el.innerHTML = `
-    <h2>${esc(g.name || style)}<small>${esc(g.family || "")}</small></h2>
-    <div class="meta">${esc(bpm)}${g.swing ? " · swing " + esc(g.swing) : ""}</div>
-    <p>${esc(g.summary || "")}</p>
-    <div class="cols">
-      <div><h3>Sound selection</h3><dl>${sounds}</dl></div>
-      <div><h3>Drum machines &amp; sources</h3><ul>${machines}</ul></div>
-      ${refs ? `<div><h3>Reference tracks</h3><ul class="refs">${refs}</ul></div>` : ""}
-    </div>
-    ${g.doc ? `<p style="margin-top:10px"><a href="${esc(DOC_BASE + g.doc)}" target="_blank" rel="noopener">Full style guide: ${esc(g.doc)} →</a></p>` : ""}`;
-  el.hidden = false;
-}
-
-// Rebuild the pattern list for the current style + section filter. Keeps the
-// current pattern selected if it still fits the filter.
-function fillPatternSelect() {
-  const style = $("style").value, section = $("section").value;
-  const prev = $("pattern").value;
-  const list = META.patterns.filter((p) => p.style === style && (section === "all" || p.section === section));
-  $("pattern").innerHTML = "";
-  for (const p of list) {
-    const o = document.createElement("option");
-    o.value = p.id;
-    o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${SECTION_LABEL[p.section] || ""}`;
-    $("pattern").appendChild(o);
+  if (playing) {
+    NEXT = data;
+    setStatus(CUR, `  →  next: ${data.patternId} @ ${data.bpm}`);
+  } else {
+    CUR = data; NEXT = null;
+    setStatus(CUR);
+    drawGrid();
   }
-  const keep = list.find((p) => p.id === prev) || list.find((p) => p.section === "groove") || list[0];
-  if (keep) {
-    $("pattern").value = keep.id;
-    if (keep.bpm) $("bpm").value = keep.bpm;
-  }
-  renderGuide(style);
-  return !!keep;
+  showApproach();
+  writeHash();
+}
+
+// The pattern's research note + a link to its style doc.
+function showApproach() {
+  const p = META && META.patterns.find((x) => x.id === $("pattern").value);
+  const box = $("approach");
+  if (!p || !p.approach) { box.hidden = true; return; }
+  const repo = (window.SITE && window.SITE.repo) || "https://github.com/mashtaler-the-creator/drum-generator-for-max";
+  box.replaceChildren();
+  const b = document.createElement("b"); b.textContent = "Approach: ";
+  const t = document.createTextNode(p.approach.replace(/\s*\(re-voiced for the Vermona DRM1 MKIII's 8 channels\)$/, "") + " ");
+  const a = document.createElement("a");
+  a.href = `${repo}/blob/main/docs/styles/${p.style}.md`;
+  a.target = "_blank"; a.rel = "noopener";
+  a.textContent = `${p.style} style notes ↗`;
+  box.append(b, t, a);
+  box.hidden = false;
+}
+
+// ------------------------------------------------------------ share links
+// The whole take lives in the URL hash so any link reproduces it exactly.
+const HASH_KEYS = ["kit", "pattern", "preset", "bars", "bpm", "density", "ghosts", "seed"];
+function writeHash() {
+  const p = params();
+  const compact = HASH_KEYS.map((k) => p.get(k) ?? "").join("|");
+  const enc = btoa(unescape(encodeURIComponent(compact))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  history.replaceState(null, "", "#" + enc);
+}
+function readHash() {
+  if (!location.hash || location.hash.length < 2) return null;
+  try {
+    const b64 = location.hash.slice(1).replace(/-/g, "+").replace(/_/g, "/");
+    const parts = decodeURIComponent(escape(atob(b64))).split("|");
+    if (parts.length !== HASH_KEYS.length) return null;
+    const o = {};
+    HASH_KEYS.forEach((k, i) => { if (parts[i] !== "") o[k] = parts[i]; });
+    return o;
+  } catch (_) { return null; }
+}
+async function copyLink() {
+  writeHash();
+  try {
+    await navigator.clipboard.writeText(location.href);
+    const b = $("btnShare"); b.classList.add("copied"); b.textContent = "✓ Link copied";
+    setTimeout(() => { b.classList.remove("copied"); b.textContent = "🔗 Copy link"; }, 1600);
+    counter("hit", "shares");
+  } catch (_) { prompt("Copy this link:", location.href); }
 }
 
 // ------------------------------------------------------------- grid drawing
-const ROLE_ORDER = ["crash","ride","openHat","hihat","shaker","tambourine","clave","cowbell","congaHigh","congaLow","perc","tomHigh","tomMid","tomLow","clap","rim","snare","kick"];
-function drawGrid(playTick) {
+const ROLE_ORDER = ["crash","ride","hh1Open","hh1Closed","openHat","hihat","shaker","tambourine","clave","cowbell","congaHigh","congaLow","perc","multi","tomHigh","tomMid","tomLow","drum1","drum2","clap","rim","snare","kick"];
+function drawGrid(playTick, data) {
+  const D = data || CUR;
   const cv = $("grid"), ctx = cv.getContext("2d");
   ctx.clearRect(0, 0, cv.width, cv.height);
-  if (!CUR) return;
-  const roles = ROLE_ORDER.filter((r) => CUR.events.some((e) => e.role === r));
-  const totalTicks = CUR.bars * 4 * CUR.ppq;
+  if (!D) return;
+  const roles = ROLE_ORDER.filter((r) => D.events.some((e) => e.role === r));
+  const totalTicks = D.bars * 4 * D.ppq;
   const left = 90, w = cv.width - left - 10, rowH = cv.height / Math.max(roles.length, 1);
   ctx.font = "20px sans-serif";
   roles.forEach((r, i) => {
@@ -270,12 +339,12 @@ function drawGrid(playTick) {
     ctx.strokeStyle = "#2e323b"; ctx.beginPath();
     ctx.moveTo(left, (i + 1) * rowH); ctx.lineTo(cv.width - 10, (i + 1) * rowH); ctx.stroke();
   });
-  for (let bar = 0; bar <= CUR.bars; bar++) {
-    const x = left + (bar * 4 * CUR.ppq / totalTicks) * w;
+  for (let bar = 0; bar <= D.bars; bar++) {
+    const x = left + (bar * 4 * D.ppq / totalTicks) * w;
     ctx.strokeStyle = bar % 4 === 0 ? "#454b58" : "#2e323b";
     ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, cv.height); ctx.stroke();
   }
-  for (const e of CUR.events) {
+  for (const e of D.events) {
     const i = roles.indexOf(e.role);
     const x = left + (e.startTick / totalTicks) * w;
     const bw = Math.max(3, (e.durationTick / totalTicks) * w * 0.8);
@@ -341,11 +410,19 @@ const KIT = {
   congaLow:  (t, v) => tone(t, v * 0.7, 0.16, "sine", 220, 165),
   shaker:    (t, v) => noise(t, v * 0.35, 0.07, "bandpass", 5600, 1.2),
   clave:     (t, v) => tone(t, v * 0.5, 0.05, "sine", 1180),
+  // Vermona DRM1 kit voices (analog-flavoured approximations)
+  drum1:     (t, v) => tone(t, v * 0.9, 0.22, "sine", 175, 115),
+  drum2:     (t, v) => tone(t, v * 0.9, 0.28, "sine", 115, 72),
+  multi:     (t, v) => { tone(t, v * 0.6, 0.1, "square", 420, 90); noise(t, v * 0.25, 0.03, "bandpass", 2200, 3); },
+  hh1Closed: (t, v) => noise(t, v * 0.45, 0.06, "highpass", 6800),
+  hh1Open:   (t, v, d) => noise(t, v * 0.55, Math.min(Math.max(d, 0.15), 0.9), "highpass", 5800),
 };
 
 // ----------------------------------------------------------------- transport
 let playing = false, startTime = 0, schedTick = 0, timer = null, raf = null;
-function tick2sec(t) { return t * 60 / (CUR.bpm * CUR.ppq); }
+let NEXT = null;                 // queued render, takes over at the loop boundary
+let PREV = null, prevStart = 0;  // what's still audible until startTime arrives
+function tick2sec(t, d) { d = d || CUR; return t * 60 / (d.bpm * d.ppq); }
 function scheduler() {
   const totalTicks = CUR.bars * 4 * CUR.ppq;
   const horizon = ac.currentTime + 0.12;
@@ -362,17 +439,31 @@ function scheduler() {
     }
     // advance to next tick that has any event (or bar end)
     const next = CUR.events.map((e) => e.startTick).filter((t) => t > tickInLoop).sort((a, b) => a - b)[0];
-    if (next !== undefined) schedTick = cycle * totalTicks + next;
-    else if ($("loop").checked) schedTick = (cycle + 1) * totalTicks;
+    if (next !== undefined) { schedTick = cycle * totalTicks + next; continue; }
+    const boundary = startTime + (cycle + 1) * loopLen;
+    if (NEXT) {
+      // Hand over exactly on the downbeat of the next cycle; the new
+      // pattern's own bars/BPM apply from there.
+      PREV = CUR; prevStart = startTime;
+      CUR = NEXT; NEXT = null;
+      startTime = boundary; schedTick = 0;
+      setStatus(CUR);
+      return scheduler();
+    }
+    if ($("loop").checked) schedTick = (cycle + 1) * totalTicks;
     else { setTimeout(stop, (when - ac.currentTime + 0.6) * 1000); return; }
   }
 }
 function animate() {
   if (!playing) return;
-  const totalTicks = CUR.bars * 4 * CUR.ppq;
-  const elapsed = ac.currentTime - startTime;
-  const tickNow = (elapsed / tick2sec(totalTicks)) % 1 * totalTicks;
-  drawGrid(elapsed < 0 ? 0 : tickNow);
+  // Keep showing the outgoing pattern until its last loop has actually played.
+  const showPrev = PREV && ac.currentTime < startTime;
+  if (!showPrev) PREV = null;
+  const d = showPrev ? PREV : CUR;
+  const totalTicks = d.bars * 4 * d.ppq;
+  const elapsed = ac.currentTime - (showPrev ? prevStart : startTime);
+  const tickNow = (elapsed / tick2sec(totalTicks, d)) % 1 * totalTicks;
+  drawGrid(elapsed < 0 ? 0 : tickNow, d);
   raf = requestAnimationFrame(animate);
 }
 function play() {
@@ -380,6 +471,7 @@ function play() {
   if (!ac) { ac = new AudioContext(); NOISE = noiseBuf(); }
   ac.resume();
   playing = true; schedTick = 0; startTime = ac.currentTime + 0.08;
+  NEXT = null; PREV = null;
   timer = setInterval(scheduler, 30); scheduler();
   raf = requestAnimationFrame(animate);
   $("btnPlay").textContent = "■ Stop";
@@ -388,25 +480,84 @@ function stop() {
   playing = false;
   clearInterval(timer); cancelAnimationFrame(raf);
   if (ac) { ac.close(); ac = null; }
+  // A change queued while playing becomes current once we stop.
+  if (NEXT) { CUR = NEXT; NEXT = null; }
+  PREV = null;
   $("btnPlay").textContent = "▶ Play";
-  if (CUR) drawGrid();
+  if (CUR) { setStatus(CUR); drawGrid(); }
+}
+
+// ------------------------------------------------------------------- counters
+// Public usage counters (views / plays / downloads) via the free Abacus
+// hit-counter API. Only the published static site counts — local dev and
+// the server version stay silent. Fire-and-forget: a blocked or dead
+// counter service must never break the page.
+const COUNT_NS = "drum-generator-for-max";
+const COUNTING = IS_STATIC && !/^(localhost|127\.0\.0\.1|)$/.test(location.hostname) && location.protocol !== "file:";
+const STAT_EL = { views: "statViews", plays: "statPlays", downloads: "statDownloads" };
+function showStat(key, value) {
+  if (typeof value !== "number" || !STAT_EL[key]) return;
+  $(STAT_EL[key]).textContent = value.toLocaleString("en-US");
+  $("stats").hidden = false;
+}
+async function counter(action, key) {
+  if (!COUNTING) return;
+  try {
+    const r = await fetch(`https://abacus.jasoncameron.dev/${action}/${COUNT_NS}/${key}`);
+    const j = await r.json();
+    showStat(key, j.error === "Key not found" ? 0 : j.value);
+  } catch (_) { /* counter unavailable — ignore */ }
+}
+function loadStats() {
+  counter("hit", "views");
+  counter("get", "plays");
+  counter("get", "downloads");
 }
 
 // -------------------------------------------------------------------- wiring
-$("btnPlay").onclick = () => (playing ? stop() : play());
+$("btnPlay").onclick = () => { if (playing) stop(); else { play(); counter("hit", "plays"); } };
 $("btnNew").onclick = () => { seed = Math.floor(Math.random() * 1e9); rerender(); };
-$("btnDownload").onclick = () => apiDownload(params());
+$("btnDownload").onclick = () => { apiDownload(params()); counter("hit", "downloads"); };
+$("btnShare").onclick = copyLink;
+
+// Drag the Download button straight onto a DAW track (Chromium's
+// DownloadURL drag type). Other browsers just keep the click behaviour.
+$("btnDownload").addEventListener("dragstart", (ev) => {
+  try {
+    const q = params();
+    let name, url;
+    if (IS_STATIC) {
+      const r = staticRender(q);
+      const midi = window.STATIC_DATA.lib.eventsToMidi(r.events, { bpm: r.bpm });
+      let bin = ""; for (const byte of midi) bin += String.fromCharCode(byte);
+      name = `${r.patternId}_${r.bars}bars_${r.bpm}bpm${r.kit === "gm" ? "" : "_" + r.kit}.mid`;
+      url = "data:audio/midi;base64," + btoa(bin);
+    } else {
+      name = `${q.get("pattern")}_${q.get("bars")}bars_${q.get("bpm")}bpm.mid`;
+      url = location.origin + "/api/render.mid?" + q;
+    }
+    ev.dataTransfer.setData("DownloadURL", `audio/midi:${name}:${url}`);
+    ev.dataTransfer.effectAllowed = "copy";
+    counter("hit", "downloads");
+  } catch (_) { /* fall back to click */ }
+});
 for (const id of ["preset", "bars", "bpm"]) $(id).onchange = rerender;
-$("pattern").onchange = () => {
+// Switching patterns keeps the tempo you set; the style's own tempo is only
+// suggested next to the BPM label (click it to apply).
+function updateBpmHint() {
   const p = META.patterns.find((x) => x.id === $("pattern").value);
-  if (p && p.bpm) $("bpm").value = p.bpm;
-  rerender();
-};
-$("style").onchange = () => { if (fillPatternSelect()) rerender(); };
-$("section").onchange = () => {
-  if (fillPatternSelect()) rerender();
-  else { $("status").textContent = "No patterns of this section in this style yet."; $("approach").textContent = ""; }
-};
+  const hint = $("bpmHint");
+  if (p && p.bpm && String(p.bpm) !== String($("bpm").value)) {
+    hint.textContent = `style · ${p.bpm}`;
+    hint.style.cursor = "pointer";
+    hint.onclick = () => { $("bpm").value = p.bpm; updateBpmHint(); rerender(); };
+  } else {
+    hint.textContent = "";
+    hint.onclick = null;
+  }
+}
+$("pattern").onchange = () => { updateBpmHint(); rerender(); };
+$("bpm").oninput = updateBpmHint;
 $("density").oninput = () => { $("densityVal").textContent = (+$("density").value).toFixed(2); };
 $("density").onchange = rerender;
 $("ghosts").oninput = () => {
@@ -414,14 +565,114 @@ $("ghosts").oninput = () => {
   $("ghostsVal").textContent = v < 0 ? "preset" : v.toFixed(2);
 };
 $("ghosts").onchange = rerender;
+$("kit").onchange = () => loadKit($("kit").value);
+$("style").onchange = () => { if (fillPatternSelect()) { updateBpmHint(); rerender(); } };
+$("section").onchange = () => {
+  if (fillPatternSelect()) { updateBpmHint(); rerender(); }
+  else { $("status").textContent = `No ${$("section").value}s in this style yet.`; $("approach").hidden = true; }
+};
 
-(async function init() {
-  META = await apiMeta();
+// ------------------------------------------------------------- style guide
+// styles/<style>.json: tempo range, drum DNA, which sounds and drum machines
+// the style is built on. Rendered under the grid for the selected style.
+const SECTION_LABEL = { groove: "", fill: " (fill)", riser: " (riser)", breakdown: " (breakdown)" };
+
+function renderGuide(style) {
+  const g = (META.styles || {})[style];
+  const el = $("guide");
+  if (!g) { el.hidden = true; el.replaceChildren(); return; }
+  const repo = (window.SITE && window.SITE.repo) || "https://github.com/mashtaler-the-creator/drum-generator-for-max";
+  const node = (tag, text, cls) => {
+    const n = document.createElement(tag);
+    if (text !== undefined) n.textContent = text;
+    if (cls) n.className = cls;
+    return n;
+  };
+
+  const h2 = node("h2", g.name || style);
+  if (g.family) h2.appendChild(node("small", g.family));
+  const bpm = Array.isArray(g.bpm) ? `${g.bpm[0]}–${g.bpm[1]} BPM` : "";
+  const meta = node("div", bpm + (g.swing ? ` · swing ${g.swing}` : ""), "meta");
+
+  const cols = node("div", undefined, "cols");
+  if (g.sounds && Object.keys(g.sounds).length) {
+    const box = node("div");
+    box.appendChild(node("h3", "Sound selection"));
+    const dl = node("dl");
+    for (const [role, text] of Object.entries(g.sounds)) {
+      dl.appendChild(node("dt", role + ":"));
+      dl.appendChild(node("dd", text));
+    }
+    box.appendChild(dl);
+    cols.appendChild(box);
+  }
+  for (const [title, items] of [["Drum machines & sources", g.machines], ["Reference tracks", g.references]]) {
+    if (!items || !items.length) continue;
+    const box = node("div");
+    box.appendChild(node("h3", title));
+    const ul = node("ul");
+    for (const it of items) ul.appendChild(node("li", it));
+    box.appendChild(ul);
+    cols.appendChild(box);
+  }
+
+  el.replaceChildren(h2, meta, node("p", g.summary || ""), cols);
+  if (g.doc) {
+    const p = node("p");
+    p.style.marginTop = "12px";
+    const a = node("a", `Full style guide: ${g.doc} ↗`);
+    a.href = `${repo}/blob/main/${g.doc}`;
+    a.target = "_blank"; a.rel = "noopener";
+    p.appendChild(a);
+    el.appendChild(p);
+  }
+  el.hidden = false;
+}
+
+// Rebuild the pattern dropdown for the selected style + section. Returns the
+// picked pattern id, or null when the filter leaves nothing.
+function fillPatternSelect(wantPattern) {
+  const style = $("style").value, section = $("section").value;
+  const prev = wantPattern || $("pattern").value;
+  const list = META.patterns.filter(
+    (p) => p.style === style && (section === "all" || p.section === section)
+  );
+  $("pattern").replaceChildren();
+  for (const p of list) {
+    const o = document.createElement("option");
+    o.value = p.id;
+    o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${SECTION_LABEL[p.section] || ""}`;
+    $("pattern").appendChild(o);
+  }
+  renderGuide(style);
+  const pick = list.find((p) => p.id === prev) || list.find((p) => p.section === "groove") || list[0];
+  if (!pick) return null;
+  $("pattern").value = pick.id;
+  return pick;
+}
+
+// Load a kit's pattern library into the dropdowns, keeping the current
+// pattern selected when it exists in the new kit (same ids in both).
+async function loadKit(kitName, keepPattern, wantPattern) {
+  const prev = wantPattern || (keepPattern ? null : $("pattern").value);
+  META = await apiMeta(new URLSearchParams({ kit: kitName || "gm" }));
   META.styles = META.styles || {};
-  // Styles grouped by family (from the style guides); unknown ones go last.
+  $("kit").replaceChildren();
+  for (const [k, label] of Object.entries(META.kits)) {
+    const o = document.createElement("option");
+    o.value = k;
+    o.textContent = label;
+    $("kit").appendChild(o);
+  }
+  $("kit").value = META.kit;
+
+  // Styles grouped by family (from the style guides); ungrouped ones last.
   const styles = [...new Set(META.patterns.map((p) => p.style))].sort();
   const familyOf = (s) => (META.styles[s] && META.styles[s].family) || "other";
-  const families = [...new Set(styles.map(familyOf))].sort();
+  const families = [...new Set(styles.map(familyOf))].sort((a, b) =>
+    a === "other" ? 1 : b === "other" ? -1 : a.localeCompare(b)
+  );
+  $("style").replaceChildren();
   for (const fam of families) {
     const g = document.createElement("optgroup");
     g.label = fam;
@@ -430,20 +681,49 @@ $("ghosts").onchange = rerender;
       o.value = s;
       const guide = META.styles[s];
       const bpm = guide && Array.isArray(guide.bpm) ? ` · ${guide.bpm[0]}–${guide.bpm[1]}` : "";
-      o.textContent = `${guide && guide.name ? guide.name : s}${bpm}`;
+      o.textContent = `${(guide && guide.name) || s}${bpm}`;
       g.appendChild(o);
     }
     $("style").appendChild(g);
   }
-  $("style").value = styles.includes("jungle") ? "jungle" : styles[0];
-  fillPatternSelect();
+
+  // A wanted pattern (shared link) decides the style; otherwise keep the
+  // current style when the new kit still has it.
+  const wanted = prev && META.patterns.find((p) => p.id === prev);
+  const style = (wanted && wanted.style) || ($("style").value && styles.includes($("style").value) ? $("style").value : styles[0]);
+  $("style").value = style;
+  if (wanted && $("section").value !== "all" && wanted.section !== $("section").value) {
+    $("section").value = "all";
+  }
+
+  const pick = fillPatternSelect(prev);
+  if (pick && keepPattern && pick.bpm) $("bpm").value = pick.bpm; // first load only
+  updateBpmHint();
+  await rerender();
+}
+
+(async function init() {
+  const shared = readHash();
+  META = await apiMeta(new URLSearchParams({ kit: (shared && shared.kit) || "gm" }));
   for (const name of META.presets) {
     const o = document.createElement("option");
     o.value = o.textContent = name;
     $("preset").appendChild(o);
   }
   $("preset").value = META.presets.includes("breaks") ? "breaks" : META.presets[0];
-  await rerender();
+  if (shared) {
+    // Restore a shared take: controls first, then the kit load renders it.
+    if (shared.preset) $("preset").value = shared.preset;
+    if (shared.bars) $("bars").value = shared.bars;
+    if (shared.density) { $("density").value = shared.density; $("densityVal").textContent = (+shared.density).toFixed(2); }
+    if (shared.ghosts) { $("ghosts").value = shared.ghosts; $("ghostsVal").textContent = (+shared.ghosts).toFixed(2); }
+    if (shared.seed) seed = parseInt(shared.seed, 10);
+    await loadKit(shared.kit || "gm", true, shared.pattern);
+    if (shared.bpm) { $("bpm").value = shared.bpm; updateBpmHint(); await rerender(); }
+  } else {
+    await loadKit("gm", true);
+  }
+  loadStats();
 })();
 </script>
 </body>

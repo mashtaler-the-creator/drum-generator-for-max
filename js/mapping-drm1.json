@@ -1,0 +1,13 @@
+{
+  "_comment": "Vermona DRM1 MKIII factory MIDI map (manual p.19, MIDI channel 10). Closed hats sit exactly 2 semitones below open — the hardware rule. Roles: drum1/drum2 are the two analog DRUM channels (tom/conga duty), multi is the MULTI channel (rim/cowbell/zap duty), hh1* is the HI HAT 1 channel used as cymbal/ride voice.",
+  "kick": 36,
+  "snare": 40,
+  "clap": 39,
+  "hihat": 42,
+  "openHat": 44,
+  "hh1Closed": 49,
+  "hh1Open": 51,
+  "drum1": 48,
+  "drum2": 41,
+  "multi": 58
+}

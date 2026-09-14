@@ -1,0 +1,23 @@
+{
+  "id": "grime_offkilter_perc",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 140,
+  "tags": [
+    "instrumental",
+    "percussion",
+    "offkilter",
+    "modern"
+  ],
+  "_approach": "Modern instrumental grime (Slackk, Spooky Bizzle school): angular conga and cowbell stabs on awkward 16ths replace hats entirely, over a stable halftime kick/snare spine — percussion as melody. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "tracks": {
+    "kick": [108,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,88,0,0,0,0,74,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,86,0,0],
+    "drum2": [0,0,0,67,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,67,0,0,0,0,0,0,0,0,0,0,55,0],
+    "drum1": [0,0,0,0,0,0,72,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,49],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,48,0,0,0,0,0,0,0,0,42,0,36,0,0]
+  },
+  "kit": "drm1"
+}

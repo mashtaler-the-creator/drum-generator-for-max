@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>OG card source</title>
+<!-- Rendered to web/assets/og.png by tools/render-og.sh (headless Chrome, 1200x630). -->
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; background: #16181d; color: #e8eaf0;
+    font: 400 28px/1.4 -apple-system, "Helvetica Neue", Arial, sans-serif; overflow: hidden; }
+  .wrap { position: relative; width: 1200px; height: 630px; padding: 70px 80px; box-sizing: border-box; }
+  h1 { margin: 0; font-size: 84px; letter-spacing: .04em; font-weight: 800; }
+  h1 span { color: #ffb43a; }
+  p { margin: 22px 0 0; color: #9aa1ae; font-size: 30px; max-width: 900px; }
+  .tags { position: absolute; left: 80px; bottom: 150px; display: flex; gap: 12px; flex-wrap: wrap; max-width: 1040px; }
+  .tags span { border: 2px solid #2e323b; border-radius: 999px; padding: 6px 18px; font-size: 24px; color: #9aa1ae; }
+  .grid { position: absolute; left: 80px; right: 80px; bottom: 60px; height: 64px; display: grid;
+    grid-template-columns: repeat(32, 1fr); gap: 6px; align-items: end; }
+  .grid i { display: block; border-radius: 3px; background: #4fc3f7; opacity: .55; }
+  .grid i.k { background: #ffb43a; opacity: .95; }
+</style></head>
+<body><div class="wrap">
+  <h1>DRUM <span>GENERATOR</span></h1>
+  <p>Style-researched drum parts for UK bass music — audition in the browser, download the .mid, drop it on your Drum Rack or play it into your Vermona.</p>
+  <div class="tags"><span>UK garage</span><span>speed garage</span><span>bassline</span><span>grime</span><span>dubstep</span><span>future garage</span><span>UK funky</span><span>bass house</span><span>jungle</span><span>drum &amp; bass</span></div>
+  <div class="grid" id="g"></div>
+  <script>
+    // a fake 2-step grid so the card reads as "drums" at a glance
+    const k=[1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0, 1,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0];
+    const s=[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0, 0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0];
+    const h=[.6,.3,.5,.3,.6,.3,.5,.45,.6,.3,.5,.3,.6,.3,.5,.45,.6,.3,.5,.3,.6,.3,.5,.45,.6,.3,.5,.3,.6,.3,.5,.45];
+    const g=document.getElementById('g');
+    for(let i=0;i<32;i++){const e=document.createElement('i');
+      const v=k[i]?1:s[i]?.85:h[i];e.style.height=(v*100)+'%';if(k[i]||s[i])e.className='k';g.appendChild(e);}
+  </script>
+</div></body></html>

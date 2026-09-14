@@ -26,8 +26,8 @@ ${src}
 })();`;
 }
 
-function loadPatterns() {
-  const dir = path.join(ROOT, "patterns");
+function loadPatterns(dirName) {
+  const dir = path.join(ROOT, dirName);
   const out = [];
   for (const style of fs.readdirSync(dir)) {
     const styleDir = path.join(dir, style);
@@ -51,8 +51,19 @@ function loadStyleGuides() {
 }
 
 function main() {
-  const patterns = loadPatterns();
+  const kitsCfg = JSON.parse(read("js/kits.json"));
   const styles = loadStyleGuides();
+  const kits = {};
+  let total = 0;
+  for (const [name, cfg] of Object.entries(kitsCfg)) {
+    const patterns = loadPatterns(cfg.patternsDir);
+    total += patterns.length;
+    kits[name] = {
+      label: cfg.label,
+      mapping: JSON.parse(read("js/" + cfg.mapping)),
+      patterns,
+    };
+  }
   const bundle = `window.STATIC_DATA = (function () {
   var __mods = {};
   function __require(p) { return __mods[p.replace(/^\\.\\//, "")]; }
@@ -68,9 +79,8 @@ ${wrapModule("pattern-loader", read("js/pattern-loader.js"))}
       PPQ: __mods["engine"].PPQ,
     },
     presets: ${read("js/presets.json").trim()},
-    mapping: ${read("js/mapping-default.json").trim()},
     styles: ${JSON.stringify(styles)},
-    patterns: ${JSON.stringify(patterns)},
+    kits: ${JSON.stringify(kits)},
   };
 })();
 `;
@@ -84,11 +94,43 @@ ${wrapModule("pattern-loader", read("js/pattern-loader.js"))}
     "<script>\n" + bundle + "</script>\n" +
     html.slice(at);
 
+  // Social/SEO meta with absolute URLs (only meaningful on the public site).
+  const site = JSON.parse(read("web/site.json"));
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+  const meta = `
+<meta name="description" content="${esc(site.description)}">
+<link rel="canonical" href="${site.url}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${site.url}">
+<meta property="og:title" content="${esc(site.title)}">
+<meta property="og:description" content="${esc(site.description)}">
+<meta property="og:image" content="${site.url}assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(site.title)}">
+<meta name="twitter:description" content="${esc(site.description)}">
+<meta name="twitter:image" content="${site.url}assets/og.png">
+<script>window.SITE = ${JSON.stringify(site)};</script>`;
+  html = html.replace(/(<meta name="viewport"[^>]*>)/, "$1" + meta);
+
+  // site/ is a folder now: index.html + copied web/assets/** (OG image,
+  // later sample kits and the Live Pack).
   const outDir = path.join(ROOT, "site");
+  fs.rmSync(outDir, { recursive: true, force: true });
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "index.html"), html);
+  const assetsSrc = path.join(ROOT, "web", "assets");
+  let assetCount = 0;
+  if (fs.existsSync(assetsSrc)) {
+    fs.cpSync(assetsSrc, path.join(outDir, "assets"), { recursive: true });
+    assetCount = fs.readdirSync(assetsSrc).length;
+  }
+  fs.writeFileSync(path.join(outDir, ".nojekyll"), "");
   const kb = (fs.statSync(path.join(outDir, "index.html")).size / 1024).toFixed(0);
-  console.log(`site/index.html written: ${patterns.length} patterns, ${Object.keys(styles).length} style guides bundled, ${kb} KB`);
+  console.log(
+    `site/: index.html ${kb} KB (${total} patterns, ${Object.keys(kits).length} kits, ${Object.keys(styles).length} style guides) + ${assetCount} asset(s)`
+  );
 }
 
 main();
