@@ -1,0 +1,25 @@
+{
+  "id": "hard_techno_thumping_snare_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["thumping","snare-syncopated","linndrum","808"],
+  "_approach": "Thumping analogue techno: LinnDrum kick 4/4, an 808 snare pitched down an octave playing an offbeat 16th pattern instead of 2 and 4, tuned 909 rims marking the start of each bar, a bitcrushed tom on the final offbeat and a ride mirroring the kick. Reference: Attack's 'Thumping Techno' dissection, Perc, Setaoc Mass.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/thumping-techno/"],
+  "tracks": {
+    "kick":      [120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0,
+                  120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0],
+    "snare":     [0,0,0,84, 0,0,90,0, 0,0,0,84, 0,0,90,0,
+                  0,0,0,84, 0,0,90,0, 0,0,84,0, 0,90,0,72],
+    "rim":       [100,56,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  100,0,56,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,70,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,70,50],
+    "ride":      [74,0,0,0, 74,0,0,0, 74,0,0,0, 74,0,0,0,
+                  74,0,0,0, 74,0,0,0, 74,0,0,0, 74,0,0,0],
+    "hihat":     [64,40,56,44, 62,40,58,46, 64,40,56,44, 62,42,60,50,
+                  64,40,56,44, 62,40,58,46, 64,42,58,46, 66,44,62,54]
+  }
+}

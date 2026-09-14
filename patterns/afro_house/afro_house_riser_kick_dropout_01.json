@@ -1,0 +1,28 @@
+{
+  "id": "afro_house_riser_kick_dropout_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["riser","kick-dropout","rim-ramp","build"],
+  "_approach": "Kick-dropout build: bar 1 is the full groove, bar 2 removes the kick and lets a 16th rim ramp, a rising low conga and stepped claps take over, then everything stops for two 16ths and a single stacked hit (rim + clap + conga) lands on the last step. The 'silence gap' before an Afro-tech drop.",
+  "_sources": [
+    "https://www.melodigging.com/genre/afro-tech",
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick":    [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "shaker":  [81,50,62,54, 79,53,60,52, 82,51,63,50, 80,54,61,53,
+               78,52,64,51, 81,50,62,54, 79,53,60,52, 0,0,0,0],
+    "rim":     [0,0,0,0, 74,0,0,0, 0,0,0,0, 70,0,0,0,
+               53,50,62,64, 71,73,78,80, 88,85,99,96, 106,0,0,119],
+    "perc":    [0,0,0,0, 62,0,0,0, 0,0,0,0, 63,0,0,0,
+               0,0,0,0, 82,0,0,0, 0,0,0,0, 104,0,0,117],
+    "congaLow":[0,0,0,0, 0,0,0,0, 73,0,0,0, 0,0,0,0,
+               64,0,63,0, 72,0,71,0, 78,0,82,0, 87,0,0,120],
+    "openHat": [0,0,64,0, 0,0,62,0, 0,0,60,0, 0,0,63,0,
+               0,0,61,0, 0,0,64,0, 0,0,62,0, 0,0,0,0]
+  }
+}

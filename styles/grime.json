@@ -1,0 +1,32 @@
+{
+  "style": "grime",
+  "name": "Grime",
+  "family": "uk-bass",
+  "bpm": [138, 142],
+  "swing": "0–0.12",
+  "summary": "140 BPM that feels like 70: a halftime snare on beat 3, sparse angular kicks on awkward off-16ths, and negative space for the MC. Snares are dry gunshot cracks or rimshot clicks that may leave the backbeat entirely; hats are minimal or absent and off-kilter clicks, claves and congas fill in instead, all programmed straight on the grid.",
+  "sounds": {
+    "kick": "Dry, mid-heavy drum-machine or FL-stock kick with a hard click; short and often distorted, never a long 808 boom (the square-wave bass owns the sub).",
+    "snare": "Dry 'gunshot' snare or heavily compressed clap, sometimes a literal gunshot FX layered under the snare; rimshot/side-stick clicks as the second voice.",
+    "hats": "Sparse 8th-note closed hats or none; when present they are thin, bright and unswung, with sudden fast-hat bursts then silence.",
+    "percussion": "Icy clicks, claves, woodblocks, congas and cowbells placed on awkward 16ths; ringtone/PlayStation-era lo-fi hits.",
+    "cymbals": "Crash only for 8-bar markers and reloads; no ride."
+  },
+  "machines": [
+    "FruityLoops stock kit (140 default tempo) and PlayStation Music 2000 samples — the actual tools of the eski era (get elsewhere)",
+    "Roland TR-808 — snare, clap, cowbell and clave layers (owned)",
+    "Casio RZ-1 / SK-1 — 8-bit crunchy sampled hits for lo-fi texture (owned)",
+    "Boss DR-660 / DR-202 — dry 90s hip-hop kits close to the FL presets (owned)",
+    "Korg Triton / Trinity drum presets — the mid-2000s grime staple (get elsewhere)",
+    "Sound-effects libraries — gunshots, glass, metallic clicks (get elsewhere)"
+  ],
+  "references": [
+    "Wiley — Eskimo (2002)",
+    "Wiley — Ice Rink (2003)",
+    "Danny Weed — Creeper (2002)",
+    "Dizzee Rascal — I Luv U (2003)",
+    "Ruff Sqwad — Functions on the Low (2004)",
+    "Rebound X — Rhythm 'n' Gash (2004)"
+  ],
+  "doc": "docs/styles/grime.md"
+}

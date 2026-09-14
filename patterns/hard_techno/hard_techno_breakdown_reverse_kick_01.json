@@ -1,0 +1,29 @@
+{
+  "id": "hard_techno_breakdown_reverse_kick_01",
+  "style": "hard_techno",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["breakdown","reverse-kick","swell","4-bar"],
+  "_approach": "Four bars with the kick removed and Sara Landry's 'reverse groove kick' idea carried by low-tom swells on the 16th before beats (use a reversed kick sample on tomLow): swells double each two bars, a soft clap on 2 and 4 grows, and a quiet ride enters in bars 3-4 so the section rises into the build.",
+  "_sources": ["https://www.ableton.com/en/blog/sara-landry-high-end-hard-techno/","https://www.edmprod.com/what-is-hard-techno/"],
+  "tracks": {
+    "tomLow":    [0,0,0,52, 0,0,0,0, 0,0,0,52, 0,0,0,0,
+                  0,0,0,56, 0,0,0,50, 0,0,0,56, 0,0,0,54,
+                  0,0,0,60, 0,0,0,54, 0,0,0,60, 0,0,0,58,
+                  0,0,0,64, 0,0,0,60, 0,0,0,66, 0,0,0,72],
+    "perc":      [0,0,0,0, 60,0,0,0, 0,0,0,0, 60,0,0,0,
+                  0,0,0,0, 60,0,0,0, 0,0,0,0, 62,0,0,0,
+                  0,0,0,0, 70,0,0,0, 0,0,0,0, 70,0,0,0,
+                  0,0,0,0, 74,0,0,0, 0,0,0,0, 78,0,0,0],
+    "hihat":     [0,70,0,70, 0,70,0,70, 0,70,0,70, 0,70,0,70,
+                  0,70,0,70, 0,70,0,70, 0,70,0,70, 0,70,0,70,
+                  0,72,0,72, 0,72,0,72, 0,72,0,72, 0,72,0,72,
+                  0,74,0,74, 0,74,0,74, 0,74,0,74, 0,74,0,74],
+    "ride":      [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  64,0,44,0, 64,0,44,0, 64,0,44,0, 64,0,44,0,
+                  66,0,46,0, 66,0,46,0, 66,0,46,0, 66,0,46,0]
+  }
+}

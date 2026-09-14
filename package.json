@@ -8,7 +8,8 @@
     "validate": "node tools/validate-patterns.js",
     "render": "node tools/render.js",
     "start": "node web/server.js",
-    "build:site": "node tools/build-site.js"
+    "build:site": "node tools/build-site.js",
+    "style-table": "node tools/style-table.js"
   },
   "license": "UNLICENSED",
   "private": true

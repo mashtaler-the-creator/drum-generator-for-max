@@ -1,0 +1,28 @@
+{
+  "id": "afro_house_bell_clave_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 123,
+  "tags": ["cowbell","clave","timeline"],
+  "_approach": "Bell-timeline construction: a son clave pattern on the clave slot holds the long cycle while a cowbell keeps an 8th pulse that bunches up at the end of bar 2, the 'rattles or bells holding longer cycles' layer Orphiq describes. 4x4 kick, 16th shaker, soft claps. Ref: Themba 'Sound of Freedom' (2021), Hyenah 'Sun Shine' (2016).",
+  "_sources": [
+    "https://orphiq.com/resources/what-is-afro-house",
+    "https://www.melodigging.com/genre/afro-house"
+  ],
+  "tracks": {
+    "kick":    [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0,
+               106,0,0,0, 104,0,0,0, 107,0,0,0, 105,0,0,0],
+    "clave":   [93,0,0,94, 0,0,90,0, 0,0,93,0, 92,0,0,0,
+               90,0,0,91, 0,0,92,0, 0,0,90,0, 94,0,0,0],
+    "cowbell": [71,0,60,0, 74,0,63,0, 72,0,61,0, 70,0,64,0,
+               73,0,62,0, 71,0,60,0, 74,0,63,60, 62,0,71,0],
+    "shaker":  [82,51,63,50, 80,54,61,53, 78,52,64,51, 81,50,62,54,
+               79,53,60,52, 82,51,63,50, 80,54,61,53, 78,52,64,51],
+    "perc":    [0,0,0,0, 60,0,0,0, 0,0,0,0, 61,0,0,0,
+               0,0,0,0, 62,0,0,0, 0,0,0,0, 63,0,0,0],
+    "congaLow":[0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 73,0,0,0, 0,0,60,0]
+  }
+}

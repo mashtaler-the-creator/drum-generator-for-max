@@ -1,0 +1,25 @@
+{
+  "id": "melodic_techno_rolling_shaker_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["shaker","syncopated","rim-burst","native-instruments"],
+  "_approach": "Native Instruments' melodic techno walkthrough grid: kick 4/4, clap 2 and 4, a broken 16th closed-hat pattern (steps 1,3,4,5,6,7,9,12,13,14,15,16), a syncopated shaker (a-of-1, 2, e-of-2, and-of-3, 4, e-of-4, and-of-4) and a four-16th rim burst opening bar 1. Reference: NI 'How to make a melodic techno track', Anyma.",
+  "_sources": ["https://blog.native-instruments.com/melodic-techno/"],
+  "tracks": {
+    "kick":      [110,0,0,0, 110,0,0,0, 110,0,0,0, 110,0,0,0,
+                  110,0,0,0, 110,0,0,0, 110,0,0,0, 110,0,0,0],
+    "perc":      [0,0,0,0, 94,0,0,0, 0,0,0,0, 94,0,0,0,
+                  0,0,0,0, 94,0,0,0, 0,0,0,0, 94,0,0,0],
+    "hihat":     [62,0,70,48, 66,52,72,0, 62,0,0,50, 66,52,72,56,
+                  62,0,70,48, 66,52,72,0, 62,0,0,52, 68,54,74,60],
+    "shaker":    [0,0,0,60, 74,52,0,0, 0,0,64,0, 76,54,60,0,
+                  0,0,0,60, 74,52,0,0, 0,0,64,0, 76,56,62,44],
+    "rim":       [70,40,46,52, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  70,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0],
+    "openHat":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,62,0]
+  }
+}

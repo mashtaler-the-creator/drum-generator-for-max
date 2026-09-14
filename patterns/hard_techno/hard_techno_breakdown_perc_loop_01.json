@@ -1,0 +1,21 @@
+{
+  "id": "hard_techno_breakdown_perc_loop_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["breakdown","schranz","perc-loop","no-kick"],
+  "_approach": "The schranz percussion loop left running alone: rim 16ths, congas and a clave with the kick and hats pulled out, so the filtered loop itself becomes the breakdown (percussion is the lead instrument in schranz). A single snare on 4 of bar 2 announces the build.",
+  "_sources": ["https://www.studiobrootle.com/techno-technique-hard-techno-bass-gallop/","https://www.attackmagazine.com/technique/beat-dissected/industrial-techno/"],
+  "tracks": {
+    "rim":       [0,48,90,40, 0,50,90,44, 0,48,90,40, 0,54,92,60,
+                  0,48,90,40, 0,50,90,44, 0,50,90,42, 0,58,92,64],
+    "congaHigh": [70,0,0,54, 0,0,66,0, 70,0,0,54, 0,0,66,0,
+                  70,0,0,54, 0,0,66,0, 70,0,56,0, 0,58,66,0],
+    "clave":     [0,0,0,0, 0,0,0,84, 0,0,0,0, 0,0,84,0,
+                  0,0,0,0, 0,0,0,84, 0,0,0,0, 84,0,84,0],
+    "snare":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 68,0,0,0]
+  }
+}

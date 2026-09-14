@@ -1,0 +1,36 @@
+{
+  "style": "melodic_techno",
+  "name": "Melodic Techno",
+  "family": "techno",
+  "bpm": [120, 126],
+  "swing": "0.05",
+  "summary": "Warm, restrained 4/4 kick tuned to the key, a short snappy clap on 2 and 4 (or a single hall-reverbed clap every two bars in the deeper lane), offbeat open hats, constant 16th closed hats with the offbeat emphasised in two nudged layers, and a rolling 16th shaker with real velocity contour. Percussion is tuned and melodic — tom and conga arpeggios, LinnDrum sidestick syncopations, cowbell arps, two-16th rim bursts — with a light Maschine-10% swing and energy staged by adding or removing layers every 8 bars.",
+  "sounds": {
+    "kick": "Warm 4/4 kick with a subtle tail tuned to the key: 808 tuned kick (Attack's Deep & Melodic), 707/808/LinnDrum kit with the kick transposed to the key (Ethereal), or a layered main+click kick; scoop the low mids for the pads.",
+    "snare": "808 clap with a big hall on sparse placements, 909 clap for the tight Afterlife backbeat, LinnDrum sidestick and 808 rim for syncopations, a snare detuned −14 st or a clap +4 st as textural hits, short noisy snaps under Anyma-style FM bursts.",
+    "hats": "Two closed-hat layers (808/707 on the offbeats plus a variable-velocity layer high-passed at 1.3 kHz, flanged/panned and nudged a few ms), 909 open hat on the offbeats or long open hats on the beats with LFO ducking, CR-78 for a hissy soft layer.",
+    "percussion": "Tuned 808 congas and toms, 727 congas and Simmons toms for tom arpeggios, 808 maracas/cabasa as the 16th shaker, 808 cowbell through an arpeggiator, clave for call-and-response, M1/Fairlight pitched perc textures, live shaker samples for velocity contour.",
+    "cymbals": "Soft 8th ride in the progressive lane, crash only on phrase starts; much of the top-end wash is reverb tails and 16th noise layers."
+  },
+  "machines": [
+    "Roland TR-808 — tuned kick, clap, offbeat hats, maracas, congas, toms, cowbell, rim (owned; Attack's Deep & Melodic dissection is all 808)",
+    "Roland TR-707 — hats and kick layer in Attack's Ethereal Techno kit (owned)",
+    "LinnDrum — sidestick/rim syncopations and kick layer (owned)",
+    "Roland TR-909 — tight clap and open hat for the Afterlife backbeat (owned)",
+    "Roland TR-727 — tuned congas for call-and-response and arpeggios (owned)",
+    "Simmons SDS — synthetic toms for tom arpeggios and cascades (owned)",
+    "Roland CR-78 — soft hissy second hat layer (owned)",
+    "Korg M1 / Fairlight CMI drums — pitched percussion textures (owned)",
+    "Samples From Mars 707 / 808 / LinnDrum collections — the sample sources named by Attack (get elsewhere)",
+    "Native Instruments Battery 4 'Cina' kit (Deep Matter expansion) — NI's melodic techno walkthrough kit (get elsewhere)"
+  ],
+  "references": [
+    "Tale Of Us — Monument (2017)",
+    "ARTBAT — Return To Oz (Monolink remix) (2019)",
+    "Anyma & Chris Avantgarde — Eternity (2022)",
+    "Anyma — Genesys (2023)",
+    "Stephan Bodzin — Strand (2018)",
+    "Adriatique — Home (2019)"
+  ],
+  "doc": "docs/styles/melodic_techno.md"
+}

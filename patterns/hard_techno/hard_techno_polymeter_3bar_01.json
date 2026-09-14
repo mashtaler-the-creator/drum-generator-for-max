@@ -1,0 +1,31 @@
+{
+  "id": "hard_techno_polymeter_3bar_01",
+  "style": "hard_techno",
+  "bars": 3,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["polymeter","3-bar","rim","clave","gallop-feel"],
+  "_approach": "Sara Landry's 'loop every three bars for a gallop-y feeling' applied to percussion: a 12-step (three-beat) rim figure and a clave cycle roll across three bars against the 4/4 kick and rigid offbeat hats, so the accents drift and resolve only every 3 bars. Reference: Sara Landry (Ableton interview), Klangkuenstler.",
+  "_sources": ["https://www.ableton.com/en/blog/sara-landry-high-end-hard-techno/","https://www.studiobrootle.com/techno-drum-patterns-and-drum-programming-tips/"],
+  "tracks": {
+    "kick":      [118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0,
+                  118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0,
+                  118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0],
+    "hihat":     [0,90,0,90, 0,90,0,90, 0,90,0,90, 0,90,0,90,
+                  0,90,0,90, 0,90,0,90, 0,90,0,90, 0,90,0,90,
+                  0,90,0,90, 0,90,0,90, 0,90,0,90, 0,90,0,90],
+    "rim":       [96,0,0,60, 0,0,84,0, 0,58,0,0, 96,0,0,60,
+                  0,0,84,0, 0,58,0,0, 96,0,0,60, 0,0,84,0,
+                  0,58,0,0, 96,0,0,60, 0,0,84,0, 0,58,0,0],
+    "clave":     [0,0,50,0, 0,0,0,0, 88,0,0,0, 0,0,50,0,
+                  0,0,0,0, 88,0,0,0, 0,0,50,0, 0,0,0,0,
+                  88,0,0,0, 0,0,50,0, 0,0,0,0, 88,0,0,0],
+    "shaker":    [40,52,44,56, 40,52,44,56, 40,52,44,56, 40,52,44,56,
+                  40,52,44,56, 40,52,44,56, 40,52,44,56, 40,52,44,56,
+                  42,54,46,60, 42,54,46,60, 42,54,46,60, 42,54,46,60],
+    "openHat":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,74,0]
+  }
+}

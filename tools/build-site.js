@@ -39,21 +39,37 @@ function loadPatterns() {
   return out;
 }
 
+function loadStyleGuides() {
+  const dir = path.join(ROOT, "styles");
+  const out = {};
+  if (!fs.existsSync(dir)) return out;
+  for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json"))) {
+    const guide = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    out[guide.style || path.basename(f, ".json")] = guide;
+  }
+  return out;
+}
+
 function main() {
   const patterns = loadPatterns();
+  const styles = loadStyleGuides();
   const bundle = `window.STATIC_DATA = (function () {
   var __mods = {};
   function __require(p) { return __mods[p.replace(/^\\.\\//, "")]; }
 ${wrapModule("engine", read("js/engine.js"))}
 ${wrapModule("midi-writer", read("js/midi-writer.js"))}
+${wrapModule("pattern-loader", read("js/pattern-loader.js"))}
   return {
     lib: {
       engine: __mods["engine"],
       eventsToMidi: __mods["midi-writer"].eventsToMidi,
+      sectionOf: __mods["pattern-loader"].sectionOf,
+      fillsFor: __mods["pattern-loader"].fillsFor,
       PPQ: __mods["engine"].PPQ,
     },
     presets: ${read("js/presets.json").trim()},
     mapping: ${read("js/mapping-default.json").trim()},
+    styles: ${JSON.stringify(styles)},
     patterns: ${JSON.stringify(patterns)},
   };
 })();
@@ -72,7 +88,7 @@ ${wrapModule("midi-writer", read("js/midi-writer.js"))}
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "index.html"), html);
   const kb = (fs.statSync(path.join(outDir, "index.html")).size / 1024).toFixed(0);
-  console.log(`site/index.html written: ${patterns.length} patterns bundled, ${kb} KB`);
+  console.log(`site/index.html written: ${patterns.length} patterns, ${Object.keys(styles).length} style guides bundled, ${kb} KB`);
 }
 
 main();

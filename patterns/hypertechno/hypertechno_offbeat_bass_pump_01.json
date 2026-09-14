@@ -1,0 +1,23 @@
+{
+  "id": "hypertechno_offbeat_bass_pump_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["offbeat-bass","pump","big-clap","canonical"],
+  "_approach": "The hypertechno DNA: clean punchy 4/4 kick, a monolithic offbeat bass stab on every offbeat 8th (tomLow slot stands in for the bass/hardstyle-style reverse bass - mute it if your bass synth plays the offbeats), a big clap on 2 and 4, open hat doubling the offbeat and quiet 16th closed hats in between. Reference: Bennett 'Vois sur ton chemin (Techno Mix)', Niklas Dee 'Maedchen auf dem Pferd (Techno Mix)'.",
+  "_sources": ["https://soundplate.com/what-is-hypertechno-genre-guide/","https://rateyourmusic.com/genre/hypertechno/","https://nocopyrightsounds.fandom.com/wiki/Hypertechno"],
+  "tracks": {
+    "kick":      [124,0,0,0, 124,0,0,0, 124,0,0,0, 124,0,0,0,
+                  124,0,0,0, 124,0,0,0, 124,0,0,0, 124,0,0,0],
+    "tomLow":    [0,96,0,96, 0,96,0,96, 0,96,0,96, 0,96,0,96,
+                  0,96,0,96, 0,96,0,96, 0,96,0,96, 0,96,0,96],
+    "perc":      [0,0,0,0, 112,0,0,0, 0,0,0,0, 112,0,0,0,
+                  0,0,0,0, 112,0,0,0, 0,0,0,0, 112,0,0,60],
+    "openHat":   [0,80,0,80, 0,80,0,80, 0,80,0,80, 0,80,0,80,
+                  0,80,0,80, 0,80,0,80, 0,80,0,80, 0,80,0,80],
+    "hihat":     [0,46,0,52, 0,46,0,52, 0,46,0,52, 0,48,0,56,
+                  0,48,0,54, 0,48,0,54, 0,48,0,54, 0,50,0,60]
+  }
+}

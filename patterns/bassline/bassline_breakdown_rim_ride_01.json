@@ -1,0 +1,27 @@
+{
+  "id": "bassline_breakdown_rim_ride_01",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.08,
+  "tags": ["breakdown","stripped","dark","rim","ride"],
+  "_approach": "Dark modern breakdown: a quiet metallic ride holds the offbeat, a syncopated rim line is the lead voice, a low tom marks the downbeat of bar 2 in place of the kick, and the layered snare+clap only lands on beat 4 of bar 2. Ref: Notion, Darkzy's darker instrumentals.",
+  "_sources": ["https://www.musicradar.com/how-to/bassline-house-production-tips","https://www.edmprod.com/how-to-make-bass-house/"],
+  "tracks": {
+    "ride":   [0,0,60,0, 0,0,62,0, 0,0,60,0, 0,0,64,0,
+               0,0,62,0, 0,0,64,0, 0,0,62,0, 0,0,66,0],
+    "rim":    [0,0,0,76, 0,0,82,0, 0,0,0,70, 0,80,0,0,
+               0,0,0,78, 0,0,84,0, 0,72,0,0, 0,82,0,86],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               88,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 98,0,0,0],
+    "perc":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 96,0,0,0],
+    "hihat":  [0,0,0,0, 0,0,0,48, 0,0,0,0, 0,0,0,52,
+               0,0,0,0, 0,0,0,50, 0,0,0,0, 0,44,0,54],
+    "shaker": [0,0,0,0, 0,0,0,0, 34,0,0,0, 0,0,0,0,
+               0,0,0,0, 36,0,0,0, 0,0,0,0, 38,0,0,0]
+  }
+}

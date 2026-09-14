@@ -1,0 +1,31 @@
+{
+  "style": "bass_house",
+  "name": "Bass House (UK bass house / Night Bass)",
+  "family": "uk-bass",
+  "bpm": [125, 130],
+  "swing": "0.08–0.24",
+  "summary": "House skeleton — 4x4 kick, big clap on 2 and 4, loud offbeat open hat — with everything on top inherited from UK garage: real 58–65% swing, skippy 16th hat lattices, rim skips and ghost hits that make the groove limp rather than march. Drums go lean in drops so the talky bass riff and vocal chops lead.",
+  "sounds": {
+    "kick": "Punchy but less aggressive than tech house — two kicks layered and phase-aligned, clipped and re-sampled, with a tiny fade-in to tame the click so it moves out of the bass's way.",
+    "snare": "Clap built from 2–3 layers with a few ms of latency between them for looseness; a garage snare layer for the speed-garage lane.",
+    "hats": "Loud 909-style open hat on every offbeat as the bounce anchor, closed hats made from the same open hat with sustain removed so the choke shapes the bounce; swing 55–62%.",
+    "percussion": "Rim skips, shaker beds, melodic tom cells and congas; cowbell and high-tom jabs in the fidget lane.",
+    "cymbals": "Crash on 8-bar phrase starts; contoured 8th-note ride for dark warehouse rollers."
+  },
+  "machines": [
+    "Roland TR-909 — kick, clap and the signature offbeat open hat (owned)",
+    "Roland TR-808 — clap and cowbell layers (owned)",
+    "Akai MPC60 / MPC3000 — garage swing templates (owned)",
+    "Simmons SDS series — melodic electronic toms for tom-bounce cells (owned)",
+    "Sequential DrumTraks / LinnDrum — 80s claps and rims for layering (owned)",
+    "Night Bass / Vengeance-style modern clap and kick packs (get elsewhere)"
+  ],
+  "references": [
+    "DJ Zinc — 138 Trek (2000)",
+    "Jack Beats — Get Down (2008)",
+    "My Nu Leng — Masterplan (2014)",
+    "Chris Lorenzo — California Dreamin' (2016)",
+    "AC Slater & Chris Lorenzo — Fly Kicks (2016)"
+  ],
+  "doc": "docs/styles/bass_house.md"
+}

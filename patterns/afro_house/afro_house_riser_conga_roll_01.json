@@ -1,0 +1,28 @@
+{
+  "id": "afro_house_riser_conga_roll_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 122,
+  "tags": ["riser","conga-roll","build"],
+  "_approach": "Two-bar conga build: the high conga goes from 8ths (bar 1) to 16ths (bar 2) with velocity climbing every beat, the low conga follows a beat behind, claps and open hats step up in bar 2, and the kick stays 4x4 so the floor never leaves. Samplesound: 'conga rolls create excitement during transitions'. Loudest hits on the last four 16ths.",
+  "_sources": [
+    "https://www.samplesoundmusic.com/blogs/news/the-ultimate-guide-to-afro-house-production-in-2025-tips-tricks-and-techniques",
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick":     [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0,
+                106,0,0,0, 104,0,0,0, 107,0,0,0, 105,0,0,0],
+    "congaHigh":[63,0,62,0, 71,0,70,0, 82,0,81,0, 86,0,85,0,
+                84,86,88,85, 99,96,98,100, 105,107,104,106, 112,117,119,116],
+    "congaLow": [51,0,0,0, 64,0,0,0, 72,0,0,0, 78,0,0,0,
+                87,0,86,0, 97,0,96,0, 108,0,107,0, 118,0,117,119],
+    "shaker":   [82,51,63,50, 80,54,61,53, 78,52,64,51, 81,50,62,54,
+                79,53,60,52, 82,51,63,50, 80,54,61,53, 78,52,64,51],
+    "openHat":  [0,0,61,0, 0,0,64,0, 0,0,62,0, 0,0,60,0,
+                0,0,73,0, 0,0,71,0, 0,0,82,0, 0,0,86,0],
+    "perc":     [0,0,0,0, 63,0,0,0, 0,0,0,0, 64,0,0,0,
+                0,0,0,0, 78,0,0,0, 0,0,0,0, 105,0,0,118]
+  }
+}

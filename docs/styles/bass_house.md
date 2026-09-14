@@ -8,6 +8,18 @@ Bass house keeps the four-on-the-floor house skeleton — 4x4 kick, big clap on 
 
 In this engine, swing 0 = straight and ~0.33 = full triplet, so garage-style 58–65% swing maps to roughly 0.16–0.30, and the tighter tech-leaning grooves sit at 0.08–0.14.
 
+## Sound selection & drum machines
+
+Bass house borrows the tech-house 909 kit and then softens it so the bass riff can lead: EDMProd's guide is explicit that the kick should be "punchy, but less so than a tech house kick … a kick that can move out of the way of the bass". Per role:
+
+- **Kick.** Two kicks layered and phase-aligned, clipped and resampled, then given a tiny fade-in to tame the click (EDMProd); shorter and less aggressive than tech house. Owned: Roland TR-909 (the body), TR-808 or Jomox Xbase09 for a rounder second layer, Akai MPC60 / MPC3000 if you want the garage swing templates on the drums.
+- **Snare / clap / rim.** The clap is built from two or three layers with a few milliseconds of latency between them so it feels loose rather than machine-tight (EDMProd: "at least 2 layers"); a garage snare replaces the clap in the speed-garage lane, and rim skips carry the UKG inheritance. Owned: TR-909 clap, TR-808 clap and rim, Sequential DrumTraks / LinnDrum claps for 80s width; Night Bass / Vengeance-style layered clap packs — get elsewhere.
+- **Hats.** The loud 909-style open hat on every offbeat is the bounce anchor and stays loud; EDMProd makes the closed hat from the *same* open-hat sample in Simpler with the sustain removed, so the choke shapes the bounce and the decay can be modulated later. Skippy 16th closed hats with strong velocity contour, swung 55–62% (garage-style, versus tech house's near-straight grid). TR-909 / TR-707 hats (owned).
+- **Percussion.** Rim skips and shaker beds from garage, melodic tom cells (Simmons SDS toms, owned — the electronic-tom sound of the tom-bounce lane), congas (TR-727, owned), cowbell and high-tom jabs for the fidget lane (TR-808 cowbell, owned).
+- **Cymbals.** Crash on 8-bar phrase starts; a contoured 8th-note ride for dark warehouse rollers.
+- **Layering / processing habits.** Clipping (KClip-style) and resampling on kick and clap, sidechain everything to the kick, stereo width on hats and claps only, and lean drops — kick, clap, offbeat hat and little else so the talky bass and clipped vocal chops lead. Start arrangements from the drop and strip back for intro and breakdown in 8-bar blocks. Choose punchy, mid-forward samples that survive clipping.
+- **Reference tracks.** DJ Zinc "138 Trek" (2000); Jack Beats "Get Down" (2008); My Nu Leng "Masterplan" (2014); Chris Lorenzo "California Dreamin'" (2016); AC Slater & Chris Lorenzo "Fly Kicks" (2016); Taiki Nulight and the Night Bass catalogue for the current sound.
+
 ## The 10 approaches
 
 1. **bh_night_bass_bounce** — The canonical Night Bass groove: 4x4 kick, backbeat clap, loud offbeat open hats, skippy closed-hat pickups, bar-2 kick pickup and clap flam. Reference: AC Slater "Bass Inside", Night Bass label sound.
@@ -30,3 +42,7 @@ In this engine, swing 0 = straight and ~0.33 = full triplet, so garage-style 58�
 - Mneemo — UK Garage vs Speed Garage vs Bassline: https://www.mneemo.com/blog/uk-garage-vs-speed-garage-vs-bassline-2026/
 - Audio Jacked — The Ultimate Guide to Bass House: https://audiojacked.com/the-ultimate-guide-to-bass-house
 - MusicRadar — 10 bassline house production tips: https://musicradar.com/how-to/10-booming-bassline-house-production-tips
+- MusicRadar — Build a bassline house beat in 4 steps (clap + low snare layering, closed hat + ride offbeats, pitched breakbeat ghost snares): https://www.musicradar.com/how-to/build-a-bassline-house-beat-in-4-steps
+- Preset Drive — Bass House Production Guide (55–62% swing, kick fade-in, multi-layer claps): https://www.presetdrive.com/bass-house-production-guide/
+- Skapade Studios — Making the 909 kick sample your own: https://www.skapadestudios.com/post/making-the-909-kick-sample-your-own
+- Native Instruments Blog — How Cloverdale uses Ozone to balance UKG swing and bass house on "Nobody": https://blog.native-instruments.com/cloverdale/

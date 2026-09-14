@@ -1,0 +1,27 @@
+{
+  "id": "melodic_techno_tom_arp_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["tom-arp","toms","percussive"],
+  "_approach": "Tom arpeggio groove: high, mid and low toms tuned to the key play a descending 16th figure on the a-of-1 / and-of-2 / a-of-2 that repeats each half bar (the '3 tom grooves' approach), over kick 4/4, tight clap and offbeat open hats. Bar 2 adds an extra pass. Reference: ARTBAT 'Return To Oz' (Monolink remix), Stephan Bodzin.",
+  "_sources": ["https://youtu.be/nA766ZJTPGw","https://www.attackmagazine.com/technique/beat-dissected/deep-melodic-progressive-techno/"],
+  "tracks": {
+    "kick":      [108,0,0,0, 108,0,0,0, 108,0,0,0, 108,0,0,0,
+                  108,0,0,0, 108,0,0,0, 108,0,0,0, 108,0,0,0],
+    "perc":      [0,0,0,0, 92,0,0,0, 0,0,0,0, 92,0,0,0,
+                  0,0,0,0, 92,0,0,0, 0,0,0,0, 92,0,0,0],
+    "openHat":   [0,68,0,68, 0,68,0,68, 0,68,0,68, 0,68,0,68,
+                  0,68,0,68, 0,68,0,68, 0,68,0,68, 0,68,0,68],
+    "tomHigh":   [0,0,0,72, 0,0,0,0, 0,0,0,72, 0,0,0,0,
+                  0,0,0,72, 0,0,0,0, 0,66,0,72, 0,0,0,0],
+    "tomMid":    [0,0,0,0, 0,0,68,0, 0,0,0,0, 0,0,68,0,
+                  0,0,0,0, 0,0,68,0, 0,0,0,0, 0,60,68,0],
+    "tomLow":    [0,0,0,0, 0,0,0,56, 0,0,0,0, 0,0,0,56,
+                  0,0,0,0, 0,0,0,56, 0,0,0,0, 0,0,0,62],
+    "hihat":     [36,44,50,44, 36,44,50,44, 36,44,50,44, 36,44,50,44,
+                  36,44,50,46, 36,44,50,46, 36,44,50,46, 36,44,50,46]
+  }
+}

@@ -6,6 +6,18 @@
 
 Future garage grew out of 2-step UK garage filtered through Burial's melancholy. Burial famously built his tracks in Sound Forge — an audio editor with no grid, no tempo, no quantize — placing every hit by hand and by ear, which is why nothing lands exactly on a sixteenth. Producers emulating the style turn quantize off or push swing very hard, use rimshots, congas and clicky found sounds where a snare "should" be, and treat percussion as texture: rain recordings, vinyl crackle and finger-click ticks running quietly under the beat. Velocity is fragile and constantly moving; hats are sparse; silence is a structural element. In this library, clave and shaker at ghost velocities stand in for the crackle bed, rim carries the found-sound clicks, and high swing plus the engine's humanization approximates the off-grid feel.
 
+## Sound selection & drum machines
+
+Burial's drums are "blocky, wooden sounds" placed by hand on Sound Forge's grid-less timeline until the waveform "looks like a nice fishbone" (MusicRadar); the genre that followed keeps that logic — rimshots, congas and found-sound clicks where a snare should be, all buried under crackle. Attack's Up-front Future Garage dissection is the most concrete recipe. Per role:
+
+- **Kick.** Rounded low end with a clicky hi-hat sample blended in for presence, velocity-varied (first hits full, later ones softer) and manually swung. Keep it low in the mix — the kick is felt, not heard. Owned: Roland TR-808 (long soft kick), TR-909 for the Ghost Hardware-style four-to-the-floor, Akai S900 / MPC60 to resample everything at 12-bit.
+- **Snare / clap / rim.** A reverbed rimshot paired with a short, spritely snare, carefully tuned to each other so the pair drives forward (Attack); Burial's snares come in "triples" (ghost-then-accent doubles) rather than flams. Rims from TR-808 / TR-909 / LinnDrum / DrumTraks (owned) are the backbone; woodblock-like clicks from Korg Minipops / Roland CR-78 (owned) for the softer "wooden" hits; found-sound clicks — lighters, keys, game sounds — get elsewhere.
+- **Hats.** Two very short hats, one closed and one slightly more open but still fast-decaying, at low velocity, swung 55–65% or nudged off-grid by hand. Never a steady 16th carpet. CR-78 / TR-808 / Minipops hats (owned).
+- **Percussion.** Congas and bongos as snare substitutes (TR-727 / LinnDrum congas, owned), clave-like ticks and finger clicks, a low-mixed mid-range perc swung off-grid, and one "big perc" — a heavily reverbed hit filling the empty final beat (Attack). Amen/Think slices at ghost velocity (breakbeat libraries, owned) supply the garage skips.
+- **Cymbals.** None as such: vinyl crackle, rain recordings and reversed reverb tails (get elsewhere) do the cymbal's job; a slice of atmospheric noise buried in the mix supplies glue.
+- **Layering / processing habits.** Minimal compression to keep the fragile dynamics; reverb on the rim, dust on everything, occasional pitch-shifting of single hits. Choose short, characterful, slightly lo-fi samples and place them by ear — quantize off, or high swing plus the engine's humanization.
+- **Reference tracks.** Burial "Distant Lights" (2006); Burial "Archangel" (2007); Burial "Ghost Hardware" (2007); Burial "Near Dark" (2007); Mount Kimbie "Carbonated" (2011); James Blake "CMYK" (2010).
+
 ## The 10 approaches
 
 1. **fg_archangel_2step** — Canonical Burial 2-step: displaced kicks around a soft 2-and-4 backbeat, clave-as-crackle ticks, four bars of hand-placed micro-variation. Ref: Burial "Archangel", "Untrue".
@@ -27,3 +39,6 @@ Future garage grew out of 2-step UK garage filtered through Burial's melancholy.
 - Attack Magazine — Beat Dissected: Found Sound 2-Step (found-sound percussion defining the feel): https://www.attackmagazine.com/technique/beat-dissected/found-sound-2-step/
 - KVR Audio forum — "Future Garage + Burial Style Drums" (turn quantize off; snares on 2 & 4 with triples, sidestick/rim elsewhere, swingy hats): https://www.kvraudio.com/forum/viewtopic.php?t=375500
 - Dubstepforum — "Burial Rhythm in FL Studio?" (congas/bongos as snares, rain-recording crackle, video-game found sounds): https://www.dubstepforum.com/forum/viewtopic.php?t=197031
+- Attack Magazine — Beat Dissected: UK Garage (MPC kick pitched +3, two rimshots one reverbed, cabasa as hat — the palette future garage inherited): https://www.attackmagazine.com/technique/beat-dissected/uk-garage/
+- Attack Magazine — Beat Dissected: Rolling 2-Step (909+707 kick with vinyl dust, live shaker/tambourine velocity practice): https://www.attackmagazine.com/technique/beat-dissected/rolling-2-step-garage/
+- Gearspace — Burial Production Techniques thread (community reverse-engineering of the rim/crackle palette): https://gearspace.com/board/electronic-music-instruments-and-electronic-music-production/194386-burial-production-techniques.html

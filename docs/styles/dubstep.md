@@ -6,6 +6,18 @@
 
 Dubstep drums are built on the halfstep frame: kick on beat 1, a single snare or rim shot on beat 3 — never on 2 and 4. The space between those anchors is the actual instrument; syncopated kicks creep in toward the end of the bar with a light-to-heavy 16th swing inherited from UK garage, and the mid-frequency gap is filled (or deliberately left empty) by rims, shakers, tambourines and congas rather than busy hats. Hats and shakers typically pause on beat 3 to let the snare breathe, and odd-grid (32nd/triplet-feel) details are kept toward the end of the bar.
 
+## Sound selection & drum machines
+
+The DMZ-era kit is small and heavy: 808 and 707 family hits, a few acoustic percussion samples, and dub-style echo/reverb sends doing most of the work. Mala programs in NI Battery (importing his own samples) after a decade in Reason's Redrum; Loefah's rule is "space is just as much an instrument as a kick or a snare". Per role:
+
+- **Kick.** A raw, hollow kick with deep low end — Attack's Mystik dissection points at Coki's "Goblin" as the model — or a TR-808 kick overdriven and sent to echo/reverb, played monophonically (sampler set to one voice) so tails never overlap (Studio Brootle). Owned: Roland TR-808 (the anchor), TR-909 for the wobble-era stomp, Akai MPC60 / S900 for 12-bit weight, Jomox Xbase09 for a tunable analogue 808-style kick.
+- **Snare / clap / rim.** Two schools. Meditative: a layered electronic snare with body around 160–200 Hz plus a high-passed reverb clap to fill the top, or a single acoustic snare through filter-delay, compression and overdrive for grit (Attack). Minimal: a TR-707 or TR-808 snare (owned) or just a rim shot carrying beat 3 (Loefah). TR-909 clap (owned) under the snare in the stomp lane; rims from 808 / 707 / LinnDrum (owned) for dub-delayed answers.
+- **Hats.** Sparse. Short gated maracas or closed hats (sampler envelope shortened) punctuating the space, a mix of acoustic and drum-machine hits, typically pausing on beat 3 so the snare breathes; open hats only in the Coki/Rusko stomp. TR-808 / TR-707 hats (owned), Korg Minipops / CR-78 (owned) for soft maraca-like ticks.
+- **Percussion.** Acoustic shaker with a breathing pattern, tambourine as two samples at slightly different pitches, cajón/congas high-passed around 100 Hz, and stray congas in the Commodo lane (acoustic percussion libraries — get elsewhere; TR-727 congas, owned, as a stand-in). Dub-delayed rim or snare "delay tails" as percussion.
+- **Cymbals.** Almost none; reverse crashes, dub sirens and reverb swells mark sections instead.
+- **Layering / processing habits.** Everything routes to echo and reverb sends with low-cut filters on the delay so tails stay clean; a drum-buss drive glues the kit. Choose samples with weight and a clean decay — they will be heard mostly through their echoes.
+- **Reference tracks.** Digital Mystikz "Anti War Dub" (2006); Loefah "Horror Show" (2005); Skream "Midnight Request Line" (2005); Coki "Spongebob" (2007); Mala "Alicia" (2007); Kahn & Neek "Percy" (2013).
+
 ## The 10 approaches
 
 1. **`dubstep_dmz_meditative_halfstep`** — 4-bar DMZ-era meditative halfstep: one anchor kick per bar, late swung kick every other bar, breathing shaker that drops out on beat 3, sparse rim answers. Ref: Mala "Changes", Digital Mystikz "Anti War Dub".
@@ -26,3 +38,6 @@ Dubstep drums are built on the halfstep frame: kick on beat 1, a single snare or
 - XLR8R — Building an Iconic Sound: Mala — https://xlr8r.com/features/building-an-iconic-sound-mala-1/
 - Junkee — Loefah: Lower than Low ("space is just as much an instrument as a kick or a snare") — https://itm.junkee.com/loefah-lower-than-low/9794
 - Musical U — The Rhythm of Dubstep: How it Works — https://www.musical-u.com/learn/rhythm-how-dubstep-works/
+- Studio Brootle — How To Make Dubstep (808/707 kits, overdriven 808 kick on echo/reverb sends, one-voice sampler, gated maracas) — https://www.studiobrootle.com/how-to-make-dubstep/
+- Dubstepforum — Mala Production Interview (Battery, custom samples, sub philosophy) — https://www.dubstepforum.com/forum/viewtopic.php?t=172396
+- Dogs On Acid — Mala & Loefah Interview — https://www.dogsonacid.com/threads/mala-loefah-interview.500091/

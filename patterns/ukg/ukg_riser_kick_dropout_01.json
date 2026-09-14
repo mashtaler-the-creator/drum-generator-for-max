@@ -1,0 +1,31 @@
+{
+  "id": "ukg_riser_kick_dropout_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.22,
+  "tags": ["riser","build","kick-dropout","clap-stutter"],
+  "_approach": "Kick-dropout build: bar 1 is a heavy 4/4 garage bump; bar 2 removes the kick entirely and lets a shaker bed plus accelerating clap stutters (8ths then 16ths) and a low-mid-high tom climb carry the tension. The loudest clap+snare lands on the last 8th and the final 16th is left empty for the drop. Ref: the kick-drop-then-return trick documented for UKG build-ups; Shanks & Bigfoot 'Sweet Like Chocolate' breakdown exit.",
+  "_sources": ["https://theproducerschool.com/blogs/featured-blogs/master-uk-garage-production-complete-guide-to-filthy-basslines-and-swing-drums","https://www.edmprod.com/ultimate-guide-build-ups/","https://blog.native-instruments.com/uk-garage-music/"],
+  "tracks": {
+    "kick":    [116,0,0,0, 110,0,0,0, 112,0,0,0, 110,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 106,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,84,0, 108,0,88,0, 92,0,96,100, 104,110,118,0],
+    "snare":   [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,32,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,126,0],
+    "hihat":   [58,0,74,42, 0,0,76,0, 60,0,78,44, 0,0,72,0,
+                62,0,78,46, 0,0,80,48, 64,0,82,50, 0,0,0,0],
+    "openHat": [0,0,66,0, 0,0,68,0, 0,0,66,0, 0,0,70,0,
+                0,0,72,0, 0,0,74,0, 0,0,78,0, 0,0,0,0],
+    "shaker":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                40,30,44,32, 46,34,50,36, 52,38,56,40, 60,44,64,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,94,0, 0,0,0,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 98,0,0,0]
+  }
+}

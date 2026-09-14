@@ -61,6 +61,25 @@ Open http://localhost:8834 in your browser:
 4. Hit **⬇ Download .mid** — you get exactly the variation you auditioned
    (same seed) — and drag the file from Downloads onto the drum rack track.
 
+**Style / Section / Pattern.** Pick the style first (grouped by family:
+house, techno, uk-bass, african, club, internet...), then the section:
+
+- **grooves** — the main beat; fills of the same style get dropped in
+  automatically every few bars
+- **risers / build-ups** — 2–4 bar drum builds that lead into a drop
+  (snare rolls accelerating, hats doubling, kick dropping out). Render
+  them for the bars right before your drop; no fills are injected
+- **breakdowns** — stripped-down sections (kick gone or half-time,
+  percussion carrying the groove) for the part before a build-up
+- **fills** — the one-bar turnarounds on their own, if you want to place
+  them by hand
+
+Under the pattern list you get the pattern's *approach* note (the idea and
+reference tracks), and at the bottom of the page the **style guide**:
+tempo range, drum DNA, which sounds to pick for each role, which drum
+machines / sample sources define the style, reference tracks, and a link
+to the full write-up in `docs/styles/`.
+
 ### Option B: terminal
 
 ```bash
@@ -101,9 +120,18 @@ run again for a different take. When it lands, drop it in the project.
 3. Velocity guide: main snares 100-115, hats 60-95, anything below 70 is
    ghost territory. Velocity >= 90 is an accent — it won't drop out at low
    density
-4. A `"fill"` tag in `tags` makes the pattern a fill — the engine drops it
-   in every N bars automatically
-5. Check: `npm run validate`
+4. Section tags in `tags` (use at most one): `"fill"` makes the pattern a
+   fill — the engine drops it in every N bars automatically; `"riser"` and
+   `"breakdown"` mark self-contained build-up / stripped-down sections that
+   render as-is (no fills injected). Anything else is a groove
+5. Optional `"_approach"` (shown in the UI) and `"_sources"` (URLs the
+   pattern is grounded in) — both ignored by the engine
+6. A new style is just a new folder `patterns/<style>/`; add
+   `styles/<style>.json` (tempo range, sound selection, drum machines,
+   references, doc link) so the UI shows the style guide and groups it by
+   family, and `docs/styles/<style>.md` for the full write-up
+7. Check: `npm run validate` — it verifies ids, folders, roles, velocities,
+   section tags and the style guides
 
 ## Troubleshooting
 

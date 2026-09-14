@@ -1,0 +1,29 @@
+{
+  "id": "melodic_techno_ethereal_open_hat_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["ethereal","open-hat-on-beat","cowbell-arp","linndrum"],
+  "_approach": "Attack's Ethereal Techno: long open hats on the main beats with the kick (ducked so the tail speaks), closed hats on the offbeats, LinnDrum sidestick (rim) syncopations, a detuned snare and a big clap every two bars, a sparse low tom and a 16th cowbell arpeggio (Down & Up) with rising-falling velocities. Reference: Mind Against, Tale Of Us 'Nova Two'.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/ethereal-techno/"],
+  "tracks": {
+    "kick":      [104,0,0,0, 104,0,0,0, 104,0,0,0, 104,0,0,0,
+                  104,0,0,0, 104,0,0,0, 104,0,0,0, 104,0,0,0],
+    "openHat":   [78,0,0,0, 78,0,0,0, 78,0,0,0, 78,0,0,0,
+                  78,0,0,0, 78,0,0,0, 78,0,0,0, 78,0,0,0],
+    "hihat":     [0,66,0,66, 0,66,0,66, 0,66,0,66, 0,66,0,66,
+                  0,66,0,66, 0,66,0,66, 0,66,0,66, 0,66,0,66],
+    "rim":       [0,0,0,74, 0,0,0,0, 0,0,70,0, 0,0,0,0,
+                  0,0,0,74, 0,0,0,0, 0,0,70,0, 0,62,0,0],
+    "snare":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 60,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":      [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 88,0,0,0],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,58,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "cowbell":   [0,0,0,0, 0,0,0,0, 52,44,56,46, 60,48,58,44,
+                  52,44,56,46, 0,0,0,0, 52,44,56,46, 62,50,60,48]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "style": "dubstep",
+  "name": "Dubstep / UK 140",
+  "family": "uk-bass",
+  "bpm": [138, 142],
+  "swing": "0.05–0.25",
+  "summary": "Halfstep frame: kick on 1, one snare or rim on 3, never a 2-and-4 backbeat. The space between the anchors is the instrument — syncopated late kicks with garage-inherited swing, rims, shakers, tambourines and congas instead of busy hats, and odd-grid 32nd details kept toward the end of the bar.",
+  "sounds": {
+    "kick": "Raw, hollow 808-style kick with deep low end, overdriven and sent to echo/reverb, single-voice so tails never overlap.",
+    "snare": "Layered electronic snare (160–200 Hz body) with a high-passed reverb clap, or a 707/808 snare for the minimal lane; rim shots carry beat 3 in the stripped tracks.",
+    "hats": "Short gated maracas or closed hats punctuating the space, often pausing on beat 3; open hats only in the wobble-era stomp.",
+    "percussion": "Acoustic shaker, two-pitch tambourine, cajón/congas high-passed at ~100 Hz, dub-delayed rims.",
+    "cymbals": "Almost none; a dub-siren or reverse crash does the section work."
+  },
+  "machines": [
+    "Roland TR-808 — the kick and snare of DMZ-era halfstep (owned)",
+    "Roland TR-707 — snappy snare/rim layer (owned)",
+    "Roland TR-909 — clap layer under the snare (owned)",
+    "Akai MPC / S900 — sampled acoustic percussion with 12-bit weight (owned)",
+    "Native Instruments Battery / Reason Redrum — Mala's drum hosts (get elsewhere)",
+    "Acoustic percussion libraries — cajón, shaker, tambourine (get elsewhere)"
+  ],
+  "references": [
+    "Digital Mystikz — Anti War Dub (2006)",
+    "Loefah — Horror Show (2005)",
+    "Skream — Midnight Request Line (2005)",
+    "Coki — Spongebob (2007)",
+    "Mala — Alicia (2007)",
+    "Kahn & Neek — Percy (2013)"
+  ],
+  "doc": "docs/styles/dubstep.md"
+}

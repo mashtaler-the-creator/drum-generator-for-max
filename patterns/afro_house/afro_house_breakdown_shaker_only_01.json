@@ -1,0 +1,24 @@
+{
+  "id": "afro_house_breakdown_shaker_only_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 122,
+  "tags": ["breakdown","shaker","no-kick"],
+  "_approach": "Kick and bass gone, the 16th shaker keeps the floor moving on its own with a low conga accent on beat 3, whispered rim backbeats and offbeat open hats. Beatportal: 'minimal breakdowns are about vibe rather than drama - drop the kick and bass and let a single percussive element carry'.",
+  "_sources": [
+    "https://www.beatportal.com/articles/647491-step-by-step-guide-to-creating-an-afro-house-track-keinemusik-black-coffee-caiiro-alex-wann-style",
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "shaker":  [78,52,64,71, 81,50,62,74, 79,53,60,72, 82,51,63,70,
+               80,54,61,73, 78,52,64,71, 81,50,62,74, 79,53,60,86],
+    "congaLow":[0,0,0,0, 0,0,0,0, 94,0,0,0, 0,0,0,0,
+               0,0,54,0, 0,0,0,0, 91,0,0,0, 0,0,63,0],
+    "rim":     [0,0,0,0, 46,0,0,0, 0,0,0,0, 42,0,0,0,
+               0,0,0,0, 43,0,0,0, 0,0,0,0, 44,0,0,53],
+    "openHat": [0,0,63,0, 0,0,61,0, 0,0,64,0, 0,0,62,0,
+               0,0,60,0, 0,0,63,0, 0,0,61,0, 0,0,64,0]
+  }
+}

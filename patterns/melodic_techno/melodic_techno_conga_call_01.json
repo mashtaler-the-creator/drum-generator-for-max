@@ -1,0 +1,27 @@
+{
+  "id": "melodic_techno_conga_call_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["conga","organic","call-response","innervisions"],
+  "_approach": "Organic Innervisions-lineage percussion: high and low congas in a call-and-response that changes in bar 2, a clave answering on the and-of-2 and and-of-4 in bar 2, soft 16th closed hats, clap 2 and 4 and an open hat only on the and-of-3. Reference: Ame 'Rej', Adriatique, Tale Of Us early Life And Death releases.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/deep-melodic-progressive-techno/","https://en.wikipedia.org/wiki/Melodic_Techno"],
+  "tracks": {
+    "kick":      [106,0,0,0, 106,0,0,0, 106,0,0,0, 106,0,0,0,
+                  106,0,0,0, 106,0,0,0, 106,0,0,0, 106,0,0,0],
+    "hihat":     [46,36,54,38, 46,36,54,38, 46,36,54,38, 46,36,54,38,
+                  46,36,54,40, 46,36,54,40, 46,36,54,40, 46,36,54,40],
+    "congaHigh": [0,0,0,70, 0,0,66,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,70, 0,0,66,0, 0,0,74,0, 0,62,0,0],
+    "congaLow":  [0,0,0,0, 0,0,0,0, 72,0,0,0, 0,0,68,0,
+                  0,0,0,0, 0,0,0,0, 72,0,0,0, 0,0,0,66],
+    "clave":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,80, 0,0,0,0, 0,0,72,0],
+    "perc":      [0,0,0,0, 88,0,0,0, 0,0,0,0, 88,0,0,0,
+                  0,0,0,0, 88,0,0,0, 0,0,0,0, 88,0,0,0],
+    "openHat":   [0,0,0,0, 0,0,0,0, 0,0,60,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,60,0, 0,0,0,0]
+  }
+}

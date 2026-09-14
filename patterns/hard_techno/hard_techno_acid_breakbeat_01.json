@@ -1,0 +1,25 @@
+{
+  "id": "hard_techno_acid_breakbeat_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["breakbeat","snare","four-beat-clap","acid"],
+  "_approach": "Four-to-the-floor kick with a breakbeat snare laid over it (the Phase Fatale-style five-hit snare cycle over two bars), a clap on every beat and an open hat on every offbeat, plus a muted conga answer in bar 2. Reference: I Hate Models 'Daydream' / 'Warehouse Memories', Phase Fatale 'Love Is Destructive'.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/hypnotic-techno-inspired-by-phase-fatales-love-is-destructive/"],
+  "tracks": {
+    "kick":      [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                  116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0],
+    "snare":     [0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,88,0,
+                  0,0,92,0, 0,0,0,0, 100,0,0,0, 0,0,90,0],
+    "perc":      [72,0,0,0, 72,0,0,0, 72,0,0,0, 72,0,0,0,
+                  72,0,0,0, 72,0,0,0, 72,0,0,0, 72,0,0,0],
+    "hihat":     [0,50,72,50, 0,50,72,50, 0,50,72,50, 0,52,74,54,
+                  0,50,72,50, 0,50,72,50, 0,52,72,52, 0,54,74,58],
+    "openHat":   [0,80,0,80, 0,80,0,80, 0,80,0,80, 0,80,0,80,
+                  0,80,0,80, 0,80,0,80, 0,80,0,80, 0,80,0,80],
+    "congaLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,60,0,0, 0,0,0,60, 0,0,0,0]
+  }
+}

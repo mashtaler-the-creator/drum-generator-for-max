@@ -21,8 +21,11 @@ Three delivery targets, one engine:
 npm start                     # then open http://localhost:8834
 ```
 
-Pick a pattern and feel preset, hit **New variation** until you like what
-you hear, **Download .mid**, drag the file onto your drum rack track.
+Pick a style, a section (groove / riser / breakdown / fill) and a pattern,
+choose a feel preset, hit **New variation** until you like what you hear,
+**Download .mid**, drag the file onto your drum rack track. The style guide
+panel at the bottom tells you which sounds and drum machines the style is
+built on.
 The seed shown in the UI is baked into the download URL, so the file you
 download is exactly the variation you auditioned. Preview sounds are
 synthesized approximations — your drum rack samples will sound better.
@@ -72,13 +75,20 @@ automatically) and an `_approach` note explaining the idea behind it.
 
 - `js/engine.js` — rendering engine (ticks @ 480 PPQ, durations, chokes)
 - `js/midi-writer.js` — zero-dep Standard MIDI File writer
-- `js/pattern-loader.js` — pattern lookup helpers
+- `js/pattern-loader.js` — pattern lookup helpers, section tags, style guides
 - `js/mapping-default.json` — role -> MIDI note (edit per drum rack)
-- `patterns/<style>/*.json` — pattern library; tag `"fill"` marks fills
+- `patterns/<style>/*.json` — pattern library. Section tags: `"fill"`
+  (auto-injected into grooves), `"riser"` (build-up), `"breakdown"`
+  (stripped-down section); no section tag = groove
+- `styles/<style>.json` — style guide: tempo range, drum DNA, sound
+  selection per role, drum machines / sample sources, reference tracks
+  (shown in the web UI, groups styles by family)
+- `docs/styles/<style>.md` — the full researched write-up per style
 - `web/server.js` + `web/index.html` — local web UI (zero-dep Node server,
-  Web Audio preview kit, `.mid` download)
+  Web Audio preview kit, `.mid` download, style guide panel)
 - `tools/render.js` — CLI renderer
-- `tools/validate-patterns.js` — library validator
+- `tools/validate-patterns.js` — library + style guide validator
+- `tools/style-table.js` — prints the style table below from the library
 - `test/` — engine tests (node:test, no deps)
 - `device/` — future `.amxd` / `.maxpat` home
 
@@ -98,13 +108,19 @@ automatically) and an `_approach` note explaining the idea behind it.
 
 Velocity 0 = silence. Roles map to notes via `mapping-default.json`, so the
 same library works on any drum rack layout. Velocity >= 90 is an accent and
-always fires; weaker hits are thinned by the density dial.
+always fires; weaker hits are thinned by the density dial. Optional fields:
+`bpm` (tempo hint), `_approach` (the idea + reference tracks, shown in the
+UI), `_sources` (URLs the pattern is grounded in). Use at most one section
+tag — `fill`, `riser` or `breakdown`.
 
 ## Roadmap
 
 1. ~~Engine v2: ticks, durations, chokes, role-scoped ghosts, fills, seeding~~
 2. ~~CLI -> .mid renderer + tests~~
-3. Seed library: 8-10 patterns + 2-3 fills per style (jungle, dnb, techno)
+3. ~~Seed library: UK bass styles, then the 2025–28 wave (afro house, 3-step,
+   amapiano, baile funk, jersey club, phonk, krushclub, dariacore, hard /
+   hyper / melodic techno, trance, hard trance, jazz house) with risers,
+   breakdowns and per-style sound / drum-machine guides~~
 4. Velocity/timing humanization profiles per style
 5. M4L device on `v8`: params UI, Live API clip writing
 6. Markov transitions between patterns within a style

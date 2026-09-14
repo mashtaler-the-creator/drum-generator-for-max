@@ -1,0 +1,23 @@
+{
+  "id": "hypertechno_big_clap_four_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["four-beat-clap","clap","festival"],
+  "_approach": "Festival variant: a clap on every beat glued to the kick (the four-beat clap borrowed from hard dance and Phase Fatale-style peak techno), snare layered under 2 and 4, offbeat open hats and quiet closed 16ths. A 16th clap pre-hit closes bar 2. Reference: Creeds 'Push Up', HBz remixes.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/hypnotic-techno-inspired-by-phase-fatales-love-is-destructive/","https://soundplate.com/what-is-hypertechno-genre-guide/"],
+  "tracks": {
+    "kick":      [122,0,0,0, 122,0,0,0, 122,0,0,0, 122,0,0,0,
+                  122,0,0,0, 122,0,0,0, 122,0,0,0, 122,0,0,0],
+    "perc":      [104,0,0,0, 104,0,0,0, 104,0,0,0, 104,0,0,0,
+                  104,0,0,0, 104,0,0,0, 104,0,0,0, 108,0,0,78],
+    "snare":     [0,0,0,0, 66,0,0,0, 0,0,0,0, 66,0,0,0,
+                  0,0,0,0, 66,0,0,0, 0,0,0,0, 66,0,0,0],
+    "openHat":   [0,84,0,84, 0,84,0,84, 0,84,0,84, 0,84,0,84,
+                  0,84,0,84, 0,84,0,84, 0,84,0,84, 0,84,0,84],
+    "hihat":     [0,50,0,50, 0,50,0,50, 0,50,0,50, 0,50,0,50,
+                  0,52,0,52, 0,52,0,52, 0,52,0,52, 0,52,0,52]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "style": "hypertechno",
+  "name": "Hypertechno",
+  "family": "internet",
+  "bpm": [145, 160],
+  "swing": "0–0.12",
+  "summary": "Hard-techno-derived 4/4 kick at 145–160 with the energy moved onto the offbeat 8th: a monolithic sidechained bass stab (often a hardstyle reverse bass) and an open hat between every kick, a big clean clap on 2 and 4 (or every beat) with eurodance flams, and punchy, undistorted drums built for phone speakers. Unlike hard techno it keeps pop structure and uses hard-dance snare rolls, clap-doubling builds, kick drop-outs and half-bar silences before the drop.",
+  "sounds": {
+    "kick": "Clean, short, clicky peak-time techno kick (909 layered with a sine sub, or a designed Kick 2 kick) hard-clipped rather than distortion-stacked; the offbeat bass owns the low end between hits.",
+    "snare": "Big 909+808 clap stack with a short room as the signature backbeat, a 2000s dance snare (909 / Alesis SR-16) doubling it in choruses, a bright pitched snare for rolls, 909/707 rim for pickup skips.",
+    "hats": "909 open hat on every offbeat 8th (hands-up heritage), clean 909/707 closed 16ths between with the offbeat 16th emphasised, Korg EMX hats for a brighter synthetic edge; bright and uncompressed.",
+    "percussion": "Synthetic 909/Simmons toms for eurodance bounce and tom-fall risers, 16th shaker or tambourine in the peak-time lane, Virus TI noise impacts; almost no organic percussion.",
+    "cymbals": "Crash on every drop downbeat and phrase start; soft ride 8ths only in the peak-time-derived lane."
+  },
+  "machines": [
+    "Roland TR-909 — kick base, clap, open/closed hats, toms, ride (owned)",
+    "Roland TR-808 — clap layer under the 909 clap (owned)",
+    "Roland TR-707 — clean closed hats and rim (owned)",
+    "Alesis SR-16 / D4 — 2000s dance snare layer for choruses (owned)",
+    "Yamaha RX11 — bright pitched snare for snare-roll builds (owned)",
+    "Korg Electribe EMX — bright synthetic hats and claps (owned)",
+    "Simmons SDS — synthetic toms for the eurodance bounce and tom-fall risers (owned)",
+    "Novation Drumstation / Quasimidi 309 — clicky 909-style kicks and rave claps (owned)",
+    "Virus TI — noise sweeps and impact hits for drops (owned)",
+    "Sonic Academy Kick 2 — designed clean kicks used in most tutorials (get elsewhere)"
+  ],
+  "references": [
+    "Bennett — Vois sur ton chemin (Techno Mix) (2023)",
+    "Niklas Dee, Luca-Dante Spadafora & Octavian — Mädchen auf dem Pferd (Techno Mix) (2023)",
+    "Creeds — Push Up (2021)",
+    "1 World, Coolio & Holy Priest — Gangsta's Paradise (2024)",
+    "HBz — Oh Ah (2023)",
+    "Macon — Snap (2023)"
+  ],
+  "doc": "docs/styles/hypertechno.md"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "melodic_techno_anyma_burst_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["anyma","bursts","rim","big-clap"],
+  "_approach": "Anyma-style rhythmic bursts: two-16th rim/snap bursts on the ends of beats 2 and 4 (the 'FM base shot + perc snap' idea) fill the gaps a gated lead leaves, over kick 4/4, a big clap, offbeat closed hats and open hats only in bar 2. Reference: Anyma 'Genesys', Anyma & Chris Avantgarde 'Consciousness'.",
+  "_sources": ["https://theproducerschool.com/blogs/featured-blogs/how-to-make-melodic-techno-like-anyma-2025","https://www.edmprod.com/how-to-make-melodic-techno/"],
+  "tracks": {
+    "kick":      [112,0,0,0, 112,0,0,0, 112,0,0,0, 112,0,0,0,
+                  112,0,0,0, 112,0,0,0, 112,0,0,0, 112,0,0,0],
+    "perc":      [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0,
+                  0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0],
+    "rim":       [0,0,0,0, 0,0,72,84, 0,0,0,0, 0,0,72,86,
+                  0,0,70,82, 0,0,72,84, 0,0,78,0, 0,0,72,86],
+    "clave":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,60,0,0, 0,0,0,0],
+    "hihat":     [0,72,0,72, 0,72,0,72, 0,72,0,72, 0,72,0,72,
+                  0,72,0,72, 0,72,0,72, 0,72,0,72, 0,72,0,72],
+    "openHat":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,70,0,70, 0,70,0,70, 0,70,0,70, 0,70,0,70]
+  }
+}

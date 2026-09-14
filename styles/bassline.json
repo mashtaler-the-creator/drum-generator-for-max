@@ -1,0 +1,32 @@
+{
+  "style": "bassline",
+  "name": "Bassline / Niche / UK 4x4",
+  "family": "uk-bass",
+  "bpm": [138, 142],
+  "swing": "0.05–0.26",
+  "summary": "Relentless four-to-the-floor kick at 138–142 with a huge clap/snare on 2 and 4, open hats on every offbeat and closed hats on the syncopated 16ths between them — swung hard in the Niche era, near-straight in the modern warehouse style. Drums stay punchy and sparse because the warped bass carries the groove; character comes from hat contour, rim ghosts, conga/tambourine layers and the signature snare rushes at phrase turnarounds.",
+  "sounds": {
+    "kick": "Tight 909-style kick pitched up a semitone and shortened to half a beat so it clears the sub; EQ-notched at the snare fundamental.",
+    "snare": "Clap on 2 and 4 with a lower snare layered ~4 dB under it; a tight, short snare for 16th/32nd rushes; rim under the clap for snap.",
+    "hats": "Loud offbeat open hat (the bounce anchor), skippy closed 16ths with aggressive accent contour; a quiet ride can shadow the open hat.",
+    "percussion": "Shaker and tambourine for the Niche shuffle, congas on organ tunes, a breakbeat pitched +5 with kicks removed for ghost-snare shuffle.",
+    "cymbals": "Crash on drops and 8-bar markers; ride as a metallic offbeat in the dark modern lane."
+  },
+  "machines": [
+    "Roland TR-909 — kick, clap and open hat (owned)",
+    "Roland TR-808 — clap/snare layer and cowbell (owned)",
+    "Korg M1 drums — the organ-bassline era kit (owned)",
+    "Akai MPC2000 / MPC3000 — chopping and swing for Niche-era tunes (owned)",
+    "Breakbeat libraries — pitched-up break for ghost snares (owned)",
+    "Modern layered clap/snare packs (Vengeance-style, Crucast-adjacent) (get elsewhere)"
+  ],
+  "references": [
+    "T2 feat. Jodie Aysha — Heartbroken (2007)",
+    "DJ Q feat. MC Bonez — You Wot! (2008)",
+    "H \"Two\" O feat. Platnum — What's It Gonna Be (2008)",
+    "TQD — Vibsing Ting (2016)",
+    "Holy Goof — Getting Down (2016)",
+    "Skepsis — Goes Like (2018)"
+  ],
+  "doc": "docs/styles/bassline.md"
+}

@@ -1,0 +1,35 @@
+{
+  "style": "ukg",
+  "name": "UK Garage / 2-Step",
+  "family": "uk-bass",
+  "bpm": [128, 136],
+  "swing": "0.13–0.26",
+  "summary": "2-step kick on 1 plus syncopated 16ths (beat 3 left empty), snare or clap locked to 2 and 4, and swung 16th hats with heavy MPC-style accent contour. Rim ghosts, skippy kicks and offbeat open hats fill the pocket; the modern revival tightens the swing, weights the kick and adds ascending rim runs.",
+  "sounds": {
+    "kick": "Short, punchy MPC/909-style kick, often pitched up 2–3 semitones so the sub-bass owns the low end; classic tracks add a deeper 808 kick as a second layer.",
+    "snare": "Composite snare: a snappy electronic layer (Alesis-style) plus an 808 snare pitched up for crack, or a clap+snare stack; rim shots (707/808-style, one reverbed) carry the skips.",
+    "hats": "Short closed hat with the attack softened, a slightly longer hat or cabasa for offbeats, open hat between closed and open in decay; MPC swing 60–69%.",
+    "percussion": "Live-sounding shaker and tambourine with real velocity contour, congas for the organic lane, chopped Amen slices in the revival.",
+    "cymbals": "One crash at phrase starts only; ride rarely, and then quiet and high-passed."
+  },
+  "machines": [
+    "Akai MPC60 / MPC3000 — the swing engine and sample chopper of classic 2-step (owned)",
+    "Roland TR-909 — kick and open hat foundation (owned)",
+    "Roland TR-808 — pitched-up snare/clap layer, deep kick layer (owned)",
+    "Roland TR-707 — snappy kick/rim layer (owned)",
+    "LinnDrum / Sequential DrumTraks — 80s-machine snares and claps cited in Attack's dissection (owned)",
+    "Korg M1 drums — the organ-era garage kit (owned)",
+    "Alesis DM5 — snappy composite snare layer (get elsewhere)",
+    "Ensoniq EPS — Todd Edwards' sampler; approximate with Akai S900 (owned) 12-bit crunch",
+    "Breakbeat libraries (Amen) — sliced and re-pitched in revival garage (owned)"
+  ],
+  "references": [
+    "MJ Cole — Sincere (1998)",
+    "Artful Dodger feat. Craig David — Re-Rewind (1999)",
+    "Wookie — Battle (2000)",
+    "Todd Edwards — Saved My Life (1995)",
+    "Zed Bias — Neighbourhood (2000)",
+    "Interplanetary Criminal — B.O.T.A. (Baddest Of Them All) (2022)"
+  ],
+  "doc": "docs/styles/ukg.md"
+}

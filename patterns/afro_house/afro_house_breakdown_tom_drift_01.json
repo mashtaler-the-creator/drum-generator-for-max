@@ -1,0 +1,25 @@
+{
+  "id": "afro_house_breakdown_tom_drift_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 121,
+  "tags": ["breakdown","tom-loop","sparse"],
+  "_approach": "The Black Coffee tom loop left alone: one kick on the downbeat of bar 1, then the low tom 8th pulse, a single mid-tom shot, rim backbeat and a shaker that thins out in the second half of bar 2 - low density, ready for a build.",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-afro-house-like-black-coffee-complete-tutorial"
+  ],
+  "tracks": {
+    "kick":  [104,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+             0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomLow":[63,0,52,0, 61,0,50,0, 64,0,53,0, 62,0,51,0,
+             60,0,54,0, 63,0,52,0, 61,0,50,0, 94,85,53,0],
+    "tomMid":[0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+             0,0,0,0, 0,0,84,0, 0,0,0,0, 0,0,0,0],
+    "rim":   [0,0,0,0, 72,0,0,0, 0,0,0,0, 73,0,0,0,
+             0,0,0,0, 74,0,0,0, 0,0,0,0, 70,0,0,0],
+    "shaker":[80,54,61,53, 78,52,64,51, 81,50,62,54, 79,53,60,52,
+             82,51,63,50, 80,54,61,53, 78,52,64,51, 0,0,0,0]
+  }
+}

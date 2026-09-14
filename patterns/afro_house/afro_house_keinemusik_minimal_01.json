@@ -1,0 +1,28 @@
+{
+  "id": "afro_house_keinemusik_minimal_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 122,
+  "tags": ["melodic","minimal","keinemusik"],
+  "_approach": "The melodic/European strand where pads carry as much as percussion: only four drum parts. 4x4 kick, clap layered with rim on 2 and 4, a soft full 16th shaker, offbeat open hats and a single low-conga phrase at the end of the second bar. Orphiq: count the percussion parts in a Keinemusik record - the number is smaller than it sounds. Ref: Keinemusik 'Muyè' (2020), Adam Port 'Move' (2024).",
+  "_sources": [
+    "https://orphiq.com/resources/what-is-afro-house",
+    "https://www.beatportal.com/articles/647491-step-by-step-guide-to-creating-an-afro-house-track-keinemusik-black-coffee-caiiro-alex-wann-style"
+  ],
+  "tracks": {
+    "kick":    [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0,
+               106,0,0,0, 104,0,0,0, 107,0,0,0, 105,0,0,0],
+    "perc":    [0,0,0,0, 85,0,0,0, 0,0,0,0, 86,0,0,0,
+               0,0,0,0, 87,0,0,0, 0,0,0,0, 88,0,0,0],
+    "rim":     [0,0,0,0, 64,0,0,0, 0,0,0,0, 60,0,0,0,
+               0,0,0,0, 61,0,0,44, 0,0,0,0, 62,0,0,0],
+    "shaker":  [64,51,53,42, 62,54,51,45, 60,52,54,43, 63,50,52,46,
+               61,53,50,44, 64,51,53,42, 62,54,51,45, 60,52,54,43],
+    "openHat": [0,0,71,0, 0,0,74,0, 0,0,72,0, 0,0,70,0,
+               0,0,73,0, 0,0,71,0, 0,0,74,0, 0,0,72,0],
+    "congaLow":[0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,62,0, 0,53,0,72]
+  }
+}

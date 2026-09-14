@@ -1,0 +1,25 @@
+{
+  "id": "melodic_techno_afterlife_drive_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["afterlife","offbeat-open-hat","16th-shaker","canonical"],
+  "_approach": "The Afterlife-era default: restrained 4/4 kick, tight clap on 2 and 4, open hat on every offbeat 8th, constant 16th closed hats with the offbeat emphasised (EDMProd's 'signature' melodic techno hat) and a rolling 16th shaker with a 4-step velocity contour. Bar 2 adds a clap ghost and a rim skip. Reference: Tale Of Us 'Monument', Anyma & Chris Avantgarde 'Eternity'.",
+  "_sources": ["https://www.edmprod.com/how-to-make-melodic-techno/","https://www.beatportal.com/articles/899368-step-by-step-guide-to-creating-a-melodic-house-techno-track-anyma-miss-monique-artbat-stephan-bodzin","https://blog.native-instruments.com/melodic-techno/"],
+  "tracks": {
+    "kick":      [110,0,0,0, 110,0,0,0, 110,0,0,0, 110,0,0,0,
+                  110,0,0,0, 110,0,0,0, 110,0,0,0, 110,0,0,0],
+    "perc":      [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+                  0,0,0,0, 96,0,0,0, 0,0,0,32, 96,0,0,0],
+    "openHat":   [0,74,0,74, 0,74,0,74, 0,74,0,74, 0,74,0,74,
+                  0,74,0,74, 0,74,0,74, 0,74,0,74, 0,74,0,74],
+    "hihat":     [48,40,72,44, 48,40,72,44, 48,40,72,44, 48,42,72,46,
+                  48,40,72,44, 48,40,72,44, 48,42,72,46, 50,44,74,50],
+    "shaker":    [66,50,58,52, 68,50,60,54, 66,50,58,52, 70,54,62,58,
+                  66,50,58,52, 68,50,60,54, 68,52,60,54, 72,56,64,60],
+    "rim":       [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,40, 0,0,0,0, 0,0,0,0]
+  }
+}

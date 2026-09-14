@@ -1,0 +1,32 @@
+{
+  "style": "ukfunky",
+  "name": "UK Funky",
+  "family": "uk-bass",
+  "bpm": [125, 132],
+  "swing": "0.05–0.20",
+  "summary": "Nominally four-on-the-floor house at ~130, defined by the kick breaking into tresillo syncopations for a bar and snapping back, under an Afro-Caribbean percussion engine of congas, cowbells, shakers and rims phrased in 3+3+2. Snares and claps borrow soca's engine-room chatter; hits are stabbing and punchy with a live velocity contour.",
+  "sounds": {
+    "kick": "Tight, punchy house kick (909-style) with a short tail; extra syncopated kicks at slightly lower velocity for momentum.",
+    "snare": "Crisp clap or clap+snare on 2 and 4, plus a soca-style tight snare for double-16th pickup rolls and offbeat chatter.",
+    "hats": "Syncopated offbeat closed hats and a choked open hat into the bar line; never a flat 16th carpet — the percussion does that job.",
+    "percussion": "Congas and bongos in call-and-response, cowbell on the tresillo, shakers, woodblock/clave, log-drum style low toms in the afro-swing lane.",
+    "cymbals": "Crash on phrase starts; ride uncommon."
+  },
+  "machines": [
+    "Roland TR-909 — kick and clap (owned)",
+    "Roland TR-727 — congas, bongos, agogo, whistle: the Latin percussion kit (owned)",
+    "Roland TR-808 — cowbell, conga and clave (owned)",
+    "LinnDrum / Oberheim DMX — sampled congas, tambourine and cabasa (owned)",
+    "Korg M1 drums and Roland MC-303 — cheap late-2000s preset kits close to the FL-era sound (owned)",
+    "Kontakt 'Laventille Rhythm Section' and Roska's UK Funky sample packs — soca steel-band percussion (get elsewhere)"
+  ],
+  "references": [
+    "Roska — Wonderful Day (2009)",
+    "Crazy Cousinz — Bongo Jam (2008)",
+    "Donae'o — Party Hard (2009)",
+    "Lil Silva — Seasons (2008)",
+    "Apple — Mr. Bean (2008)",
+    "Hard House Banton — Sirens (2009)"
+  ],
+  "doc": "docs/styles/ukfunky.md"
+}

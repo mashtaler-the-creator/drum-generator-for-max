@@ -1,0 +1,27 @@
+{
+  "id": "melodic_techno_riser_tom_cascade_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["riser","toms","cascade"],
+  "_approach": "Tom cascade: high toms on the beats and mid toms on the offbeats in bar 1, then in bar 2 the high tom takes 8ths for two beats, the mid tom rolls 16ths for a beat and the low tom rolls to 127 through beat 4 with a crash. Kick 4/4, clap 2 and 4, offbeat open hats.",
+  "_sources": ["https://youtu.be/nA766ZJTPGw","https://www.edmprod.com/ultimate-guide-build-ups/"],
+  "tracks": {
+    "tomHigh":   [70,0,0,0, 74,0,0,0, 78,0,0,0, 82,0,0,0,
+                  84,0,88,0, 92,0,96,0, 0,0,0,0, 0,0,0,0],
+    "tomMid":    [0,0,66,0, 0,0,70,0, 0,0,74,0, 0,0,78,0,
+                  0,0,0,0, 0,0,0,0, 98,101,105,108, 0,0,0,0],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 110,116,121,127],
+    "kick":      [108,0,0,0, 108,0,0,0, 108,0,0,0, 108,0,0,0,
+                  108,0,0,0, 108,0,0,0, 108,0,0,0, 108,0,0,0],
+    "perc":      [0,0,0,0, 92,0,0,0, 0,0,0,0, 92,0,0,0,
+                  0,0,0,0, 92,0,0,0, 0,0,0,0, 92,0,0,0],
+    "openHat":   [0,68,0,68, 0,68,0,68, 0,68,0,68, 0,68,0,68,
+                  0,68,0,68, 0,68,0,68, 0,68,0,68, 0,68,0,68],
+    "crash":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,110]
+  }
+}

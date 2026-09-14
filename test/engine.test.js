@@ -185,3 +185,29 @@ test("seeded render still deterministic with all humanization on", () => {
   const b = render(state, 8, { fillPatterns: [fill], seed: 99 });
   assert.deepStrictEqual(a, b);
 });
+
+// --- pattern-loader: sections & fills ---------------------------------------
+const loader = require("../js/pattern-loader");
+
+test("sectionOf: fill/riser/breakdown tags decide the section, else groove", () => {
+  assert.strictEqual(loader.sectionOf({ tags: ["amen", "break"] }), "groove");
+  assert.strictEqual(loader.sectionOf({ tags: ["fill", "snare"] }), "fill");
+  assert.strictEqual(loader.sectionOf({ tags: ["riser"] }), "riser");
+  assert.strictEqual(loader.sectionOf({ tags: ["breakdown"] }), "breakdown");
+  assert.strictEqual(loader.sectionOf({}), "groove");
+});
+
+test("fillsFor: same style, tagged fill, never the pattern itself", () => {
+  const all = [
+    { id: "a_groove", style: "a", tags: [] },
+    { id: "a_fill", style: "a", tags: ["fill"] },
+    { id: "a_riser", style: "a", tags: ["riser"] },
+    { id: "b_fill", style: "b", tags: ["fill"] },
+  ];
+  assert.deepStrictEqual(loader.fillsFor(all, all[0]).map((p) => p.id), ["a_fill"]);
+  assert.deepStrictEqual(loader.fillsFor(all, all[1]).map((p) => p.id), []);
+});
+
+test("loadStyleGuidesFromDisk: missing dir yields empty object", () => {
+  assert.deepStrictEqual(loader.loadStyleGuidesFromDisk(path.join(__dirname, "no-such-dir")), {});
+});

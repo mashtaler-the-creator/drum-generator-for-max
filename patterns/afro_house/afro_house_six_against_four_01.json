@@ -1,0 +1,28 @@
+{
+  "id": "afro_house_six_against_four_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 122,
+  "tags": ["polyrhythm","6-against-4","conga"],
+  "_approach": "Polyrhythm construction from the Samplesound groove lesson: the high percussion accents every third 16th (groups of 3-3-3-3-4) so six accents cross the four straight kicks, while the shaker keeps a plain 8th pulse as the reference. In bar 2 the 3-grouping migrates to the clave and the conga fills the gaps. Ref: &ME 'Solaris' (2019), Rampa 'Necesito' (2020).",
+  "_sources": [
+    "https://www.samplesoundmusic.com/blogs/academy/how-to-write-an-afro-house-groove-pt-1",
+    "https://orphiq.com/resources/what-is-afro-house"
+  ],
+  "tracks": {
+    "kick":     [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0,
+                106,0,0,0, 104,0,0,0, 107,0,0,0, 105,0,0,0],
+    "congaHigh":[93,50,52,94, 51,53,90,52, 54,91,53,50, 92,54,51,53,
+                0,0,64,0, 0,60,0,0, 61,0,0,62, 0,0,63,0],
+    "clave":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                93,0,0,94, 0,0,90,0, 0,91,0,0, 92,0,0,0],
+    "shaker":   [82,0,63,0, 80,0,61,0, 78,0,64,0, 81,0,62,0,
+                79,0,60,0, 82,0,63,0, 80,0,61,0, 78,0,64,0],
+    "perc":     [0,0,0,0, 60,0,0,0, 0,0,0,0, 61,0,0,0,
+                0,0,0,0, 62,0,0,0, 0,0,0,0, 63,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 71,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 73,0,0,0, 0,0,60,0]
+  }
+}

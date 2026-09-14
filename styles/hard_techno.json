@@ -1,0 +1,36 @@
+{
+  "style": "hard_techno",
+  "name": "Hard Techno",
+  "family": "techno",
+  "bpm": [145, 160],
+  "swing": "0",
+  "summary": "Short distorted 4/4 kick with a sidechained rumble tail that pumps on the offbeats, sharp offbeat hi-hats kept under 70% velocity, a 909 ride in loud/soft 8ths and schranz-style compressed percussion loops; snares are optional and often off 2 and 4. Energy moves through sudden drop-outs and re-entries rather than long builds, the offbeat double-kick gallop and three-bar polymeters add drive, and swing is zero.",
+  "sounds": {
+    "kick": "Short, pitch-enveloped, hard-clipped kick (909 or LinnDrum plus sine sub, or Jomox analogue) with the rumble built as a parallel reverb+distortion return low-passed at 150 Hz and sidechained; mono below 150 Hz.",
+    "snare": "Noise-synth or 909 snare on 2 and 4 for the industrial lane, 808 snare pitched down an octave for offbeat 16th placements, tuned 909 rims at bar starts, huge stacked rave claps for call-and-response rolls.",
+    "hats": "909 closed hat (often resampled 12-bit through an SP-1200) low-passed with drive and never above 70%, compressed 909 open hat on the offbeats, 909 ride high-passed above 1 kHz and sidechained to the kick.",
+    "percussion": "Compressed, filtered 16th rim/conga/clave loops (schranz), bitcrushed low toms ducked around the kick, metallic clanks and found sound, high-passed shakers, Simmons/909 toms for cascades.",
+    "cymbals": "One crash on the drop; the ride is a groove element, not a wash."
+  },
+  "machines": [
+    "Roland TR-909 — kick base layer, snare, rim, closed/open hat, ride (owned)",
+    "LinnDrum — heavily compressed/overdriven kick in Attack's Thumping Techno dissection (owned)",
+    "Roland TR-808 — snare pitched down an octave, low tom for bitcrushing (owned)",
+    "E-mu SP-1200 — 12-bit resampling of 909 hats and toms for industrial grit (owned)",
+    "Jomox Xbase09 / Mbase01 — analogue punchy kick with pitch sweep; I Hate Models used a Jomox Xbase 999 (owned)",
+    "Elektron Machinedrum / Korg Electribe ER-1 — synthesised metallic percussion and hats for schranz loops (owned)",
+    "Roland TR-727 / TR-505 — congas and claves to filter and compress into loops (owned)",
+    "Novation Drumstation / Quasimidi 309 — period rave claps and 909-style kicks (owned)",
+    "Simmons SDS — synthetic toms for cascade risers (owned)",
+    "Sonic Academy Kick 2 — synthesised main kick most 2020s producers design from scratch (get elsewhere)"
+  ],
+  "references": [
+    "Sara Landry — Lord of the Land (2022)",
+    "Alt8 & Sara Landry — Heaven (2024)",
+    "I Hate Models — Daydream (2017)",
+    "Klangkuenstler & Sant — Toter Schmetterling (2024)",
+    "999999999 — No Sleep (2019)",
+    "Marco Leckbert — Schranz Will Never Die (2024)"
+  ],
+  "doc": "docs/styles/hard_techno.md"
+}

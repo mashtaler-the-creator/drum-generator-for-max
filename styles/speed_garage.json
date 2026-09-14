@@ -1,0 +1,33 @@
+{
+  "style": "speed_garage",
+  "name": "Speed Garage",
+  "family": "uk-bass",
+  "bpm": [135, 140],
+  "swing": "0.10–0.28",
+  "summary": "US garage house at UK rave pressure: a heavy four-to-the-floor kick (occasionally doubled or skipped into a 2-step lurch), snare/clap slamming 2 and 4 with skippy low-velocity snare bounces, and shuffling syncopated 16th hats where all the swing lives. Open hats sit on every 8th-note offbeat and everything leaves room for the warped jungle-derived sub-bass.",
+  "sounds": {
+    "kick": "Deep, housey 909-style kick with a short tail and light drive; punchy rather than subby so the Reese/sub bass carries the low end.",
+    "snare": "Big 909 snare or clap on the backbeat plus a second skippy snare (lower, shorter) for the bounces; 12-bit SP-1200 crunch is period-correct.",
+    "hats": "909 open hat on the offbeats (often bit-reduced), short closed 16ths with a strong e-and-a accent contour, swung 60–65%.",
+    "percussion": "Shaker under the hats, tambourine offbeats and congas for the US-house lane, high-passed breakbeat loops for grit.",
+    "cymbals": "Crash on drop entrances and section markers; a bright ride for peak-time variations."
+  },
+  "machines": [
+    "E-mu SP-1200 — the drum sampler behind Double 99 'RipGroove' (owned)",
+    "Roland TR-909 — kick, snare, clap and open hat foundation (owned)",
+    "Roland TR-808 — clap layer and deeper kick layer (owned)",
+    "Akai S900 / MPC60 — 12-bit sampling and swing for the '97 sound (owned)",
+    "Korg M1 drums — organ-tune era kit (owned)",
+    "Jungle/breakbeat libraries — high-passed break loops as texture (owned)",
+    "Vinyl-texture and noise samples for glue (get elsewhere)"
+  ],
+  "references": [
+    "Double 99 — RipGroove (1997)",
+    "187 Lockdown — Gunman (1997)",
+    "Sneaker Pimps — Spin Spin Sugar (Armand Van Helden Dark Garage Mix) (1997)",
+    "Tuff Jam — Need Good Love (1997)",
+    "Serious Danger — Deeper (1997)",
+    "Interplanetary Criminal — Supreme Level (2021)"
+  ],
+  "doc": "docs/styles/speed_garage.md"
+}

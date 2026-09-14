@@ -1,0 +1,23 @@
+{
+  "id": "bassline_breakdown_offbeat_float_01",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.05,
+  "tags": ["breakdown","stripped","modern","warehouse","minimal"],
+  "_approach": "Modern warehouse breakdown: only the dominant offbeat open hat survives, a closed hat answers on a couple of 'a' pickups, one soft kick on the downbeat of bar 1 keeps a pulse in the room, and a single clap closes bar 2. Everything else is left to the filtered bass. Ref: TQD 'Vibsing Ting', Skepsis 'Goes Like' breakdowns.",
+  "_sources": ["https://www.edmprod.com/how-to-make-bass-house/","https://www.musicradar.com/how-to/bassline-house-production-tips"],
+  "tracks": {
+    "kick":    [76,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "openHat": [0,0,78,0, 0,0,80,0, 0,0,78,0, 0,0,82,0,
+                0,0,80,0, 0,0,82,0, 0,0,80,0, 0,0,84,0],
+    "hihat":   [0,0,0,0, 0,0,0,54, 0,0,0,0, 0,0,0,58,
+                0,0,0,0, 0,0,0,56, 0,0,0,50, 0,0,0,60],
+    "perc":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 98,0,0,0],
+    "rim":     [0,0,0,0, 0,0,0,0, 0,32,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,34,0,0, 0,0,36,0]
+  }
+}

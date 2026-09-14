@@ -1,0 +1,29 @@
+{
+  "id": "melodic_techno_breakdown_clap_reverb_01",
+  "style": "melodic_techno",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["breakdown","clap","reverb","4-bar"],
+  "_approach": "Four bars of near-silence: a huge hall-reverb clap on beat 2 of bars 1 and 3, a clap on 2 and 4 of bar 4, very soft 16th closed hats throughout, a low tom on beat 3 of bar 3 and one open hat in bar 4. Sparse clap placement lets the reverb tail become the rhythm (Attack's Deep & Melodic approach).",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/deep-melodic-progressive-techno/","https://www.beatportal.com/articles/899368-step-by-step-guide-to-creating-a-melodic-house-techno-track-anyma-miss-monique-artbat-stephan-bodzin"],
+  "tracks": {
+    "perc":      [0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 96,0,0,0, 0,0,0,0, 88,0,0,0],
+    "hihat":     [28,34,40,34, 28,34,40,34, 28,34,40,34, 28,34,40,34,
+                  28,34,40,34, 28,34,40,34, 28,34,40,34, 28,34,40,34,
+                  30,36,40,36, 30,36,40,36, 30,36,40,36, 30,36,40,36,
+                  30,36,42,38, 30,36,42,38, 30,36,42,38, 30,36,42,38],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 60,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "openHat":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,56,0]
+  }
+}

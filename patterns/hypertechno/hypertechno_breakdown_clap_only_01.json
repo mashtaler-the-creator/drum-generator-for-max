@@ -1,0 +1,17 @@
+{
+  "id": "hypertechno_breakdown_clap_only_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["breakdown","clap","no-kick"],
+  "_approach": "Vocal-breakdown drums: kick removed, a reverbed clap on 2 and 4 and barely-there offbeat closed hats - the space under the pitched-up hook before the snare roll. Bar 2 adds a ghost clap pickup.",
+  "_sources": ["https://soundplate.com/what-is-hypertechno-genre-guide/","https://www.edmprod.com/ultimate-guide-build-ups/"],
+  "tracks": {
+    "perc":      [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+                  0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,40],
+    "hihat":     [0,46,0,46, 0,46,0,46, 0,46,0,46, 0,46,0,46,
+                  0,46,0,46, 0,46,0,46, 0,46,0,46, 0,46,0,46]
+  }
+}

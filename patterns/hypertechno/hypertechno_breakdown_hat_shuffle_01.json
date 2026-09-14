@@ -1,0 +1,19 @@
+{
+  "id": "hypertechno_breakdown_hat_shuffle_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 150,
+  "tags": ["breakdown","shuffle","hats","no-kick"],
+  "_approach": "No kick; a swung 16th closed-hat pattern with the offbeat 8th accented plus a soft shaker carry the bounce alone, clap on 2 and 4 in bar 1 thinning to beat 4 only in bar 2. The groove survives the drop-out because the hats hold the shuffle.",
+  "_sources": ["https://rateyourmusic.com/genre/hypertechno/","https://www.edmprod.com/ultimate-guide-build-ups/"],
+  "tracks": {
+    "hihat":     [0,44,92,48, 0,44,92,48, 0,44,92,48, 0,46,92,52,
+                  0,44,92,48, 0,44,92,48, 0,46,92,50, 0,48,92,56],
+    "perc":      [0,0,0,0, 84,0,0,0, 0,0,0,0, 84,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0],
+    "shaker":    [40,0,48,0, 40,0,48,0, 40,0,48,0, 40,0,48,0,
+                  40,0,48,0, 40,0,48,0, 40,0,48,0, 40,0,48,0]
+  }
+}

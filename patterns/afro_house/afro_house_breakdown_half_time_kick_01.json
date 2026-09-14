@@ -1,0 +1,26 @@
+{
+  "id": "afro_house_breakdown_half_time_kick_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 122,
+  "tags": ["breakdown","half-time","sparse"],
+  "_approach": "Half-time floor: the kick only marks beats 1 and 3 in bar 1 and just beat 1 in bar 2, so the room opens up while a soft 16th shaker, rim backbeat and sparse low conga keep the pulse legible. Orphiq's 'arrangement by subtraction' applied to the kick.",
+  "_sources": [
+    "https://orphiq.com/resources/what-is-afro-house",
+    "https://www.beatportal.com/articles/647491-step-by-step-guide-to-creating-an-afro-house-track-keinemusik-black-coffee-caiiro-alex-wann-style"
+  ],
+  "tracks": {
+    "kick":    [104,0,0,0, 0,0,0,0, 105,0,0,0, 0,0,0,0,
+               106,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "shaker":  [63,50,52,46, 61,53,50,44, 64,51,53,42, 62,54,51,45,
+               60,52,54,43, 63,50,52,46, 61,53,50,44, 64,51,53,42],
+    "rim":     [0,0,0,0, 74,0,0,0, 0,0,0,0, 70,0,0,0,
+               0,0,0,0, 71,0,0,0, 0,0,0,0, 72,0,0,0],
+    "congaLow":[0,0,0,0, 0,0,51,0, 0,0,0,0, 53,0,52,0,
+               0,0,0,0, 0,0,53,0, 0,0,0,0, 50,0,64,0],
+    "openHat": [0,0,0,0, 0,0,64,0, 0,0,0,0, 0,0,60,0,
+               0,0,0,0, 0,0,61,0, 0,0,0,0, 0,0,62,0]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "melodic_techno_breakdown_hats_shaker_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["breakdown","open-hat","shaker","no-kick"],
+  "_approach": "Kick removed; offbeat open hats and the rolling 16th shaker carry the groove under the pads, a single reverbed clap on beat 2 of bar 2 and a rim ghost. The default Afterlife breakdown bed.",
+  "_sources": ["https://www.beatportal.com/articles/899368-step-by-step-guide-to-creating-a-melodic-house-techno-track-anyma-miss-monique-artbat-stephan-bodzin","https://blog.native-instruments.com/melodic-techno/"],
+  "tracks": {
+    "openHat":   [0,90,0,90, 0,90,0,90, 0,90,0,90, 0,90,0,90,
+                  0,90,0,90, 0,90,0,90, 0,90,0,90, 0,90,0,90],
+    "shaker":    [64,48,58,50, 66,48,60,52, 64,48,58,50, 68,52,62,56,
+                  64,48,58,50, 66,48,60,52, 66,50,60,52, 70,54,64,58],
+    "perc":      [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 84,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim":       [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,34, 0,0,0,0]
+  }
+}

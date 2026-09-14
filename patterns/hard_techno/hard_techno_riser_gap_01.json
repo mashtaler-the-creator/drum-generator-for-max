@@ -1,0 +1,21 @@
+{
+  "id": "hard_techno_riser_gap_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["riser","silence-gap","kick-16ths"],
+  "_approach": "Build-up-and-pause: bar 1 keeps the groove while claps climb the offbeats; bar 2 opens with half a bar of 16th kicks ramping up, then cuts to total silence for the second half - the awkward emptiness Attack calls 'build up and pause' - until a single kick+clap+crash slam on the last 16th before the drop.",
+  "_sources": ["https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/","https://www.edmprod.com/ultimate-guide-build-ups/"],
+  "tracks": {
+    "kick":      [118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0,
+                  100,103,107,110, 114,117,121,124, 0,0,0,0, 0,0,0,127],
+    "perc":      [0,0,70,0, 0,0,80,0, 0,0,90,0, 0,0,100,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "hihat":     [60,48,66,50, 60,48,66,50, 60,48,66,50, 60,48,66,50,
+                  80,80,80,80, 80,80,80,80, 0,0,0,0, 0,0,0,0],
+    "crash":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

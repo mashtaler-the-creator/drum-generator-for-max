@@ -1,0 +1,29 @@
+{
+  "id": "hypertechno_riser_clap_double_01",
+  "style": "hypertechno",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["riser","clap","compounding","4-bar"],
+  "_approach": "Compounding clap roll over four bars (EDMProd's 'doubling' build): quarters, 8ths, 16ths, then 16ths at full velocity with three 16th kicks under beat 4, open hats doubling in the final bar and a crash on the last step.",
+  "_sources": ["https://www.edmprod.com/ultimate-guide-build-ups/","https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/"],
+  "tracks": {
+    "perc":      [80,0,0,0, 83,0,0,0, 85,0,0,0, 88,0,0,0,
+                  88,0,89,0, 90,0,91,0, 93,0,94,0, 95,0,96,0,
+                  96,97,98,98, 99,100,101,102, 102,103,104,105, 106,106,107,108,
+                  108,109,111,112, 113,114,116,117, 118,119,121,122, 123,124,126,127],
+    "kick":      [120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0,
+                  120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0,
+                  120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0,
+                  120,0,0,0, 120,0,0,0, 120,0,0,0, 120,100,108,116],
+    "openHat":   [0,76,0,76, 0,76,0,76, 0,76,0,76, 0,76,0,76,
+                  0,76,0,76, 0,76,0,76, 0,76,0,76, 0,76,0,76,
+                  0,84,0,84, 0,84,0,84, 0,84,0,84, 0,84,0,84,
+                  80,80,80,80, 80,80,80,80, 80,80,80,80, 80,80,80,80],
+    "crash":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

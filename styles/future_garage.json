@@ -1,0 +1,32 @@
+{
+  "style": "future_garage",
+  "name": "Future Garage",
+  "family": "uk-bass",
+  "bpm": [125, 140],
+  "swing": "0.18–0.30",
+  "summary": "2-step garage filtered through Burial: hits placed by ear off the grid, rimshots, congas and clicky found sounds where a snare should be, and percussion treated as texture under rain and vinyl crackle. Velocity is fragile and constantly moving, hats are sparse and silence is structural.",
+  "sounds": {
+    "kick": "Rounded, soft-attack kick with a clicky hat layered for presence; low in the mix and never loud enough to break the mood.",
+    "snare": "Reverbed rimshot paired with a short spritely snare, or 'blocky, wooden' found-sound clicks; snare triples (ghost-then-accent) instead of flams.",
+    "hats": "Two very short hats (one closed, one slightly open) at low velocity, swung 55–65% or nudged off-grid by hand.",
+    "percussion": "Congas, bongos, clave-like ticks, finger clicks, lighter flicks, video-game FX; a heavily reverbed 'big perc' filling the empty final beat.",
+    "cymbals": "None as such — crackle, rain and reversed reverb tails do the cymbal's job."
+  },
+  "machines": [
+    "Roland TR-808 / TR-909 / LinnDrum rimshots — the backbone click (owned)",
+    "Roland CR-78 / Korg Minipops — soft woody clicks and brushes (owned)",
+    "Akai S900 / MPC60 — 12-bit resampling of found sounds (owned)",
+    "Breakbeat libraries — Amen/Think slices at low velocity for ghost skips (owned)",
+    "Sony Sound Forge grid-less workflow — Burial's actual tool; emulate with quantize off (get elsewhere)",
+    "Field recordings, vinyl crackle, rain and game-sound libraries (get elsewhere)"
+  ],
+  "references": [
+    "Burial — Distant Lights (2006)",
+    "Burial — Archangel (2007)",
+    "Burial — Ghost Hardware (2007)",
+    "Mount Kimbie — Carbonated (2011)",
+    "James Blake — CMYK (2010)",
+    "Burial — Near Dark (2007)"
+  ],
+  "doc": "docs/styles/future_garage.md"
+}

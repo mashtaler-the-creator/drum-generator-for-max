@@ -1,0 +1,23 @@
+{
+  "id": "melodic_techno_breakdown_perc_only_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": ["breakdown","congas","toms","no-kick","no-hats"],
+  "_approach": "Percussion only: low conga on beat 3 as the anchor, high congas on the a-of-1 and and-of-2, mid tom and rim details, a clave on the and-of-2 in bar 2. No kick, no hats - the tuned-percussion interlude before the build.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/deep-melodic-progressive-techno/","https://www.attackmagazine.com/technique/beat-dissected/ethereal-techno/"],
+  "tracks": {
+    "congaLow":  [0,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0],
+    "congaHigh": [0,0,0,76, 0,0,70,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,76, 0,0,70,0, 0,0,80,0, 0,0,0,0],
+    "tomMid":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,66,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,60,68,0],
+    "rim":       [0,0,0,0, 0,0,0,0, 0,0,0,44, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,44, 0,0,0,0],
+    "clave":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,72, 0,0,0,0, 0,0,0,0]
+  }
+}

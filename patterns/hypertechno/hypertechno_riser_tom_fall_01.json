@@ -1,0 +1,27 @@
+{
+  "id": "hypertechno_riser_tom_fall_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["riser","toms","cascade"],
+  "_approach": "Tom-fall build: alternating high/mid toms on the offbeat 16ths of bar 1, then in bar 2 the high tom rolls 16ths for half a bar, hands to the mid tom for a beat and the low tom finishes at 124 with a pickup kick and crash. Clap 2 and 4 and offbeat open hats stay put.",
+  "_sources": ["https://www.edmprod.com/ultimate-guide-build-ups/"],
+  "tracks": {
+    "tomHigh":   [0,0,72,0, 0,0,76,0, 0,0,80,0, 0,0,84,0,
+                  86,88,90,92, 94,96,98,100, 0,0,0,0, 0,0,0,0],
+    "tomMid":    [0,0,0,70, 0,0,0,74, 0,0,0,78, 0,0,0,82,
+                  0,0,0,0, 0,0,0,0, 102,104,106,108, 0,0,0,0],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 110,115,119,124],
+    "kick":      [120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0,
+                  120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,127],
+    "perc":      [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0,
+                  0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0],
+    "openHat":   [0,80,0,80, 0,80,0,80, 0,80,0,80, 0,80,0,80,
+                  0,80,0,80, 0,80,0,80, 0,80,0,80, 0,80,0,80],
+    "crash":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,122]
+  }
+}

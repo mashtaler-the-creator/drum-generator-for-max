@@ -1,0 +1,25 @@
+{
+  "id": "ukg_breakdown_rim_shuffle_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 133,
+  "swing": 0.22,
+  "tags": ["breakdown","stripped","rim","shuffle"],
+  "_approach": "The rim takes over the kick's 2-step placements (1, a-of-2, and-of-3) at decoration velocity so the shuffle is implied rather than stated; one soft kick on the downbeat of bar 1 keeps the low end alive, a quiet shaker rolls 16ths, and the snare only speaks on beat 4 of bar 2 as the accent. Ref: dark-garage breakdowns (El-B, Horsepower Productions).",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/uk-garage/","https://blog.native-instruments.com/uk-garage-music/"],
+  "tracks": {
+    "kick":    [72,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim":     [84,0,0,0, 0,0,0,70, 0,0,80,0, 0,0,0,30,
+                82,0,0,0, 0,0,0,72, 0,0,78,0, 0,32,0,0],
+    "snare":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 94,0,0,0],
+    "shaker":  [44,28,52,30, 46,28,54,32, 44,30,52,30, 48,32,56,34,
+                46,30,54,32, 48,30,56,34, 46,32,54,32, 50,34,58,36],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,62,0,
+                0,0,0,0, 0,0,64,0, 0,0,0,0, 0,0,0,0],
+    "hihat":   [0,0,0,0, 0,0,66,0, 0,0,0,0, 0,0,0,0,
+                0,0,68,0, 0,0,0,0, 0,0,70,0, 0,0,0,0]
+  }
+}

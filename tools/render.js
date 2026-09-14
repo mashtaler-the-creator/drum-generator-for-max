@@ -7,7 +7,8 @@
 //       --density 0.85 --ghosts 0.08 --seed 42 --out out/amen_8bars.mid
 //
 // All flags optional except --pattern. Fills are picked automatically from
-// patterns of the same style tagged "fill".
+// patterns of the same style tagged "fill" (grooves only — risers and
+// breakdowns render as-is).
 
 "use strict";
 
@@ -15,7 +16,7 @@ const fs = require("fs");
 const path = require("path");
 const { makeState, render } = require("../js/engine");
 const { eventsToMidi } = require("../js/midi-writer");
-const { loadAllFromDisk, findById, findByStyle } = require("../js/pattern-loader");
+const { loadAllFromDisk, findById, fillsFor, sectionOf } = require("../js/pattern-loader");
 
 function arg(name, fallback) {
   const i = process.argv.indexOf("--" + name);
@@ -31,8 +32,13 @@ function main() {
   const id = arg("pattern");
   if (!id) {
     console.log("Available patterns:");
-    for (const p of patterns) {
-      console.log(`  ${p.id}  [${p.style}]${(p.tags || []).includes("fill") ? " (fill)" : ""}`);
+    const styles = [...new Set(patterns.map((p) => p.style))].sort();
+    for (const style of styles) {
+      console.log(`\n[${style}]`);
+      for (const p of patterns.filter((x) => x.style === style)) {
+        const section = sectionOf(p);
+        console.log(`  ${p.id}${p.bpm ? "  " + p.bpm + " bpm" : ""}${section !== "groove" ? "  (" + section + ")" : ""}`);
+      }
     }
     console.log("\nUsage: node tools/render.js --pattern <id> [--preset tight|breaks|machine] [--bars 8] [--bpm 172] [--density 0.85] [--ghosts 0.08] [--humanize 6] [--hat-cycle 0.6] [--backbeat 8] [--vel-jitter 4] [--seed 42] [--out file.mid]");
     process.exit(1);
@@ -74,9 +80,8 @@ function main() {
 
   const state = makeState(pattern, mapping, overrides);
 
-  const fillPatterns = findByStyle(patterns, pattern.style).filter(
-    (p) => (p.tags || []).includes("fill") && p.id !== pattern.id
-  );
+  // Risers and breakdowns are self-contained sections: no fills injected.
+  const fillPatterns = sectionOf(pattern) === "groove" ? fillsFor(patterns, pattern) : [];
 
   const events = render(state, bars, {
     fillPatterns,

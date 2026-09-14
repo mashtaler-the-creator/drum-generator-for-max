@@ -1,0 +1,20 @@
+{
+  "id": "afro_house_fill_conga_turnaround_01",
+  "style": "afro_house",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.07,
+  "bpm": 122,
+  "tags": ["fill","conga","turnaround"],
+  "_approach": "One-bar conga turnaround: the floor holds while high and low congas trade a rising phrase through beats 3-4 and the clap doubles on the last beat - the 'extra hand-drum phrase every eighth bar' IQSounds recommends.",
+  "_sources": [
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick":     [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0],
+    "congaHigh":[0,0,62,0, 0,73,0,0, 82,0,87,0, 106,0,105,115],
+    "congaLow": [0,0,0,0, 0,0,0,0, 72,0,85,0, 96,0,108,0],
+    "shaker":   [82,51,63,50, 80,54,61,53, 78,52,64,51, 81,50,62,54],
+    "perc":     [0,0,0,0, 60,0,0,0, 0,0,0,0, 105,0,0,0]
+  }
+}

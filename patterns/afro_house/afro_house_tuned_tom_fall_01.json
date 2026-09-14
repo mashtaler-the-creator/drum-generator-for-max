@@ -1,0 +1,29 @@
+{
+  "id": "afro_house_tuned_tom_fall_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 122,
+  "tags": ["tuned-toms","falling-forward","syncopated"],
+  "_approach": "Samplesound's 'falling forward' trick: tuned tom hits sit on the 16th right before beats 2, 3 and 4 at low velocity so they tumble into the next kick, over a plain 4x4 floor with an 8th shaker, soft claps and offbeat hats. A high conga answers in bar 2. Ref: Caiiro 'Ndikhokhele' (2019), Enoo Napa 'Phoenix' (2020).",
+  "_sources": [
+    "https://www.samplesoundmusic.com/blogs/academy/how-to-write-an-afro-house-groove-pt-1"
+  ],
+  "tracks": {
+    "kick":     [104,0,0,0, 107,0,0,0, 105,0,0,0, 108,0,0,0,
+                106,0,0,0, 104,0,0,0, 107,0,0,0, 105,0,0,0],
+    "tomMid":   [0,0,0,64, 0,0,0,62, 0,0,0,60, 0,0,0,0,
+                0,0,0,61, 0,0,0,64, 0,0,0,62, 0,0,53,0],
+    "tomLow":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,54,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,50, 0,0,51,0],
+    "shaker":   [82,0,63,0, 80,0,61,0, 78,0,64,0, 81,0,62,0,
+                79,0,60,0, 82,0,63,0, 80,0,61,0, 78,0,64,61],
+    "perc":     [0,0,0,0, 60,0,0,0, 0,0,0,0, 61,0,0,0,
+                0,0,0,0, 62,0,0,0, 0,0,0,0, 63,0,0,0],
+    "congaHigh":[0,0,0,0, 0,0,0,0, 0,0,70,0, 0,0,0,0,
+                0,0,71,0, 0,0,0,0, 0,0,72,0, 0,63,0,0],
+    "hihat":    [0,0,52,0, 0,0,50,0, 0,0,53,0, 0,0,51,0,
+                0,0,54,0, 0,0,52,0, 0,0,50,0, 0,0,53,0]
+  }
+}

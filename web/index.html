@@ -46,6 +46,22 @@
   .legend { color: var(--dim); font-size: 12px; margin-top: 8px; }
   #status { color: var(--dim); font-size: 12.5px; min-height: 18px; margin-top: 6px; }
   .loopwrap { display: flex; align-items: center; gap: 6px; color: var(--dim); font-size: 13px; }
+  .approach { color: var(--dim); font-size: 12.5px; margin-top: 8px; font-style: italic; }
+  .guide h2 { font-size: 15px; margin: 0 0 2px; }
+  .guide h2 small { color: var(--dim); font-weight: normal; font-size: 12px; margin-left: 8px; }
+  .guide .meta { color: var(--accent); font-size: 12.5px; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+  .guide p { margin: 0 0 10px; font-size: 13.5px; }
+  .guide .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .guide h3 { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+  .guide dl { margin: 0; font-size: 13px; }
+  .guide dt { color: var(--accent2); display: inline; }
+  .guide dt::after { content: " — "; color: var(--dim); }
+  .guide dd { display: inline; margin: 0; }
+  .guide dd::after { content: ""; display: block; margin-bottom: 4px; }
+  .guide ul { margin: 0; padding-left: 18px; font-size: 13px; }
+  .guide li { margin-bottom: 3px; }
+  .guide a { color: var(--accent2); }
+  .guide .refs { color: var(--dim); }
 </style>
 </head>
 <body>
@@ -55,6 +71,14 @@
 
   <div class="panel">
     <div class="controls">
+      <div><label>Style</label><select id="style"></select></div>
+      <div><label>Section</label><select id="section">
+        <option value="all">all</option>
+        <option value="groove">grooves</option>
+        <option value="riser">risers / build-ups</option>
+        <option value="breakdown">breakdowns</option>
+        <option value="fill">fills</option>
+      </select></div>
       <div><label>Pattern</label><select id="pattern"></select></div>
       <div><label>Feel preset</label><select id="preset"></select></div>
       <div><label>Bars</label><input type="number" id="bars" min="1" max="64" value="8"></div>
@@ -72,12 +96,15 @@
       <span class="seed">seed <b id="seedVal">–</b></span>
     </div>
     <div id="status"></div>
+    <div id="approach" class="approach"></div>
   </div>
 
   <div class="panel">
     <canvas id="grid" width="1660" height="440"></canvas>
     <div class="legend">Row brightness = velocity. Preview sounds are synthesized approximations — your Drum Rack samples will sound better.</div>
   </div>
+
+  <div class="panel guide" id="guide" hidden></div>
 </div>
 
 <script>
@@ -99,8 +126,11 @@ async function apiMeta() {
   return {
     patterns: D.patterns.map((p) => ({
       id: p.id, style: p.style, bpm: p.bpm,
-      fill: (p.tags || []).includes("fill"),
+      section: D.lib.sectionOf(p),
+      fill: D.lib.sectionOf(p) === "fill",
+      approach: p._approach,
     })),
+    styles: D.styles || {},
     presets: Object.keys(D.presets).filter((k) => k[0] !== "_"),
     mapping: D.mapping,
     ppq: D.lib.PPQ,
@@ -117,9 +147,7 @@ function staticRender(q) {
   if (q.get("density") !== null) overrides.density = parseFloat(q.get("density"));
   if (q.get("ghosts") !== null) overrides.ghostProbability = parseFloat(q.get("ghosts"));
   const state = D.lib.engine.makeState(pattern, D.mapping, overrides);
-  const fillPatterns = D.patterns.filter(
-    (p) => p.style === pattern.style && (p.tags || []).includes("fill") && p.id !== pattern.id
-  );
+  const fillPatterns = D.lib.sectionOf(pattern) === "groove" ? D.lib.fillsFor(D.patterns, pattern) : [];
   const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
   const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
   const seed = q.get("seed") !== null ? parseInt(q.get("seed"), 10) : undefined;
@@ -170,7 +198,60 @@ async function rerender() {
   CUR = data;
   $("seedVal").textContent = seed;
   $("status").textContent = `${data.events.length} notes · ${data.bars} bars @ ${data.bpm} bpm · ${data.patternId} / ${data.presetName}`;
+  const meta = META.patterns.find((p) => p.id === data.patternId);
+  $("approach").textContent = meta && meta.approach ? meta.approach : "";
   drawGrid();
+}
+
+// ---------------------------------------------------------------- style guide
+const DOC_BASE = "https://github.com/mashtaler-the-creator/drum-generator-for-max/blob/main/";
+const SECTION_LABEL = { groove: "", fill: " (fill)", riser: " (riser)", breakdown: " (breakdown)" };
+
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function renderGuide(style) {
+  const g = META.styles && META.styles[style];
+  const el = $("guide");
+  if (!g) { el.hidden = true; el.innerHTML = ""; return; }
+  const bpm = Array.isArray(g.bpm) ? `${g.bpm[0]}–${g.bpm[1]} BPM` : "";
+  const sounds = Object.entries(g.sounds || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+  const machines = (g.machines || []).map((m) => `<li>${esc(m)}</li>`).join("");
+  const refs = (g.references || []).map((r) => `<li>${esc(r)}</li>`).join("");
+  el.innerHTML = `
+    <h2>${esc(g.name || style)}<small>${esc(g.family || "")}</small></h2>
+    <div class="meta">${esc(bpm)}${g.swing ? " · swing " + esc(g.swing) : ""}</div>
+    <p>${esc(g.summary || "")}</p>
+    <div class="cols">
+      <div><h3>Sound selection</h3><dl>${sounds}</dl></div>
+      <div><h3>Drum machines &amp; sources</h3><ul>${machines}</ul></div>
+      ${refs ? `<div><h3>Reference tracks</h3><ul class="refs">${refs}</ul></div>` : ""}
+    </div>
+    ${g.doc ? `<p style="margin-top:10px"><a href="${esc(DOC_BASE + g.doc)}" target="_blank" rel="noopener">Full style guide: ${esc(g.doc)} →</a></p>` : ""}`;
+  el.hidden = false;
+}
+
+// Rebuild the pattern list for the current style + section filter. Keeps the
+// current pattern selected if it still fits the filter.
+function fillPatternSelect() {
+  const style = $("style").value, section = $("section").value;
+  const prev = $("pattern").value;
+  const list = META.patterns.filter((p) => p.style === style && (section === "all" || p.section === section));
+  $("pattern").innerHTML = "";
+  for (const p of list) {
+    const o = document.createElement("option");
+    o.value = p.id;
+    o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${SECTION_LABEL[p.section] || ""}`;
+    $("pattern").appendChild(o);
+  }
+  const keep = list.find((p) => p.id === prev) || list.find((p) => p.section === "groove") || list[0];
+  if (keep) {
+    $("pattern").value = keep.id;
+    if (keep.bpm) $("bpm").value = keep.bpm;
+  }
+  renderGuide(style);
+  return !!keep;
 }
 
 // ------------------------------------------------------------- grid drawing
@@ -321,6 +402,11 @@ $("pattern").onchange = () => {
   if (p && p.bpm) $("bpm").value = p.bpm;
   rerender();
 };
+$("style").onchange = () => { if (fillPatternSelect()) rerender(); };
+$("section").onchange = () => {
+  if (fillPatternSelect()) rerender();
+  else { $("status").textContent = "No patterns of this section in this style yet."; $("approach").textContent = ""; }
+};
 $("density").oninput = () => { $("densityVal").textContent = (+$("density").value).toFixed(2); };
 $("density").onchange = rerender;
 $("ghosts").oninput = () => {
@@ -331,23 +417,26 @@ $("ghosts").onchange = rerender;
 
 (async function init() {
   META = await apiMeta();
+  META.styles = META.styles || {};
+  // Styles grouped by family (from the style guides); unknown ones go last.
   const styles = [...new Set(META.patterns.map((p) => p.style))].sort();
-  for (const style of styles) {
+  const familyOf = (s) => (META.styles[s] && META.styles[s].family) || "other";
+  const families = [...new Set(styles.map(familyOf))].sort();
+  for (const fam of families) {
     const g = document.createElement("optgroup");
-    g.label = style;
-    for (const p of META.patterns.filter((x) => x.style === style)) {
+    g.label = fam;
+    for (const s of styles.filter((x) => familyOf(x) === fam)) {
       const o = document.createElement("option");
-      o.value = p.id;
-      o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${p.fill ? " (fill)" : ""}`;
+      o.value = s;
+      const guide = META.styles[s];
+      const bpm = guide && Array.isArray(guide.bpm) ? ` · ${guide.bpm[0]}–${guide.bpm[1]}` : "";
+      o.textContent = `${guide && guide.name ? guide.name : s}${bpm}`;
       g.appendChild(o);
     }
-    $("pattern").appendChild(g);
+    $("style").appendChild(g);
   }
-  const firstGroove = META.patterns.find((p) => !p.fill);
-  if (firstGroove) {
-    $("pattern").value = firstGroove.id;
-    if (firstGroove.bpm) $("bpm").value = firstGroove.bpm;
-  }
+  $("style").value = styles.includes("jungle") ? "jungle" : styles[0];
+  fillPatternSelect();
   for (const name of META.presets) {
     const o = document.createElement("option");
     o.value = o.textContent = name;

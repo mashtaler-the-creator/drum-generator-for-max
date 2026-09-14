@@ -6,7 +6,8 @@
 //
 // Endpoints:
 //   GET /                 the UI
-//   GET /api/patterns     pattern list + preset names + role->note mapping
+//   GET /api/patterns     pattern list (with section: groove/fill/riser/breakdown)
+//                         + style guides + preset names + role->note mapping
 //   GET /api/render       JSON events for in-browser playback
 //   GET /api/render.mid   the same render as a downloadable .mid file
 //
@@ -21,7 +22,7 @@ const http = require("http");
 const path = require("path");
 const { makeState, render, PPQ } = require("../js/engine");
 const { eventsToMidi } = require("../js/midi-writer");
-const { loadAllFromDisk, findById, findByStyle } = require("../js/pattern-loader");
+const { loadAllFromDisk, loadStyleGuidesFromDisk, findById, fillsFor, sectionOf } = require("../js/pattern-loader");
 
 const ROOT = path.join(__dirname, "..");
 const PORT = (() => {
@@ -57,9 +58,8 @@ function renderFromQuery(q) {
 
   const mapping = loadJson("js/mapping-default.json");
   const state = makeState(pattern, mapping, overrides);
-  const fillPatterns = findByStyle(patterns, pattern.style).filter(
-    (p) => (p.tags || []).includes("fill") && p.id !== pattern.id
-  );
+  // Risers and breakdowns are self-contained sections: no fills injected.
+  const fillPatterns = sectionOf(pattern) === "groove" ? fillsFor(patterns, pattern) : [];
 
   const bars = Math.min(64, Math.max(1, parseInt(q.get("bars") || "8", 10)));
   const bpm = Math.min(300, Math.max(40, parseInt(q.get("bpm") || pattern.bpm || "172", 10)));
@@ -88,8 +88,11 @@ const server = http.createServer((req, res) => {
           id: p.id,
           style: p.style,
           bpm: p.bpm,
-          fill: (p.tags || []).includes("fill"),
+          section: sectionOf(p),
+          fill: sectionOf(p) === "fill",
+          approach: p._approach,
         })),
+        styles: loadStyleGuidesFromDisk(path.join(ROOT, "styles")),
         presets: Object.keys(presets).filter((k) => k[0] !== "_"),
         mapping: loadJson("js/mapping-default.json"),
         ppq: PPQ,

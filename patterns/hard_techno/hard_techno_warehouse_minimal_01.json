@@ -1,0 +1,23 @@
+{
+  "id": "hard_techno_warehouse_minimal_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["minimal","offbeat-hat","peak-time","warehouse"],
+  "_approach": "EDMProd's description of the genre in one loop: heavy distorted kick, sharp offbeat hi-hats and a bit of percussion, nothing else. Bar 2 lets a ride creep in on the second half and drops a single open hat and rim skip - the 'new element every 8 bars' logic in miniature. Reference: Klangkuenstler, Nico Moreno, Sara Landry 'Lord of the Land'.",
+  "_sources": ["https://www.edmprod.com/what-is-hard-techno/","https://futureproofmusicschool.com/blog/making-hard-techno-a-path-to-unique-sound-design"],
+  "tracks": {
+    "kick":      [122,0,0,0, 122,0,0,0, 122,0,0,0, 122,0,0,0,
+                  122,0,0,0, 122,0,0,0, 122,0,0,0, 122,0,0,0],
+    "hihat":     [0,100,0,100, 0,100,0,100, 0,100,0,100, 0,100,0,100,
+                  0,0,100,0, 0,0,100,0, 0,0,100,0, 0,0,100,56],
+    "openHat":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,66,0],
+    "rim":       [0,0,0,0, 0,0,0,0, 0,0,0,48, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,48, 0,40,0,0],
+    "ride":      [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 52,0,44,0, 56,0,48,0]
+  }
+}

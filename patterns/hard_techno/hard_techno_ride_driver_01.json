@@ -1,0 +1,21 @@
+{
+  "id": "hard_techno_ride_driver_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["ride","909","open-hat","driving"],
+  "_approach": "Ride-driven peak-time groove: a 909 ride in 8ths with alternating loud/soft hits is the engine (high-passed and sidechained to the kick as in Attack's rumble dissection), open hats on the offbeats, no closed hats at all, clap on 2 and 4 with a 16th pre-hit in bar 2. Reference: Alt8 & Sara Landry 'Heaven', Nico Moreno.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/dark-techno-rumble/","https://theproducerschool.com/blogs/featured-blogs/how-to-create-hard-techno-a-step-by-step-guide"],
+  "tracks": {
+    "kick":      [118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0,
+                  118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0],
+    "ride":      [96,0,62,0, 96,0,62,0, 96,0,62,0, 96,0,62,0,
+                  96,0,62,0, 96,0,62,0, 96,0,62,0, 96,0,74,0],
+    "openHat":   [0,72,0,72, 0,72,0,72, 0,72,0,72, 0,72,0,72,
+                  0,74,0,74, 0,74,0,74, 0,74,0,74, 0,74,0,74],
+    "perc":      [0,0,0,0, 84,0,0,0, 0,0,0,0, 84,0,0,0,
+                  0,0,0,46, 84,0,0,0, 0,0,0,0, 84,0,0,0]
+  }
+}
