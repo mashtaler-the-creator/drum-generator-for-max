@@ -28,8 +28,15 @@ Speed garage's drum palette is US house hardware run through UK jungle habits: 9
 6. **`sg_bassline_bounce`** — Bassline-leaning revival bounce: loud offbeat open hats carry the groove, closed hats only on "a" pickups, doubled 16th kick pushing into beat 3, and-of-4 snare bounce, sparse cowbell. Ref: Silva Bumpa, Higgo.
 7. **`sg_peaktime_ride`** — Peak-time rave-room build: crash-marked 4-bar phrase, accented 8th ride instead of closed hats, low tom answering the sub line, doubled kicks into the loop restart, bar-4 snare build. Ref: the big-room end of '97 — Tuff Jam, Serious Danger "Deeper".
 8. **`sg_twostep_flip`** — The 4x4-to-2-step hinge: bar 1 full four-to-the-floor, bar 2 drops the beat-3 kick and displaces it to the offbeat, broken skippy hats and a snare bounce answering the gap. Ref: late-'98 transition records toward 2-step (Dem 2, early Steve Gurley).
-9. **`sg_snare_roll_fill`** — 1-bar turnaround fill: kick stays 4x4 while a skippy snare roll ramps through the second half of the bar; hats thin out to make room.
-10. **`sg_tom_drop_fill`** — 1-bar sub-drop signpost: hats fall away, a descending high-mid-low tom cascade mimics the bassline dive, doubled 16th kicks slam into the next downbeat.
+9. **`sg_reese_roller`** — Reese-bass driven roller: a continuous, hypnotic groove built to frame a detuned reese sub — steady unvarying 4x4 kick, an unbroken offbeat open-hat pulse, a full swung 16th hat carpet built from layered loop elements instead of accent-contour hits, so the low end owns the room throughout rather than via phrase-level builds. Ref: the reese-bass-centred remix template (The Producer School), Attack Magazine's Reese Bass Redux.
+10. **`sg_bakey_grit`** — Modern revival, Bakey-style grit: harder and more breakbeat-flecked than the sparse Interplanetary Criminal lane — heavier kick with a doubled 16th pickup, scattered breakbeat-style tom/rim hits standing in for "crisp breaks", tighter swing than either the classic era or the sparse revival. Ref: Bakey "Under Control", "Tribute" LP.
+
+## Fills
+
+1–2 one-bar turnarounds (tag `fill`), auto-injected into grooves of the same style every N bars.
+
+- **`sg_snare_roll_fill`** — 1-bar turnaround fill: kick stays 4x4 while a skippy snare roll ramps through the second half of the bar; hats thin out to make room.
+- **`sg_tom_drop_fill`** — 1-bar sub-drop signpost: hats fall away, a descending high-mid-low tom cascade mimics the bassline dive, doubled 16th kicks slam into the next downbeat.
 
 ## Risers
 

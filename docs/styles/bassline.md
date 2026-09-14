@@ -28,8 +28,15 @@ Bassline drums are the speed garage kit tightened for a Sheffield sound system: 
 6. **`bassline_niche_conga_bounce`** — Niche organ-tune percussion palette: kick and clap kept simple while syncopated congas and offbeat tambourine carry the shuffle (swing 0.2). Reference: the Latin-tinged tops on Jamie Duggan-era organ bassline.
 7. **`bassline_micro_rush_roller`** — 32nd-grid roller: straight 4x4 with the genre's signature 32nd-note snare micro-rushes stitched into each bar turnaround, small into bar 2 and a full crescendo into the loop. Reference: Notion, Skepsis drop sections.
 8. **`bassline_dark_rim_roller`** — Dark modern lane: a quiet metallic ride holds the offbeat instead of an open hat, a syncopated rim line becomes the lead groove voice, snare+clap layered on the backbeat. Reference: Notion, Darkzy's darker instrumentals.
-9. **`bassline_fill_snare_rush`** *(fill)* — One-bar turnaround: kick holds the first half, then a 16th-into-32nd snare rush crescendos across beats 3–4. The standard 4/8-bar transition in both niche and modern sets.
-10. **`bassline_fill_clap_stutter`** *(fill)* — One-bar MC-friendly turnaround: half a bar of groove, then the clap stutters in syncopated pairs over a falling tom line with the final kick dropped so the next downbeat snaps harder.
+9. **`bassline_organ_tom_bump`** — Organ-era tom bounce: the Korg M1-style organ stab gets a low-tom shadow the way the bumpy-organ garage lineage does it — strict 4x4 kick, clap on 2/4, a tom answering each organ stab off the beat, hat carpet kept lighter than the niche-organ or conga grooves so the tom has room. Reference: the Korg M1 organ preset "rubbery bounce" of classic Niche-era production.
+10. **`bassline_virji_crossover`** — Sammy Virji-style bassline/UKG crossover ("NUKG"): bassline's low-end aggression — hard 4x4 kick, huge clap — dressed in genuine UK garage swing (0.2) and an ascending rim-shot run instead of the straighter modern-warehouse hats. Reference: Sammy Virji's bassline-to-garage evolution.
+
+## Fills
+
+1–2 one-bar turnarounds (tag `fill`), auto-injected into grooves of the same style every N bars.
+
+- **`bassline_fill_snare_rush`** — One-bar turnaround: kick holds the first half, then a 16th-into-32nd snare rush crescendos across beats 3–4. The standard 4/8-bar transition in both niche and modern sets.
+- **`bassline_fill_clap_stutter`** — One-bar MC-friendly turnaround: half a bar of groove, then the clap stutters in syncopated pairs over a falling tom line with the final kick dropped so the next downbeat snaps harder.
 
 ## Risers
 
@@ -63,3 +70,7 @@ Stripped sections (tag `breakdown`, 2–4 bars): the kick is gone or reduced to 
 - [10 Snare Rolls For The Drop — Attack Magazine](https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/) — speed-up roll, velocity ramp, build-and-pause, ratatat roll with rests.
 - [How to create the ultimate snare roll build-up — MusicRadar](https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up) — 909 snare, velocity 16→max over 8 bars, final hits deleted for the gap.
 - [How to Create an EDM Build-Up — EDMProd](https://www.edmprod.com/ultimate-guide-build-ups/) — 8-bar build anatomy, drums entering without the kick, staggered peaks.
+- [The Ultimate Guide to the Bassline Music Genre — Vinyl Gold](https://vinylgold.co.uk/bassline-music-genre/) — Korg M1 organ presets and the "rubbery bounce" they gave early bassline.
+- [Old School Bassline — Melodigging](https://www.melodigging.com/genre/old-school-bassline) — 4x4 kick, snare/clap on 2 and 4, organ/piano stabs answering the bassline.
+- [Sammy Virji: global garage phenomenon — DJ Mag](https://djmag.com/features/sammy-virji-global-garage-phenomenon-interview) — "swinging garage drums", his bassline-to-garage evolution and the "NUKG" tag.
+- [Sammy Virji: Real Name, Age and UK Garage's Biggest Star — Mneemo](https://www.mneemo.com/blog/sammy-virji-real-name-uk-garage-2026/) — background on Virji's bassline/garage crossover sound.
