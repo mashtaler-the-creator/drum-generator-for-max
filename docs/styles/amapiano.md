@@ -54,30 +54,30 @@ and more spacious, built to sit under worship vocals).
 ## Sound selection & drum machines
 
 **Kick.** Soft, rounded, house-adjacent kick with a short decay — never the
-dominant low-end element. A **LinnDrum** or **Oberheim DMX** kick (both
-owned) suits the private-school lane; a tighter **TR-909** kick (owned) suits
+dominant low-end element. A **LinnDrum** or **Oberheim DMX** kick
+ suits the private-school lane; a tighter **TR-909** kick suits
 the harder Bacardi/underground lane. Keep it well clear of the log drum's
 frequency range.
 
-**Log drum (approximated).** No owned machine reproduces the genuine tuned
+**Log drum (approximated).** No drum machine reproduces the genuine tuned
 log-drum tone — that is a melodic instrument, not a drum hit, and belongs to
-a synth/sampler elsewhere in the chain **(get elsewhere)**. Every pattern
+a synth/sampler elsewhere in the chain. Every pattern
 here stands in for its *rhythm* with `tomLow` (the body) + `congaLow` (the
 higher slap/answer), built from a pitched-down **TR-808** low tom or
-**E-mu SP-1200** (both owned) resample for the percussive attack reference.
+**E-mu SP-1200** resample for the percussive attack reference.
 
-**Percussion (conga / clave / shaker).** The **TR-727** (owned) supplies
+**Percussion (conga / clave / shaker).** The **TR-727** supplies
 synthesized conga, clave, cowbell and shaker patches for the clave-adjacent
-conga timeline and the shaker engine; the **CR-78** (owned) gives softer,
-more analogue conga/bongo tones for the Private School lane. Genuine live
-congas or shakers are **not** in the owned library — use the TR-727/CR-78
+conga timeline and the shaker engine; the **CR-78** gives softer,
+more analogue conga/bongo tones for the Private School lane. Drum machines
+cannot stand in for genuine live congas or shakers — use the TR-727/CR-78
 synthesized versions, or source real hand-percussion samples elsewhere. A
-**Korg KR-55/KPR-77** (owned) can supply period-adjacent latin-percussion
+**Korg KR-55/KPR-77** can supply period-adjacent latin-percussion
 rims and shakers.
 
 **Hats.** Sparse and mostly used as an offbeat accent rather than a running
 16th engine (the shaker already owns that job) — a **TR-909** or **TR-727**
-open/closed hat (both owned) is enough; keep velocities low so the shaker
+open/closed hat is enough; keep velocities low so the shaker
 stays the audible driver.
 
 **Cymbals / rides.** Rare — Amapiano arrangements build tension with the

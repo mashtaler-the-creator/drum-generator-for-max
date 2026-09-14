@@ -8,15 +8,15 @@ Drum & bass drums are built on the **two-step skeleton**: kick on beat 1 plus on
 
 ## Sound selection & drum machines
 
-**Break heritage.** DnB never fully left jungle's chopped-break vocabulary behind, even once its kicks and snares became mostly programmed. **Amen** (The Winstons) ghost-snare chatter still supplies the "raw"/sample-based lineage's texture (early Bad Company, Source Direct, Kemistry & Storm); **Think** and **Apache**-style congas colour the liquid palette; **Funky Drummer** and **Tighten Up** surface in halftime/autonomic's skeletal, off-kilter syncopation. All are owned via the 10 Most Iconic Amen Patterns pack, the junglebreaks.co.uk collection, Neekeetone Jungle Breaks and an assorted funk/soul break library, chopped and timestretched on the same **Akai S900/S950/S1000** lineage documented for jungle.
+**Break heritage.** DnB never fully left jungle's chopped-break vocabulary behind, even once its kicks and snares became mostly programmed. **Amen** (The Winstons) ghost-snare chatter still supplies the "raw"/sample-based lineage's texture (early Bad Company, Source Direct, Kemistry & Storm); **Think** and **Apache**-style congas colour the liquid palette; **Funky Drummer** and **Tighten Up** surface in halftime/autonomic's skeletal, off-kilter syncopation. All are available via the 10 Most Iconic Amen Patterns pack, the junglebreaks.co.uk collection, Neekeetone Jungle Breaks and an assorted funk/soul break library, chopped and timestretched on the same **Akai S900/S950/S1000** lineage documented for jungle.
 
-**Kick.** A punchy, sub-reinforced **TR-909/808**-style kick (owned) for the two-step skeleton, layered under or alongside a chopped break kick where the production leans "raw"; foghorn/jump-up producers now typically design the main kick from scratch (Sonic Academy Kick 2, get elsewhere) so it doesn't phase against other DJs' kicks in a mix.
+**Kick.** A punchy, sub-reinforced **TR-909/808**-style kick for the two-step skeleton, layered under or alongside a chopped break kick where the production leans "raw"; foghorn/jump-up producers now typically design the main kick from scratch (Sonic Academy Kick 2) so it doesn't phase against other DJs' kicks in a mix.
 
-**Snare / clap / rim.** A composite 909 snare/clap stack (owned) carries the 2-and-4 law, doubled with a sampled break snare (Amen/Think) for grit in rollers and liquid; halftime uses a single glassy snare on beat 3 with rim ticks standing in for the missing backbeat.
+**Snare / clap / rim.** A composite 909 snare/clap stack carries the 2-and-4 law, doubled with a sampled break snare (Amen/Think) for grit in rollers and liquid; halftime uses a single glassy snare on beat 3 with rim ticks standing in for the missing backbeat.
 
-**Hats.** 909 ride 8ths (owned) drive rollers; swung, occasionally open hats carry liquid; tight choked hats plus an offbeat open-hat skank define jump-up; Elektron Machinedrum-style (owned) mechanically edited hat stutters at 32nd resolution are neurofunk's signature.
+**Hats.** 909 ride 8ths drive rollers; swung, occasionally open hats carry liquid; tight choked hats plus an offbeat open-hat skank define jump-up; Elektron Machinedrum-style mechanically edited hat stutters at 32nd resolution are neurofunk's signature.
 
-**Percussion.** Conga/bongo hits (TR-727/505, owned) colour liquid and jump-up; halftime/autonomic favours glassy rim ticks and clave pings; neurofunk substitutes filtered, edited percussion loops for anything organic.
+**Percussion.** Conga/bongo hits (TR-727/505) colour liquid and jump-up; halftime/autonomic favours glassy rim ticks and clave pings; neurofunk substitutes filtered, edited percussion loops for anything organic.
 
 **Cymbals.** A single crash marks phrase starts in dancefloor/jump-up anthems; the ride otherwise does all the cymbal-adjacent groove work.
 

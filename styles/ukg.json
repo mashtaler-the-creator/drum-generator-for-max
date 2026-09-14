@@ -13,15 +13,15 @@
     "cymbals": "One crash at phrase starts only; ride rarely, and then quiet and high-passed."
   },
   "machines": [
-    "Akai MPC60 / MPC3000 — the swing engine and sample chopper of classic 2-step (owned)",
-    "Roland TR-909 — kick and open hat foundation (owned)",
-    "Roland TR-808 — pitched-up snare/clap layer, deep kick layer (owned)",
-    "Roland TR-707 — snappy kick/rim layer (owned)",
-    "LinnDrum / Sequential DrumTraks — 80s-machine snares and claps cited in Attack's dissection (owned)",
-    "Korg M1 drums — the organ-era garage kit (owned)",
-    "Alesis DM5 — snappy composite snare layer (get elsewhere)",
-    "Ensoniq EPS — Todd Edwards' sampler; approximate with Akai S900 (owned) 12-bit crunch",
-    "Breakbeat libraries (Amen) — sliced and re-pitched in revival garage (owned)"
+    "Akai MPC60 / MPC3000 — the swing engine and sample chopper of classic 2-step",
+    "Roland TR-909 — kick and open hat foundation",
+    "Roland TR-808 — pitched-up snare/clap layer, deep kick layer",
+    "Roland TR-707 — snappy kick/rim layer",
+    "LinnDrum / Sequential DrumTraks — 80s-machine snares and claps cited in Attack's dissection",
+    "Korg M1 drums — the organ-era garage kit",
+    "Alesis DM5 — snappy composite snare layer",
+    "Ensoniq EPS — Todd Edwards' sampler; approximate with Akai S900 12-bit crunch",
+    "Breakbeat libraries (Amen) — sliced and re-pitched in revival garage"
   ],
   "references": [
     "MJ Cole — Sincere (1998)",

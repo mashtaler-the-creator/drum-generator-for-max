@@ -13,13 +13,13 @@
     "cymbals": "Crash on drop entrances and section markers; a bright ride for peak-time variations."
   },
   "machines": [
-    "E-mu SP-1200 — the drum sampler behind Double 99 'RipGroove' (owned)",
-    "Roland TR-909 — kick, snare, clap and open hat foundation (owned)",
-    "Roland TR-808 — clap layer and deeper kick layer (owned)",
-    "Akai S900 / MPC60 — 12-bit sampling and swing for the '97 sound (owned)",
-    "Korg M1 drums — organ-tune era kit (owned)",
-    "Jungle/breakbeat libraries — high-passed break loops as texture (owned)",
-    "Vinyl-texture and noise samples for glue (get elsewhere)"
+    "E-mu SP-1200 — the drum sampler behind Double 99 'RipGroove'",
+    "Roland TR-909 — kick, snare, clap and open hat foundation",
+    "Roland TR-808 — clap layer and deeper kick layer",
+    "Akai S900 / MPC60 — 12-bit sampling and swing for the '97 sound",
+    "Korg M1 drums — organ-tune era kit",
+    "Jungle/breakbeat libraries — high-passed break loops as texture",
+    "Vinyl-texture and noise samples for glue"
   ],
   "references": [
     "Double 99 — RipGroove (1997)",

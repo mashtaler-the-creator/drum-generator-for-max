@@ -10,13 +10,13 @@ Where hard trance/hard house parts ways with hard techno is arrangement philosop
 
 ## Sound selection & drum machines
 
-**Kick.** Hard, clean and punchy rather than distortion-first — a 909-style base (owned) tuned and clipped for club weight; the 2020s revival wants a bit more low-mid density than the thin 90s original but keeps the same short, tight envelope. Sonic Academy Kick 2 (get elsewhere) is the modern synthesised-from-scratch standard.
+**Kick.** Hard, clean and punchy rather than distortion-first — a 909-style base tuned and clipped for club weight; the 2020s revival wants a bit more low-mid density than the thin 90s original but keeps the same short, tight envelope. Sonic Academy Kick 2 is the modern synthesised-from-scratch standard.
 
-**Clap / snare.** The clap on 2 and 4 is the fixed point of the groove — a 909/808 stack (owned) for body, pushed into a dense 16th roll for turnarounds and drops (Nukleuz's signature trick). The 2020s revival layers a snare underneath the clap for extra weight (Ben Hemsley/KI/KI-style productions) rather than replacing it. Novation Drumstation / Quasimidi 309 (owned) give period-correct rave-clap and 909-adjacent tone for the classic-era patterns.
+**Clap / snare.** The clap on 2 and 4 is the fixed point of the groove — a 909/808 stack for body, pushed into a dense 16th roll for turnarounds and drops (Nukleuz's signature trick). The 2020s revival layers a snare underneath the clap for extra weight (Ben Hemsley/KI/KI-style productions) rather than replacing it. Novation Drumstation / Quasimidi 309 give period-correct rave-clap and 909-adjacent tone for the classic-era patterns.
 
-**Hats.** 909 closed hat (owned) under 70% velocity so it never fights the offbeat bass; 909 open hat (owned) on every offbeat 8th is non-negotiable — TPS calls it the element that "gives the pattern that distinctive hard house drive." The double-offbeat variant (hits on both the "and" and the "a") is a straightforward way to add energy without raising tempo.
+**Hats.** 909 closed hat under 70% velocity so it never fights the offbeat bass; 909 open hat on every offbeat 8th is non-negotiable — TPS calls it the element that "gives the pattern that distinctive hard house drive." The double-offbeat variant (hits on both the "and" and the "a") is a straightforward way to add energy without raising tempo.
 
-**Percussion.** TR-727 / TR-505 congas and claves (owned), filtered and compressed into bouncing loops for the Trade-era "bounce" approach; a cowbell (owned, via TR-808) ghosts hoover-stab hits in gallop patterns; Elektron Machinedrum / Korg ER-1 (owned) supply the metallic, schranz-adjacent percussion loop for the hard-techno crossover lane. Simmons SDS (owned) toms handle gallop-cascade risers.
+**Percussion.** TR-727 / TR-505 congas and claves, filtered and compressed into bouncing loops for the Trade-era "bounce" approach; a cowbell (via TR-808) ghosts hoover-stab hits in gallop patterns; Elektron Machinedrum / Korg ER-1 supply the metallic, schranz-adjacent percussion loop for the hard-techno crossover lane. Simmons SDS toms handle gallop-cascade risers.
 
 **Cymbals.** One crash marks riser payoffs and section changes, same discipline as hard techno; the ride is used sparingly as an alternate groove engine in loud/soft alternating 8ths (Push, Cosmic Gate style) rather than as a wash.
 

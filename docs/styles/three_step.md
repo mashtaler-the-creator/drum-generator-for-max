@@ -36,8 +36,8 @@ released by **putting the missing kick back** — see the riser section below.
 
 **Kick.** Warm, rounded, mid-deep-house kick with a short punchy transient —
 not the ultra-clean 909 four-on-the-floor kick, and not distorted. A
-**LinnDrum** or **Oberheim DMX** kick (both owned) sits closest to the deep-house
-lineage 3-Step pulls from; an **E-mu SP-1200** (owned) resampling adds the
+**LinnDrum** or **Oberheim DMX** kick sits closest to the deep-house
+lineage 3-Step pulls from; an **E-mu SP-1200** resampling adds the
 lo-fi warmth many Amapiano-adjacent kicks carry. Keep it short so the space
 around the missing beat reads as silence, not decay tail.
 
@@ -46,27 +46,27 @@ kick/808/bass hybrid — a melodic instrument, not a drum-kit hit — and this
 drum-only library cannot reproduce it. Approximate its *rhythm* with
 `tomLow` + `congaLow` (as the Amapiano style guide does) and say so explicitly:
 the real low end has to come from a synth log-drum patch or sample
-**(get elsewhere)**. A **TR-808** low tom (owned) pitched down gets closest to
+sourced elsewhere. A **TR-808** low tom pitched down gets closest to
 its percussive attack for programming reference.
 
 **Percussion (conga / clave / shaker).** 3-Step's Afro-Tech percussion loops
-want the **TR-727** (owned) for claves, congas, cowbell and shaker patches, or
-the **CR-78** (owned) for softer, more analogue conga/bongo tones. Genuine
-live congas, djembe or shakers are **not** in the owned library — use the
-TR-727/CR-78 synthesized versions, or get real hand-percussion samples
-elsewhere. A **Korg KR-55** or **KPR-77** (owned) can supply period-adjacent
+want the **TR-727** for claves, congas, cowbell and shaker patches, or
+the **CR-78** for softer, more analogue conga/bongo tones. Drum machines
+cannot stand in for genuine live congas, djembe or shakers — use the
+TR-727/CR-78 synthesized versions, or source real hand-percussion samples
+elsewhere. A **Korg KR-55** or **KPR-77** can supply period-adjacent
 latin-percussion hats and rims for the clave timeline patterns.
 
 **Hats.** Closed hats kept sharp but restrained (below ~70% velocity, echoing
-Afro-Tech's own hat habits) — a **TR-909** or **TR-727** closed hat (both
-owned) works; **Elektron Machinedrum** (owned) for a more metallic,
+Afro-Tech's own hat habits) — a **TR-909** or **TR-727** closed hat
+ works; **Elektron Machinedrum** for a more metallic,
 schranz-adjacent alternative on the harder Afro-Tech-leaning grooves.
 
 **Cymbals / horns.** 3-Step rarely uses a crash — energy comes from horn
 stabs and pads, not cymbal washes. Route the `perc` slot to a brass/horn stab
-sample for the "jazzy horns" the genre's writers describe **(get
-elsewhere — no owned machine synthesizes convincing horn stabs)**; a `ride`
-wash from a **TR-909** (owned) works for the rare sustained cymbal moment in a
+sample for the "jazzy horns" the genre's writers describe (no drum machine
+synthesizes convincing horn stabs); a `ride`
+wash from a **TR-909** works for the rare sustained cymbal moment in a
 breakdown.
 
 **Reference tracks.** Thakzin — The Magnificent Dance (2022); Thakzin &

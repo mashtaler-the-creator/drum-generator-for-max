@@ -16,13 +16,13 @@ Honest summary of what distinguishes it rhythmically from hard techno: identical
 
 ## Sound selection & drum machines
 
-**Kick.** Clean, short, punchy peak-time techno kick — a **TR-909** (owned) kick layered with a synthesised sine sub is the standard starting point; Kick 2 (get elsewhere) for the designed kicks most producers use. Less distortion than hard techno; a hard clipper rather than five saturators. **Novation Drumstation / Quasimidi 309** (owned) give a 909-style kick with more click that suits the pop mix.
+**Kick.** Clean, short, punchy peak-time techno kick — a **TR-909** kick layered with a synthesised sine sub is the standard starting point; Kick 2 for the designed kicks most producers use. Less distortion than hard techno; a hard clipper rather than five saturators. **Novation Drumstation / Quasimidi 309** give a 909-style kick with more click that suits the pop mix.
 
-**Snare / clap / rim.** The clap is the signature: **909 clap** layered with **808 clap** and a short room (owned); a real snare (909 or **Alesis SR-16 / D4** — owned — for that 2000s dance snare) doubles it in the chorus. Snare rolls use a bright, pitched snare (909 or **Yamaha RX11** — owned) so the roll reads on small speakers. Rim (909/707 — owned) for pickup skips.
+**Snare / clap / rim.** The clap is the signature: **909 clap** layered with **808 clap** and a short room; a real snare (909 or **Alesis SR-16 / D4** for that 2000s dance snare) doubles it in the chorus. Snare rolls use a bright, pitched snare (909 or **Yamaha RX11**) so the roll reads on small speakers. Rim (909/707) for pickup skips.
 
-**Hats.** 909 open hat on the offbeats is the hands-up heritage; closed hats 909 or **TR-707** (owned) for cleanliness; **Korg EMX** (owned) hats for a brighter synthetic edge. Keep them uncompressed and bright — no 12-bit crunch.
+**Hats.** 909 open hat on the offbeats is the hands-up heritage; closed hats 909 or **TR-707** for cleanliness; **Korg EMX** hats for a brighter synthetic edge. Keep them uncompressed and bright — no 12-bit crunch.
 
-**Percussion.** Synthetic toms (**Simmons SDS** / 909 toms — owned) for the eurodance bounce and tom-fall risers; shaker / tambourine in 16ths for the "peak-time" variant; almost no organic percussion. **Virus TI** (owned) noise/impact hits for drop impacts.
+**Percussion.** Synthetic toms (**Simmons SDS** / 909 toms) for the eurodance bounce and tom-fall risers; shaker / tambourine in 16ths for the "peak-time" variant; almost no organic percussion. **Virus TI** noise/impact hits for drop impacts.
 
 **Cymbals.** A crash on every drop downbeat and phrase start — much more crash than hard techno; a soft ride in 8ths only in the peak-time-derived lane.
 

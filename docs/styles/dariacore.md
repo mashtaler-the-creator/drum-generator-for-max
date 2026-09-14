@@ -16,13 +16,13 @@ The Japanese branch of the scene — now more commonly called **hyperflip**, tra
 
 Because the drums are borrowed rather than genre-native, sound selection here mostly means "sound selection for whichever donor genre this section is impersonating," prepared to survive dariacore's own processing chain.
 
-**Kick.** Whatever the section calls for: a layered Jersey Club kick (sub + mid) on the 5-kick shape, a hardstyle-adjacent four-on-the-floor kick, a displaced breakbeat kick, or a halftime dubstep kick. Sample and chop through an **Akai MPC60/MPC3000** (owned) for the breakbeat/Jersey material; **Roland TR-909/TR-808** (owned) for the hardstyle-leaning grooves.
+**Kick.** Whatever the section calls for: a layered Jersey Club kick (sub + mid) on the 5-kick shape, a hardstyle-adjacent four-on-the-floor kick, a displaced breakbeat kick, or a halftime dubstep kick. Sample and chop through an **Akai MPC60/MPC3000** for the breakbeat/Jersey material; **Roland TR-909/TR-808** for the hardstyle-leaning grooves.
 
-**Snare / clap.** Breakbeat-style drags and ghost doubles (an **E-mu SP-1200**, owned, gives period-correct 12-bit crunch for the amen-adjacent chop), or a hardstyle clap+snare stack on 2 and 4 from **TR-808/TR-909** layers (owned).
+**Snare / clap.** Breakbeat-style drags and ghost doubles (an **E-mu SP-1200** gives period-correct 12-bit crunch for the amen-adjacent chop), or a hardstyle clap+snare stack on 2 and 4 from **TR-808/TR-909** layers.
 
-**Hats.** Dense 16th beds, and — the closest thing dariacore has to a signature hi-hat technique — complextro-style **stutter-repeats**: the same hit re-triggered rapidly at falling velocity, an edit effect more than a drum-machine pattern, best approximated with an **Elektron Machinedrum**'s (owned) retrigger/locked-trig features or a DAW's beat-repeat.
+**Hats.** Dense 16th beds, and — the closest thing dariacore has to a signature hi-hat technique — complextro-style **stutter-repeats**: the same hit re-triggered rapidly at falling velocity, an edit effect more than a drum-machine pattern, best approximated with an **Elektron Machinedrum**'s retrigger/locked-trig features or a DAW's beat-repeat.
 
-**Percussion / SFX.** This is where the genre lives outside a drum kit entirely: car-crash samples, police sirens, bed squeaks, vocal chops and anime/game snippets. None of that is a drum role in this schema; the patterns below use `cowbell` and `crash` as the nearest stand-ins for "impact" and "stab" moments and say so in `_approach`. Real production needs a sample library and a chopping workflow (**Ensoniq ASR-X**, owned, or a DAW sampler), not another drum machine.
+**Percussion / SFX.** This is where the genre lives outside a drum kit entirely: car-crash samples, police sirens, bed squeaks, vocal chops and anime/game snippets. None of that is a drum role in this schema; the patterns below use `cowbell` and `crash` as the nearest stand-ins for "impact" and "stab" moments and say so in `_approach`. Real production needs a sample library and a chopping workflow (**Ensoniq ASR-X** or a DAW sampler), not another drum machine.
 
 **Cymbals.** A single crash where a section needs an impact marker; otherwise absent. The genre does not use a ride or cymbal wash as a groove element the way techno or trance do.
 

@@ -10,13 +10,13 @@ What genuinely separates trance from its neighbours is not the drop skeleton abo
 
 ## Sound selection & drum machines
 
-**Kick.** A punchy, fairly short 909 kick (owned: **Roland TR-909**) with a controlled sub so a rolling bassline has room; straight quarter notes, no swing. Live's own "Kick 909" preset through a glue compressor for punch/sustain is the standard modern equivalent.
+**Kick.** A punchy, fairly short 909 kick (**Roland TR-909**) with a controlled sub so a rolling bassline has room; straight quarter notes, no swing. Live's own "Kick 909" preset through a glue compressor for punch/sustain is the standard modern equivalent.
 
 **Snare / clap.** A single clap or a clap+snare layer on 2 and 4; when the pattern calls for it, that same hit becomes the raw material for a snare roll — half notes into quarters into 8ths into 16ths into 32nds, velocity automated from roughly 16 up to maximum, per MusicRadar's and Attack's snare-roll-build methodology, sometimes with a rising pitch-envelope on top (not modelled here — a drum-machine role can't pitch-bend, so the velocity ramp carries the tension instead).
 
-**Hats.** Closed hat on every 16th (**TR-909**, owned) with a rising velocity contour into each beat rather than flat velocities; open hat on every offbeat 8th, choked by the next closed hit — this pairing alone is enough to make a pattern read as trance. **TR-707/CR-78** (owned) hats work for a slightly softer, more tribal-adjacent alternative texture.
+**Hats.** Closed hat on every 16th (**TR-909**) with a rising velocity contour into each beat rather than flat velocities; open hat on every offbeat 8th, choked by the next closed hit — this pairing alone is enough to make a pattern read as trance. **TR-707/CR-78** hats work for a slightly softer, more tribal-adjacent alternative texture.
 
-**Percussion.** Congas and shaker (**TR-727/TR-505**-adjacent or **Korg Electribe ER-1**, owned) carry the tribal/Balearic-leaning grooves; rack toms (**Simmons SDS**, owned) mark phrase boundaries with short descending fills; tambourine doubles the offbeat in vocal-trance-leaning constructions where the open hat would be too aggressive under a topline.
+**Percussion.** Congas and shaker (**TR-727/TR-505**-adjacent or **Korg Electribe ER-1**) carry the tribal/Balearic-leaning grooves; rack toms (**Simmons SDS**) mark phrase boundaries with short descending fills; tambourine doubles the offbeat in vocal-trance-leaning constructions where the open hat would be too aggressive under a topline.
 
 **Cymbals.** One crash on bar 1, sometimes repeated at 8-bar phrase starts. The reverse-cymbal build moment cannot be produced by a forward-triggered drum machine role — it is approximated here as an accelerating run of rising-velocity crash/ride hits converging on the drop's downbeat, which gets the shape of the effect (quiet-to-loud, sparse-to-dense, resolving on the beat) without literally reversing a sample.
 

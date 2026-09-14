@@ -83,10 +83,9 @@ Follow [ukg.md](styles/ukg.md). Sections, in order:
 2. **Drum DNA** — what makes the rhythm this genre and not its neighbour
 3. **Sound selection & drum machines** — per role (kick, snare/clap/rim,
    hats, percussion, cymbals): what character to pick and why; which
-   machines or sample sources define the genre, marking the ones already in
-   the owner's library as `(owned)` and others as `(get elsewhere)`;
-   layering and processing habits that drive sample choice; 3–6 reference
-   tracks
+   machines or sample sources define the genre — name the machines, never
+   who owns them; layering and processing habits that drive sample choice;
+   3–6 reference tracks
 4. **The 10 approaches** — numbered, one per groove pattern id, each with
    reference tracks
 5. **Risers** — 5, ids + what each does
@@ -114,7 +113,7 @@ styles by `family`.
     "percussion": "one line",
     "cymbals": "one line"
   },
-  "machines": ["Roland TR-909 — kick & hats (owned)", "Live congas — sample packs (get elsewhere)"],
+  "machines": ["Roland TR-909 — kick & hats", "Live congas — sample packs"],
   "references": ["Artist — Track (year)"],
   "doc": "docs/styles/afro_house.md"
 }
@@ -135,8 +134,8 @@ only. Every pattern cites what it came from in `_sources`.
 ## 5. Before committing
 
 ```bash
-npm run validate      # ids, folders, roles, velocities, section tags, guides
-npm test              # engine + loader tests
-npm run convert:drm1  # re-voice the library for the Vermona DRM1 kit
-npm run build:site    # rebuild the static site
+npm run validate # ids, folders, roles, velocities, section tags, guides
+npm test # engine + loader tests
+npm run convert:drm1 # re-voice the library for the Vermona DRM1 kit
+npm run build:site # rebuild the static site
 ```

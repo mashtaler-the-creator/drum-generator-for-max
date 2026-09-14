@@ -10,13 +10,13 @@ Everything is placed to *not* clash: percussion is nudged a few ms off the hats,
 
 ## Sound selection & drum machines
 
-**Kick.** Warm 4/4 kick with a short tail, tuned to the key: Attack's Deep & Melodic dissection is entirely **TR-808** (owned) with a tuned 808 kick; Ethereal uses a **707/808/LinnDrum** kit (all owned) with the kick tuned +1 semitone to the key; Battery/Deep Matter style layered kicks (main + click layer) for the CamelPhat/Anyma lane. Scoop low mids so the bass and pads sit in.
+**Kick.** Warm 4/4 kick with a short tail, tuned to the key: Attack's Deep & Melodic dissection is entirely **TR-808** with a tuned 808 kick; Ethereal uses a **707/808/LinnDrum** kit with the kick tuned +1 semitone to the key; Battery/Deep Matter style layered kicks (main + click layer) for the CamelPhat/Anyma lane. Scoop low mids so the bass and pads sit in.
 
-**Snare / clap / rim.** **808 clap** with hall reverb (Attack), **909 clap** for the tight Afterlife backbeat (owned), a clap transposed +4 semitones or a snare detuned −14 semitones as textural hits (Ethereal), **LinnDrum sidestick** (owned) as the syncopated rim, **808 rim** for high-frequency detail. Rim/snap layers for the Anyma bursts: a short noisy perc transient layered under an FM hit.
+**Snare / clap / rim.** **808 clap** with hall reverb (Attack), **909 clap** for the tight Afterlife backbeat, a clap transposed +4 semitones or a snare detuned −14 semitones as textural hits (Ethereal), **LinnDrum sidestick** as the syncopated rim, **808 rim** for high-frequency detail. Rim/snap layers for the Anyma bursts: a short noisy perc transient layered under an FM hit.
 
-**Hats.** Two closed-hat layers: an **808** or **707** hat on the offbeats plus a second layer with variable velocity, high-passed around 1.3 kHz and flanged or panned (Attack); **909** open hat on the offbeats or — Ethereal-style — long open hats on the main beats with LFO ducking. **Roland CR-78 / TR-606-style** hats (CR-78 owned) for the softer, hissy layer. Nudge one hat layer a few ms.
+**Hats.** Two closed-hat layers: an **808** or **707** hat on the offbeats plus a second layer with variable velocity, high-passed around 1.3 kHz and flanged or panned (Attack); **909** open hat on the offbeats or — Ethereal-style — long open hats on the main beats with LFO ducking. **Roland CR-78 / TR-606-style** hats for the softer, hissy layer. Nudge one hat layer a few ms.
 
-**Percussion.** Tuned percussion is the genre's melodic drum voice: **808 congas and toms** tuned to the key (owned), **TR-727** congas and **Simmons SDS** toms (owned) for tom arpeggios, **808 maracas / cabasa** as the 16th shaker (owned), **808 cowbell** through an arpeggiator (owned), clave for call-and-response, **Korg M1 / Fairlight** (owned) for pitched perc textures. Live shaker samples add the velocity contour.
+**Percussion.** Tuned percussion is the genre's melodic drum voice: **808 congas and toms** tuned to the key, **TR-727** congas and **Simmons SDS** toms for tom arpeggios, **808 maracas / cabasa** as the 16th shaker, **808 cowbell** through an arpeggiator, clave for call-and-response, **Korg M1 / Fairlight** for pitched perc textures. Live shaker samples add the velocity contour.
 
 **Cymbals.** Ride in soft 8ths in the progressive lane (Bodzin); crash only on phrase starts; a lot of the "cymbal" content is actually reverb tails and 16th noise textures.
 

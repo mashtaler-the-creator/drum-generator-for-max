@@ -13,12 +13,12 @@
     "cymbals": "None as such — crackle, rain and reversed reverb tails do the cymbal's job."
   },
   "machines": [
-    "Roland TR-808 / TR-909 / LinnDrum rimshots — the backbone click (owned)",
-    "Roland CR-78 / Korg Minipops — soft woody clicks and brushes (owned)",
-    "Akai S900 / MPC60 — 12-bit resampling of found sounds (owned)",
-    "Breakbeat libraries — Amen/Think slices at low velocity for ghost skips (owned)",
-    "Sony Sound Forge grid-less workflow — Burial's actual tool; emulate with quantize off (get elsewhere)",
-    "Field recordings, vinyl crackle, rain and game-sound libraries (get elsewhere)"
+    "Roland TR-808 / TR-909 / LinnDrum rimshots — the backbone click",
+    "Roland CR-78 / Korg Minipops — soft woody clicks and brushes",
+    "Akai S900 / MPC60 — 12-bit resampling of found sounds",
+    "Breakbeat libraries — Amen/Think slices at low velocity for ghost skips",
+    "Sony Sound Forge grid-less workflow — Burial's actual tool; emulate with quantize off",
+    "Field recordings, vinyl crackle, rain and game-sound libraries"
   ],
   "references": [
     "Burial — Distant Lights (2006)",

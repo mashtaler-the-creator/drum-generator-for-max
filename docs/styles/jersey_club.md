@@ -12,7 +12,7 @@ Jersey club's lineage runs **Baltimore club (DJ Tameil brought it to Newark hous
 
 ## Sound selection & drum machines
 
-**Kick.** Short and punchy, frequently doubled with an 808 for weight, run through the 5-hit skeleton above; velocity is varied across the five hits rather than left uniform, and the pattern is never fully quantized. A **Roland TR-909 or TR-808** (owned) kick, driven hard, is the standard source.
+**Kick.** Short and punchy, frequently doubled with an 808 for weight, run through the 5-hit skeleton above; velocity is varied across the five hits rather than left uniform, and the pattern is never fully quantized. A **Roland TR-909 or TR-808** kick, driven hard, is the standard source.
 
 **Snare / clap / rim.** The clap answers the kick run rather than landing on a flat 2-and-4; Baltimore-lineage grooves instead use a real snare on 2 and 4, closer to the parent genre's house/hip-hop hybrid backbeat. **In this pattern set the sampled "bed squeak" and the chopped-vocal stab rhythm are voiced on the `rim` and `perc` roles** — there's no dedicated "vocal chop" or "squeak" slot in the schema, so the short, bright, off-beat transient of the squeak maps onto `rim`, and denser chop-stutter rhythms map onto `perc`.
 
@@ -22,7 +22,7 @@ Jersey club's lineage runs **Baltimore club (DJ Tameil brought it to Newark hous
 
 **Cymbals.** Essentially unused; the open hat's rhythmic "skip" function does the job a crash or ride would do elsewhere.
 
-**Layering / processing.** An **Akai MPC2000/3000** (owned) is the archetypal tool for chopping the Trillville "bed squeak" and vocal hooks into the stutter runs that define the genre; an **E-mu SP-1200** (owned) suits grittier, lower-fidelity Baltimore-lineage breakbeat voicings; an **Elektron Machinedrum** (owned) covers the denser, more synthesised hats of 2020s club/drill hybrids.
+**Layering / processing.** An **Akai MPC2000/3000** is the archetypal tool for chopping the Trillville "bed squeak" and vocal hooks into the stutter runs that define the genre; an **E-mu SP-1200** suits grittier, lower-fidelity Baltimore-lineage breakbeat voicings; an **Elektron Machinedrum** covers the denser, more synthesised hats of 2020s club/drill hybrids.
 
 **Reference tracks.** DJ Tameil / Brick Bandits (Brick City club foundations); DJ Sliink (international breakthrough); UNIIQU3 (PBNJ scene); Cookiee Kawaii — "Vibe (If I Back It Up)" (2020); Ciara — "Level Up" (2018); R3LL (2020s production).
 

@@ -13,16 +13,16 @@
     "cymbals": "Ride is a groove element (loud/soft 8ths) more often than a wash; one crash marks section changes and drops."
   },
   "machines": [
-    "Roland TR-909 — kick, snare, hats, ride; the defining Detroit and Berlin machine (owned)",
-    "Roland TR-808 — snare, low tom, electro-lane kick (owned)",
-    "Roland TR-707 — acid-era kick and hats, Armando-style acid house (owned)",
-    "Roland TR-727 / TR-505 — congas, claves, tribal percussion (owned)",
-    "Jomox Xbase09 / Mbase01 — analogue punch for modern peak-time kicks (owned)",
-    "MFB 502/512 — 909-adjacent analogue percussion for schranz-influenced loops (owned)",
-    "Elektron Machinedrum / Korg Electribe ER-1 — synthesised metallic percussion (owned)",
-    "E-mu SP-1200 — 12-bit resampling for lo-fi dub/electro grit (owned)",
-    "Roland TB-303 (via ABL2/ABL3 emulation) — acid basslines that sit over these drum patterns (get elsewhere)",
-    "Sonic Academy Kick 2 — synthesised modern techno kick design (get elsewhere)"
+    "Roland TR-909 — kick, snare, hats, ride; the defining Detroit and Berlin machine",
+    "Roland TR-808 — snare, low tom, electro-lane kick",
+    "Roland TR-707 — acid-era kick and hats, Armando-style acid house",
+    "Roland TR-727 / TR-505 — congas, claves, tribal percussion",
+    "Jomox Xbase09 / Mbase01 — analogue punch for modern peak-time kicks",
+    "MFB 502/512 — 909-adjacent analogue percussion for schranz-influenced loops",
+    "Elektron Machinedrum / Korg Electribe ER-1 — synthesised metallic percussion",
+    "E-mu SP-1200 — 12-bit resampling for lo-fi dub/electro grit",
+    "Roland TB-303 (via ABL2/ABL3 emulation) — acid basslines that sit over these drum patterns",
+    "Sonic Academy Kick 2 — synthesised modern techno kick design"
   ],
   "references": [
     "Jeff Mills — The Bells (1997)",

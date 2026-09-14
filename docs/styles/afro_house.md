@@ -41,36 +41,36 @@ the section alone, or runs a tom/conga/clap *ramp* into the return.
 ## Sound selection & drum machines
 
 **Kick.** Clean, rounded deep-house kick, not distorted or gated — a
-**LinnDrum** or **Oberheim DMX** kick (both owned) sits in the right lane;
-a **TR-909** (owned) kick works for the more Afro-Tech-adjacent, techno-
+**LinnDrum** or **Oberheim DMX** kick sits in the right lane;
+a **TR-909** kick works for the more Afro-Tech-adjacent, techno-
 influenced grooves. Kept mono and out of the way of the tom/conga low end.
 
 **Snare / clap / rim.** The clap (`perc` slot) is usually understated —
-a soft layered clap from a **TR-808/909** (owned) or a **Novation
-Drumstation/Quasimidi 309** (owned) rave-clap pulled well back in level. Rim
-is used constantly as a light backbeat ghost — **TR-909/727** rim (owned),
+a soft layered clap from a **TR-808/909** or a **Novation
+Drumstation/Quasimidi 309** rave-clap pulled well back in level. Rim
+is used constantly as a light backbeat ghost — **TR-909/727** rim,
 tuned bright and dry.
 
 **Hats.** Closed hats sit under the shaker, not instead of it — **TR-909**
-closed/open hat (owned), sometimes resampled through an **E-mu SP-1200**
-(owned) for the lo-fi 12-bit grit that suits the deeper, dustier end of the
+closed/open hat, sometimes resampled through an **E-mu SP-1200**
+ for the lo-fi 12-bit grit that suits the deeper, dustier end of the
 genre.
 
 **Percussion (conga / clave / cowbell / shaker / tambourine).** This is
-where Afro House lives, and it is the one area where the owned library is
-weakest: the genre wants **real hand percussion** — congas, djembe, shakers,
+where Afro House lives, and it is the one area a synthetic drum library
+serves worst: the genre wants **real hand percussion** — congas, djembe, shakers,
 bongos — and this library's percussion machines are all synthesized
-approximations. Use the **TR-727** (owned) for clave, cowbell, conga and
-shaker patches, and the **CR-78** (owned) for softer analogue conga/bongo
-tones; a **Korg KR-55/KPR-77** (owned) supplies period-adjacent latin
-percussion for the timeline instruments. Genuine live congas, djembe or
-shakers are **not** in the owned library — treat every `congaHigh`/
+approximations. Use the **TR-727** for clave, cowbell, conga and
+shaker patches, and the **CR-78** for softer analogue conga/bongo
+tones; a **Korg KR-55/KPR-77** supplies period-adjacent latin
+percussion for the timeline instruments. Drum machines cannot stand in for
+genuine live congas, djembe or shakers — treat every `congaHigh`/
 `congaLow`/`shaker`/`tambourine` hit here as a placeholder for real
-hand-percussion samples **(get elsewhere)** if authenticity matters more than
+hand-percussion samples if authenticity matters more than
 the machine-groove reference.
 
 **Cymbals.** Almost absent — no pattern in this kit uses `crash`; a `ride`
-appears only as a soft wash in a couple of breakdowns (**TR-909**, owned),
+appears only as a soft wash in a couple of breakdowns (**TR-909**),
 never as a groove element.
 
 **Layering / processing.** Congas and shakers are usually filtered and
