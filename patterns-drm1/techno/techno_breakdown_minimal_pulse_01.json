@@ -1,0 +1,23 @@
+{
+  "id": "techno_breakdown_minimal_pulse_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 128,
+  "swing": 0.2,
+  "tags": [
+    "breakdown",
+    "minimal",
+    "robert-hood"
+  ],
+  "_approach": "Robert Hood-style minimal reduction: strip the groove back to just the kick, adding a single hi-hat layer one bar later rather than a wall of percussion, in the 'Minimal Nation' ethos of making each hit count. Bar 1 is kick alone; bar 2 adds the swung closed hat back in at low velocity. No snare, no shaker, nothing else — the space is the point. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://daily.redbullmusicacademy.com/2019/05/robert-hood-minimal-nation-track-by-track/",
+    "https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno/"
+  ],
+  "tracks": {
+    "kick": [100,0,0,0,100,0,0,0,100,0,0,0,100,0,0,0,98,0,0,0,98,0,0,0,98,0,0,0,98,0,0,0],
+    "hihat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,46,0,0,0,44,0,0,0,48,0]
+  },
+  "kit": "drm1"
+}

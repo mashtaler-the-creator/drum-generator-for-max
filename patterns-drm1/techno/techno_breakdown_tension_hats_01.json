@@ -1,0 +1,23 @@
+{
+  "id": "techno_breakdown_tension_hats_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.08,
+  "tags": [
+    "breakdown",
+    "tension-hats",
+    "hat-bed"
+  ],
+  "_approach": "Tension-hat bed: kick and low end gone completely, just a tight closed-hat 16th bed with a subtle crescendo in velocity across the two bars, a very soft shaker underneath, and a single rim ghost per bar hinting at the return — the groove keeps ticking at full tempo while everything else waits. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/rolling-techno/",
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "hihat": [50,46,52,48,54,48,56,50,52,48,54,50,56,52,58,54,56,52,58,54,60,54,62,56,58,54,60,56,62,58,64,60],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

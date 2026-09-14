@@ -1,0 +1,24 @@
+{
+  "id": "baile_funk_riser_conga_cascade_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.1,
+  "tags": [
+    "riser",
+    "conga-cascade",
+    "atabaque"
+  ],
+  "_approach": "A cascading atabaque build: congaHigh, congaLow and tomLow enter one at a time bar over bar, each rolling faster (8ths then 16ths), climbing in velocity toward a final crash-less accent hit shared across all three percussion voices on the last 16th before the drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/sounds/packs/splice/jlz-pack/story",
+    "https://beatkey.app/how-to-make-baile-funk-music"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,48,0,0,0,0,0,0,0,53,0,0,0,0,0,57,0,61,0,65,0,68,0,72,0,76,0,114,0],
+    "drum2": [0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,55,0,52,0,63,0,60,0,70,0,70,0,120]
+  },
+  "kit": "drm1"
+}

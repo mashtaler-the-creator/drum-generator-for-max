@@ -1,0 +1,22 @@
+{
+  "id": "amapiano_breakdown_piano_space_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 111,
+  "tags": [
+    "breakdown",
+    "sparse",
+    "no-kick"
+  ],
+  "_approach": "Near silence for the (absent, melodic) piano to breathe: no kick, a single soft rim per bar and a barely-audible shaker - the production principle of 'leaving gaps in keyboard rhythm to give drums prominence' inverted here into gaps in the drums to give the keys room. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://beatstorapon.com/blog/how-to-make-amapiano-beat/"
+  ],
+  "tracks": {
+    "multi": [0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0],
+    "hihat": [26,0,0,0,0,0,0,0,24,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

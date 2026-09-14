@@ -1,0 +1,25 @@
+{
+  "id": "fg_riser_filtered_swell_choke_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 128,
+  "swing": 0.24,
+  "tags": [
+    "riser",
+    "filtered-swell",
+    "openhat-choke"
+  ],
+  "_approach": "A literal filter swell in drum form: the open hat grows louder and longer across two bars while a closed hat chokes it a sixteenth later — as close as this genre gets to a riser, built from breath rather than a ramp. Ref: Attack Magazine 'Up-front Future Garage'; Plugg Supply future garage guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/up-front-future-garage/",
+    "https://plugg-supply.net/articles/how-to-make-future-garage-2027"
+  ],
+  "tracks": {
+    "kick": [90,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,88,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0],
+    "openHat": [0,0,0,0,0,0,30,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,54,0],
+    "hihat": [0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,34],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

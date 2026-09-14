@@ -1,0 +1,19 @@
+{
+  "id": "amapiano_shaker_engine_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.13,
+  "bpm": 112,
+  "tags": ["shaker-led","sparse-kick"],
+  "_approach": "Roland's framing taken at its word: the shaker IS the groove here, running a full velocity-contoured 16th pattern while kick and log drum sit back to almost nothing (one kick hit, one log-drum accent per bar) - proof that in Amapiano the shaker, not the kick, is the element that 'you either feel it or you don't'.",
+  "_sources": ["https://articles.roland.com/production-hacks-creating-amapiano-tracks/","https://www.inspiredbybeatz.com/en/amapiano-production-how-the-log-drum-sound-is-created/"],
+  "tracks": {
+    "shaker":   [78,48,66,46, 80,50,68,48, 78,49,66,47, 82,51,70,49,
+                 80,50,68,48, 78,51,66,49, 80,50,68,48, 84,52,72,50],
+    "kick":     [90,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                 88,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,0,54, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,0,0,56, 0,0,0,0]
+  }
+}

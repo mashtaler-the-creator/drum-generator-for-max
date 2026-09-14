@@ -1,0 +1,27 @@
+{
+  "id": "sg_breakdown_skippy_snare_01",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0.22,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "skippy",
+    "snare"
+  ],
+  "_approach": "Kick-free breakdown carried by speed garage's skippy low-velocity snare bounces: the clap holds 2 and 4 in bar 1 and only beat 4 in bar 2, quiet offbeat open hats keep the pulse, rim ghosts fill the pocket. Ref: the vocal breakdown of Double 99 'Ripgroove', 187 Lockdown 'Kung-Fu'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-speed-garage-complete-production-tutorial",
+    "https://www.attackmagazine.com/technique/beat-dissected/garage-shuffle/"
+  ],
+  "tracks": {
+    "snare": [0,0,0,40,0,0,0,46,0,0,52,0,0,0,0,44,0,0,0,42,0,48,0,0,0,0,54,0,0,0,58,0],
+    "clap": [0,0,0,0,94,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0],
+    "openHat": [0,0,60,0,0,0,62,0,0,0,60,0,0,0,64,0,0,0,62,0,0,0,64,0,0,0,62,0,0,0,66,0],
+    "hihat": [0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,46,0,0,0,0,0,50,0,0],
+    "multi": [0,0,26,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,30,0,0,0,0,0,32]
+  },
+  "kit": "drm1"
+}

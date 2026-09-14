@@ -1,0 +1,26 @@
+{
+  "id": "amapiano_piano_shuffle_backbeat_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 111,
+  "tags": [
+    "shuffle",
+    "backbeat",
+    "classic"
+  ],
+  "_approach": "The classic backbeat read: rim/clap layered hard on 2 and 4 under heavy swing (0.16, near the top of the style's shuffle range) so the 'piano shuffle' is felt even without a melodic part, log drum moving in stepwise syncopation between the backbeats, kick spaced rather than 4x4. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://create.routenote.com/blog/beatmakers-guide-how-to-make-an-amapiano-beat/",
+    "https://beatstorapon.com/blog/how-to-make-amapiano-beat/"
+  ],
+  "tracks": {
+    "clap": [0,0,0,0,92,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,96,0,0,0],
+    "multi": [0,0,0,0,70,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,74,0,0,0],
+    "kick": [98,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0],
+    "drum2": [0,0,58,0,0,0,0,52,0,0,0,0,0,0,60,0,0,0,60,0,0,0,0,54,0,0,0,0,0,0,62,0],
+    "hihat": [50,34,48,32,0,35,50,34,50,34,48,33,0,36,50,34,51,35,50,34,0,37,51,35,51,36,50,34,0,38,52,36]
+  },
+  "kit": "drm1"
+}

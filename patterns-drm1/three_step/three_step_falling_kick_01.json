@@ -1,0 +1,26 @@
+{
+  "id": "three_step_falling_kick_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 116,
+  "tags": [
+    "kick-drop",
+    "falling-forward",
+    "classic"
+  ],
+  "_approach": "Melodigging's canonical 3-step kick timing (≈1.1, 2.75, 4.0): kick on beat 1, a kick pushed into the last 16th of beat 2 so it falls forward into the empty beat 3, and a kick on beat 4 - the clearest version of Thakzin's 'I just removed one kick, and there's a lot of space'. Swung 16th shaker, rim ghosts either side of the gap, congaLow answers where the beat-3 kick used to be. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/3-step",
+    "https://www.okayafrica.com/thakzin-shapes-his-vision-of-the-rising-south-african-electronic-genre-3-step/1412410"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,100,0,0,0,0,115,0,0,0,110,0,0,0,0,0,0,104,0,0,0,0,117,0,0,0],
+    "hihat": [58,35,46,32,56,37,48,34,59,36,46,33,54,38,50,35,56,37,48,34,59,36,46,33,54,38,50,35,58,40,51,37],
+    "multi": [0,0,52,0,0,0,0,0,0,0,48,0,0,0,55,0,0,0,50,0,0,0,0,0,0,0,50,0,0,0,57,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,59,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,50,0,0,0,0],
+    "clap": [0,0,0,0,78,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,82,0,0,0]
+  },
+  "kit": "drm1"
+}

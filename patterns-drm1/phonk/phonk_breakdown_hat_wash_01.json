@@ -1,0 +1,22 @@
+{
+  "id": "phonk_breakdown_hat_wash_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 150,
+  "swing": 0.04,
+  "tags": [
+    "breakdown",
+    "hat-wash",
+    "drift-phonk"
+  ],
+  "_approach": "Nothing but a soft, even hi-hat wash and a distant open hat holding the tempo alive — the space drift phonk edits leave for a vocal sample or a filtered synth swell before the cowbell and kick return. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.soundtrap.com/how-to-produce-drift-phonk/"
+  ],
+  "tracks": {
+    "hihat": [36,0,36,0,36,0,36,0,36,0,36,0,36,0,36,0,38,0,38,0,38,0,38,0,38,0,38,0,38,0,38,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0]
+  },
+  "kit": "drm1"
+}

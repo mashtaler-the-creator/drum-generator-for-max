@@ -1,0 +1,26 @@
+{
+  "id": "hypertechno_hands_up_hat_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "hands-up",
+    "offbeat-open-hat",
+    "2000s"
+  ],
+  "_approach": "Hands-up / 2000s hard-house lineage that hypertechno remixes revive: the open hat on every offbeat 8th is the loudest top-end element, closed 16ths sit between with the offbeat 16th emphasised, clap on 2 and 4. No bass stand-in - the hats carry the bounce. Reference: Niklas Dee, CH4YN, Macon. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://rateyourmusic.com/genre/hypertechno/",
+    "https://nocopyrightsounds.fandom.com/wiki/Hypertechno",
+    "https://soundplate.com/what-is-hypertechno-genre-guide/"
+  ],
+  "tracks": {
+    "kick": [122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0],
+    "openHat": [0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104,0,104],
+    "hihat": [0,60,0,72,0,60,0,72,0,60,0,72,0,62,0,76,0,60,0,72,0,60,0,72,0,62,0,74,0,66,0,80],
+    "clap": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0]
+  },
+  "kit": "drm1"
+}

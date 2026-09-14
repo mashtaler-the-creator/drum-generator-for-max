@@ -1,0 +1,24 @@
+{
+  "id": "hard_trance_donk_minimal_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 146,
+  "tags": [
+    "minimal",
+    "donk",
+    "space"
+  ],
+  "_approach": "The sparsest approach in the set, built for the classic 'donk' offbeat bass pattern that needs maximum space: just kick, a single offbeat open hat per beat pair and the 2/4 clap. A lone rim ghost in bar 2 is the only decoration. This is the pocket a lead vocal or hoover riff sits in front of. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/5-essential-bass-patterns-that-define-hard-house-and-trance-music"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,100,0,0,0,108,0,0,0],
+    "openHat": [0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0],
+    "clap": [0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

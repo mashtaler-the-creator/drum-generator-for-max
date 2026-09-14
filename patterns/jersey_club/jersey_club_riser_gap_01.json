@@ -1,0 +1,19 @@
+{
+  "id": "jersey_club_riser_gap_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": ["riser","gap"],
+  "_approach": "Build-and-pause: the 5-kick pattern accelerates into a half-bar kick ramp, then total silence for the rest of bar 2 before a single kick + clap + open hat slam on the last 16th announces the drop.",
+  "_sources": ["https://blog.native-instruments.com/jersey-club/"],
+  "tracks": {
+    "kick":     [110,0,0,0, 108,0,0,0, 104,0,0,98, 0,0,80,0,
+                112,116,120,124, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":     [0,0,0,0, 0,0,0,0, 0,0,96,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "openHat":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

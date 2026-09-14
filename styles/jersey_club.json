@@ -1,0 +1,31 @@
+{
+  "style": "jersey_club",
+  "name": "Jersey Club",
+  "family": "club",
+  "swing": "0–0.08",
+  "bpm": [130, 140],
+  "summary": "Newark's bouncy descendant of Baltimore club, defined by the 5-kick skeleton — attacks on 16th positions 1, 5, 9, 12, 15 (gaps of 4-4-3-3-2) — that compresses into a tresillo-like 3-3-2 bounce over its back half. Sparse hats, chopped vocal stabs and a sampled 'bed squeak' fill the gaps; velocity variation rather than heavy swing carries the loose, never-quantized feel.",
+  "sounds": {
+    "kick": "Short, punchy kick (often doubled with an 808) run in the 5-hit skeleton; the last hit is the softest, shortest — a pickup rather than an accent.",
+    "snare": "Clap sits against the kick run rather than a flat backbeat; Baltimore-lineage grooves use a real snare on 2 and 4 instead.",
+    "hats": "Sparse — often just closed hat on 2 and 4; Philly-scene and 2020s drill-hybrid variants run denser 16th or triplet-feel hat rolls.",
+    "percussion": "The sampled 'bed squeak' (from Trillville's 'Some Cut') and chopped vocal stabs mapped onto rim/perc roles are the genre's real percussive identity, not congas or shakers.",
+    "cymbals": "Open hat used as a rhythmic 'skip' accent on the & of 2 and 4, not a cymbal wash; crash essentially unused."
+  },
+  "machines": [
+    "Roland TR-909 / TR-808 — kick and clap foundation for the 5-kick pattern (owned)",
+    "Akai MPC2000 / MPC3000 — chopping the Trillville 'bed squeak' and vocal hooks into stutter runs (owned)",
+    "E-mu SP-1200 — lo-fi resampling for grittier Baltimore-lineage breakbeat voicings (owned)",
+    "Elektron Machinedrum — synthesised hats and percussion for denser 2020s club/drill hybrids (owned)",
+    "Vocal chop sample packs (Jersey/Baltimore club specific) — the genre's actual hook material (get elsewhere)"
+  ],
+  "references": [
+    "DJ Tameil / Brick Bandits — Brick City club foundations",
+    "DJ Sliink — Jersey club international breakthrough",
+    "UNIIQU3 — PBNJ (Philly/Baltimore/NJ) club scene",
+    "Cookiee Kawaii — Vibe (If I Back It Up) (2020)",
+    "Ciara — Level Up (2018)",
+    "R3LL — 2020s Jersey club production"
+  ],
+  "doc": "docs/styles/jersey_club.md"
+}

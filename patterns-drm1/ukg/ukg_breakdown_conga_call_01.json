@@ -1,0 +1,28 @@
+{
+  "id": "ukg_breakdown_conga_call_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 134,
+  "swing": 0.18,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "congas",
+    "percussive",
+    "organic"
+  ],
+  "_approach": "Percussion-only breakdown: high and low congas trade a call-and-response over offbeat closed hats and a light shaker, with the clap landing on 2 and 4 only in bar 2. No kick at all, so the return of the 2-step kick after the build lands hard. Ref: percussive organic garage (salute, Main Phase, Conducta). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/rolling-2-step-garage/",
+    "https://www.attackmagazine.com/technique/beat-dissected/interplanetary-criminal-style-garage/"
+  ],
+  "tracks": {
+    "drum1": [0,0,0,74,0,0,80,0,0,0,0,0,0,68,0,0,0,0,0,76,0,0,82,0,0,70,0,0,0,0,78,0],
+    "drum2": [76,0,0,0,0,0,0,0,72,0,0,67,0,0,0,0,78,0,0,0,0,0,0,0,74,0,0,0,0,0,0,70],
+    "hihat": [32,0,70,0,34,0,72,0,32,0,70,0,34,0,74,0,34,0,72,0,35,0,74,0,34,0,72,0,35,44,76,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,94,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

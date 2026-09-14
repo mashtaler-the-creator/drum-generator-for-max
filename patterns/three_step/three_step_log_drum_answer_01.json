@@ -1,0 +1,23 @@
+{
+  "id": "three_step_log_drum_answer_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 114,
+  "tags": ["log-drum","amapiano-influence","melodic-perc"],
+  "_approach": "The Amapiano side of the hybrid pushed forward: tomLow+congaLow trade a bouncing, syncopated figure across the whole two bars in place of a bassline (the log drum 'creates the bass lines and momentum' per Splice's Amapiano piece), while the 3-step kick (beats 1, 2, 4, drop-3) stays underneath as the frame. NOTE: this approximates Amapiano's melodic log-drum bass rhythmically only - there is no pitched instrument here.",
+  "_sources": ["https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/","https://splice.com/blog/what-is-amapiano-music/"],
+  "tracks": {
+    "kick":     [110,0,0,0, 104,0,0,0, 0,0,0,0, 112,0,0,0,
+                 108,0,0,0, 102,0,0,0, 0,0,0,0, 114,0,0,0],
+    "tomLow":   [0,0,58,0, 0,0,52,0, 0,72,0,0, 0,60,0,0,
+                 0,0,60,0, 0,0,54,0, 0,75,0,0, 0,63,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 66,0,0,48, 0,0,56,0,
+                 0,0,0,0, 0,0,0,0, 69,0,0,50, 0,0,58,0],
+    "shaker":   [60,40,0,38, 62,42,0,39, 61,0,55,0, 63,41,0,38,
+                 62,42,0,39, 64,43,0,40, 63,0,56,0, 65,43,0,40],
+    "perc":     [0,0,0,0, 76,0,0,0, 0,0,0,0, 0,0,0,0,
+                 0,0,0,0, 78,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

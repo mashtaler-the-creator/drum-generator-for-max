@@ -1,0 +1,25 @@
+{
+  "id": "three_step_riser_shaker_double_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0.08,
+  "bpm": 117,
+  "tags": [
+    "riser",
+    "shaker",
+    "32nds",
+    "build"
+  ],
+  "_approach": "Shaker-doubling build on a 32nd grid: bar 1 is the normal swung shaker under the falling-forward kick, bar 2 doubles it into a straight 32nd roll climbing from 60 to 122 while a rim roll joins in the last quarter and the kick drops out entirely for the last four steps to open a gap before the drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/3-step"
+  ],
+  "tracks": {
+    "kick": [111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,114,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [51,0,34,0,45,0,32,0,51,0,34,0,45,0,32,0,51,0,34,0,45,0,32,0,51,0,34,0,45,0,32,0,48,50,51,53,54,56,58,59,61,62,64,66,67,69,70,72,74,75,77,78,80,82,83,85,86,88,90,91,93,94,96,98],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,102,0,114,0,126,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

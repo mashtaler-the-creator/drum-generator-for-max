@@ -1,0 +1,24 @@
+{
+  "id": "dariacore_sudden_stop_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 178,
+  "tags": [
+    "groove",
+    "sudden-stop",
+    "humor"
+  ],
+  "_approach": "The full stop is dariacore's most quoted structural signature — production write-ups describe 'sudden full stops' and 'meme-y drops or fake-outs for shock value.' This groove is a maximal breakbeat pattern for a bar and a half that then cuts to complete silence for the last two 16ths of bar 2 before the loop restarts hard on beat 1 — the drum-only version of the joke; the real fake-out obviously depends on what sample or silence gets edited into that gap, which drums alone can't supply. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.chsperiscope.com/ae/2026/02/17/a-deep-dive-into-the-dariacore-hyperflip-scene/",
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [114,0,0,64,0,0,100,0,0,68,0,0,104,0,0,0,114,0,72,0,0,100,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,60,0,0,0,0,0,0,100,0,0,58,0,0,0,0,0,0,0,0],
+    "hihat": [0,0,48,0,0,50,0,0,0,0,48,0,0,52,0,0,0,0,50,0,0,52,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

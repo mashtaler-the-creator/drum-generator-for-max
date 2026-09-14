@@ -1,0 +1,26 @@
+{
+  "id": "melodic_techno_riser_hat_double_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "riser",
+    "hat-double",
+    "clap-ramp"
+  ],
+  "_approach": "Hats double: bar 1 closed hats in 8ths, bar 2 in rising 16ths with open hats joining as 16ths over the second half, claps stepping up on every beat of bar 2 and a last-16th clap at 118, crash at the end. Kick stays 4/4 - a lift rather than a drop-out. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://www.edmprod.com/how-to-make-melodic-techno/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0],
+    "hihat": [72,0,60,0,72,0,60,0,72,0,60,0,72,0,60,0,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100],
+    "openHat": [0,66,0,66,0,66,0,66,0,66,0,66,0,66,0,66,0,66,0,66,0,66,0,66,80,83,87,90,94,97,101,104],
+    "clap": [0,0,0,0,90,0,0,0,0,0,0,0,90,0,0,0,90,0,0,0,94,0,0,0,100,0,0,0,108,0,0,118],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110]
+  },
+  "kit": "drm1"
+}

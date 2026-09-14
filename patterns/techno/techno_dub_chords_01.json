@@ -1,0 +1,21 @@
+{
+  "id": "techno_dub_chords_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 127,
+  "swing": 0,
+  "tags": ["dub-techno", "berlin", "chord-stab"],
+  "_approach": "Basic Channel-style dub techno: an unswung 4/4 kick, a snare/clap that lands on only the third downbeat of the bar (not the usual 2-and-4) with an extra turnaround hit in bar 2, and an off-beat open hat plus a percussion loop (the 'chord stab' slot) programmed exactly on syncopated 16ths. Pair the perc slot with slow filter automation and a long delay; this groove is deliberately sparse so the reverb tail has room to breathe.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/basic-channel-style-dub-techno/", "https://en.wikipedia.org/wiki/Dub_techno"],
+  "tracks": {
+    "kick":    [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0],
+    "snare":   [0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,68],
+    "openHat": [0,0,0,58, 0,0,0,0, 0,60,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,58, 0,0,0,0, 0,62,0,0],
+    "perc":    [0,0,0,0, 0,70,0,0, 0,0,0,0, 0,70,0,0,
+                0,0,0,0, 0,0,0,0, 0,72,0,0, 0,0,0,0]
+  }
+}

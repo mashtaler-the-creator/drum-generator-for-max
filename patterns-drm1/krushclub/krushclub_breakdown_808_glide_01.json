@@ -1,0 +1,23 @@
+{
+  "id": "krushclub_breakdown_808_glide_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": [
+    "breakdown",
+    "808-glide",
+    "sparse"
+  ],
+  "_approach": "The clipped 808 glide (Aesthetics Wiki: 'clipped 808 glides, booming sub-bass') carries the section alone as a low tomLow pulse under sparse clave squeak accents; kick appears only once, on the downbeat of bar 2, as a pickup into the next section. No hats at all — the bass glide's slides need the space. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://aesthetics.fandom.com/wiki/Krushclub"
+  ],
+  "tracks": {
+    "drum2": [56,0,0,50,0,0,48,0,0,52,0,0,46,0,0,0,58,0,0,52,0,0,50,0,0,54,0,0,48,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40],
+    "kick": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

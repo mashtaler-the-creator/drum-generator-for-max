@@ -1,0 +1,26 @@
+{
+  "id": "hard_techno_breakdown_rumble_only_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "breakdown",
+    "rumble",
+    "sub",
+    "no-kick"
+  ],
+  "_approach": "Kick hits once on the downbeat, then only the rumble/sub bumps (tomLow slot) keep pulsing on the offbeats under soft open hats - the reverb-tail rumble surviving after the kick has been muted, exactly how the parallel rumble return behaves when the kick channel is cut. A clank on the last 16th sets up the return. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://futureproofmusicschool.com/blog/making-hard-techno-a-path-to-unique-sound-design",
+    "https://www.studiobrootle.com/making-a-techno-rumble-kick-in-ableton-live-step-by-step/"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90,0,90],
+    "openHat": [0,56,0,56,0,56,0,56,0,56,0,56,0,56,0,56,0,58,0,58,0,58,0,58,0,58,0,58,0,58,0,58],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57]
+  },
+  "kit": "drm1"
+}

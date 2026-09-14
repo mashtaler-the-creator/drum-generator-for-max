@@ -1,0 +1,33 @@
+{
+  "style": "trance",
+  "name": "Trance",
+  "family": "trance",
+  "bpm": [136, 140],
+  "swing": "0",
+  "summary": "Classic/uplifting/progressive trance as revived in the 2020s uplifting-underground scene (Damaged, Pure Trance, FSOE): a straight 909 four-on-the-floor kick, closed hats running the 16th grid, an offbeat open hat choked by the next closed hit, clap/snare on 2 and 4, and a crash marking bar 1. Swing is zero — trance's groove comes from hat/ride velocity contour and the build-up's rhythmic acceleration, not from shuffle. Build-ups are the genre's own art form: snare rolls, kick-removal breaks, reverse-cymbal swells, double-time hat walls and silence-before-impact all recur as distinct build vocabularies.",
+  "sounds": {
+    "kick": "909 kick, straight four-on-the-floor, punchy with a controlled low end so it sits under a rolling bassline; no swing.",
+    "snare": "Clap or snare (often layered) on 2 and 4; snare rolls (8ths to 16ths to 32nds, velocity ramping to max) are the genre's signature build-up device.",
+    "hats": "Closed hat on every 16th with a rising velocity contour into each beat; open hat on every offbeat 8th, choked by the next closed hat — the classic uplifting pairing.",
+    "percussion": "Congas/shaker/tambourine for tribal-adjacent and vocal-trance grooves, rack toms for phrase-boundary fills; a ride in steady 8ths as an alternative groove driver to the hat wall.",
+    "cymbals": "One crash on bar 1 (and often again on section starts); reverse-cymbal swells (approximated as an accelerating, rising-velocity run) are the genre's most reliable arrival cue into a drop."
+  },
+  "machines": [
+    "Roland TR-909 — kick, clap, closed/open hat, ride (owned)",
+    "Roland TR-707 / CR-78 — alternate hat/percussion textures for tribal-adjacent grooves (owned)",
+    "Simmons SDS — tom fills for phrase-boundary accents (owned)",
+    "Akai MPC60 / MPC3000 — sample and sequence the classic-era hat/percussion chain (owned)",
+    "Korg Electribe ER-1 / Elektron Machinedrum — modern synthesised percussion layers for the tribal/progressive branch (owned)",
+    "Sylenth1 / Spire-style supersaw synths — not drums, but the build-up's tonal-riser layer that sits alongside the snare roll (get elsewhere)",
+    "White-noise riser plugins (e.g. any granular/noise-sweep device) — the noise-layer half of a full trance build, used alongside the drum riser patterns here (get elsewhere)"
+  ],
+  "references": [
+    "Above & Beyond — Sun & Moon (2013)",
+    "Armin van Buuren — In and Out of Love (2008)",
+    "Solis & Sean Truby — assorted Pure Trance / FSOE releases (2020s)",
+    "Mark Sherry — assorted uplifting anthems (2020s)",
+    "Allen Watts — assorted Pure Trance releases (2020s)",
+    "Will Atkinson — assorted uplifting/progressive releases (2020s)"
+  ],
+  "doc": "docs/styles/trance.md"
+}

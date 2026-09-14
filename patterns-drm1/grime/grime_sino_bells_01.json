@@ -1,0 +1,27 @@
+{
+  "id": "grime_sino_bells_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "sinogrime",
+    "bells",
+    "eastern-tinged",
+    "igloo"
+  ],
+  "_approach": "A sinogrime construction: cowbell and tambourine stand in for the pentatonic bell/gong melodies Wiley, Jammer and DJ Wonder layered over their eski beats circa 'Igloo'/'Shanghai', spaced irregularly like a melodic hook rather than a rhythmic grid, over a simple, unshowy halftime spine. Ref: Radii China 'Sinogrime Explained: Quick Guide to a Non-Genre'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://radii.co/article/sinogrime-explained",
+    "https://www.complex.com/music/a/son-raw/a-journey-through-wiley-eskibeat"
+  ],
+  "tracks": {
+    "kick": [98,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0],
+    "multi": [0,0,40,0,0,0,44,0,0,0,0,36,0,0,48,0,0,0,42,0,0,0,46,0,0,0,0,38,0,0,49,0],
+    "hh1Closed": [0,0,0,0,24,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,24,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

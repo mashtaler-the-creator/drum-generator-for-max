@@ -1,0 +1,18 @@
+{
+  "id": "amapiano_fill_log_drum_turnaround_01",
+  "style": "amapiano",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": ["fill","log-drum","turnaround"],
+  "_approach": "One-bar turnaround: the log drum (tomLow+congaLow) rolls through beats 3-4 with climbing velocity while a clap doubles on the last beat, briefly foregrounding the log drum as the lead voice before the groove resumes.",
+  "_sources": ["https://www.inspiredbybeatz.com/en/amapiano-production-how-the-log-drum-sound-is-created/"],
+  "tracks": {
+    "kick":     [96,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomLow":   [0,0,0,0, 0,0,0,0, 70,0,82,0, 96,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,76,0,88, 0,102,0,118],
+    "perc":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 100,0,90,0],
+    "shaker":   [60,0,44,0, 62,0,42,0, 0,0,0,0, 0,0,0,0]
+  }
+}

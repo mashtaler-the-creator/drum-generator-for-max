@@ -1,0 +1,17 @@
+{
+  "id": "dnb_breakdown_liquid_rideshaker_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0.1,
+  "tags": ["breakdown","liquid","ride-wash","shaker"],
+  "_approach": "Liquid breakdown: no kick, just a soft ride-and-shaker wash with the odd conga colour hit, keeping the smooth Calibre/Lenzman warmth going while the bass or vocal takes the lead. Ref: BeatKey's liquid DnB guide (soft, flowing hats/shaker, light swing); docs/styles/dnb.md's liquid approach.",
+  "_sources": ["https://beatkey.app/how-to-make-liquid-dnb-music","https://kansamples.com/blogs/learn/dnb-track-arrangement"],
+  "tracks": {
+    "ride": [46,0,0,0, 42,0,0,0, 48,0,0,0, 44,0,0,0, 48,0,0,0, 44,0,0,0, 50,0,0,0, 46,0,0,0],
+    "shaker": [36,26,32,28, 38,26,34,30, 36,26,32,28, 38,30,34,32, 37,27,33,29, 39,27,35,31, 37,27,33,29, 39,31,35,33],
+    "congaHigh": [0,0,0,0, 0,0,40,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,42,0, 0,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,38,0, 0,0,40,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

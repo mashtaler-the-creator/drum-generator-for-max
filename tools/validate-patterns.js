@@ -16,6 +16,10 @@ const SCHEMA_PATH = path.join(PATTERNS_DIR, "schema.json");
 const SECTION_TAGS = ["fill", "riser", "breakdown"];
 const ID_RE = /^[a-z0-9_]+$/;
 const STEPS_PER_BAR = [8, 16, 32];
+// Every style is meant to carry a full set of sections (fills stay optional —
+// not every genre uses them). Shortfalls are reported, not fatal: the library
+// grows style by style and a partial style is still usable.
+const TARGET = { groove: 10, riser: 5, breakdown: 5 };
 const GUIDE_REQUIRED = ["style", "name", "family", "bpm", "summary", "sounds", "machines", "doc"];
 const GUIDE_FAMILIES = ["house", "techno", "trance", "uk-bass", "breaks", "latin", "african", "club", "internet"];
 
@@ -202,12 +206,25 @@ function main() {
     `Checked ${count} pattern file(s) across ${seen.size} kit(s), ${gmStyles.length} style(s), ${guideCount} style guide(s).`
   );
   const width = Math.max(...gmStyles.map((s) => s.length), 1);
+  const incomplete = [];
   for (const style of gmStyles.sort()) {
     const c = gmCounts[style];
-    const noGuide = fs.existsSync(path.join(STYLES_DIR, style + ".json")) ? "" : "  (no style guide)";
+    const short = Object.entries(TARGET)
+      .filter(([section, want]) => c[section] < want)
+      .map(([section, want]) => `${want - c[section]} ${section}`);
+    const noGuide = fs.existsSync(path.join(STYLES_DIR, style + ".json")) ? "" : " · no style guide";
+    if (short.length || noGuide) incomplete.push({ style, short, noGuide: !!noGuide });
+    const flag = short.length || noGuide ? `  ← needs ${[...short, noGuide && "style guide"].filter(Boolean).join(", ")}` : "";
     console.log(
-      `  ${style.padEnd(width)}  groove ${String(c.groove).padStart(2)}  riser ${String(c.riser).padStart(2)}  breakdown ${String(c.breakdown).padStart(2)}  fill ${String(c.fill).padStart(2)}${noGuide}`
+      `  ${style.padEnd(width)}  groove ${String(c.groove).padStart(2)}  riser ${String(c.riser).padStart(2)}  breakdown ${String(c.breakdown).padStart(2)}  fill ${String(c.fill).padStart(2)}${flag}`
     );
+  }
+  if (incomplete.length) {
+    console.log(
+      `\n${incomplete.length} of ${gmStyles.length} style(s) incomplete (target: ${TARGET.groove} grooves, ${TARGET.riser} risers, ${TARGET.breakdown} breakdowns, fills optional).`
+    );
+  } else {
+    console.log(`\nAll ${gmStyles.length} styles complete.`);
   }
   if (errors.length) {
     console.log(`\n${errors.length} problem(s) found:\n`);

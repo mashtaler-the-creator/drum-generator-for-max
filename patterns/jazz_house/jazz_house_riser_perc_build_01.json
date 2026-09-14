@@ -1,0 +1,25 @@
+{
+  "id": "jazz_house_riser_perc_build_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 122,
+  "tags": ["riser", "perc-build"],
+  "_approach": "A percussion-density build rather than a noise riser: bar 1's moderate conga call-and-response grows into a full 16th cascade in bar 2, joined by an entering shaker, while the clap on beat 4 swells into the crash-topped final hit. Kick stays steady so the drop feels earned by density, not silence.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":      [100,0,0,0, 98,0,0,0, 102,0,0,0, 96,0,0,0,
+                  100,0,0,0, 98,0,0,0, 102,0,0,0, 104,0,0,0],
+    "congaHigh": [0,0,50,0, 0,0,52,0, 0,0,50,0, 0,0,54,0,
+                  56,0,60,0, 64,0,68,0, 72,0,76,0, 80,84,88,92],
+    "congaLow":  [46,0,0,0, 0,48,0,0, 46,0,0,0, 0,50,0,0,
+                  58,0,62,0, 66,0,70,0, 74,0,78,0, 82,86,90,94],
+    "shaker":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,40,0,44, 0,48,0,52, 0,56,0,60, 0,64,0,68],
+    "perc":      [0,0,0,0, 96,0,0,0, 0,0,0,0, 98,0,0,0,
+                  0,0,0,0, 97,0,0,0, 0,0,0,0, 110,0,0,0],
+    "crash":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

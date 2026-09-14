@@ -1,0 +1,21 @@
+{
+  "id": "disco_house_shaker_bed_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 126,
+  "tags": ["shaker-bed", "sidechain-release", "nu-disco"],
+  "_approach": "A continuous 16th shaker shaped like a sidechain release (dips right after the kick, swells back up by the next hit, mirroring the ~230ms release nu-disco producers dial into their shaker sends) drives the groove under a punchy kick and offbeat open hats. MPC swing 54% (engine 0.08), the tightest disco-house pattern in the set.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"],
+  "tracks": {
+    "kick":    [108,0,0,0, 106,0,0,0, 110,0,0,0, 104,0,0,0,
+                109,0,0,0, 107,0,0,0, 111,0,0,0, 105,0,0,0],
+    "shaker":  [20,45,60,70, 20,45,60,70, 20,45,60,70, 20,45,60,70,
+                22,48,62,72, 22,48,62,72, 22,48,64,74, 22,50,66,76],
+    "openHat": [0,0,92,0, 0,0,92,0, 0,0,92,0, 0,0,92,0,
+                0,0,94,0, 0,0,94,0, 0,0,96,0, 0,0,96,0],
+    "perc":    [0,0,0,0, 98,0,0,0, 0,0,0,0, 100,0,0,0,
+                0,0,0,0, 99,0,0,0, 0,0,0,0, 101,0,0,0]
+  }
+}

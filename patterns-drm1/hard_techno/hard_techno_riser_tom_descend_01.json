@@ -1,0 +1,28 @@
+{
+  "id": "hard_techno_riser_tom_descend_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "toms",
+    "cascade",
+    "build"
+  ],
+  "_approach": "Tom cascade riser: high-to-low tom runs that lengthen every beat in bar 1 and become full 16th cascades with rising velocity in bar 2, claps punctuating the fourth 16th of each beat and a pickup kick + crash closing the build. Percussion-led, the way schranz-adjacent producers build without melodic risers. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/thumping-techno/",
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,127],
+    "drum1": [0,70,0,0,0,74,0,0,0,78,0,0,0,82,0,0,88,0,0,0,92,0,0,0,96,0,0,0,100,0,0,0],
+    "drum2": [0,0,0,0,0,0,70,0,0,0,76,74,0,0,84,86,0,86,86,0,0,90,92,0,0,96,100,0,0,104,110,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,92,0,0,0,104,0,0,0,127],
+    "hihat": [0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127]
+  },
+  "kit": "drm1"
+}

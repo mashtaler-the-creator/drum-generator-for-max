@@ -1,0 +1,17 @@
+{
+  "id": "jazz_house_fill_rim_run_01",
+  "style": "jazz_house",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 123,
+  "tags": ["fill", "rim-run", "turnaround"],
+  "_approach": "One-bar turnaround: the swung groove plays as normal through beat 3, then a rim run ascends through the last four 16ths into the next downbeat -- the jazz-house equivalent of a drummer's fill rather than a full kick break. Auto-injected into jazz_house grooves every 4th bar.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick": [104,0,0,0, 102,0,0,0, 106,0,0,0, 100,0,0,0],
+    "perc": [0,0,0,0, 98,0,0,0, 0,0,0,0, 100,0,0,0],
+    "hihat":[0,42,0,46, 0,44,0,48, 0,42,0,46, 0,0,0,0],
+    "rim":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 40,55,70,90]
+  }
+}

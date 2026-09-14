@@ -1,0 +1,21 @@
+{
+  "id": "trance_breakdown_halftime_kick_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["breakdown", "halftime", "sparse"],
+  "_approach": "The kick returns but at half density (beats 1 and 3 only, softer than a full drop), the clap thinned to a single hit per bar, and the offbeat open hat kept but quieter — a mid-breakdown checkpoint between the emptied-out opening and the full re-entry, still clearly trance but with half the low-end energy of the drop.",
+  "_sources": ["https://www.myloops.net/building-a-powerful-trance-breakdown"],
+  "tracks": {
+    "kick":    [104,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+                104,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 80,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 80,0,0,0],
+    "openHat": [0,0,0,0, 0,60,0,0, 0,0,0,0, 0,60,0,0,
+                0,0,0,0, 0,62,0,0, 0,0,0,0, 0,62,0,0],
+    "hihat":   [0,0,40,0, 0,0,0,0, 0,0,40,0, 0,0,0,0,
+                0,0,42,0, 0,0,0,0, 0,0,42,0, 0,0,0,0]
+  }
+}

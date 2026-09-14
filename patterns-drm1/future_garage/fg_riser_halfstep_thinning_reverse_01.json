@@ -1,0 +1,26 @@
+{
+  "id": "fg_riser_halfstep_thinning_reverse_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.22,
+  "tags": [
+    "riser",
+    "thinning",
+    "reverse-build",
+    "negative-space"
+  ],
+  "_approach": "The genre's real 'build' runs backwards: bar 1 keeps the full 2-step skeleton, bar 2 strips it down to almost nothing — arrangement defined by what isn't playing — so the groove's eventual return reads as the payoff instead of a drop. Ref: Plugg Supply future garage guide ('arrangement is about what is not playing as much as what is playing'). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://plugg-supply.net/articles/how-to-make-future-garage-2027",
+    "https://www.kvraudio.com/forum/viewtopic.php?t=375500"
+  ],
+  "tracks": {
+    "kick": [94,0,0,0,0,0,0,50,0,0,60,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,90,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0],
+    "hihat": [0,0,30,0,0,0,34,0,0,0,32,0,0,0,36,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

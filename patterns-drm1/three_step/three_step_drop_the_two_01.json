@@ -1,0 +1,24 @@
+{
+  "id": "three_step_drop_the_two_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 117,
+  "tags": [
+    "kick-drop",
+    "afrotech-perc"
+  ],
+  "_approach": "Kicks on beats 1, 3 and 4, the gap opened on beat 2 instead - Afro-Tech's 'punchy and driving percussion' fills the hole with a clave/rim timeline rather than a log drum. Closed hats sit under the clave in sharp 16ths kept below 70 so they never crowd the gap. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/",
+    "https://www.okayafrica.com/thakzin-shapes-his-vision-of-the-rising-south-african-electronic-genre-3-step/1412410"
+  ],
+  "tracks": {
+    "kick": [111,0,0,0,0,0,0,0,107,0,0,0,113,0,0,0,109,0,0,0,0,0,0,0,105,0,0,0,115,0,0,0],
+    "multi": [0,0,0,0,81,0,50,74,0,0,77,0,0,0,56,0,0,0,0,0,83,0,52,76,0,0,79,0,0,0,58,0],
+    "hihat": [0,46,62,44,0,48,64,46,0,47,63,45,0,49,65,47,0,48,64,46,0,50,66,48,0,49,65,47,0,51,67,49],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,0,0,0]
+  },
+  "kit": "drm1"
+}

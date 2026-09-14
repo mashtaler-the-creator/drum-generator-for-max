@@ -1,0 +1,23 @@
+{
+  "id": "trance_909_ride_driver_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["groove", "ride", "8ths"],
+  "_approach": "A 909 ride carries the groove in steady 8ths (loud/soft alternation) instead of the hi-hat doing all the work, closed hats reduced to a light offbeat accent, open hat still on every offbeat for the classic uplifting lift, clap on 2 and 4. A construction approach built around the ride rather than the hat wall.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/driven-909/"],
+  "tracks": {
+    "kick":    [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0],
+    "snare":   [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0,
+                0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0],
+    "ride":    [72,0,54,0, 72,0,54,0, 72,0,54,0, 72,0,54,0,
+                74,0,56,0, 74,0,56,0, 74,0,56,0, 74,0,56,0],
+    "hihat":   [0,0,0,44, 0,0,0,44, 0,0,0,44, 0,0,0,44,
+                0,0,0,46, 0,0,0,46, 0,0,0,46, 0,0,0,46],
+    "openHat": [0,0,0,0, 0,68,0,0, 0,0,0,0, 0,68,0,0,
+                0,0,0,0, 0,70,0,0, 0,0,0,0, 0,70,0,0]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "bassline_breakdown_shaker_tease_01",
+  "style": "bassline",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.1,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "shaker",
+    "tease",
+    "4bar"
+  ],
+  "_approach": "Four-bar breakdown that teases the drop: a contoured 16th shaker bed runs throughout, offbeat closed hats creep in from bar 3, the open hat returns in bar 4, the kick reappears sparsely on beats 1 and 3 of bar 4 and the clap only marks 2 and 4 of that final bar - the hand-off point into a riser. Ref: modern switch-up phrasing in Darkzy / Bru-C era tracks. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/how-to-make-bass-house/",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-program-uk-garage-drums-complete-guide-for-producers"
+  ],
+  "tracks": {
+    "hihat": [37,24,43,26,38,24,45,27,37,26,43,26,40,27,46,29,38,26,45,27,40,26,46,29,38,27,45,27,42,29,48,30,40,27,46,58,42,27,48,62,40,29,46,58,43,30,50,64,42,29,48,62,43,46,50,66,42,30,48,64,45,48,51,70],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,72,0,0,0,72,0,0,0,76,0],
+    "kick": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,104,0,0,0],
+    "multi": [0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,32,0,0,0,34,0,0,0,32,0,0,0,0,0,0,0,34,0,0,0,36,0,0,0,34,0,38]
+  },
+  "kit": "drm1"
+}

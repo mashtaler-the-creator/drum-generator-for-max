@@ -1,0 +1,23 @@
+{
+  "id": "jazz_house_swung_16th_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 123,
+  "tags": ["swung-16th", "canonical", "attack-dissected"],
+  "_approach": "The canonical jazzy-house groove Attack Magazine's 'Jazzy House' dissection is built on: MPC-16 swing at 59% (engine 0.18), a humanized 4/4 kick, a clap on 2 and 4 preceded by a subtle ghost note, swung closed 16th hats and a muted cowbell accent. Reference: Attack Magazine 'Jazzy House', Kerri Chandler.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/", "https://padwolf.app/learn/mpc-swing-explained/"],
+  "tracks": {
+    "kick":    [104,0,0,0, 102,0,0,0, 106,0,0,0, 100,0,0,0,
+                105,0,0,0, 101,0,0,0, 104,0,0,0, 103,0,0,0],
+    "perc":    [0,0,0,28, 100,0,0,0, 0,0,0,0, 102,0,0,0,
+                0,0,0,0, 100,0,0,0, 0,0,0,30, 104,0,0,0],
+    "hihat":   [0,44,50,42, 0,46,52,44, 0,44,50,42, 0,48,54,46,
+                0,46,52,44, 0,48,54,46, 0,46,52,44, 0,50,56,50],
+    "ride":    [0,0,52,0, 0,0,0,0, 0,0,54,0, 0,0,0,0,
+                0,0,54,0, 0,0,0,0, 0,0,56,0, 0,0,0,0],
+    "cowbell": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,46,0]
+  }
+}

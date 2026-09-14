@@ -1,0 +1,21 @@
+{
+  "id": "dubstep_breakdown_808_space_hollow_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.06,
+  "tags": ["breakdown","808-space","hollow","minimal"],
+  "_approach": "The most extreme negative-space breakdown in the kit: a rim shot alone carries beat 3 and everything else stays silent, Loefah-school hollow minimalism built to make the returning kick feel enormous. Ref: Junkee 'Loefah: Lower than Low' ('space is just as much an instrument as a kick or a snare').",
+  "_sources": ["https://itm.junkee.com/loefah-lower-than-low/9794"],
+  "tracks": {
+    "rim": [
+      0,0,0,0, 0,0,0,0, 56,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 52,0,0,0, 0,0,0,0
+    ],
+    "openHat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,34,0
+    ]
+  }
+}

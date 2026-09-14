@@ -1,0 +1,19 @@
+{
+  "id": "baile_funk_riser_faixa_speedup_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 150,
+  "swing": 0.04,
+  "tags": ["riser","speedup","beat-de-faixa"],
+  "_approach": "A beat-de-faixa build reflecting the scene's own history of pushing tempo for intensity: the tamborzão skeleton speeds its ghost hits from a single push per bar to a full 16th run by the end of bar 2, hats climbing in velocity underneath, landing on a unison kick/clap/tom hit.",
+  "_sources": ["https://kondzilla.com/seria-o-funk-em-150bpm-uma-nova-direcao-funk-no-rio/","https://www.beatportal.com/articles/919622-beatport-launches-brazilian-funk-as-a-standalone-genre"],
+  "tracks": {
+    "kick":   [112,0,0,0, 0,0,0,0, 110,0,0,0, 0,0,0,0,
+              114,0,96,0, 116,0,100,0, 118,104,120,108, 122,112,124,127],
+    "perc":   [0,0,0,0, 104,0,0,0, 0,0,0,0, 100,0,0,0,
+              0,0,0,0, 116,0,0,0, 0,0,0,0, 0,0,0,127],
+    "hihat":  [0,40,0,0, 0,44,0,0, 0,48,0,0, 0,52,0,0,
+              0,56,0,60, 0,64,0,68, 0,72,0,76, 0,80,0,84]
+  }
+}

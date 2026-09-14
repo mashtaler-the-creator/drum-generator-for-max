@@ -1,0 +1,19 @@
+{
+  "id": "phonk_riser_hat_roll_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 150,
+  "swing": 0.04,
+  "tags": ["riser","hat-roll","drift-phonk"],
+  "_approach": "Drift-phonk-flavoured build: bar 1 keeps the half-time kit steady, bar 2's hats accelerate 8ths to 16ths to a dense 32nd-feel burst with velocity climbing to 127, kick dropping out for the last two steps so the re-entry lands hard.",
+  "_sources": ["https://blog.soundtrap.com/how-to-produce-drift-phonk/"],
+  "tracks": {
+    "kick":   [116,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0,
+              118,0,0,0, 0,0,0,0, 72,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 0,0,0,0, 106,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,0],
+    "hihat":  [48,0,0,0, 48,0,0,0, 48,0,0,0, 48,0,0,0,
+              56,0,62,0, 68,0,74,80, 86,92,98,104, 110,116,122,0]
+  }
+}

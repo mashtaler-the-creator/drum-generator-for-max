@@ -1,0 +1,15 @@
+{
+  "id": "jersey_club_fill_kick_double_01",
+  "style": "jersey_club",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": ["fill","turnaround"],
+  "_approach": "One-bar turnaround: the 5-kick pattern's back half doubles into a dense kick run through beat 4, clap and hat cutting out to leave the roll exposed. Auto-injected into grooves every 4th bar.",
+  "_sources": ["https://blog.native-instruments.com/jersey-club/"],
+  "tracks": {
+    "kick":  [112,0,0,0, 108,0,0,0, 104,96,100,106, 92,110,98,118],
+    "perc":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "dubstep_riser_subdrop_silence_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.15,
+  "tags": [
+    "riser",
+    "build",
+    "silence-gap",
+    "sub-drop"
+  ],
+  "_approach": "Halfstep skeleton holds through bar 1 while filtered shaker and perc breathe underneath; bar 2 drops the kick entirely, stacks a low-mid-high tom cascade into an accelerating snare/perc roll, then cuts to total silence for the final two 16ths — the 'strategic silence right before the drop' documented for dubstep arrangement. Ref: KAN Samples dubstep arrangement guide; Point Blank 'How to Create a Dubstep Drop from Scratch'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dubstep-track-arrangement",
+    "https://www.pointblankmusicschool.com/blog/how-to-create-a-dubstep-drop-from-scratch/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,82,90,98,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,62,0,68,74,0,0],
+    "hihat": [46,0,56,0,29,0,58,0,0,0,26,0,30,0,60,0,62,0,64,0,66,0,68,0,70,72,74,76,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,88,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

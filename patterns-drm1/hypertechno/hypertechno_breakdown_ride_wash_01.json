@@ -1,0 +1,26 @@
+{
+  "id": "hypertechno_breakdown_ride_wash_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "breakdown",
+    "ride",
+    "open-hat",
+    "toms"
+  ],
+  "_approach": "Cymbal wash breakdown: ride in alternating 8ths, long open hats on the main beats (Ethereal-style placement), a low tom on the downbeat of bar 1 and beat 3 of bar 2, no kick, one clap on 4 of bar 2 to cue the build. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/ethereal-techno/",
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "hh1Closed": [88,0,58,0,88,0,58,0,88,0,58,0,88,0,58,0,88,0,58,0,88,0,58,0,88,0,58,0,88,0,58,0],
+    "openHat": [64,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0],
+    "drum2": [80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0]
+  },
+  "kit": "drm1"
+}

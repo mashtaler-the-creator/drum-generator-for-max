@@ -1,0 +1,25 @@
+{
+  "id": "grime_riser_8bar_switch_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": ["riser","8bar-switch","transition"],
+  "_approach": "The classic grime move of switching the beat every 8 bars: bar 1 holds the halftime groove exactly, bar 2 thins it to almost nothing except a rising cowbell/clave stab, snapping the listener into the next 8-bar section. Ref: Recording Arts Canada 'Evolution of Grime' (beat switches every eight bars).",
+  "_sources": ["https://recordingarts.com/record/evolution-of-hip-hop/grime/"],
+  "tracks": {
+    "kick": [
+      100,0,0,0, 0,0,76,0, 0,0,68,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 60,0,0,0, 0,0,0,0
+    ],
+    "cowbell": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 40,0,0,0, 54,0,0,0, 68,0,82,0
+    ]
+  }
+}

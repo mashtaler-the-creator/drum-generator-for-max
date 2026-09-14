@@ -1,0 +1,19 @@
+{
+  "id": "dariacore_riser_genre_splice_ramp_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 182,
+  "tags": ["riser", "genre-splice", "whiplash"],
+  "_approach": "Instead of one element accelerating smoothly, this riser splices two different build vocabularies end to end within two bars — bar 1 is a Jersey-flavoured kick shape thickening with claps, bar 2 abruptly switches to a hardstyle four-on-the-floor kick ramping to the drop — mirroring dariacore's abrupt genre/tempo-feel shifts even inside a single build-up rather than one continuous ramp.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "kick":  [110,0,0,0, 106,0,0,0, 104,0,0,100, 0,0,104,0,
+              112,0,0,0, 114,0,0,0, 116,0,0,0, 118,120,124,127],
+    "snare": [0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 100,0,0,0, 0,0,0,0, 108,0,116,124],
+    "hihat": [0,40,0,42, 0,40,0,44, 0,40,0,42, 0,40,0,44,
+              48,52,56,60, 64,68,72,76, 80,84,88,92, 96,100,110,120]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "techno_uk_bleep_bass_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.18,
+  "tags": ["bleep", "sheffield", "steppers-shuffle"],
+  "_approach": "Sheffield bleep & bass drums: clean, punchy 808/909 programmed with a steppers-reggae-influenced shuffle rather than house or Chicago timing — the swing sits noticeably behind the grid, in the lineage Forgemasters' 'Track With No Name' (the first Warp release) and LFO's 'LFO' established. Kick and snare stay sparse and dubwise so the sub-bass bleep motif (programmed separately) owns the low end; hats are clipped short and the rimshot/open-hat pair does the 'chip' accenting characteristic of the style.",
+  "_sources": ["https://thesoundatlas.org/discover/bleep-techno", "https://jointhefuture.net/2020/04/15/bleepography-18-forgemasters-track-with-no-name/", "https://en.wikipedia.org/wiki/Bleep_techno"],
+  "tracks": {
+    "kick":    [112,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,0,
+                112,0,0,0, 0,0,58,0, 108,0,0,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+                0,0,0,0, 96,0,0,0, 0,0,0,0, 98,0,0,0],
+    "rim":     [0,0,0,0, 0,0,0,50, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,52, 0,0,0,0],
+    "hihat":   [0,0,55,0, 0,0,55,0, 0,0,55,0, 0,0,55,0,
+                0,0,58,0, 0,0,56,0, 0,0,58,0, 0,0,60,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,68]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "hard_trance_breakdown_halftime_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 146,
+  "tags": ["breakdown", "halftime", "no-clap"],
+  "_approach": "Kick pulled back to 1 and 3 only, hats softened well under their groove level, and a couple of rim ghosts creeping in during bar 2. This is the trance breakdown space that sits under the pads/vocal before the riser rebuilds momentum.",
+  "_sources": ["https://en.wikipedia.org/wiki/Hard_trance"],
+  "tracks": {
+    "kick":    [100,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+                98,0,0,0, 0,0,0,0, 102,0,0,0, 0,0,0,0],
+    "hihat":   [0,32,0,36, 0,32,0,36, 0,32,0,36, 0,32,0,38,
+                0,34,0,36, 0,32,0,38, 0,34,0,36, 0,34,0,40],
+    "openHat": [0,0,0,0, 0,0,70,0, 0,0,0,0, 0,0,70,0,
+                0,0,0,0, 0,0,72,0, 0,0,0,0, 0,0,72,0],
+    "rim":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                24,0,0,0, 0,0,0,26, 0,0,0,0, 0,0,0,0]
+  }
+}

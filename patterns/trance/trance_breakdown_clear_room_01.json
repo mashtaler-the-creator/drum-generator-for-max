@@ -1,0 +1,17 @@
+{
+  "id": "trance_breakdown_clear_room_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["breakdown", "no-kick", "clear-room"],
+  "_approach": "Myloops' 32-bar breakdown blueprint opens with 'kick out, reverse crash, sustained pad, sub tail' at low energy. This is that opening phrase in drum terms: no kick at all, a single crash announces the section, and only a soft shaker keeps the faintest sense of tempo alive under the (implied) pad — the emptiest a trance arrangement gets.",
+  "_sources": ["https://www.myloops.net/building-a-powerful-trance-breakdown"],
+  "tracks": {
+    "crash":  [100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "shaker": [0,0,24,0, 0,0,26,0, 0,0,24,0, 0,0,26,0,
+               0,0,24,0, 0,0,26,0, 0,0,24,0, 0,0,26,0]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "style": "baile_funk",
+  "name": "Baile Funk",
+  "family": "latin",
+  "bpm": [128, 155],
+  "swing": "0–0.18",
+  "summary": "Brazilian funk carioca's tamborzão skeleton — kick on 1 and 3, clap on 2 and 4, syncopated ghost hits pushed into the gaps — voiced across its named microstyles: airy beat bolha, the accelerated 150 BPM beat de faixa, São Paulo's minimal mandelão, and the dark bruxaria/automotivo wave. Atabaque and timbau rolls map onto tomLow/tomMid/congaLow/congaHigh, and tamborim rhythms map onto the tambourine role.",
+  "sounds": {
+    "kick": "808-style kick, short and punchy, doubled with a sub for automotivo/faixa lanes; softer and sparser for beat bolha.",
+    "snare": "Clap (the perc slot) carries the 2-and-4 backbeat almost everywhere; a real snare or rim substitutes in mandelão's clipped, minimalist voicing.",
+    "hats": "Sparse, low-velocity closed hats or a continuous rolling shaker rather than a driving hat pattern; open hat used only as an occasional accent.",
+    "percussion": "Atabaque/timbau layered onto tomLow, tomMid, congaHigh and congaLow for rolling syncopation; tamborim rhythms sit on the tambourine role; cowbell for bruxaria's bell-toll accents.",
+    "cymbals": "Essentially unused — baile funk's low end and percussion carry the energy, not cymbal washes."
+  },
+  "machines": [
+    "Roland TR-808 — kick and clap foundation, the genre's core bass/clap source (owned)",
+    "Roland TR-727 — atabaque/timbau-style conga and tom hits for tamborzão percussion loops (owned)",
+    "Roland TR-505 — clave/tamborim-adjacent percussion accents (owned)",
+    "Korg Electribe ER-1 / Elektron Machinedrum — synthesised percussion loops for bruxaria/automotivo textures (owned)",
+    "E-mu SP-1200 / Akai MPC60 — chopping and resampling atabaque/timbau breaks in the sample-based tradition (owned)",
+    "Sample packs of atabaque, timbau, tamborim and cuíca one-shots — the genre's actual percussion voice (get elsewhere)"
+  ],
+  "references": [
+    "MC Marcinho — early tamborzão-era funk carioca",
+    "Tati Quebra-Barraco — funk carioca vocal tradition",
+    "Rennan da Penha — Baile da Gaiola, funk 150 BPM / beat de faixa",
+    "Niack — Oh Juliana (2020, funk mandelão)",
+    "Various Artists — funk bruxaria SoundCloud scene (2020s)",
+    "MC GW / DJ GBR — 2020s Beatport-era Brazilian funk"
+  ],
+  "doc": "docs/styles/baile_funk.md"
+}

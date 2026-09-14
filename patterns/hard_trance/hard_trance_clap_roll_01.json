@@ -1,0 +1,21 @@
+{
+  "id": "hard_trance_clap_roll_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 149,
+  "tags": ["clap-roll", "16th-clap", "canonical"],
+  "_approach": "The signature 16th clap roll: a clean clap on 2 and 4 in bar 1, then a crescendoing 16th roll takes over beat 4 of bar 2, hats and open hat thinning out to let it cut through. This is the Nukleuz call-and-response clap trick heard on BK's 'Revolution' and 'Music Is Moving'.",
+  "_sources": ["https://obscuur.io/blogs/news/the-complete-guide-to-hard-house", "https://en.wikipedia.org/wiki/Tidy_Trax"],
+  "tracks": {
+    "kick":    [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                116,0,0,0, 116,0,0,0, 114,0,0,0, 118,0,0,0],
+    "hihat":   [0,40,0,44, 0,42,0,46, 0,40,0,44, 0,42,0,48,
+                0,42,0,46, 0,44,0,48, 0,42,0,46, 0,0,0,0],
+    "openHat": [0,0,96,0, 0,0,96,0, 0,0,96,0, 0,0,96,0,
+                0,0,96,0, 0,0,98,0, 0,0,98,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,0,0, 104,0,0,0, 0,0,0,0, 70,82,92,104]
+  }
+}

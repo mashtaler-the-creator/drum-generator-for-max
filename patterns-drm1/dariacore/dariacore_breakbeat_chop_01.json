@@ -1,0 +1,25 @@
+{
+  "id": "dariacore_breakbeat_chop_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 172,
+  "tags": [
+    "groove",
+    "breakbeat",
+    "breakcore-adjacent"
+  ],
+  "_approach": "Dariacore 'implements aspects of various genres of EDM, such as Jersey club, dubstep, and complextro' and borrows 'the rhythmic intensity of breakcore/jungle' (Wikipedia, Melodigging). This groove chops a breakbeat-style kick/snare pattern — displaced kicks, a snare that drags and doubles unevenly bar to bar — the way a jungle amen break gets re-sliced, at a tempo breakcore rather than jungle would use. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore",
+    "https://www.melodigging.com/genre/dariacore"
+  ],
+  "tracks": {
+    "kick": [110,0,0,64,0,0,100,0,0,68,0,0,104,0,0,0,110,0,72,0,0,100,0,0,0,0,68,0,104,0,0,74],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,60,0,0,0,0,0,0,100,0,0,58,0,0,0,0,100,0,64,0],
+    "multi": [0,30,0,0,0,0,0,32,0,0,34,0,0,0,0,0,0,0,32,0,0,0,0,0,0,34,0,0,0,0,0,36],
+    "hihat": [0,0,46,0,0,48,0,0,0,0,46,0,0,50,0,0,0,0,48,0,0,50,0,0,0,0,48,0,0,52,0,0]
+  },
+  "kit": "drm1"
+}

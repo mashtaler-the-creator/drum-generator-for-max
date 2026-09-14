@@ -1,0 +1,22 @@
+{
+  "id": "grime_riser_kick_ladder_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "riser",
+    "kick-ladder",
+    "disjointed"
+  ],
+  "_approach": "Kicks ladder in density bar over bar — from two sparse off-16ths to a clustered stutter — while the snare stays locked to beat 3, exactly the 'add more kicks, change the second snare position' disjointed-feel trick MusicRadar documents. Ref: MusicRadar '22 pro grime production tricks'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/tuition/tech/22-pro-grime-production-tricks-170428"
+  ],
+  "tracks": {
+    "kick": [100,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,104,0,0,60,0,0,78,0,0,66,84,0,0,70,0,0],
+    "snare": [0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "krushclub_bed_squeak_hook_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": ["groove", "bed-squeak", "call-response"],
+  "_approach": "The bed squeak (sampled from Trillville's 'Some Cut' intro, per Jersey Club production guides) is promoted from a texture to the lead hook: a syncopated clave figure answers the 5-kick pattern every bar, with the clap on 2 and a lone rim ghost standing in for beat 4 so the squeak has room to speak. Bitcrushed hats stay skeletal. This is the 'squeak-forward' construction krushclub inherited wholesale from Jersey Club, just distorted harder.",
+  "_sources": ["https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/", "https://orphiq.com/resources/what-is-jersey-club", "https://aesthetics.fandom.com/wiki/Krushclub"],
+  "tracks": {
+    "kick":    [110,0,0,0, 106,0,0,0, 104,0,0,102, 0,0,106,0,
+                110,0,0,0, 106,0,0,0, 104,0,0,102, 0,0,100,0],
+    "clave":   [0,0,58,0, 0,60,0,0, 0,0,64,0, 62,0,0,0,
+                0,0,60,0, 0,62,0,0, 0,0,66,0, 64,0,0,68],
+    "snare":   [0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 34,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 36,0,0,0],
+    "hihat":   [0,38,0,40, 0,0,0,42, 0,38,0,40, 0,0,0,44,
+                0,40,0,42, 0,0,0,44, 0,40,0,42, 0,0,0,46],
+    "shaker":  [0,0,0,0, 0,0,32,0, 0,0,0,0, 0,0,34,0,
+                0,0,0,0, 0,0,32,0, 0,0,0,0, 0,0,34,0]
+  }
+}

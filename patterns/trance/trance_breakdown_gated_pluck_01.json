@@ -1,0 +1,19 @@
+{
+  "id": "trance_breakdown_gated_pluck_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["breakdown", "gated", "no-kick"],
+  "_approach": "Myloops' 'tease the melody' phrase (bars 9-16) layers a gated pad chopped at eighth notes under a fragmented pluck line. In drum terms: still no kick, but a rhythmic gated closed-hat pattern on the 8ths (standing in for the gated pad's on/off chop) plus sparse rim hits tracing where the pluck melody would land on strong beats.",
+  "_sources": ["https://www.myloops.net/building-a-powerful-trance-breakdown"],
+  "tracks": {
+    "hihat": [40,0,42,0, 44,0,42,0, 40,0,42,0, 44,0,42,0,
+              42,0,44,0, 46,0,44,0, 42,0,44,0, 46,0,44,0],
+    "rim":   [0,0,0,0, 0,0,0,0, 34,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 36,0,0,0, 0,0,0,0],
+    "shaker":[0,0,26,0, 0,0,28,0, 0,0,26,0, 0,0,28,0,
+              0,0,28,0, 0,0,30,0, 0,0,28,0, 0,0,30,0]
+  }
+}

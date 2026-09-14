@@ -1,0 +1,24 @@
+{
+  "id": "hypertechno_fill_clap_roll_01",
+  "style": "hypertechno",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "fill",
+    "clap-roll",
+    "turnaround"
+  ],
+  "_approach": "One-bar turnaround: kick 4/4, clap on 2 then a rising 16th clap roll through beat 4 with two snare hits on the last two 16ths, offbeat open hats. Auto-injected every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/how-to-make-techno/"
+  ],
+  "tracks": {
+    "kick": [122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0],
+    "clap": [0,0,0,0,108,0,0,0,0,0,0,0,96,100,108,116],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,100],
+    "openHat": [0,80,0,80,0,80,0,80,0,80,0,80,0,80,0,80]
+  },
+  "kit": "drm1"
+}

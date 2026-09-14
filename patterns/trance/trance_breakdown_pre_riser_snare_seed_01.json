@@ -1,0 +1,19 @@
+{
+  "id": "trance_breakdown_pre_riser_snare_seed_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["breakdown", "pre-build", "snare-seed"],
+  "_approach": "Myloops' 'rebuild to drop' phrase (bars 25-32) starts dismantling the breakdown before the riser proper begins: strings/pads are implied to be filtering upward while the drums plant the seed of the coming snare roll at half notes, a soft ride keeping subdivision, and the kick still absent — the transitional breakdown-to-riser hinge rather than either extreme.",
+  "_sources": ["https://www.myloops.net/building-a-powerful-trance-breakdown"],
+  "tracks": {
+    "snare": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              50,0,0,0, 0,0,0,0, 54,0,0,0, 0,0,0,0],
+    "ride":  [0,0,36,0, 0,0,36,0, 0,0,36,0, 0,0,36,0,
+              0,0,38,0, 0,0,38,0, 0,0,38,0, 0,0,38,0],
+    "shaker":[24,0,22,0, 24,0,22,0, 24,0,22,0, 24,0,22,0,
+              26,0,24,0, 26,0,24,0, 26,0,24,0, 26,0,24,0]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "style": "phonk",
+  "name": "Phonk",
+  "family": "internet",
+  "swing": "0–0.28",
+  "bpm": [60, 155],
+  "summary": "Two lanes under one name: driving 2020s drift phonk (130-155 BPM, distorted/clipped 808 kick, half-time or four-on-floor drums, TR-808 cowbell riff as the lead melodic hook) and slow, murky classic Memphis phonk (60-80 BPM half-time, SpaceGhostPurrp/DJ Screw/DJ Spanish Fly lineage, heavy swing, tape-hiss ghost notes). The 808 cowbell riff is the genre's hook in both lanes — carried here on the cowbell role.",
+  "sounds": {
+    "kick": "Drift phonk: distorted, clipped, near-max velocity 808 kick, four-on-floor or half-time. Memphis: soft, slow, half-time boom-bap kick spaced far apart.",
+    "snare": "Drift phonk: hits beat 3 in half-time voicings, or 2-and-4 in four-on-floor voicings. Memphis: a single lazy hit per bar, often dragging behind the grid under heavy swing.",
+    "hats": "Drift phonk: 8th-to-16th hat rolls, trap-derived. Memphis: sparse, unevenly-velocity-ghosted 16ths for a lo-fi, tape-degraded feel.",
+    "percussion": "The TR-808 cowbell riff is the lead melodic percussion in both lanes — this engine represents its rhythm on the cowbell role; pitch content comes from a chromatically-mapped sampler.",
+    "cymbals": "Essentially unused in either lane; open hat appears only rarely as a build-up accent."
+  },
+  "machines": [
+    "Roland TR-808 — the cowbell riff, kick and snare source across both lanes (owned)",
+    "E-mu SP-1200 / Akai MPC60 — chopping 90s Memphis rap tapes and jazz/funk samples (owned)",
+    "E-mu Drumulator / Akai S900 — period-correct lo-fi drum sampling for the Memphis lane (owned)",
+    "Sonic Academy Kick 2 / distortion plugins — modern distorted 808 kick design for drift phonk (get elsewhere)",
+    "Phonk cowbell one-shot packs (Memphis + Brazilian-phonk crossover) — the genre's actual melodic hook material (get elsewhere)"
+  ],
+  "references": [
+    "DJ Spanish Fly — late-1980s Memphis 808/cowbell foundations",
+    "Three 6 Mafia — Mystic Stylez (1995)",
+    "DJ Screw — chopped and screwed Houston lineage",
+    "SpaceGhostPurrp — Mysterious Phonk: Chronicles of SpaceGhostPurrp (2012)",
+    "Raider Klan — early-2010s Memphis revival",
+    "2020s drift phonk / Brazilian-phonk crossover (SoundCloud/TikTok era)"
+  ],
+  "doc": "docs/styles/phonk.md"
+}

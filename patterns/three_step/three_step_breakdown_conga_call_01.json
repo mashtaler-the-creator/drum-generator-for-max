@@ -1,0 +1,25 @@
+{
+  "id": "three_step_breakdown_conga_call_01",
+  "style": "three_step",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.17,
+  "bpm": 116,
+  "tags": ["breakdown","conga","call-response","no-kick"],
+  "_approach": "Four bars of conga call-and-response with no kick: congaHigh states a short phrase in bars 1 and 3, congaLow answers in 2 and 4 with a slightly longer one, a soft shaker ties it all together - the interlocking, conversational percussion the genre's own writers describe as its defining texture, stripped of everything else.",
+  "_sources": ["https://www.beatportal.com/articles/807844-where-did-that-kick-go-an-introduction-to-3step","https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house"],
+  "tracks": {
+    "congaHigh": [0,0,62,0, 0,0,0,0, 0,58,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,64,0, 0,0,0,0, 0,60,0,0, 0,55,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "congaLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 60,0,0,0, 0,0,64,0, 0,52,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 62,0,0,0, 0,0,66,0, 0,54,0,58],
+    "shaker":    [40,0,0,0, 0,0,0,0, 38,0,0,0, 0,0,0,0,
+                  42,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0,
+                  40,0,0,0, 0,0,0,0, 38,0,0,0, 0,0,0,0,
+                  42,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0]
+  }
+}

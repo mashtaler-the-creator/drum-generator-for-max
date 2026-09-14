@@ -1,0 +1,24 @@
+{
+  "id": "afro_house_tom_pulse_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 121,
+  "tags": [
+    "tom-loop",
+    "black-coffee",
+    "deep"
+  ],
+  "_approach": "The Producer School's Black Coffee recipe: a clean deep kick with a low tom loop pulsing in 8ths underneath (low end rolled off so it never fights the sub), a single realistic mid-tom shot on the even bar, a noisy velocity-shaped shaker, a soft rim backbeat and one wood shot with reverb. Ref: Black Coffee 'Drive' (2018), 'Your Eyes' (2017). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-afro-house-like-black-coffee-complete-tutorial"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0],
+    "drum2": [63,0,52,0,61,0,50,0,64,0,53,0,62,0,51,73,60,0,54,0,63,0,84,0,61,0,50,0,64,85,53,0],
+    "multi": [0,0,0,0,72,0,0,0,0,0,0,63,73,0,0,0,0,0,0,64,74,0,0,0,0,0,0,0,70,0,0,0],
+    "hihat": [64,43,74,42,62,42,72,41,65,40,70,43,63,42,73,42,66,41,71,40,64,43,74,42,62,42,72,41,65,40,70,70]
+  },
+  "kit": "drm1"
+}

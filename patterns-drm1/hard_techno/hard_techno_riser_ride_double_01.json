@@ -1,0 +1,27 @@
+{
+  "id": "hard_techno_riser_ride_double_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "ride",
+    "hat-double",
+    "build"
+  ],
+  "_approach": "Cymbal build: the 909 ride goes from alternating 8ths to a rising 16th roll, open hats double into 16ths through the last beat, claps land on the last two offbeats and a pickup kick on the final 16th leads into the drop with the crash. Kick stays 4/4 throughout - the tension comes from the top end. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/dark-techno-rumble/",
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,127],
+    "hh1Closed": [90,0,64,0,90,0,64,0,90,0,64,0,90,0,64,0,70,73,76,80,83,86,89,92,96,99,102,105,108,112,115,118],
+    "openHat": [0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,0,90,0,0,0,90,0,0,0,90,0,96,100,104,110],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,110,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112]
+  },
+  "kit": "drm1"
+}

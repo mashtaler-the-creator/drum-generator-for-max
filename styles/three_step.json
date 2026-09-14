@@ -1,0 +1,35 @@
+{
+  "style": "three_step",
+  "name": "3-Step",
+  "family": "african",
+  "bpm": [113, 120],
+  "swing": "0.10-0.30",
+  "summary": "South African house hybrid built around three kick hits per bar instead of four - the missing kick, not a new sound, is the hook. Amapiano's log-drum bassline and Afro-Tech's punchy percussion loops fill the space around the gap, over a heavy 55-65% shuffle that reads as conversational and jazz-like rather than mechanical.",
+  "sounds": {
+    "kick": "Warm, rounded mid-deep-house kick (LinnDrum/DMX lineage, or a tighter 909 for the Afro-Tech-leaning grooves) with a short transient so the missing beat reads as real silence.",
+    "snare": "Rarely a snare in the house sense - claps and rims (perc/rim slots) carry the backbeat, understated and often syncopated rather than locked to 2 and 4.",
+    "hats": "Sharp closed hats kept under ~70% velocity on the Afro-Tech-driven grooves; largely absent on the deep-house-leaning ones where the shaker and log drum carry the groove instead.",
+    "percussion": "The genre's real engine: a swung shaker/tambourine timekeeper, a tomLow+congaLow 'log drum' rhythm approximation (Amapiano influence), and clave/conga call-and-response (Afro-Tech influence) filling the gap the missing kick leaves behind.",
+    "cymbals": "Almost absent - horn stabs (perc slot) and pads carry the energy a cymbal wash would in other genres; a soft ride appears only in breakdowns."
+  },
+  "machines": [
+    "LinnDrum / Oberheim DMX - deep-house-lineage kick (owned)",
+    "Roland TR-909 - tighter kick, closed/open hat, ride for the Afro-Tech-leaning grooves (owned)",
+    "E-mu SP-1200 - lo-fi resampled kick and hats (owned)",
+    "Roland TR-727 - clave, cowbell, conga and shaker patches for the percussion timeline (owned)",
+    "Roland CR-78 - softer analogue conga/bongo tones (owned)",
+    "Korg KR-55 / KPR-77 - period-adjacent latin percussion rims and hats (owned)",
+    "Elektron Machinedrum - metallic hat alternative for the harder Afro-Tech grooves (owned)",
+    "Real congas/djembe/shakers and a synth/sampled log-drum patch - the genuine pitched log drum and live hand percussion this drum-only library cannot reproduce (get elsewhere)",
+    "Horn/brass stab samples for the perc-slot 'jazzy horns' (get elsewhere)"
+  ],
+  "references": [
+    "Thakzin - The Magnificent Dance (2022)",
+    "Thakzin & MÖRDA - Burning Bush (2023)",
+    "Thakzin - Possessed (2023)",
+    "MÖRDA - various 2023-2024 3-Step releases",
+    "Dlala Thukzin - various 3-Step releases",
+    "Atmos Blaq - various 3-Step releases"
+  ],
+  "doc": "docs/styles/three_step.md"
+}

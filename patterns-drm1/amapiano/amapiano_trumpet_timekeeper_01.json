@@ -1,0 +1,23 @@
+{
+  "id": "amapiano_trumpet_timekeeper_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": [
+    "trumpet-timekeeper",
+    "offbeat-quarters"
+  ],
+  "_approach": "Splice's 'trumpet timekeeper' detail made literal in drums: the perc slot plays offbeat quarter-note stabs (steps 2, 6, 10, 14 - the 'and' of each beat) standing in for the horn hits that often mark time in Amapiano, over a light kick and a log-drum figure that answers between the stabs. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/blog/what-is-amapiano-music/"
+  ],
+  "tracks": {
+    "clap": [0,0,80,0,0,0,82,0,0,0,80,0,0,0,84,0,0,0,82,0,0,0,84,0,0,0,82,0,0,0,86,0],
+    "kick": [96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,57,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,59,0,0,0,48,0,0],
+    "hihat": [48,32,0,0,50,34,0,0,48,32,0,0,50,34,0,0,50,34,0,0,48,35,0,0,50,34,0,0,51,35,0,0]
+  },
+  "kit": "drm1"
+}

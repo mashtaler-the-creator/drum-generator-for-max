@@ -1,0 +1,24 @@
+{
+  "id": "grime_breakdown_dropout_mc_space_01",
+  "style": "grime",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "dropout",
+    "mc-space",
+    "4bar"
+  ],
+  "_approach": "The loop-based dropout that clears the floor for the MC: a kick on beat 1 alone for two bars, then total silence, then a single soft reentry cue — the strip-back grime instrumentals use before a reload or an 8-bar switch. Ref: Recording Arts Canada 'Evolution of Grime' (loop-based structure with strip-back dropouts). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://recordingarts.com/record/evolution-of-hip-hop/grime/"
+  ],
+  "tracks": {
+    "kick": [86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0]
+  },
+  "kit": "drm1"
+}

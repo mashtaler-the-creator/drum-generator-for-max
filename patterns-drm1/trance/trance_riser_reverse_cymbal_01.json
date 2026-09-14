@@ -1,0 +1,24 @@
+{
+  "id": "trance_riser_reverse_cymbal_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": [
+    "riser",
+    "reverse-cymbal",
+    "swell"
+  ],
+  "_approach": "The reverse-cymbal moment Myloops calls 'the single most reliable arrival cue in the genre': a crash cannot literally reverse inside a step sequencer, so the swell is approximated as a steadily accelerating, steadily rising run of crash/ride hits across the last bar (sparse 8ths climbing to a dense 16th run) whose velocity ramps from a whisper to 127, landing its loudest hit exactly on the downbeat where a true reverse-cymbal sample would peak. Kick and clap hold the groove in bar 1, then drop out in bar 2 to leave the swell alone. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.myloops.net/designing-trance-risers-impacts-and-transition-effects"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,38,0,0,0,46,0,54,0,62,0,74,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,104,127]
+  },
+  "kit": "drm1"
+}

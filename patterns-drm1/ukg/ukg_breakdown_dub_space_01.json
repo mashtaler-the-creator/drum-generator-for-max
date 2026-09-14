@@ -1,0 +1,28 @@
+{
+  "id": "ukg_breakdown_dub_space_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 129,
+  "swing": 0.26,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "dubby",
+    "minimal",
+    "space"
+  ],
+  "_approach": "Minimal dubby breakdown at the deepest swing in the library: one quiet kick opens bar 1, rim ghosts whisper the 2-step placements, clave ticks stand in for crackle, an unchoked open hat rings once per bar and the snare appears only on beat 4 of bar 2. Space is the instrument. Ref: late-era stripped 2-step, the palette Burial inherited (Burial 'Distant Lights' intro). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/uk-garage/",
+    "https://ghostsyndicate.audio/how-to-make-uk-garage-ableton-live/"
+  ],
+  "tracks": {
+    "kick": [70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,22,30,0,0,0,36,0,0,42,0,0,23,0,28,0,0,20,32,0,0,0,38,0,0,44,0,0,30,0,25],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0],
+    "hihat": [0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,30,0,0,0]
+  },
+  "kit": "drm1"
+}

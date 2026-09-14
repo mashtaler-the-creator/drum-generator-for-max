@@ -1,0 +1,25 @@
+{
+  "id": "phonk_drift_cowbell_riff_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 145,
+  "swing": 0.06,
+  "tags": [
+    "drift-phonk",
+    "cowbell",
+    "half-time"
+  ],
+  "_approach": "Canonical drift phonk half-time chassis: kick on the downbeat with the snare landing on beat 3 instead of every backbeat (the 'half-time at a fast tempo' feel every drift phonk guide describes), while the 808 cowbell drives a steady 8th-note riff — the role carries the riff's rhythm; pitch content comes from your sampler's chromatic cowbell mapping. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.soundtrap.com/how-to-produce-drift-phonk/",
+    "https://en.wikipedia.org/wiki/Phonk"
+  ],
+  "tracks": {
+    "kick": [120,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,122,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0],
+    "multi": [76,0,72,0,78,0,74,0,80,0,74,0,78,0,72,0,78,0,74,0,80,0,76,0,82,0,76,0,80,0,74,0],
+    "hihat": [0,0,0,0,50,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,52,0,0,0]
+  },
+  "kit": "drm1"
+}

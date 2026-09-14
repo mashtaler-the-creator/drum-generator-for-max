@@ -1,0 +1,19 @@
+{
+  "id": "techno_tribal_toms_01",
+  "style": "techno",
+  "bars": 1,
+  "stepsPerBar": 32,
+  "bpm": 127,
+  "swing": 0,
+  "tags": ["tribal", "toms", "percussive"],
+  "_approach": "Percussive, tom-and-conga-driven techno built on a 32nd-note grid the way Attack's Spastik-style Percussive Techno dissection programs its groove: a straight quarter-note kick, a low-velocity 32nd-note snare roll where hits land off the obvious 16th positions for a jittery, manually-nudged feel rather than a global swing, a 16th closed hat, and a reversed-feel open hat placed just before each half-bar. Congas trade a call-and-response line for the tribal, Underground-Resistance-adjacent low end.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/spastik-style-percussive-techno/"],
+  "tracks": {
+    "kick":      [112,0,0,0,0,0,0,0, 112,0,0,0,0,0,0,0, 112,0,0,0,0,0,0,0, 112,0,0,0,0,0,0,0],
+    "snare":     [0,0,28,0,32,0,30,0, 0,0,34,0,38,0,36,44, 0,0,28,0,32,0,30,0, 0,0,34,0,38,0,44,50],
+    "congaHigh": [0,0,0,0,70,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,70,0,0,0, 0,0,0,0,0,0,0,0],
+    "congaLow":  [0,0,0,0,0,0,0,0, 0,0,0,0,66,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,66,0,0,0],
+    "hihat":     [0,0,55,0,0,0,58,0, 0,0,60,0,0,0,62,0, 0,0,55,0,0,0,58,0, 0,0,60,0,0,0,64,0],
+    "openHat":   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0]
+  }
+}

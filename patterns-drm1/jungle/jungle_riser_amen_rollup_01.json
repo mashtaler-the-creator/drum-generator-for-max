@@ -1,0 +1,27 @@
+{
+  "id": "jungle_riser_amen_rollup_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 172,
+  "swing": 0.05,
+  "tags": [
+    "riser",
+    "build",
+    "amen",
+    "rollup"
+  ],
+  "_approach": "Amen roll-up: bar 1 states a compact amen groove (kick on 1 and the and-of-3, snare 2/4 with a-of-2 and e-of-3 ghosts, ride eighths); bar 2 is the tape-edit roll-up so beloved of 90s junglists - the snare accelerates 8ths -> 16ths -> 32nds with velocity climbing to 127 while the kick drops out and the ride/hats fade, leaving the last 32nd silent as the drop hits. Ref: Remarc/Dillinja-style amen edits, the roll-up documented in KAN Samples' Amen-chopping guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/how-to-chop-amen-break",
+    "https://www.edmprod.com/how-to-make-jungle-music/",
+    "https://magneticmag.com/2026/06/music-production-tips-for-making-jungle/"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,100,0,0,0,0,0,26,0,0,0,24,0,0,0,0,0,98,0,0,0,0,0,0,0,60,0,0,0,64,0,0,0,68,0,0,0,72,0,0,0,76,0,80,0,84,0,88,0,92,96,100,104,110,116,127,0],
+    "hh1Closed": [56,0,0,0,44,0,0,0,52,0,0,0,44,0,0,0,56,0,0,0,44,0,0,0,52,0,0,0,46,0,0,0,44,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [50,0,0,0,38,0,0,0,50,0,0,0,38,0,0,0,50,0,0,0,38,0,0,0,50,0,0,0,38,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

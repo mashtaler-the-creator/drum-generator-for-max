@@ -1,0 +1,35 @@
+{
+  "style": "dnb",
+  "name": "Drum & Bass",
+  "family": "breaks",
+  "bpm": [170, 176],
+  "swing": "0–0.12",
+  "summary": "Drum & bass drums are built on the two-step skeleton - kick on beat 1 plus one syncopated kick, snares locked to 2 and 4 (halftime is the one exception, on beat 3 only) - with a ghost-snare micro-language between the backbeats descended straight from jungle's chopped breaks. The top end defines the subgenre: ride-driven 8ths for rollers, swung open hats for liquid, on-beat hats choking an offbeat skank for jump-up, and surgical 32nd micro-edits for neurofunk.",
+  "sounds": {
+    "kick": "Punchy programmed 909/808-style kick (sub-reinforced for jump-up/foghorn weight) sitting alongside, and often layered under, a chopped break kick inherited from jungle's Amen/Think source material.",
+    "snare": "A composite snare/clap stack (909 body plus a sampled break snare for grit) carrying the 2-and-4 law, with dense low-velocity ghost hits between backbeats built from the same break-chopping vocabulary as jungle.",
+    "hats": "Ride-driven 8ths for rollers, swung and open for liquid, tight and choking for jump-up, 32nd micro-edited for neurofunk - closed hats stay well under the kick/snare in velocity.",
+    "percussion": "Conga/bongo hits and rim ticks lifted from the same funk/soul breaks jungle uses, filtered and processed into the halftime/autonomic and liquid palettes; neurofunk substitutes mechanical, edited percussion loops.",
+    "cymbals": "A single crash marks phrase starts (dancefloor/jump-up); the ride is otherwise the only cymbal doing groove work."
+  },
+  "machines": [
+    "Roland TR-909 — kick body, ride, closed/open hat foundation across most subgenres (owned)",
+    "Roland TR-808 — sub kick layer, clap/snare doubling, cowbell-slot percussion (owned)",
+    "Akai S900 / S950 / S1000 — the same break-chopping and timestretch lineage jungle uses, still present in 'raw'/sample-based DnB (owned)",
+    "10 Most Iconic Amen Patterns / junglebreaks.co.uk / Neekeetone Jungle Breaks — Amen/Think/Apache source material for hybrid roller and liquid ghost-snare programming (owned)",
+    "Akai MPC60 / MPC2000 / MPC3000 — break slicing and the swing/sequencing engine for classic jungle-into-DnB production (owned)",
+    "E-mu SP-1200 / SP-12 / Drumulator — 12-bit resampling grit for gritty 'raw' and techstep-era kicks/snares (owned)",
+    "Elektron Machinedrum — mechanical, edited percussion loops and hat stutters for neurofunk (owned)",
+    "Roland TR-727 / TR-505 — congas and shakers for the liquid and jump-up palettes (owned)",
+    "Sonic Academy Kick 2 / modern synthesised kick design — the foghorn/jump-up era's from-scratch kick sound (get elsewhere)"
+  ],
+  "references": [
+    "Alix Perez — Everyday Something (2011)",
+    "Calibre — Musch (2004)",
+    "Noisia — Machine Gun (2010)",
+    "Bou — Turbulence (2020)",
+    "dBridge & Instra:mental — Chameleon (2009)",
+    "Ed Rush & Optical — Wormhole (1998)"
+  ],
+  "doc": "docs/styles/dnb.md"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dnb_riser_snare_roll_16bar_01",
+  "style": "dnb",
+  "bars": 3,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0.02,
+  "tags": [
+    "riser",
+    "build",
+    "snare-roll",
+    "16bar"
+  ],
+  "_approach": "16-bar build compressed to three: bar 1 is the two-step groove, bar 2 drops the kick to just beat 1 while the snare roll begins at 8th-note spacing and grows, and bar 3 removes the kick entirely for an unbroken 16th snare roll ramping 60-127, hats thinned to nothing and the very last 16th left silent before the drop. Ref: KAN Samples' DnB arrangement guide (16-bar build: accelerating snare rolls, progressive drum intensification); MusicRadar's ultimate snare-roll build-up technique. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement",
+    "https://www.attackmagazine.com/technique/beat-dissected/incessant-drum-bass-beat/",
+    "https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,110,0,0,0,0,0,0,0,108,0,0,0,50,0,54,0,59,0,63,0,67,0,71,0,76,0,80,0,60,65,70,74,79,84,89,94,98,103,108,113,117,122,127,0],
+    "hihat": [45,0,34,0,45,0,34,0,45,0,34,0,45,0,36,0,40,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

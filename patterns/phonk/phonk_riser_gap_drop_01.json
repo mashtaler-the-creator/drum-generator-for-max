@@ -1,0 +1,19 @@
+{
+  "id": "phonk_riser_gap_drop_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": ["riser","gap","drift-phonk"],
+  "_approach": "Build-and-pause: a half-bar 16th kick ramp with the cowbell doubling it, then total silence for the rest of bar 2, then a single kick + snare + cowbell hit slams on the last 16th before the drop.",
+  "_sources": ["https://blog.soundtrap.com/how-to-produce-drift-phonk/"],
+  "tracks": {
+    "kick":     [112,0,0,0, 116,0,0,0, 120,0,0,0, 124,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "cowbell":  [70,0,0,0, 76,0,0,0, 82,0,0,0, 88,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "snare":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127]
+  }
+}

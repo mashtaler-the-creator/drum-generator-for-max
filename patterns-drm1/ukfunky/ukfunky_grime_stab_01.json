@@ -1,0 +1,29 @@
+{
+  "id": "ukfunky_grime_stab_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 130,
+  "tags": [
+    "groove",
+    "grime",
+    "stab",
+    "eskibeat",
+    "sparse"
+  ],
+  "_approach": "The grime/eskibeat strand inside UK funky's ancestry: cold, spacious rim and snare stabs over a mostly displaced, near-silent kick, phrased like the genre's East London 2-step-adjacent relative rather than its soca side — negative space and a single hard snare stab per bar do the work instead of a rolling groove, with the tresillo kick only appearing in bar 2. Ref: Wikipedia's UK funky entry naming grime among its direct ancestors, Complex's \"A Journey Through Wiley's Eskibeat\" on the genre's frosty, sparse stabbing rhythm language. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/UK_funky",
+    "https://www.complex.com/music/a/son-raw/a-journey-through-wiley-eskibeat",
+    "https://en.wikipedia.org/wiki/Eskimo_(grime_beat)"
+  ],
+  "tracks": {
+    "kick": [0,0,0,0,84,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,84,0,0,0,86,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,72,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,74,0,78,0,0,0,0,0,80],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,94],
+    "hihat": [0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,54,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60]
+  },
+  "kit": "drm1"
+}

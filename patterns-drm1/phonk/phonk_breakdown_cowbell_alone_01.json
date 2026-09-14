@@ -1,0 +1,21 @@
+{
+  "id": "phonk_breakdown_cowbell_alone_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 145,
+  "swing": 0.06,
+  "tags": [
+    "breakdown",
+    "cowbell",
+    "no-kick"
+  ],
+  "_approach": "Kick and snare drop out entirely; only the 808 cowbell riff keeps running (the genre's hook is strong enough to carry a section alone), a common drift phonk intro/breakdown move before the half-time kit crashes back in. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.soundtrap.com/how-to-produce-drift-phonk/"
+  ],
+  "tracks": {
+    "multi": [68,0,65,0,70,0,67,0,72,0,67,0,70,0,65,0,70,0,67,0,72,0,68,0,74,0,68,0,72,0,67,0]
+  },
+  "kit": "drm1"
+}

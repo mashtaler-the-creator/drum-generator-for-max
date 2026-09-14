@@ -1,0 +1,22 @@
+{
+  "id": "jersey_club_breakdown_no_kick_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "no-kick"
+  ],
+  "_approach": "Kick removed entirely; the hats and the sampled 'bed squeak' (rim role) carry the pulse alone, the emptied-out pocket Jersey club DJs use to let a chopped vocal hook breathe before the 5-kick pattern crashes back in. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/jersey-club/",
+    "https://orphiq.com/resources/what-is-jersey-club"
+  ],
+  "tracks": {
+    "hihat": [48,0,48,0,48,0,48,0,48,0,48,0,48,0,48,0,50,0,50,0,50,0,50,0,50,0,50,0,50,0,50,0],
+    "multi": [0,40,0,0,0,44,0,0,0,40,0,0,0,44,0,0,0,42,0,0,0,46,0,0,0,42,0,0,0,46,0,0]
+  },
+  "kit": "drm1"
+}

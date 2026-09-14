@@ -1,0 +1,21 @@
+{
+  "id": "krushclub_riser_squeak_climb_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": ["riser", "bed-squeak", "percussion-build"],
+  "_approach": "The bed-squeak hook from the groove set climbs in density and velocity instead of the kick doing the work: clave hits fill in from a sparse call-and-response to every 16th by the end of bar 2, joined by a rising cowbell/perc layer, while the kick and clap hold steady until they cut out for the final two 16ths — the squeak itself becomes the build.",
+  "_sources": ["https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/", "https://www.edmprod.com/krushclub/"],
+  "tracks": {
+    "kick":   [110,0,0,0, 106,0,0,0, 104,0,0,100, 0,0,104,0,
+               110,0,0,0, 106,0,0,0, 104,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0],
+    "clave":  [0,0,44,0, 0,46,0,0, 0,0,48,0, 50,0,0,0,
+               52,0,56,58, 60,62,64,66, 68,72,76,80, 86,92,100,110],
+    "cowbell":[0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 40,0,44,0, 48,0,52,0, 56,60,64,0]
+  }
+}

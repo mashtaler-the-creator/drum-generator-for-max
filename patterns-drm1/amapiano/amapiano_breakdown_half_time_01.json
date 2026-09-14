@@ -1,0 +1,22 @@
+{
+  "id": "amapiano_breakdown_half_time_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": [
+    "breakdown",
+    "half-time"
+  ],
+  "_approach": "Half-time floor: a single soft kick per bar, a minimal log-drum accent (tomLow), and a thinned shaker - the groove holds together on almost nothing, ready to fill back in for the next groove section. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://articles.roland.com/production-hacks-creating-amapiano-tracks/"
+  ],
+  "tracks": {
+    "kick": [90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0],
+    "hihat": [34,0,0,0,32,0,0,0,33,0,0,0,32,0,0,0,35,0,0,0,34,0,0,0,34,0,0,0,34,0,0,0]
+  },
+  "kit": "drm1"
+}

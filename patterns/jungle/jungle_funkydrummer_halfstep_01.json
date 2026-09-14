@@ -1,0 +1,16 @@
+{
+  "id": "jungle_funkydrummer_halfstep_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 165,
+  "swing": 0.1,
+  "tags": ["funky-drummer","half-step","ghost-notes","classic"],
+  "_approach": "Funky Drummer half-step: Clyde Stubblefield's original break barely states a backbeat at all - the groove lives in an off-kilter 16th ghost-snare pattern with the kick answering off the downbeat rather than locking to it. This approach keeps that half-stepped, ghost-heavy feel instead of jungle's usual dense amen chop-science, so the snare does most of the talking and the kick feels like it is chasing it. Ref: James Brown 'Funky Drummer' (Clyde Stubblefield); EDMProd's list of the three foundational jungle breaks (Amen, Think, Funky Drummer).",
+  "_sources": ["https://en.wikipedia.org/wiki/Funky_Drummer","https://www.edmprod.com/how-to-make-jungle-music/"],
+  "tracks": {
+    "kick": [0,0,90,0, 0,0,0,0, 0,86,0,0, 0,0,0,0, 84,0,0,0, 0,0,0,0, 0,90,0,0, 0,70,0,0],
+    "snare": [0,0,0,0, 98,22,0,26, 0,0,20,0, 96,0,0,24, 0,0,0,0, 96,0,24,0, 20,0,0,28, 94,0,22,0],
+    "hihat": [50,0,40,0, 50,0,40,0, 50,0,40,0, 50,0,40,0, 52,0,42,0, 52,0,42,0, 52,0,42,0, 52,0,42,0]
+  }
+}

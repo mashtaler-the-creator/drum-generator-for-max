@@ -1,0 +1,27 @@
+{
+  "id": "ukg_breakdown_rim_shuffle_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 133,
+  "swing": 0.22,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "rim",
+    "shuffle"
+  ],
+  "_approach": "The rim takes over the kick's 2-step placements (1, a-of-2, and-of-3) at decoration velocity so the shuffle is implied rather than stated; one soft kick on the downbeat of bar 1 keeps the low end alive, a quiet shaker rolls 16ths, and the snare only speaks on beat 4 of bar 2 as the accent. Ref: dark-garage breakdowns (El-B, Horsepower Productions). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/uk-garage/",
+    "https://blog.native-instruments.com/uk-garage-music/"
+  ],
+  "tracks": {
+    "kick": [72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [84,0,0,0,0,0,0,70,0,0,80,0,0,0,0,30,82,0,0,0,0,0,0,72,0,0,78,0,0,32,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0],
+    "hihat": [35,22,42,24,37,22,66,26,35,24,42,24,38,26,45,27,37,24,68,26,38,24,45,27,37,26,70,26,40,27,46,29],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

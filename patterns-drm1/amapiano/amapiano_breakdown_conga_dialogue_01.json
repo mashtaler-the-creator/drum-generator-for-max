@@ -1,0 +1,25 @@
+{
+  "id": "amapiano_breakdown_conga_dialogue_01",
+  "style": "amapiano",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.11,
+  "bpm": 111,
+  "tags": [
+    "breakdown",
+    "conga",
+    "call-response",
+    "no-kick"
+  ],
+  "_approach": "Four bars of conga dialogue with no kick: congaHigh speaks in bars 1 and 3, congaLow answers in 2 and 4, a soft shaker ties it together - the conversational percussion habit Amapiano shares with Afro house, isolated here as the breakdown's whole content. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://beatstorapon.com/blog/how-to-make-amapiano-beat/",
+    "https://www.melodigging.com/genre/amapiano"
+  ],
+  "tracks": {
+    "drum1": [0,0,57,0,0,0,0,0,0,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,0,0,0,0,0,0,55,0,0,0,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,59,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,0,61,0,0,49,0,53],
+    "hihat": [30,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

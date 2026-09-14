@@ -1,0 +1,23 @@
+{
+  "id": "trance_16th_offbeat_hat_wall_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["groove", "hat-wall", "16th"],
+  "_approach": "A busier hat-forward variant: the closed hat runs a full accented 16th wall (velocity contour rising into each beat) while the offbeat open hat is choked hard and short, and a tambourine doubles the offbeat for extra shimmer — the dense-hat construction some classic trance productions favour over the sparser progressive pocket.",
+  "_sources": ["https://www.drumloopai.com/trance/common-patterns-used-in-trance-beats/"],
+  "tracks": {
+    "kick":       [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                   116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0],
+    "snare":      [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0,
+                   0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0],
+    "hihat":      [56,60,64,68, 56,60,64,68, 56,60,64,68, 56,60,64,68,
+                   58,62,66,70, 58,62,66,70, 58,62,66,70, 58,62,66,70],
+    "openHat":    [0,0,0,0, 0,66,0,0, 0,0,0,0, 0,66,0,0,
+                   0,0,0,0, 0,68,0,0, 0,0,0,0, 0,68,0,0],
+    "tambourine": [0,0,0,0, 0,40,0,0, 0,0,0,0, 0,40,0,0,
+                   0,0,0,0, 0,42,0,0, 0,0,0,0, 0,42,0,0]
+  }
+}

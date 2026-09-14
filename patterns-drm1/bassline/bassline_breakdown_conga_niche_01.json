@@ -1,0 +1,29 @@
+{
+  "id": "bassline_breakdown_conga_niche_01",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.2,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "niche",
+    "congas",
+    "tambourine"
+  ],
+  "_approach": "Niche organ-tune breakdown: syncopated congas and offbeat tambourine carry the Latin-tinged shuffle with the kick removed; claps sit at decoration level on 2 and 4 in bar 1 and only the beat-4 clap in bar 2 is an accent. Ref: the Latin tops on Jamie Duggan-era organ bassline, DJ Q 'Get Down'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/rolling-2-step-garage/",
+    "https://www.musicradar.com/how-to/build-a-bassline-house-beat-in-4-steps"
+  ],
+  "tracks": {
+    "drum1": [0,0,0,76,0,0,82,0,0,0,0,0,0,70,0,74,0,0,0,78,0,0,84,0,0,72,0,0,0,0,80,0],
+    "drum2": [78,0,0,0,0,0,0,0,74,0,0,68,0,0,0,0,80,0,0,0,0,0,0,0,76,0,0,0,0,0,0,72],
+    "hh1Closed": [0,0,58,0,0,0,59,0,0,0,58,0,0,0,61,0,0,0,59,0,0,0,61,0,0,0,59,0,0,35,62,0],
+    "clap": [0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,96,0,0,0],
+    "hihat": [0,0,0,54,0,0,0,58,0,0,0,54,0,0,0,60,0,0,0,56,0,0,0,60,0,46,0,56,0,0,0,62],
+    "multi": [0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0]
+  },
+  "kit": "drm1"
+}

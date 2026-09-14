@@ -1,0 +1,27 @@
+{
+  "id": "ukg_breakdown_skippy_hats_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.24,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "hats",
+    "2step"
+  ],
+  "_approach": "Kick-free breakdown where the swung skippy hat contour is the whole groove: accented 16th closed hats, offbeat open hats, rim ghosts in the pocket, a clap on 2 and 4 in bar 1 that thins to beat 4 only in bar 2. Drop this before a riser. Ref: the vocal breakdown sections of MJ Cole 'Crazy Love', Zed Bias 'Neighbourhood'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/uk-garage/",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-program-uk-garage-drums-complete-guide-for-producers",
+    "https://ghostsyndicate.audio/how-to-make-uk-garage-ableton-live/"
+  ],
+  "tracks": {
+    "hihat": [64,0,78,44,0,0,80,0,66,0,82,46,0,42,74,50,62,0,76,42,30,0,78,0,64,40,80,44,30,0,72,48],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,70,0],
+    "clap": [0,0,0,0,94,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0],
+    "multi": [0,0,0,28,0,0,0,0,0,26,0,0,0,0,0,30,0,0,0,28,0,0,30,0,0,0,0,26,0,0,34,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "grime_breakdown_icerink_hush_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "icerink",
+    "hush",
+    "minimal"
+  ],
+  "_approach": "Takes 'Ice Rink' minimalism further into true breakdown territory: one kick, no snare for a full bar, and a couple of icy clave clicks — maximum room for a hush before the MC returns. Ref: Wiley 'Ice Rink'; grime DNA doc. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Reload_(Wiley_song)",
+    "https://www.musicradar.com/tuition/tech/22-pro-grime-production-tricks-170428"
+  ],
+  "tracks": {
+    "kick": [90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0]
+  },
+  "kit": "drm1"
+}

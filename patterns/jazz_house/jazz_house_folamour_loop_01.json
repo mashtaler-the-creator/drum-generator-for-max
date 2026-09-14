@@ -1,0 +1,21 @@
+{
+  "id": "jazz_house_folamour_loop_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 123,
+  "tags": ["folamour", "filtered-loop", "building-density"],
+  "_approach": "Modelled on Folamour's habit of starting a loop low in the mix and letting it 'rear up': bar 1 is a stripped clap-and-kick groove, bar 2 adds a second clap layer and denser swung hats and shaker without changing the underlying pattern -- the same loop, more energy. MPC swing 58% (engine 0.16). Reference: Folamour 'Cathédrale', 'Movement Therapy'.",
+  "_sources": ["https://www.billboard.com/music/features/folamour-interview-movement-therapy-1235997711/"],
+  "tracks": {
+    "kick":   [100,0,0,0, 98,0,0,0, 102,0,0,0, 96,0,0,0,
+               101,0,0,0, 99,0,0,0, 103,0,0,0, 105,0,0,0],
+    "perc":   [0,0,0,0, 90,0,0,0, 0,0,0,0, 92,0,0,0,
+               0,0,0,0, 96,0,0,0, 0,0,0,0, 100,0,0,0],
+    "hihat":  [0,38,0,0, 0,40,0,0, 0,38,0,0, 0,42,0,0,
+               0,44,0,46, 0,46,0,48, 0,44,0,46, 0,48,0,52],
+    "shaker": [0,0,30,0, 0,0,32,0, 0,0,30,0, 0,0,34,0,
+               0,0,34,0, 0,0,36,0, 0,0,36,0, 0,0,40,0]
+  }
+}

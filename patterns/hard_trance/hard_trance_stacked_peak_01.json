@@ -1,0 +1,25 @@
+{
+  "id": "hard_trance_stacked_peak_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["peak-time", "stacked", "wall-of-sound"],
+  "_approach": "The full peak-time stack: a hard kick, offbeat open hat, closed 16ths, a building 2/4-into-16th-roll clap and a light conga fill and ride all layered together, mirroring the 'three loop stack' (top loop + percussion loop + rave loop) production approach used for the densest hard house sections.",
+  "_sources": ["https://theproducerschool.com/blogs/featured-blogs/master-hard-house-production-k-starky-style-tutorial-in-fl-studio"],
+  "tracks": {
+    "kick":      [120,0,0,0, 120,0,0,0, 120,0,0,0, 120,0,0,0,
+                  120,0,0,0, 120,0,0,0, 118,0,0,0, 124,0,0,0],
+    "openHat":   [0,0,100,0, 0,0,100,0, 0,0,100,0, 0,0,100,0,
+                  0,0,100,0, 0,0,100,0, 0,0,100,0, 0,0,100,0],
+    "hihat":     [0,48,0,52, 0,48,0,52, 0,48,0,52, 0,50,0,56,
+                  0,48,0,52, 0,48,0,52, 0,50,0,54, 0,52,0,58],
+    "perc":      [0,0,0,0, 106,0,0,0, 0,0,0,0, 108,0,0,0,
+                  0,0,0,0, 108,0,0,0, 0,0,0,0, 72,84,96,110],
+    "congaHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,44,0,0, 0,0,0,0, 0,46,0,0, 0,0,0,0],
+    "ride":      [70,0,0,0, 50,0,0,0, 70,0,0,0, 50,0,0,0,
+                  70,0,0,0, 52,0,0,0, 70,0,0,0, 54,0,0,0]
+  }
+}

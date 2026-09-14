@@ -1,0 +1,19 @@
+{
+  "id": "krushclub_breakdown_squeak_only_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": ["breakdown", "bed-squeak", "no-kick"],
+  "_approach": "Kick and clap removed entirely; only the bed-squeak (clave) call-and-response and a soft shaker keep the pulse alive, exactly the way Jersey Club edits strip to just the squeak hook between drops. One ghost rim in bar 2 hints at the backbeat's return.",
+  "_sources": ["https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/"],
+  "tracks": {
+    "clave":  [0,0,44,0, 0,46,0,0, 0,0,48,0, 46,0,0,0,
+               0,0,44,0, 0,46,0,0, 0,0,48,0, 46,0,0,0],
+    "shaker": [30,0,26,0, 32,0,28,0, 30,0,26,0, 32,0,28,0,
+               30,0,26,0, 32,0,28,0, 30,0,26,0, 32,0,28,34],
+    "rim":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,32,0]
+  }
+}

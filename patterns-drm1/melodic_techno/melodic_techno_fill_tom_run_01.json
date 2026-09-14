@@ -1,0 +1,26 @@
+{
+  "id": "melodic_techno_fill_tom_run_01",
+  "style": "melodic_techno",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "fill",
+    "tom-run",
+    "turnaround"
+  ],
+  "_approach": "One-bar tom run: kick 4/4, clap on 2, high-to-low tom run through beats 3-4 ending on a low tom at 104 and a snare on the last 16th. Auto-injected every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://youtu.be/nA766ZJTPGw"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0],
+    "clap": [0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,78,82,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,84,88,90,96,104,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70],
+    "hihat": [0,66,0,66,0,66,0,66,0,66,0,66,0,66,0,66]
+  },
+  "kit": "drm1"
+}

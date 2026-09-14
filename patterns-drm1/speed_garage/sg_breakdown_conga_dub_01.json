@@ -1,0 +1,29 @@
+{
+  "id": "sg_breakdown_conga_dub_01",
+  "style": "speed_garage",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 135,
+  "swing": 0.12,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "congas",
+    "tambourine",
+    "4bar"
+  ],
+  "_approach": "Four-bar US-house-flavoured breakdown: a two-bar conga conversation repeats with variations, tambourine offbeats enter in bar 2, the clap appears only on beat 4 and the kick is gone until bar 4 where it lands on beats 1 and 3 as a warning that the pump is returning. Ref: Armand Van Helden's 1996-97 UK remixes, Nu Birth 'Anytime' breakdowns. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/rolling-2-step-garage/",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-speed-garage-complete-production-tutorial"
+  ],
+  "tracks": {
+    "drum1": [0,0,0,72,0,0,78,0,0,0,0,0,0,67,0,0,0,0,0,74,0,0,80,0,0,68,0,0,0,0,76,0,0,0,0,74,0,0,80,0,0,0,0,0,0,70,0,72,0,0,0,76,0,0,82,0,0,70,0,0,0,0,80,0],
+    "drum2": [74,0,0,0,0,0,0,0,70,0,0,65,0,0,0,0,76,0,0,0,0,0,0,0,72,0,0,0,0,0,0,68,76,0,0,0,0,0,0,0,72,0,0,67,0,0,0,0,78,0,0,0,0,0,0,0,74,0,0,0,0,0,0,70],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,58,0,0,0,56,0,0,0,59,0,0,0,58,0,0,0,59,0,0,0,58,0,0,0,61,0,0,0,59,0,0,0,61,0,0,0,61,0,0,0,64,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,96,0,0,0],
+    "kick": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0],
+    "hihat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,64,0,0,0,62,0,0,0,66,0,0,0,64,0,0,0,66,0,0,0,66,0,0,0,70,0]
+  },
+  "kit": "drm1"
+}

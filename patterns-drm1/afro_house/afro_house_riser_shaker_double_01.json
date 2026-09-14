@@ -1,0 +1,26 @@
+{
+  "id": "afro_house_riser_shaker_double_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0.04,
+  "bpm": 123,
+  "tags": [
+    "riser",
+    "shaker",
+    "32nds",
+    "build"
+  ],
+  "_approach": "Shaker-doubling build on a 32nd grid: bar 1 is the normal 16th shaker, bar 2 doubles to 32nds with a straight velocity ramp while the open hat and clap step up; the kick leaves on beat 4 of bar 2 to open a gap before the drop. Samplesound names shaker build-ups as the genre's transition tool. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.samplesoundmusic.com/blogs/news/the-ultimate-guide-to-afro-house-production-in-2025-tips-tricks-and-techniques",
+    "https://www.beatportal.com/articles/647491-step-by-step-guide-to-creating-an-afro-house-track-keinemusik-black-coffee-caiiro-alex-wann-style"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,107,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [65,0,42,0,49,0,40,0,66,0,42,0,50,0,41,0,62,0,43,0,50,0,42,0,63,0,40,0,51,0,42,0,42,43,41,42,48,50,51,49,58,56,58,59,63,65,62,64,70,68,70,67,78,80,78,79,83,85,86,84,89,86,94,96],
+    "openHat": [0,0,0,0,64,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,105,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,105,0,0,0,108,0,107,116]
+  },
+  "kit": "drm1"
+}

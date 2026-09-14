@@ -1,0 +1,33 @@
+{
+  "style": "hard_trance",
+  "name": "Hard Trance / Hard House",
+  "family": "trance",
+  "bpm": [145, 152],
+  "swing": "0–0.06",
+  "summary": "The UK hard-trance/hard-house lineage that runs from Trade and Tidy Trax through Nukleuz to the 2025-26 revival: a hard, punchy 4/4 kick, an open hat firing on every offbeat 8th (the genre's defining drive), 16th closed hats kept low, and a clap on 2 and 4 that regularly explodes into a 16th roll. Percussion bounces (congas, rim, clave loops) rather than washing; breakdowns embrace long euphoric builds and drop-into-silence gaps that hard techno deliberately avoids.",
+  "sounds": {
+    "kick": "Hard, clean, clipped 4/4 kick (909-style base) tuned for club weight rather than distortion-first; the revival keeps it punchy with a touch more low-mid than the 90s original.",
+    "snare": "Clap on 2 and 4 is the primary backbeat; layered clap+snare stacks and 16th clap rolls (Nukleuz-style call-and-response) mark the harder/revival lanes. A true snare is rare outside 2020s revival layering.",
+    "hats": "Open hat on every offbeat 8th at high velocity is the signature drive; closed 16ths sit under 70% so they never compete; double-offbeat variants (hits on both the 'and' and the 'a') push extra energy.",
+    "percussion": "Bouncing congas, rim shots and compressed clave/schranz-adjacent loops fill the space the hoover bassline leaves; cowbell ghosts hoover stabs in gallop-style patterns.",
+    "cymbals": "One crash marks riser payoffs and section changes; ride is used sparingly as an alternate groove engine (loud/soft 8ths), not a wash."
+  },
+  "machines": [
+    "Roland TR-909 — kick, clap, ride, hats (owned)",
+    "Roland TR-808 — clap layering, cowbell (owned)",
+    "Roland TR-727 / TR-505 — congas and claves for bouncing percussion loops (owned)",
+    "Simmons SDS — toms for gallop/cascade risers (owned)",
+    "Novation Drumstation / Quasimidi 309 — period-correct rave claps and 909-style kicks (owned)",
+    "Elektron Machinedrum / Korg Electribe ER-1 — synthesised percussion for the schranz-hybrid lane (owned)",
+    "Roland Alpha Juno-2 (hoover source, bass not drums) — the offbeat hoover the drums are built to frame (get elsewhere)",
+    "Sonic Academy Kick 2 — modern synthesised kick design (get elsewhere)"
+  ],
+  "references": [
+    "BK — Revolution (Nukleuz, 1999)",
+    "Tony De Vit — Trade sets (1990s)",
+    "Mauro Picotto — Komodo (2000)",
+    "Cosmic Gate — Fire Wire (2001)",
+    "Ben Hemsley / KI/KI / Daxson — 2025-26 revival"
+  ],
+  "doc": "docs/styles/hard_trance.md"
+}

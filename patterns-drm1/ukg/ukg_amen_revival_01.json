@@ -1,0 +1,29 @@
+{
+  "id": "ukg_amen_revival_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 136,
+  "tags": [
+    "revival",
+    "amen",
+    "jungle-crossover",
+    "2020s"
+  ],
+  "_approach": "2020s sped-up amen over garage (the jungle x garage crossover that runs alongside the PinkPantheress-era revival): the classic 2-step kick/clap skeleton stays intact and the backbeat still anchors 2 and 4, but a rapid chopped-amen texture — paired ghost 'kick' and 'snare' hits at double time, the way jungle producers slice and rearrange the break — is threaded through the rim and a second percussion voice, echoing how sped-up breaks get dropped into contemporary garage sets. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.soniare.net/blog/amen-break-deconstructed",
+    "https://orphiq.com/resources/what-is-jungle-music",
+    "https://mixmag.net/feature/the-20-best-tracks-that-sample-the-amen-break"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,0,0,88,0,0,0,96,0,0,0,0,0,116,0,0,0,0,0,0,0,0,0,94,0,0,38,0,0],
+    "snare": [0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,118,0,0,0],
+    "hihat": [0,0,70,0,0,0,74,0,0,0,72,0,0,0,0,0,0,0,72,0,0,0,76,0,0,0,70,0,0,0,0,0],
+    "multi": [0,0,0,44,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,52,56,0,0,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,58,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,64,0,0,68,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

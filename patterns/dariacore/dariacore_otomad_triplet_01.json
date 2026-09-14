@@ -1,0 +1,21 @@
+{
+  "id": "dariacore_otomad_triplet_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.33,
+  "bpm": 175,
+  "tags": ["groove", "hyperflip", "otomad", "triplet-feel"],
+  "_approach": "The Japanese branch of the scene (hyperflip, tracing back to Niconico's otoMAD remix culture per Wikipedia) tends toward busier, more rhythmically ornate anime/J-pop/Vocaloid flips than the US dariacore lineage. This groove uses a rolling triplet-feel hat and clave pattern (swing 0.33) reminiscent of the ornamental fills common in Vocaloid-adjacent production, over a breakbeat-derived kick — a construction approach distinct from the straight-16th US grooves above.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "kick":  [112,0,0,0, 0,0,96,0, 0,0,0,66, 100,0,0,0,
+              112,0,0,0, 0,0,96,0, 0,0,0,66, 100,0,70,0],
+    "snare": [0,0,0,0, 98,0,0,0, 0,0,0,0, 98,0,0,0,
+              0,0,0,0, 98,0,0,0, 0,0,0,0, 98,0,0,0],
+    "clave": [0,0,46,0, 0,0,48,0, 0,0,46,0, 0,0,50,0,
+              0,0,48,0, 0,0,50,0, 0,0,48,0, 0,0,52,0],
+    "hihat": [0,42,0,0, 0,42,0,0, 0,42,0,0, 0,42,0,0,
+              0,44,0,0, 0,44,0,0, 0,44,0,0, 0,44,0,0]
+  }
+}

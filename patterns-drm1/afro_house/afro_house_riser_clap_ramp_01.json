@@ -1,0 +1,27 @@
+{
+  "id": "afro_house_riser_clap_ramp_01",
+  "style": "afro_house",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 122,
+  "tags": [
+    "riser",
+    "clap-ramp",
+    "4-bar",
+    "build"
+  ],
+  "_approach": "Four-bar clap build: quarter-note claps, then 8ths, then 16ths, then a full-velocity 16th wall that stops for three 16ths of silence before one final hit. Kick and shaker hold for three bars and drop out in bar 4, leaving only the clap and a rising low conga. Beatportal's build-drop timeline compressed into 4 bars. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.beatportal.com/articles/647491-step-by-step-guide-to-creating-an-afro-house-track-keinemusik-black-coffee-caiiro-alex-wann-style",
+    "https://www.samplesoundmusic.com/blogs/news/the-ultimate-guide-to-afro-house-production-in-2025-tips-tricks-and-techniques"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [53,0,0,0,61,0,0,0,64,0,0,0,72,0,0,0,70,0,74,0,81,0,80,0,79,0,84,0,88,0,87,0,86,88,85,87,96,98,100,97,99,96,98,100,105,107,104,106,108,105,107,104,106,108,105,107,116,118,120,117,0,0,0,120],
+    "hihat": [63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41,65,40,50,43,63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41,65,40,50,43,63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41,0,0,0,0,0,0,0,0],
+    "openHat": [0,0,63,0,0,0,61,0,0,0,64,0,0,0,62,0,0,0,60,0,0,0,63,0,0,0,61,0,0,0,64,0,0,0,62,0,0,0,60,0,0,0,63,0,0,0,61,0,0,0,64,0,0,0,62,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,0,0,0,0,0,59,0,0,0,0,0,0,0,0,0,68,0,67,0,74,0,78,0,77,0,76,0,81,0,80,0,95,0,94,0,0,0,0,113]
+  },
+  "kit": "drm1"
+}

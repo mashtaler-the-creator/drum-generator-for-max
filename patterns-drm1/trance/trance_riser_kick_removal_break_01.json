@@ -1,0 +1,26 @@
+{
+  "id": "trance_riser_kick_removal_break_01",
+  "style": "trance",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": [
+    "riser",
+    "kick-removal",
+    "break"
+  ],
+  "_approach": "The kick-removal break: bars 1-2 run the full uplifting groove, then the kick vanishes for bars 3-4 while the offbeat open hat, closed 16th hat and a rising tambourine/shaker layer keep the pulse alive on their own — Native Instruments' UK garage/garage-adjacent 'remove and reintroduce the groove' technique applied to a trance breakdown-to-build transition. The kick punches back in on the very last 16th to pick the track back up into the drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/uk-garage-music/",
+    "https://www.myloops.net/building-a-powerful-trance-breakdown"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127],
+    "hihat": [58,60,62,64,58,60,62,64,58,60,62,64,58,60,62,64,60,62,64,66,60,62,64,66,60,62,64,66,60,62,64,66,62,64,66,68,62,64,66,68,62,64,66,68,62,64,66,68,64,66,68,70,64,66,68,70,64,66,68,70,64,66,68,0],
+    "openHat": [0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,90,0,0],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,34,0,35,0,37,0,38,0,40,0,42,0,43,0,45,0,48,0,51,0,54,0,58,0,62,0,67,0,72,88]
+  },
+  "kit": "drm1"
+}

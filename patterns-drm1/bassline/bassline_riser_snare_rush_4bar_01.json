@@ -1,0 +1,30 @@
+{
+  "id": "bassline_riser_snare_rush_4bar_01",
+  "style": "bassline",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.1,
+  "tags": [
+    "riser",
+    "build",
+    "snare-rush",
+    "4x4",
+    "modern"
+  ],
+  "_approach": "Four-bar modern bassline build (near straight): 4/4 kick through bars 1-3, open hats on every offbeat growing louder, snare stepping from silence to 8ths to 16ths, then bar 4 removes the kick so the snare rush (peaking at 127 on the last 16th) and a crash-marked start push into the drop. Ref: TQD 'Vibsing Ting', Skepsis 'Goes Like', Holy Goof build sections. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://www.edmprod.com/how-to-make-bass-house/",
+    "https://www.musicradar.com/how-to/bassline-house-production-tips"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,118,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,120,0,0,0,112,0,0,0,114,0,0,0,112,0,0,96,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,116,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,120,0,0,0,122,0,0,0,124,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,80,0,84,0,88,0,90,0,92,0,94,0,96,0,98,0,100,0,102,0,104,0,100,102,104,105,107,109,111,113,114,116,118,120,122,123,125,127],
+    "openHat": [0,0,68,0,0,0,70,0,0,0,68,0,0,0,72,0,0,0,72,0,0,0,74,0,0,0,72,0,0,0,76,0,0,0,76,0,0,0,78,0,0,0,78,0,0,0,82,0,0,0,84,0,0,0,86,0,0,0,88,0,0,0,92,0],
+    "hihat": [0,0,0,66,0,0,0,68,0,0,0,66,0,0,0,70,0,0,0,68,0,44,0,70,0,0,0,68,0,46,0,72,0,46,0,72,0,48,0,74,0,50,0,74,0,52,0,78,0,52,0,78,0,54,0,80,0,56,0,82,0,58,0,86],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

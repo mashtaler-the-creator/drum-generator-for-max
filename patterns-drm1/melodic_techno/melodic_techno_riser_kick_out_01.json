@@ -1,0 +1,26 @@
+{
+  "id": "melodic_techno_riser_kick_out_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "riser",
+    "kick-out",
+    "silence-gap",
+    "shaker"
+  ],
+  "_approach": "Kick-out build: bar 1 keeps the kick under a rising 16th snare and shaker, bar 2 removes the kick, the snare climbs to 120, a single 16th of silence, then snare+kick+crash on the final step. Offbeat hats throughout. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120],
+    "snare": [40,43,45,48,51,53,56,59,61,64,67,69,72,75,77,80,82,85,88,91,94,97,100,102,105,108,111,114,117,120,0,127],
+    "hihat": [45,70,46,70,45,70,46,70,45,70,46,70,45,70,46,70,48,70,50,70,48,70,50,70,48,70,50,70,48,70,50,70],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,116]
+  },
+  "kit": "drm1"
+}

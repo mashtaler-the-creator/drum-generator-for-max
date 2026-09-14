@@ -1,0 +1,26 @@
+{
+  "id": "jungle_riser_timestretch_snare_climb_01",
+  "style": "jungle",
+  "bars": 3,
+  "stepsPerBar": 16,
+  "bpm": 168,
+  "swing": 0.06,
+  "tags": [
+    "riser",
+    "build",
+    "timestretch",
+    "snare-climb"
+  ],
+  "_approach": "Timestretch-era snare climb: emulates the Akai S950/S1000 pitched-up snare-roll effect jungle producers built by timestretching a break - since MIDI velocity can't bend pitch, the climb is voiced through density and velocity instead: bar 1 is a plain groove, bar 2 thickens the ghost-snare chatter around the backbeat while the kick thins to beat 1, and bar 3 drops the kick entirely for an unbroken 16th snare roll ramping 64-127, with one silent 16th left before the drop. Ref: the S900/S950/S1000 timestretch history behind the classic jungle snare-roll sound, KAN Samples' Amen-chopping guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Akai_S900",
+    "https://kansamples.com/blogs/learn/how-to-chop-amen-break",
+    "https://www.edmprod.com/how-to-make-jungle-music/"
+  ],
+  "tracks": {
+    "kick": [100,0,0,0,0,0,0,0,0,0,84,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,96,0,0,22,0,0,0,0,94,0,0,20,32,0,38,0,98,0,44,0,50,0,56,0,96,0,62,0,64,69,73,78,82,87,91,96,100,105,109,114,118,123,127,0],
+    "hihat": [55,0,42,0,55,0,42,0,55,0,42,0,55,0,42,0,50,0,0,0,50,0,0,0,50,0,0,0,50,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

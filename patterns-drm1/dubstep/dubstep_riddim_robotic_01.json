@@ -1,0 +1,26 @@
+{
+  "id": "dubstep_riddim_robotic_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 142,
+  "swing": 0.04,
+  "tags": [
+    "riddim",
+    "robotic",
+    "quantized",
+    "modern"
+  ],
+  "_approach": "Modern riddim-style dubstep, a deliberate break from the halfstep 'never on 2 and 4' rule: per EDMProd's riddim breakdown, the classic 1-and-3 two-step kick gets a kick added on 2 and 4 as well, producing a stiff, robotic, almost four-to-the-floor stomp with near-zero swing and hypnotic repetition — the modern lineage of Ternion Sound/Subtronics-style riddim rather than DMZ meditation. Ref: EDMProd 'How to Make Riddim like Subtronics in 5 Easy Steps'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/how-to-make-riddim/",
+    "https://en.wikipedia.org/wiki/Riddim_(genre)"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,100,0,70,0,112,0,0,0,100,0,0,0,110,0,0,0,98,0,72,50,110,0,0,0,98,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,106,0,0,0],
+    "clap": [0,0,40,0,0,0,0,0,0,0,44,0,0,0,42,0,0,0,44,0,0,0,0,0,0,0,48,0,0,0,46,0],
+    "hihat": [30,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

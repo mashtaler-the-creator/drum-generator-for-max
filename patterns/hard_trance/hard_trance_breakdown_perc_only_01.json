@@ -1,0 +1,19 @@
+{
+  "id": "hard_trance_breakdown_perc_only_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 145,
+  "tags": ["breakdown", "perc-only", "no-kick"],
+  "_approach": "No kick, no hats: a high/low conga loop is the only rhythm, with rim ghost accents creeping in during bar 2. This is the melodic space hard trance leaves open for the pad/vocal breakdown instead of a wash of noise.",
+  "_sources": ["https://en.wikipedia.org/wiki/Hard_trance"],
+  "tracks": {
+    "congaHigh": [0,0,55,0, 0,0,0,58, 0,0,55,0, 0,0,0,60,
+                  0,0,56,0, 0,0,0,60, 0,0,58,0, 0,0,0,62],
+    "congaLow":  [50,0,0,0, 0,52,0,0, 50,0,0,0, 0,54,0,0,
+                  52,0,0,0, 0,54,0,0, 52,0,0,0, 0,56,0,0],
+    "rim":       [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,26, 0,0,0,0, 0,0,0,28, 0,0,0,0]
+  }
+}

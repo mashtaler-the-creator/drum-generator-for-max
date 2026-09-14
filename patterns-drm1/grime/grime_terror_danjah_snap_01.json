@@ -1,0 +1,25 @@
+{
+  "id": "grime_terror_danjah_snap_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "terror-danjah",
+    "snappy",
+    "fidgety",
+    "rnb-tinged"
+  ],
+  "_approach": "Terror Danjah's Aftershock-era signature: fidgety, jungle-descended percussion and a tight double-snap snare (a main hit plus an immediate quick ghost snap) over an angular, syncopated kick — brasher and more kinetic than the eski-school minimalism, R&B-adjacent in its snap. Ref: XLR8R 'The Devil Inside: Terror Danjah Talks Gremlins, Rhythm'n'Grime, and Nearly Throwing in the Towel'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://xlr8r.com/features/the-devil-inside-terror-danjah-talks-gremlins-rhythm-n-grime-and-nearly-throwing-in-the-towel/",
+    "https://en.wikipedia.org/wiki/Terror_Danjah"
+  ],
+  "tracks": {
+    "kick": [100,0,34,0,0,76,0,0,0,0,64,0,58,0,0,0,104,0,0,54,0,80,0,0,0,0,66,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,110,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,54,0,0,0,0,0,0],
+    "clap": [0,0,34,0,0,38,0,0,0,0,0,0,30,0,0,36,0,36,0,0,0,0,0,40,0,0,32,0,0,0,38,0]
+  },
+  "kit": "drm1"
+}

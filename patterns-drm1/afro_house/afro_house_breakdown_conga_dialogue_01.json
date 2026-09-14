@@ -1,0 +1,26 @@
+{
+  "id": "afro_house_breakdown_conga_dialogue_01",
+  "style": "afro_house",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.07,
+  "bpm": 123,
+  "tags": [
+    "breakdown",
+    "conga",
+    "call-response",
+    "no-kick"
+  ],
+  "_approach": "A four-bar conga dialogue with no kick: high conga speaks in bars 1 and 3, low conga answers in 2 and 4, soft claps appear only on the answering bars, an 8th shaker ties it together. The pad-and-percussion breakdown of a Black Coffee set. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://orphiq.com/resources/what-is-afro-house",
+    "https://www.melodigging.com/genre/afro-house"
+  ],
+  "tracks": {
+    "drum1": [0,0,61,0,0,86,0,0,0,0,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,89,0,0,0,0,70,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,67,0,0,87,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,86,0,0,0,61,0,60,0,0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,86,0,0,0,0,0,59,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,61,0,0,52],
+    "hihat": [66,0,42,0,64,0,41,0,62,0,43,0,65,0,42,0,63,0,40,0,66,0,42,0,64,0,41,0,62,0,43,0,65,0,42,0,63,0,40,0,66,0,42,0,64,0,41,0,62,0,43,0,65,0,42,0,63,0,40,0,66,0,42,0]
+  },
+  "kit": "drm1"
+}

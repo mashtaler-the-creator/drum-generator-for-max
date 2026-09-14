@@ -1,0 +1,21 @@
+{
+  "id": "trance_riser_silence_before_drop_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["riser", "silence", "gap"],
+  "_approach": "The silence before the drop: a short, punchy snare/kick build fills bar 1, then bar 2 is almost entirely empty — everything cut to nothing for a beat and a half, per the '32-bar blueprint' guidance that the last bar's beat 4 should be 'silence or near-silence' before the impact — with only a single downbeat hit landing right on the drop after the gap, maximising the contrast Myloops describes as the genre's real build-up currency.",
+  "_sources": ["https://www.myloops.net/building-a-powerful-trance-breakdown", "https://www.myloops.net/designing-trance-risers-impacts-and-transition-effects"],
+  "tracks": {
+    "kick":  [116,0,0,0, 116,0,0,0, 116,0,100,0, 116,0,110,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "snare": [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,104,108,112,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "hihat": [58,60,62,64, 58,60,62,64, 66,68,70,72, 74,78,82,88,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127]
+  }
+}

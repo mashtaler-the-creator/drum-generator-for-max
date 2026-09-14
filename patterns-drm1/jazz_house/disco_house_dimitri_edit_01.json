@@ -1,0 +1,25 @@
+{
+  "id": "disco_house_dimitri_edit_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 125,
+  "tags": [
+    "disco-edit",
+    "dimitri-from-paris",
+    "bongo"
+  ],
+  "_approach": "A Dimitri From Paris-style re-edit feel: a panned bongo call-and-response (congaHigh/congaLow) instead of a hat pattern, a disco string-hit stand-in (crash) on the very first downbeat, and a three-tom descending fill closing bar 2 the way classic disco edits mark section changes. Tightest swing in the set -- 54% MPC (engine 0.08). Reference: Dimitri From Paris 'Sacrebleu'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"
+  ],
+  "tracks": {
+    "kick": [106,0,0,0,104,0,0,0,108,0,0,0,102,0,0,0,107,0,0,0,105,0,0,0,109,0,0,0,103,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,72,0,0,57],
+    "drum2": [0,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,0,76,80,0],
+    "clap": [0,0,0,0,98,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,99,0,0,0,0,0,0,0,101,0,0,0],
+    "hh1Open": [110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

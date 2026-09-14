@@ -1,0 +1,19 @@
+{
+  "id": "phonk_drift_four_on_floor_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.04,
+  "tags": ["drift-phonk","four-on-floor","relentless"],
+  "_approach": "The relentless four-on-the-floor drift phonk variant some producers use instead of half-time: kick on every beat at near-max velocity with clipping-style accents, cowbell syncopating around it in a call-and-response rather than running straight through, snare reserved for 2 and 4 as a harder backbeat.",
+  "_sources": ["https://blog.soundtrap.com/how-to-produce-drift-phonk/"],
+  "tracks": {
+    "kick":     [124,0,0,0, 120,0,0,0, 124,0,0,0, 120,0,0,0,
+                126,0,0,0, 122,0,0,0, 126,0,0,0, 122,0,0,0],
+    "snare":    [0,0,0,0, 108,0,0,0, 0,0,0,0, 108,0,0,0,
+                0,0,0,0, 110,0,0,0, 0,0,0,0, 110,0,0,0],
+    "cowbell":  [0,0,74,0, 0,0,78,0, 0,0,74,0, 0,0,78,0,
+                0,0,76,0, 0,0,80,0, 0,0,76,0, 0,0,80,0]
+  }
+}

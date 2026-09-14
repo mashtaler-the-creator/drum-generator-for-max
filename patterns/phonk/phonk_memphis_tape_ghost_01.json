@@ -1,0 +1,21 @@
+{
+  "id": "phonk_memphis_tape_ghost_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 70,
+  "swing": 0.16,
+  "tags": ["memphis","ghost-notes","lofi"],
+  "_approach": "A ghost-note-heavy, tape-hiss-flavoured groove: the kick and snare stay minimal while a dense bed of low-velocity (20-35) ghost hats and rim taps sits underneath, mimicking the murky, degraded-cassette texture of original Memphis rap tapes rather than a clean modern kit.",
+  "_sources": ["https://daily.redbullmusicacademy.com/2012/07/noz-pit-stop-memphis-spanish-fly/","https://en.wikipedia.org/wiki/Phonk"],
+  "tracks": {
+    "kick":   [106,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              108,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 0,0,0,0, 98,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0],
+    "hihat":  [24,30,22,32, 24,30,22,32, 24,30,22,32, 24,30,22,34,
+              26,32,24,34, 26,32,24,34, 26,32,24,34, 26,32,24,36],
+    "rim":    [0,0,0,0, 0,0,0,0, 0,0,0,28, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,30, 0,0,0,0]
+  }
+}

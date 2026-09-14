@@ -1,0 +1,37 @@
+{
+  "id": "dubstep_riser_wobble_lfo_ramp_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0.08,
+  "tags": ["riser","wobble","lfo-ramp","filtered-perc"],
+  "_approach": "Drums stand in for the classic 'automate the LFO rate from quarter notes to sixteenths' wobble trick: a perc pulse fires on quarters in bar 1, doubles to 8ths at the top of bar 2, and locks into 16ths by the second half, tracking the wobble's acceleration while the kick thins from a full halfstep hit down to a single downbeat and a final tom stab punctuates the reveal. Ref: 4D4M 'How to Create the Perfect Dubstep Drop'; KAN Samples dubstep arrangement guide.",
+  "_sources": ["https://4d4m.com/how-to-create-the-perfect-dubstep-drop-a-step-by-step-guide/","https://kansamples.com/blogs/learn/dubstep-track-arrangement"],
+  "tracks": {
+    "kick": [
+      106,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 98,0,0,0, 0,0,0,0
+    ],
+    "perc": [
+      50,0,0,0, 52,0,0,0, 54,0,0,0, 56,0,0,0,
+      60,0,0,0, 0,0,0,0, 64,0,70,0, 76,0,82,0
+    ],
+    "hihat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 50,0,56,0, 62,0,68,0
+    ],
+    "shaker": [
+      0,0,24,0, 0,0,26,0, 0,0,28,0, 0,0,30,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "tomMid": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,92
+    ]
+  }
+}

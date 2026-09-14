@@ -1,0 +1,21 @@
+{
+  "id": "baile_funk_beat_bolha_airy_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 128,
+  "swing": 0.1,
+  "tags": ["beat-bolha","airy","sparse"],
+  "_approach": "Beat bolha keeps the tamborzão's swing and syncopation but strips the kit back to almost nothing: a tight kick on the downbeats, a soft clap on 2 and 4, and delicate, widely-spaced percussion so the 'bubble' synths and vocal chops have room. Per production guides, work in the 120-145 BPM pocket and keep density low rather than layering a full kit.",
+  "_sources": ["https://www.melodigging.com/genre/beat-bolha","https://beatkey.app/how-to-make-baile-funk-music"],
+  "tracks": {
+    "kick":        [100,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0,
+                   102,0,0,0, 0,0,0,0, 94,0,0,0, 0,0,0,0],
+    "perc":        [0,0,0,0, 82,0,0,0, 0,0,0,0, 80,0,0,0,
+                   0,0,0,0, 84,0,0,0, 0,0,0,0, 80,0,0,0],
+    "shaker":      [0,0,24,0, 0,0,0,0, 0,0,26,0, 0,0,0,0,
+                   0,0,24,0, 0,0,0,0, 0,0,28,0, 0,0,0,0],
+    "tambourine":  [0,0,0,0, 0,0,30,0, 0,0,0,0, 0,0,28,0,
+                   0,0,0,0, 0,0,30,0, 0,0,0,0, 0,0,28,0]
+  }
+}

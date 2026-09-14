@@ -1,0 +1,28 @@
+{
+  "id": "ukg_breakstep_hybrid_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 133,
+  "tags": [
+    "breakstep",
+    "breakbeat-hybrid",
+    "2step",
+    "dark"
+  ],
+  "_approach": "Breakstep / two-step-with-a-break hybrid (Deekline 'I Don't Smoke', DJ Zinc '138 Trek'): trades 2-step's rolling MPC shuffle for a straighter, breakbeat-derived kick/snare skeleton at garage tempo — kick lands on beat 1 and the classic amen '&-of-3' pickup, the clap still anchors 2 and 4 as the one fixed point, and chopped ghost-snare/rim hits stand in for the amen's ratatat fills instead of skippy hat decoration. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Breakstep",
+    "https://www.attackmagazine.com/technique/beat-dissected/raw-drum-bass/",
+    "https://mixmag.net/feature/the-20-best-tracks-that-sample-the-amen-break"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,0,0,0,80,0,0,0,0,0,110,0,0,0,0,0,0,0,58,0,86,0,0,0,42,0],
+    "snare": [0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,118,0,0,0],
+    "multi": [0,0,0,0,0,0,42,0,0,36,0,0,0,0,0,48,0,0,34,0,0,0,0,40,0,0,0,44,0,0,0,56],
+    "hihat": [0,0,56,0,0,0,60,0,0,0,0,0,0,0,64,0,0,0,58,0,0,0,62,0,0,0,0,0,0,0,66,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0]
+  },
+  "kit": "drm1"
+}

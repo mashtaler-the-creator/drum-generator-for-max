@@ -1,0 +1,21 @@
+{
+  "id": "jazz_house_riser_hat_roll_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 123,
+  "tags": ["riser", "hat-roll"],
+  "_approach": "Bar 1 plays the swung groove normally; bar 2 tightens the hat pattern into a rolling 16th line climbing steadily from 52 to 115 as the swing effectively reads straighter under the density, with a crash cueing the drop on the last step. Kick holds steady 4/4 throughout.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":  [102,0,0,0, 100,0,0,0, 104,0,0,0, 98,0,0,0,
+              102,0,0,0, 100,0,0,0, 104,0,0,0, 106,0,0,0],
+    "hihat": [0,42,0,46, 0,44,0,48, 0,42,0,46, 0,44,0,50,
+              52,56,60,64, 68,72,76,80, 84,88,92,96, 100,104,108,115],
+    "perc":  [0,0,0,0, 96,0,0,0, 0,0,0,0, 98,0,0,0,
+              0,0,0,0, 97,0,0,0, 0,0,0,0, 99,0,0,0],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,118]
+  }
+}

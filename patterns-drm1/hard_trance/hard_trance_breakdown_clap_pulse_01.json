@@ -1,0 +1,23 @@
+{
+  "id": "hard_trance_breakdown_clap_pulse_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": [
+    "breakdown",
+    "clap-pulse",
+    "no-kick"
+  ],
+  "_approach": "Kick absent; a soft offbeat open hat and a continuous quiet shaker hold the pulse while the clap is stripped back to a single hit on beat 4 of bar 2 only -- a sparse anticipation cue rather than a backbeat. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Hard_trance"
+  ],
+  "tracks": {
+    "openHat": [0,0,60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0,62,0,0,0,62,0,0,0,62,0,0,0,62,0],
+    "hihat": [21,0,22,0,21,0,24,0,21,0,22,0,21,0,26,0,22,0,24,0,22,0,26,0,22,0,24,0,22,0,27,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0]
+  },
+  "kit": "drm1"
+}

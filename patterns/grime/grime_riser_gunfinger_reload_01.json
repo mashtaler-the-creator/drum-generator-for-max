@@ -1,0 +1,25 @@
+{
+  "id": "grime_riser_gunfinger_reload_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 140,
+  "swing": 0,
+  "tags": ["riser","reload","gunfinger","snare-roll"],
+  "_approach": "The wheel-up moment: a dry, clipped gunshot-snare rolls denser bar to bar on a 32nd grid — short decay, low sustain, per MusicRadar's grime production tips — before hard-stopping into silence, the exact cue a DJ or MC calls a reload on in a clash set. Ref: MusicRadar '22 pro grime production tricks'; DJ TechTools 'Reload: A History of The Rewind'.",
+  "_sources": ["https://www.musicradar.com/tuition/tech/22-pro-grime-production-tricks-170428","https://djtechtools.com/2018/08/31/reload-a-history-of-the-rewind/"],
+  "tracks": {
+    "kick": [
+      106,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      112,0,0,0, 0,0,0,0, 60,0,0,0, 70,0,0,0,
+      84,0,0,0, 90,0,0,0, 96,0,0,0, 100,0,0,0,
+      104,0,108,0, 112,0,116,0, 120,123,125,127, 0,0,0,0
+    ]
+  }
+}

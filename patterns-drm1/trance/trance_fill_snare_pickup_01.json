@@ -1,0 +1,23 @@
+{
+  "id": "trance_fill_snare_pickup_01",
+  "style": "trance",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": [
+    "fill",
+    "turnaround",
+    "snare-pickup"
+  ],
+  "_approach": "One-bar turnaround: the standard groove holds through beat 3, then a short snare pickup (8ths accelerating into 16ths, velocity climbing) plus a crash on the downbeat hands off into the next phrase — a compact version of the genre's build-up vocabulary used every 4 bars rather than only at a drop. Auto-injected into grooves every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,90,100,110,120],
+    "hihat": [60,62,64,66,60,62,64,66,60,62,64,66,0,0,0,0]
+  },
+  "kit": "drm1"
+}

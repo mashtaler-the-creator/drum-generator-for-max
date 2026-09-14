@@ -1,0 +1,25 @@
+{
+  "id": "hard_techno_gallop_kick_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "gallop",
+    "double-kick",
+    "schranz"
+  ],
+  "_approach": "Offbeat double-kick 'gallop': the 4/4 kick is shadowed by a softer kick on the 16th before each beat (da-DUM), the trick Studio Brootle traces from Liebing-era schranz to Sara Landry. Bar 2 thins the gallop to beats 2 and 4 and adds a double before the downbeat. Sharp offbeat closed hats only. Reference: Klangkuenstler & Sant 'Toter Schmetterling', Marco Leckbert 'Schranz Will Never Die'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.studiobrootle.com/techno-technique-hard-techno-bass-gallop/",
+    "https://www.ableton.com/en/blog/sara-landry-high-end-hard-techno/"
+  ],
+  "tracks": {
+    "kick": [120,0,0,74,118,0,0,76,120,0,0,74,118,0,0,80,120,0,0,0,118,0,0,78,120,0,0,0,118,0,72,82],
+    "hihat": [0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0],
+    "multi": [0,0,0,0,66,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,66,44,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "grime_breakdown_halftime_stripped_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "halftime",
+    "stripped",
+    "space"
+  ],
+  "_approach": "The halftime snare on beat 3 stands entirely alone — no kick, one ghost clave tick — 'the silence between the beats is an important ingredient that gives grime its distinctive dynamic'. Ref: MusicRadar '22 pro grime production tricks'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/tuition/tech/22-pro-grime-production-tricks-170428"
+  ],
+  "tracks": {
+    "snare": [0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

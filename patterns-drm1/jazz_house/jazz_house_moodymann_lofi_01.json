@@ -1,0 +1,24 @@
+{
+  "id": "jazz_house_moodymann_lofi_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.32,
+  "bpm": 118,
+  "tags": [
+    "moodymann",
+    "lofi",
+    "deep-swing"
+  ],
+  "_approach": "The deepest swing in the set -- MPC 66% (engine 0.32) -- for the dusty, off-the-grid Detroit feel Moodymann and Theo Parrish built their house records on: a soft kick, a ghosted snare surrounded by low-velocity ghost hits instead of a clean clap, sparse swung hats and a constant low shaker bed. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Moodymann",
+    "https://padwolf.app/learn/mpc-swing-explained/"
+  ],
+  "tracks": {
+    "kick": [102,0,0,0,100,0,0,0,104,0,0,0,98,0,0,0,103,0,0,0,99,0,0,0,105,0,0,0,101,0,0,0],
+    "snare": [0,0,0,24,92,0,26,0,0,0,0,22,94,0,0,0,0,0,0,26,93,0,0,24,0,0,0,0,95,0,28,0],
+    "hihat": [26,0,29,0,27,36,30,0,26,0,29,0,27,38,32,0,27,0,30,0,29,38,32,0,27,0,30,0,29,40,35,0]
+  },
+  "kit": "drm1"
+}

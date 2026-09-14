@@ -1,0 +1,26 @@
+{
+  "id": "trance_tom_accent_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 139,
+  "tags": [
+    "groove",
+    "toms",
+    "accent"
+  ],
+  "_approach": "Rack toms (high/mid/low) accent the second half of every second bar in a short descending fill-like figure, a common trance decoration used to mark 4- or 8-bar phrase boundaries without breaking the main kick/hat groove underneath. Otherwise the standard uplifting skeleton (909 kick, offbeat open hat, 16th closed hat, clap 2+4). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.drumloopai.com/trance/common-patterns-used-in-trance-beats/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0],
+    "hihat": [58,60,62,64,58,60,62,64,58,60,62,64,58,60,62,64,60,62,64,66,60,62,64,66,60,62,64,66,60,62,64,66],
+    "openHat": [0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,72,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,76,0]
+  },
+  "kit": "drm1"
+}

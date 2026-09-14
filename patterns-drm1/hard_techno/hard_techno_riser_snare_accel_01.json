@@ -1,0 +1,26 @@
+{
+  "id": "hard_techno_riser_snare_accel_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "snare-roll",
+    "32nds",
+    "kick-out"
+  ],
+  "_approach": "Speed-up snare roll on a 32nd grid: 8ths, then 16ths, then 32nds with velocity ramping to 127, while the kick plays bar 1 and drops out for bar 2 so the drop re-entry hits harder (hard techno moves through drop-outs and re-entries rather than long builds). Final step: snare, kick and crash together. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://futureproofmusicschool.com/blog/making-hard-techno-a-path-to-unique-sound-design"
+  ],
+  "tracks": {
+    "snare": [66,0,0,0,72,0,0,0,78,0,0,0,84,0,0,0,84,0,85,0,86,0,87,0,89,0,90,0,91,0,92,0,92,0,94,0,96,0,98,0,100,0,102,0,104,0,106,0,106,107,109,110,112,113,114,116,117,119,120,121,123,124,126,127],
+    "kick": [116,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127],
+    "hihat": [0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,84,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118]
+  },
+  "kit": "drm1"
+}

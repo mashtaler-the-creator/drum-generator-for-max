@@ -1,0 +1,23 @@
+{
+  "id": "jazz_house_conga_loop_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.20,
+  "bpm": 122,
+  "tags": ["conga-loop", "maw", "kerri-chandler"],
+  "_approach": "A high/low conga call-and-response loop drives the groove Masters At Work/Nuyorican Soul style, with the kick and clap kept simple underneath and hats pulled right back. MPC swing 60% (engine 0.20) -- deep enough that the congas read as genuinely played rather than gridded. Reference: Nuyorican Soul, Kerri Chandler 'Bar A Thym'.",
+  "_sources": ["https://www.thevinylfactory.com/features/drum-patterns-and-memories-12-artists-reflect-on-iconic-drum-machines", "https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":      [104,0,0,0, 102,0,0,0, 106,0,0,0, 100,0,0,0,
+                  105,0,0,0, 101,0,0,0, 107,0,0,0, 103,0,0,0],
+    "congaHigh": [0,0,58,0, 0,64,0,0, 0,0,58,0, 0,64,0,0,
+                  0,0,60,0, 0,66,0,0, 0,0,62,0, 0,68,0,52],
+    "congaLow":  [52,0,0,0, 0,0,56,0, 52,0,0,0, 0,0,56,0,
+                  54,0,0,0, 0,0,58,0, 54,0,0,0, 0,0,58,60],
+    "hihat":     [0,40,0,0, 0,42,0,0, 0,40,0,0, 0,44,0,0,
+                  0,42,0,0, 0,44,0,0, 0,42,0,0, 0,46,0,0],
+    "perc":      [0,0,0,0, 98,0,0,0, 0,0,0,0, 100,0,0,0,
+                  0,0,0,0, 99,0,0,0, 0,0,0,0, 101,0,0,0]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "three_step_breakdown_perc_only_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 116,
+  "tags": ["breakdown","no-kick","percussion"],
+  "_approach": "Kick removed entirely: a soft swung shaker and a light clave timeline carry the whole two bars alone, a single congaHigh accent the only decoration - the stripped 'percussion + space' pocket the genre uses instead of a melodic breakdown.",
+  "_sources": ["https://www.beatportal.com/articles/807844-where-did-that-kick-go-an-introduction-to-3step"],
+  "tracks": {
+    "shaker":    [56,0,38,0, 58,0,36,0, 55,0,37,0, 59,0,35,0,
+                  58,0,40,0, 56,0,38,0, 57,0,39,0, 61,0,37,0],
+    "clave":     [70,0,0,0, 0,0,0,62, 0,0,66,0, 0,0,0,0,
+                  72,0,0,0, 0,0,0,64, 0,0,68,0, 0,0,0,0],
+    "congaHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,54,0,0]
+  }
+}

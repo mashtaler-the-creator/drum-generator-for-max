@@ -1,0 +1,25 @@
+{
+  "id": "techno_peak_time_offbeat_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 131,
+  "swing": 0.1,
+  "tags": ["peak-time", "rolling", "offbeat-open-hat"],
+  "_approach": "Rolling/peak-time techno built the way Attack's Rolling Techno dissection lays it out: the kick gets a soft ghost hit just before beats 2 and 4 for a pendulum push, alternating low/mid toms mark every quarter, a fast closed 16th hat drives underneath, and the open hat answers on 2 and 4 at reduced velocity. The clap sits in the pocket with low-velocity ghosts either side for a humanized roll. This is the club-ready, ride-the-groove-for-eight-bars engine of peak time.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/rolling-techno/"],
+  "tracks": {
+    "kick":    [114,0,0,58, 112,0,0,0, 114,0,0,58, 112,0,0,0,
+                114,0,0,60, 112,0,0,0, 114,0,0,60, 114,0,0,0],
+    "hihat":   [70,64,72,66, 74,64,72,66, 70,64,74,66, 72,64,76,68,
+                72,66,74,68, 76,66,74,68, 72,66,76,68, 74,66,78,70],
+    "openHat": [0,0,0,0, 62,0,0,0, 0,0,0,0, 62,0,0,0,
+                0,0,0,0, 60,0,0,0, 0,0,0,0, 64,0,0,0],
+    "tomLow":  [66,0,0,0, 0,0,0,0, 68,0,0,0, 0,0,0,0,
+                70,0,0,0, 0,0,0,0, 64,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 64,0,0,0, 0,0,0,0, 66,0,0,0,
+                0,0,0,0, 68,0,0,0, 0,0,0,0, 70,0,0,0],
+    "perc":    [0,42,80,44, 0,0,0,0, 0,42,80,44, 0,0,0,0,
+                0,44,82,46, 0,0,0,0, 0,44,82,46, 0,0,0,0]
+  }
+}

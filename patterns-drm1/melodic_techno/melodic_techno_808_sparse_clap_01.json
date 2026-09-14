@@ -1,0 +1,27 @@
+{
+  "id": "melodic_techno_808_sparse_clap_01",
+  "style": "melodic_techno",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "808",
+    "sparse-clap",
+    "4-bar",
+    "deep"
+  ],
+  "_approach": "Attack's Deep & Melodic Progressive dissection, all 808: tuned 808 kick 4/4, offbeat 808 hats, 16th maracas (shaker) with velocity variation, and a clap that appears only once per two bars (single on bar 2, double on bar 4) drenched in hall reverb, with a low conga and mid tom answering every two bars. Reference: Stephan Bodzin 'Strand', Adriatique. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/deep-melodic-progressive-techno/"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0,104,0,0,0],
+    "hihat": [45,72,40,72,45,72,40,72,45,72,40,72,45,72,40,72,45,72,42,72,45,72,42,72,45,72,42,72,45,72,42,72,46,72,40,72,46,72,40,72,46,72,40,72,46,72,40,72,46,72,43,72,46,72,43,72,46,72,43,72,46,72,43,72],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,84,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,70,63,0,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

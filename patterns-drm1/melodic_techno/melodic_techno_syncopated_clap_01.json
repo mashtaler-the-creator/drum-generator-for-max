@@ -1,0 +1,25 @@
+{
+  "id": "melodic_techno_syncopated_clap_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "syncopated-clap",
+    "dark",
+    "shaker-16th-offs"
+  ],
+  "_approach": "Dark Berlin clap logic: the clap hits only on beat 2, with a delay-echo clap on the a-of-2 and a-of-4 in bar 2, shakers on the fourth 16th of every beat, 16th closed hats, offbeat open hats and a noise-stab low tom on beat 3 of bar 2. Reference: Attack 'Dark Berlin Techno', Mind Against, Recondite. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/dark-berlin-techno/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0,108,0,0,0],
+    "clap": [0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,74,0,0,60,0],
+    "hihat": [50,38,64,45,50,38,64,45,50,38,64,45,50,38,64,45,50,38,64,46,50,38,64,46,50,38,64,46,50,38,64,46],
+    "openHat": [0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

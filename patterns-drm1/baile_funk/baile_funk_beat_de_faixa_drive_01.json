@@ -1,0 +1,25 @@
+{
+  "id": "baile_funk_beat_de_faixa_drive_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 152,
+  "swing": 0.04,
+  "tags": [
+    "beat-de-faixa",
+    "150bpm",
+    "drive"
+  ],
+  "_approach": "A harder-driving 150+ BPM faixa variant: the kick adds a driving 16th pickup into every backbeat clap, tomMid rolls answer the clap, and the hats thin out almost completely, leaving space for the sub-heavy 808 this lane is built around at speed. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kondzilla.com/seria-o-funk-em-150bpm-uma-nova-direcao-funk-no-rio/",
+    "https://www.beatportal.com/articles/919622-beatport-launches-brazilian-funk-as-a-standalone-genre"
+  ],
+  "tracks": {
+    "kick": [122,0,0,0,0,0,0,60,120,0,0,0,0,0,0,0,124,0,0,0,0,0,0,62,118,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,116,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,114,0,0,0],
+    "drum2": [0,0,0,0,0,50,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,50,0,0],
+    "hihat": [0,0,24,0,0,0,24,0,0,0,24,0,0,0,24,0,0,0,26,0,0,0,26,0,0,0,26,0,0,0,26,0]
+  },
+  "kit": "drm1"
+}

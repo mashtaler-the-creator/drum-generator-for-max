@@ -1,0 +1,26 @@
+{
+  "id": "hard_trance_riser_kick_roll_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "kick-roll",
+    "build"
+  ],
+  "_approach": "Two-bar kick-roll build: bar 1 plays the normal offbeat-pump groove, bar 2 breaks the kick into a rising 16th roll peaking at 127 on the last step while the hats climb from sparse offbeat 16ths into a full wall; the clap drops to a single accent synced with the closing crash. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://obscuur.io/blogs/news/the-complete-guide-to-hard-house"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,100,0,116,0,104,0,116,0,108,0,118,110,122,127],
+    "hihat": [0,44,0,48,0,44,0,48,0,44,0,48,0,44,0,48,50,54,58,62,66,70,74,78,82,86,90,94,98,102,106,110],
+    "openHat": [0,0,96,0,0,0,96,0,0,0,96,0,0,0,96,0,0,0,98,0,0,0,100,0,0,0,102,0,0,0,104,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120]
+  },
+  "kit": "drm1"
+}

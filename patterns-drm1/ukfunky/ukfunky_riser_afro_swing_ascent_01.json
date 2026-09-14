@@ -1,0 +1,30 @@
+{
+  "id": "ukfunky_riser_afro_swing_ascent_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 126,
+  "tags": [
+    "riser",
+    "build",
+    "afro-swing",
+    "log-drum",
+    "sparse-to-dense"
+  ],
+  "_approach": "The modern afro-swing revival build: the sparse displaced kick and soft rim of ukfunky_afro_log_01 thin out entirely as low/mid toms answer each other in an ascending log-drum call, shaker driving harder each bar, and a final rim flourish plus a tomHigh/crash accent hand off to the drop. Ref: the afro-swing/amapiano-tinged approach behind ukfunky_afro_log_01 (latter-day Roska, Hagan, Scratcha DVA). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/uk-garage-music/",
+    "https://www.beatportal.com/articles/399902-the-lasting-legacy-of-uk-funky",
+    "https://www.melodigging.com/genre/uk-funky"
+  ],
+  "tracks": {
+    "kick": [0,0,0,0,84,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,62,0,0,0,58,0,0,66,0,0,0,0,62,70,0,0,76,72,0,80,0,0,0,78,84,0,0,0,88,82],
+    "multi": [0,0,0,26,0,0,28,0,0,0,0,0,0,30,0,0,0,32,0,36,0,0,40,0,0,44,0,48,0,52,56,60],
+    "hihat": [43,24,34,26,46,25,35,40,43,23,34,27,48,26,37,42,46,27,37,29,50,29,38,43,46,27,38,30,53,32,42,46],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120]
+  },
+  "kit": "drm1"
+}

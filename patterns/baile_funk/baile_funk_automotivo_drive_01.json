@@ -1,0 +1,17 @@
+{
+  "id": "baile_funk_automotivo_drive_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 150,
+  "swing": 0.03,
+  "tags": ["automotivo","tuim","sub-heavy"],
+  "_approach": "Funk automotivo built for car-audio systems: a relentless, near four-on-the-floor kick built for trunk-rattling sub weight, with a driving 16th kick-roll ('tuim'-style) across beat 3 that ramps into beat 4, and a minimal, loop-driven arrangement — clap only on 2 and 4, everything else left as empty space for the bass.",
+  "_sources": ["https://www.beatportal.com/articles/919622-beatport-launches-brazilian-funk-as-a-standalone-genre","https://djmag.com/news/brazilian-funk-added-standalone-genre-beatport"],
+  "tracks": {
+    "kick":  [122,0,0,0, 118,0,0,0, 60,74,88,104, 124,0,0,0,
+             122,0,0,0, 118,0,0,0, 60,74,88,104, 124,0,0,0],
+    "perc":  [0,0,0,0, 104,0,0,0, 0,0,0,0, 0,0,0,0,
+             0,0,0,0, 104,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

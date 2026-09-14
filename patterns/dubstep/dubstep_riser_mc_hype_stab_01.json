@@ -1,0 +1,41 @@
+{
+  "id": "dubstep_riser_mc_hype_stab_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.1,
+  "tags": ["riser","mc-hype","stab","crash-hit"],
+  "_approach": "The last-bar hype-stab trick: bar 1 keeps the halfstep frame under a rising tambourine bed; bar 2 fires a stack of off-beat perc and cowbell stabs standing in for the processed 'drop' / 'fire' / 'selecta' vocal chops sound-system culture places in the bar before a dubstep drop, climaxing on a crash on the final 16th. Ref: Point Blank 'How to Create a Dubstep Drop from Scratch'.",
+  "_sources": ["https://www.pointblankmusicschool.com/blog/how-to-create-a-dubstep-drop-from-scratch/"],
+  "tracks": {
+    "kick": [
+      108,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      102,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 94,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0
+    ],
+    "perc": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,70,0, 0,0,78,0, 0,86,0,94, 0,0,0,0
+    ],
+    "cowbell": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,100, 0,0,0,0
+    ],
+    "tambourine": [
+      40,0,0,0, 0,0,44,0, 0,0,42,0, 0,0,46,0,
+      50,0,0,0, 54,0,0,0, 58,0,0,0, 62,0,0,0
+    ],
+    "hihat": [
+      0,0,0,0, 50,0,0,0, 0,0,0,0, 52,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "crash": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,118
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "three_step_gallop_triplet_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0.06,
+  "bpm": 117,
+  "tags": ["triplet-feel","32nds","gallop"],
+  "_approach": "The triplet-adjacent pull written out on a 32nd grid rather than approximated with the linear `swing` field: kicks land at step 0, step 15 (not 16 - pulled a 32nd early) and step 26, so the second and third kicks sit off the straight 16th grid the way a true swung triplet would. Shaker and hats stay on plain 16ths (every other 32nd step) so the kick's displacement is audible against a straight reference.",
+  "_sources": ["https://www.melodigging.com/genre/3-step","https://www.beatportal.com/articles/807844-where-did-that-kick-go-an-introduction-to-3step"],
+  "tracks": {
+    "kick":   [112,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,102, 0,0,0,0, 0,0,0,0, 0,0,116,0, 0,0,0,0,
+               110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,104, 0,0,0,0, 0,0,0,0, 0,0,118,0, 0,0,0,0],
+    "shaker": [64,0,42,0, 56,0,40,0, 64,0,42,0, 56,0,40,0, 64,0,42,0, 56,0,40,0, 64,0,42,0, 56,0,40,0,
+               66,0,44,0, 58,0,42,0, 66,0,44,0, 58,0,42,0, 66,0,44,0, 58,0,42,0, 66,0,44,0, 58,0,42,0],
+    "hihat":  [0,0,0,0, 40,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0, 40,0,0,0,
+               0,0,0,0, 42,0,0,0, 0,0,0,0, 42,0,0,0, 0,0,0,0, 42,0,0,0, 0,0,0,0, 42,0,0,0],
+    "perc":   [0,0,0,0, 0,0,0,0, 78,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 80,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 80,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 82,0,0,0, 0,0,0,0]
+  }
+}

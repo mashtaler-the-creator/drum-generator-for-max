@@ -1,0 +1,27 @@
+{
+  "id": "afro_house_shaker_led_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 122,
+  "tags": [
+    "classic",
+    "shaker-led",
+    "4x4"
+  ],
+  "_approach": "The default modern Afro house engine: steady 4x4 kick, a full 16th shaker with a strong-weak-medium-weak accent contour doing the driving, an understated clap on 2 and 4, offbeat open hats and a low conga answering the kick. Beatportal/IQSounds both stress that the shaker matters more than the clap here. Ref: Black Coffee 'Superman' (2010), Caiiro 'The Akan' (2017). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.beatportal.com/articles/647491-step-by-step-guide-to-creating-an-afro-house-track-keinemusik-black-coffee-caiiro-alex-wann-style",
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,96,0,0,0,107,0,0,0,97,0,0,0],
+    "hihat": [65,40,58,51,63,42,56,50,66,41,58,48,64,43,57,36,62,42,59,49,65,40,58,51,63,42,56,50,66,68,58,34],
+    "clap": [0,0,0,0,64,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,62,0,0,53],
+    "openHat": [0,0,73,0,0,0,71,0,0,0,74,0,0,0,72,0,0,0,70,0,0,0,73,0,0,0,71,0,0,0,74,0],
+    "drum2": [0,0,0,0,0,0,51,0,0,0,0,0,48,0,48,0,0,0,50,0,0,0,48,0,0,0,0,0,50,0,0,61],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,43,0,0,0,0,0,0,0,44]
+  },
+  "kit": "drm1"
+}

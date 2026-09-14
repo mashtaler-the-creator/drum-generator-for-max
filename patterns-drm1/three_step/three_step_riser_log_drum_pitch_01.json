@@ -1,0 +1,24 @@
+{
+  "id": "three_step_riser_log_drum_pitch_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 114,
+  "tags": [
+    "riser",
+    "log-drum",
+    "build"
+  ],
+  "_approach": "Log-drum-led build: the tomLow+congaLow pair from the log-drum groove thickens from a single answering hit per bar to a rolling, density-climbing figure with velocity pushed toward 127, imitating the pitched log drum's own build-up habit, while the shaker drops to almost nothing so the log drum reads as the lead into the drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/blog/what-is-amapiano-music/",
+    "https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,104,0,0,0,0,0,0,0,110,0,0,0,110,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,62,53,0,0,0,0,0,0,0,0,0,0,0,0,78,78,90,89,100,99,112,112,0,121],
+    "hihat": [37,0,0,0,35,0,0,0,36,0,0,0,35,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

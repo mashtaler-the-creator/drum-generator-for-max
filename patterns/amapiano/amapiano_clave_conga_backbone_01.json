@@ -1,0 +1,21 @@
+{
+  "id": "amapiano_clave_conga_backbone_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 111,
+  "tags": ["conga","clave","kwaito-link"],
+  "_approach": "Beatstorapon's Kwaito-lineage detail written out: congas mark beat 2, the 'and' of beat 2, and the 'and' of beats 3 and 4 (a clave-adjacent shape carried over from Kwaito), with a plain soft kick and the log drum kept to a single accent so the conga timeline is clearly the backbone.",
+  "_sources": ["https://beatstorapon.com/blog/how-to-make-amapiano-beat/"],
+  "tracks": {
+    "congaHigh": [0,0,0,0, 74,0,68,0, 0,0,70,0, 0,0,66,0,
+                  0,0,0,0, 76,0,70,0, 0,0,72,0, 0,0,68,0],
+    "kick":      [94,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0,
+                  92,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,58, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,60, 0,0,0,0],
+    "shaker":    [58,0,42,0, 60,0,40,0, 58,0,42,0, 60,0,40,0,
+                  60,0,44,0, 58,0,42,0, 60,0,44,0, 62,0,42,0]
+  }
+}

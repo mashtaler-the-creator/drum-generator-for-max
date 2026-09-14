@@ -1,0 +1,23 @@
+{
+  "id": "trance_classic_uplifting_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["groove", "uplifting", "canonical"],
+  "_approach": "The canonical uplifting-trance drop skeleton: a straight 909 four-on-the-floor kick, closed hats on every 16th, an open hat choking the closed hat on every offbeat 8th (the 'off-beat is particularly important in uplifting trance' consensus across production guides), clap/snare on 2 and 4, and a crash marking bar 1. Straight timing throughout — trance's swing convention treats 50% as straight and this style sits at the bottom of the scale.",
+  "_sources": ["https://www.drumloopai.com/trance/common-patterns-used-in-trance-beats/", "https://www.attackmagazine.com/technique/tutorials/jack-your-tracks-with-swing/"],
+  "tracks": {
+    "kick":    [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0],
+    "snare":   [0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0,
+                0,0,0,0, 100,0,0,0, 0,0,0,0, 100,0,0,0],
+    "hihat":   [60,62,64,66, 60,62,64,66, 60,62,64,66, 60,62,64,66,
+                62,64,66,68, 62,64,66,68, 62,64,66,68, 62,64,66,68],
+    "openHat": [0,0,0,0, 0,72,0,0, 0,0,0,0, 0,72,0,0,
+                0,0,0,0, 0,74,0,0, 0,0,0,0, 0,74,0,0],
+    "crash":   [110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

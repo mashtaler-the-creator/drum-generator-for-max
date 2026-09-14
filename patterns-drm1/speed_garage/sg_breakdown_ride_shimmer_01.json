@@ -1,0 +1,27 @@
+{
+  "id": "sg_breakdown_ride_shimmer_01",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 137,
+  "swing": 0.15,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "ride",
+    "shaker"
+  ],
+  "_approach": "Peak-time breakdown: a quiet contoured 8th-note ride shimmers where the hats were, a shaker rolls 16ths underneath, snare ghosts drift around the absent backbeat, and a lone clap on beat 4 of bar 2 closes the phrase. No kick. Ref: the breakdown of Serious Danger 'Deeper', big-room '97 garage (Tuff Jam). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/how-to/build-a-bassline-house-beat-in-4-steps",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-speed-garage-complete-production-tutorial"
+  ],
+  "tracks": {
+    "hh1Closed": [66,0,54,0,62,0,56,0,66,0,54,0,64,0,58,0,68,0,56,0,64,0,58,0,68,0,56,0,66,0,60,0],
+    "hihat": [34,22,38,24,35,22,40,26,34,24,38,24,37,26,42,27,35,24,40,26,37,24,42,27,35,26,40,26,38,27,43,29],
+    "snare": [0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,36,0,0,0,0,0,0,38,0,0,0,0,0,0,0,42,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,32,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

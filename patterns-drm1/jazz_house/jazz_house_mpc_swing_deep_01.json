@@ -1,0 +1,25 @@
+{
+  "id": "jazz_house_mpc_swing_deep_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.34,
+  "bpm": 119,
+  "tags": [
+    "deep-swing",
+    "mpc-theory",
+    "sparse"
+  ],
+  "_approach": "A deliberate showcase of the top of the MPC swing scale -- 67% (engine 0.34), the point where swing tips into full shuffle and reads as more jazz/blues than house. Deliberately sparse: laid-back kick and clap velocities, hats placed only on the swung 'and'/'a' 16ths so the delay is unmistakable, one occasional ride accent. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://padwolf.app/learn/mpc-swing-explained/",
+    "https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"
+  ],
+  "tracks": {
+    "kick": [96,0,0,0,92,0,0,0,98,0,0,0,90,0,0,0,97,0,0,0,93,0,0,0,99,0,0,0,91,0,0,0],
+    "clap": [0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,91,0,0,0,0,0,0,0,93,0,0,0],
+    "hihat": [0,0,44,48,0,0,46,50,0,0,44,48,0,0,48,52,0,0,46,50,0,0,48,52,0,0,46,50,0,0,50,54],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

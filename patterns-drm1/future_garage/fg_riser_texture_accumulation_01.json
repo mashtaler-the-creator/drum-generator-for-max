@@ -1,0 +1,25 @@
+{
+  "id": "fg_riser_texture_accumulation_01",
+  "style": "future_garage",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.26,
+  "tags": [
+    "riser",
+    "additive",
+    "texture",
+    "non-edm"
+  ],
+  "_approach": "Future garage doesn't do EDM-style risers — it adds texture instead. Bar 1 is near-silent (a lone clave tick), bar 2 adds a ghost rim, bar 3 layers in shaker and conga, and bar 4 lets a full swung hat pattern return at normal density — the groove is 'back' rather than a drop being announced. Ref: Plugg Supply 'How to Make Future Garage' (mid-track breakdowns 'go almost beatless, then return with a fuller hat pattern' — read here in reverse, as the way back in). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://plugg-supply.net/articles/how-to-make-future-garage-2027"
+  ],
+  "tracks": {
+    "multi": [0,0,0,0,0,0,18,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,20,0,0,34,0,0,0,0,18,0,0,0,0,38,0,0,22,0,0,36,0,0,0,0,20,0,0,0,0,42,0,0,23,0,0,40,0,0,0,0,22,0],
+    "hihat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,18,0,0,0,22,0,0,0,19,0,0,0,44,0,30,0,46,0,32,0,48,0,34,0,50,0,36,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

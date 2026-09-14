@@ -1,0 +1,17 @@
+{
+  "id": "phonk_riser_snare_roll_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 74,
+  "swing": 0.14,
+  "tags": ["riser","snare-roll","memphis"],
+  "_approach": "A Memphis-tempo snare-roll build (still swung and half-time-slow rather than sped-up): the snare hits once in bar 1, then rolls in 8ths then 16ths through bar 2 while the kick drops out, both re-entering on a unison final hit.",
+  "_sources": ["https://en.wikipedia.org/wiki/Phonk"],
+  "tracks": {
+    "kick":   [110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+              70,0,0,0, 78,0,0,0, 84,0,92,0, 100,0,108,127]
+  }
+}

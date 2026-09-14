@@ -1,0 +1,30 @@
+{
+  "id": "sg_riser_tom_climb_01",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 137,
+  "swing": 0.2,
+  "tags": [
+    "riser",
+    "build",
+    "toms",
+    "double-kick"
+  ],
+  "_approach": "Tom-climb build mirroring a bassline rising in pitch: low toms in 8ths through bar 1, mid toms in bar 2 beats 1-2, high toms in 16ths through beats 3-4, while the 4/4 kick picks up doubled 16th pairs and the snare ramps into a 127 hit on the last 16th. A crash marks the start. Ref: the big-room end of '97 - Serious Danger 'Deeper', Tuff Jam 'Need Good Love'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-speed-garage-complete-production-tutorial",
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "kick": [114,0,0,0,108,0,0,0,110,0,0,0,108,0,0,90,116,0,0,0,108,0,0,92,110,0,0,94,112,0,100,0],
+    "snare": [0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,110,0,0,0,0,0,96,0,104,0,116,127],
+    "drum2": [0,0,74,0,0,0,78,0,0,0,82,0,0,0,86,0,0,0,86,0,0,0,90,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,94,0,98,102,108,0],
+    "hihat": [0,0,70,0,0,0,72,0,0,0,70,0,0,0,74,0,0,0,72,44,0,0,74,46,0,48,76,50,0,52,80,56],
+    "openHat": [0,0,72,0,0,0,74,0,0,0,72,0,0,0,76,0,0,0,76,0,0,0,78,0,0,0,80,0,0,0,84,0],
+    "clap": [0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,104,0,0,120],
+    "hh1Open": [98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

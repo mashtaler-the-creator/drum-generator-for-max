@@ -1,0 +1,22 @@
+{
+  "id": "fg_breakdown_reverb_tail_space_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.22,
+  "tags": [
+    "breakdown",
+    "reverb-tail",
+    "space"
+  ],
+  "_approach": "One 'big perc' hit per bar fills the empty final beat the way Attack's future garage dissection describes, its implied reverb tail doing the work a busier pattern would — everything else stays silent. Ref: Attack Magazine 'Up-front Future Garage' (a heavily reverbed hit 'filling the empty final beat'). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/up-front-future-garage/"
+  ],
+  "tracks": {
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,64,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

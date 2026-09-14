@@ -1,0 +1,21 @@
+{
+  "id": "dariacore_jersey_flip_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 160,
+  "tags": ["groove", "jersey-club", "sample-flip"],
+  "_approach": "Wikipedia's Dariacore entry names 'bouncy, syncopated rhythms derived from Jersey club' as one of the genre's core borrowings. This groove keeps the Jersey 5-kick shape (1, 2, 3, a-of-3, &-of-4) but pushes the tempo well past Jersey Club's own range and stacks a clap+snare hit for extra weight, the way dariacore treats an existing dance rhythm as raw material to accelerate and distort rather than a groove to preserve untouched.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore", "https://www.melodigging.com/genre/dariacore"],
+  "tracks": {
+    "kick":  [112,0,0,0, 108,0,0,0, 106,0,0,104, 0,0,108,0,
+              112,0,0,0, 108,0,0,0, 106,0,0,104, 0,0,102,0],
+    "snare": [0,0,0,0, 98,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 98,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":  [0,0,0,0, 100,0,0,0, 0,0,0,0, 0,0,0,96,
+              0,0,0,0, 100,0,0,0, 0,0,0,0, 0,0,0,96],
+    "hihat": [0,40,0,42, 0,40,0,44, 0,40,0,42, 0,40,0,44,
+              0,42,0,44, 0,42,0,46, 0,42,0,44, 0,42,0,46]
+  }
+}

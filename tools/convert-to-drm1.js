@@ -67,25 +67,43 @@ function convert(pattern) {
   });
 }
 
+// Build into a scratch dir and swap it in only once every pattern converted
+// cleanly. A malformed source file then fails the run without leaving the
+// existing mirror half-rebuilt.
 function main() {
-  fs.rmSync(DST, { recursive: true, force: true });
+  const tmp = DST + ".tmp";
+  fs.rmSync(tmp, { recursive: true, force: true });
   let count = 0;
-  for (const style of fs.readdirSync(SRC)) {
-    const styleDir = path.join(SRC, style);
-    if (!fs.statSync(styleDir).isDirectory()) continue;
-    fs.mkdirSync(path.join(DST, style), { recursive: true });
-    for (const f of fs.readdirSync(styleDir).filter((f) => f.endsWith(".json"))) {
-      const p = JSON.parse(fs.readFileSync(path.join(styleDir, f), "utf8"));
-      const out = convert(p);
-      // compact track arrays on one line each, like the source library
-      const json = JSON.stringify(out, null, 2).replace(
-        /(\[)([\s\d,]+?)(\])/g,
-        (_, a, body, b) => a + body.replace(/\s+/g, "") + b
-      );
-      fs.writeFileSync(path.join(DST, style, f), json + "\n");
-      count++;
+  try {
+    for (const style of fs.readdirSync(SRC)) {
+      const styleDir = path.join(SRC, style);
+      if (!fs.statSync(styleDir).isDirectory()) continue;
+      fs.mkdirSync(path.join(tmp, style), { recursive: true });
+      for (const f of fs.readdirSync(styleDir).filter((f) => f.endsWith(".json"))) {
+        const src = path.join(styleDir, f);
+        let p;
+        try {
+          p = JSON.parse(fs.readFileSync(src, "utf8"));
+        } catch (e) {
+          throw new Error(`${path.relative(ROOT, src)}: ${e.message}`);
+        }
+        const out = convert(p);
+        // compact track arrays on one line each, like the source library
+        const json = JSON.stringify(out, null, 2).replace(
+          /(\[)([\s\d,]+?)(\])/g,
+          (_, a, body, b) => a + body.replace(/\s+/g, "") + b
+        );
+        fs.writeFileSync(path.join(tmp, style, f), json + "\n");
+        count++;
+      }
     }
+  } catch (e) {
+    fs.rmSync(tmp, { recursive: true, force: true });
+    console.error(`Conversion aborted, patterns-drm1/ left untouched.\n  ${e.message}`);
+    process.exit(1);
   }
+  fs.rmSync(DST, { recursive: true, force: true });
+  fs.renameSync(tmp, DST);
   console.log(`patterns-drm1/: ${count} patterns converted`);
 }
 

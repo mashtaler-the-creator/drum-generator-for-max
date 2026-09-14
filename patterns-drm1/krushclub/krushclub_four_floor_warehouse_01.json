@@ -1,0 +1,28 @@
+{
+  "id": "krushclub_four_floor_warehouse_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "groove",
+    "four-on-floor",
+    "house",
+    "minimal"
+  ],
+  "_approach": "RYM's krushclub definition explicitly allows a 'four-on-the-floor rhythm' as an alternative to the Jersey Club base (crediting the genre's classic-EDM/house side). This groove is the house-leaning branch: plain four-on-the-floor kick, offbeat open hat (house/EDM vocabulary, not Jersey), and a bitcrushed cowbell/perc loop carrying the krush texture on top — proof the fusion works even without the 5-kick shape, the way it does in krushclub's more house-adjacent tracks. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://rateyourmusic.com/genre/krushclub/",
+    "https://www.edmprod.com/krushclub/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0],
+    "openHat": [0,0,0,0,68,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0],
+    "hihat": [0,42,0,42,0,0,0,0,0,42,0,42,0,0,0,0,0,44,0,44,0,0,0,0,0,44,0,44,0,0,0,0],
+    "clap": [0,0,46,0,0,0,0,48,0,0,46,0,0,0,0,48,0,0,48,0,0,0,0,50,0,0,48,0,0,0,0,50],
+    "multi": [0,0,0,0,0,36,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,38,0,0],
+    "snare": [0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0]
+  },
+  "kit": "drm1"
+}

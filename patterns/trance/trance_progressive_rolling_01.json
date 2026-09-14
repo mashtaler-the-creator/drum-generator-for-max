@@ -1,0 +1,23 @@
+{
+  "id": "trance_progressive_rolling_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 136,
+  "tags": ["groove", "progressive", "rolling"],
+  "_approach": "Progressive trance's tighter, more restrained drop (Mixgraph: progressive-uplifting clusters 132-136): kick and offbeat open hat stay, but the closed hat is thinned to 8ths rather than a full 16th wall to leave room for a rolling bassline, and the backbeat clap is softened and joined by a ride on the 8ths for extra roll — the 'groove element, not a wash' ride usage progressive trance shares with techno.",
+  "_sources": ["https://www.mixgraph.io/bpm-for/progressive-trance", "https://howtomakeelectronicmusic.com/how-to-make-a-progressive-trance-beat/"],
+  "tracks": {
+    "kick":    [114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0,
+                114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0],
+    "snare":   [0,0,0,0, 88,0,0,0, 0,0,0,0, 88,0,0,0,
+                0,0,0,0, 88,0,0,0, 0,0,0,0, 88,0,0,0],
+    "hihat":   [0,0,50,0, 0,0,52,0, 0,0,50,0, 0,0,52,0,
+                0,0,52,0, 0,0,54,0, 0,0,52,0, 0,0,54,0],
+    "ride":    [58,0,42,0, 58,0,42,0, 58,0,42,0, 58,0,42,0,
+                60,0,44,0, 60,0,44,0, 60,0,44,0, 60,0,44,0],
+    "openHat": [0,0,0,0, 0,70,0,0, 0,0,0,0, 0,70,0,0,
+                0,0,0,0, 0,72,0,0, 0,0,0,0, 0,72,0,0]
+  }
+}

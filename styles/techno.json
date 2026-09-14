@@ -1,0 +1,37 @@
+{
+  "style": "techno",
+  "name": "Techno",
+  "family": "techno",
+  "bpm": [118, 140],
+  "swing": "0–0.2",
+  "summary": "The mainline/classic techno lane — Detroit's 909 three-hat interplay, Berlin dub techno's unswung sparse pulse, minimal's jacking swing, peak-time rolling grooves, hypnotic ride-led loops, tribal toms, electro-adjacent broken kicks, acid-era 707/909/303 hybrids and Sheffield bleep & bass. Kick is a steady or half-time 4/4 (rarely a hard-techno gallop), percussion carries the identity role by role, and swing ranges from dead straight (dub techno) to a pronounced MPC shuffle (minimal, bleep).",
+  "sounds": {
+    "kick": "909 or 707 four-to-the-floor, tuned and compressed rather than distorted; half-time or omitted in dub/minimal lanes; 808 in the electro-adjacent lane.",
+    "snare": "909/808 snare pitched down for a darker Detroit character, played as counterpoint rather than backbeat; clap doubling on 2-and-4 or on a single downbeat in dub techno; 808 snare with swing in minimal.",
+    "hats": "Three-layer 909 closed/open hat interplay in Detroit style; sharp closed 16ths in minimal and acid lanes; open hat as the offbeat driver in peak-time and rolling techno; ride cymbal as the main pulse in hypnotic techno.",
+    "percussion": "Congas, clave and rimshot for Latin/tribal interplay; schranz-adjacent percussion loops; cowbell and clave for the electro lane; chord-stab percussion slot for dub techno.",
+    "cymbals": "Ride is a groove element (loud/soft 8ths) more often than a wash; one crash marks section changes and drops."
+  },
+  "machines": [
+    "Roland TR-909 — kick, snare, hats, ride; the defining Detroit and Berlin machine (owned)",
+    "Roland TR-808 — snare, low tom, electro-lane kick (owned)",
+    "Roland TR-707 — acid-era kick and hats, Armando-style acid house (owned)",
+    "Roland TR-727 / TR-505 — congas, claves, tribal percussion (owned)",
+    "Jomox Xbase09 / Mbase01 — analogue punch for modern peak-time kicks (owned)",
+    "MFB 502/512 — 909-adjacent analogue percussion for schranz-influenced loops (owned)",
+    "Elektron Machinedrum / Korg Electribe ER-1 — synthesised metallic percussion (owned)",
+    "E-mu SP-1200 — 12-bit resampling for lo-fi dub/electro grit (owned)",
+    "Roland TB-303 (via ABL2/ABL3 emulation) — acid basslines that sit over these drum patterns (get elsewhere)",
+    "Sonic Academy Kick 2 — synthesised modern techno kick design (get elsewhere)"
+  ],
+  "references": [
+    "Jeff Mills — The Bells (1997)",
+    "Robert Hood — Minimal Nation (1994)",
+    "Basic Channel — Phylyps Trak (1993)",
+    "Underground Resistance — Sonic Destroyer (1991)",
+    "Armando — 151 (1988)",
+    "LFO — LFO (1990)",
+    "Forgemasters — Track With No Name (1989)"
+  ],
+  "doc": "docs/styles/techno.md"
+}

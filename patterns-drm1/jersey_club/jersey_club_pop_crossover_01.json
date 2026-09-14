@@ -1,0 +1,25 @@
+{
+  "id": "jersey_club_pop_crossover_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0,
+  "tags": [
+    "pop-crossover",
+    "clean",
+    "2022-2026"
+  ],
+  "_approach": "A radio-ready 2022-26 crossover voicing (Cookiee Kawaii 'Vibe', UNIIQU3, and the Ciara 'Level Up' lineage that brought Jersey club to pop charts): the 5-kick skeleton stays but is cleaned up — bigger, simpler clap accents, evenly spaced 8th hats, and fewer competing ghost layers so the pattern sits well under a pop vocal. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://hungermag.com/editorial/cookiee-kawaiis-guide-to-jersey-club",
+    "https://www.thefader.com/2020/02/19/cookiee-kawaii-vibe-interview-tiktok-jersey-club",
+    "https://en.wikipedia.org/wiki/Jersey_club"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,108,0,0,0,104,0,0,98,0,0,84,0,112,0,0,0,108,0,0,0,104,0,0,98,0,0,86,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0],
+    "hihat": [50,0,50,0,50,0,50,0,50,0,50,0,50,0,50,0,52,0,52,0,52,0,52,0,52,0,52,0,52,0,52,0]
+  },
+  "kit": "drm1"
+}

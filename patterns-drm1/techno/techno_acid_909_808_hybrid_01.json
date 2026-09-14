@@ -1,0 +1,27 @@
+{
+  "id": "techno_acid_909_808_hybrid_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 122,
+  "swing": 0.06,
+  "tags": [
+    "acid",
+    "303-ready",
+    "707-909"
+  ],
+  "_approach": "Armando-style acid techno drums built for a TB-303 line to sit on top: a four-to-the-floor 707-style kick with a light manual-feel swing, densely varied 16th closed hats with an open hat on every off-beat, a sparse rimshot filling the gaps between kick and open hat, and a clap plus tambourine fill that arrives only in the last bar the way Attack's Armando-Style Acid House dissection lays it out. Leave headroom in the low-mids for the acid bassline. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/armando-acid-house/",
+    "https://www.attackmagazine.com/features/long-read/you-just-have-move-your-feet-30-years-acid/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,109,0,0,0,109,0,0,0,109,0,0,0,109,0,0,0],
+    "hihat": [64,58,70,60,66,56,72,62,64,58,70,60,66,56,74,64,66,60,72,62,68,58,74,64,66,60,72,62,68,58,76,80],
+    "openHat": [0,0,72,0,0,0,72,0,0,0,72,0,0,0,72,0,0,0,74,0,0,0,72,0,0,0,76,0,0,0,78,0],
+    "multi": [0,0,0,0,0,0,50,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,56,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,0,0,0],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53]
+  },
+  "kit": "drm1"
+}

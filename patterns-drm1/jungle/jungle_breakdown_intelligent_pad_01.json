@@ -1,0 +1,24 @@
+{
+  "id": "jungle_breakdown_intelligent_pad_01",
+  "style": "jungle",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 160,
+  "swing": 0.04,
+  "tags": [
+    "breakdown",
+    "intelligent",
+    "atmospheric",
+    "ride-wash"
+  ],
+  "_approach": "Intelligent-jungle pad section: four bars with no kick and no snare at all - only a flowing ride wash, a soft hat pulse and a shaker bed gently rising in intensity, the ride-and-hats-only atmosphere LTJ Bukem's Good Looking camp built entire tracks around. Ref: the ambient/intelligent jungle description in docs/styles/jungle.md (LTJ Bukem 'Music'/'Atlantis'); KAN Samples' note on pads and ride/hat-only sections as the breakdown's release valve. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement",
+    "https://www.edmprod.com/how-to-make-jungle-music/"
+  ],
+  "tracks": {
+    "hh1Closed": [50,0,38,0,50,0,38,0,50,0,38,0,50,0,40,0,52,0,40,0,52,0,40,0,52,0,40,0,52,0,42,0,54,0,42,0,54,0,42,0,54,0,42,0,54,0,44,0,56,0,44,0,56,0,44,0,56,0,44,0,56,0,46,0],
+    "hihat": [30,22,26,22,32,22,26,24,30,22,26,22,32,24,26,24,31,23,26,23,33,23,26,25,31,23,26,23,33,25,26,25,32,24,27,24,34,24,27,26,32,24,27,24,34,26,27,26,34,25,28,25,34,25,28,26,34,25,28,25,34,26,28,26]
+  },
+  "kit": "drm1"
+}

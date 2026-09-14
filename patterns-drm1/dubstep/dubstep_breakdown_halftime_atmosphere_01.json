@@ -1,0 +1,27 @@
+{
+  "id": "dubstep_breakdown_halftime_atmosphere_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.15,
+  "tags": [
+    "breakdown",
+    "atmosphere",
+    "halftime",
+    "perc"
+  ],
+  "_approach": "The dense-style breakdown from the same guide: kick and snare thin to near silence while shaker, tambourine and congas keep atmospheric energy alive under the halftime frame — the drums are stripped, but the groove still breathes rather than stopping dead. Ref: KAN Samples dubstep arrangement guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dubstep-track-arrangement"
+  ],
+  "tracks": {
+    "kick": [70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0],
+    "hihat": [0,0,21,0,24,0,19,0,0,0,22,0,26,0,21,0,0,0,22,0,26,0,21,0,0,0,24,0,27,0,22,0],
+    "hh1Closed": [0,0,0,0,0,0,27,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,34,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

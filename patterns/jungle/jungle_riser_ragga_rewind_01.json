@@ -1,0 +1,25 @@
+{
+  "id": "jungle_riser_ragga_rewind_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 170,
+  "swing": 0.1,
+  "tags": ["riser","build","ragga","rewind"],
+  "_approach": "Ragga rewind: bar 1 keeps the dancehall 3-3-2 kick with rimshot answers and a tom pickup; bar 2 is the reload moment - the kick drops out and rim/tom hits trade an accelerating call-and-response (8ths -> 16ths -> near-32nds) while everything falls silent for the last two steps, the classic 'hold it... rewind' pause before the selector drops it again. Ref: ragga jungle's rewind-and-reload culture (Shy FX/Remarc lineage), UKF's Tim Reaper interview on break selection under MC calls.",
+  "_sources": ["https://ukf.com/read/in-conversation-with-tim-reaper/","https://www.edmprod.com/how-to-make-jungle-music/","https://magneticmag.com/2026/06/music-production-tips-for-making-jungle/"],
+  "tracks": {
+    "kick": [100,0,0,0, 0,0,0,0, 0,0,0,0, 78,0,0,0, 0,0,0,0, 94,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,60,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,54,0,
+             55,0,0,0, 0,0,60,0, 0,0,0,0, 66,0,0,0, 0,0,74,0, 0,0,82,0, 0,0,92,0, 0,104,0,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 50,0,0,0,
+                 0,0,0,0, 58,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomMid": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,62,0, 0,0,0,0, 0,0,0,0, 78,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0, 88,0,0,0, 0,0,0,0],
+    "hihat": [46,0,0,0, 0,0,0,0, 46,0,0,0, 0,0,0,0, 46,0,0,0, 0,0,0,0, 46,0,0,0, 0,0,0,0,
+               40,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

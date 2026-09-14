@@ -1,0 +1,28 @@
+{
+  "id": "krushclub_halftime_trap_flip_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "groove",
+    "halftime",
+    "trap",
+    "808-glide"
+  ],
+  "_approach": "Melodigging's description of krushclub as alternating between 'a halftime trap feel and Jersey Club bounce': here the kick sits on the halftime backbeat (1 and the 'and' of 3) like a trap beat rather than the 5-kick Jersey shape, the snare/clap lands on beat 3 (the halftime backbeat), and a clipped 808 glide (tomLow slot) slides under the kick. A trap-style hi-hat roll (triplet-feel burst approximated on the 16th grid) fires into beat 3 each bar — the clearest 'trap DNA inside krushclub' moment. Reference construction: Odetari / 6arelyhuman style halftime verses. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/krushclub",
+    "https://www.edmprod.com/krushclub/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0],
+    "drum2": [70,0,0,64,0,0,60,0,0,0,0,0,0,0,0,0,72,0,0,66,0,0,62,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0],
+    "hihat": [0,0,50,0,0,0,50,0,0,52,56,60,0,0,0,0,0,0,50,0,0,0,50,0,0,52,56,62,66,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0]
+  },
+  "kit": "drm1"
+}

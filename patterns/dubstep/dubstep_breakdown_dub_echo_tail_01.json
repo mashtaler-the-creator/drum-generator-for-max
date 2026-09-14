@@ -1,0 +1,21 @@
+{
+  "id": "dubstep_breakdown_dub_echo_tail_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0.2,
+  "tags": ["breakdown","dub-echo","minimal","space"],
+  "_approach": "Negative-space minimalism built around implied dub-echo tails: a single rim shot per bar decays through descending 'echo repeat' velocities, no kick and no snare at all — 'space is just as much an instrument as a kick or a snare'. Ref: Junkee 'Loefah: Lower than Low'; dubstep DNA doc.",
+  "_sources": ["https://itm.junkee.com/loefah-lower-than-low/9794"],
+  "tracks": {
+    "rim": [
+      0,0,0,0, 70,0,0,0, 0,0,0,0, 48,0,0,0,
+      0,0,64,0, 0,0,44,0, 0,0,28,0, 0,0,0,0
+    ],
+    "openHat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,40,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

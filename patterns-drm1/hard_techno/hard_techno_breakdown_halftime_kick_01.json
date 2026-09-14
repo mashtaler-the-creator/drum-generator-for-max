@@ -1,0 +1,26 @@
+{
+  "id": "hard_techno_breakdown_halftime_kick_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "breakdown",
+    "half-time",
+    "kick-sparse"
+  ],
+  "_approach": "Half-time kick (beats 1 and 3 only, bar 2 lighter on 3), offbeat hats at reduced velocity and a whisper of 16th rim ghosts carrying the motion; a single clap on 4 of bar 2. Energy drops by half without losing the pulse the DJ needs. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/what-is-hard-techno/",
+    "https://futureproofmusicschool.com/blog/making-hard-techno-a-path-to-unique-sound-design"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0],
+    "hihat": [0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74,0,74],
+    "multi": [0,0,30,0,0,0,28,0,0,0,30,0,0,0,32,0,0,0,30,0,0,0,28,0,0,0,32,0,0,26,34,0],
+    "drum2": [0,0,0,0,56,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,50,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0]
+  },
+  "kit": "drm1"
+}

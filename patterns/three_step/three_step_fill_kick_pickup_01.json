@@ -1,0 +1,16 @@
+{
+  "id": "three_step_fill_kick_pickup_01",
+  "style": "three_step",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 116,
+  "tags": ["fill","kick-pickup","turnaround"],
+  "_approach": "One-bar turnaround: the missing beat-3 kick is reinstated and doubled into a quick 16th pickup through beat 4, briefly restoring four-on-the-floor before the next bar drops the kick again - the '3-step becomes 4-step for a second' cue that signals a section change.",
+  "_sources": ["https://www.melodigging.com/genre/3-step"],
+  "tracks": {
+    "kick":   [112,0,0,0, 108,0,0,0, 106,0,96,0, 110,0,116,0],
+    "perc":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0],
+    "shaker": [60,0,44,0, 62,0,42,0, 60,0,46,0, 0,0,0,0]
+  }
+}

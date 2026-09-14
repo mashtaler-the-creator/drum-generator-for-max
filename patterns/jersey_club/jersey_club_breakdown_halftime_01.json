@@ -1,0 +1,17 @@
+{
+  "id": "jersey_club_breakdown_halftime_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": ["breakdown","halftime"],
+  "_approach": "A halved kick pattern (only the first 4-4 pair of the 5-kick run survives) with the clap dropped out entirely — the sparse pre-chorus pocket used before the full bounce returns for the hook.",
+  "_sources": ["https://blog.native-instruments.com/jersey-club/"],
+  "tracks": {
+    "kick":   [96,0,0,0, 92,0,0,0, 0,0,0,0, 0,0,0,0,
+              98,0,0,0, 94,0,0,0, 0,0,0,0, 0,0,0,0],
+    "hihat":  [0,0,0,0, 40,0,0,0, 0,0,0,0, 40,0,0,0,
+              0,0,0,0, 42,0,0,0, 0,0,0,0, 42,0,0,0]
+  }
+}

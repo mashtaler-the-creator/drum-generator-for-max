@@ -1,0 +1,25 @@
+{
+  "id": "three_step_drop_the_three_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 115,
+  "tags": [
+    "kick-drop",
+    "log-drum",
+    "canonical"
+  ],
+  "_approach": "The plainest reading of the genre name: kicks on beats 1, 2 and 4, beat 3 left completely silent on the kick and filled instead by a tomLow+congaLow 'log drum' answer borrowed from Amapiano (the article's 'deep basslines and log drums from Amapiano'). Shaker is the timekeeper throughout; claps sit on 2 and 4 under the kick. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/",
+    "https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,108,0,0,0,0,0,0,0,114,0,0,0,110,0,0,0,106,0,0,0,0,0,0,0,116,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,68,55,52,44,0,0,0,0,0,0,0,0,0,0,0,0,71,58,55,47,0,0,0,0],
+    "clap": [0,0,0,0,80,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0],
+    "hihat": [51,34,45,32,53,35,46,33,50,34,46,32,52,36,47,34,53,35,46,33,51,36,48,34,52,35,47,33,54,37,48,35]
+  },
+  "kit": "drm1"
+}

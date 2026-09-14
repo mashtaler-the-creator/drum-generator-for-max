@@ -1,0 +1,23 @@
+{
+  "id": "dariacore_breakdown_halftime_lull_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 168,
+  "tags": [
+    "breakdown",
+    "dubstep",
+    "halftime"
+  ],
+  "_approach": "A stripped halftime dubstep-derived pocket (kick on 1, snare on 3 only, at reduced velocity) — the calmer, slower-feeling half of the halftime/breakbeat alternation dariacore uses for contrast against its double-time sections, per the genre's dubstep borrowing. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0],
+    "hihat": [0,0,30,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,30,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

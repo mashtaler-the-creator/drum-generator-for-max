@@ -1,0 +1,17 @@
+{
+  "id": "jersey_club_riser_snare_build_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 136,
+  "swing": 0,
+  "tags": ["riser","snare-build"],
+  "_approach": "A snare/clap roll build: the clap hits once per bar in bar 1, then rolls in 8ths then 16ths through bar 2 while the kick thins out to leave room for the roll, both landing together on the final accented hit.",
+  "_sources": ["https://blog.native-instruments.com/jersey-club/"],
+  "tracks": {
+    "kick":  [108,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+             110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":  [0,0,0,0, 0,0,0,0, 0,0,90,0, 0,0,0,0,
+             0,0,70,0, 0,0,78,0, 82,0,90,0, 98,0,106,127]
+  }
+}

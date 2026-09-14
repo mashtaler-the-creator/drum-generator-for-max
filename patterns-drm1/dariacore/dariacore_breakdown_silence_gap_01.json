@@ -1,0 +1,22 @@
+{
+  "id": "dariacore_breakdown_silence_gap_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 175,
+  "tags": [
+    "breakdown",
+    "silence",
+    "no-kick"
+  ],
+  "_approach": "The most dariacore-honest breakdown: almost total silence. One soft kick opens bar 1, then nothing but a lone rim tick every few bars — modelling the 'sudden full stop' moments producers drop a track into for a vocal sample or a joke sound effect to occupy alone. This is exactly the kind of section where the genre's actual content (the sample) is doing all the work and drums are deliberately not. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0]
+  },
+  "kit": "drm1"
+}

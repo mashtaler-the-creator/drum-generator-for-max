@@ -1,0 +1,29 @@
+{
+  "id": "ukfunky_broken_beat_skip_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 128,
+  "tags": [
+    "groove",
+    "broken-beat",
+    "bruk",
+    "syncopated"
+  ],
+  "_approach": "The broken-beat (bruk) strand of the genre's lineage: the kick stays perfectly steady and never breaks, but the snare/rim answer is chopped into frenetic, syncopated broken-beat hits (the choppy, off-grid rhythm language of the Bugz in the Attic/IG Culture school) rather than a straight backbeat, with congas and shaker filling the gaps in call-and-response. Ref: Wikipedia's broken beat entry (syncopated, frenetic, jazz-funk-adjacent rhythms), Wikipedia's UK funky entry naming broken beat among its direct ancestors. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Broken_beat",
+    "https://en.wikipedia.org/wiki/UK_funky",
+    "https://www.melodigging.com/genre/uk-funky"
+  ],
+  "tracks": {
+    "kick": [92,0,0,0,90,0,0,0,91,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,91,0,0,0,90,0,0,0],
+    "multi": [0,0,68,0,0,72,0,0,0,0,0,66,0,0,74,0,0,70,0,0,0,0,74,0,0,0,68,0,0,76,0,0],
+    "snare": [0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,86,0,0],
+    "drum1": [0,0,0,55,0,0,59,0,0,0,0,0,57,0,0,0,0,0,0,57,0,0,61,0,0,0,0,0,59,0,0,0],
+    "drum2": [53,0,0,0,0,0,0,0,55,0,0,0,0,0,57,0,55,0,0,0,0,0,0,0,57,0,0,0,0,0,59,0],
+    "hihat": [37,22,30,24,38,23,32,34,37,22,50,26,40,24,34,35,37,22,30,24,38,23,33,34,38,22,52,26,41,25,34,36]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "dariacore_dubstep_halftime_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 168,
+  "tags": ["groove", "dubstep", "halftime"],
+  "_approach": "Dariacore's dubstep borrowing is structural, not just sonic: a halftime dubstep pocket (kick 1 + and-of-2, snare/clap on 3 only) dropped into a track that is otherwise running at breakcore tempo, so the halftime section feels twice as slow relative to everything around it — exactly the abrupt-tempo-feel whiplash dariacore is known for.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "kick":   [114,0,0,0, 0,0,70,0, 0,0,0,0, 0,0,0,0,
+               114,0,0,0, 0,0,70,0, 0,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 0,0,0,0, 104,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 104,0,0,0, 0,0,0,0],
+    "perc":   [0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 40,0,0,44,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 40,0,0,44],
+    "hihat":  [0,0,38,0, 0,0,0,0, 0,0,38,0, 0,0,0,0,
+               0,0,38,0, 0,0,0,0, 0,0,38,0, 0,0,0,0]
+  }
+}

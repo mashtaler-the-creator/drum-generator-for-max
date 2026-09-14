@@ -1,0 +1,25 @@
+{
+  "id": "baile_funk_mandelao_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 136,
+  "swing": 0.05,
+  "tags": [
+    "mandelao",
+    "minimal",
+    "sao-paulo"
+  ],
+  "_approach": "Funk mandelão's 'Beat do Mandela' template: a stripped, hard-hitting São Paulo groove built from a simple kick, clipped rim/tom hits standing in for the clipped toms-and-rims texture, and a slower, heavier feel than Rio's tamborzão. Almost no hi-hat or shaker filler — the space itself is the groove, built for booming sub-bass call-and-response vocal chops. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/funk-mandelao",
+    "https://rateyourmusic.com/genre/funk-mandelao/",
+    "https://daily.bandcamp.com/lists/brazilian-funk-list"
+  ],
+  "tracks": {
+    "kick": [120,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,98,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,94,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,52,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,48,0]
+  },
+  "kit": "drm1"
+}

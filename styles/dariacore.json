@@ -1,0 +1,31 @@
+{
+  "style": "dariacore",
+  "name": "Dariacore",
+  "family": "internet",
+  "bpm": [150, 190],
+  "swing": "0 (mostly straight; the otoMAD/hyperflip groove and its breakdown approximate a triplet feel at 0.33)",
+  "summary": "An internet microgenre coined by Jane Remover (as 'Leroy') in the early 2020s, also called hyperflip, built from frenetic cut-ups of pop hooks, anime/TV snippets and internet ephemera smashed together at breakcore-adjacent tempos with Jersey Club bounce, breakbeats, hardstyle kicks and dubstep-derived drops. Its real identity lives as much in what gets sampled and how it's chopped as in any drum pattern — sudden full stops, abrupt genre/tempo whiplash and meme-y fake-outs are as central to the sound as any specific kick placement.",
+  "sounds": {
+    "kick": "Borrowed wholesale from whichever donor genre is in play at that moment: Jersey Club's 5-kick shape, a plain hardstyle four-on-the-floor, a displaced jungle/breakbeat kick, or a halftime dubstep kick — often switching between them bar to bar rather than settling on one.",
+    "snare": "Breakbeat-style drags and doubles, a hardstyle-adjacent clap+snare stack on 2 and 4, or a halftime backbeat on 3 alone, frequently distorted/pitched to match whatever sample is riding over it.",
+    "hats": "Dense 16th closed-hat beds and complextro-style stutter-repeats (the same hit machine-gunned at rapid, decreasing velocity) rather than swung garage-style hats.",
+    "percussion": "Largely a placeholder role here: real dariacore leans on sound effects (car crashes, sirens, bed squeaks) and vocal/instrumental sample chops that a drum-only pattern library cannot represent; cowbell/tom hits stand in for siren-stab and impact accents where used.",
+    "cymbals": "A single crash or none at all; cymbal choice matters far less than the sample edit riding over the drums."
+  },
+  "machines": [
+    "Akai MPC60 / MPC3000 — chop and re-trigger the breakbeat/Jersey-derived kick-snare skeletons (owned)",
+    "E-mu SP-1200 — 12-bit crunch for the breakbeat/amen-adjacent grooves (owned)",
+    "Roland TR-909 / TR-808 — hardstyle-adjacent kick and clap/snare layers (owned)",
+    "Elektron Machinedrum — glitchy stutter-edit percussion for the complextro-derived grooves (owned)",
+    "Ensoniq ASR-X — sample-chop workflow suited to the plunderphonics/mashcore splice approach (owned)",
+    "Ableton Live stock devices (Beat Repeat / Redux-style bitcrush, Gated audio) — the actual sample-flip and stutter engine most dariacore producers use (get elsewhere)",
+    "Vengeance/Sample Focus breakcore & Jersey Club one-shot packs — real drum source material (get elsewhere)"
+  ],
+  "references": [
+    "Jane Remover (Leroy) — Dariacore trilogy (2020–21)",
+    "Jane Remover — Grave Robbing (2023)",
+    "c0ncernn — dariacore/hyperflip sets",
+    "Various Niconico/otoMAD-lineage hyperflip producers (Japan scene)"
+  ],
+  "doc": "docs/styles/dariacore.md"
+}

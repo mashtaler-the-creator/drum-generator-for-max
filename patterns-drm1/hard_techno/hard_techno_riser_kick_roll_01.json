@@ -1,0 +1,25 @@
+{
+  "id": "hard_techno_riser_kick_roll_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "kick-roll",
+    "build"
+  ],
+  "_approach": "Two-bar kick-roll build: bar 1 adds 8th kicks on beats 3-4, bar 2 doubles to 8ths then 16ths with velocity climbing to 127 on the last step while the hats go from offbeat 8ths to a rising 16th wall. EDMProd warns to high-pass the kick as the roll accelerates; the last kick+crash is the loudest hit. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://www.edmprod.com/what-is-hard-techno/"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,118,0,0,0,118,0,104,0,118,0,106,0,118,0,108,0,118,0,110,0,112,104,114,106,118,112,122,127],
+    "hihat": [0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,60,64,68,72,76,80,84,88,92,96,100,104,108,112,116,120],
+    "openHat": [0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,70,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110]
+  },
+  "kit": "drm1"
+}

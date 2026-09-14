@@ -1,0 +1,26 @@
+{
+  "id": "ukfunky_breakdown_clave_space_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 131,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "clave",
+    "latin",
+    "minimal"
+  ],
+  "_approach": "Minimal Latin-cell space: the son clave timeline from ukfunky_clave_bell_01 is left alone with a light shaker and a ghost cowbell answer, no kick or clap at all, so the timeline itself is the whole groove until the floor and cowbell tresillo return for the build. Ref: the clave-bell approach (Sticky, Geeneus \"Yellowtail\"), Wikipedia's UK funky entry on the genre's Latin percussion lineage. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/UK_funky",
+    "https://www.melodigging.com/genre/uk-funky",
+    "https://www.attackmagazine.com/technique/beat-dissected/broken-house-beat/"
+  ],
+  "tracks": {
+    "multi": [27,25,0,29,27,0,31,0,0,0,27,0,29,0,25,22,0,0,25,0,25,0,29,0,0,27,27,0,0,31,0,0],
+    "hihat": [32,19,27,21,34,20,29,30,32,18,28,22,35,21,30,32,32,19,27,21,34,20,29,30,33,19,28,22,36,22,30,33]
+  },
+  "kit": "drm1"
+}

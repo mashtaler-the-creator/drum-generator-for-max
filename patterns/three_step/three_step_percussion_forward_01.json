@@ -1,0 +1,23 @@
+{
+  "id": "three_step_percussion_forward_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 118,
+  "tags": ["percussion-forward","conga","minimal-kick"],
+  "_approach": "Kick pulled back to almost an afterthought (just beat 1 and a soft beat 4) while congaHigh/congaLow trade a call-and-response figure across both bars and claps carry the backbeat - the more percussive, jam-session-like corner of 3-step where 'more than one person in the room' (Beatportal) is audible in the interlocking parts.",
+  "_sources": ["https://www.beatportal.com/articles/807844-where-did-that-kick-go-an-introduction-to-3step","https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house"],
+  "tracks": {
+    "kick":      [108,0,0,0, 0,0,0,0, 0,0,0,0, 78,0,0,0,
+                  106,0,0,0, 0,0,0,0, 0,0,0,0, 80,0,0,0],
+    "congaHigh": [0,0,0,62, 0,0,0,70, 0,0,0,58, 0,0,0,0,
+                  0,0,0,90, 0,0,0,96, 0,0,0,92, 0,0,0,0],
+    "congaLow":  [0,0,0,0, 0,56,0,0, 0,66,0,0, 0,0,60,0,
+                  0,0,0,0, 0,60,0,0, 0,100,0,0, 0,0,94,0],
+    "perc":      [0,0,0,0, 82,0,0,0, 0,0,0,0, 84,0,0,0,
+                  0,0,0,0, 84,0,0,0, 0,0,0,0, 86,0,0,0],
+    "shaker":    [50,0,60,0, 48,0,58,0, 50,0,60,0, 48,0,58,0,
+                  52,0,62,0, 50,0,60,0, 52,0,62,0, 50,0,60,0]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "hard_trance_ride_driver_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "ride",
+    "driver"
+  ],
+  "_approach": "A ride in loud/soft alternating 8ths is the engine instead of a hat wall, with the open hat pulled back to just the second half of each bar and sparse closed 16ths filling in. Gives the groove a rolling, less percussive-clutter feel than the offbeat-pump approach. Reference: Push 'Universal Nation', Cosmic Gate. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Hard_trance",
+    "https://theproducerschool.com/blogs/featured-blogs/5-essential-bass-patterns-that-define-hard-house-and-trance-music"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,114,0,0,0,118,0,0,0],
+    "hh1Closed": [80,0,54,0,80,0,54,0,80,0,54,0,80,0,54,0,80,0,56,0,82,0,56,0,80,0,58,0,84,0,60,0],
+    "hihat": [0,38,0,0,0,40,0,0,0,38,0,0,0,42,0,0,0,38,0,0,0,40,0,0,0,38,0,0,0,42,0,0],
+    "openHat": [0,0,0,0,0,0,94,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0],
+    "clap": [0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,106,0,0,0]
+  },
+  "kit": "drm1"
+}

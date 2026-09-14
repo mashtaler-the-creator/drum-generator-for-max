@@ -1,0 +1,25 @@
+{
+  "id": "three_step_drop_the_three_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 115,
+  "tags": ["kick-drop","log-drum","canonical"],
+  "_approach": "The plainest reading of the genre name: kicks on beats 1, 2 and 4, beat 3 left completely silent on the kick and filled instead by a tomLow+congaLow 'log drum' answer borrowed from Amapiano (the article's 'deep basslines and log drums from Amapiano'). Shaker is the timekeeper throughout; claps sit on 2 and 4 under the kick.",
+  "_sources": ["https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/","https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house"],
+  "tracks": {
+    "kick":     [112,0,0,0, 108,0,0,0, 0,0,0,0, 114,0,0,0,
+                 110,0,0,0, 106,0,0,0, 0,0,0,0, 116,0,0,0],
+    "tomLow":   [0,0,0,0, 0,0,0,0, 68,0,52,0, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 71,0,55,0, 0,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,58,0,46, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,61,0,49, 0,0,0,0],
+    "perc":     [0,0,0,0, 80,0,0,0, 0,0,0,0, 82,0,0,0,
+                 0,0,0,0, 82,0,0,0, 0,0,0,0, 84,0,0,0],
+    "shaker":   [64,42,56,40, 66,44,58,41, 62,43,57,40, 65,45,59,42,
+                 66,44,58,41, 64,45,60,42, 65,44,59,41, 67,46,60,44],
+    "hihat":    [0,0,0,0, 0,0,38,0, 0,0,0,0, 0,0,40,0,
+                 0,0,0,0, 0,0,40,0, 0,0,0,0, 0,0,42,0]
+  }
+}

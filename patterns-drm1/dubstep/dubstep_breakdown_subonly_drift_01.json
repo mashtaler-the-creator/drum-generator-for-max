@@ -1,0 +1,24 @@
+{
+  "id": "dubstep_breakdown_subonly_drift_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 139,
+  "swing": 0.1,
+  "tags": [
+    "breakdown",
+    "sub-only",
+    "sparse",
+    "drift"
+  ],
+  "_approach": "The sparse-style breakdown KAN Samples' arrangement guide describes — drums drop out almost entirely so the sub-bass alone carries the section — reduced here to a soft kick every other bar and a slow-breathing shaker keeping the faintest sense of time. Ref: KAN Samples dubstep arrangement guide ('drums drop entirely, sub bass alone'). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dubstep-track-arrangement"
+  ],
+  "tracks": {
+    "kick": [60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [0,0,0,0,19,0,0,0,0,0,21,0,0,0,18,0,0,0,16,0,0,0,0,0,19,0,0,0,0,18,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0]
+  },
+  "kit": "drm1"
+}

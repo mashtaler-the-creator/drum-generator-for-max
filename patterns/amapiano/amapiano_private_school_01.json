@@ -1,0 +1,21 @@
+{
+  "id": "amapiano_private_school_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 111,
+  "tags": ["private-school","lush","minimal"],
+  "_approach": "Private School Piano's refined, mellow read: kick pulled back to a single soft hit on beat 1 (sometimes skipped), a whisper-quiet shaker, a soft rim on 2 and 4 standing in for the brushed backbeat, and only one gentle log-drum (congaLow) answer per bar - everything is understated because the (absent, melodic) piano carries the track.",
+  "_sources": ["https://www.melodigging.com/genre/amapiano","https://www.edmprod.com/what-is-amapiano/"],
+  "tracks": {
+    "kick":     [92,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                 90,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0],
+    "rim":      [0,0,0,0, 58,0,0,0, 0,0,0,0, 56,0,0,0,
+                 0,0,0,0, 60,0,0,0, 0,0,0,0, 58,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,52,0, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,0,55,0, 0,0,0,0],
+    "shaker":   [42,0,0,0, 40,0,0,0, 41,0,0,0, 40,0,0,0,
+                 44,0,0,0, 42,0,0,0, 43,0,0,0, 42,0,0,0]
+  }
+}

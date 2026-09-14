@@ -1,0 +1,21 @@
+{
+  "id": "hard_trance_riser_gap_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": ["riser", "gap", "build"],
+  "_approach": "Build-up-and-pause: bar 1 plays the normal groove, then bar 2 opens with a ramping 16th kick run through beat 2, cuts to total silence for a beat and a half, and lands a single kick + clap + crash on the very last 16th before the drop -- the classic trance 'gap before the drop' moment.",
+  "_sources": ["https://www.edmprod.com/ultimate-guide-build-ups/", "https://en.wikipedia.org/wiki/Hard_trance"],
+  "tracks": {
+    "kick":    [114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0,
+                100,104,108,112, 116,120,124,127, 0,0,0,0, 0,0,0,127],
+    "openHat": [0,0,92,0, 0,0,92,0, 0,0,92,0, 0,0,92,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 102,0,0,0, 0,0,0,0, 104,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120],
+    "crash":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

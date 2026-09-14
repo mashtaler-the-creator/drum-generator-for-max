@@ -1,0 +1,27 @@
+{
+  "id": "bh_riser_white_noise_sweep_01",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 128,
+  "tags": [
+    "riser",
+    "build",
+    "hat-sweep",
+    "filter-sweep",
+    "edm"
+  ],
+  "_approach": "The filter-sweep riser translated to drums: since a MIDI pattern can't automate a filter, the rising hat/shaker density and velocity ramp imitate the classic EDM noise-sweep riser underneath the house 4x4, with the kick and clap holding steady in bar 1 and thinning in bar 2 so the hat wash carries the \"sweep\" and the final 16th is left silent for the drop. Ref: EDMProd's build-up guide (the filter sweep as the number-one EDM tension device), Music Production Wiki's tension-and-drops guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://musicproductionwiki.com/articles/how-to-build-tension-and-drops-in-edm"
+  ],
+  "tracks": {
+    "kick": [100,0,0,0,98,0,0,0,101,0,0,0,99,0,0,0,102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,105,0,0,0,0,0,0,0,103,0,0,0,0,0,0,0,107,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [32,19,26,40,34,20,27,44,32,18,26,46,35,21,29,48,50,54,58,62,66,70,74,78,82,86,90,94,98,102,106,0],
+    "openHat": [0,0,90,0,0,0,88,0,0,0,91,0,0,0,89,0,0,0,96,0,0,0,100,0,0,0,104,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

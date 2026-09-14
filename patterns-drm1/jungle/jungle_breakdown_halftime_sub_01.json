@@ -1,0 +1,25 @@
+{
+  "id": "jungle_breakdown_halftime_sub_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 172,
+  "swing": 0.04,
+  "tags": [
+    "breakdown",
+    "halftime",
+    "sparse"
+  ],
+  "_approach": "Half-time breakdown: the kick halves to beats 1 and 3 only, the snare backbeat disappears completely, and a sparse ride/shaker wash with the odd rim tick is all that's left to keep time - the halftime/autonomic move into jungle's ambient wing. Ref: United By Bass's description of autonomic/halftime's skeletal syncopation; EDMProd's jungle guide on removing drums as a turnaround device. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.unitedbybass.com/every-drum-bass-subgenre-you-need-to-know-2025-edition/",
+    "https://www.edmprod.com/how-to-make-jungle-music/"
+  ],
+  "tracks": {
+    "kick": [70,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0],
+    "hh1Closed": [42,0,0,0,0,0,34,0,0,0,40,0,0,0,32,0,0,0,40,0,0,0,36,0,0,0,42,0,0,0,34,0],
+    "hihat": [21,0,19,0,22,0,18,0,21,0,19,0,22,0,21,0,20,0,18,0,22,0,17,0,20,0,18,0,22,0,20,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

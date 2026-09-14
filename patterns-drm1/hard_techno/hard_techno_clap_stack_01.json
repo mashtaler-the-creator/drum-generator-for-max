@@ -1,0 +1,27 @@
+{
+  "id": "hard_techno_clap_stack_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "clap",
+    "clap-roll",
+    "rave",
+    "call-response"
+  ],
+  "_approach": "Rave-leaning hard techno: a huge layered clap+snare on 2 and 4, offbeat open hats, and a 16th clap roll through beat 4 of bar 2 as the call-and-response burst EDMProd describes ('machine-gun' clap rolls after builds). Reference: 999999999 'No Sleep', Creeds 'Push Up'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/how-to-make-techno/",
+    "https://www.edmprod.com/what-is-hard-techno/"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0],
+    "clap": [0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,112,80,88,104],
+    "snare": [0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0],
+    "openHat": [0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78,0,78],
+    "hihat": [46,52,60,52,46,52,60,52,46,52,60,52,46,52,60,52,46,54,60,56,46,54,60,56,46,54,60,56,46,54,60,56]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "krushclub_breakdown_perc_bed_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 152,
+  "tags": [
+    "breakdown",
+    "hexd",
+    "percussion-only",
+    "no-kick"
+  ],
+  "_approach": "The HexD percussion loop running alone, no kick or backbeat at all — the bitcrushed cowbell/tomLow/perc cycle from the HexD groove kept at low decoration velocities so it reads as texture rather than groove, a single snare on beat 4 of bar 2 the only cue the section is about to end. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://aesthetics.fandom.com/wiki/Krushclub",
+    "https://aesthetics.fandom.com/wiki/HexD"
+  ],
+  "tracks": {
+    "clap": [0,0,34,38,0,40,0,34,0,38,0,34,40,0,34,0,0,0,36,40,0,42,0,36,0,40,0,36,42,0,36,0],
+    "multi": [0,30,0,0,32,0,0,34,0,30,0,0,32,0,0,36,0,32,0,0,34,0,0,36,0,32,0,0,34,0,0,38],
+    "drum2": [0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,34],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70]
+  },
+  "kit": "drm1"
+}

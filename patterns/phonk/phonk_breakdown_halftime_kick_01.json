@@ -1,0 +1,17 @@
+{
+  "id": "phonk_breakdown_halftime_kick_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": ["breakdown","halftime-kick","drift-phonk"],
+  "_approach": "The drift phonk kit halves further: a single soft kick per bar, no snare, cowbell thinned to two hits — a low-energy pocket that still keeps the riff's silhouette recognisable before the full pattern returns.",
+  "_sources": ["https://blog.soundtrap.com/how-to-produce-drift-phonk/"],
+  "tracks": {
+    "kick":     [92,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                90,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "cowbell":  [0,0,0,0, 56,0,0,0, 0,0,0,0, 52,0,0,0,
+                0,0,0,0, 58,0,0,0, 0,0,0,0, 54,0,0,0]
+  }
+}

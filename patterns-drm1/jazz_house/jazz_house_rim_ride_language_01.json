@@ -1,0 +1,25 @@
+{
+  "id": "jazz_house_rim_ride_language_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 120,
+  "tags": [
+    "rim-ride",
+    "minimal-hats",
+    "deep-house"
+  ],
+  "_approach": "No hi-hats at all -- the ride's loud/soft alternating 8ths and a rim call-and-response (rim calls on the 'a' of 1, answers on the 'a' of 3) carry the whole groove, deep-house style. A gentle kick and clap sit underneath. MPC swing 56% (engine 0.12). Reference: Larry Heard, Glenn Underground. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/jazz-house",
+    "https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"
+  ],
+  "tracks": {
+    "kick": [98,0,0,0,96,0,0,0,100,0,0,0,94,0,0,0,99,0,0,0,97,0,0,0,101,0,0,0,95,0,0,0],
+    "hh1Closed": [58,0,42,0,60,0,44,0,58,0,42,0,62,0,46,0,60,0,44,0,62,0,46,0,60,0,44,0,64,0,48,0],
+    "multi": [0,0,0,50,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,56],
+    "clap": [0,0,0,0,92,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,95,0,0,0]
+  },
+  "kit": "drm1"
+}

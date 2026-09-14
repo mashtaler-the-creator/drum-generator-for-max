@@ -1,0 +1,25 @@
+{
+  "id": "phonk_drift_808_slide_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 142,
+  "swing": 0.05,
+  "tags": [
+    "drift-phonk",
+    "808-slide",
+    "sparse"
+  ],
+  "_approach": "Built around a long, sliding 808 rather than a busy kit: a sparse kick anchors beat 1 and the & of beat 3 (tomLow layered underneath stands in for the 808's sustained low body), cowbell answers in short 2-note calls, hats almost absent so the slide has room to breathe. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.soundtrap.com/how-to-produce-drift-phonk/",
+    "https://melodics.com/blog/producers-guide-to-phonk-music"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0],
+    "drum2": [60,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0],
+    "multi": [0,0,0,0,67,61,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,63,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

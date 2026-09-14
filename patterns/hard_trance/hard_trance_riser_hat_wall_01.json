@@ -1,0 +1,23 @@
+{
+  "id": "hard_trance_riser_hat_wall_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 149,
+  "tags": ["riser", "hat-wall", "build"],
+  "_approach": "Hat-density build: bar 1's sparse offbeat closed hats grow into a full rising 16th wall in bar 2 while the open hat doubles from once-per-beat to every 8th, climbing from 96 to 112. Kick stays steady 4/4 throughout so only the hats signal the build; crash lands on the final step.",
+  "_sources": ["https://www.edmprod.com/ultimate-guide-build-ups/", "https://theproducerschool.com/blogs/featured-blogs/5-essential-bass-patterns-that-define-hard-house-and-trance-music"],
+  "tracks": {
+    "kick":    [114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0,
+                114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0],
+    "hihat":   [0,0,50,0, 0,0,52,0, 0,0,54,0, 0,0,56,0,
+                58,62,66,70, 74,78,82,86, 90,94,98,102, 106,110,114,120],
+    "openHat": [0,0,90,0, 0,0,90,0, 0,0,90,0, 0,0,90,0,
+                98,0,100,0, 102,0,104,0, 106,0,108,0, 110,0,112,0],
+    "perc":    [0,0,0,0, 102,0,0,0, 0,0,0,0, 104,0,0,0,
+                0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,0,0],
+    "crash":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

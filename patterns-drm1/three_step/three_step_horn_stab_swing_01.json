@@ -1,0 +1,26 @@
+{
+  "id": "three_step_horn_stab_swing_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.22,
+  "bpm": 115,
+  "tags": [
+    "horn-stabs",
+    "heavy-swing",
+    "jazzy"
+  ],
+  "_approach": "The jazzier end of the sound: heavy swing (0.22, near the 65% ceiling melodigging quotes for a 'laid-back pocket'), a tambourine timekeeper instead of a shaker, and the perc slot carrying syncopated horn-stab hits rather than a plain backbeat clap. Kicks drop beat 3 (the falling-forward template) so the horns have room to land. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/3-step",
+    "https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/"
+  ],
+  "tracks": {
+    "kick": [111,0,0,0,0,0,0,98,0,0,0,0,114,0,0,0,109,0,0,0,0,0,0,100,0,0,0,0,116,0,0,0],
+    "hh1Closed": [45,0,32,0,46,0,30,0,46,0,31,0,47,0,33,0,46,0,34,0,48,0,32,0,47,0,33,0,49,0,34,0],
+    "clap": [0,0,0,82,0,0,0,0,0,0,88,0,0,78,0,0,0,0,0,84,0,0,0,0,0,0,90,0,0,80,0,0],
+    "multi": [0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

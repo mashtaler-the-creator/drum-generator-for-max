@@ -1,0 +1,22 @@
+{
+  "id": "three_step_breakdown_log_drum_solo_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 114,
+  "tags": [
+    "breakdown",
+    "log-drum",
+    "no-kick"
+  ],
+  "_approach": "The log drum left alone: no kick at all, tomLow+congaLow keep a slow, sparse bouncing figure with a soft shaker underneath - Amapiano's own habit of letting the log drum 'imply a pulse without continuously stating it', borrowed wholesale for the 3-step breakdown. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://articles.roland.com/production-hacks-creating-amapiano-tracks/"
+  ],
+  "tracks": {
+    "drum2": [0,0,58,0,0,0,0,0,0,66,0,48,0,0,0,0,0,0,60,0,0,0,0,0,0,69,0,50,0,0,0,0],
+    "hihat": [32,0,0,0,30,0,0,0,31,0,0,0,30,0,0,0,34,0,0,0,32,0,0,0,33,0,0,0,32,0,0,0]
+  },
+  "kit": "drm1"
+}

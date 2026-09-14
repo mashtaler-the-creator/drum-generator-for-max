@@ -1,0 +1,24 @@
+{
+  "id": "amapiano_gospel_amapiano_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.11,
+  "bpm": 110,
+  "tags": [
+    "gospel",
+    "spacious",
+    "soft"
+  ],
+  "_approach": "Melodigging's Gospel Amapiano strain: same shuffling-percussion DNA but softer and more spacious throughout - gentle claps instead of a hard backbeat, a barely-there kick, a warm log-drum accent placed once per bar like an 'amen' - built to sit under worship vocals rather than drive a dancefloor. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/amapiano"
+  ],
+  "tracks": {
+    "kick": [86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,60,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,60,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0],
+    "hihat": [30,0,0,0,29,0,0,0,30,0,0,0,29,0,0,0,32,0,0,0,30,0,0,0,31,0,0,0,30,0,0,0]
+  },
+  "kit": "drm1"
+}

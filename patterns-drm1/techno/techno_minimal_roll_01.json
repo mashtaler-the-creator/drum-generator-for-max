@@ -1,0 +1,25 @@
+{
+  "id": "techno_minimal_roll_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 128,
+  "swing": 0.2,
+  "tags": [
+    "minimal",
+    "rolling-16th",
+    "jacking"
+  ],
+  "_approach": "Sub-Zero-style minimal techno: a four-to-the-floor kick, a layered brushy/snappy hi-hat pair, an 808 snare on 2 and 4 with a ghost snare right before each downbeat, and a rolling 16th shaker bed that (with the 60% swing) gives the 'jacking' feel Attack's Sub-Zero Minimal Techno dissection describes. Robert Hood's Minimal Nation ethos applies underneath: strip everything to what the groove needs, nothing else. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno/",
+    "https://daily.redbullmusicacademy.com/2019/05/robert-hood-minimal-nation-track-by-track/"
+  ],
+  "tracks": {
+    "kick": [114,0,0,0,114,0,0,0,114,0,0,0,114,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0],
+    "hihat": [44,38,46,40,48,40,46,42,44,38,48,40,46,42,50,44,46,40,48,42,50,42,48,43,46,40,50,42,48,43,51,46],
+    "openHat": [0,0,72,0,0,0,72,0,0,0,72,0,0,0,72,0,0,0,74,0,0,0,74,0,0,0,74,0,0,0,74,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,44,0,0,0,0,98,0,0,0,0,0,0,0,100,0,0,48]
+  },
+  "kit": "drm1"
+}

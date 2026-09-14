@@ -1,0 +1,25 @@
+{
+  "id": "dnb_amen_hybrid_roller_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 172,
+  "swing": 0.04,
+  "tags": [
+    "amen-hybrid",
+    "roller",
+    "sample-based",
+    "ghost-notes"
+  ],
+  "_approach": "Amen-hybrid roller: layers a chopped-amen ghost pattern (16th/32nd chatter, the sampled-break DNA drum & bass inherited from jungle) under a strict programmed two-step kick/snare skeleton and an 8th ride - the 'raw'/sample-based lineage (early Bad Company, Source Direct, Kemistry & Storm) that never fully let go of the break even as kicks and snares became programmed. Ref: docs/styles/dnb.md's note that DnB's ghost-snare micro-language descends from the amen's chop; the Akai S900/S950/S1000 break-chopping history shared with jungle. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Akai_S900",
+    "https://kansamples.com/blogs/learn/how-to-chop-amen-break"
+  ],
+  "tracks": {
+    "kick": [106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,112,0,0,0,0,0,26,0,0,0,22,0,0,0,0,0,110,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,24,0,0,0,0,30,0,0,0,20,0,112,0,0,0,0,34,0,0],
+    "hh1Closed": [56,0,0,0,44,0,0,0,52,0,0,0,44,0,0,0,56,0,0,0,44,0,0,0,52,0,0,0,46,0,0,0,58,0,0,0,46,0,0,0,54,0,0,0,46,0,0,0,58,0,0,0,46,0,0,0,54,0,0,0,48,0,0,0]
+  },
+  "kit": "drm1"
+}

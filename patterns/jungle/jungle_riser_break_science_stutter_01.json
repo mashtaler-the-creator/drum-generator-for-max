@@ -1,0 +1,21 @@
+{
+  "id": "jungle_riser_break_science_stutter_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 165,
+  "swing": 0.05,
+  "tags": ["riser","build","stutter","break-science"],
+  "_approach": "Break-science stutter: the tape-edit trick from the jungle_fill_amen_stutter fill stretched into a full riser - bar 1 holds a plain kick/snare/ride groove, then bar 2 stutter-edits both kick and snare together, doubling and displacing them as the spacing tightens from 8ths to 32nds, landing a combined kick+snare+crash hit on the penultimate 32nd and leaving the very last step silent. Ref: Remarc/Dillinja-style amen edit-science, KAN Samples' Amen-chopping guide.",
+  "_sources": ["https://kansamples.com/blogs/learn/how-to-chop-amen-break","https://www.edmprod.com/how-to-make-jungle-music/","https://en.wikipedia.org/wiki/Akai_S900"],
+  "tracks": {
+    "kick": [102,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 84,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              70,0,0,0, 0,0,0,0, 78,0,0,0, 0,0,0,0, 87,0,0,0, 0,0,95,0, 103,0,0,0, 112,0,120,0],
+    "snare": [0,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0,
+               55,0,0,0, 60,0,0,0, 65,0,0,0, 70,0,0,0, 76,0,81,0, 86,0,91,0, 96,101,106,112, 117,122,127,0],
+    "ride": [54,0,0,0, 42,0,0,0, 52,0,0,0, 42,0,0,0, 54,0,0,0, 42,0,0,0, 52,0,0,0, 44,0,0,0,
+              42,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,112,0]
+  }
+}

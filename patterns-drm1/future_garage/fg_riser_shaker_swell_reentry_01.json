@@ -1,0 +1,23 @@
+{
+  "id": "fg_riser_shaker_swell_reentry_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 136,
+  "swing": 0.3,
+  "tags": [
+    "riser",
+    "shaker-swell",
+    "reentry"
+  ],
+  "_approach": "A continuous shaker bed swells in velocity like a slow volume automation across both bars, standing in for a reverb-tail crescendo, while the kick drops out until a single soft reentry on the very last 16th cues the groove's return. Ref: MusicRadar 'How Burial produced the 21st century's most influential electronic album' (long reverb tails as the genre's defining texture). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/artists/im-not-a-musician-i-was-always-scared-of-people-who-had-studios-how-burial-produced-the-21st-centurys-most-influential-electronic-album-on-a-rubbish-dying-computer-with-outdated-software"
+  ],
+  "tracks": {
+    "kick": [90,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72],
+    "hihat": [16,0,14,0,19,0,16,0,22,0,18,0,26,0,19,0,27,0,22,0,30,0,24,0,34,0,27,0,37,0,30,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

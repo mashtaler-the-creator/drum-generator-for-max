@@ -1,0 +1,27 @@
+{
+  "id": "sg_breakdown_open_hat_float_01",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 137,
+  "swing": 0.2,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "open-hat",
+    "float"
+  ],
+  "_approach": "Floating breakdown: offbeat open hats are the only constant, skippy closed hats on the 'a' pickups imply the shuffle, a single soft kick on the downbeat of bar 1 tethers it to the floor, and a clap appears once per bar. Designed to sit under a vocal or a filtered bassline before the build. Ref: Tina Moore 'Never Gonna Let You Go' (Kelly G mix) breakdown, Gant 'Sound Bwoy Burial'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-speed-garage-complete-production-tutorial",
+    "https://blog.native-instruments.com/uk-garage-music/"
+  ],
+  "tracks": {
+    "kick": [74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "openHat": [0,0,72,0,0,0,74,0,0,0,72,0,0,0,76,0,0,0,74,0,0,0,76,0,0,0,74,0,0,0,78,0],
+    "hihat": [0,0,0,48,0,0,0,52,0,0,0,48,0,0,0,54,29,0,32,50,30,0,34,54,29,44,32,50,32,0,35,56],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,38]
+  },
+  "kit": "drm1"
+}

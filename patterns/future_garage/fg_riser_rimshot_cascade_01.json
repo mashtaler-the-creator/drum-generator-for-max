@@ -1,0 +1,29 @@
+{
+  "id": "fg_riser_rimshot_cascade_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 134,
+  "swing": 0.28,
+  "tags": ["riser","rimshot-cascade","textural"],
+  "_approach": "A quiet cascade rather than a machine-gun roll — this genre avoids trap-style snare builds in favour of textural fills, so rim and conga hits tumble gently with rising velocity into the return of the kick. Ref: Plugg Supply future garage guide ('fills should be textural... rather than machine-gun snare builds').",
+  "_sources": ["https://plugg-supply.net/articles/how-to-make-future-garage-2027"],
+  "tracks": {
+    "kick": [
+      92,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,70
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,30,0,0, 34,0,0,0,
+      0,0,38,0, 0,42,0,0, 46,0,0,50, 0,0,54,0
+    ],
+    "congaHigh": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,32,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,44,0, 0,0,0,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,40,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "phonk_riser_kick_roll_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 145,
+  "swing": 0.05,
+  "tags": [
+    "riser",
+    "kick-roll",
+    "drift-phonk"
+  ],
+  "_approach": "Four-on-floor-derived kick roll: bar 1 is a straight drift phonk pulse, bar 2 breaks the kick into an accelerating 8th-then-16th roll climbing to 127, cowbell doubling into the same acceleration underneath. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.soundtrap.com/how-to-produce-drift-phonk/"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,114,0,0,0,118,0,0,0,114,0,0,0,120,0,104,0,122,0,108,0,124,110,126,114,127,118,127,120],
+    "multi": [70,0,0,0,70,0,0,0,70,0,0,0,70,0,0,0,76,80,84,87,91,95,99,103,106,110,114,118,0,0,0,0]
+  },
+  "kit": "drm1"
+}

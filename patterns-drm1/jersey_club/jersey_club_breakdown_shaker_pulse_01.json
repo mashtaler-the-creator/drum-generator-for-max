@@ -1,0 +1,22 @@
+{
+  "id": "jersey_club_breakdown_shaker_pulse_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 136,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "shaker"
+  ],
+  "_approach": "A tambourine-driven pulse stands in for a shaker/tambourine loop under a single downbeat kick per bar and a sparse rim accent, keeping momentum without the full 5-kick run. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/jersey-club/"
+  ],
+  "tracks": {
+    "kick": [92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hh1Closed": [24,0,24,0,24,0,24,0,24,0,24,0,24,0,24,0,26,0,26,0,26,0,26,0,26,0,26,0,26,0,26,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

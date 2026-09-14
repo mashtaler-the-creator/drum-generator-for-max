@@ -1,0 +1,25 @@
+{
+  "id": "krushclub_jersey_bounce_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": ["groove", "jersey-bounce", "bed-squeak", "canonical"],
+  "_approach": "The canonical krushclub skeleton: the Jersey Club 5-kick pattern (beat 1, beat 2, beat 3, the 'a' of 3, the '&' of 4 — RYM/production-guide consensus) left untouched, but the bed-squeak sample (clave slot) is chopped into the a-of-3/&-of-4 pocket the way krushclub producers do, and the clap+snare 2-and-4 backbeat is doubled up and pitched for a hyperpop-adjacent stack rather than a single clean Jersey clap. Bitcrushed closed hats sit low so the 5-kick shape reads clearly. This is the pattern that is 'still Jersey Club' before any HexD processing is applied.",
+  "_sources": ["https://www.edmprod.com/krushclub/", "https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/", "https://www.melodigging.com/genre/krushclub"],
+  "tracks": {
+    "kick":    [110,0,0,0, 108,0,0,0, 106,0,0,104, 0,0,108,0,
+                110,0,0,0, 108,0,0,0, 106,0,0,104, 0,0,102,0],
+    "snare":   [0,0,0,0, 98,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 98,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 100,0,0,0, 0,0,0,0, 0,0,0,96,
+                0,0,0,0, 100,0,0,0, 0,0,0,0, 0,0,0,96],
+    "clave":   [0,0,0,0, 0,0,0,0, 0,0,0,60, 0,0,64,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,62, 0,0,66,0],
+    "hihat":   [0,42,0,44, 0,40,0,46, 0,42,0,44, 0,40,0,46,
+                0,44,0,46, 0,42,0,48, 0,44,0,46, 0,42,0,48],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,58,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,58]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "amapiano_riser_conga_call_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.11,
+  "bpm": 111,
+  "tags": ["riser","conga","build"],
+  "_approach": "Conga-roll build: congaHigh states a short figure in 8ths in bar 1, doubles into a rising 16th roll in bar 2 with velocity climbing every beat, shaker and kick hold steady underneath until the very last two steps where the kick drops out to leave the conga roll exposed into the drop.",
+  "_sources": ["https://beatstorapon.com/blog/how-to-make-amapiano-beat/"],
+  "tracks": {
+    "kick":      [94,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0,
+                  96,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0],
+    "congaHigh": [60,0,0,0, 56,0,0,0, 64,0,0,0, 58,0,0,0,
+                  78,0,82,0, 86,0,90,0, 96,0,102,0, 110,0,120,0],
+    "shaker":    [56,0,0,0, 54,0,0,0, 55,0,0,0, 54,0,0,0,
+                  58,0,0,0, 56,0,0,0, 57,0,0,0, 56,0,0,0]
+  }
+}

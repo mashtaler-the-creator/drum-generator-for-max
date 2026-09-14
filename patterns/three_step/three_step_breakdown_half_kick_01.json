@@ -1,0 +1,21 @@
+{
+  "id": "three_step_breakdown_half_kick_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 116,
+  "tags": ["breakdown","half-time"],
+  "_approach": "Half-time floor: only one kick per bar (beat 1), leaving the other two 3-step kicks out as well - a further subtraction rather than an addition. Rim ghosts and a thin shaker keep the pulse legible, one open hat per bar hints at motion returning.",
+  "_sources": ["https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house"],
+  "tracks": {
+    "kick":    [100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                98,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim":     [0,0,0,0, 0,0,46,0, 0,0,0,0, 0,0,50,0,
+                0,0,0,0, 0,0,48,0, 0,0,0,0, 0,0,52,0],
+    "shaker":  [44,0,0,0, 42,0,0,0, 43,0,0,0, 42,0,0,0,
+                46,0,0,0, 44,0,0,0, 45,0,0,0, 44,0,0,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,58,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,60,0, 0,0,0,0]
+  }
+}

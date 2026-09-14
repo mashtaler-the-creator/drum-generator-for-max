@@ -1,0 +1,25 @@
+{
+  "id": "trance_festival_anthem_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["groove", "anthem", "festival", "crash-heavy"],
+  "_approach": "The big-room 'hands in the air' anthem construction: a stacked clap (clap+snare together) hits harder on 2 and 4, and a crash lands not just on bar 1 but again at the start of bar 2 to keep announcing the drop's arrival across a longer phrase, open hat and closed hat both pushed a little louder than the classic groove for maximum immediate impact.",
+  "_sources": ["https://trance-nexus.com/blog/new-generation-trance-artists-to-watch-2026"],
+  "tracks": {
+    "kick":    [118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0,
+                118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0],
+    "snare":   [0,0,0,0, 106,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,0,0, 106,0,0,0, 0,0,0,0, 106,0,0,0],
+    "perc":    [0,0,0,0, 104,0,0,0, 0,0,0,0, 104,0,0,0,
+                0,0,0,0, 104,0,0,0, 0,0,0,0, 104,0,0,0],
+    "hihat":   [64,66,68,70, 64,66,68,70, 64,66,68,70, 64,66,68,70,
+                66,68,70,72, 66,68,70,72, 66,68,70,72, 66,68,70,72],
+    "openHat": [0,0,0,0, 0,76,0,0, 0,0,0,0, 0,76,0,0,
+                0,0,0,0, 0,78,0,0, 0,0,0,0, 0,78,0,0],
+    "crash":   [112,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                108,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

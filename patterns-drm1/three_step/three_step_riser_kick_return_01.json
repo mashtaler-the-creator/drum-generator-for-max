@@ -1,0 +1,24 @@
+{
+  "id": "three_step_riser_kick_return_01",
+  "style": "three_step",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 116,
+  "tags": [
+    "riser",
+    "kick-return",
+    "build"
+  ],
+  "_approach": "A build unique to a genre defined by a missing kick: bars 1-2 are the drop-the-three groove, bar 3 starts filling the gap with soft ghost kicks on beat 3 that climb in velocity, and bar 4 restores full four-on-the-floor at full velocity right as the shaker doubles to 32nds and claps stack - the 'kick coming back' is the drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/",
+    "https://www.melodigging.com/genre/3-step"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,104,0,0,0,0,0,0,0,110,0,0,0,108,0,0,0,104,0,0,0,40,0,0,0,112,0,0,0,110,0,0,0,106,0,0,0,78,0,0,0,114,0,0,0,116,0,0,0,112,0,0,0,110,0,0,0,122,0,0,0],
+    "hihat": [48,0,0,0,46,0,0,0,45,0,0,0,48,0,0,0,50,0,32,0,48,0,32,0,46,0,32,0,50,0,32,0,48,51,54,58,48,51,54,58,48,51,54,58,48,51,54,58,62,67,72,77,62,67,72,77,62,67,72,77,62,67,72,77],
+    "clap": [0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0,0,0,88,0,90,0,0,0,0,0,92,0,96,0,0,0,108,0,110,0,112,0,114,0,116,0,118,0,122,0,127,0]
+  },
+  "kit": "drm1"
+}

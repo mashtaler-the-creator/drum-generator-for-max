@@ -1,0 +1,24 @@
+{
+  "id": "baile_funk_mandelao_call_response_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0.05,
+  "tags": [
+    "mandelao",
+    "call-response",
+    "sao-paulo"
+  ],
+  "_approach": "A call-and-response mandelão variant that mimics the shouted vocal exchange in rim/tom hits: a rim figure 'calls' on the & of 2 and the low tom 'answers' on the & of 4, over the same minimal kick, embodying mandelão's hypnotic repetition and gritty saturation on massive sound systems. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/funk-mandelao",
+    "https://daily.bandcamp.com/lists/brazilian-funk-list"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,60,0,0,0,0,0,98,0,58,0,0,0,0,0,0,0,62,0,0,0,0,0,100,0,58,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "dnb_riser_neuro_edit_stutter_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 172,
+  "swing": 0,
+  "tags": ["riser","build","neurofunk","stutter","micro-edit"],
+  "_approach": "Neurofunk micro-edit stutter: the kick/snare skeleton stays as dry and mechanical as the neuro_engine groove, but bar 2 ramps tension through increasingly dense 32nd-note snare/hat stutter-edits rather than a simple roll, then cuts completely silent for the last four 32nds - the 'glitch-cut' before the drop that Noisia/Mefjus-style engineering favours over a conventional build. Ref: Loopmasters' neurofunk breakdown/build tutorial (working backwards from the drop, drum fill leading directly in); Sample Focus's guide to neuro's edit-driven tension.",
+  "_sources": ["https://www.loopmasters.com/articles/4564-How-To-Make-A-Neurofunk-Drum-and-Bass-Breakdown","https://samplefocus.com/blog/how-to-produce-different-dnb-subgenres/"],
+  "tracks": {
+    "kick": [108,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0, 0,0,0,0,
+              108,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 112,0,0,0, 0,26,0,30, 0,0,0,0, 0,0,0,0, 110,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 50,0,54,0, 59,0,63,0, 68,72,76,81, 85,89,94,98, 103,107,111,116, 120,0,0,0],
+    "hihat": [58,0,0,0, 42,0,0,0, 40,0,0,0, 44,0,0,0, 56,0,0,0, 40,0,0,0, 42,0,0,0, 46,0,0,0,
+               50,0,0,34, 0,0,52,0, 0,30,0,0, 54,0,0,32, 0,0,56,0, 0,34,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

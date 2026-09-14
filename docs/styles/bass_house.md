@@ -30,8 +30,29 @@ Bass house borrows the tech-house 909 kit and then softens it so the bass riff c
 6. **bh_tom_bounce** — Tom/perc bounce cells: melodic low–mid–high tom conversation with conga answers over the kick/clap frame; open hats reduced so toms own the bounce. Reference: My Nu Leng "Masterplan"-style dark rollers.
 7. **bh_jackin_uk** — Jackin' clap grammar pulled into UK bass house: mid-velocity claps reinforcing beats 1 and 3 under the loud backbeat, dirty low-perc "jack" on step 15, 0.22 swing, extra 16th open-hat pair in bar 2. Reference: DJ Sneak-derived jackin' recipe via Attack Magazine's Beat Dissected.
 8. **bh_night_ride** — Dark warehouse roller: contoured 8th-note ride carries the offbeat energy, snare ghosts smear around the clap, single ghost kick on the "and" of 2 in bar 2. Reference: Taiki Nulight, late-night Night Bass sets.
-9. **bh_fill_tom_run** *(fill)* — Groove holds two beats, then a high-to-low tom tumble into an accelerating clap crescendo landing the next downbeat.
-10. **bh_fill_garage_snap** *(fill)* — Skippy garage snare fill: rim skips keep the shuffle while syncopated snare snaps build from ghost to two hard swung hits, kick pickup on the final 16th.
+9. **bh_two_step_skip** — A genuine UK garage 2-step kick placement (on the 1 and the "and" of a later beat, never a plain 4x4) crossed with the bass house clap/offbeat-hat frame — the kick itself skips, with rim ghosts filling the gaps the missing beats leave behind. Reference: canonical UKG 2-step kick placement, Cloverdale's UKG-swing/bass-house hybrid on "Nobody".
+10. **bh_bassline_wobble** — The bassline/Niche strand folded into bass house: a hard-driving 4x4 kick with a snare backbeat (instead of a clap), rim skips, tambourine and a swung hat lattice, built for rapid-fire MC-led blends. Reference: Sheffield/Nottingham bassline (Niche) lineage.
+
+## Fills
+
+- **bh_fill_tom_run** *(fill)* — Groove holds two beats, then a high-to-low tom tumble into an accelerating clap crescendo landing the next downbeat.
+- **bh_fill_garage_snap** *(fill)* — Skippy garage snare fill: rim skips keep the shuffle while syncopated snare snaps build from ghost to two hard swung hits, kick pickup on the final 16th.
+
+## Risers
+
+- **bh_riser_snare_roll_01** — Classic EDM-adjacent snare-roll build on a 32nd grid: bar 1 keeps the night-bass bounce while the snare enters in soft 8ths; bar 2 drops the kick entirely and the snare tightens through a 16th roll into a full 32nd roll ramping to 127, open hat swelling underneath, last three 32nds left silent — the silence before the drop.
+- **bh_riser_kick_pickup_01** — Kick-pickup build over the house frame: bar 1 keeps the night-bass bounce while the closed-hat lattice thickens; bar 2 adds a driving kick pickup on the "and" of every beat, the clap flams into a double on beat 4, hats fill toward every 16th before a silent 16th right before the drop.
+- **bh_riser_tom_cascade_01** — The tom-bounce cell escalated into a build: the low-mid-high tom conversation over the kick/clap frame thickens each bar and cascades downward into a final low-tom-plus-crash hit, open hat pulled back so the toms fully own the bounce.
+- **bh_riser_white_noise_sweep_01** — The filter-sweep riser translated to drums: rising hat/shaker density and velocity imitate the classic EDM noise-sweep riser underneath the house 4x4, kick and clap thinning in bar 2, final 16th left silent for the drop.
+- **bh_riser_double_time_01** — Speed-garage-flavoured build: the 4x4 energy of bh_speed_garage_44 doubles its snare backbeat into a double-time roll while tambourine offbeats thicken and rim skips ramp, kick and everything else cut on the final 16th — the void before the drop.
+
+## Breakdowns
+
+- **bh_breakdown_drum_only_01** — The bass house "drum-only" breakdown: just kick, clap and the offbeat open-hat anchor at reduced velocity so a bassline or vocal chop can lead unaccompanied, a rim ghost and soft kick pickup creeping in only in bar 2.
+- **bh_breakdown_jackin_off_01** — The jackin' breakdown: mid-velocity claps reinforce beats 1 and 3 under a hollowed-out kick that only opens up in bar 2, with a dirty low ghost jab on the rim so the returning loud backbeat clap reads as a release.
+- **bh_breakdown_garage_ghost_01** — The UK garage inheritance stripped to its ghosts: rim skips keep the shuffle, a lone ghost snare hints at the backbeat, the closed-hat lattice thins to sparse decoration so the swing itself carries the section.
+- **bh_breakdown_perc_bed_01** — The tom-bounce cell hollowed to a pure percussion bed: low-mid-high toms trade softly with congas over no kick and no clap at all, the darkest, most minimal point in the arrangement.
+- **bh_breakdown_half_time_01** — Half-time breakdown: the kick drops to once every two beats, a single clap lands only on beat 3, sparse hi-hat/rim texture keeps the tempo legible without the full-time bounce — the arrangement's deepest lull before the build.
 
 ## Sources
 
@@ -46,3 +67,9 @@ Bass house borrows the tech-house 909 kit and then softens it so the bass riff c
 - Preset Drive — Bass House Production Guide (55–62% swing, kick fade-in, multi-layer claps): https://www.presetdrive.com/bass-house-production-guide/
 - Skapade Studios — Making the 909 kick sample your own: https://www.skapadestudios.com/post/making-the-909-kick-sample-your-own
 - Native Instruments Blog — How Cloverdale uses Ozone to balance UKG swing and bass house on "Nobody": https://blog.native-instruments.com/cloverdale/
+- EDMProd — The Ultimate Guide to Build-Ups (macro-tension, filter-sweep-as-tension-device, snare-roll density progression): https://www.edmprod.com/ultimate-guide-build-ups/
+- MusicRadar — How to create the ultimate snare roll build-up (8th→16th→32nd snare density ramp): https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up
+- Point Blank Music School — How to Make Your Drops Hit Harder (the silence-before-the-drop technique): https://www.pointblankmusicschool.com/blog/how-to-make-your-drops-hit-harder-tips-for-edm-producers/
+- Music Production Wiki — How to Build Tension and Drops in EDM (half-time and low-end removal as macro-tension devices): https://musicproductionwiki.com/articles/how-to-build-tension-and-drops-in-edm
+- Noisegate — Beat Breakdown: Classic Jackin' House: https://noisegate.com.au/beat-breakdown-classic-jackin-house/
+- Melodigging — Bassline genre guide (Niche/Sheffield-Nottingham lineage, swung garage percussion): https://www.melodigging.com/genre/bassline

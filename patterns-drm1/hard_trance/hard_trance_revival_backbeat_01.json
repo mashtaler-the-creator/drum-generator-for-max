@@ -1,0 +1,27 @@
+{
+  "id": "hard_trance_revival_backbeat_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 148,
+  "tags": [
+    "revival",
+    "2020s",
+    "layered-backbeat"
+  ],
+  "_approach": "The 2020s revival sound: a heavier kick, a layered clap+snare backbeat instead of a single clap, tighter offbeat hats and a hint of micro-swing (54% MPC-equivalent) for the slightly looser feel modern revival producers use versus the dead-straight 90s original. Rim ticks decorate bar 2. Reference: Ben Hemsley, KI/KI, Daxson. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.internettattoo.com/blog/best-hard-trance-djs-right-now",
+    "https://obscuur.io/blogs/news/the-complete-guide-to-hard-house"
+  ],
+  "tracks": {
+    "kick": [122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,122,0,0,0,120,0,0,0,124,0,0,0],
+    "clap": [0,0,0,0,110,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,114,0,0,0],
+    "snare": [0,0,0,0,92,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,96,0,0,0],
+    "openHat": [0,0,98,0,0,0,98,0,0,0,98,0,0,0,98,0,0,0,98,0,0,0,98,0,0,0,98,0,0,0,98,0],
+    "hihat": [0,46,0,50,0,46,0,50,0,46,0,50,0,48,0,54,0,46,0,50,0,46,0,50,0,48,0,52,0,50,0,56],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,32,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

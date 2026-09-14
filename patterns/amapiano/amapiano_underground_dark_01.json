@@ -1,0 +1,21 @@
+{
+  "id": "amapiano_underground_dark_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.09,
+  "bpm": 113,
+  "tags": ["underground","dark","minimal"],
+  "_approach": "Melodigging's Underground Amapiano: a darker, minimal strain built on a 'heavy, sliding log-drum bassline' - here the loudest, longest log-drum hits in the kit (tomLow+congaLow both at accent velocity), a hard, sparse kick and almost no top-end decoration. NOTE: tomLow+congaLow approximate the log drum's RHYTHM only - the real log drum is a tuned, pitch-bent kick/808/bass hybrid this drum-only library cannot reproduce; the melodic/bass part must come from a synth.",
+  "_sources": ["https://www.melodigging.com/genre/amapiano"],
+  "tracks": {
+    "tomLow":   [112,0,0,0, 0,0,0,0, 0,104,0,0, 0,0,0,0,
+                 114,0,0,0, 0,0,0,0, 0,106,0,0, 0,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,0,96, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,0,0,98, 0,0,84,0],
+    "kick":     [0,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 102,0,0,0, 0,0,0,0],
+    "shaker":   [40,0,0,0, 0,0,0,0, 38,0,0,0, 0,0,0,0,
+                 42,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0]
+  }
+}

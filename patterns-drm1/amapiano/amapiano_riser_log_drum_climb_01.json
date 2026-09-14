@@ -1,0 +1,24 @@
+{
+  "id": "amapiano_riser_log_drum_climb_01",
+  "style": "amapiano",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": [
+    "riser",
+    "log-drum",
+    "build"
+  ],
+  "_approach": "Log-drum-led build: the log drum (tomLow+congaLow) grows from one soft accent per bar to a dense, climbing roll across four bars, imitating the pitched log drum's own build habit while the shaker steadily thickens and the kick stays minimal throughout so the log drum reads as the lead into the drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/blog/what-is-amapiano-music/",
+    "https://www.inspiredbybeatz.com/en/amapiano-production-how-the-log-drum-sound-is-created/"
+  ],
+  "tracks": {
+    "kick": [92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,104,0,0,0,100,0,0,0,100,0,0,0,106,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,74,0,0,0,55,0,0,0,0,0,0,78,0,78,0,86,0,0,92,0,86,96,0,0,100,101,0,104,105,0,108,108,0,112,114,0,118,121,0],
+    "hihat": [38,0,0,0,37,0,0,0,38,0,0,0,37,0,0,0,42,0,32,0,40,0,32,0,41,0,32,0,42,0,32,0,45,50,45,50,45,50,45,50,45,50,45,50,45,50,45,50,64,70,77,83,64,70,77,83,64,70,77,83,64,70,77,83]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "hard_trance_riser_tom_gallop_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 152,
+  "tags": ["riser", "tom-gallop", "build"],
+  "_approach": "A gallop-pattern tom cascade: bar 1 places soft gallop-style tom hits on the 16th before each beat, and bar 2 lengthens them into a full three-tom (high/mid/low) 16th cascade rising to 120 while the kick thins to just the downbeat and a final pickup hit; crash lands on the last step.",
+  "_sources": ["https://en.wikipedia.org/wiki/Hard_trance"],
+  "tracks": {
+    "kick":    [114,0,0,0, 114,0,0,0, 114,0,0,0, 114,0,0,0,
+                114,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "tomHigh": [0,0,0,60, 0,0,0,64, 0,0,0,68, 0,0,0,72,
+                76,0,80,0, 84,0,88,0, 92,96,100,104, 108,112,116,120],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,78,0,82, 0,86,0,90, 0,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,0, 102,0,0,0, 0,0,0,0, 104,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,116],
+    "crash":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

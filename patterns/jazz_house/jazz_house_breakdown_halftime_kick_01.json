@@ -1,0 +1,19 @@
+{
+  "id": "jazz_house_breakdown_halftime_kick_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 123,
+  "tags": ["breakdown", "halftime-kick"],
+  "_approach": "Kick pulled back to 1 and 3 only while the swung hats and a soft 2/4 clap keep the full groove's swing feel alive at lower intensity -- the space that sits under a vocal or Rhodes solo before the groove rebuilds.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":  [98,0,0,0, 0,0,0,0, 100,0,0,0, 0,0,0,0,
+              99,0,0,0, 0,0,0,0, 101,0,0,0, 0,0,0,0],
+    "hihat": [0,40,0,44, 0,42,0,46, 0,40,0,44, 0,42,0,48,
+              0,42,0,46, 0,44,0,48, 0,42,0,46, 0,44,0,50],
+    "perc":  [0,0,0,0, 90,0,0,0, 0,0,0,0, 92,0,0,0,
+              0,0,0,0, 91,0,0,0, 0,0,0,0, 93,0,0,0]
+  }
+}

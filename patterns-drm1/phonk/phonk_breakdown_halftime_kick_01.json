@@ -1,0 +1,22 @@
+{
+  "id": "phonk_breakdown_halftime_kick_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": [
+    "breakdown",
+    "halftime-kick",
+    "drift-phonk"
+  ],
+  "_approach": "The drift phonk kit halves further: a single soft kick per bar, no snare, cowbell thinned to two hits — a low-energy pocket that still keeps the riff's silhouette recognisable before the full pattern returns. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.soundtrap.com/how-to-produce-drift-phonk/"
+  ],
+  "tracks": {
+    "kick": [92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,53,0,0,0,0,0,0,0,49,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,51,0,0,0]
+  },
+  "kit": "drm1"
+}

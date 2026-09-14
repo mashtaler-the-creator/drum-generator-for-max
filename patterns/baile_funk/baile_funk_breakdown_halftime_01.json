@@ -1,0 +1,17 @@
+{
+  "id": "baile_funk_breakdown_halftime_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 150,
+  "swing": 0.04,
+  "tags": ["breakdown","halftime","automotivo"],
+  "_approach": "Automotivo halftime drop: the relentless kick thins to one hit every two beats, clap disappears, and a lone tamborim ghost figure keeps the pulse — the sparse pocket producers leave open for a vocal ad-lib or airhorn before the sub kick roll returns.",
+  "_sources": ["https://www.beatportal.com/articles/919622-beatport-launches-brazilian-funk-as-a-standalone-genre"],
+  "tracks": {
+    "kick":        [100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                   98,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tambourine":  [0,0,0,0, 0,0,0,0, 36,0,0,0, 40,0,0,0,
+                   0,0,0,0, 0,0,0,0, 36,0,0,0, 40,0,0,0]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "phonk_riser_cowbell_accel_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": ["riser","cowbell","drift-phonk"],
+  "_approach": "The 808 cowbell riff itself accelerates: an 8th-note riff in bar 1 doubles into a rising 16th run through bar 2, velocity climbing toward the drop while the half-time kick/snare hold their positions as an anchor.",
+  "_sources": ["https://songen.app/blog/how-to-make-drift-phonk/","https://blog.soundtrap.com/how-to-produce-drift-phonk/"],
+  "tracks": {
+    "kick":     [116,0,0,0, 0,0,0,0, 72,0,0,0, 0,0,0,0,
+                118,0,0,0, 0,0,0,0, 74,0,0,0, 0,0,0,0],
+    "snare":    [0,0,0,0, 0,0,0,0, 104,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 106,0,0,0, 0,0,0,0],
+    "cowbell":  [70,0,70,0, 70,0,70,0, 70,0,70,0, 70,0,70,0,
+                78,82,86,90, 94,98,102,106, 110,114,118,122, 125,127,127,127]
+  }
+}

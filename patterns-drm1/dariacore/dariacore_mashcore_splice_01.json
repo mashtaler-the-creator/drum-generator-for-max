@@ -1,0 +1,25 @@
+{
+  "id": "dariacore_mashcore_splice_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 180,
+  "tags": [
+    "groove",
+    "plunderphonics",
+    "mashup",
+    "genre-splice"
+  ],
+  "_approach": "Dariacore 'draws inspiration from plunderphonics and mashcore' (Wikipedia) — genres built from splicing unrelated recordings together — and the genre's own reputation is for 'abrupt key/tempo shifts' from one bar to the next. This groove makes the splice literal: bar 1 is a plain four-on-the-floor house pattern, bar 2 is an unrelated syncopated breakbeat, with no transition between them, as if two different songs' drum tracks were spliced end to end — the drum-only analogue of dariacore's sample-flip whiplash. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,108,0,0,64,0,0,96,0,0,72,0,0,100,0,0,0],
+    "snare": [0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,100,0,0,0,0,0,0,58,0,0,68,0],
+    "hihat": [0,40,0,40,0,40,0,40,0,40,0,40,0,40,0,40,0,0,50,0,0,52,0,0,0,0,50,0,0,54,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

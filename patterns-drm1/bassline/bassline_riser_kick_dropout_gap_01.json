@@ -1,0 +1,31 @@
+{
+  "id": "bassline_riser_kick_dropout_gap_01",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.08,
+  "tags": [
+    "riser",
+    "build",
+    "kick-dropout",
+    "ratatat",
+    "gap"
+  ],
+  "_approach": "Kick-dropout 'ratatat' build: bar 1 is the warehouse stomp at full weight; bar 2 pulls the kick completely and the snare fires a military-style 16th roll with rests, ramping to a 127 hit on beat 4 (step 12) followed by three empty 16ths - the gap that makes the returning kick+bass slam. Open hats hold every offbeat until the gap. Ref: Holy Goof, Skepsis, Bru-C era drop-ins. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://www.edmprod.com/how-to-make-bass-house/",
+    "https://www.musicradar.com/how-to/bassline-house-production-tips"
+  ],
+  "tracks": {
+    "kick": [120,0,0,0,112,0,0,0,114,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,120,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,122,0,0,0,0,0,0,0,125,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,92,94,0,96,98,0,102,104,0,108,110,0,127,0,0,0],
+    "openHat": [0,0,74,0,0,0,76,0,0,0,74,0,0,0,78,0,0,0,80,0,0,0,82,0,0,0,86,0,0,0,0,0],
+    "hihat": [0,0,0,66,0,0,0,68,0,0,0,66,0,46,0,70,0,0,0,70,0,48,0,74,0,50,0,78,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0]
+  },
+  "kit": "drm1"
+}

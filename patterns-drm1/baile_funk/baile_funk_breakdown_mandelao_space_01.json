@@ -1,0 +1,23 @@
+{
+  "id": "baile_funk_breakdown_mandelao_space_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 136,
+  "swing": 0.05,
+  "tags": [
+    "breakdown",
+    "mandelao",
+    "space"
+  ],
+  "_approach": "Mandelão already lives in negative space, so its breakdown is almost the groove itself with the kick removed: a lone rim hit and a distant low tom answer, embodying the genre's hypnotic, stark repetition on a big sound system. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/funk-mandelao",
+    "https://daily.bandcamp.com/lists/brazilian-funk-list"
+  ],
+  "tracks": {
+    "multi": [0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0]
+  },
+  "kit": "drm1"
+}

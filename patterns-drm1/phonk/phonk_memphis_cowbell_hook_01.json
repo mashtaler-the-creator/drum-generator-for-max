@@ -1,0 +1,25 @@
+{
+  "id": "phonk_memphis_cowbell_hook_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 75,
+  "swing": 0.12,
+  "tags": [
+    "memphis",
+    "cowbell-hook",
+    "lead"
+  ],
+  "_approach": "The cowbell carries the lead hook here rather than sitting in the background: a repeating 4-note-feel riff at moderate velocity rides over a bare-bones half-time kick/snare, the era-defining TR-808 cowbell-as-melody approach traced back to DJ Spanish Fly's late-80s Memphis sets. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://daily.redbullmusicacademy.com/2012/07/noz-pit-stop-memphis-spanish-fly/",
+    "https://en.wikipedia.org/wiki/Phonk"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0],
+    "multi": [70,0,0,0,67,0,0,0,72,0,0,0,67,0,0,0,72,0,0,0,68,0,0,0,74,0,0,0,68,0,0,0],
+    "hihat": [0,0,32,0,0,0,32,0,0,0,32,0,0,0,32,0,0,0,34,0,0,0,34,0,0,0,34,0,0,0,34,0]
+  },
+  "kit": "drm1"
+}

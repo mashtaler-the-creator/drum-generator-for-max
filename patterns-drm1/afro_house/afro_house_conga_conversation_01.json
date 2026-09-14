@@ -1,0 +1,27 @@
+{
+  "id": "afro_house_conga_conversation_01",
+  "style": "afro_house",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.07,
+  "bpm": 123,
+  "tags": [
+    "conga",
+    "call-response",
+    "organic"
+  ],
+  "_approach": "Four bars of high/low conga call-and-response over a straight kick and 8th shaker: the high conga states a phrase in bars 1 and 3, the low conga answers in bars 2 and 4, and bar 4 closes with a small roll. Orphiq's rule 'program parts that answer each other' made literal. Ref: Culoe De Song 'Webaba' (2009), Da Capo 'Afrika' (2014). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://orphiq.com/resources/what-is-afro-house",
+    "https://www.melodigging.com/genre/afro-house"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,61],
+    "multi": [0,0,0,0,85,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,87,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,85,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,87,0,0,0],
+    "hihat": [63,0,40,0,66,0,42,0,64,0,41,0,62,0,43,0,65,0,42,0,63,0,40,0,66,0,42,0,64,0,41,0,62,0,43,0,65,0,42,0,63,0,40,0,66,0,42,40,64,0,41,0,62,0,43,0,65,0,42,0,63,0,40,0],
+    "drum1": [0,0,60,0,0,89,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,67,0,0,86,0,0,0,0,0,0,0,59,0,0,88,0,0,0,0,69,0,0,61,0,0,0,0,61,0,0,86,0,0,0,0,0,0,0,0,0,67],
+    "drum2": [0,0,0,0,0,0,0,0,69,0,0,0,58,0,57,0,0,0,60,0,0,0,0,0,67,0,0,0,0,0,59,0,0,0,0,0,0,0,0,0,68,0,0,0,57,0,0,0,0,0,0,0,0,0,57,0,70,0,0,0,87,0,58,0],
+    "openHat": [0,0,64,0,0,0,62,0,0,0,60,0,0,0,63,0,0,0,61,0,0,0,64,0,0,0,62,0,0,0,60,0,0,0,63,0,0,0,61,0,0,0,64,0,0,0,62,0,0,0,60,0,0,0,63,0,0,0,61,0,0,0,64,0]
+  },
+  "kit": "drm1"
+}

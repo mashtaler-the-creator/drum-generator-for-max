@@ -1,0 +1,24 @@
+{
+  "id": "amapiano_bacardi_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 113,
+  "tags": [
+    "bacardi",
+    "raw",
+    "township"
+  ],
+  "_approach": "The Pretoria Bacardi-house lineage that fed into Amapiano: tighter, more syncopated looping than the lush end of the genre, woody rim/clave hits standing in for the 'woody percussion hits' melodigging cites, a compact kick pattern (1 and the 'and' of 3) and minimal swing - Bacardi's own feel is straighter and more insistent than the shuffled private-school pocket. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/amapiano"
+  ],
+  "tracks": {
+    "kick": [106,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0],
+    "multi": [0,0,0,72,0,0,67,0,62,70,0,0,0,65,0,58,0,0,0,74,0,0,68,0,64,72,0,0,0,67,0,60],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,50,0],
+    "hihat": [45,0,0,0,43,0,0,0,44,0,0,0,43,0,0,0,46,0,0,0,45,0,0,0,46,0,0,0,45,0,0,0]
+  },
+  "kit": "drm1"
+}

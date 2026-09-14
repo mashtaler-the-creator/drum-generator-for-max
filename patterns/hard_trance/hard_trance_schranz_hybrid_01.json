@@ -1,0 +1,23 @@
+{
+  "id": "hard_trance_schranz_hybrid_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 152,
+  "tags": ["schranz-hybrid", "crossover", "clave-loop"],
+  "_approach": "The hard-techno crossover approach: a compressed, filtered 16th clave loop plays lead percussion over a rigid 4/4 kick, borrowing schranz's percussion-forward grammar while keeping the offbeat open hat and 2/4 clap that mark it as hard trance rather than hard techno. Reflects how 2020s hybrid producers blend the two lineages.",
+  "_sources": ["https://obscuur.io/blogs/news/the-complete-guide-to-hard-house", "https://en.wikipedia.org/wiki/Hard_trance"],
+  "tracks": {
+    "kick":    [118,0,0,0, 118,0,0,0, 118,0,0,0, 118,0,0,0,
+                118,0,0,0, 118,0,0,0, 116,0,0,0, 122,0,0,0],
+    "clave":   [0,0,50,0, 0,55,0,0, 0,0,50,0, 0,55,0,60,
+                0,0,52,0, 0,58,0,0, 0,0,52,0, 0,60,0,64],
+    "openHat": [0,0,96,0, 0,0,96,0, 0,0,96,0, 0,0,96,0,
+                0,0,96,0, 0,0,96,0, 0,0,98,0, 0,0,98,0],
+    "hihat":   [0,40,0,0, 0,42,0,0, 0,40,0,0, 0,44,0,0,
+                0,42,0,0, 0,44,0,0, 0,42,0,0, 0,46,0,0],
+    "perc":    [0,0,0,0, 104,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,0,0, 104,0,0,0, 0,0,0,0, 108,0,0,0]
+  }
+}

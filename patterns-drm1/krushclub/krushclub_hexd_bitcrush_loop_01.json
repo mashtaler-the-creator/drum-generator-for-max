@@ -1,0 +1,27 @@
+{
+  "id": "krushclub_hexd_bitcrush_loop_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 152,
+  "tags": [
+    "groove",
+    "hexd",
+    "bitcrush",
+    "percussion-lead"
+  ],
+  "_approach": "HexD's contribution to the fusion, per the Aesthetics Wiki definition (bitcrushing applied to an existing groove, 'hexxing' it): the percussion loop, not the kick, is the busiest layer — a compressed, low-bit-depth-implying cowbell/tomLow/perc cycle that stutters against a stripped-back Jersey kick (just beat 1 and the a-of-3). Keep this groove's non-percussion parts sparse so the crushed loop reads as the point of the pattern, mirroring HexD tracks where the bitcrush IS the hook, not a seasoning. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://aesthetics.fandom.com/wiki/Krushclub",
+    "https://rateyourmusic.com/genre/krushclub/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0],
+    "clap": [0,0,44,48,0,50,0,44,0,48,0,44,50,0,44,0,0,0,46,50,0,52,0,46,0,50,0,46,52,0,46,0],
+    "multi": [0,38,0,0,40,0,0,42,0,38,0,0,40,0,0,44,0,40,0,0,42,0,0,44,0,40,0,0,42,0,0,46],
+    "drum2": [0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,42],
+    "snare": [0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

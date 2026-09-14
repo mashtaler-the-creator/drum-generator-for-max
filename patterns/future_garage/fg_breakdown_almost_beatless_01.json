@@ -1,0 +1,37 @@
+{
+  "id": "fg_breakdown_almost_beatless_01",
+  "style": "future_garage",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 128,
+  "swing": 0.24,
+  "tags": ["breakdown","beatless","minimal"],
+  "_approach": "Almost beatless, exactly as Plugg Supply's future garage guide prescribes: one soft kick every two bars and a lone ghost clave tick are all that remain for four bars before the hats return. Ref: Plugg Supply 'How to Make Future Garage' ('mid-track breakdowns can go almost beatless').",
+  "_sources": ["https://plugg-supply.net/articles/how-to-make-future-garage-2027"],
+  "tracks": {
+    "kick": [
+      58,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      56,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "clave": [
+      0,0,0,0, 0,0,0,0, 0,16,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,18,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,20,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,22,0,0, 0,0,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,22,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,26,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "shaker": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 18,0,0,0
+    ]
+  }
+}

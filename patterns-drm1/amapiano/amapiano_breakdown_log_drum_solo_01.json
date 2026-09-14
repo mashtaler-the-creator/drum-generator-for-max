@@ -1,0 +1,22 @@
+{
+  "id": "amapiano_breakdown_log_drum_solo_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": [
+    "breakdown",
+    "log-drum",
+    "no-kick"
+  ],
+  "_approach": "The log drum left alone: no kick, tomLow+congaLow keep a slow, syncopated figure with a thin shaker underneath - the genre's habit of letting the log drum 'imply a pulse without continuously stating it'. NOTE: tomLow+congaLow approximate the log drum's RHYTHM only - the real log drum is a tuned, pitch-bent kick/808/bass hybrid this drum-only library cannot reproduce; the melodic/bass part must come from a synth. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://articles.roland.com/production-hacks-creating-amapiano-tracks/"
+  ],
+  "tracks": {
+    "drum2": [0,0,0,60,0,0,0,0,0,49,0,66,0,0,0,0,0,0,0,62,0,0,0,0,0,51,0,68,0,0,44,0],
+    "hihat": [32,0,0,0,30,0,0,0,31,0,0,0,30,0,0,0,34,0,0,0,32,0,0,0,33,0,0,0,32,0,0,0]
+  },
+  "kit": "drm1"
+}

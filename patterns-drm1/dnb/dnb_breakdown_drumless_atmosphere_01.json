@@ -1,0 +1,22 @@
+{
+  "id": "dnb_breakdown_drumless_atmosphere_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "drumless",
+    "atmosphere"
+  ],
+  "_approach": "Drumless atmosphere: almost nothing plays - a rim tick or two and a whisper of shaker per bar, the '32-bar emotional reset' where KAN Samples notes the drums often drop out entirely so pads, vocals or sub can breathe before the second build. Ref: KAN Samples' DnB arrangement guide breakdown section. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement"
+  ],
+  "tracks": {
+    "multi": [26,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,0,0,0,20,0,0],
+    "hihat": [0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dnb_breakdown_liquid_rideshaker_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0.1,
+  "tags": [
+    "breakdown",
+    "liquid",
+    "ride-wash",
+    "shaker"
+  ],
+  "_approach": "Liquid breakdown: no kick, just a soft ride-and-shaker wash with the odd conga colour hit, keeping the smooth Calibre/Lenzman warmth going while the bass or vocal takes the lead. Ref: BeatKey's liquid DnB guide (soft, flowing hats/shaker, light swing); docs/styles/dnb.md's liquid approach. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://beatkey.app/how-to-make-liquid-dnb-music",
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement"
+  ],
+  "tracks": {
+    "hh1Closed": [46,0,0,0,42,0,0,0,48,0,0,0,44,0,0,0,48,0,0,0,44,0,0,0,50,0,0,0,46,0,0,0],
+    "hihat": [29,21,26,22,30,21,27,24,29,21,26,22,30,24,27,26,30,22,26,23,31,22,28,25,30,22,26,23,31,25,28,26],
+    "drum1": [0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,8 +1,11 @@
 # Drum MIDI Generator
 
 Style-tagged drum pattern library + rendering engine that generates MIDI
-drum parts (jungle, dnb, techno, ...) with musical randomization on top:
-density, swing, ghost notes (snare/hat only), fills, humanization.
+drum parts (jungle, dnb, techno, afro house, amapiano, baile funk, jersey
+club, phonk, trance, ...) with musical randomization on top: density, swing,
+ghost notes (snare/hat only), fills, humanization. Grooves, build-up risers
+and breakdowns per style, each with a researched guide to the sounds and
+drum machines the style is built on.
 
 Three delivery targets, one engine:
 
@@ -59,28 +62,51 @@ Two output kits, switchable in the web UI (Kit dropdown) and CLI (`--kit`):
   8 analog channels on its factory MIDI notes (channel 10, no MIDI-learn
   needed). See [docs/vermona-drm1.md](docs/vermona-drm1.md).
 
-## Pattern library — UK bass styles
+## Pattern library
 
-105 patterns across 11 styles, ~10 construction approaches per style, each
-grounded in researched production practice (see the per-style doc for the
-approach list and sources):
+**536 patterns** across **25 styles** — the UK bass
+family the library started with, plus the styles driving electronic music in
+2025–28 (afro house, amapiano, 3-step, baile funk, jersey club, phonk,
+krushclub, dariacore, hard / hyper / melodic techno, trance, hard trance,
+jazz house). A style aims for 10 groove approaches, 5 build-up risers, 5
+breakdowns and its fills, each grounded in researched production practice —
+the per-style doc lists the approaches, the sound selection and the sources,
+and `npm run validate` prints the coverage each style actually has.
 
-| Style | BPM | Doc |
-|---|---|---|
-| UK garage / 2-step (`ukg`) | 130–135 | [docs/styles/ukg.md](docs/styles/ukg.md) |
-| Speed garage (`speed_garage`) | 135–140 | [docs/styles/speed_garage.md](docs/styles/speed_garage.md) |
-| Bassline / niche (`bassline`) | 138–142 | [docs/styles/bassline.md](docs/styles/bassline.md) |
-| Grime (`grime`) | 138–142 | [docs/styles/grime.md](docs/styles/grime.md) |
-| Dubstep / UK 140 (`dubstep`) | 138–142 | [docs/styles/dubstep.md](docs/styles/dubstep.md) |
-| Future garage (`future_garage`) | 125–140 | [docs/styles/future_garage.md](docs/styles/future_garage.md) |
-| UK funky (`ukfunky`) | 128–132 | [docs/styles/ukfunky.md](docs/styles/ukfunky.md) |
-| Bass house (`bass_house`) | 125–130 | [docs/styles/bass_house.md](docs/styles/bass_house.md) |
-| Jungle (`jungle`) | 160–175 | [docs/styles/jungle.md](docs/styles/jungle.md) |
-| Drum & bass (`dnb`) | 170–176 | [docs/styles/dnb.md](docs/styles/dnb.md) |
-| Techno (`techno`) | 128–135 | — |
+| Family | Style | BPM | Grooves | Risers | Breakdowns | Fills | Doc |
+|---|---|---|---|---|---|---|---|
+| african | Afro House (`afro_house`) | 120–126 | 10 | 5 | 5 | 1 | [afro_house.md](docs/styles/afro_house.md) |
+| african | Amapiano (`amapiano`) | 110–115 | 10 | 5 | 5 | 1 | [amapiano.md](docs/styles/amapiano.md) |
+| african | 3-Step (`three_step`) | 113–120 | 10 | 5 | 5 | 1 | [three_step.md](docs/styles/three_step.md) |
+| breaks | Drum & Bass (`dnb`) | 170–176 | 10 | 5 | 5 | 2 | [dnb.md](docs/styles/dnb.md) |
+| breaks | Jungle (`jungle`) | 160–175 | 10 | 5 | 5 | 4 | [jungle.md](docs/styles/jungle.md) |
+| club | Jersey Club (`jersey_club`) | 130–140 | 10 | 5 | 5 | 1 | [jersey_club.md](docs/styles/jersey_club.md) |
+| club | Krushclub (`krushclub`) | 140–160 | 10 | 5 | 5 | 1 | [krushclub.md](docs/styles/krushclub.md) |
+| house | Jazz House / Disco House (`jazz_house`) | 118–126 | 10 | 5 | 5 | 1 | [jazz_house.md](docs/styles/jazz_house.md) |
+| internet | Dariacore (`dariacore`) | 150–190 | 10 | 5 | 5 | 1 | [dariacore.md](docs/styles/dariacore.md) |
+| internet | Phonk (`phonk`) | 60–155 | 10 | 5 | 5 | 1 | [phonk.md](docs/styles/phonk.md) |
+| latin | Baile Funk (`baile_funk`) | 128–155 | 10 | 5 | 5 | 1 | [baile_funk.md](docs/styles/baile_funk.md) |
+| techno | Hard Techno (`hard_techno`) | 145–160 | 10 | 5 | 5 | 1 | [hard_techno.md](docs/styles/hard_techno.md) |
+| techno | Hypertechno (`hypertechno`) | 145–160 | 10 | 5 | 5 | 1 | [hypertechno.md](docs/styles/hypertechno.md) |
+| techno | Melodic Techno (`melodic_techno`) | 120–126 | 10 | 5 | 5 | 1 | [melodic_techno.md](docs/styles/melodic_techno.md) |
+| techno | Techno (`techno`) | 118–140 | 10 | 5 | 5 | 0 | [techno.md](docs/styles/techno.md) |
+| trance | Hard Trance / Hard House (`hard_trance`) | 145–152 | 10 | 5 | 5 | 1 | [hard_trance.md](docs/styles/hard_trance.md) |
+| trance | Trance (`trance`) | 136–140 | 10 | 5 | 5 | 1 | [trance.md](docs/styles/trance.md) |
+| uk-bass | Bass House (UK bass house / Night Bass) (`bass_house`) | 125–130 | 10 | 5 | 5 | 2 | [bass_house.md](docs/styles/bass_house.md) |
+| uk-bass | Bassline / Niche / UK 4x4 (`bassline`) | 138–142 | 10 | 5 | 5 | 2 | [bassline.md](docs/styles/bassline.md) |
+| uk-bass | Dubstep / UK 140 (`dubstep`) | 138–142 | 10 | 5 | 5 | 2 | [dubstep.md](docs/styles/dubstep.md) |
+| uk-bass | Future Garage (`future_garage`) | 125–140 | 10 | 5 | 5 | 2 | [future_garage.md](docs/styles/future_garage.md) |
+| uk-bass | Grime (`grime`) | 138–142 | 10 | 5 | 5 | 2 | [grime.md](docs/styles/grime.md) |
+| uk-bass | Speed Garage (`speed_garage`) | 135–140 | 10 | 5 | 5 | 2 | [speed_garage.md](docs/styles/speed_garage.md) |
+| uk-bass | UK Funky (`ukfunky`) | 125–132 | 10 | 5 | 5 | 2 | [ukfunky.md](docs/styles/ukfunky.md) |
+| uk-bass | UK Garage / 2-Step (`ukg`) | 128–136 | 10 | 5 | 5 | 2 | [ukg.md](docs/styles/ukg.md) |
 
 Each pattern carries a `bpm` hint (the web UI and CLI pick it up
-automatically) and an `_approach` note explaining the idea behind it.
+automatically), an `_approach` note explaining the idea behind it, and the
+`_sources` it was built from. `styles/<style>.json` holds the machine-readable
+style guide the web UI renders: tempo range, drum DNA, which sound to pick for
+each role, which drum machines and sample sources define the style, and
+reference tracks. Writing your own: [docs/authoring-patterns.md](docs/authoring-patterns.md).
 
 ## Structure
 

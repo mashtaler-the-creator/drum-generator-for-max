@@ -1,0 +1,21 @@
+{
+  "id": "trance_breakdown_percussion_only_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["breakdown", "percussion-only", "no-kick"],
+  "_approach": "The 'emotional peak' phrase of the breakdown (Myloops bars 17-24), where the lead/pad carries the weight and the drums step back entirely: no kick, no snare, just a conga call-and-response and a continuous shaker/tambourine bed keeping gentle motion under the melody without pulling focus from it.",
+  "_sources": ["https://www.myloops.net/building-a-powerful-trance-breakdown"],
+  "tracks": {
+    "congaHigh":  [0,0,44,0, 0,0,0,0, 0,0,46,0, 0,48,0,0,
+                   0,0,44,0, 0,0,0,0, 0,0,48,0, 0,50,0,0],
+    "congaLow":   [0,0,0,0, 0,40,0,0, 0,0,0,0, 0,0,0,42,
+                   0,0,0,0, 0,42,0,0, 0,0,0,0, 0,0,0,44],
+    "shaker":     [26,0,28,0, 30,0,28,0, 26,0,28,0, 30,0,28,0,
+                   28,0,30,0, 32,0,30,0, 28,0,30,0, 32,0,30,0],
+    "tambourine": [0,0,0,0, 0,32,0,0, 0,0,0,0, 0,32,0,0,
+                   0,0,0,0, 0,34,0,0, 0,0,0,0, 0,34,0,0]
+  }
+}

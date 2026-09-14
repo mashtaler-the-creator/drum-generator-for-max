@@ -1,0 +1,25 @@
+{
+  "id": "bh_breakdown_perc_bed_01",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 126,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "toms",
+    "congas",
+    "percussion-bed"
+  ],
+  "_approach": "The tom-bounce cell of bh_tom_bounce hollowed to a pure percussion bed: low-mid-high toms trade softly with congas over no kick and no clap at all, the darkest, most minimal point in the arrangement, so the drums-plus-bass drop feels like a full return of momentum. Ref: My Nu Leng \"Masterplan\"-style dark roller breakdowns, EDMProd's arrangement note on stripping back before a build. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://www.presetdrive.com/bass-house-production-guide/"
+  ],
+  "tracks": {
+    "drum2": [38,0,0,0,0,42,46,0,0,0,0,50,0,50,40,0,40,0,0,0,0,44,48,0,0,0,0,54,0,52,42,0],
+    "drum1": [0,0,40,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,44,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

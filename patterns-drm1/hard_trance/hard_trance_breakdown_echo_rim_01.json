@@ -1,0 +1,24 @@
+{
+  "id": "hard_trance_breakdown_echo_rim_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": [
+    "breakdown",
+    "echo-rim",
+    "no-hats"
+  ],
+  "_approach": "One soft kick per bar sets the pulse under a rim pattern shaped like a decaying delay throw (70/50/35/22 across the bar) and a continuous soft shaker. An open hat lands on the very last 16th to cue the return. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Hard_trance"
+  ],
+  "tracks": {
+    "kick": [90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,70,0,0,0,50,0,0,0,35,0,0,0,22,0,0,0,70,0,0,0,50,0,0,0,35,0,0,0,22,0],
+    "hihat": [22,24,22,24,22,24,22,26,22,24,22,24,22,24,22,27,22,24,22,24,22,24,22,26,22,24,22,24,22,24,22,27],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80]
+  },
+  "kit": "drm1"
+}

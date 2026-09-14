@@ -1,0 +1,21 @@
+{
+  "id": "jersey_club_breakdown_open_hat_wash_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "open-hat"
+  ],
+  "_approach": "Sustained open hats wash over a minimal, re-entering kick pulse (one hit in bar 1, three in bar 2 hinting at the coming 5-kick pattern) — the build-back-in pocket that leads out of a breakdown into the next full drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/jersey-club/"
+  ],
+  "tracks": {
+    "openHat": [60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0,64,0,0,0],
+    "kick": [80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,0,0,90,0,0,0,0,0,0,96,0]
+  },
+  "kit": "drm1"
+}

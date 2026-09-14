@@ -1,0 +1,27 @@
+{
+  "id": "hypertechno_shuffle_hat_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 150,
+  "tags": [
+    "shuffle",
+    "swing",
+    "bouncy",
+    "16th-hat"
+  ],
+  "_approach": "The 'bouncy groove' reading of hypertechno: constant 16th closed hats with the offbeat 8th accented and a light swing (0.1) so the top end bounces against a rigid kick; clap on 2 and 4, open hats every other beat and a rim skip. Reference: Macon, Valexus. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://rateyourmusic.com/genre/hypertechno/",
+    "https://nocopyrightsounds.fandom.com/wiki/Hypertechno"
+  ],
+  "tracks": {
+    "kick": [120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0],
+    "hihat": [52,40,96,44,52,40,96,44,52,40,96,44,52,42,96,48,52,40,96,44,52,40,96,44,54,42,96,46,54,44,96,52],
+    "clap": [0,0,0,0,106,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,106,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,74,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0]
+  },
+  "kit": "drm1"
+}

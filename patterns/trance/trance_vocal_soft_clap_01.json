@@ -1,0 +1,23 @@
+{
+  "id": "trance_vocal_soft_clap_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 136,
+  "tags": ["groove", "vocal-trance", "soft"],
+  "_approach": "Vocal-trance-friendly construction: the clap is softened and set slightly back in the velocity range so it doesn't fight a vocal's 2-and-4 phrasing, hats are gentler and a tambourine takes over the shimmer role instead of a hard open hat, shaker fills the gaps for continuous motion — the lighter-touch groove built to sit under a topline rather than announce itself.",
+  "_sources": ["https://www.mixgraph.io/bpm-for/progressive-trance"],
+  "tracks": {
+    "kick":       [112,0,0,0, 112,0,0,0, 112,0,0,0, 112,0,0,0,
+                   112,0,0,0, 112,0,0,0, 112,0,0,0, 112,0,0,0],
+    "snare":      [0,0,0,0, 82,0,0,0, 0,0,0,0, 82,0,0,0,
+                   0,0,0,0, 82,0,0,0, 0,0,0,0, 82,0,0,0],
+    "hihat":      [0,0,46,0, 0,0,48,0, 0,0,46,0, 0,0,48,0,
+                   0,0,48,0, 0,0,50,0, 0,0,48,0, 0,0,50,0],
+    "tambourine": [0,0,0,0, 0,52,0,0, 0,0,0,0, 0,52,0,0,
+                   0,0,0,0, 0,54,0,0, 0,0,0,0, 0,54,0,0],
+    "shaker":     [30,32,30,32, 30,32,30,32, 30,32,30,32, 30,32,30,32,
+                   32,34,32,34, 32,34,32,34, 32,34,32,34, 32,34,32,34]
+  }
+}

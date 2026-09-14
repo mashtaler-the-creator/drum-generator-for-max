@@ -1,0 +1,21 @@
+{
+  "id": "fg_breakdown_vocal_ghost_pulse_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 134,
+  "swing": 0.28,
+  "tags": ["breakdown","ghost-pulse","vocal-ghost"],
+  "_approach": "The sparsest pulse in the kit: a single rim stands in for a pitch-shifted vocal-ghost hit once per bar, with a clave ticking almost inaudibly underneath — barely enough to keep time. Ref: Dubstepforum 'Burial Rhythm in FL Studio?' (found-sound / vocal-ghost palette).",
+  "_sources": ["https://www.dubstepforum.com/forum/viewtopic.php?t=197031"],
+  "tracks": {
+    "rim": [
+      0,0,0,0, 0,0,0,0, 32,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 36,0,0,0, 0,0,0,0
+    ],
+    "clave": [
+      0,0,10,0, 0,0,0,0, 0,0,0,0, 8,0,0,0,
+      0,0,12,0, 0,0,0,0, 0,0,0,0, 10,0,0,0
+    ]
+  }
+}

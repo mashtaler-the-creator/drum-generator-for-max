@@ -1,0 +1,28 @@
+{
+  "id": "bh_riser_tom_cascade_01",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 126,
+  "tags": [
+    "riser",
+    "build",
+    "toms",
+    "bounce-cell",
+    "cascade"
+  ],
+  "_approach": "The tom-bounce cell of bh_tom_bounce escalated into a build: the low-mid-high tom conversation over the kick/clap frame thickens each bar and cascades downward into a final low-tom-plus-crash hit, with the open hat pulled back so the toms fully own the bounce heading into the drop. Ref: the tom-bounce approach (My Nu Leng \"Masterplan\"-style dark rollers), EDMProd's build-up guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.presetdrive.com/bass-house-production-guide/",
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "kick": [101,0,0,0,98,0,0,0,100,0,0,0,99,0,0,0,101,0,0,0,98,0,0,0,100,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,58,0,0,0,0,62,0,64,0,0,0,0,0,0,0,0,72,0,0,80,0,78,0,0,86,120],
+    "drum1": [0,0,54,0,0,0,0,48,0,60,0,0,0,0,49,0,0,0,68,0,0,74,0,57,0,0,0,61,0,0,0,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,108,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120]
+  },
+  "kit": "drm1"
+}

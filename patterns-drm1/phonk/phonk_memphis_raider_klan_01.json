@@ -1,0 +1,24 @@
+{
+  "id": "phonk_memphis_raider_klan_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 78,
+  "swing": 0.1,
+  "tags": [
+    "memphis",
+    "raider-klan",
+    "2010s-revival"
+  ],
+  "_approach": "The SpaceGhostPurrp/Raider Klan 2010s revival voicing: still half-time and murky, but the hats densify into a more modern trap-adjacent 16th pattern (with the cowbell locked to the snare hits) reflecting how the early-2010s SoundCloud revival blended original Memphis DNA with contemporary trap hi-hat programming. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Phonk"
+  ],
+  "tracks": {
+    "kick": [114,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0],
+    "hihat": [44,44,44,44,44,44,44,44,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,48,48,48,48,48,48,48,48]
+  },
+  "kit": "drm1"
+}

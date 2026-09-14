@@ -1,0 +1,22 @@
+{
+  "id": "sg_reese_roller",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 139,
+  "tags": ["reese", "roller", "rolling", "sub-driven"],
+  "_approach": "Reese-bass driven roller: a continuous, hypnotic groove built to frame a detuned reese sub rather than compete with it — a steady, unvarying 4x4 kick, an unbroken offbeat open-hat pulse locking to the bass movement, and a full swung 16th hat carpet built from layered loop elements (rather than hard accent-contour hits) so the low end owns the room throughout instead of via phrase-level builds.",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/reese-bass-redux/",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-create-a-speed-garage-remix-from-scratch-complete-tutorial",
+    "https://www.studiobrootle.com/uk-garage-drum-pattern-with-presets-and-bassline/"
+  ],
+  "tracks": {
+    "kick":    [110,0,0,0, 104,0,0,0, 108,0,0,0, 104,0,0,0,  110,0,0,0, 104,0,0,0, 108,0,0,0, 104,0,0,30],
+    "snare":   [0,0,0,0, 100,0,0,0, 0,0,0,0, 102,0,0,0,       0,0,0,0, 100,0,0,0, 0,0,0,0, 104,0,0,28],
+    "perc":    [0,44,0,0, 0,46,0,0, 0,44,0,0, 0,48,0,0,        0,44,0,0, 0,46,0,0, 0,44,0,0, 0,50,0,0],
+    "openHat": [0,0,74,0, 0,0,76,0, 0,0,74,0, 0,0,78,0,        0,0,74,0, 0,0,76,0, 0,0,74,0, 0,0,80,0],
+    "hihat":   [56,38,0,60, 54,36,0,62, 58,40,0,58, 52,38,0,64,  56,40,0,62, 54,36,0,64, 58,42,0,60, 52,40,0,66]
+  }
+}

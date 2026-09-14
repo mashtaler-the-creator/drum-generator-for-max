@@ -1,0 +1,27 @@
+{
+  "id": "hard_techno_schranz_loop_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "schranz",
+    "perc-loop",
+    "rim",
+    "conga"
+  ],
+  "_approach": "Schranz grammar: percussion is the lead instrument - a compressed, filtered 16th rim loop centred on the offbeats, conga hits and a clave motif looped over a relentless 909 kick, with low compressed 16th hats glueing it. Bar 2 answers with extra conga and clave hits. Reference: Chris Liebing 'Stigmata' era, Marco Leckbert, SveTec. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.studiobrootle.com/techno-technique-hard-techno-bass-gallop/",
+    "https://www.attackmagazine.com/technique/beat-dissected/industrial-techno/"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0],
+    "multi": [0,52,88,44,0,56,90,77,0,52,88,44,0,60,92,70,0,52,88,44,0,56,90,77,0,54,88,46,77,64,92,74],
+    "drum1": [72,0,0,55,0,0,68,0,72,0,0,55,0,0,68,0,72,0,0,55,0,0,68,0,72,0,57,0,0,61,68,0],
+    "hihat": [58,40,62,44,58,40,62,44,58,40,62,44,58,40,62,44,58,42,62,46,58,42,62,46,58,42,62,46,58,42,62,46],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "hard_trance_riser_clap_accel_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 151,
+  "tags": [
+    "riser",
+    "clap-accel",
+    "build"
+  ],
+  "_approach": "Bar 1 plays a normal 4/4 kick with the 2/4 clap; bar 2 drops the kick out entirely (so the re-entry lands hard) while the clap accelerates from 8ths to a full 16th roll climbing to 120, with the open hat gone and a crash landing on the final step alongside the last kick hit. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120],
+    "openHat": [0,0,94,0,0,0,94,0,0,0,94,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,70,0,74,0,78,0,82,0,86,90,94,98,102,106,110,120],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120]
+  },
+  "kit": "drm1"
+}

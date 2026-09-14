@@ -1,0 +1,25 @@
+{
+  "id": "jungle_riser_mc_intro_build_01",
+  "style": "jungle",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 165,
+  "swing": 0.08,
+  "tags": ["riser","build","mc-intro","layered"],
+  "_approach": "MC-intro build: the DJ-friendly progressive intro compressed to four bars - bar 1 is just kick and a quarter-note hat pulse for the MC to talk over, bar 2 adds an eighth ride, bar 3 brings in the snare backbeat and a shaker bed, and bar 4 arrives at a full amen-flavoured groove with a crash cueing the drop. Ref: the 32-bar DJ-friendly jungle intro structure (drums-and-atmosphere, elements added gradually) documented by EDMProd and KAN Samples' DnB arrangement guide.",
+  "_sources": ["https://www.edmprod.com/how-to-make-jungle-music/","https://kansamples.com/blogs/learn/dnb-track-arrangement","https://magneticmag.com/2026/06/music-production-tips-for-making-jungle/"],
+  "tracks": {
+    "kick": [92,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 94,0,0,0, 0,0,0,0, 0,0,80,0, 0,0,0,0,
+              96,0,0,0, 0,0,0,0, 0,0,82,0, 0,0,0,0, 100,0,0,0, 0,0,0,0, 0,0,90,0, 0,0,0,0],
+    "snare": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 90,0,0,0, 0,0,0,0, 88,0,0,0, 0,0,0,0, 98,0,0,22, 0,0,0,0, 96,0,0,24],
+    "ride": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 46,0,38,0, 46,0,38,0, 46,0,38,0, 46,0,38,0,
+              50,0,40,0, 50,0,40,0, 50,0,40,0, 50,0,42,0, 54,0,42,0, 54,0,42,0, 54,0,42,0, 54,0,44,0],
+    "hihat": [44,0,0,0, 44,0,0,0, 44,0,0,0, 44,0,0,0, 44,0,0,0, 44,0,0,0, 44,0,0,0, 44,0,0,0,
+               48,0,0,0, 48,0,0,0, 48,0,0,0, 48,0,0,0, 50,0,0,0, 50,0,0,0, 50,0,0,0, 50,0,0,0],
+    "shaker": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                30,26,32,26, 34,26,32,28, 30,26,34,26, 32,28,36,30, 32,28,34,28, 36,28,34,30, 32,28,36,28, 34,30,38,32],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,110]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ukg_riser_hat_double_01",
+  "style": "ukg",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 134,
+  "swing": 0.18,
+  "tags": [
+    "riser",
+    "build",
+    "hats",
+    "doubling"
+  ],
+  "_approach": "Hat-doubling build: closed hats step from swung 8ths (bar 1) to 16ths (bar 2) to a fully accented 16th lattice with open hats on every offbeat (bars 3-4) while the snare adds pickups and ends in a 16th roll. The 2-step kick straightens into 4/4 for bar 4 so the drop can flip back to 2-step. Toms mark each bar end. Ref: the hat-density lifts on Wookie 'Battle', DJ Zinc '138 Trek' breakdown-to-drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://www.attackmagazine.com/technique/beat-dissected/garage-shuffle/",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-program-uk-garage-drums-complete-guide-for-producers"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,0,0,0,34,0,0,96,0,0,0,0,0,112,0,0,0,0,0,0,86,0,0,98,0,0,0,0,0,112,0,0,0,0,0,0,90,0,0,100,0,0,0,0,0,114,0,0,0,108,0,0,0,110,0,0,0,112,0,0,0],
+    "snare": [0,0,0,0,110,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,70,0,0,0,0,114,0,0,74,0,0,0,0,114,0,80,84,0,0,0,0,116,0,0,0,92,0,96,0,100,106,112,120],
+    "hihat": [62,0,70,0,64,0,72,0,62,0,74,0,66,0,76,0,64,40,72,44,66,42,74,46,64,40,76,48,68,42,78,50,68,46,78,52,70,48,80,54,70,48,82,56,72,50,84,58,72,52,82,58,74,54,84,60,76,56,86,62,78,58,88,64],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,68,0,0,0,70,0,0,0,72,0,0,0,72,0,0,0,74,0,0,0,76,0,0,0,78,0,0,0,82,0,0,0,86,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,26,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

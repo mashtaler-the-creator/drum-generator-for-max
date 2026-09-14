@@ -1,0 +1,23 @@
+{
+  "id": "techno_breakdown_dub_chord_space_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 127,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "dub-space",
+    "chord"
+  ],
+  "_approach": "Dub-chord space: almost no drums at all — a single soft kick on the downbeat of each bar, a percussion 'chord stab' hit that decays across two or three echo repeats (simulating a long dub delay on a chord stab), and one open hat per bar. This is the Basic Channel-style pause: the reverb and delay tails ARE the arrangement. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/basic-channel-style-dub-techno/"
+  ],
+  "tracks": {
+    "kick": [92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,74,0,0,50,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,48,0,32,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "bassline_virji_crossover",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 138,
+  "tags": [
+    "crossover",
+    "virji",
+    "swing",
+    "modern"
+  ],
+  "_approach": "Sammy Virji-style bassline/UKG crossover ('NUKG'): bassline's low-end aggression — a hard 4x4 kick and a huge clap — dressed in genuine UK garage swing and an ascending rim-shot run instead of the straighter modern-warehouse hats, so the groove bounces the way garage does while keeping bassline's weight. Ref: Sammy Virji's bassline-to-garage evolution as described by DJ Mag. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://djmag.com/features/sammy-virji-global-garage-phenomenon-interview",
+    "https://www.mneemo.com/blog/sammy-virji-real-name-uk-garage-2026/",
+    "https://www.evosounds.com/post/sammy-virji-style-bass-serum-2"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,110,0,0,0,114,0,0,0,110,0,0,0,120,0,0,0,110,0,0,0,114,0,0,0,112,0,0,0],
+    "clap": [0,0,0,0,122,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,124,0,0,0,0,0,0,0,122,0,0,0],
+    "multi": [0,0,0,0,0,0,44,0,0,0,0,0,0,50,58,66,0,0,0,0,0,0,46,0,0,0,0,0,54,62,70,78],
+    "openHat": [0,0,58,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,62,0,0,0,0,0],
+    "hihat": [0,0,0,0,0,0,54,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,58,0]
+  },
+  "kit": "drm1"
+}

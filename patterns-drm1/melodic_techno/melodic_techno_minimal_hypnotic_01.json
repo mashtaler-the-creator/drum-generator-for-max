@@ -1,0 +1,27 @@
+{
+  "id": "melodic_techno_minimal_hypnotic_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "minimal",
+    "hypnotic",
+    "intro",
+    "offbeat-hat"
+  ],
+  "_approach": "The stripped intro kit Beatportal describes (kick, hats, atmosphere): kick 4/4 and offbeat closed hats only, rim ghosts in the pocket, a clap and one open hat arriving in bar 2. Use it under pads and arps before the full kit enters. Reference: Tale Of Us 'Monument' intro, Kevin de Vries. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.beatportal.com/articles/899368-step-by-step-guide-to-creating-a-melodic-house-techno-track-anyma-miss-monique-artbat-stephan-bodzin",
+    "https://blog.native-instruments.com/melodic-techno/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0],
+    "hihat": [0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84,0,84],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,38,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0]
+  },
+  "kit": "drm1"
+}

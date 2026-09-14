@@ -1,0 +1,29 @@
+{
+  "id": "fg_jamie_xx_minimal_click_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.22,
+  "tags": ["minimal","click-led","spacious","2step"],
+  "_approach": "An ultra-minimal, click-led 2-step in the vein of Jamie xx's sparse, off-kilter garage revivalism: a lone rim 'click' replaces the snare entirely, a ghost clave ticks underneath, and everything sits in wide, deliberate space rather than filling the bar. Ref: MasterClass 'Future Garage Guide' (off-kilter rhythmic style inherited from 2-step garage); Wikipedia '2-step garage' (history).",
+  "_sources": ["https://www.masterclass.com/articles/future-garage-guide","https://en.wikipedia.org/wiki/2-step_garage"],
+  "tracks": {
+    "kick": [
+      86,0,0,0, 0,0,0,0, 0,40,0,0, 0,0,0,0,
+      84,0,0,0, 0,0,0,0, 0,0,0,44, 0,0,0,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,36,0, 0,0,0,0, 0,0,38,0,
+      0,0,0,0, 40,0,0,0, 0,0,0,0, 42,0,0,0
+    ],
+    "clave": [
+      0,0,14,0, 0,0,0,0, 0,0,16,0, 0,0,0,0,
+      0,0,16,0, 0,0,0,0, 0,0,18,0, 0,0,0,0
+    ],
+    "hihat": [
+      0,0,0,0, 0,0,0,20, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,22
+    ]
+  }
+}

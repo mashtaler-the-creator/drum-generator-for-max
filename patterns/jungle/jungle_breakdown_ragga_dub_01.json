@@ -1,0 +1,17 @@
+{
+  "id": "jungle_breakdown_ragga_dub_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 168,
+  "swing": 0.12,
+  "tags": ["breakdown","ragga","dub","skank"],
+  "_approach": "Ragga dub breakdown: the kick drops out completely and a rimshot skank (the offbeat dub lick) trades with a conga call-and-response, both fading in velocity bar to bar like a dub echo, giving the MC/vocal the space that jungle inherited straight from sound-system dub culture. Ref: the dub delay/filter/rewind techniques documented for ragga jungle production; EDMProd's jungle guide on dub/reggae source material.",
+  "_sources": ["https://www.edmprod.com/how-to-make-jungle-music/","https://magneticmag.com/2026/06/music-production-tips-for-making-jungle/"],
+  "tracks": {
+    "rim": [0,0,54,0, 0,0,50,0, 0,0,54,0, 0,0,48,0, 0,0,42,0, 0,0,38,0, 0,0,44,0, 0,0,36,0],
+    "congaHigh": [58,0,0,0, 0,0,0,0, 60,0,0,0, 0,0,0,0, 48,0,0,0, 0,0,0,0, 50,0,0,0, 0,0,0,0],
+    "congaLow": [0,0,0,0, 56,0,0,0, 0,0,0,0, 58,0,0,0, 0,0,0,0, 46,0,0,0, 0,0,0,0, 48,0,0,0],
+    "shaker": [30,0,26,0, 32,0,28,0, 30,0,26,0, 32,0,30,0, 28,0,24,0, 30,0,26,0, 28,0,24,0, 30,0,28,0]
+  }
+}

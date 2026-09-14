@@ -1,0 +1,23 @@
+{
+  "id": "baile_funk_breakdown_bruxaria_bell_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": [
+    "breakdown",
+    "bruxaria",
+    "bell"
+  ],
+  "_approach": "A ritual-hush bruxaria breakdown: kick and clap out, only a slow cowbell 'toll' and a soft low tom rumble remain, building the dark, occult atmosphere the microstyle is named for before the stomping kick reasserts itself. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/beat-bruxaria",
+    "https://diffractionscollective.com/2026/01/08/the-underworld-of-funk-bruxaria-david-sir/"
+  ],
+  "tracks": {
+    "multi": [53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "dariacore_breakdown_otomad_bell_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.33,
+  "bpm": 175,
+  "tags": ["breakdown", "otomad", "bell-perc"],
+  "_approach": "The hyperflip/otoMAD branch's quieter side: a rolling triplet-feel clave/cowbell bell pattern (matching the otomad groove's swing) alone, no kick or snare, standing in for the melodic ornamentation a Vocaloid/anime-flip breakdown would carry over drums this sparse.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "clave":   [0,0,34,0, 0,0,36,0, 0,0,34,0, 0,0,38,0,
+                0,0,36,0, 0,0,38,0, 0,0,36,0, 0,0,40,0],
+    "cowbell": [0,0,0,0, 30,0,0,0, 0,0,0,0, 32,0,0,0,
+                0,0,0,0, 32,0,0,0, 0,0,0,0, 34,0,0,0]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "three_step_broken_pocket_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 118,
+  "tags": ["kick-drop","broken-beat","syncopated"],
+  "_approach": "The alternate melodigging timing (≈1.0, 2.5, 3.75): kick on beat 1, then two off-grid kicks pulled forward onto the 'and' of beat 2 and the last 16th of beat 3, leaving beat 4 open entirely - the 'more broken-beat energy' variant. Percussion answers the open beat 4 instead of the kick; hats stay sparse so the broken pocket reads clearly.",
+  "_sources": ["https://www.melodigging.com/genre/3-step","https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house"],
+  "tracks": {
+    "kick":      [110,0,0,0, 0,0,96,0, 0,0,0,102, 0,0,0,0,
+                  112,0,0,0, 0,0,98,0, 0,0,0,104, 0,0,0,0],
+    "perc":      [0,0,0,0, 0,0,0,0, 0,0,0,0, 82,0,60,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 84,0,62,0],
+    "congaHigh": [0,0,0,55, 0,0,0,0, 0,0,0,0, 0,70,0,0,
+                  0,0,0,58, 0,0,0,0, 0,0,0,0, 0,73,0,0],
+    "shaker":    [60,0,44,0, 62,0,30,0, 60,0,46,0, 64,0,42,0,
+                  62,0,46,0, 60,0,32,0, 62,0,48,0, 66,0,44,0],
+    "rim":       [0,0,0,0, 0,0,0,0, 48,0,0,0, 0,0,0,40,
+                  0,0,0,0, 0,0,0,0, 50,0,0,0, 0,0,0,42]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ukfunky_breakdown_tribal_call_01",
+  "style": "ukfunky",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.15,
+  "bpm": 128,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "tribal",
+    "conga",
+    "percussion-led"
+  ],
+  "_approach": "Percussion-only tribal breakdown: congaHigh/congaLow trade a call-and-response over a cowbell tresillo pulse and shaker bed, tambourine entering in bar 3, with no kick at all across all four bars so the return of the broken 4x4 floor after the build lands with maximum impact. Ref: the DJ Gregory/Karizma tribal-house lineage behind ukfunky_tribal_conga_01, Attack Magazine's tribal-percussion \"Big House\" feature, Wikipedia's tribal house entry. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/big-house/",
+    "https://en.wikipedia.org/wiki/Tribal_house",
+    "https://www.melodigging.com/genre/uk-funky"
+  ],
+  "tracks": {
+    "drum1": [0,0,0,68,0,0,72,0,0,0,0,0,0,67,0,0,0,0,0,70,0,0,74,0,0,70,0,0,0,0,76,0,0,72,0,76,0,0,78,0,0,74,0,0,0,80,0,0,0,76,0,80,0,82,0,0,0,78,0,84,0,0,0,0],
+    "drum2": [67,0,0,0,0,70,0,0,65,0,0,0,0,0,68,0,68,0,0,0,0,72,0,0,67,0,0,0,0,0,70,0,70,0,0,0,0,74,0,0,68,0,0,0,0,0,74,0,72,0,0,0,0,76,0,0,70,0,0,0,0,0,0,0],
+    "multi": [55,0,0,0,0,0,59,0,0,0,0,26,57,0,0,0,55,0,0,0,0,0,60,0,0,0,0,28,58,0,0,0,57,0,0,0,0,0,61,0,0,0,0,0,59,0,0,0,57,0,0,0,0,0,61,0,0,0,0,0,59,0,0,0],
+    "hihat": [38,22,32,24,40,23,34,35,38,22,33,26,42,24,35,37,39,22,33,25,41,24,34,36,39,22,34,26,42,25,36,38,40,24,34,26,42,25,35,37,40,23,34,27,43,26,37,38,40,24,34,26,42,25,35,37,40,23,34,27,43,26,37,38],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,53,0,0]
+  },
+  "kit": "drm1"
+}

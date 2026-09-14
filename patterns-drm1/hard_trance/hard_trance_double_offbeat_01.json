@@ -1,0 +1,23 @@
+{
+  "id": "hard_trance_double_offbeat_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 151,
+  "tags": [
+    "double-offbeat",
+    "energetic"
+  ],
+  "_approach": "Mirrors the 'double offbeat' bass pattern in the drums: the open hat fires twice per beat (the 'and' and the 'a') instead of once, reading as dramatically more driving than the single-offbeat approach at the same tempo. Closed hats fill only the remaining 16ths. Clap on 2 and 4 with a grace-note lead-in. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/5-essential-bass-patterns-that-define-hard-house-and-trance-music"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,118,0,0,0,116,0,0,0,120,0,0,0],
+    "openHat": [0,0,94,72,0,0,94,72,0,0,94,72,0,0,94,72,0,0,96,74,0,0,96,74,0,0,98,76,0,0,100,80],
+    "hihat": [0,40,0,0,0,42,0,0,0,40,0,0,0,44,0,0,0,42,0,0,0,44,0,0,0,42,0,0,0,46,0,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,104,0,0,0,0,0,0,50,108,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "jersey_club_open_hat_skip_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 136,
+  "swing": 0,
+  "tags": ["open-hat","skip","five-kick"],
+  "_approach": "Built around the open hat as the secondary groove engine: open hat lands on the 'and' of 2 and 4 (per NI's description of the genre's hat placement) while the kick pattern simplifies to just three hits, letting the open-hat skip and the clap carry most of the bounce.",
+  "_sources": ["https://blog.native-instruments.com/jersey-club/"],
+  "tracks": {
+    "kick":     [112,0,0,0, 0,0,0,0, 102,0,0,0, 0,0,72,0,
+                114,0,0,0, 0,0,0,0, 104,0,0,0, 0,0,74,0],
+    "perc":     [0,0,0,0, 0,0,0,0, 0,0,96,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,96, 0,0,0,0, 0,0,0,0],
+    "openHat":  [0,0,0,0, 0,0,70,0, 0,0,0,0, 0,0,70,0,
+                0,0,0,0, 0,0,72,0, 0,0,0,0, 0,0,72,0],
+    "hihat":    [0,0,0,0, 50,0,0,0, 0,0,0,0, 50,0,0,0,
+                0,0,0,0, 52,0,0,0, 0,0,0,0, 52,0,0,0]
+  }
+}

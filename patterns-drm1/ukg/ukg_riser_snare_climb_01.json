@@ -1,0 +1,30 @@
+{
+  "id": "ukg_riser_snare_climb_01",
+  "style": "ukg",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 133,
+  "swing": 0.2,
+  "tags": [
+    "riser",
+    "build",
+    "snare-roll",
+    "2step"
+  ],
+  "_approach": "Four-bar MC-drop build in classic 2-step language: the kick keeps its 2-step skeleton for two bars, straightens to 4/4 in bar 3 and disappears in bar 4 so the snare roll (backbeat -> 8ths -> 16ths) owns the last bar and peaks at 127 on the final 16th. Hats double from 8ths to 16ths as it climbs. Ref: the turnaround before the drop on Artful Dodger 'Re-Rewind', MJ Cole 'Sincere' (12\" mix). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://theproducerschool.com/blogs/featured-blogs/master-uk-garage-production-complete-guide-to-filthy-basslines-and-swing-drums",
+    "https://bassculture.substack.com/p/rewind-the-rise-of-the-uk-garage"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,36,0,0,98,0,0,0,0,0,112,0,0,0,0,0,0,84,0,0,100,0,0,0,0,0,114,0,0,0,108,0,0,0,110,0,0,0,112,0,0,0,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,30,0,0,0,0,114,0,0,0,0,0,0,0,114,0,72,0,0,0,0,0,116,0,78,0,84,0,90,0,96,0,102,0,96,98,100,102,104,106,108,110,113,115,117,119,121,123,125,127],
+    "clap": [0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0,108,0,0,0,114,0,0,124],
+    "hihat": [58,0,74,0,0,0,76,0,60,0,78,0,0,0,0,0,60,0,76,44,0,0,78,46,62,0,80,48,0,0,0,0,64,42,78,50,66,44,80,52,68,46,82,54,70,48,84,56,70,50,84,58,72,52,86,60,74,54,88,62,76,56,90,64],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,70,0,0,0,72,0,0,0,74,0,0,0,76,0,0,0,78,0,0,0,80,0,0,0,84,0,0,0,88,0],
+    "multi": [0,0,0,26,0,0,0,0,0,0,0,24,0,0,0,0,0,0,0,28,0,0,0,0,0,26,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

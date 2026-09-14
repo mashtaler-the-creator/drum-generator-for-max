@@ -1,0 +1,23 @@
+{
+  "id": "techno_riser_kick_return_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0,
+  "tags": ["riser", "kick-return", "re-entry"],
+  "_approach": "The 'return of the kick' moment: bar 1 runs on hats, ride and a clap alone with no kick at all (as if coming out of a breakdown), then the kick reappears on the downbeat of bar 2 at full velocity alongside a crash — the single most anticipated hit in a techno set. Ride and hat density step up through bar 1 so the silence where the kick should be reads as tension, not emptiness.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/rolling-techno/", "https://www.edmprod.com/ultimate-guide-build-ups/"],
+  "tracks": {
+    "kick":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              127,0,0,0, 112,0,0,0, 112,0,0,0, 112,0,0,0],
+    "ride":  [70,0,74,0, 78,0,82,0, 86,0,90,0, 94,0,98,0,
+              80,0,60,0, 80,0,60,0, 80,0,60,0, 80,0,60,0],
+    "hihat": [0,60,0,64, 0,68,0,72, 0,76,0,80, 0,84,0,88,
+              0,60,0,62, 0,60,0,62, 0,60,0,62, 0,60,0,62],
+    "perc":  [0,0,0,0, 0,0,0,0, 0,0,0,50, 0,0,0,60,
+              0,0,0,0, 90,0,0,0, 0,0,0,0, 90,0,0,0],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              120,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "hard_techno_industrial_snare_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "industrial",
+    "snare",
+    "bitcrush",
+    "clank"
+  ],
+  "_approach": "Industrial techno template (Attack's dissection): 909 kick 4/4, a noise-synth snare on 2 and 4, offbeat hats, a shaker on every second offbeat, a bitcrushed low tom ducked wherever it overlaps kick or hat, and a metallic clank (cowbell slot) as found-sound accent. Reference: I Hate Models 'Daydream', Dax J, 999999999 'No Sleep'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/industrial-techno/",
+    "https://www.edmprod.com/what-is-hard-techno/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0,116,0,0,0],
+    "snare": [0,0,0,0,104,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,104,0,0,0,0,0,0,36,104,0,0,0],
+    "hihat": [0,84,0,84,0,84,56,84,0,84,0,84,0,84,56,84,0,84,0,84,0,84,56,84,0,84,0,84,0,84,58,84],
+    "drum2": [0,0,0,48,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,48,0,0,0,0,0,44,0,52,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,68]
+  },
+  "kit": "drm1"
+}

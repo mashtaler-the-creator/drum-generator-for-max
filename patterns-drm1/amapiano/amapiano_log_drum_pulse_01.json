@@ -1,0 +1,26 @@
+{
+  "id": "amapiano_log_drum_pulse_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 112,
+  "tags": [
+    "log-drum",
+    "core-engine",
+    "canonical"
+  ],
+  "_approach": "The default Amapiano engine: a soft, spaced kick (not full 4x4 - Splice/Roland both stress it stays out of the log drum's way), a continuous 16th shaker as the timekeeping backbone, log drum stepwise-motion hits (tomLow+congaLow) syncopated around the kick, and offbeat open hats. NOTE: tomLow+congaLow approximate the log drum's RHYTHM only - the real log drum is a tuned, pitch-bent kick/808/bass hybrid this drum-only library cannot reproduce; the melodic/bass part must come from a synth. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/blog/what-is-amapiano-music/",
+    "https://articles.roland.com/production-hacks-creating-amapiano-tracks/",
+    "https://www.inspiredbybeatz.com/en/amapiano-production-how-the-log-drum-sound-is-created/"
+  ],
+  "tracks": {
+    "kick": [100,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,62,0,0,55,0,0,55,0,66,0,0,50,0,0,0,0,64,0,0,57,0,0,57,0,68,0,44,52,0],
+    "hihat": [53,35,48,34,54,37,50,35,53,36,48,34,54,38,50,36,54,37,50,35,53,38,48,36,54,37,50,35,56,38,51,37],
+    "openHat": [0,0,0,0,0,0,62,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,66,0]
+  },
+  "kit": "drm1"
+}

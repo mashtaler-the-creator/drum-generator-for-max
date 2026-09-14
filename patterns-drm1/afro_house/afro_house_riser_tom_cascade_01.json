@@ -1,0 +1,26 @@
+{
+  "id": "afro_house_riser_tom_cascade_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 122,
+  "tags": [
+    "riser",
+    "tom-cascade",
+    "build"
+  ],
+  "_approach": "Tom-run transition (Melodigging Afro-tech: 'filter sweeps and tom fills for transitions rather than EDM impacts'): bar 1 alternates high/mid toms on 8ths, bar 2 cascades high to mid to low in 16ths with rising velocity and the kick doubles into 16ths on the final beat. Loudest low toms land on steps 14-15. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/afro-tech",
+    "https://www.samplesoundmusic.com/blogs/news/the-ultimate-guide-to-afro-house-production-in-2025-tips-tricks-and-techniques"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,104,106],
+    "drum1": [63,0,0,0,71,0,0,0,82,0,0,0,86,0,0,0,78,86,100,105,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,60,0,0,0,73,0,0,0,79,0,0,0,88,0,0,0,0,0,79,87,96,106,108,105,97,107,104,118,120,117],
+    "hihat": [64,43,49,42,62,42,51,41,65,40,50,43,63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41,65,40,50,43],
+    "clap": [0,0,0,0,63,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,105,0,0,0]
+  },
+  "kit": "drm1"
+}

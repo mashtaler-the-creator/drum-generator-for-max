@@ -1,0 +1,49 @@
+{
+  "id": "fg_riser_texture_accumulation_01",
+  "style": "future_garage",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.26,
+  "tags": ["riser","additive","texture","non-edm"],
+  "_approach": "Future garage doesn't do EDM-style risers — it adds texture instead. Bar 1 is near-silent (a lone clave tick), bar 2 adds a ghost rim, bar 3 layers in shaker and conga, and bar 4 lets a full swung hat pattern return at normal density — the groove is 'back' rather than a drop being announced. Ref: Plugg Supply 'How to Make Future Garage' (mid-track breakdowns 'go almost beatless, then return with a fuller hat pattern' — read here in reverse, as the way back in).",
+  "_sources": ["https://plugg-supply.net/articles/how-to-make-future-garage-2027"],
+  "tracks": {
+    "clave": [
+      0,0,0,0, 0,0,20,0, 0,0,0,0, 0,0,18,0,
+      0,0,0,0, 0,0,22,0, 0,0,0,0, 0,0,20,0,
+      0,0,0,0, 0,0,24,0, 0,0,0,0, 0,0,22,0,
+      0,0,0,0, 0,0,26,0, 0,0,0,0, 0,0,24,0
+    ],
+    "rim": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,34,0,0, 0,0,0,0,
+      0,0,0,38, 0,0,0,0, 0,36,0,0, 0,0,0,0,
+      0,0,0,42, 0,0,0,0, 0,40,0,0, 0,0,0,0
+    ],
+    "shaker": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      26,0,0,0, 22,0,0,0, 28,0,0,0, 24,0,0,0,
+      30,0,0,0, 20,0,0,0, 32,0,0,0, 22,0,0,0
+    ],
+    "congaHigh": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,40, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,42, 0,0,0,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 38,0,0,0, 0,0,0,0
+    ],
+    "hihat": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      44,0,30,0, 46,0,32,0, 48,0,34,0, 50,0,36,0
+    ]
+  }
+}

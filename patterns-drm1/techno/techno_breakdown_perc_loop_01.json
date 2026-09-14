@@ -1,0 +1,24 @@
+{
+  "id": "techno_breakdown_perc_loop_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.02,
+  "tags": [
+    "breakdown",
+    "percussion-loop",
+    "latin"
+  ],
+  "_approach": "The Latin percussion loop from `techno_perc_01` stripped down to a breakdown: no kick at all, just the shaker bed, congas and clave carrying the groove alone, with the clave thinned to once per bar in bar 2. This is the percussive-techno equivalent of the 'perc loop only' breakdown — space for the low end to drop out while the groove keeps its identity. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.studiobrootle.com/techno-drum-patterns-and-drum-programming-tips/"
+  ],
+  "tracks": {
+    "hihat": [64,48,56,48,64,48,56,48,64,48,56,48,64,48,56,48,62,46,54,46,62,46,54,46,62,46,54,46,62,46,54,46],
+    "drum1": [0,0,0,65,0,0,61,0,0,0,0,65,0,59,0,0,0,0,0,63,0,0,0,0,0,0,0,63,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,70,0,0,0,0,0,67,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0],
+    "multi": [0,0,0,76,0,0,76,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "disco_house_dimitri_edit_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 125,
+  "tags": ["disco-edit", "dimitri-from-paris", "bongo"],
+  "_approach": "A Dimitri From Paris-style re-edit feel: a panned bongo call-and-response (congaHigh/congaLow) instead of a hat pattern, a disco string-hit stand-in (crash) on the very first downbeat, and a three-tom descending fill closing bar 2 the way classic disco edits mark section changes. Tightest swing in the set -- 54% MPC (engine 0.08). Reference: Dimitri From Paris 'Sacrebleu'.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"],
+  "tracks": {
+    "kick":      [106,0,0,0, 104,0,0,0, 108,0,0,0, 102,0,0,0,
+                  107,0,0,0, 105,0,0,0, 109,0,0,0, 103,0,0,0],
+    "congaHigh": [0,0,0,0, 0,0,0,0, 0,0,56,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,58,0, 0,0,0,60],
+    "congaLow":  [0,0,0,0, 0,0,54,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,56,0, 0,0,0,0, 0,0,58,0],
+    "perc":      [0,0,0,0, 98,0,0,0, 0,0,0,0, 100,0,0,0,
+                  0,0,0,0, 99,0,0,0, 0,0,0,0, 101,0,0,0],
+    "crash":     [110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomHigh":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 72,0,0,0],
+    "tomMid":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,76,0,0],
+    "tomLow":    [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,80,0]
+  }
+}

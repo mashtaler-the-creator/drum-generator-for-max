@@ -1,0 +1,17 @@
+{
+  "id": "amapiano_breakdown_shaker_wash_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.13,
+  "bpm": 112,
+  "tags": ["breakdown","shaker","no-kick"],
+  "_approach": "Shaker wash on its own: the continuous 16th shaker (Amapiano's timekeeping backbone per Roland/Splice) carries both bars alone with nothing else but a lone congaLow accent - proof the shaker alone can hold the groove together while everything else drops out.",
+  "_sources": ["https://articles.roland.com/production-hacks-creating-amapiano-tracks/"],
+  "tracks": {
+    "shaker":   [62,42,58,40, 64,44,60,42, 62,43,58,41, 66,46,62,44,
+                 64,44,60,42, 62,45,58,43, 64,44,60,42, 68,47,64,45],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,0,0,50, 0,0,0,0]
+  }
+}

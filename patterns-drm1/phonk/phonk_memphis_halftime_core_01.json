@@ -1,0 +1,26 @@
+{
+  "id": "phonk_memphis_halftime_core_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 72,
+  "swing": 0.14,
+  "tags": [
+    "memphis",
+    "half-time",
+    "boom-bap"
+  ],
+  "_approach": "The SpaceGhostPurrp/DJ Screw-lineage Memphis core: a slow half-time boom-bap kick and snare (kick on 1 and the & of 2, snare on 3) with swung, lightly ghosted hats and a sparse cowbell hook standing in for the genre's signature TR-808 cowbell riff — laid-back and murky rather than driving. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Phonk",
+    "https://vibesdj.io/dj-tools/what-bpm-is-phonk",
+    "https://daily.redbullmusicacademy.com/2012/07/noz-pit-stop-memphis-spanish-fly/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,114,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0],
+    "hihat": [40,0,44,0,34,0,44,0,40,0,44,0,34,0,44,0,42,0,46,0,36,0,46,0,42,0,46,0,36,0,46,0],
+    "multi": [0,0,0,0,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "krushclub_riser_silence_drop_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "gap",
+    "stutter-stop"
+  ],
+  "_approach": "Krushclub's TikTok-optimised song structure (EDMProd: short, punchy, straight to the hook) favours a hard stop over a long ramp: the hat roll and clap stutter build for a bar and a half, then everything cuts to total silence for the last three 16ths before one final kick+clap+crash hit — the 'stutter-stop' internet-EDM cousin of hard techno's build-and-pause, compressed to fit a 2-minute song. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/krushclub/",
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,106,0,0,0,104,0,0,0,100,0,0,0,96,0,98,0,100,0,102,104,0,0,0,0,0,0,0,127],
+    "snare": [0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,100,104,108,0,0,0,0,0,0,0,127],
+    "hihat": [40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,104,108,112,116,120,124,127,0,0,0,0,0,0,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127]
+  },
+  "kit": "drm1"
+}

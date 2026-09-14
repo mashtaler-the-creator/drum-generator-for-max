@@ -1,0 +1,19 @@
+{
+  "id": "phonk_drift_automotivo_crossover_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 150,
+  "swing": 0.08,
+  "tags": ["drift-phonk","brazilian-phonk","funk-crossover"],
+  "_approach": "The Brazilian-phonk crossover lane: a drift phonk cowbell/808 kit voiced with baile-funk-style syncopated kick placement (kick on 1 and the push before beat 3, echoing the tamborzão skeleton) instead of drift phonk's usual half-time or four-on-floor, reflecting how Brazilian producers fused the two scenes from the early 2020s on.",
+  "_sources": ["https://en.wikipedia.org/wiki/Phonk","https://blog.soundtrap.com/how-to-produce-drift-phonk/"],
+  "tracks": {
+    "kick":     [120,0,0,0, 0,0,56,0, 116,0,0,0, 0,0,0,0,
+                122,0,0,0, 0,0,58,0, 118,0,0,0, 0,0,0,0],
+    "perc":     [0,0,0,0, 108,0,0,0, 0,0,0,0, 104,0,0,0,
+                0,0,0,0, 110,0,0,0, 0,0,0,0, 106,0,0,0],
+    "cowbell":  [0,70,0,66, 0,72,0,68, 0,70,0,66, 0,72,0,68,
+                0,72,0,68, 0,74,0,70, 0,72,0,68, 0,74,0,70]
+  }
+}

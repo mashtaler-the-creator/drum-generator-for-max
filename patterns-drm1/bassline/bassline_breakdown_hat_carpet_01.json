@@ -1,0 +1,27 @@
+{
+  "id": "bassline_breakdown_hat_carpet_01",
+  "style": "bassline",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 141,
+  "swing": 0.14,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "hats",
+    "16ths",
+    "rim-layer"
+  ],
+  "_approach": "Kick-free breakdown where the skippy 16th closed-hat carpet is the groove: an aggressive accent contour, offbeat gaps left for the open hat to ring, rim ghosts underneath and the clap only on 2 and 4 of bar 2. Ref: the breakdown sections of DJ Q and Flava D's skippy 4x4 tracks. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/garage-shuffle/",
+    "https://www.musicradar.com/how-to/bassline-house-production-tips"
+  ],
+  "tracks": {
+    "hihat": [72,44,0,78,46,42,0,82,70,44,0,76,48,44,0,84,74,46,32,80,48,44,34,84,72,46,32,78,50,46,60,86],
+    "openHat": [0,0,66,0,0,0,68,0,0,0,66,0,0,0,70,0,0,0,68,0,0,0,70,0,0,0,68,0,0,0,0,0],
+    "multi": [0,0,0,0,0,30,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,30,0,0,0,34,0,0,0,32,0,36],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0]
+  },
+  "kit": "drm1"
+}

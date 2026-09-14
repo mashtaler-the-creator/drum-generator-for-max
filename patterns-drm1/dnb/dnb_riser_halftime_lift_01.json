@@ -1,0 +1,25 @@
+{
+  "id": "dnb_riser_halftime_lift_01",
+  "style": "dnb",
+  "bars": 3,
+  "stepsPerBar": 16,
+  "bpm": 172,
+  "swing": 0.05,
+  "tags": [
+    "riser",
+    "build",
+    "halftime",
+    "lift"
+  ],
+  "_approach": "Halftime-to-fulltime lift: bar 1 sits in halftime with the snare on beat 3 only (the autonomic law), bar 2 quietly reintroduces 2-and-4 alongside the beat-3 anchor as the kick doubles its pace, and bar 3 commits fully to two-step with the snare accelerating into a roll that peaks and then leaves the last 16th silent before the return to full tempo. Ref: United By Bass's autonomic/halftime description; docs/styles/dnb.md's note on halftime as the one exception to the 2-and-4 law. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.unitedbybass.com/every-drum-bass-subgenre-you-need-to-know-2025-edition/",
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement"
+  ],
+  "tracks": {
+    "kick": [100,0,0,0,0,0,0,0,0,0,78,0,0,0,0,0,102,0,0,0,0,0,0,0,80,0,84,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,108,0,0,0,64,0,0,0,0,0,0,0,70,0,77,0,84,90,97,104,111,117,124,0],
+    "hihat": [0,0,38,0,0,0,0,0,0,0,40,0,0,0,0,0,42,0,0,0,42,0,0,0,42,0,0,0,42,0,0,0,50,0,42,0,50,0,42,0,52,0,44,0,52,0,46,0]
+  },
+  "kit": "drm1"
+}

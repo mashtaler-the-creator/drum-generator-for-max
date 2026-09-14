@@ -2,3 +2,4 @@ node_modules/
 *.log
 .DS_Store
 out/
+patterns-drm1.tmp/

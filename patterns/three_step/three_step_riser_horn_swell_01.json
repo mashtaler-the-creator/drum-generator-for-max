@@ -1,0 +1,23 @@
+{
+  "id": "three_step_riser_horn_swell_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 115,
+  "tags": ["riser","horn-swell","tom-cascade","build"],
+  "_approach": "Horn-stab density build with a tom cascade riding underneath: bar 1's sparse perc-slot horn hits (as in the horn-stab groove) double in bar 2 and climb in velocity, while tomHigh/tomMid/tomLow cascade downward across the last four steps into the drop, kick silent for the final beat to leave a gap.",
+  "_sources": ["https://www.melodigging.com/genre/3-step","https://thenativemag.com/how-3-step-became-the-definitive-sound-of-the-moment/"],
+  "tracks": {
+    "kick":    [110,0,0,0, 0,0,0,98, 0,0,0,0, 112,0,0,0,
+                112,0,0,0, 0,0,0,100, 0,0,0,0, 0,0,0,0],
+    "perc":    [0,0,0,72, 0,0,0,0, 0,0,76,0, 0,70,0,0,
+                0,84,0,90, 0,0,96,0, 0,102,0,108, 0,116,0,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 100,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,106,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,114,122]
+  }
+}

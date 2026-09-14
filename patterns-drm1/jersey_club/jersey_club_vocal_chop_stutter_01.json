@@ -1,0 +1,23 @@
+{
+  "id": "jersey_club_vocal_chop_stutter_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "vocal-chop",
+    "stutter",
+    "five-kick"
+  ],
+  "_approach": "Built around the genre's chopped-vocal identity: dense rim/perc 16th stutters (standing in for a chopped vocal hook run in short one- and two-syllable stabs) answer every gap in the 5-kick run, so the kick and the 'chop' interlock into one continuous rhythm. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://orphiq.com/resources/what-is-jersey-club",
+    "https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,108,0,0,0,104,0,0,96,0,0,76,0,114,0,0,0,110,0,0,0,106,0,0,98,0,0,78,0],
+    "clap": [0,60,64,0,0,62,66,0,0,60,0,0,0,64,0,0,0,60,64,0,0,62,66,0,0,60,64,0,0,62,0,66]
+  },
+  "kit": "drm1"
+}

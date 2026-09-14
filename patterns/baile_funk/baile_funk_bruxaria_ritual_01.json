@@ -1,0 +1,23 @@
+{
+  "id": "baile_funk_bruxaria_ritual_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": ["bruxaria","occult","ritual"],
+  "_approach": "Funk bruxaria's skeletal, stomping baile funk logic: punchy downbeat kicks, clipped claps and swung hats, ghost notes kept deliberately sparse so every hit lands heavy, per the genre's 2023-26 dark/occult wave. A cowbell 'bell toll' accent and a low tom hit stand in for the ritual chimes and foley the style favours.",
+  "_sources": ["https://www.melodigging.com/genre/beat-bruxaria","https://diffractionscollective.com/2026/01/08/the-underworld-of-funk-bruxaria-david-sir/"],
+  "tracks": {
+    "kick":     [122,0,0,0, 0,0,0,0, 118,0,0,0, 0,0,0,0,
+                124,0,0,0, 0,0,0,0, 120,0,0,0, 0,0,0,0],
+    "perc":     [0,0,0,0, 110,0,0,0, 0,0,0,0, 106,0,0,0,
+                0,0,0,0, 112,0,0,0, 0,0,0,0, 108,0,0,0],
+    "cowbell":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,64,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,66,0],
+    "tomLow":   [0,0,0,0, 0,0,0,40, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,42, 0,0,0,0, 0,0,0,0],
+    "hihat":    [0,0,34,0, 0,0,34,0, 0,0,34,0, 0,0,34,0,
+                0,0,36,0, 0,0,36,0, 0,0,36,0, 0,0,36,0]
+  }
+}

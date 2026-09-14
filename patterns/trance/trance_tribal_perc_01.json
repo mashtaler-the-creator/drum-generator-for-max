@@ -1,0 +1,25 @@
+{
+  "id": "trance_tribal_perc_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 138,
+  "tags": ["groove", "tribal", "percussion"],
+  "_approach": "The tribal/Balearic-adjacent branch of uplifting trance: congas and shaker carry a syncopated call-and-response over the standard 909 kick and offbeat open hat, closed hats thinned right back so the percussion reads clearly — the 'more organic' groove layer some 2000s trance productions add under the main hat pattern rather than replacing it.",
+  "_sources": ["https://www.drumloopai.com/trance/common-patterns-used-in-trance-beats/"],
+  "tracks": {
+    "kick":     [116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0,
+                 116,0,0,0, 116,0,0,0, 116,0,0,0, 116,0,0,0],
+    "snare":    [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+                 0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0],
+    "congaHigh":[0,0,54,0, 0,0,0,0, 0,0,56,0, 0,58,0,0,
+                 0,0,54,0, 0,0,0,0, 0,0,58,0, 0,60,0,0],
+    "congaLow": [0,0,0,0, 0,50,0,0, 0,0,0,0, 0,0,0,52,
+                 0,0,0,0, 0,52,0,0, 0,0,0,0, 0,0,0,54],
+    "shaker":   [40,0,42,0, 44,0,42,0, 40,0,42,0, 44,0,42,0,
+                 42,0,44,0, 46,0,44,0, 42,0,44,0, 46,0,44,0],
+    "openHat":  [0,0,0,0, 0,68,0,0, 0,0,0,0, 0,68,0,0,
+                 0,0,0,0, 0,70,0,0, 0,0,0,0, 0,70,0,0]
+  }
+}

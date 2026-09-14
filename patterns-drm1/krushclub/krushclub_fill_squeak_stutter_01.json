@@ -1,0 +1,23 @@
+{
+  "id": "krushclub_fill_squeak_stutter_01",
+  "style": "krushclub",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "fill",
+    "turnaround",
+    "bed-squeak"
+  ],
+  "_approach": "One-bar turnaround: the 5-kick Jersey shape holds through beat 3, then the bed squeak (clave) and clap stutter together into a 16th run through beat 4 while the kick drops out, the classic 'hand off to the drop' turnaround krushclub inherits from Jersey Club edits. Auto-injected into grooves every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,106,0,0,0,104,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,47,54,61,68,77],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,66,74,82,100]
+  },
+  "kit": "drm1"
+}

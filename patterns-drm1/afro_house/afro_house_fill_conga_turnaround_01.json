@@ -1,0 +1,25 @@
+{
+  "id": "afro_house_fill_conga_turnaround_01",
+  "style": "afro_house",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0.07,
+  "bpm": 122,
+  "tags": [
+    "fill",
+    "conga",
+    "turnaround"
+  ],
+  "_approach": "One-bar conga turnaround: the floor holds while high and low congas trade a rising phrase through beats 3-4 and the clap doubles on the last beat - the 'extra hand-drum phrase every eighth bar' IQSounds recommends. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0],
+    "drum1": [0,0,59,0,0,69,0,0,78,0,83,0,101,0,100,109],
+    "drum2": [0,0,0,0,0,0,0,0,68,0,81,0,91,0,103,0],
+    "hihat": [66,41,50,40,64,43,49,42,62,42,51,41,65,40,50,43],
+    "clap": [0,0,0,0,60,0,0,0,0,0,0,0,105,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "jersey_club_triplet_pickup_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0.02,
+  "tags": ["five-kick","pickup","loose"],
+  "_approach": "Same 5-kick skeleton, but built around the 'nudge, don't quantize' production advice: velocity is the only thing that moves (the engine has no per-note timing offset) so the 4th and 5th kicks read softer and later-feeling than the first three, with a light 0.02 swing pushing the whole grid just off dead-straight.",
+  "_sources": ["https://orphiq.com/resources/what-is-jersey-club"],
+  "tracks": {
+    "kick":   [110,0,0,0, 108,0,0,0, 100,0,0,82, 0,0,60,0,
+              112,0,0,0, 106,0,0,0, 98,0,0,80, 0,0,58,0],
+    "perc":   [0,0,0,0, 0,0,0,0, 0,0,94,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,94, 0,0,0,0, 0,0,0,0],
+    "hihat":  [0,0,0,0, 62,0,0,0, 0,0,0,0, 62,0,0,0,
+              0,0,0,0, 64,0,0,0, 0,0,0,0, 64,0,0,0]
+  }
+}

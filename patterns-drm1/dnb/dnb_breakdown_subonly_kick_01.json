@@ -1,0 +1,24 @@
+{
+  "id": "dnb_breakdown_subonly_kick_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0,
+  "tags": [
+    "breakdown",
+    "sub-only",
+    "sparse",
+    "reset"
+  ],
+  "_approach": "Sub-only reset: KAN Samples' 'sub-bass-only' breakdown approach voiced in drums - one soft kick pulse per bar standing in for the sub anchor, a rim ghost and a whisper of shaker, everything else gone. The quietest of the five DnB breakdowns, built to make the second build's snare roll feel enormous by contrast. Ref: KAN Samples' DnB arrangement guide (breakdown differentiation via sub-bass-only approaches). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement"
+  ],
+  "tracks": {
+    "kick": [58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [16,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,14,0,0,0]
+  },
+  "kit": "drm1"
+}

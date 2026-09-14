@@ -1,0 +1,26 @@
+{
+  "id": "techno_broken_electro_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 122,
+  "swing": 0.08,
+  "tags": [
+    "electro",
+    "broken",
+    "808"
+  ],
+  "_approach": "Detroit electro-adjacent techno in the Drexciya/Underground Resistance lineage: an 808 kick with a syncopated skip (beat 3 of bar 2 is omitted and replaced by an off-16th hit) under a layered snare+clap doubled hit on 2 and 4 with a delay-throw simulated as decaying ghost repeats, a cowbell accent standing in for the genre's electro-funk cowbell hits, and a sparse clave. Light swing keeps the 808 groove from feeling programmed dead straight. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.studiobrootle.com/electro-drum-patterns/",
+    "https://www.attackmagazine.com/technique/deconstructed/drexciya-black-sea/"
+  ],
+  "tracks": {
+    "kick": [114,0,0,0,112,0,0,0,114,0,0,0,112,0,0,0,114,0,0,0,112,0,0,0,0,0,96,0,112,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0],
+    "clap": [0,0,0,0,96,0,40,0,0,0,0,0,96,0,40,0,0,0,0,0,96,0,34,20,0,0,0,0,96,0,34,20],
+    "multi": [0,0,0,57,0,0,0,0,0,50,0,57,0,0,0,0,0,50,0,0,0,0,0,59,0,0,0,0,0,0,0,61],
+    "hihat": [0,0,52,0,0,0,52,0,0,0,52,0,0,0,52,0,0,0,54,0,0,0,54,0,0,0,54,0,0,0,54,0]
+  },
+  "kit": "drm1"
+}

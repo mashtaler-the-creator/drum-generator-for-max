@@ -1,0 +1,29 @@
+{
+  "id": "amapiano_riser_log_drum_climb_01",
+  "style": "amapiano",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": ["riser","log-drum","build"],
+  "_approach": "Log-drum-led build: the log drum (tomLow+congaLow) grows from one soft accent per bar to a dense, climbing roll across four bars, imitating the pitched log drum's own build habit while the shaker steadily thickens and the kick stays minimal throughout so the log drum reads as the lead into the drop.",
+  "_sources": ["https://splice.com/blog/what-is-amapiano-music/","https://www.inspiredbybeatz.com/en/amapiano-production-how-the-log-drum-sound-is-created/"],
+  "tracks": {
+    "kick":     [92,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                 92,0,0,0, 0,0,0,0, 88,0,0,0, 0,0,0,0,
+                 96,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0,
+                 104,0,0,0, 100,0,0,0, 100,0,0,0, 106,0,0,0],
+    "tomLow":   [0,0,0,0, 0,0,0,0, 0,60,0,0, 0,0,0,0,
+                 0,0,0,0, 0,0,66,0, 0,74,0,0, 0,0,0,0,
+                 0,0,0,0, 78,0,0,0, 86,0,0,92, 0,0,96,0,
+                 0,100,0,0, 104,0,0,108, 0,0,112,0, 0,118,0,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,58,0,0,
+                 0,0,0,0, 0,0,82,0, 0,0,0,0, 0,90,0,0,
+                 0,0,106,0, 0,110,0,0, 114,0,0,120, 0,0,127,0],
+    "shaker":   [48,0,0,0, 46,0,0,0, 47,0,0,0, 46,0,0,0,
+                 52,0,40,0, 50,0,40,0, 51,0,40,0, 52,0,40,0,
+                 56,62,56,62, 56,62,56,62, 56,62,56,62, 56,62,56,62,
+                 80,88,96,104, 80,88,96,104, 80,88,96,104, 80,88,96,104]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "dnb_riser_jumpup_hype_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0,
+  "tags": [
+    "riser",
+    "build",
+    "jumpup",
+    "hype"
+  ],
+  "_approach": "Jump-up hype build: the punchy jump-up bounce intensifies rather than stripping back - the kick/snare stay locked, the offbeat open-hat skank doubles into a 16th pattern, and a clap roll fires through the last beat into a crash-topped final hit, the festival hands-up lift that separates jump-up's build from neuro's edit-driven tension. Ref: Preset Drive's jump-up production guide (punchy, direct drums, hooky bounce); Melodigging's neurofunk-vs-jumpup contrast on catchy vs. technical builds. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.presetdrive.com/jump-up-dnb-production-guide/",
+    "https://www.melodigging.com/genre/neurofunk"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,112,0,0,0,0,0,100,0,0,0,90,0,0,0,0,0],
+    "snare": [0,0,0,0,115,0,0,0,0,0,0,0,113,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,116,0,0,0],
+    "clap": [0,0,0,0,84,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,86,92,98,110],
+    "hihat": [62,0,0,0,58,0,0,0,60,0,0,0,59,0,0,0,64,0,0,0,60,0,0,0,62,0,0,0,61,0,0,0],
+    "openHat": [0,0,54,0,0,0,52,0,0,0,55,0,0,0,0,0,0,56,0,58,0,60,0,62,0,64,0,66,0,68,0,70],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120]
+  },
+  "kit": "drm1"
+}

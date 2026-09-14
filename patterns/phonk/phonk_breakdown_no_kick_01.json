@@ -1,0 +1,17 @@
+{
+  "id": "phonk_breakdown_no_kick_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 75,
+  "swing": 0.12,
+  "tags": ["breakdown","memphis","no-kick"],
+  "_approach": "Kick removed entirely from the classic Memphis lane: the cowbell hook and a lone snare on beat 3 of each bar keep the half-time skeleton legible without any low end, the vocal-sample-driven pocket SpaceGhostPurrp-style tracks use before the kick returns.",
+  "_sources": ["https://daily.redbullmusicacademy.com/2012/07/noz-pit-stop-memphis-spanish-fly/","https://en.wikipedia.org/wiki/Phonk"],
+  "tracks": {
+    "cowbell":  [66,0,0,0, 62,0,0,0, 68,0,0,0, 62,0,0,0,
+                68,0,0,0, 64,0,0,0, 70,0,0,0, 64,0,0,0],
+    "snare":    [0,0,0,0, 0,0,0,0, 88,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 90,0,0,0, 0,0,0,0]
+  }
+}

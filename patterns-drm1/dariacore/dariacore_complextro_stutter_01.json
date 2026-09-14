@@ -1,0 +1,24 @@
+{
+  "id": "dariacore_complextro_stutter_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 175,
+  "tags": [
+    "groove",
+    "complextro",
+    "stutter-edit"
+  ],
+  "_approach": "Wikipedia lists complextro among dariacore's EDM ingredients. Complextro's studio-edit stutter (the same hit repeated in a rapidly shortening burst, a glitch/gater effect) is approximated here as fast micro-repeats of the kick and clap on consecutive 16ths at descending velocity, breaking up an otherwise plain four-on-the-floor pulse — the 'edited within an inch of its life' feel dariacore inherits from complextro rather than from Jersey Club or breakcore. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [114,100,86,0,112,0,0,0,114,100,86,0,112,0,0,0,114,100,86,72,112,0,0,0,114,100,86,0,112,0,96,82],
+    "snare": [0,0,0,0,0,0,0,0,102,90,78,0,0,0,0,0,0,0,0,0,0,0,0,0,102,90,78,66,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,100,88,76,0,0,0,0,0,0,0,0,0,0,0,0,0,100,88,76,64,0,0,0,0],
+    "hihat": [0,44,0,44,0,44,0,44,0,44,0,44,0,44,0,44,0,46,0,46,0,46,0,46,0,46,0,46,0,46,0,46]
+  },
+  "kit": "drm1"
+}

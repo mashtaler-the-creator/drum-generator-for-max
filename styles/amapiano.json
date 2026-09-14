@@ -1,0 +1,34 @@
+{
+  "style": "amapiano",
+  "name": "Amapiano",
+  "family": "african",
+  "bpm": [110, 115],
+  "swing": "0.05-0.16",
+  "summary": "South African house hybrid built on a tuned, syncopated log-drum bassline, a continuous shaker that acts as the real timekeeper, and a deliberately sparse, understated kick. This library approximates the log drum's RHYTHM only (tomLow+congaLow) - the genuine pitched instrument is a synth/bass part outside this drum-only kit's reach.",
+  "sounds": {
+    "kick": "Soft, rounded, house-adjacent kick reduced to one or two hits a bar so it never competes with the log drum's low end; a tighter kick suits the Bacardi/underground lane.",
+    "snare": "Rarely used as such - rimshots and claps (rim/perc slots) supply syncopated backbeat answers, often a Kwaito-descended clave-adjacent conga shape rather than a straight 2-and-4.",
+    "hats": "Sparse, mostly offbeat accents kept well under the shaker in the mix - the shaker, not the hat, is the genre's running 16th engine.",
+    "percussion": "tomLow+congaLow approximate the log drum's rhythm (NOT its pitched bass tone); a continuous, velocity-contoured shaker is the true timekeeper; congas/rimshots/claps layer syncopated call-and-response on top.",
+    "cymbals": "Essentially absent - tension is built through the piano/log-drum interplay, not cymbal energy; a ride, when used at all, sits far back and low in a breakdown."
+  },
+  "machines": [
+    "LinnDrum / Oberheim DMX - soft house-adjacent kick for the Private School lane (owned)",
+    "Roland TR-909 - tighter kick for the Bacardi/underground lane; hats (owned)",
+    "Roland TR-727 - synthesized conga, clave, cowbell and shaker patches (owned)",
+    "Roland CR-78 - softer analogue conga/bongo tones for the Private School lane (owned)",
+    "Roland TR-808 - pitched-down low tom as the log-drum rhythm reference (owned)",
+    "E-mu SP-1200 - lo-fi resample for the log-drum attack reference (owned)",
+    "Korg KR-55 / KPR-77 - period-adjacent latin percussion rims and shakers (owned)",
+    "A tuned synth/sampled log-drum patch and real congas/shakers - the genuine pitched log drum and live hand percussion this drum-only library cannot reproduce (get elsewhere)"
+  ],
+  "references": [
+    "Kabza De Small & DJ Maphorisa - Scorpion Kings sessions",
+    "Vigro Deep - various log-drum-led releases",
+    "Muziqal Tone - Quick To Judge",
+    "De Mthuda - John Wick",
+    "Kooldrink - Pop Piano crossover productions",
+    "Tyla - global Amapiano-adjacent crossover"
+  ],
+  "doc": "docs/styles/amapiano.md"
+}

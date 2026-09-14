@@ -1,0 +1,23 @@
+{
+  "id": "jazz_house_breakdown_ride_only_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 123,
+  "tags": [
+    "breakdown",
+    "ride-only",
+    "no-kick"
+  ],
+  "_approach": "Kick removed entirely; the loud/soft alternating ride and a light rim ghost pattern carry the swing on their own over a soft continuous shaker, keeping the 59%-MPC feel alive without any low end. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"
+  ],
+  "tracks": {
+    "hh1Closed": [62,0,46,0,64,0,46,0,62,0,46,0,66,0,48,0,64,0,48,0,66,0,48,0,64,0,48,0,68,0,50,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0],
+    "hihat": [19,0,21,0,19,0,22,0,19,0,21,0,19,0,24,0,19,0,21,0,19,0,22,0,19,0,21,0,19,0,24,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "three_step_deep_house_lean_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 113,
+  "tags": ["deep","afro-house-lean","minimal"],
+  "_approach": "The bottom of the 3-step range where it shades into deep/Afro house: 113 bpm, only a soft shaker and a lone rim ghost decorate the drop-the-three kick, no clap, no percussion loop. Thakzin's own framing of 3-step as reviving Afro house's roots rather than piling on new layers.",
+  "_sources": ["https://grayarea.co/magazine/3-step-the-next-sound-in-afro-house","https://rollingstoneafrica.com/music/music-features/the-rise-of-3-step-south-africas-latest-dance-music-genre/"],
+  "tracks": {
+    "kick":   [104,0,0,0, 100,0,0,0, 0,0,0,0, 106,0,0,0,
+               102,0,0,0, 98,0,0,0, 0,0,0,0, 108,0,0,0],
+    "shaker": [52,0,36,0, 54,0,34,0, 51,0,35,0, 55,0,33,0,
+               54,0,38,0, 52,0,36,0, 53,0,37,0, 57,0,35,0],
+    "rim":    [0,0,0,0, 0,0,0,0, 0,44,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,46,0,0, 0,0,0,0]
+  }
+}

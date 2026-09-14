@@ -1,0 +1,21 @@
+{
+  "id": "jersey_club_riser_kick_roll_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": [
+    "riser",
+    "kick-roll"
+  ],
+  "_approach": "Bar 1 holds the standard 5-kick pattern; bar 2 doubles the back half into a straight 16th kick roll climbing to 127 on the last step, the classic 'run it up before the drop' Jersey club transition move. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/jersey-club/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,106,0,0,0,102,0,0,94,0,0,74,0,110,0,0,0,108,0,0,100,104,108,112,116,120,123,126,127],
+    "clap": [0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

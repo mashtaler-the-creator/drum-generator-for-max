@@ -1,0 +1,30 @@
+{
+  "id": "ukfunky_riser_shaker_lift_01",
+  "style": "ukfunky",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 132,
+  "tags": [
+    "riser",
+    "build",
+    "shaker",
+    "hats",
+    "lift"
+  ],
+  "_approach": "Shaker-and-hat density lift into the drop: the syncopated offbeat hats and shaker bed thicken from sparse 8ths to a full swung 16th lattice while the tresillo cowbell accelerates underneath, the kick staying 4x4 in bar 1 and thinning to just the downbeat in bar 2 so the open-hat choke and a final crash own the peak. Ref: the genre's rule that hats never carpet a flat 16th (Melodigging), EDMProd's guide to build-up density lifts. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/ultimate-guide-build-ups/",
+    "https://www.melodigging.com/genre/uk-funky",
+    "https://blog.native-instruments.com/uk-garage-music/"
+  ],
+  "tracks": {
+    "kick": [94,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [40,0,58,0,43,0,60,0,40,0,56,0,45,0,62,0,46,48,64,32,50,50,66,46,48,52,68,54,53,56,72,60],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,70,0,0,0,0,0,0,0,76,0,0,0,0,82],
+    "multi": [55,0,0,0,0,0,59,0,0,0,0,0,61,0,0,0,67,0,0,70,0,0,74,0,0,78,0,0,82,0,86,0],
+    "clap": [0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,96,0,0,0,0,0,0,60,100,0,70,80],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127]
+  },
+  "kit": "drm1"
+}

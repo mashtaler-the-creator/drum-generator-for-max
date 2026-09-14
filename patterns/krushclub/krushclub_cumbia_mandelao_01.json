@@ -1,0 +1,25 @@
+{
+  "id": "krushclub_cumbia_mandelao_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 146,
+  "tags": ["groove", "four-on-floor", "cumbia", "mandelao"],
+  "_approach": "RYM's genre page lists Cumbia and Funk mandelão among krushclub's fusion partners, alongside RYM's note that krushclub sometimes runs a 'four-on-the-floor rhythm' instead of the Jersey shape. This groove takes that branch: straight four-on-the-floor kick, a guacharaca-style clave 16th ostinato (the cumbia signature), and a tamborzão-style syncopated congaHigh/congaLow call-and-response standing in for funk mandelão's rolling low tom pattern, with the clap kept on 2 and 4 to stay legible as club music.",
+  "_sources": ["https://rateyourmusic.com/genre/krushclub/"],
+  "tracks": {
+    "kick":     [112,0,0,0, 108,0,0,0, 110,0,0,0, 108,0,0,0,
+                 112,0,0,0, 108,0,0,0, 110,0,0,0, 108,0,0,0],
+    "clave":    [0,44,0,46, 0,44,0,46, 0,44,0,46, 0,44,0,46,
+                 0,46,0,48, 0,46,0,48, 0,46,0,48, 0,46,0,48],
+    "congaHigh":[0,0,52,0, 0,0,0,0, 0,0,54,0, 0,0,0,0,
+                 0,0,52,0, 0,0,0,0, 0,0,56,0, 0,0,0,0],
+    "congaLow": [0,0,0,0, 0,0,50,0, 0,0,0,0, 0,0,52,0,
+                 0,0,0,0, 0,0,50,0, 0,0,0,0, 0,0,54,0],
+    "snare":    [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+                 0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0],
+    "hihat":    [0,0,38,0, 0,0,38,0, 0,0,38,0, 0,0,38,0,
+                 0,0,40,0, 0,0,40,0, 0,0,40,0, 0,0,40,0]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "dnb_breakdown_halftime_pad_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 172,
+  "swing": 0.03,
+  "tags": ["breakdown","halftime","pad","ride-hats"],
+  "_approach": "Pad section: only ride and hats carry the halftime pulse - no kick, no snare - so a held pad or vocal owns the space, voiced purely through a soft ride-and-hat wash. Ref: KAN Samples' DnB arrangement guide on the breakdown as an emotional reset; EDMProd's complete drum & bass guide on stripping sections back to atmosphere.",
+  "_sources": ["https://kansamples.com/blogs/learn/dnb-track-arrangement","https://www.edmprod.com/how-to-make-drum-and-bass/"],
+  "tracks": {
+    "ride": [44,0,0,0, 42,0,0,0, 46,0,0,0, 44,0,0,0, 46,0,0,0, 44,0,0,0, 48,0,0,0, 46,0,0,0],
+    "hihat": [0,0,32,0, 0,0,30,0, 0,0,32,0, 0,0,30,0, 0,0,34,0, 0,0,32,0, 0,0,34,0, 0,0,32,0]
+  }
+}

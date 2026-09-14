@@ -1,0 +1,25 @@
+{
+  "id": "krushclub_riser_halftime_double_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "halftime",
+    "snare-accel"
+  ],
+  "_approach": "A halftime-to-doubletime build: the halftime trap backbeat (snare on beat 3 only) from the halftime groove accelerates to 8ths in bar 2, then to a full 16th snare roll ramping 60 to 127 as the kick thins to nothing, the classic trap/hyperpop half-time-into-roll trick that krushclub shares with dariacore-adjacent internet EDM. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/krushclub",
+    "https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [70,0,0,64,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,60,0,68,0,76,0,84,0,92,96,100,104,108,114,120,127],
+    "hihat": [0,0,44,0,0,0,44,0,0,44,44,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

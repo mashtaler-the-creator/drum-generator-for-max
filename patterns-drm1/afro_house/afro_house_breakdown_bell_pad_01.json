@@ -1,0 +1,25 @@
+{
+  "id": "afro_house_breakdown_bell_pad_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 123,
+  "tags": [
+    "breakdown",
+    "cowbell",
+    "ride",
+    "no-kick"
+  ],
+  "_approach": "Bell-and-cymbal breakdown: son clave on the cowbell, a soft 8th ride wash and a quiet 16th shaker with no kick - the long-cycle timeline keeps time under the pad or vocal before the percussion build returns. Melodigging: breakdowns strip to 'percussion + pad/chant'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/afro-tech",
+    "https://orphiq.com/resources/what-is-afro-house"
+  ],
+  "tracks": {
+    "multi": [86,0,0,86,0,0,87,0,0,0,86,0,89,0,0,0,87,0,58,88,0,0,89,0,55,0,87,0,86,0,57,0],
+    "hh1Closed": [61,0,50,0,64,0,53,0,62,0,51,0,60,0,54,0,63,0,52,0,61,0,50,0,64,0,53,0,62,0,51,0],
+    "hihat": [43,28,42,27,42,30,41,30,40,29,43,28,42,27,42,30,41,30,40,29,43,28,42,27,42,30,41,30,40,29,43,28]
+  },
+  "kit": "drm1"
+}

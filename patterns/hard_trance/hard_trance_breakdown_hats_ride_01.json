@@ -1,0 +1,21 @@
+{
+  "id": "hard_trance_breakdown_hats_ride_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 147,
+  "tags": ["breakdown", "hats", "ride", "no-kick"],
+  "_approach": "Kick removed entirely; the offbeat closed hats and an alternating loud/soft ride keep the tempo alive over a continuous soft 16th shaker bed. One open hat cue in the last bar hints at the return.",
+  "_sources": ["https://en.wikipedia.org/wiki/Hard_trance"],
+  "tracks": {
+    "hihat":   [0,42,0,46, 0,44,0,48, 0,42,0,46, 0,44,0,50,
+                0,44,0,48, 0,46,0,50, 0,44,0,48, 0,48,0,54],
+    "ride":    [72,0,50,0, 72,0,50,0, 72,0,50,0, 72,0,50,0,
+                72,0,52,0, 72,0,52,0, 72,0,54,0, 72,0,54,0],
+    "shaker":  [30,32,34,36, 30,32,34,36, 30,32,34,36, 30,32,34,38,
+                32,34,36,38, 32,34,36,38, 32,34,36,38, 32,34,36,40],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,70,0]
+  }
+}

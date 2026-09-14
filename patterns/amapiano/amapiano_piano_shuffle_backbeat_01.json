@@ -1,0 +1,23 @@
+{
+  "id": "amapiano_piano_shuffle_backbeat_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 111,
+  "tags": ["shuffle","backbeat","classic"],
+  "_approach": "The classic backbeat read: rim/clap layered hard on 2 and 4 under heavy swing (0.16, near the top of the style's shuffle range) so the 'piano shuffle' is felt even without a melodic part, log drum moving in stepwise syncopation between the backbeats, kick spaced rather than 4x4.",
+  "_sources": ["https://create.routenote.com/blog/beatmakers-guide-how-to-make-an-amapiano-beat/","https://beatstorapon.com/blog/how-to-make-amapiano-beat/"],
+  "tracks": {
+    "perc":   [0,0,0,0, 92,0,0,0, 0,0,0,0, 94,0,0,0,
+               0,0,0,0, 94,0,0,0, 0,0,0,0, 96,0,0,0],
+    "rim":    [0,0,0,0, 70,0,0,0, 0,0,0,0, 72,0,0,0,
+               0,0,0,0, 72,0,0,0, 0,0,0,0, 74,0,0,0],
+    "kick":   [98,0,0,0, 0,0,0,0, 0,0,90,0, 0,0,0,0,
+               96,0,0,0, 0,0,0,0, 0,0,92,0, 0,0,0,0],
+    "tomLow": [0,0,58,0, 0,0,0,52, 0,0,0,0, 0,0,60,0,
+               0,0,60,0, 0,0,0,54, 0,0,0,0, 0,0,62,0],
+    "shaker": [62,42,60,40, 0,44,62,42, 62,43,60,41, 0,45,63,43,
+               64,44,62,42, 0,46,64,44, 64,45,62,43, 0,47,65,45]
+  }
+}

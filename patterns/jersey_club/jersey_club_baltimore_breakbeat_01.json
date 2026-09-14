@@ -1,0 +1,19 @@
+{
+  "id": "jersey_club_baltimore_breakbeat_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0.08,
+  "tags": ["baltimore-club","breakbeat","lineage"],
+  "_approach": "The pre-Jersey Baltimore club ancestor: an uptempo house/hip-hop breakbeat hybrid around 125-130 BPM with the kick syncopated in 8ths under a steady snare backbeat on 2 and 4, before Newark producers rewired the kick into the bouncier 5-kick pattern. Included to show the lineage DJ Tameil carried from Baltimore into Brick City club.",
+  "_sources": ["https://www.thefader.com/2014/06/12/the-skys-the-limit-an-oral-history-of-jersey-club","https://djmag.com/features/endless-evolution-jersey-club","https://en.wikipedia.org/wiki/Jersey_club"],
+  "tracks": {
+    "kick":   [110,0,0,70, 0,0,100,0, 106,0,0,0, 70,0,0,0,
+              112,0,0,72, 0,0,102,0, 108,0,0,0, 72,0,0,0],
+    "snare":  [0,0,0,0, 104,0,0,0, 0,0,0,0, 104,0,0,0,
+              0,0,0,0, 106,0,0,0, 0,0,0,0, 106,0,0,0],
+    "hihat":  [56,0,56,0, 56,0,56,0, 56,0,56,0, 56,0,56,0,
+              58,0,58,0, 58,0,58,0, 58,0,58,0, 58,0,58,0]
+  }
+}

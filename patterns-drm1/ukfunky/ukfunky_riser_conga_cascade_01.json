@@ -1,0 +1,32 @@
+{
+  "id": "ukfunky_riser_conga_cascade_01",
+  "style": "ukfunky",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 130,
+  "tags": [
+    "riser",
+    "build",
+    "conga",
+    "tribal",
+    "cowbell"
+  ],
+  "_approach": "Tribal conga-cascade build into the drop: high/low conga call-and-response thickens bar by bar while the tresillo cowbell accelerates from a sparse pulse to a dense 16th cluster, the floor holding 4x4 in bar 1, breaking tresillo-style in bar 2, thinning to a single pickup in bar 3, and dropping out entirely in bar 4 so a crash plus a conga/tom peak can land on the very last 16th before the drop. Ref: the DJ Gregory/Karizma tribal-house lineage behind ukfunky_tribal_conga_01, Attack Magazine's tribal-percussion techniques in \"Big House\". (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/big-house/",
+    "https://en.wikipedia.org/wiki/Tribal_house",
+    "https://www.melodigging.com/genre/uk-funky"
+  ],
+  "tracks": {
+    "kick": [94,0,0,0,90,0,0,0,92,0,0,0,90,0,0,0,96,0,0,88,0,0,86,0,0,0,90,0,92,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,55,0,0,59,0,0,0,0,57,0,0,61,0,0,0,65,0,0,68,0,0,0,0,67,0,0,72,0,0,0,78,0,82,0,80,0,84,0,82,0,86,0,87,0,89,91,0,95,0,99,0,103,0,106,0,0,0,0,0,0,124],
+    "drum2": [53,0,0,0,0,57,0,0,55,0,0,0,0,59,0,0,0,63,0,0,67,0,0,0,0,65,0,0,70,0,0,0,76,0,0,0,0,79,0,0,81,0,0,0,0,83,0,0,0,0,86,0,0,0,89,0,0,0,93,0,0,0,0,0],
+    "multi": [57,0,0,0,0,0,61,0,0,0,0,0,59,0,0,0,65,0,0,0,0,0,68,0,0,63,0,0,70,0,0,0,74,0,0,70,0,0,78,0,0,72,0,76,80,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,98,0,0,0,0,0,0,60,100,0,64,68,0,0,72,76,80,0,84,88,92,0,96,100,104,108,114,120],
+    "hh1Closed": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,43,0,42,0,45,0,43,0,46,0,45,0,48,0,48,0,51,0,50,0,53,0,51,0,54,0,53,0,56],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127],
+    "hihat": [40,24,32,26,43,25,34,38,40,23,33,27,45,26,35,40,42,26,34,27,46,26,35,40,42,25,34,29,48,27,37,42,45,27,37,30,50,29,38,43,45,27,38,32,51,30,40,45,48,30,40,34,53,32,42,46,48,30,41,35,54,34,43,56]
+  },
+  "kit": "drm1"
+}

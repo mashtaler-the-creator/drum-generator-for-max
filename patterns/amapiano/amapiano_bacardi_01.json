@@ -1,0 +1,23 @@
+{
+  "id": "amapiano_bacardi_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 113,
+  "tags": ["bacardi","raw","township"],
+  "_approach": "The Pretoria Bacardi-house lineage that fed into Amapiano: tighter, more syncopated looping than the lush end of the genre, woody rim/clave hits standing in for the 'woody percussion hits' melodigging cites, a compact kick pattern (1 and the 'and' of 3) and minimal swing - Bacardi's own feel is straighter and more insistent than the shuffled private-school pocket.",
+  "_sources": ["https://www.melodigging.com/genre/amapiano"],
+  "tracks": {
+    "kick":   [106,0,0,0, 0,0,0,0, 0,0,100,0, 0,0,0,0,
+               108,0,0,0, 0,0,0,0, 0,0,102,0, 0,0,0,0],
+    "clave":  [0,0,0,80, 0,0,74,0, 0,78,0,0, 0,72,0,0,
+               0,0,0,82, 0,0,76,0, 0,80,0,0, 0,74,0,0],
+    "rim":    [0,0,0,0, 0,0,0,0, 62,0,0,0, 0,0,0,58,
+               0,0,0,0, 0,0,0,0, 64,0,0,0, 0,0,0,60],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,0,0,0, 66,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 68,0,50,0],
+    "shaker": [56,0,0,0, 54,0,0,0, 55,0,0,0, 54,0,0,0,
+               58,0,0,0, 56,0,0,0, 57,0,0,0, 56,0,0,0]
+  }
+}

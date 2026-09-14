@@ -1,0 +1,23 @@
+{
+  "id": "amapiano_sgija_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 110,
+  "tags": ["sgija","percussion-forward","dark"],
+  "_approach": "Sgija's darker, drum-centric strip-down: melodigging describes it as 'clattering shakers, rimshots and log-drum bass figures' with the jazzy-keys palette pared away - here that means a hard, loud log drum (tomLow at accent velocity), busy dry rimshots, a tom fill every second bar, and almost no kick at all (kicks are optional/sparse in this variant). NOTE: tomLow+congaLow approximate the log drum's RHYTHM only - the real log drum is a tuned, pitch-bent kick/808/bass hybrid this drum-only library cannot reproduce; the melodic/bass part must come from a synth.",
+  "_sources": ["https://www.melodigging.com/genre/sgija"],
+  "tracks": {
+    "tomLow": [108,0,0,0, 0,0,92,0, 0,0,100,0, 0,84,0,0,
+               110,0,0,0, 0,0,94,0, 0,0,102,0, 0,86,0,0],
+    "rim":    [0,0,62,0, 0,58,0,0, 0,64,0,0, 56,0,60,0,
+               0,0,64,0, 0,60,0,0, 0,66,0,0, 58,0,62,0],
+    "kick":   [0,0,0,0, 0,0,0,0, 74,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomMid": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,88],
+    "shaker": [0,46,0,44, 0,45,0,43, 0,46,0,44, 0,45,0,43,
+               0,48,0,46, 0,47,0,45, 0,48,0,46, 0,47,0,45]
+  }
+}

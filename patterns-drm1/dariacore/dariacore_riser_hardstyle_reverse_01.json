@@ -1,0 +1,24 @@
+{
+  "id": "dariacore_riser_hardstyle_reverse_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 178,
+  "tags": [
+    "riser",
+    "hardstyle",
+    "reverse-swell"
+  ],
+  "_approach": "A reverse-kick-style swell (tomLow slot, borrowed from the hard-dance vocabulary dariacore's hardstyle-kick lineage shares) doubling in density every half bar, growing under the plain four-on-the-floor hardstyle kick until both peak together on the last 16th with a crash. As with the kick-roll riser, this covers only the drum layer of a dariacore build — the actual tension in the genre usually comes from the sample's pitch/tempo edit riding alongside it. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,0,112,0,0,0,110,0,0,127],
+    "drum2": [0,0,0,0,40,0,0,0,0,0,44,0,0,0,48,0,52,0,56,0,60,0,64,0,68,72,76,80,86,92,100,110],
+    "hihat": [0,42,0,42,0,42,0,42,0,42,0,42,0,42,0,42,0,44,0,44,0,44,0,44,0,44,0,44,0,44,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127]
+  },
+  "kit": "drm1"
+}

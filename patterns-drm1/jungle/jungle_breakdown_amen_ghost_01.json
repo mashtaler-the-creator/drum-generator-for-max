@@ -1,0 +1,26 @@
+{
+  "id": "jungle_breakdown_amen_ghost_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 170,
+  "swing": 0.06,
+  "tags": [
+    "breakdown",
+    "stripped",
+    "ghost",
+    "amen"
+  ],
+  "_approach": "Stripped amen-ghost breakdown: the kick is gone entirely and only the amen's low-velocity ghost-snare chatter and a soft ride wash remain, so the room to breathe is total; a single soft clap on the last beat of bar 2 cues the kick's return. Ref: Magnetic Magazine's note that 'the snare carries the groove' even when everything else drops out; KAN Samples' DnB arrangement guide on the drumless breakdown as an emotional reset. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://magneticmag.com/2026/06/music-production-tips-for-making-jungle/",
+    "https://kansamples.com/blogs/learn/dnb-track-arrangement",
+    "https://www.edmprod.com/how-to-make-jungle-music/"
+  ],
+  "tracks": {
+    "snare": [0,0,0,0,24,0,18,0,0,20,0,0,26,0,18,0,0,0,20,0,26,0,0,22,0,0,18,0,30,0,0,32],
+    "hh1Closed": [44,0,36,0,44,0,36,0,44,0,36,0,44,0,36,0,46,0,38,0,46,0,38,0,46,0,38,0,46,0,40,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0]
+  },
+  "kit": "drm1"
+}

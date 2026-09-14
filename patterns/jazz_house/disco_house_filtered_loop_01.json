@@ -1,0 +1,21 @@
+{
+  "id": "disco_house_filtered_loop_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.10,
+  "bpm": 124,
+  "tags": ["disco-house", "filtered-loop", "purple-disco-machine"],
+  "_approach": "The 'filtered disco loop' school: a punchy 4/4 kick, an open hat on every offbeat 8th, and a flammed clap (a soft grace note just ahead of the main hit, mimicking the layered-clap flam nu-disco producers use) rather than a single clean transient. Tighter swing than the jazz-house patterns -- 55% MPC (engine 0.10). Reference: Purple Disco Machine 'Hypnotized'.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"],
+  "tracks": {
+    "kick":    [108,0,0,0, 106,0,0,0, 110,0,0,0, 104,0,0,0,
+                109,0,0,0, 107,0,0,0, 111,0,0,0, 105,0,0,0],
+    "perc":    [0,0,0,48, 100,0,0,0, 0,0,0,50, 102,0,0,0,
+                0,0,0,50, 101,0,0,0, 0,0,0,52, 103,0,0,0],
+    "openHat": [0,0,92,0, 0,0,92,0, 0,0,92,0, 0,0,92,0,
+                0,0,94,0, 0,0,94,0, 0,0,96,0, 0,0,96,0],
+    "hihat":   [0,40,0,0, 0,42,0,0, 0,40,0,0, 0,44,0,0,
+                0,42,0,0, 0,44,0,0, 0,42,0,0, 0,46,0,0]
+  }
+}

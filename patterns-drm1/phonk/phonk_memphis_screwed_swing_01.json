@@ -1,0 +1,24 @@
+{
+  "id": "phonk_memphis_screwed_swing_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 68,
+  "swing": 0.28,
+  "tags": [
+    "memphis",
+    "chopped-screwed",
+    "drag"
+  ],
+  "_approach": "Heavy 0.28 swing simulates the chopped-and-screwed drag DJ Screw's tapes are named for: the snare lands noticeably behind the grid, hats are sparse and uneven in velocity to feel loose rather than programmed, and the kick sits far apart, leaving long gaps of near-silence between hits. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Phonk",
+    "https://daily.redbullmusicacademy.com/2012/07/noz-pit-stop-memphis-spanish-fly/"
+  ],
+  "tracks": {
+    "kick": [108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0],
+    "hihat": [0,0,30,0,0,0,38,0,0,0,28,0,0,0,36,0,0,0,32,0,0,0,40,0,0,0,30,0,0,0,38,0]
+  },
+  "kit": "drm1"
+}

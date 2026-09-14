@@ -1,0 +1,23 @@
+{
+  "id": "krushclub_riser_hat_roll_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["riser", "hat-roll", "build"],
+  "_approach": "Trap/hyperpop-style hi-hat roll build: bar 1 keeps the Jersey kick and lets the hats climb from spaced 16ths to a dense wall; bar 2 drops the kick to just the downbeat while the hat roll and a rising clap stutter carry the tension to 127, crash on the last 16th. Mirrors the hi-hat-roll build vocabulary EDMProd documents for trap/hyperpop-adjacent EDM, applied to the krushclub palette.",
+  "_sources": ["https://www.edmprod.com/ultimate-guide-build-ups/", "https://www.edmprod.com/krushclub/"],
+  "tracks": {
+    "kick":    [112,0,0,0, 108,0,0,0, 106,0,0,0, 0,0,0,0,
+                110,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 96,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 100,108,116,124],
+    "hihat":   [40,0,42,0, 44,0,46,0, 48,50,52,54, 56,58,60,64,
+                60,64,68,72, 76,80,84,88, 92,96,100,104, 108,112,118,124],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127],
+    "crash":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,127]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "grime_breakdown_clave_only_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": ["breakdown","clave","percussion-only","icy"],
+  "_approach": "Percussion-as-melody stripped to a breakdown: clave, cowbell and conga iciness alone, no kick or snare anywhere — the offkilter-perc approach with even the halftime spine removed. Ref: grime DNA doc (percussion filling the hi-hat/lead role).",
+  "_sources": ["https://bassgorilla.com/make-grime-drums-using-ableton-live-9/"],
+  "tracks": {
+    "clave": [
+      0,0,26,0, 0,0,0,0, 0,22,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,24,0,0, 0,0,20,0
+    ],
+    "cowbell": [
+      0,0,0,0, 0,0,0,0, 0,0,0,30, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "congaHigh": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 28,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "amapiano_riser_clap_build_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 112,
+  "tags": ["riser","clap-build","rim","build"],
+  "_approach": "Clap/rim stepwise build: bar 1 has the backbeat clap on 2 and 4 as usual, bar 2 fills in the gaps step by step (8ths, then 16ths) with velocity climbing to 127 on the last four steps, kick thinning to just the downbeat so the clap wall leads clearly into the drop.",
+  "_sources": ["https://create.routenote.com/blog/beatmakers-guide-how-to-make-an-amapiano-beat/"],
+  "tracks": {
+    "kick": [96,0,0,0, 0,0,0,0, 92,0,0,0, 0,0,0,0,
+             100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "perc": [0,0,0,0, 82,0,0,0, 0,0,0,0, 84,0,0,0,
+             86,0,0,0, 90,0,0,0, 96,0,102,0, 110,116,122,127],
+    "rim":  [0,0,0,0, 60,0,0,0, 0,0,0,0, 62,0,0,0,
+             0,0,70,0, 0,0,76,0, 0,0,84,0, 0,0,92,0]
+  }
+}

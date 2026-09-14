@@ -1,0 +1,23 @@
+{
+  "id": "jazz_house_ghost_kick_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.16,
+  "bpm": 121,
+  "tags": ["ghost-kick", "live-feel", "st-germain"],
+  "_approach": "A live-feel groove built the way St Germain and Masters At Work programmed house drums: the main 4/4 kick gets quiet ghost kicks slipped in off the main grid, humanized velocities throughout, and rim skips instead of a busy hat pattern. MPC swing 58% (engine 0.16). Reference: St Germain 'Rose Rouge', Masters At Work/Nuyorican Soul.",
+  "_sources": ["https://en.wikipedia.org/wiki/St_Germain_(musician)", "https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":    [102,0,0,0, 100,0,0,0, 104,0,0,0, 98,0,0,0,
+                103,0,34,0, 99,0,0,0, 105,0,32,0, 100,0,0,0],
+    "perc":    [0,0,0,0, 96,0,0,0, 0,0,0,0, 98,0,0,0,
+                0,0,0,0, 97,0,0,0, 0,0,0,0, 99,0,0,0],
+    "hihat":   [0,42,0,46, 0,44,0,48, 0,42,0,46, 0,44,0,50,
+                0,44,0,48, 0,46,0,50, 0,44,0,48, 0,46,0,52],
+    "ride":    [0,0,0,0, 0,0,48,0, 0,0,0,0, 0,0,50,0,
+                0,0,0,0, 0,0,50,0, 0,0,0,0, 0,0,52,0],
+    "rim":     [0,0,0,0, 0,0,0,0, 0,28,0,0, 0,0,0,0,
+                0,26,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

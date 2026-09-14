@@ -1,0 +1,35 @@
+{
+  "style": "krushclub",
+  "name": "Krushclub",
+  "family": "club",
+  "bpm": [140, 160],
+  "swing": "0–0.08 (mostly straight; the 'triplet-feel' groove approximates 33%)",
+  "summary": "The TikTok-viral 2023–24 microgenre that fuses the Jersey Club 5-kick bounce with HexD's bitcrushed distortion and hyperpop's pitched-up vocal chops. Krushclub keeps Jersey Club's syncopated kick shape (or, in its house-leaning tracks, a plain four-on-the-floor) but layers clipped 808 glides, bitcrushed percussion loops and huge clap/snare stacks on top, and alternates a halftime trap feel with the full Jersey bounce inside the same track.",
+  "sounds": {
+    "kick": "Layered Jersey Club kick (sub + punchy mid, sometimes a click layer) on the 5-kick shape (1, 2, 3, a-of-3, &-of-4), or four-on-the-floor for the house-leaning branch; hard-clipped and bitcrushed harder than plain Jersey Club.",
+    "snare": "Huge stacked clap+snare hit on 2 and 4 (both roles fired together), pitched and distorted hyperpop-style; halftime tracks move the backbeat to beat 3 alone.",
+    "hats": "Bitcrushed closed hats kept low under the kick shape, with trap/hyperpop-style accelerating hi-hat rolls into backbeats and hooks; open hat on Jersey-style pickups.",
+    "percussion": "The bed-squeak sample (from Trillville's 'Some Cut') carried in the clave slot as a call-and-response hook; bitcrushed cowbell/tomLow/perc loops for the HexD-lead sections; clipped 808 glide as a low tomLow pulse.",
+    "cymbals": "One crash on drop impacts only; otherwise absent — krushclub doesn't use a ride or cymbal wash."
+  },
+  "machines": [
+    "Akai MPC60 / MPC3000 — sample and swing the Jersey kick/squeak/clap chain 12-bit style (owned)",
+    "Roland TR-808 — clap and snare layers, pitched-down snare option, 808 sub glide (owned)",
+    "Roland TR-909 — closed/open hat layer under bitcrush processing (owned)",
+    "E-mu SP-1200 — 12-bit resampling stage for the bitcrushed percussion loop (owned)",
+    "Akai S900 — 12-bit sampler stand-in for crushing the bed-squeak and vocal chops (owned)",
+    "Elektron Machinedrum / Korg Electribe ER-1 — synthesised metallic/bitcrushed percussion loops (owned)",
+    "Roland TR-727 / TR-505 — congas/claves for the cumbia/funk-mandelão fusion groove (owned)",
+    "iZotope / Decimort-style bitcrusher plugins — the genre-defining lo-fi distortion stage (get elsewhere)",
+    "Sonic Academy Kick 2 or similar — modern synthesised 808/kick layer producers design from scratch (get elsewhere)"
+  ],
+  "references": [
+    "Lumi Athena — SMOKE IT OFF! (2022)",
+    "Lumi Athena — ICEWHORE! (2023)",
+    "Odetari — NARCISSISTIC PERSONALITY DISORDER (2023)",
+    "Odetari & Kanii — Marlboro Man (2023)",
+    "Asteria — WHAT YOU WANT! (2023)",
+    "6arelyhuman — assorted krushclub-tagged flips (2023–24)"
+  ],
+  "doc": "docs/styles/krushclub.md"
+}

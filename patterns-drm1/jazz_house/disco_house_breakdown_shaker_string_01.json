@@ -1,0 +1,23 @@
+{
+  "id": "disco_house_breakdown_shaker_string_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.1,
+  "bpm": 124,
+  "tags": [
+    "breakdown",
+    "shaker-string",
+    "no-kick"
+  ],
+  "_approach": "Kick removed; a swelling 16th shaker and a sparse clap pulse (beat 4 only, each bar) fill the space where the disco string hit would sit, with a single crash standing in for that string-hit accent on the very first downbeat. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"
+  ],
+  "tracks": {
+    "hihat": [21,24,27,30,21,24,27,30,21,24,27,30,21,24,27,32,22,26,29,32,22,26,29,32,22,26,29,32,22,26,30,34],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0],
+    "hh1Open": [100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

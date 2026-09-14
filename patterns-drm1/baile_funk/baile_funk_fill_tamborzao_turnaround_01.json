@@ -1,0 +1,24 @@
+{
+  "id": "baile_funk_fill_tamborzao_turnaround_01",
+  "style": "baile_funk",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.1,
+  "tags": [
+    "fill",
+    "turnaround",
+    "tamborzao"
+  ],
+  "_approach": "One-bar tamborzão turnaround: the kick/clap skeleton breaks into a syncopated kick+tom run through beat 4, tamborim doubling into 16ths, auto-injected into grooves every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/sounds/packs/splice/jlz-pack/story"
+  ],
+  "tracks": {
+    "kick": [114,0,0,0,0,0,0,0,110,0,0,70,0,96,0,118],
+    "clap": [0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,60,0,0,0,80,0],
+    "hh1Closed": [0,45,0,45,0,45,0,45,0,45,0,45,0,45,0,45]
+  },
+  "kit": "drm1"
+}

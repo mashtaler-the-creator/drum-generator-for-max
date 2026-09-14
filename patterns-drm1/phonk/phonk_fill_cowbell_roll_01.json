@@ -1,0 +1,22 @@
+{
+  "id": "phonk_fill_cowbell_roll_01",
+  "style": "phonk",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "bpm": 148,
+  "swing": 0.05,
+  "tags": [
+    "fill",
+    "cowbell-roll",
+    "drift-phonk"
+  ],
+  "_approach": "One-bar drift phonk turnaround: the cowbell riff rolls into a dense 16th run through beat 4 while the kick lands the downbeat and a single accent on the last 16th, auto-injected into grooves every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://songen.app/blog/how-to-make-drift-phonk/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118],
+    "multi": [70,0,68,0,72,0,70,0,74,78,82,86,89,93,97,101]
+  },
+  "kit": "drm1"
+}

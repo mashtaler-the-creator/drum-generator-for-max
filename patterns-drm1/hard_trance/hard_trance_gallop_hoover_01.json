@@ -1,0 +1,26 @@
+{
+  "id": "hard_trance_gallop_hoover_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "gallop",
+    "hoover",
+    "offbeat-hat"
+  ],
+  "_approach": "Offbeat double-kick gallop under the hoover-bass pump: a soft kick on the 16th just before each beat (the same trick hard techno inherited from 90s hard trance), thinning to just beats 2 and 4 in bar 2 so the hoover stab reads clearly. A muted cowbell ghosts the hoover hits in bar 2. Reference: Mauro Picotto 'Komodo', Cosmic Gate 'Fire Wire'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Hard_trance",
+    "https://theproducerschool.com/blogs/featured-blogs/5-essential-bass-patterns-that-define-hard-house-and-trance-music"
+  ],
+  "tracks": {
+    "kick": [116,0,0,70,116,0,0,72,116,0,0,70,116,0,0,74,116,0,0,0,116,0,0,72,116,0,0,0,116,0,0,76],
+    "hihat": [0,40,0,0,0,42,0,0,0,40,0,0,0,44,0,0,0,42,0,44,0,44,0,0,0,42,0,46,0,46,0,0],
+    "openHat": [0,0,96,0,0,0,96,0,0,0,96,0,0,0,96,0,0,0,98,0,0,0,98,0,0,0,100,0,0,0,100,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,110,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,51,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

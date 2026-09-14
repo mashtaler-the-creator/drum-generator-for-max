@@ -1,0 +1,29 @@
+{
+  "id": "sg_bakey_grit",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.14,
+  "bpm": 137,
+  "tags": [
+    "revival",
+    "breaks",
+    "grit",
+    "modern"
+  ],
+  "_approach": "Modern speed garage revival, Bakey-style grit: harder and more breakbeat-flecked than the minimalist Interplanetary Criminal lane — a heavier kick with a doubled 16th pickup, scattered breakbeat-style tom/rim hits standing in for 'crisp breaks', and a tighter, more clipped swing than either the classic era or the sparse 2020s revival. Ref: Bakey ('Under Control', 'Tribute' LP). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://ukf.com/read/in-conversation-with-bakey/",
+    "https://www.beatportal.com/articles/1133295-bakeys-debut-album-is-a-love-letter-to-uk-sound-system-culture",
+    "https://www.attackmagazine.com/technique/beat-dissected/interplanetary-criminal-style-garage/"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,108,0,0,0,112,0,0,0,108,0,88,90,116,0,0,0,108,0,0,0,112,0,0,0,108,0,0,0],
+    "snare": [0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,104,0,0,26,0,0,0,0,108,0,0,0],
+    "multi": [0,0,0,36,0,0,42,0,0,0,0,0,0,44,0,0,0,0,0,38,0,0,0,0,0,46,0,0,0,0,0,50],
+    "drum1": [0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0],
+    "hihat": [56,0,0,0,52,0,64,0,58,0,0,0,54,0,0,0,56,0,0,0,52,0,66,0,58,0,0,0,54,0,68,0]
+  },
+  "kit": "drm1"
+}

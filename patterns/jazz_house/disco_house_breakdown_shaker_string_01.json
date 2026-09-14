@@ -1,0 +1,19 @@
+{
+  "id": "disco_house_breakdown_shaker_string_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.10,
+  "bpm": 124,
+  "tags": ["breakdown", "shaker-string", "no-kick"],
+  "_approach": "Kick removed; a swelling 16th shaker and a sparse clap pulse (beat 4 only, each bar) fill the space where the disco string hit would sit, with a single crash standing in for that string-hit accent on the very first downbeat.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"],
+  "tracks": {
+    "shaker": [26,30,34,38, 26,30,34,38, 26,30,34,38, 26,30,34,40,
+               28,32,36,40, 28,32,36,40, 28,32,36,40, 28,32,38,42],
+    "perc":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 92,0,0,0],
+    "crash":  [100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

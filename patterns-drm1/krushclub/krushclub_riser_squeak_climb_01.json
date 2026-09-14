@@ -1,0 +1,24 @@
+{
+  "id": "krushclub_riser_squeak_climb_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 148,
+  "tags": [
+    "riser",
+    "bed-squeak",
+    "percussion-build"
+  ],
+  "_approach": "The bed-squeak hook from the groove set climbs in density and velocity instead of the kick doing the work: clave hits fill in from a sparse call-and-response to every 16th by the end of bar 2, joined by a rising cowbell/perc layer, while the kick and clap hold steady until they cut out for the final two 16ths — the squeak itself becomes the build. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/",
+    "https://www.edmprod.com/krushclub/"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,106,0,0,0,104,0,0,100,0,0,104,0,110,0,0,0,106,0,0,0,104,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,40,0,0,41,0,0,0,0,43,0,45,0,0,0,47,0,50,52,54,56,58,59,61,65,68,72,77,83,90,99]
+  },
+  "kit": "drm1"
+}

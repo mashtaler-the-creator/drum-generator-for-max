@@ -1,0 +1,22 @@
+{
+  "id": "three_step_breakdown_horn_pad_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 115,
+  "tags": [
+    "breakdown",
+    "horn-pad",
+    "no-kick"
+  ],
+  "_approach": "Space for the pad/horns to breathe: no kick, a soft tambourine timekeeper, an occasional perc-slot horn stab and a barely-there ride wash - the quietest section in the arrangement, matching the genre's jazz-adjacent, conversational pacing rather than a wall-of-noise drop-out. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/3-step"
+  ],
+  "tracks": {
+    "hh1Closed": [34,0,0,0,32,0,0,0,36,0,0,0,32,0,0,0,36,0,0,0,34,0,0,0,38,0,0,0,34,0,0,0],
+    "clap": [0,0,0,0,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "afro_house_riser_conga_roll_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 122,
+  "tags": [
+    "riser",
+    "conga-roll",
+    "build"
+  ],
+  "_approach": "Two-bar conga build: the high conga goes from 8ths (bar 1) to 16ths (bar 2) with velocity climbing every beat, the low conga follows a beat behind, claps and open hats step up in bar 2, and the kick stays 4x4 so the floor never leaves. Samplesound: 'conga rolls create excitement during transitions'. Loudest hits on the last four 16ths. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.samplesoundmusic.com/blogs/news/the-ultimate-guide-to-afro-house-production-in-2025-tips-tricks-and-techniques",
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0],
+    "drum1": [60,0,59,0,67,0,67,0,78,0,77,0,82,0,81,0,80,82,84,81,94,91,93,95,100,102,99,101,106,111,113,110],
+    "drum2": [48,0,0,0,61,0,0,0,68,0,0,0,74,0,0,0,83,0,82,0,92,0,91,0,103,0,102,0,112,0,111,113],
+    "hihat": [66,41,50,40,64,43,49,42,62,42,51,41,65,40,50,43,63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41],
+    "openHat": [0,0,61,0,0,0,64,0,0,0,62,0,0,0,60,0,0,0,73,0,0,0,71,0,0,0,82,0,0,0,86,0],
+    "clap": [0,0,0,0,63,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,105,0,0,118]
+  },
+  "kit": "drm1"
+}

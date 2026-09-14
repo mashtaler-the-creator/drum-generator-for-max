@@ -1,0 +1,24 @@
+{
+  "id": "afro_house_breakdown_tom_drift_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 121,
+  "tags": [
+    "breakdown",
+    "tom-loop",
+    "sparse"
+  ],
+  "_approach": "The Black Coffee tom loop left alone: one kick on the downbeat of bar 1, then the low tom 8th pulse, a single mid-tom shot, rim backbeat and a shaker that thins out in the second half of bar 2 - low density, ready for a build. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-afro-house-like-black-coffee-complete-tutorial"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum2": [63,0,52,0,61,0,50,0,64,0,53,0,62,0,51,0,60,0,54,0,63,0,84,0,61,0,50,0,94,85,53,0],
+    "multi": [0,0,0,0,72,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,70,0,0,0],
+    "hihat": [64,43,49,42,62,42,51,41,65,40,50,43,63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41,0,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "techno_hypnotic_ride_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 131,
+  "swing": 0,
+  "tags": [
+    "hypnotic",
+    "ride-led",
+    "call-response"
+  ],
+  "_approach": "Ride-cymbal-led hypnotic techno in the vein of Phase Fatale and the dark, cinematic techno Attack's dissection describes: the ride plays a steady loud/soft 8th pulse as the main engine (no closed hat racing underneath it), a closed hat sits on the third 16th of each quarter, an open hat answers on selected beats in bar 2, and the snare and a shaker trade a call-and-response figure that only appears in the second bar. Straight time (no swing) so the ride reads as hypnotic repetition rather than shuffle. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/dark-cinematic-hypnotic-techno/"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,110,0,0,0,110,0,0,0,110,0,0,0,110,0,0,0],
+    "hh1Closed": [90,0,60,0,90,0,60,0,90,0,60,0,90,0,60,0,92,0,62,0,92,0,62,0,92,0,62,0,92,0,64,0],
+    "hihat": [0,0,58,0,0,40,58,0,0,0,58,0,0,40,58,0,0,0,60,0,0,0,62,0,0,42,60,0,0,0,64,43],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,70,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

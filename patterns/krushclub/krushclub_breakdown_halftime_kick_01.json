@@ -1,0 +1,21 @@
+{
+  "id": "krushclub_breakdown_halftime_kick_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": ["breakdown", "halftime", "sparse"],
+  "_approach": "The halftime trap side of krushclub stripped further: kick only on beat 1, a muted 808 glide (tomLow) instead of the full slide, and the clap thinned from a stack to a single soft hit on beat 3. Hats stay at ghost velocity. This is the 'verse' space krushclub's halftime tracks live in before the Jersey bounce returns for the hook.",
+  "_sources": ["https://www.melodigging.com/genre/krushclub"],
+  "tracks": {
+    "kick":   [104,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               104,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomLow": [50,0,0,0, 0,0,44,0, 0,0,0,0, 0,0,0,0,
+               52,0,0,0, 0,0,46,0, 0,0,0,0, 0,0,0,0],
+    "snare":  [0,0,0,0, 0,0,0,0, 60,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 62,0,0,0, 0,0,0,0],
+    "hihat":  [0,0,32,0, 0,0,32,0, 0,0,32,0, 0,0,32,0,
+               0,0,34,0, 0,0,34,0, 0,0,34,0, 0,0,34,0]
+  }
+}

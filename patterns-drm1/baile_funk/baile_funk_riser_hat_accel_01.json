@@ -1,0 +1,25 @@
+{
+  "id": "baile_funk_riser_hat_accel_01",
+  "style": "baile_funk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.1,
+  "tags": [
+    "riser",
+    "hat-accel",
+    "tamborzao"
+  ],
+  "_approach": "Hats and shaker double in density bar over bar while the tamborzão kick/clap skeleton holds steady, then the kick drops out for the last two 16ths so the re-entry clap+tom hit lands as the loudest moment — hard techno's 'kick roll' riser logic translated to funk's rolling shaker texture. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://splice.com/sounds/packs/splice/jlz-pack/story",
+    "https://www.loopcloud.com/cloud/blog/5293-How-to-Make-Brazilian-Funk"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,120,0,0],
+    "hihat": [0,24,0,24,0,24,0,24,0,24,0,24,0,24,0,24,32,35,38,42,45,48,51,54,58,61,64,67,70,74,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118]
+  },
+  "kit": "drm1"
+}

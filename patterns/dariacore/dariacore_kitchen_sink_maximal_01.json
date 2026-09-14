@@ -1,0 +1,25 @@
+{
+  "id": "dariacore_kitchen_sink_maximal_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 185,
+  "tags": ["groove", "maximalist", "controlled-chaos"],
+  "_approach": "Dariacore has been called 'pop music on steroids' and 'controlled chaos' — an amalgamation of deconstructed pop/dance elements rather than a single clean genre skeleton (Wikipedia). This groove is the maximalist construction approach itself: hardstyle kick, breakbeat snare, complextro hi-hat stutter, a tom fill and a cowbell accent all running at once, every role near-full most of the time — deliberately over-stuffed rather than balanced, the opposite construction principle from every sparser groove above.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "kick":    [114,0,0,0, 112,0,0,64, 114,0,0,0, 112,0,0,0,
+                114,0,68,0, 112,0,0,0, 114,0,0,72, 112,0,0,0],
+    "snare":   [0,0,0,0, 100,0,0,0, 0,0,0,66, 100,0,0,0,
+                0,0,0,0, 100,0,0,0, 0,0,0,68, 100,0,60,0],
+    "perc":    [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+                0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0],
+    "hihat":   [50,54,50,54, 50,54,50,54, 50,54,50,54, 50,54,50,54,
+                52,56,52,56, 52,56,52,56, 52,56,52,56, 52,56,52,56],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,0,58,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,60,0, 0,62,64,0],
+    "cowbell": [0,44,0,0, 0,0,0,46, 0,44,0,0, 0,0,0,48,
+                0,46,0,0, 0,0,0,48, 0,46,0,0, 0,0,0,50]
+  }
+}

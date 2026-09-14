@@ -1,0 +1,19 @@
+{
+  "id": "amapiano_breakdown_half_time_01",
+  "style": "amapiano",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 112,
+  "tags": ["breakdown","half-time"],
+  "_approach": "Half-time floor: a single soft kick per bar, a minimal log-drum accent (tomLow), and a thinned shaker - the groove holds together on almost nothing, ready to fill back in for the next groove section.",
+  "_sources": ["https://articles.roland.com/production-hacks-creating-amapiano-tracks/"],
+  "tracks": {
+    "kick":   [90,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               88,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "tomLow": [0,0,0,0, 0,0,0,0, 0,54,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,56,0,0, 0,0,0,0],
+    "shaker": [42,0,0,0, 40,0,0,0, 41,0,0,0, 40,0,0,0,
+               44,0,0,0, 42,0,0,0, 43,0,0,0, 42,0,0,0]
+  }
+}

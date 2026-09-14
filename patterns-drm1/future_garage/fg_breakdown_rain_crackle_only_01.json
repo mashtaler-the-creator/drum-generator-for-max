@@ -1,0 +1,23 @@
+{
+  "id": "fg_breakdown_rain_crackle_only_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 126,
+  "swing": 0.2,
+  "tags": [
+    "breakdown",
+    "crackle",
+    "texture-only"
+  ],
+  "_approach": "Texture stands in for Burial's rain-and-vinyl-crackle beds: a broken ghost lattice of shaker and clave at very low velocity, no kick or snare for a full bar, until a single rim breaks the hush. Ref: MusicRadar 'How Burial produced...'; Dubstepforum 'Burial Rhythm in FL Studio?'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/artists/im-not-a-musician-i-was-always-scared-of-people-who-had-studios-how-burial-produced-the-21st-centurys-most-influential-electronic-album-on-a-rubbish-dying-computer-with-outdated-software",
+    "https://www.dubstepforum.com/forum/viewtopic.php?t=197031"
+  ],
+  "tracks": {
+    "hihat": [0,11,0,0,0,0,0,10,0,13,0,0,0,0,0,11,0,13,0,0,0,0,0,11,0,14,0,0,0,0,0,0],
+    "multi": [0,0,0,9,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,13,0,0,28,0]
+  },
+  "kit": "drm1"
+}

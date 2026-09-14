@@ -1,0 +1,27 @@
+{
+  "id": "bh_riser_double_time_01",
+  "style": "bass_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 130,
+  "tags": [
+    "riser",
+    "build",
+    "double-time",
+    "speed-garage",
+    "snare"
+  ],
+  "_approach": "Speed-garage-flavoured build: the 4x4 energy of bh_speed_garage_44 doubles its snare backbeat into a double-time roll while tambourine offbeats thicken and rim skips ramp, ending with the kick and everything else cut on the final 16th — the void before the drop. Ref: the speed-garage-44 approach (Taiki Nulight, DJ Zinc \"138 Trek\" lineage), MusicRadar's snare-roll build-up guide. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up",
+    "https://www.melodigging.com/genre/bass-house"
+  ],
+  "tracks": {
+    "kick": [102,0,0,0,98,0,0,0,100,0,0,0,99,0,0,0,103,0,0,0,99,0,0,0,101,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,108,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,110,0,72,0,0,0,0,0,112,0,90,96],
+    "hh1Closed": [0,0,46,0,0,0,48,0,0,0,46,0,0,0,50,0,0,0,51,0,0,0,54,0,0,53,0,56,0,58,0,0],
+    "multi": [0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,30,0,32,0,36,0,0,0,40,0,44,0,48,0,0,0,0]
+  },
+  "kit": "drm1"
+}

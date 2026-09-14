@@ -1,0 +1,21 @@
+{
+  "id": "dariacore_breakdown_kick_pulse_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 178,
+  "tags": [
+    "breakdown",
+    "hardstyle",
+    "pulse"
+  ],
+  "_approach": "The hardstyle-kick side stripped back: a slow, spaced four-on-the-floor pulse at reduced velocity (half-time feel relative to the full hardstyle groove) with no other percussion, a plain held-breath section before the pattern re-thickens into the next drop or splice. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

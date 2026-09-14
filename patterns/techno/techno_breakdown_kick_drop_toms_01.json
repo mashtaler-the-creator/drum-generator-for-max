@@ -1,0 +1,23 @@
+{
+  "id": "techno_breakdown_kick_drop_toms_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 130,
+  "swing": 0,
+  "tags": ["breakdown", "kick-drop", "toms", "ride"],
+  "_approach": "The kick-drop section: kick removed entirely, replaced by a ride carrying the pulse in loud/soft 8ths and low/mid toms trading a loose call-and-response. A soft open hat and a rimshot ghost keep just enough top end alive that the return doesn't feel like total silence. This is the 'breathing room' section techno uses instead of a full musical breakdown.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/rolling-techno/", "https://www.studiobrootle.com/techno-drum-patterns-and-drum-programming-tips/"],
+  "tracks": {
+    "ride":    [88,0,58,0, 88,0,58,0, 88,0,58,0, 88,0,58,0,
+                88,0,58,0, 88,0,58,0, 88,0,58,0, 88,0,58,0],
+    "tomLow":  [0,0,0,0, 68,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 66,0,0,0, 0,0,0,0,
+                0,0,0,0, 68,0,0,0, 0,0,0,0, 0,0,0,0],
+    "openHat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,50,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,52,0],
+    "rim":     [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,44,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

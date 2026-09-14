@@ -1,0 +1,23 @@
+{
+  "id": "krushclub_breakdown_ghost_hats_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "breakdown",
+    "hats",
+    "no-kick"
+  ],
+  "_approach": "No kick, no clap: just ghost-velocity bitcrushed hats holding the 16th grid and a lone rim marking beat 1 of each bar, the vocal-forward space krushclub tracks open up right after a hook for the pitched vocal chop to sit alone. Open hat cues the return at the very end. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/krushclub/"
+  ],
+  "tracks": {
+    "hihat": [30,0,28,0,32,0,26,0,30,0,28,0,32,0,26,0,30,0,28,0,32,0,26,0,30,0,28,0,32,0,26,0],
+    "multi": [30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0]
+  },
+  "kit": "drm1"
+}

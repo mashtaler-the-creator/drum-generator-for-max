@@ -1,0 +1,27 @@
+{
+  "id": "melodic_techno_breakdown_ride_float_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "breakdown",
+    "ride",
+    "open-hat-on-beat",
+    "no-kick"
+  ],
+  "_approach": "Floating cymbals: ride in alternating 8ths, long open hats on the main beats (Ethereal placement), a low tom on the downbeat of bar 1 and beat 3 of bar 2 standing in for the missing kick, a rim ghost and a clap on 4 of bar 2 cueing the build. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/ethereal-techno/",
+    "https://www.beatportal.com/articles/899368-step-by-step-guide-to-creating-a-melodic-house-techno-track-anyma-miss-monique-artbat-stephan-bodzin"
+  ],
+  "tracks": {
+    "hh1Closed": [72,0,46,0,72,0,46,0,72,0,46,0,72,0,46,0,72,0,46,0,72,0,46,0,72,0,46,0,72,0,46,0],
+    "openHat": [60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0,60,0,0,0],
+    "drum2": [92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0]
+  },
+  "kit": "drm1"
+}

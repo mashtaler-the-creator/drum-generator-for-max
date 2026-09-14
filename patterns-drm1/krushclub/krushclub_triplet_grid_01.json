@@ -1,0 +1,25 @@
+{
+  "id": "krushclub_triplet_grid_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.33,
+  "bpm": 148,
+  "tags": [
+    "groove",
+    "triplet-feel",
+    "jersey"
+  ],
+  "_approach": "Production guides for Jersey Club note the groove is often described as triplet-based/tresillo-like even though the 5-kick skeleton is normally written on a straight 16th grid. This pattern approximates that triplet pull with swing 0.33 (the engine's closest straight mapping to a true 8th-note triplet subdivision) applied to the same 5-kick shape plus a rolling clave figure, giving the loose, rolling feel some krushclub flips lean into instead of the tighter straight version. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/",
+    "https://orphiq.com/resources/what-is-jersey-club"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,106,0,0,0,104,0,0,100,0,0,104,0,110,0,0,0,106,0,0,0,104,0,0,100,0,0,102,0],
+    "snare": [0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,45,0,0,0,47,0,0,0,45,0,0,0,49,0,0,0,47,0,0,0,49,0,0,0,47,0,0,0,50,0],
+    "hihat": [0,40,0,0,0,40,0,0,0,40,0,0,0,40,0,0,0,42,0,0,0,42,0,0,0,42,0,0,0,42,0,0]
+  },
+  "kit": "drm1"
+}

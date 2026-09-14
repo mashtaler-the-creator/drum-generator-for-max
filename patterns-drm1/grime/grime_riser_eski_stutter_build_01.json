@@ -1,0 +1,23 @@
+{
+  "id": "grime_riser_eski_stutter_build_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "riser",
+    "eski-stutter",
+    "build"
+  ],
+  "_approach": "Expands the eski stutter into a proper build: kicks stutter in doubled 16ths bar over bar, rim clicks answer in the gaps, and the snare holds beat 3 before jabbing late — turbulence stacking on top of the halftime spine rather than replacing it. Ref: MusicRadar '22 pro grime production tricks' (adding kicks and shifting the second snare for a disjointed feel). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.musicradar.com/tuition/tech/22-pro-grime-production-tricks-170428"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,0,0,80,0,0,0,70,0,0,0,0,0,108,0,0,86,0,0,90,0,0,0,82,0,76,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,114,0,0,60,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,34,0,0,0,38,0,0,0,42,0,0,0,0,46,0]
+  },
+  "kit": "drm1"
+}

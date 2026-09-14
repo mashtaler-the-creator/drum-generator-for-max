@@ -1,0 +1,31 @@
+{
+  "id": "ukg_riser_rim_run_revival_01",
+  "style": "ukg",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 134,
+  "swing": 0.15,
+  "tags": [
+    "riser",
+    "build",
+    "rim-run",
+    "revival",
+    "modern"
+  ],
+  "_approach": "2020s-revival build: tight swing, heavy kick and layered snare+clap backbeat in bar 1; in bar 2 the kick thins to beats 1 and 3 while an ascending rim run (the revival's signature) hands over to snare 16ths and a crash-topped 127 hit on the final step. Ref: Interplanetary Criminal 'B.O.T.A.', Sammy Virji 'If U Need It' transitions. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/interplanetary-criminal-style-garage/",
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://theproducerschool.com/blogs/featured-blogs/master-uk-garage-production-complete-guide-to-filthy-basslines-and-swing-drums"
+  ],
+  "tracks": {
+    "kick": [118,0,0,0,0,0,0,90,0,0,104,0,0,0,0,0,118,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,116,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,118,0,0,0,0,0,96,0,104,110,118,127],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,110,0,0,124],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,66,74,82,0,70,76,82,0,86,90,94,0,98,0,0,0,0,0,0],
+    "hihat": [0,0,74,0,0,0,76,0,0,0,74,0,0,0,78,0,0,0,78,0,0,0,80,0,0,44,82,48,0,52,86,56],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100]
+  },
+  "kit": "drm1"
+}

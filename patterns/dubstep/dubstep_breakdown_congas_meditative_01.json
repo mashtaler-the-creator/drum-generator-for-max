@@ -1,0 +1,37 @@
+{
+  "id": "dubstep_breakdown_congas_meditative_01",
+  "style": "dubstep",
+  "bars": 4,
+  "stepsPerBar": 16,
+  "bpm": 139,
+  "swing": 0.12,
+  "tags": ["breakdown","congas","meditative","4bar"],
+  "_approach": "Four-bar Mala-school meditative breakdown: congas and tambourine trade soft phrases while the kick stays completely silent until a single low downbeat announces bar 4 — the space itself is the tension, exactly the palette Mala's Battery/Redrum sessions are built from. Ref: XLR8R 'Building an Iconic Sound: Mala'.",
+  "_sources": ["https://xlr8r.com/features/building-an-iconic-sound-mala-1/"],
+  "tracks": {
+    "kick": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      64,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "congaHigh": [
+      0,0,30,0, 0,0,0,0, 0,34,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,34,0, 0,0,0,0, 38,0,0,0, 0,32,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,40,0, 0,0,0,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 36,0,0,0, 0,0,0,0, 38,0,0,0,
+      0,0,0,0, 0,0,36,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "tambourine": [
+      0,0,0,0, 0,0,28,0, 0,0,0,0, 0,0,32,0,
+      0,0,0,0, 0,0,30,0, 0,0,0,0, 0,0,34,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,44,0
+    ]
+  }
+}

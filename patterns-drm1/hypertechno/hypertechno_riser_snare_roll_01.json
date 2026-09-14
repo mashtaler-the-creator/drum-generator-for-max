@@ -1,0 +1,27 @@
+{
+  "id": "hypertechno_riser_snare_roll_01",
+  "style": "hypertechno",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "riser",
+    "snare-roll",
+    "32nds",
+    "hard-dance"
+  ],
+  "_approach": "The hard-dance snare roll hypertechno inherits: 8ths in bar 1, 16ths in the first half of bar 2, 32nds in the second half, velocity ramping from 60 to 127, kick 4/4 all the way and a crash on the very last 32nd. This is the build hard techno avoids and hypertechno embraces. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up",
+    "https://www.hardcultr.com/guides/hardstyle-vs-hard-techno-explained/"
+  ],
+  "tracks": {
+    "snare": [60,0,0,0,64,0,0,0,68,0,0,0,72,0,0,0,76,0,0,0,80,0,0,0,84,0,0,0,88,0,0,0,90,0,92,0,94,0,96,0,98,0,100,0,102,0,104,0,106,107,109,110,112,113,114,116,117,119,120,121,123,124,126,127],
+    "kick": [118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0],
+    "openHat": [0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,78,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118]
+  },
+  "kit": "drm1"
+}

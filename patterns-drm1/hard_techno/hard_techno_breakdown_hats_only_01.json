@@ -1,0 +1,26 @@
+{
+  "id": "hard_techno_breakdown_hats_only_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "breakdown",
+    "hats",
+    "ride",
+    "no-kick"
+  ],
+  "_approach": "Kick removed; the sharp offbeat closed hats and the alternating 909 ride keep the tempo alive over a soft 16th shaker. A lone clap on beat 4 of bar 2 and one open hat hint at the return. This is the stripped 're-entry' space that hard techno uses instead of long melodic breakdowns. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/what-is-hard-techno/",
+    "https://www.hardcultr.com/guides/hardstyle-vs-hard-techno-explained/"
+  ],
+  "tracks": {
+    "hihat": [29,96,32,96,29,96,32,96,29,96,32,96,29,96,32,96,29,96,32,96,29,96,32,96,29,96,32,96,29,96,32,96],
+    "hh1Closed": [72,0,48,0,72,0,48,0,72,0,48,0,72,0,48,0,72,0,48,0,72,0,48,0,72,0,48,0,72,0,48,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0]
+  },
+  "kit": "drm1"
+}

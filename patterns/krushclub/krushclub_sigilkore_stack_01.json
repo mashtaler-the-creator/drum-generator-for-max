@@ -1,0 +1,23 @@
+{
+  "id": "krushclub_sigilkore_stack_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 154,
+  "tags": ["groove", "sigilkore", "clap-stack", "dark"],
+  "_approach": "RYM notes krushclub borrows Sigilkore's 'dark production style' and occult atmosphere. Built around a huge layered clap+snare stack (both roles hit together on 2 and 4 at near-max velocity) over a low, dark tomLow pulse standing in for a detuned sub-kick — the 5-kick Jersey shape is thinned to just beats 1 and 3 so the stack dominates. Hats are sparse, high-passed-implied ghost velocities; no open hat, no shimmer — the low end and the stack are the whole texture.",
+  "_sources": ["https://rateyourmusic.com/genre/krushclub/", "https://en.wikipedia.org/wiki/Sigilkore"],
+  "tracks": {
+    "kick":    [114,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,0,
+                114,0,0,0, 0,0,0,0, 108,0,0,0, 0,0,0,0],
+    "snare":   [0,0,0,0, 110,0,0,0, 0,0,0,0, 108,0,0,0,
+                0,0,0,0, 110,0,0,0, 0,0,0,0, 108,0,0,0],
+    "perc":    [0,0,0,0, 110,0,0,0, 0,0,0,0, 108,0,0,0,
+                0,0,0,0, 110,0,0,0, 0,0,0,0, 108,0,0,0],
+    "tomLow":  [0,0,36,0, 0,0,0,0, 0,0,38,0, 0,0,0,0,
+                0,0,36,0, 0,0,0,0, 0,0,38,0, 0,0,42,0],
+    "hihat":   [0,0,0,0, 0,32,0,0, 0,0,0,0, 0,34,0,0,
+                0,0,0,0, 0,32,0,0, 0,0,0,0, 0,34,0,0]
+  }
+}

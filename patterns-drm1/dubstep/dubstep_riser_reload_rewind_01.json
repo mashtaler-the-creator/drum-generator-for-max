@@ -1,0 +1,27 @@
+{
+  "id": "dubstep_riser_reload_rewind_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.12,
+  "tags": [
+    "riser",
+    "reload",
+    "rewind",
+    "snare-roll"
+  ],
+  "_approach": "The reload moment itself: bar 1 crash-marks a full groove hit as if inviting the wheel-up, then bar 2 is a continuous snare-and-perc roll climbing from mid-velocity to 127 across all 16 steps with hats doubling alongside — the pre-reload intensity that makes a DJ or MC call for the record to be spun back. Ref: DJ TechTools 'Reload: A History of The Rewind'; Point Blank 'How to Create a Dubstep Drop from Scratch'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://djtechtools.com/2018/08/31/reload-a-history-of-the-rewind/",
+    "https://www.pointblankmusicschool.com/blog/how-to-create-a-dubstep-drop-from-scratch/"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hh1Open": [100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,60,66,72,78,84,90,95,100,104,108,112,115,118,121,124,127],
+    "clap": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,46,0,52,0,58,0,64,0,70,0,76,0,82],
+    "hihat": [0,0,22,0,50,0,26,0,0,0,24,0,54,0,27,0,70,0,74,0,78,0,82,0,86,0,90,0,94,0,0,0]
+  },
+  "kit": "drm1"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "jazz_house_riser_kick_swell_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.10,
+  "bpm": 120,
+  "tags": ["riser", "kick-swell"],
+  "_approach": "The kick itself does the building: bar 1 is a laid-back half-time kick (1 and 3 only), bar 2 swells to full 4/4 and then rolls into 16ths on the last beat peaking at 127, while the clap and hats thin out and drop away so the kick roll lands alone into the crash.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":  [100,0,0,0, 0,0,0,0, 102,0,0,0, 0,0,0,0,
+              104,0,0,0, 106,0,0,0, 108,0,100,0, 112,106,118,127],
+    "perc":  [0,0,0,0, 96,0,0,0, 0,0,0,0, 98,0,0,0,
+              0,0,0,0, 97,0,0,0, 0,0,0,0, 0,0,0,0],
+    "hihat": [0,40,0,44, 0,42,0,46, 0,40,0,44, 0,42,0,48,
+              0,42,0,46, 0,44,0,0, 0,0,0,0, 0,0,0,0],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,120]
+  }
+}

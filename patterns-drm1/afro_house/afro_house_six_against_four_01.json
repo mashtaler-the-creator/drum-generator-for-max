@@ -1,0 +1,27 @@
+{
+  "id": "afro_house_six_against_four_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.06,
+  "bpm": 122,
+  "tags": [
+    "polyrhythm",
+    "6-against-4",
+    "conga"
+  ],
+  "_approach": "Polyrhythm construction from the Samplesound groove lesson: the high percussion accents every third 16th (groups of 3-3-3-3-4) so six accents cross the four straight kicks, while the shaker keeps a plain 8th pulse as the reference. In bar 2 the 3-grouping migrates to the clave and the conga fills the gaps. Ref: &ME 'Solaris' (2019), Rampa 'Necesito' (2020). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.samplesoundmusic.com/blogs/academy/how-to-write-an-afro-house-groove-pt-1",
+    "https://orphiq.com/resources/what-is-afro-house"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,106,0,0,0,104,0,0,0,107,0,0,0,105,0,0,0],
+    "drum1": [88,48,49,89,48,50,86,49,51,86,50,48,87,51,48,50,0,0,61,0,0,57,0,0,58,0,0,59,0,0,60,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,85,0,0,81,0,0,82,0,0,83,0,0,0],
+    "hihat": [66,0,50,0,64,0,49,0,62,0,51,0,65,0,50,0,63,0,48,0,66,0,50,0,64,0,49,0,62,0,51,0],
+    "clap": [0,0,0,0,60,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,63,0,0,0],
+    "drum2": [0,0,0,0,0,0,0,0,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,69,0,0,0,0,0,57,0]
+  },
+  "kit": "drm1"
+}

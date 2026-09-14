@@ -1,0 +1,22 @@
+{
+  "id": "trance_warmup_minimal_01",
+  "style": "trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 136,
+  "tags": [
+    "groove",
+    "minimal",
+    "opener"
+  ],
+  "_approach": "An opener/warm-up construction: kick, a light offbeat closed-hat pattern (not a full 16th wall) and a shaker are the whole groove — no clap, no crash, no open hat — the deliberately unfinished-sounding pocket a DJ set or intro track uses before the full uplifting arrangement arrives. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.borntoproduce.com/blogs/blog/how-to-make-trance-music"
+  ],
+  "tracks": {
+    "kick": [112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0,112,0,0,0],
+    "hihat": [0,22,0,21,0,44,0,21,0,22,0,21,0,44,0,21,0,24,0,22,0,46,0,22,0,24,0,22,0,46,0,22]
+  },
+  "kit": "drm1"
+}

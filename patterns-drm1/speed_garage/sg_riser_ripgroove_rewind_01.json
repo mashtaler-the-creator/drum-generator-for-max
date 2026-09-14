@@ -1,0 +1,29 @@
+{
+  "id": "sg_riser_ripgroove_rewind_01",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 138,
+  "swing": 0.2,
+  "tags": [
+    "riser",
+    "build",
+    "rewind",
+    "snare-roll",
+    "32nds"
+  ],
+  "_approach": "Two-bar reload build on a 32nd grid, kick kept relentless 4/4 the whole way (speed garage rarely loses the floor): the snare enters in 16ths at beat 3 of bar 1, and in bar 2 climbs through 16ths into 32nds with velocity ramping so the four loudest hits (124-127) sit on the very last 32nds, straight into the drop. Ref: Double 99 'Ripgroove', Tuff Jam era rewind sections. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up",
+    "https://djmag.com/features/how-double-99s-ripgroove-lit-fuse-speed-garage-uk"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,118,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,74,0,77,0,81,0,84,0,88,0,91,0,95,0,98,0,100,102,104,105,107,109,111,113,114,116,118,120,122,123,125,127],
+    "clap": [0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,112,0,0,0,0,0,0,0],
+    "hihat": [0,0,0,0,68,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,72,0,46,0,0,0,0,0,74,0,48,0,0,0,50,0,76,0,52,0,0,0,54,0,80,0,0,0],
+    "openHat": [0,0,0,0,76,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,88,0,0,0]
+  },
+  "kit": "drm1"
+}

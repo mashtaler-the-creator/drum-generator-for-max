@@ -1,0 +1,23 @@
+{
+  "id": "techno_detroit_909_01",
+  "style": "techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 123,
+  "swing": 0.15,
+  "tags": ["detroit", "909", "classic-techno"],
+  "_approach": "Classic Motor City 909 groove: a four-to-the-floor kick, a snare pitched down and a rimshot both placed as counterpoint that steps around the kick rather than reinforcing it, and hi-hats built from a sharp closed layer plus an open hat firing on every off-beat 8th. MPC-style swing (~57%) gives the shuffle Attack's Motor City Techno dissection describes; dynamics come from the interplay of the layers, not from processing.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/motor-city-detroit-techno/"],
+  "tracks": {
+    "kick":    [112,0,0,0, 110,0,0,0, 112,0,0,0, 110,0,0,0,
+                112,0,0,0, 108,0,0,0, 112,0,0,0, 110,0,0,0],
+    "hihat":   [0,60,0,66, 0,58,0,68, 0,60,0,66, 0,58,0,68,
+                0,62,0,58, 0,64,0,56, 0,62,0,72, 0,64,0,76],
+    "openHat": [0,0,78,0, 0,0,78,0, 0,0,78,0, 0,0,78,0,
+                0,0,76,0, 0,0,74,0, 0,0,78,0, 0,0,80,0],
+    "rim":     [0,0,0,58, 0,0,0,0, 0,0,0,54, 0,0,0,0,
+                0,0,0,0, 0,0,0,56, 0,0,0,0, 0,0,0,60],
+    "snare":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,48,0, 0,0,0,0, 0,0,0,0]
+  }
+}

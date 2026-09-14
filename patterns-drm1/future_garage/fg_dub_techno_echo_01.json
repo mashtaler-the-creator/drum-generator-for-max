@@ -1,0 +1,25 @@
+{
+  "id": "fg_dub_techno_echo_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 128,
+  "swing": 0.2,
+  "tags": [
+    "dub-techno",
+    "echo-decay",
+    "spacious"
+  ],
+  "_approach": "Leans on future garage's Dub-Techno lineage rather than its 2-step one: the kick skips bar 2 entirely (classic dub-techno spacing), and a conga hit decays through two descending 'echo repeat' velocities each bar in place of a snare, with rim answering as a further delay tail. Ref: MasterClass 'Future Garage Guide' (the genre 'joins the dots between UK Garage, Dubstep, Detroit and Dub-Techno'). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.masterclass.com/articles/future-garage-guide",
+    "https://en.wikipedia.org/wiki/Future_garage"
+  ],
+  "tracks": {
+    "kick": [88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "drum1": [0,0,0,0,57,0,38,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,0,40,0,27,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [0,0,20,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,20,0]
+  },
+  "kit": "drm1"
+}

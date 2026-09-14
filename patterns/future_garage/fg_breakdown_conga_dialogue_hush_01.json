@@ -1,0 +1,21 @@
+{
+  "id": "fg_breakdown_conga_dialogue_hush_01",
+  "style": "future_garage",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 132,
+  "swing": 0.24,
+  "tags": ["breakdown","congas","hush","dialogue"],
+  "_approach": "Congas and bongos trade soft phrases at ghost velocity as snare substitutes, per the genre's palette, with kick and snare absent entirely — a hushed, lopsided dialogue rather than a beat. Ref: KVR Audio forum 'Future Garage + Burial Style Drums' (congas/bongos standing in for the snare).",
+  "_sources": ["https://www.kvraudio.com/forum/viewtopic.php?t=375500"],
+  "tracks": {
+    "congaHigh": [
+      0,0,24,0, 0,0,0,0, 0,20,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,26, 0,0,0,0
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,22,0, 0,0,0,0, 0,0,0,0,
+      0,0,20,0, 0,0,0,0, 0,0,0,0, 0,0,24,0
+    ]
+  }
+}

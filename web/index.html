@@ -112,7 +112,7 @@
   <div class="panel">
     <div class="controls">
       <div><label>Kit</label><select id="kit"></select></div>
-      <div><label>Style</label><select id="style"></select></div>
+      <div><label>Style <span class="rangeval" id="styleCount"></span></label><select id="style"></select></div>
       <div><label>Section</label><select id="section">
         <option value="all">all</option>
         <option value="groove">grooves</option>
@@ -120,7 +120,7 @@
         <option value="breakdown">breakdowns</option>
         <option value="fill">fills</option>
       </select></div>
-      <div><label>Pattern</label><select id="pattern"></select></div>
+      <div><label>Pattern <span class="rangeval" id="patternCount"></span></label><select id="pattern"></select></div>
       <div><label>Feel preset</label><select id="preset"></select></div>
       <div><label>Bars</label><input type="number" id="bars" min="1" max="64" value="8"></div>
       <div><label>BPM <span class="rangeval" id="bpmHint" title="This pattern's style tempo — click to apply"></span></label><input type="number" id="bpm" min="40" max="300" value="172"></div>
@@ -645,6 +645,9 @@ function fillPatternSelect(wantPattern) {
     o.textContent = `${p.id}${p.bpm ? " · " + p.bpm : ""}${SECTION_LABEL[p.section] || ""}`;
     $("pattern").appendChild(o);
   }
+  // The dropdowns are filters, so say how much of the library they're showing
+  // — otherwise a narrow filter reads as a shrunken library.
+  $("patternCount").textContent = `${list.length} of ${META.patterns.length} in kit`;
   renderGuide(style);
   const pick = list.find((p) => p.id === prev) || list.find((p) => p.section === "groove") || list[0];
   if (!pick) return null;
@@ -693,6 +696,7 @@ async function loadKit(kitName, keepPattern, wantPattern) {
     }
     $("style").appendChild(g);
   }
+  $("styleCount").textContent = `${styles.length} in kit`;
 
   // A wanted pattern (shared link) decides the style; otherwise keep the
   // style that was selected, falling back to a deliberate landing style

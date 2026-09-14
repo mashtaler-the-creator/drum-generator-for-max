@@ -28,8 +28,29 @@ Grime's palette is defined by cheap tools and no mastering: FruityLoops on a hom
 6. **grime_ruffsqwad_bounce** — Front-of-bar kick doubles for forward bounce, snare+clap layered on beat 3, loose tambourine offbeats — rawer and more youthful. *(Ruff Sqwad "Functions on the Low", "Pied Piper")*
 7. **grime_weightless_drift** — 4-bar weightless construction: bars alternate between a stated halftime pulse and near-silence with stray rims, late snares and ghost shakers. *(Logos, Mumdance, Mr. Mitch / Boxed and Different Circles era)*
 8. **grime_offkilter_perc** — Modern instrumental grime: angular conga/cowbell/clave stabs on awkward 16ths replace hats entirely over a stable halftime spine — percussion as melody. *(Slackk, Spooky Bizzle)*
-9. **grime_gunshot_fill** *(fill)* — Reload-signal fill: empty first half, then a ragged gunshot snare salute with a tom drop — the wheel-up moment of a clash set.
-10. **grime_eski_stutter_fill** *(fill)* — Kick stutters in doubled 16ths, rim clicks answer in the gap, snare holds beat 3 then jabs late — turbulence without losing the halftime spine.
+9. **grime_terror_danjah_snap_01** — Aftershock-era signature: fidgety jungle-descended percussion and a tight double-snap snare (main hit plus an immediate ghost snap) over an angular syncopated kick — brasher and more kinetic than eski minimalism. *(Terror Danjah, Aftershock)*
+10. **grime_sino_bells_01** — Sinogrime construction: cowbell/tambourine stand in for the pentatonic bell/gong melodies layered over eski beats circa "Igloo"/"Shanghai", spaced like a melodic hook over a simple halftime spine. *(Wiley, Jammer, DJ Wonder — sinogrime era)*
+
+## Fills
+
+1. **grime_gunshot_fill** *(fill)* — Reload-signal fill: empty first half, then a ragged gunshot snare salute with a tom drop — the wheel-up moment of a clash set.
+2. **grime_eski_stutter_fill** *(fill)* — Kick stutters in doubled 16ths, rim clicks answer in the gap, snare holds beat 3 then jabs late — turbulence without losing the halftime spine.
+
+## Risers
+
+1. **`grime_riser_eski_stutter_build_01`** — expands the eski stutter into a proper build: kicks stutter in doubled 16ths bar over bar, rim clicks answer in the gaps, the snare holds beat 3 before jabbing late. Ref: MusicRadar "22 pro grime production tricks".
+2. **`grime_riser_gunfinger_reload_01`** — the wheel-up moment on a 32nd grid: a dry, clipped gunshot-snare rolls denser bar to bar before hard-stopping into silence — the cue for a DJ or MC to call a reload. Ref: MusicRadar "22 pro grime production tricks"; DJ TechTools "Reload: A History of The Rewind".
+3. **`grime_riser_8bar_switch_01`** — the classic "switch the beat every 8 bars": bar 1 holds the halftime groove, bar 2 thins to almost nothing except a rising cowbell/clave stab, snapping into the next section. Ref: Recording Arts Canada "Evolution of Grime".
+4. **`grime_riser_kick_ladder_01`** — kicks ladder in density bar over bar from two sparse off-16ths to a clustered stutter while the snare stays locked to beat 3. Ref: MusicRadar "22 pro grime production tricks".
+5. **`grime_riser_crash_marker_charge_01`** — percussion stabs accelerate through bar 2 toward a crash on the very last 16th — the crash reserved for an 8-bar phrase marker or reload signal. Ref: grime DNA doc; BassGorilla "How to Make Grime Drums".
+
+## Breakdowns
+
+1. **`grime_breakdown_icerink_hush_01`** — takes Ice Rink minimalism further into true breakdown territory: one kick, no snare for a full bar, a couple of icy clave clicks. Ref: Wiley "Ice Rink"; grime DNA doc.
+2. **`grime_breakdown_dropout_mc_space_01`** — the loop-based dropout that clears the floor for the MC: kick on beat 1 alone for two bars, then total silence, then a soft reentry cue. Ref: Recording Arts Canada "Evolution of Grime".
+3. **`grime_breakdown_halftime_stripped_01`** — the halftime snare on beat 3 stands entirely alone, no kick, one ghost clave tick — "the silence between the beats is an important ingredient". Ref: MusicRadar "22 pro grime production tricks".
+4. **`grime_breakdown_clave_only_01`** — percussion-as-melody stripped to a breakdown: clave, cowbell and conga iciness alone, no kick or snare anywhere. Ref: BassGorilla "How to Make Grime Drums".
+5. **`grime_breakdown_gunshot_hangover_01`** — the quiet after the reload: a single decaying snare ring followed by near-total silence, the comedown before the next 8-bar switch. Ref: DJ TechTools "Reload: A History of The Rewind".
 
 ## Sources
 
@@ -47,3 +68,10 @@ Grime's palette is defined by cheap tools and no mastering: FruityLoops on a hom
 - The Next Web — UK grime couldn't exist without ringtones, Playstations, and other low-fi tech: https://thenextweb.com/news/uk-grime-couldnt-exist-without-ringtones-playstations-and-other-low-fi-tech
 - Back Market — "It inspired grime": how a PS1 game (Music 2000) transformed music: https://www.backmarket.com/en-us/c/technology/music-2000-game
 - Loopmasters — Grime Ammunition (hard drum hits with subtler claps/snares for mid-bar variation): https://www.loopmasters.com/genres/22-Grime/products/5525-Grime-Ammunition
+- MusicRadar — 22 pro grime production tricks (silence as structure, clipped envelopes, stutter chopping, disjointed kick/snare placement): https://www.musicradar.com/tuition/tech/22-pro-grime-production-tricks-170428
+- DJ TechTools — Reload: A History of The Rewind (MC/DJ/crowd reload dialogue, jungle/garage/dubstep/grime lineage): https://djtechtools.com/2018/08/31/reload-a-history-of-the-rewind/
+- Recording Arts Canada — Evolution of Grime (8-bar beat switches, loop-based instrumental structure): https://recordingarts.com/record/evolution-of-hip-hop/grime/
+- Wikipedia — Reload (Wiley song) (history only): https://en.wikipedia.org/wiki/Reload_(Wiley_song)
+- XLR8R — The Devil Inside: Terror Danjah Talks Gremlins, Rhythm'n'Grime, and Nearly Throwing in the Towel: https://xlr8r.com/features/the-devil-inside-terror-danjah-talks-gremlins-rhythm-n-grime-and-nearly-throwing-in-the-towel/
+- Wikipedia — Terror Danjah (history only): https://en.wikipedia.org/wiki/Terror_Danjah
+- Radii China — Sinogrime Explained: Quick Guide to a Non-Genre: https://radii.co/article/sinogrime-explained

@@ -1,0 +1,24 @@
+{
+  "id": "grime_riser_crash_marker_charge_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "riser",
+    "crash-marker",
+    "phrase-end"
+  ],
+  "_approach": "Percussion stabs accelerate through bar 2 toward a crash on the very last 16th — grime reserves the crash for exactly this: an 8-bar phrase marker or reload signal, never a ride-style constant. Ref: grime DNA doc ('Crash only as an 8-bar marker or reload signal'). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://bassgorilla.com/make-grime-drums-using-ableton-live-9/"
+  ],
+  "tracks": {
+    "kick": [102,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0],
+    "multi": [0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,40,0,0,0,47,0,0,67,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118]
+  },
+  "kit": "drm1"
+}

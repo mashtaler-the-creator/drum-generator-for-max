@@ -1,0 +1,24 @@
+{
+  "id": "hard_trance_breakdown_hats_ride_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 147,
+  "tags": [
+    "breakdown",
+    "hats",
+    "ride",
+    "no-kick"
+  ],
+  "_approach": "Kick removed entirely; the offbeat closed hats and an alternating loud/soft ride keep the tempo alive over a continuous soft 16th shaker bed. One open hat cue in the last bar hints at the return. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Hard_trance"
+  ],
+  "tracks": {
+    "hihat": [24,42,27,46,24,44,27,48,24,42,27,46,24,44,27,50,26,44,29,48,26,46,29,50,26,44,29,48,26,48,29,54],
+    "hh1Closed": [72,0,50,0,72,0,50,0,72,0,50,0,72,0,50,0,72,0,52,0,72,0,52,0,72,0,54,0,72,0,54,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0]
+  },
+  "kit": "drm1"
+}

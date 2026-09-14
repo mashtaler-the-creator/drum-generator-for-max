@@ -1,0 +1,17 @@
+{
+  "id": "dariacore_breakdown_rim_ghost_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 172,
+  "tags": ["breakdown", "rim", "no-kick"],
+  "_approach": "No kick or snare — just ghosted rim clicks tracing a loose breakbeat outline at low velocity and a barely-there hi-hat, the kind of thinned-to-nothing section that gives a chopped vocal sample room to breathe before the next splice slams back in.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "rim":   [0,26,0,0, 0,0,28,0, 0,0,0,24, 0,28,0,0,
+              0,26,0,0, 0,0,28,0, 0,0,0,26, 0,30,0,0],
+    "hihat": [0,0,22,0, 0,0,0,0, 0,0,22,0, 0,0,0,0,
+              0,0,24,0, 0,0,0,0, 0,0,24,0, 0,0,0,0]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "jersey_club_five_kick_core_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": ["five-kick","canonical","bed-squeak"],
+  "_approach": "The canonical Jersey club 5-kick skeleton: kick on 16th positions 1,5,9,12,15 (gaps of 4-4-3-3-2), the last kick given the shortest, quietest tail as a pickup. The rim role stands in for the sampled 'bed squeak' (from Trillville's 'Some Cut') on the off-16ths, closed hats sit on 2 and 4 only per the genre's sparse-hat convention, and the clap answers the kick run rather than sitting on a flat backbeat.",
+  "_sources": ["https://blog.native-instruments.com/jersey-club/","https://orphiq.com/resources/what-is-jersey-club"],
+  "tracks": {
+    "kick":   [112,0,0,0, 110,0,0,0, 106,0,0,100, 0,0,78,0,
+              114,0,0,0, 112,0,0,0, 108,0,0,102, 0,0,80,0],
+    "perc":   [0,0,0,0, 0,0,0,0, 0,0,100,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,100, 0,0,0,0, 0,0,0,0],
+    "rim":    [0,0,52,0, 0,0,56,0, 0,0,0,0, 50,0,0,0,
+              0,0,54,0, 0,0,58,0, 0,0,0,0, 52,0,0,0],
+    "hihat":  [0,0,0,0, 66,0,0,0, 0,0,0,0, 66,0,0,0,
+              0,0,0,0, 68,0,0,0, 0,0,0,0, 68,0,0,0]
+  }
+}

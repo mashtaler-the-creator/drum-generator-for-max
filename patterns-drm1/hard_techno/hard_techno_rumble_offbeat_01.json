@@ -1,0 +1,28 @@
+{
+  "id": "hard_techno_rumble_offbeat_01",
+  "style": "hard_techno",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "rumble",
+    "offbeat-hat",
+    "ride",
+    "canonical"
+  ],
+  "_approach": "The canonical 2020s warehouse groove: distorted 4/4 kick with the sidechained rumble tail heard as offbeat sub bumps (tomLow slot = rumble/sub layer, mute it if your kick already carries a rumble), closed hats kept under 70% around the offbeat, open hat on every offbeat 8th and a 909 ride in 8ths with quieter alternate hits. Reference: Sara Landry 'Lord of the Land', Alt8 & Sara Landry 'Heaven'. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/dark-techno-rumble/",
+    "https://futureproofmusicschool.com/blog/making-hard-techno-a-path-to-unique-sound-design",
+    "https://www.ableton.com/en/blog/sara-landry-high-end-hard-techno/"
+  ],
+  "tracks": {
+    "kick": [120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0,120,0,0,0,118,0,0,0,120,0,0,0,116,0,0,0],
+    "drum2": [0,62,0,62,0,62,0,62,0,62,0,62,0,62,0,62,0,0,62,0,0,0,60,0,0,0,64,0,0,0,62,40],
+    "hihat": [0,44,70,48,0,46,72,50,0,44,70,48,0,48,72,52,0,46,70,48,0,44,72,52,0,46,70,50,0,48,74,56],
+    "openHat": [0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96,0,96],
+    "hh1Closed": [78,0,56,0,78,0,56,0,78,0,56,0,78,0,56,0,78,0,58,0,78,0,58,0,78,0,58,0,78,0,58,0]
+  },
+  "kit": "drm1"
+}

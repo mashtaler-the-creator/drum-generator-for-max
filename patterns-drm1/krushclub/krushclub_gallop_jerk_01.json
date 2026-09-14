@@ -1,0 +1,27 @@
+{
+  "id": "krushclub_gallop_jerk_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 150,
+  "tags": [
+    "groove",
+    "jerk",
+    "gallop",
+    "double-kick"
+  ],
+  "_approach": "RYM lists Jerk (LA jerk/hyphy-adjacent) among krushclub's cross-pollinations. This groove adds a soft 'gallop' kick on the 16th right before beats 2 and 4 (borrowed vocabulary from hard-dance double-kicks, applied to the Jersey shape) so the low end skips like a jerk beat, while the snare/clap keeps a straight 2-and-4 backbone. Rim ghosts fill the jerk-style shuffle in the gaps. Distinct from the pure 5-kick Jersey groove because the extra kicks land on 16ths, not the Jersey a-of-3/&-of-4 slots. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://rateyourmusic.com/genre/krushclub/",
+    "https://www.melodigging.com/genre/krushclub"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,68,0,0,0,106,0,0,0,68,0,0,0,110,0,0,0,68,0,0,0,106,0,0,0,68,0,72,0],
+    "snare": [0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0],
+    "clap": [0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,96,0,0,0],
+    "multi": [0,0,30,0,0,0,0,32,0,0,30,0,0,0,0,32,0,0,30,0,0,0,0,32,0,0,30,0,0,0,0,34],
+    "hihat": [0,42,0,44,0,0,42,0,0,42,0,44,0,0,42,0,0,44,0,46,0,0,44,0,0,44,0,46,0,0,44,0]
+  },
+  "kit": "drm1"
+}

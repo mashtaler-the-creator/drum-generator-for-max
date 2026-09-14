@@ -1,0 +1,26 @@
+{
+  "id": "krushclub_hyperpop_hat_roll_01",
+  "style": "krushclub",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 156,
+  "tags": [
+    "groove",
+    "hyperpop",
+    "hat-roll"
+  ],
+  "_approach": "The hyperpop side of the fusion (per EDMProd and Aesthetics Wiki, krushclub takes its 'pitched-up vocal styles' and maximalist production from hyperpop): a trap/hyperpop-style hi-hat roll accelerates from straight 16ths into a dense burst before every backbeat hit, mimicking the vocal-chop stutter hyperpop producers apply. The 5-kick Jersey pattern stays underneath, but the hats are the loudest decoration in the mix, capped just under the ≥90 accent threshold so the kick and clap stack stay the skeleton. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/krushclub/",
+    "https://aesthetics.fandom.com/wiki/Krushclub"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,106,0,0,0,104,0,0,100,0,0,104,0,110,0,0,0,106,0,0,0,104,0,0,100,0,0,102,0],
+    "snare": [0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0],
+    "clap": [0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [40,44,48,52,56,60,64,68,40,44,48,52,56,60,64,72,40,46,52,58,62,66,70,74,40,46,52,58,62,70,78,84],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62]
+  },
+  "kit": "drm1"
+}

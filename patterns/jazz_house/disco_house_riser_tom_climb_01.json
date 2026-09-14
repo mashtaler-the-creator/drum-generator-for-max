@@ -1,0 +1,25 @@
+{
+  "id": "disco_house_riser_tom_climb_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.08,
+  "bpm": 124,
+  "tags": ["riser", "tom-climb", "disco-house"],
+  "_approach": "The nu-disco tom fill turned into a full riser: bar 1 is a plain punchy groove, bar 2 introduces low, mid then high toms in ascending order at beats 3-4 before all three cascade together into the final two steps under the open hat dropping out and a crash landing on the last step.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/programming-a-nu-disco-beat/"],
+  "tracks": {
+    "kick":    [106,0,0,0, 104,0,0,0, 108,0,0,0, 102,0,0,0,
+                106,0,0,0, 104,0,0,0, 108,0,0,0, 110,0,0,0],
+    "openHat": [0,0,90,0, 0,0,90,0, 0,0,90,0, 0,0,90,0,
+                0,0,92,0, 0,0,92,0, 0,0,0,0, 0,0,0,0],
+    "tomLow":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 70,0,0,0, 0,0,0,0],
+    "tomMid":  [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,80,0, 0,0,0,0],
+    "tomHigh": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,100,0],
+    "crash":   [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,118]
+  }
+}

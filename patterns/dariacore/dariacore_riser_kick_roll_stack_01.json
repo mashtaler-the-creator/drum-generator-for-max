@@ -1,0 +1,19 @@
+{
+  "id": "dariacore_riser_kick_roll_stack_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 175,
+  "tags": ["riser", "kick-roll", "build"],
+  "_approach": "A generic EDM kick-roll build (8ths accelerating into 16ths, velocity climbing to 127) rather than a dariacore-specific device — this is the honest limit of drum-only builds here: the genre's actual build tension comes from the sample being flipped (a vocal chop sped up, a filter opening on the source track), not from the drum pattern alone, so this riser only covers the generic 'kick roll into the drop' skeleton a dariacore producer would drum underneath their sample edit.",
+  "_sources": ["https://www.edmprod.com/ultimate-guide-build-ups/", "https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "kick":  [110,0,0,0, 108,0,0,0, 106,0,96,0, 104,0,98,0,
+              100,0,102,0, 104,0,106,0, 108,110,112,114, 116,120,124,127],
+    "snare": [0,0,0,0, 96,0,0,0, 0,0,0,0, 96,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "hihat": [0,44,0,44, 0,44,0,44, 0,44,0,44, 0,44,0,44,
+              48,52,56,60, 64,68,72,76, 80,84,88,92, 96,100,110,120]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "dnb_breakdown_neuro_tension_01",
+  "style": "dnb",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 172,
+  "swing": 0,
+  "tags": ["breakdown","neurofunk","tension","mechanical"],
+  "_approach": "Neuro tension breakdown: no kick at all - a mechanical rim/hat tick pattern decays in velocity bar to bar as if trailing off into a long reverb tail, the Loopmasters neurofunk-breakdown technique of extending a percussion loop under reverb before the drum fill returns. Ref: Loopmasters' neurofunk breakdown tutorial (extended percussion loop with heavy reverb, working backwards from the drop).",
+  "_sources": ["https://www.loopmasters.com/articles/4564-How-To-Make-A-Neurofunk-Drum-and-Bass-Breakdown"],
+  "tracks": {
+    "rim": [40,0,0,0, 0,0,0,0, 34,0,0,0, 0,0,0,0, 28,0,0,0, 0,0,0,0, 22,0,0,0, 0,0,0,0,
+             20,0,0,0, 0,0,0,0, 16,0,0,0, 0,0,0,0, 12,0,0,0, 0,0,0,0, 10,0,0,0, 0,0,0,0],
+    "hihat": [0,0,0,0, 30,0,0,0, 0,0,0,0, 26,0,0,0, 0,0,0,0, 22,0,0,0, 0,0,0,0, 18,0,0,0,
+               0,0,0,0, 16,0,0,0, 0,0,0,0, 14,0,0,0, 0,0,0,0, 12,0,0,0, 0,0,0,0, 10,0,0,0],
+    "perc": [36,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 32,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              24,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 20,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0]
+  }
+}

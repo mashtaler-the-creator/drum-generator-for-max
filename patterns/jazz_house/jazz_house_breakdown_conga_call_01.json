@@ -1,0 +1,19 @@
+{
+  "id": "jazz_house_breakdown_conga_call_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.20,
+  "bpm": 122,
+  "tags": ["breakdown", "conga-call", "no-kick"],
+  "_approach": "No kick at all: a high-conga call answered by a low-conga response is the entire pattern, with the deepest swing outside the Moodymann-style groove (60% MPC). A single soft clap on beat 4 of bar 2 cues the return.",
+  "_sources": ["https://www.thevinylfactory.com/features/drum-patterns-and-memories-12-artists-reflect-on-iconic-drum-machines"],
+  "tracks": {
+    "congaHigh": [0,0,58,0, 0,0,0,0, 0,0,58,0, 0,0,0,0,
+                  0,0,60,0, 0,0,62,0, 0,0,60,0, 0,0,64,0],
+    "congaLow":  [0,0,0,0, 0,0,54,0, 0,0,0,0, 0,0,54,0,
+                  0,0,0,0, 0,0,56,0, 0,0,0,0, 0,0,58,0],
+    "perc":      [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+                  0,0,0,0, 0,0,0,0, 0,0,0,0, 90,0,0,0]
+  }
+}

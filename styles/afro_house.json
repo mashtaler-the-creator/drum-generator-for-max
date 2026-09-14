@@ -1,0 +1,34 @@
+{
+  "style": "afro_house",
+  "name": "Afro House",
+  "family": "african",
+  "bpm": [120, 126],
+  "swing": "0.05-0.20",
+  "summary": "Straight 4/4 kick under a web of interlocking hand-percussion parts that answer each other - shaker-driven grooves, clave/cowbell timelines and conga/tom call-and-response - split between a deeper, percussion-forward lane (Black Coffee, Da Capo) and a stripped melodic lane (Keinemusik) that trades drum count for pad and chord space.",
+  "sounds": {
+    "kick": "Clean, rounded, mono deep-house kick (not distorted or gated); a harder 909-style kick suits the Afro-Tech-adjacent grooves.",
+    "snare": "Understated layered clap on 2 and 4 (perc slot) pulled well back in level; constant light rim ghosts as a backbeat decoration rather than a snare backbeat.",
+    "hats": "Closed hats sit under the shaker rather than replacing it; sometimes resampled lo-fi for the deeper, dustier grooves.",
+    "percussion": "The genre's centre of gravity: a full velocity-contoured 16th shaker as the primary driver, clave/cowbell timeline instruments holding longer cycles, and conga/tom call-and-response phrases that answer each other rather than looping statically.",
+    "cymbals": "Almost absent - no crash in this kit's afro_house patterns; a soft ride wash appears only occasionally in breakdowns."
+  },
+  "machines": [
+    "LinnDrum / Oberheim DMX - clean deep-house kick base (owned)",
+    "Roland TR-909 - harder kick, closed/open hat, ride for Afro-Tech-leaning grooves (owned)",
+    "E-mu SP-1200 - lo-fi resampled hats for the deeper, dustier lane (owned)",
+    "Roland TR-727 - clave, cowbell, conga and shaker patches (owned)",
+    "Roland CR-78 - softer analogue conga/bongo tones (owned)",
+    "Korg KR-55 / KPR-77 - period-adjacent latin percussion for the timeline instruments (owned)",
+    "Novation Drumstation / Quasimidi 309 - period rave-clap character pulled back for the perc slot (owned)",
+    "Real congas, djembe and shakers - genuine live hand percussion this drum-only library approximates with synthesized machines (get elsewhere)"
+  ],
+  "references": [
+    "Black Coffee - Superman ft. Bucie (2010)",
+    "Black Coffee - Drive (2018)",
+    "Da Capo - Kelele (2020)",
+    "Culoe De Song - Webaba (2009)",
+    "Keinemusik - Muyè (2020)",
+    "Themba - Sound of Freedom (2021)"
+  ],
+  "doc": "docs/styles/afro_house.md"
+}

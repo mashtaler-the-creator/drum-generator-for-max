@@ -1,0 +1,24 @@
+{
+  "id": "dariacore_hardstyle_kick_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 165,
+  "tags": [
+    "groove",
+    "hardstyle",
+    "four-on-floor"
+  ],
+  "_approach": "The Dariacore Wiki/Wikipedia note that dariacore features 'hardstyle kicks' and borrows 'the sound design and bass drops of dubstep.' A straight four-on-the-floor kick at full velocity every quarter (the hardstyle-adjacent skeleton, with the pitch-drop body implied rather than modelled), a clap+snare stack on 2 and 4, and a dense closed-hat 16th bed underneath so the groove reads as maximalist even before any sample chop is layered on top. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Dariacore"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,114,0,0,0,116,0,0,0,114,0,0,0,116,0,0,0,114,0,0,0,116,0,0,0,114,0,0,0],
+    "snare": [0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,100,0,0,0],
+    "clap": [0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,98,0,0,0],
+    "hihat": [50,52,54,56,50,52,54,56,50,52,54,56,50,52,54,56,52,54,56,58,52,54,56,58,52,54,56,58,52,54,56,58]
+  },
+  "kit": "drm1"
+}

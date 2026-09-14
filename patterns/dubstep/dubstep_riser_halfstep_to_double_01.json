@@ -1,0 +1,37 @@
+{
+  "id": "dubstep_riser_halfstep_to_double_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 140,
+  "swing": 0.1,
+  "tags": ["riser","build","halfstep-break","double-time","snare-roll"],
+  "_approach": "True 8ths-to-16ths-to-32nds acceleration on a 32nd grid: bar 1 keeps the halfstep skeleton (kick on 1, snare on 3, syncopated kicks creeping toward the end of the bar) under a breathing shaker; bar 2 drops the kick and doubles the snare from 8ths to 16ths to 32nds while hats double alongside, ending on two silent 32nds as the gap before the drop. Ref: MusicRadar 'How to create the ultimate snare roll build-up'; Attack Magazine '10 Snare Rolls For The Drop'.",
+  "_sources": ["https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up","https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/"],
+  "tracks": {
+    "kick": [
+      112,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,64,0, 0,0,0,54, 0,0,0,0,
+      104,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      98,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 70,0,0,0, 74,0,0,0,
+      80,0,84,0, 88,0,92,0, 95,98,101,104, 108,112,0,0
+    ],
+    "hihat": [
+      0,0,0,0, 48,0,0,0, 0,0,0,0, 52,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 54,0,0,0,
+      58,0,0,0, 60,0,0,0, 62,0,0,0, 64,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ],
+    "shaker": [
+      0,0,26,0, 0,0,30,0, 0,0,28,0, 0,0,32,0,
+      0,0,30,0, 0,34,0,0, 0,0,32,0, 0,0,0,36,
+      0,0,28,0, 0,0,32,0, 0,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

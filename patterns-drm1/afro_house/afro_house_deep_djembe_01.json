@@ -1,0 +1,26 @@
+{
+  "id": "afro_house_deep_djembe_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.2,
+  "bpm": 123,
+  "tags": [
+    "deep",
+    "djembe",
+    "swung",
+    "attack-magazine"
+  ],
+  "_approach": "Attack Magazine's Deep Afro House dissection: a 'fairly busy' kick with syncopated 16th ghost kicks, a heavily swung crispy 16th hat where the 4th 16th of each beat sits 20-30% softer than the 3rd, a low tambourine giving the kick definition, and short bongo/djembe hits carrying the Afro element. Ref: Black Coffee 'We Dance Again' (2015), Themba 'Who Is Themba?' (2018). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/beat-dissected/deep-afro-house/"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,54,105,0,0,0,108,0,53,0,106,0,0,0,104,0,0,51,107,0,0,0,105,0,0,52],
+    "hihat": [81,50,72,46,79,53,60,0,82,51,73,42,80,54,61,0,78,52,74,43,81,50,62,0,79,53,70,44,82,51,63,42],
+    "hh1Closed": [0,0,40,0,0,0,42,0,0,0,41,0,0,0,43,0,0,0,42,0,0,0,40,0,0,0,42,0,0,0,41,0],
+    "drum1": [0,0,0,67,0,0,0,0,0,68,0,0,69,0,0,0,0,0,0,68,0,0,60,0,0,70,0,0,67,0,61,0],
+    "clap": [0,0,0,0,60,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,63,0,0,0]
+  },
+  "kit": "drm1"
+}

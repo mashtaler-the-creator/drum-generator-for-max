@@ -1,0 +1,17 @@
+{
+  "id": "grime_breakdown_gunshot_hangover_01",
+  "style": "grime",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": ["breakdown","gunshot-hangover","quiet"],
+  "_approach": "The quiet after the reload: a single decaying snare ring, low velocity, no double-hit, followed by near-total silence — the comedown before the next 8-bar switch snaps back in. Ref: DJ TechTools 'Reload: A History of The Rewind' (the moment right after a wheel-up).",
+  "_sources": ["https://djtechtools.com/2018/08/31/reload-a-history-of-the-rewind/"],
+  "tracks": {
+    "snare": [
+      0,0,0,0, 0,0,0,0, 55,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "three_step_falling_kick_01",
+  "style": "three_step",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.18,
+  "bpm": 116,
+  "tags": ["kick-drop","falling-forward","classic"],
+  "_approach": "Melodigging's canonical 3-step kick timing (≈1.1, 2.75, 4.0): kick on beat 1, a kick pushed into the last 16th of beat 2 so it falls forward into the empty beat 3, and a kick on beat 4 - the clearest version of Thakzin's 'I just removed one kick, and there's a lot of space'. Swung 16th shaker, rim ghosts either side of the gap, congaLow answers where the beat-3 kick used to be.",
+  "_sources": ["https://www.melodigging.com/genre/3-step","https://www.okayafrica.com/thakzin-shapes-his-vision-of-the-rising-south-african-electronic-genre-3-step/1412410"],
+  "tracks": {
+    "kick":     [112,0,0,0, 0,0,0,100, 0,0,0,0, 115,0,0,0,
+                 110,0,0,0, 0,0,0,104, 0,0,0,0, 117,0,0,0],
+    "shaker":   [72,44,58,40, 70,46,60,42, 74,45,58,41, 68,48,62,44,
+                 70,46,60,42, 74,45,58,41, 68,48,62,44, 72,50,64,46],
+    "rim":      [0,0,52,0, 0,0,0,0, 0,0,48,0, 0,0,55,0,
+                 0,0,50,0, 0,0,0,0, 0,0,50,0, 0,0,57,0],
+    "congaLow": [0,0,0,0, 0,0,0,0, 0,62,0,50, 0,0,0,0,
+                 0,0,0,0, 0,0,0,0, 0,65,0,53, 0,0,0,0],
+    "perc":     [0,0,0,0, 78,0,0,0, 0,0,0,0, 80,0,0,0,
+                 0,0,0,0, 80,0,0,0, 0,0,0,0, 82,0,0,0],
+    "hihat":    [0,0,38,0, 0,0,40,0, 0,0,39,0, 0,0,41,0,
+                 0,0,40,0, 0,0,42,0, 0,0,41,0, 0,0,43,0]
+  }
+}

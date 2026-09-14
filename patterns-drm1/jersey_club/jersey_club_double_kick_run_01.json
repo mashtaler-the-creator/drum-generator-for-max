@@ -1,0 +1,24 @@
+{
+  "id": "jersey_club_double_kick_run_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 138,
+  "swing": 0,
+  "tags": [
+    "five-kick",
+    "doubled",
+    "relentless"
+  ],
+  "_approach": "A denser, more relentless take: two 5-kick-derived cells share the bar (the second compressed to open a 16th earlier), giving eight kick hits per bar instead of five for a harder-driving, almost drill-adjacent bounce while the hat and clap keep the standard Jersey placement for reference. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://blog.native-instruments.com/jersey-club/",
+    "https://beatstorapon.com/blog/how-to-make-a-jersey-club-beat/"
+  ],
+  "tracks": {
+    "kick": [114,0,0,96,0,0,0,104,0,0,98,0,0,80,0,0,116,0,0,98,0,0,0,106,0,0,100,0,0,82,0,0],
+    "clap": [0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0],
+    "hihat": [0,0,0,0,64,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,66,0,0,0,0,0,0,0,66,0,0,0]
+  },
+  "kit": "drm1"
+}

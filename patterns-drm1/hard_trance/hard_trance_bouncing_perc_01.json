@@ -1,0 +1,26 @@
+{
+  "id": "hard_trance_bouncing_perc_01",
+  "style": "hard_trance",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 147,
+  "tags": [
+    "bouncing-perc",
+    "conga",
+    "trade-era"
+  ],
+  "_approach": "Bouncing percussion carries the groove instead of hats: a high/low conga call-and-response fills every gap between the kicks, a light offbeat open hat keeps the pump, and the clap sits on 2 and 4. The Trade-era hard house 'bounce' the genre is named for. Reference: Tidy Girls, Lisa Lashes. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://obscuur.io/blogs/news/the-complete-guide-to-hard-house",
+    "https://en.wikipedia.org/wiki/Tidy_Trax"
+  ],
+  "tracks": {
+    "kick": [114,0,0,0,114,0,0,0,114,0,0,0,114,0,0,0,114,0,0,0,114,0,0,0,112,0,0,0,116,0,0,0],
+    "drum1": [0,0,57,0,0,0,0,55,0,0,57,0,0,0,0,55,0,0,59,0,0,0,0,57,0,0,61,0,0,0,0,49],
+    "drum2": [0,52,0,0,0,0,52,0,0,52,0,0,0,0,52,0,0,53,0,0,0,0,55,0,0,53,0,0,0,0,55,0],
+    "openHat": [0,0,92,0,0,0,92,0,0,0,92,0,0,0,92,0,0,0,92,0,0,0,92,0,0,0,92,0,0,0,92,0],
+    "clap": [0,0,0,0,102,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,108,0,0,0]
+  },
+  "kit": "drm1"
+}

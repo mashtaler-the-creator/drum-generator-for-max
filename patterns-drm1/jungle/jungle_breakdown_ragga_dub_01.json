@@ -1,0 +1,26 @@
+{
+  "id": "jungle_breakdown_ragga_dub_01",
+  "style": "jungle",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 168,
+  "swing": 0.12,
+  "tags": [
+    "breakdown",
+    "ragga",
+    "dub",
+    "skank"
+  ],
+  "_approach": "Ragga dub breakdown: the kick drops out completely and a rimshot skank (the offbeat dub lick) trades with a conga call-and-response, both fading in velocity bar to bar like a dub echo, giving the MC/vocal the space that jungle inherited straight from sound-system dub culture. Ref: the dub delay/filter/rewind techniques documented for ragga jungle production; EDMProd's jungle guide on dub/reggae source material. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.edmprod.com/how-to-make-jungle-music/",
+    "https://magneticmag.com/2026/06/music-production-tips-for-making-jungle/"
+  ],
+  "tracks": {
+    "multi": [0,0,54,0,0,0,50,0,0,0,54,0,0,0,48,0,0,0,42,0,0,0,38,0,0,0,44,0,0,0,36,0],
+    "drum1": [55,0,0,0,0,0,0,0,57,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0],
+    "drum2": [0,0,0,0,53,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,46,0,0,0],
+    "hihat": [24,0,21,0,26,0,22,0,24,0,21,0,26,0,24,0,22,0,19,0,24,0,21,0,22,0,19,0,24,0,22,0]
+  },
+  "kit": "drm1"
+}

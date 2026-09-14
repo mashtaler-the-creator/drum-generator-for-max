@@ -1,0 +1,22 @@
+{
+  "id": "jersey_club_riser_hat_roll_01",
+  "style": "jersey_club",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0,
+  "tags": [
+    "riser",
+    "hat-roll"
+  ],
+  "_approach": "A drill-style hi-hat roll build: hats accelerate from 8ths to 16ths to a 32nd-feel burst (represented as consecutive 16ths at rising velocity) across bar 2, over the standard kick pattern, into a final open-hat + kick hit. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://djmag.com/features/endless-evolution-jersey-club"
+  ],
+  "tracks": {
+    "kick": [110,0,0,0,106,0,0,0,100,0,0,90,0,0,70,0,112,0,0,0,108,0,0,0,104,0,0,100,0,0,127,0],
+    "hihat": [50,0,0,0,50,0,0,0,50,0,0,0,50,0,0,0,60,66,72,78,84,90,96,102,108,112,116,120,122,124,126,0],
+    "openHat": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120]
+  },
+  "kit": "drm1"
+}

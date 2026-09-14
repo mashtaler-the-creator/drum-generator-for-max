@@ -1,0 +1,21 @@
+{
+  "id": "dariacore_amen_jungle_01",
+  "style": "dariacore",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 180,
+  "tags": ["groove", "jungle", "amen-chop"],
+  "_approach": "Wikipedia credits 'the rhythmic intensity of breakcore/jungle' as a direct influence. A classic amen-break skeleton (kick on 1, snare drags on the 'a' of 1 and beat 3, ghost snare on the '&' of 3) re-pitched to dariacore tempo rather than jungle's 160–180, with the ride standing in for the break's characteristic ride-cymbal wash — the amen chop played nearly straight, before any further re-slicing a producer would do on the actual audio.",
+  "_sources": ["https://en.wikipedia.org/wiki/Dariacore"],
+  "tracks": {
+    "kick":  [112,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              112,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "snare": [0,0,0,70, 0,0,0,0, 100,0,0,0, 0,0,60,0,
+              0,0,0,72, 0,0,0,0, 100,0,0,0, 0,0,64,0],
+    "ride":  [0,54,0,54, 0,54,0,54, 0,54,0,54, 0,54,0,54,
+              0,56,0,56, 0,56,0,56, 0,56,0,56, 0,56,0,56],
+    "hihat": [40,0,40,0, 40,0,40,0, 40,0,40,0, 40,0,40,0,
+              42,0,42,0, 42,0,42,0, 42,0,42,0, 42,0,42,0]
+  }
+}

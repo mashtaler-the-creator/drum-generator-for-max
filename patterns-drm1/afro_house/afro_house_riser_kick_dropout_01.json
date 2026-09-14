@@ -1,0 +1,28 @@
+{
+  "id": "afro_house_riser_kick_dropout_01",
+  "style": "afro_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.05,
+  "bpm": 124,
+  "tags": [
+    "riser",
+    "kick-dropout",
+    "rim-ramp",
+    "build"
+  ],
+  "_approach": "Kick-dropout build: bar 1 is the full groove, bar 2 removes the kick and lets a 16th rim ramp, a rising low conga and stepped claps take over, then everything stops for two 16ths and a single stacked hit (rim + clap + conga) lands on the last step. The 'silence gap' before an Afro-tech drop. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.melodigging.com/genre/afro-tech",
+    "https://iqsounds.com/blogs/news/afro-house-drum-programming-guide"
+  ],
+  "tracks": {
+    "kick": [104,0,0,0,107,0,0,0,105,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [65,40,50,43,63,42,48,42,66,41,50,40,64,43,49,42,62,42,51,41,65,40,50,43,63,42,48,42,0,0,0,0],
+    "multi": [0,0,0,0,74,0,0,0,0,0,0,0,70,0,0,0,53,50,62,64,71,73,78,80,88,85,99,96,106,0,0,119],
+    "clap": [0,0,0,0,62,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,104,0,0,117],
+    "drum2": [0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,61,0,60,0,68,0,67,0,74,0,78,0,83,0,0,114],
+    "openHat": [0,0,64,0,0,0,62,0,0,0,60,0,0,0,63,0,0,0,61,0,0,0,64,0,0,0,62,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

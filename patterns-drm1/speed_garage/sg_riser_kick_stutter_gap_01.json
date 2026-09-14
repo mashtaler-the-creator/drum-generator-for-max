@@ -1,0 +1,30 @@
+{
+  "id": "sg_riser_kick_stutter_gap_01",
+  "style": "speed_garage",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "bpm": 137,
+  "swing": 0.18,
+  "tags": [
+    "riser",
+    "build",
+    "kick-stutter",
+    "gap",
+    "32nds"
+  ],
+  "_approach": "Kick-stutter build with a silence gap: bar 1 is straight 4/4 with a doubled 16th pair into beat 3; in bar 2 the kick stutters in 16ths (beats 1-2) then 32nds (beat 3) alongside a 32nd snare rush on beat 4 that peaks at 127 - then the final two 32nds are empty so the drop's downbeat lands on silence. Ref: sub-drop signposts on Armand Van Helden's 'Spin Spin Sugar' remix, modern revival edits (Bklava, Interplanetary Criminal). (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://www.attackmagazine.com/technique/beat-dissected/interplanetary-criminal-style-garage/",
+    "https://theproducerschool.com/blogs/featured-blogs/how-to-make-speed-garage-complete-production-tutorial"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,108,0,0,0,0,0,90,0,100,0,102,0,103,0,105,0,107,0,109,0,110,0,112,0,112,113,115,116,118,119,121,122,0,0,0,0,0,0,0,0],
+    "snare": [0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,109,113,118,122,127,0,0],
+    "clap": [0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "hihat": [0,0,0,0,68,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0],
+    "openHat": [0,0,0,0,76,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,80,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,0,0,0,0],
+    "multi": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,78,0,84,0,0,0,0,0,0,0,0,0]
+  },
+  "kit": "drm1"
+}

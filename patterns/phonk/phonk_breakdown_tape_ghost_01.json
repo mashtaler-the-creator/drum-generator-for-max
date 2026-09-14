@@ -1,0 +1,17 @@
+{
+  "id": "phonk_breakdown_tape_ghost_01",
+  "style": "phonk",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 70,
+  "swing": 0.16,
+  "tags": ["breakdown","memphis","lofi"],
+  "_approach": "A Memphis-lane breakdown: kick and snare drop out completely, leaving only the low-velocity ghost hat/rim texture from the tape-hiss groove running alone — the murky, near-silent pocket that sits between verses on original Memphis tapes.",
+  "_sources": ["https://daily.redbullmusicacademy.com/2012/07/noz-pit-stop-memphis-spanish-fly/"],
+  "tracks": {
+    "hihat":  [22,26,20,28, 22,26,20,28, 22,26,20,28, 22,26,20,30,
+              22,26,20,28, 22,26,20,28, 22,26,20,28, 22,26,20,30],
+    "rim":    [0,0,0,0, 0,0,0,0, 0,0,0,26, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,28, 0,0,0,0]
+  }
+}

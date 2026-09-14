@@ -1,0 +1,25 @@
+{
+  "id": "melodic_techno_riser_snare_build_01",
+  "style": "melodic_techno",
+  "bars": 2,
+  "stepsPerBar": 32,
+  "swing": 0,
+  "bpm": 124,
+  "tags": [
+    "riser",
+    "snare-roll",
+    "32nds"
+  ],
+  "_approach": "Gentle-to-huge snare build on a 32nd grid: 8ths in bar 1 at low velocity, 16ths for the first half of bar 2, 32nds for the last half rising to 127, kick 4/4 and offbeat open hats constant, crash on the final 32nd. Melodic techno keeps the kick under the roll so the drop is a release, not a re-entry. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/",
+    "https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up"
+  ],
+  "tracks": {
+    "snare": [48,0,0,0,52,0,0,0,56,0,0,0,60,0,0,0,64,0,0,0,68,0,0,0,72,0,0,0,76,0,0,0,80,0,83,0,85,0,88,0,90,0,93,0,95,0,98,0,100,102,104,105,107,109,111,113,114,116,118,120,122,123,125,127],
+    "kick": [108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0],
+    "openHat": [0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,70,0,0,0],
+    "hh1Open": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112]
+  },
+  "kit": "drm1"
+}

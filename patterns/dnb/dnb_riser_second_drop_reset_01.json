@@ -1,0 +1,25 @@
+{
+  "id": "dnb_riser_second_drop_reset_01",
+  "style": "dnb",
+  "bars": 3,
+  "stepsPerBar": 16,
+  "bpm": 174,
+  "swing": 0,
+  "tags": ["riser","build","reset","second-drop"],
+  "_approach": "Second-drop reset: the build out of a breakdown into a harder second drop - bar 1 stays sparse (just kick and a lone rim), bar 2 brings in an 8th ride and creeping hats, and bar 3 doubles the hats to 16ths and fires a snare pickup roll into a crash-topped final hit, announcing that the returning drop hits harder than the first. Ref: KAN Samples' DnB arrangement guide on the second build/second drop needing to 'exceed the first drop'; Point Blank's tension-and-release principles for EDM arrangement.",
+  "_sources": ["https://kansamples.com/blogs/learn/dnb-track-arrangement","https://www.pointblankmusicschool.com/blog/creating-tension-and-release-in-electronic-dance-music/"],
+  "tracks": {
+    "kick": [90,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 94,0,0,0, 0,0,0,0, 0,0,80,0, 0,0,0,0,
+              100,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "rim": [0,0,0,0, 0,0,0,0, 40,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+             0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0],
+    "ride": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 48,0,40,0, 48,0,40,0, 50,0,42,0, 50,0,42,0,
+              52,0,0,0, 52,0,0,0, 54,0,0,0, 54,0,0,0],
+    "hihat": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 36,0,0,0, 36,0,0,0, 38,0,0,0, 38,0,0,0,
+               44,0,38,0, 44,0,38,0, 46,0,40,0, 46,0,42,0],
+    "snare": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 60,0,72,0, 84,96,108,120],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+               0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,118]
+  }
+}

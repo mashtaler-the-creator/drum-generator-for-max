@@ -1,0 +1,24 @@
+{
+  "id": "hard_trance_fill_clap_run_01",
+  "style": "hard_trance",
+  "bars": 1,
+  "stepsPerBar": 16,
+  "swing": 0,
+  "bpm": 149,
+  "tags": [
+    "fill",
+    "clap-run",
+    "turnaround"
+  ],
+  "_approach": "One-bar turnaround: the kick breaks briefly for a syncopated hit at the 'a' of beat 3, and the clap accelerates from the 2/4 backbeat into a 16th run through beat 4. Auto-injected into hard_trance grooves every 4th bar. (re-voiced for the Vermona DRM1 MKIII's 8 channels)",
+  "_sources": [
+    "https://obscuur.io/blogs/news/the-complete-guide-to-hard-house"
+  ],
+  "tracks": {
+    "kick": [116,0,0,0,116,0,0,0,116,0,100,0,108,0,0,0],
+    "openHat": [0,0,96,0,0,0,96,0,0,0,96,0,0,0,0,0],
+    "hihat": [0,42,0,46,0,44,0,48,0,42,0,0,0,0,0,0],
+    "clap": [0,0,0,0,104,0,0,0,0,0,0,0,60,78,96,112]
+  },
+  "kit": "drm1"
+}

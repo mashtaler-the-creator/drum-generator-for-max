@@ -1,0 +1,38 @@
+{
+  "style": "jungle",
+  "name": "Jungle",
+  "family": "breaks",
+  "bpm": [160, 175],
+  "swing": "0.03–0.2",
+  "summary": "Jungle is chopped-break grammar, not composed groove: slices of a sampled funk break (Amen, Think, Apache, Hot Pants, Soul Pride, Cold Sweat, Funky Drummer) rearranged bar to bar into new sentences, with a dense ghost-note snare language over a sparse anchoring kick. Ragga jungle adds dancehall 3-3-2 kicks and rim/tom bounce; intelligent jungle washes the same DNA into ride/shaker atmosphere over a deep sub kick.",
+  "sounds": {
+    "kick": "The break's own kick, reinforced with a sub-heavy 808/909 layer for low-end the sampled hit alone rarely has; sparse placement (beat 1 plus one syncopated hit) rather than a 4/4 pulse.",
+    "snare": "The break's snare (Amen/Think/Soul Pride) chopped into hits and re-triggered with dense low-velocity ghost chatter around the 2-and-4 backbeat, often doubled with an 808/909 snare or clap for extra crack; timestretched pitch gives the classic robotic snare-roll shimmer.",
+    "hats": "Ride/hat/tambourine slices lifted straight from the source break (Think's tambourine, Apache's ride) for constant top-end motion, sometimes topped up with a programmed 909/707 closed hat.",
+    "percussion": "Conga/bongo lattices chopped from Apache, funk ghost accents from Hot Pants, and reverb/delay-treated rim/tom hits for ragga bounce - all sample-sourced rather than synthesized.",
+    "cymbals": "A single reversed or forward crash at section changes; the ride is a groove element carried over from the source break, not a wash."
+  },
+  "machines": [
+    "10 Most Iconic Amen Patterns pack — the primary Amen source material for chopping (owned)",
+    "junglebreaks.co.uk collection — classic pre-chopped jungle break library (owned)",
+    "Neekeetone Jungle Breaks — curated break pack for modern revival chops (owned)",
+    "Assorted funk/soul break library — Think, Apache, Hot Pants, Soul Pride, Cold Sweat, Funky Drummer, Tighten Up source loops (owned)",
+    "Akai S900 / S950 — the samplers that turned breaks into a chopped vocabulary; the S950's timestretching is the source of jungle's pitched-up snare-roll crunch (owned)",
+    "Akai S1000 / S5000 — higher-fidelity timestretch and multi-sampling for 2000s-onward revival chops (owned)",
+    "Akai MPC60 / MPC2000 / MPC3000 / MPC4000 — break slicing, pad-mapping and sequencing across every jungle era (owned)",
+    "E-mu SP-1200 / SP-12 / Drumulator — 12-bit resampling grit on hats, snares and kicks pulled from the break (owned)",
+    "Roland TR-808 / TR-909 — sub-reinforcement kick layer and synth snare/clap doubling under the sampled break (owned)",
+    "Roland TR-727 / TR-505 / TR-707 — programmed conga, rimshot and hat layers filling gaps around the chop (owned)",
+    "Casio SK-1 — lo-fi sampling of vocal stabs, sirens and found sound for MC/ragga intros (owned)",
+    "Ensoniq ASR-X / Akai S900 successors — modern break-chopping workflow for revival jungle (owned)"
+  ],
+  "references": [
+    "The Winstons — Amen, Brother (1969)",
+    "Lyn Collins — Think (About It) (1972)",
+    "Incredible Bongo Band — Apache (1973)",
+    "Bobby Byrd — Hot Pants (Bonus Beats) (1971)",
+    "LTJ Bukem — Music (1992)",
+    "Shy FX — Original Nuttah (1994)"
+  ],
+  "doc": "docs/styles/jungle.md"
+}

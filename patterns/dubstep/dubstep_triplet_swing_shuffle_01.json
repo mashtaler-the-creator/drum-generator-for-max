@@ -1,0 +1,33 @@
+{
+  "id": "dubstep_triplet_swing_shuffle_01",
+  "style": "dubstep",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "bpm": 140,
+  "swing": 0.25,
+  "tags": ["triplet-feel","shuffle","congas","halfstep"],
+  "_approach": "A genuinely triplet-grid construction: the halfstep frame (kick on 1, snare on 3) stays intact, but a conga cross-rhythm lands every third 16th step (a common triplet-over-16 shorthand) while the library's heaviest documented swing (0.25) pushes the whole grid toward a true shuffle feel. Ref: Studio Brootle 'Dubstep Drum Patterns' (swung 16ths at 64–75%, triplet-grid tips).",
+  "_sources": ["https://www.studiobrootle.com/dubstep-drum-patterns/","https://www.musical-u.com/learn/rhythm-how-dubstep-works/"],
+  "tracks": {
+    "kick": [
+      106,0,0,0, 0,0,0,0, 0,0,0,60, 0,0,0,0,
+      104,0,0,0, 0,0,0,0, 0,0,0,0, 0,56,0,0
+    ],
+    "snare": [
+      0,0,0,0, 0,0,0,0, 98,0,0,0, 0,0,0,0,
+      0,0,0,0, 0,0,0,0, 96,0,0,0, 0,0,0,0
+    ],
+    "congaHigh": [
+      0,0,0,36, 0,0,0,0, 0,38,0,0, 0,0,0,44,
+      0,0,0,38, 0,0,0,0, 0,40,0,0, 0,0,0,46
+    ],
+    "congaLow": [
+      0,0,0,0, 0,0,40,0, 0,0,0,0, 0,42,0,0,
+      0,0,0,0, 0,0,42,0, 0,0,0,0, 0,44,0,0
+    ],
+    "shaker": [
+      0,20,0,0, 0,0,0,22, 0,0,0,0, 0,24,0,0,
+      0,22,0,0, 0,0,0,24, 0,0,0,0, 0,26,0,0
+    ]
+  }
+}

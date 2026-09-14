@@ -1,0 +1,21 @@
+{
+  "id": "jazz_house_riser_clap_stutter_01",
+  "style": "jazz_house",
+  "bars": 2,
+  "stepsPerBar": 16,
+  "swing": 0.12,
+  "bpm": 121,
+  "tags": ["riser", "clap-stutter"],
+  "_approach": "Bar 1 plays the normal 2/4 clap groove; bar 2 keeps the beat-2 clap, then stutters into a rapid climbing roll from beat 3 through the end (60 to 110), while the hats drop out halfway through the bar to let the stutter cut through, closing on a crash.",
+  "_sources": ["https://www.attackmagazine.com/technique/beat-dissected/jazzy-house/"],
+  "tracks": {
+    "kick":  [100,0,0,0, 98,0,0,0, 102,0,0,0, 96,0,0,0,
+              100,0,0,0, 98,0,0,0, 102,0,0,0, 96,0,0,0],
+    "perc":  [0,0,0,0, 96,0,0,0, 0,0,0,0, 98,0,0,0,
+              0,0,0,0, 96,0,0,0, 60,66,72,78, 84,92,100,110],
+    "hihat": [0,40,0,44, 0,42,0,46, 0,40,0,44, 0,42,0,48,
+              0,42,0,46, 0,44,0,48, 0,0,0,0, 0,0,0,0],
+    "crash": [0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0,
+              0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,110]
+  }
+}
