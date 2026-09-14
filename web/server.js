@@ -105,6 +105,7 @@ const server = http.createServer((req, res) => {
           id: p.id,
           style: p.style,
           bpm: p.bpm,
+          bars: p.bars,
           section: sectionOf(p),
           fill: sectionOf(p) === "fill",
           approach: p._approach || "",

@@ -1,8 +1,11 @@
 {
   "style": "hypertechno",
   "name": "Hypertechno",
-  "family": "internet",
-  "bpm": [145, 160],
+  "family": "techno",
+  "bpm": [
+    145,
+    160
+  ],
   "swing": "0–0.12",
   "summary": "Hard-techno-derived 4/4 kick at 145–160 with the energy moved onto the offbeat 8th: a monolithic sidechained bass stab (often a hardstyle reverse bass) and an open hat between every kick, a big clean clap on 2 and 4 (or every beat) with eurodance flams, and punchy, undistorted drums built for phone speakers. Unlike hard techno it keeps pop structure and uses hard-dance snare rolls, clap-doubling builds, kick drop-outs and half-bar silences before the drop.",
   "sounds": {

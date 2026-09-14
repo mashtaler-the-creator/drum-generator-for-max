@@ -182,7 +182,7 @@ async function apiMeta(q) {
     kit: kit.name,
     kits: Object.fromEntries(Object.entries(D.kits).map(([k, v]) => [k, v.label])),
     patterns: kit.patterns.map((p) => ({
-      id: p.id, style: p.style, bpm: p.bpm,
+      id: p.id, style: p.style, bpm: p.bpm, bars: p.bars,
       section: D.lib.sectionOf(p),
       fill: D.lib.sectionOf(p) === "fill",
       approach: p._approach || "",
@@ -576,6 +576,7 @@ $("section").onchange = () => {
 // styles/<style>.json: tempo range, drum DNA, which sounds and drum machines
 // the style is built on. Rendered under the grid for the selected style.
 const SECTION_LABEL = { groove: "", fill: " (fill)", riser: " (riser)", breakdown: " (breakdown)" };
+const DEFAULT_STYLE = "jungle"; // where the page lands with no shared link
 
 function renderGuide(style) {
   const g = (META.styles || {})[style];
@@ -648,6 +649,11 @@ function fillPatternSelect(wantPattern) {
   const pick = list.find((p) => p.id === prev) || list.find((p) => p.section === "groove") || list[0];
   if (!pick) return null;
   $("pattern").value = pick.id;
+  // A riser builds and a breakdown drops out over their own length — looping
+  // one for 8 bars defeats the point, so snap the bar count to the pattern.
+  if ((pick.section === "riser" || pick.section === "breakdown") && pick.bars) {
+    $("bars").value = pick.bars;
+  }
   return pick;
 }
 
@@ -655,6 +661,7 @@ function fillPatternSelect(wantPattern) {
 // pattern selected when it exists in the new kit (same ids in both).
 async function loadKit(kitName, keepPattern, wantPattern) {
   const prev = wantPattern || (keepPattern ? null : $("pattern").value);
+  const current = $("style").value; // read before the dropdown is rebuilt
   META = await apiMeta(new URLSearchParams({ kit: kitName || "gm" }));
   META.styles = META.styles || {};
   $("kit").replaceChildren();
@@ -688,9 +695,11 @@ async function loadKit(kitName, keepPattern, wantPattern) {
   }
 
   // A wanted pattern (shared link) decides the style; otherwise keep the
-  // current style when the new kit still has it.
+  // style that was selected, falling back to a deliberate landing style
+  // rather than whatever sorts first.
   const wanted = prev && META.patterns.find((p) => p.id === prev);
-  const style = (wanted && wanted.style) || ($("style").value && styles.includes($("style").value) ? $("style").value : styles[0]);
+  const fallback = styles.includes(DEFAULT_STYLE) ? DEFAULT_STYLE : styles[0];
+  const style = (wanted && wanted.style) || (styles.includes(current) ? current : fallback);
   $("style").value = style;
   if (wanted && $("section").value !== "all" && wanted.section !== $("section").value) {
     $("section").value = "all";
