@@ -65,3 +65,7 @@ Stripped sections (tag `breakdown`, 2–4 bars): kick removed or reduced to a so
 - Attack Magazine — 10 Snare Rolls For The Drop (speed-up roll, velocity ramp, build-and-pause): https://www.attackmagazine.com/technique/tutorials/10-snare-rolls-for-the-drop/
 - MusicRadar — How to create the ultimate snare roll build-up (909 snare, 8-bar velocity ramp): https://www.musicradar.com/how-to/how-to-create-the-ultimate-snare-roll-build-up
 - EDMProd — How to Create an EDM Build-Up (8-bar anatomy, drums entering without kick): https://www.edmprod.com/ultimate-guide-build-ups/
+- Attack Magazine — Reese Bass Redux (reese bass history and character, why drums stay short/punchy around it): https://www.attackmagazine.com/technique/tutorials/reese-bass-redux/
+- The Producer School — How to Create a Speed Garage Remix from Scratch (drum loops layered around the bass for a continuous rolling groove): https://theproducerschool.com/blogs/featured-blogs/how-to-create-a-speed-garage-remix-from-scratch-complete-tutorial
+- UKF — In Conversation With Bakey (breakbeat-garage fusion, "compact drum patterns with motoring hooks and a formidable low-end"): https://ukf.com/read/in-conversation-with-bakey/
+- Beatportal — Bakey's Debut Album Is A Love Letter To UK Sound System Culture ("crisp breaks and rolling basslines", 2-step/breakbeat/jungle/D&B/dubstep fusion): https://www.beatportal.com/articles/1133295-bakeys-debut-album-is-a-love-letter-to-uk-sound-system-culture

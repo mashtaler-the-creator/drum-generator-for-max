@@ -28,8 +28,15 @@ Classic UKG was a *sampler* genre, not a drum-machine genre: producers loaded 80
 6. **`ukg_modern_revival_01` — 2020s revival bounce.** Tighter swing (0.15), very heavy kick and layered snare+clap backbeat, offbeat hats, ascending rim runs into downbeats. Reference: Interplanetary Criminal "B.O.T.A.", Sammy Virji.
 7. **`ukg_perc_organic_01` — Percussive organic garage.** Four bars of high/low conga conversation over a migrating 2-step kick, glued by a full 16th shaker with rolling accents. Reference: salute, Main Phase.
 8. **`ukg_minimal_dub_01` — Minimal dubby garage.** The 2-step skeleton: kick on 1 + one syncopation per bar, deepest swing in the set (0.26), whispering rim ghosts, unchoked open hats. Reference: stripped late-era 2-step; the palette Burial inherited.
-9. **`ukg_fill_snare_run_01` — Snare-run fill** (tag `fill`). Accelerating swung snare crescendo through beat 4 into the next downbeat — the classic garage MC-drop turnaround.
-10. **`ukg_fill_rim_skip_01` — Rim-skip fill** (tag `fill`). Modern-revival rim shots trading with mid/low toms through the second half of the bar.
+9. **`ukg_breakstep_hybrid_01` — Breakstep / 2-step-with-a-break hybrid.** Drops 2-step's rolling shuffle (swing down to 0.1) for a straighter, breakbeat-derived kick/snare skeleton — kick on 1 and the amen-style '&-of-3', clap still fixed on 2 and 4, chopped ghost-snare/rim hits standing in for the break's ratatat fills. Reference: Deekline "I Don't Smoke", DJ Zinc "138 Trek".
+10. **`ukg_amen_revival_01` — 2020s sped-up amen over garage.** Keeps the classic 2-step kick/clap skeleton intact but threads a rapid chopped-amen texture — paired ghost hits at double time across rim and toms — through it, the way jungle breaks get sliced and dropped into contemporary garage sets. Reference: the PinkPantheress-era jungle/garage crossover, Nia Archives-style amen chops.
+
+## Fills
+
+1–2 one-bar turnarounds (tag `fill`), auto-injected into grooves of the same style every N bars.
+
+- **`ukg_fill_snare_run_01` — Snare-run fill.** Accelerating swung snare crescendo through beat 4 into the next downbeat — the classic garage MC-drop turnaround.
+- **`ukg_fill_rim_skip_01` — Rim-skip fill.** Modern-revival rim shots trading with mid/low toms through the second half of the bar.
 
 ## Risers
 
@@ -72,3 +79,8 @@ Classic-era references quote MPC swing of 60–69% (Attack Magazine's UK Garage 
 - Ransom Note — New Jersey to Old Kent Road: How Todd Edwards Shaped UK Garage (Ensoniq EPS, micro-sampling) — https://www.theransomnote.com/music/interviews/new-jersey-to-old-kent-road-how-todd-edwards-shaped-uk-garage/
 - Minimal Audio — Beat Breakdown: UK Garage Tutorial (two-snare layering, four tonally different hats) — https://blog.minimal.audio/uk-garage/
 - EDMProd — How to Create an EDM Build-Up (8-bar build anatomy: drums enter without kick, staggered peaks) — https://www.edmprod.com/ultimate-guide-build-ups/
+- Wikipedia — Breakstep (genre history: evolved from 2-step, breakbeat-derived kick/snare pattern at garage tempo, Deekline "I Don't Smoke", DJ Zinc "138 Trek") — https://en.wikipedia.org/wiki/Breakstep
+- Attack Magazine — Beat Dissected: Raw Drum & Bass (breakbeat kick/snare skeleton: kick on steps 1 & 11, snare on 5 & 13, swung ghost hi-hats) — https://www.attackmagazine.com/technique/beat-dissected/raw-drum-bass/
+- Mixmag — The 20 Best Tracks That Sample The Amen Break (amen break cultural reference and notable uses) — https://mixmag.net/feature/the-20-best-tracks-that-sample-the-amen-break
+- Soniare — Amen Break Deconstructed: 50 Years of Jungle Evolution (chopping/rearranging technique, ghost notes, 2020s use by Nia Archives) — https://www.soniare.net/blog/amen-break-deconstructed
+- Orphiq — What Is Jungle Music? Breakbeats, BPM, and Drum & Bass (sped-up amen tempo history 130→170 BPM, 2020s jungle/garage crossover) — https://orphiq.com/resources/what-is-jungle-music
