@@ -100,6 +100,7 @@ const server = http.createServer((req, res) => {
           style: p.style,
           bpm: p.bpm,
           fill: (p.tags || []).includes("fill"),
+          approach: p._approach || "",
         })),
         presets: Object.keys(presets).filter((k) => k[0] !== "_"),
         mapping: loadJson("js/" + kit.mapping),

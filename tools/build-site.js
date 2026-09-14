@@ -78,11 +78,41 @@ ${wrapModule("midi-writer", read("js/midi-writer.js"))}
     "<script>\n" + bundle + "</script>\n" +
     html.slice(at);
 
+  // Social/SEO meta with absolute URLs (only meaningful on the public site).
+  const site = JSON.parse(read("web/site.json"));
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+  const meta = `
+<meta name="description" content="${esc(site.description)}">
+<link rel="canonical" href="${site.url}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${site.url}">
+<meta property="og:title" content="${esc(site.title)}">
+<meta property="og:description" content="${esc(site.description)}">
+<meta property="og:image" content="${site.url}assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(site.title)}">
+<meta name="twitter:description" content="${esc(site.description)}">
+<meta name="twitter:image" content="${site.url}assets/og.png">
+<script>window.SITE = ${JSON.stringify(site)};</script>`;
+  html = html.replace(/(<meta name="viewport"[^>]*>)/, "$1" + meta);
+
+  // site/ is a folder now: index.html + copied web/assets/** (OG image,
+  // later sample kits and the Live Pack).
   const outDir = path.join(ROOT, "site");
+  fs.rmSync(outDir, { recursive: true, force: true });
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "index.html"), html);
+  const assetsSrc = path.join(ROOT, "web", "assets");
+  let assetCount = 0;
+  if (fs.existsSync(assetsSrc)) {
+    fs.cpSync(assetsSrc, path.join(outDir, "assets"), { recursive: true });
+    assetCount = fs.readdirSync(assetsSrc).length;
+  }
+  fs.writeFileSync(path.join(outDir, ".nojekyll"), "");
   const kb = (fs.statSync(path.join(outDir, "index.html")).size / 1024).toFixed(0);
-  console.log(`site/index.html written: ${total} patterns across ${Object.keys(kits).length} kits, ${kb} KB`);
+  console.log(`site/: index.html ${kb} KB (${total} patterns, ${Object.keys(kits).length} kits) + ${assetCount} asset(s)`);
 }
 
 main();

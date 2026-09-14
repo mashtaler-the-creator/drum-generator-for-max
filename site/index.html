@@ -3,6 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Style-researched drum patterns for UK garage, jungle, DnB, dubstep, grime and more. Audition in the browser, download the .mid — for an Ableton Drum Rack or a Vermona DRM1.">
+<link rel="canonical" href="https://mashtaler-the-creator.github.io/drum-generator-for-max/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mashtaler-the-creator.github.io/drum-generator-for-max/">
+<meta property="og:title" content="Drum Generator — UK bass drum parts as MIDI">
+<meta property="og:description" content="Style-researched drum patterns for UK garage, jungle, DnB, dubstep, grime and more. Audition in the browser, download the .mid — for an Ableton Drum Rack or a Vermona DRM1.">
+<meta property="og:image" content="https://mashtaler-the-creator.github.io/drum-generator-for-max/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drum Generator — UK bass drum parts as MIDI">
+<meta name="twitter:description" content="Style-researched drum patterns for UK garage, jungle, DnB, dubstep, grime and more. Audition in the browser, download the .mid — for an Ableton Drum Rack or a Vermona DRM1.">
+<meta name="twitter:image" content="https://mashtaler-the-creator.github.io/drum-generator-for-max/assets/og.png">
+<script>window.SITE = {"url":"https://mashtaler-the-creator.github.io/drum-generator-for-max/","title":"Drum Generator — UK bass drum parts as MIDI","description":"Style-researched drum patterns for UK garage, jungle, DnB, dubstep, grime and more. Audition in the browser, download the .mid — for an Ableton Drum Rack or a Vermona DRM1.","repo":"https://github.com/mashtaler-the-creator/drum-generator-for-max"};</script>
 <title>Drum Generator</title>
 <style>
   :root {
@@ -39,7 +53,16 @@
   button:hover { filter: brightness(1.15); }
   #btnNew { background: var(--accent); color: #1a1200; }
   #btnPlay { background: var(--accent2); color: #002233; min-width: 96px; }
-  #btnDownload { background: #3ddc84; color: #00220f; }
+  #btnDownload { background: #3ddc84; color: #00220f; cursor: grab; }
+  #btnDownload:active { cursor: grabbing; }
+  #btnShare.copied { background: var(--accent); color: #1a1200; }
+  .approach {
+    margin-top: 10px; padding: 10px 12px; border-left: 3px solid var(--accent);
+    background: var(--bg); border-radius: 6px; color: var(--dim); font-size: 13px; line-height: 1.45;
+  }
+  .approach b { color: var(--text); }
+  .approach a { color: var(--accent2); text-decoration: none; }
+  .approach a:hover { text-decoration: underline; }
   .seed { color: var(--dim); font-size: 12.5px; margin-left: auto; }
   .seed b { color: var(--text); font-variant-numeric: tabular-nums; }
   #grid { width: 100%; height: auto; display: block; border-radius: 6px; background: var(--bg); }
@@ -102,11 +125,13 @@
     <div class="buttons">
       <button id="btnNew">🎲 New variation</button>
       <button id="btnPlay">▶ Play</button>
-      <button id="btnDownload">⬇ Download .mid</button>
+      <button id="btnDownload" draggable="true" title="Click to download, or drag me straight onto a track in your DAW">⬇ Download .mid</button>
+      <button id="btnShare" title="Copy a link that reproduces exactly this take">🔗 Copy link</button>
       <span class="loopwrap"><input type="checkbox" id="loop" checked> loop</span>
       <span class="seed">seed <b id="seedVal">–</b></span>
     </div>
     <div id="status"></div>
+    <div id="approach" class="approach" hidden></div>
   </div>
 
   <div class="panel">
@@ -596,6 +621,7 @@ async function apiMeta(q) {
     patterns: kit.patterns.map((p) => ({
       id: p.id, style: p.style, bpm: p.bpm,
       fill: (p.tags || []).includes("fill"),
+      approach: p._approach || "",
     })),
     presets: Object.keys(D.presets).filter((k) => k[0] !== "_"),
     mapping: kit.mapping,
@@ -680,6 +706,55 @@ async function rerender() {
     setStatus(CUR);
     drawGrid();
   }
+  showApproach();
+  writeHash();
+}
+
+// The pattern's research note + a link to its style doc.
+function showApproach() {
+  const p = META && META.patterns.find((x) => x.id === $("pattern").value);
+  const box = $("approach");
+  if (!p || !p.approach) { box.hidden = true; return; }
+  const repo = (window.SITE && window.SITE.repo) || "https://github.com/mashtaler-the-creator/drum-generator-for-max";
+  box.replaceChildren();
+  const b = document.createElement("b"); b.textContent = "Approach: ";
+  const t = document.createTextNode(p.approach.replace(/\s*\(re-voiced for the Vermona DRM1 MKIII's 8 channels\)$/, "") + " ");
+  const a = document.createElement("a");
+  a.href = `${repo}/blob/main/docs/styles/${p.style}.md`;
+  a.target = "_blank"; a.rel = "noopener";
+  a.textContent = `${p.style} style notes ↗`;
+  box.append(b, t, a);
+  box.hidden = false;
+}
+
+// ------------------------------------------------------------ share links
+// The whole take lives in the URL hash so any link reproduces it exactly.
+const HASH_KEYS = ["kit", "pattern", "preset", "bars", "bpm", "density", "ghosts", "seed"];
+function writeHash() {
+  const p = params();
+  const compact = HASH_KEYS.map((k) => p.get(k) ?? "").join("|");
+  const enc = btoa(unescape(encodeURIComponent(compact))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  history.replaceState(null, "", "#" + enc);
+}
+function readHash() {
+  if (!location.hash || location.hash.length < 2) return null;
+  try {
+    const b64 = location.hash.slice(1).replace(/-/g, "+").replace(/_/g, "/");
+    const parts = decodeURIComponent(escape(atob(b64))).split("|");
+    if (parts.length !== HASH_KEYS.length) return null;
+    const o = {};
+    HASH_KEYS.forEach((k, i) => { if (parts[i] !== "") o[k] = parts[i]; });
+    return o;
+  } catch (_) { return null; }
+}
+async function copyLink() {
+  writeHash();
+  try {
+    await navigator.clipboard.writeText(location.href);
+    const b = $("btnShare"); b.classList.add("copied"); b.textContent = "✓ Link copied";
+    setTimeout(() => { b.classList.remove("copied"); b.textContent = "🔗 Copy link"; }, 1600);
+    counter("hit", "shares");
+  } catch (_) { prompt("Copy this link:", location.href); }
 }
 
 // ------------------------------------------------------------- grid drawing
@@ -856,7 +931,7 @@ const COUNT_NS = "drum-generator-for-max";
 const COUNTING = IS_STATIC && !/^(localhost|127\.0\.0\.1|)$/.test(location.hostname) && location.protocol !== "file:";
 const STAT_EL = { views: "statViews", plays: "statPlays", downloads: "statDownloads" };
 function showStat(key, value) {
-  if (typeof value !== "number") return;
+  if (typeof value !== "number" || !STAT_EL[key]) return;
   $(STAT_EL[key]).textContent = value.toLocaleString("en-US");
   $("stats").hidden = false;
 }
@@ -878,6 +953,29 @@ function loadStats() {
 $("btnPlay").onclick = () => { if (playing) stop(); else { play(); counter("hit", "plays"); } };
 $("btnNew").onclick = () => { seed = Math.floor(Math.random() * 1e9); rerender(); };
 $("btnDownload").onclick = () => { apiDownload(params()); counter("hit", "downloads"); };
+$("btnShare").onclick = copyLink;
+
+// Drag the Download button straight onto a DAW track (Chromium's
+// DownloadURL drag type). Other browsers just keep the click behaviour.
+$("btnDownload").addEventListener("dragstart", (ev) => {
+  try {
+    const q = params();
+    let name, url;
+    if (IS_STATIC) {
+      const r = staticRender(q);
+      const midi = window.STATIC_DATA.lib.eventsToMidi(r.events, { bpm: r.bpm });
+      let bin = ""; for (const byte of midi) bin += String.fromCharCode(byte);
+      name = `${r.patternId}_${r.bars}bars_${r.bpm}bpm${r.kit === "gm" ? "" : "_" + r.kit}.mid`;
+      url = "data:audio/midi;base64," + btoa(bin);
+    } else {
+      name = `${q.get("pattern")}_${q.get("bars")}bars_${q.get("bpm")}bpm.mid`;
+      url = location.origin + "/api/render.mid?" + q;
+    }
+    ev.dataTransfer.setData("DownloadURL", `audio/midi:${name}:${url}`);
+    ev.dataTransfer.effectAllowed = "copy";
+    counter("hit", "downloads");
+  } catch (_) { /* fall back to click */ }
+});
 for (const id of ["preset", "bars", "bpm"]) $(id).onchange = rerender;
 // Switching patterns keeps the tempo you set; the style's own tempo is only
 // suggested next to the BPM label (click it to apply).
@@ -906,8 +1004,8 @@ $("kit").onchange = () => loadKit($("kit").value);
 
 // Load a kit's pattern library into the dropdown, keeping the current
 // pattern selected when it exists in the new kit (same ids in both).
-async function loadKit(kitName, keepPattern) {
-  const prev = keepPattern ? null : $("pattern").value;
+async function loadKit(kitName, keepPattern, wantPattern) {
+  const prev = wantPattern || (keepPattern ? null : $("pattern").value);
   META = await apiMeta(new URLSearchParams({ kit: kitName || "gm" }));
   $("kit").replaceChildren();
   for (const [k, label] of Object.entries(META.kits)) {
@@ -940,14 +1038,26 @@ async function loadKit(kitName, keepPattern) {
 }
 
 (async function init() {
-  META = await apiMeta(new URLSearchParams({ kit: "gm" }));
+  const shared = readHash();
+  META = await apiMeta(new URLSearchParams({ kit: (shared && shared.kit) || "gm" }));
   for (const name of META.presets) {
     const o = document.createElement("option");
     o.value = o.textContent = name;
     $("preset").appendChild(o);
   }
   $("preset").value = META.presets.includes("breaks") ? "breaks" : META.presets[0];
-  await loadKit("gm", true);
+  if (shared) {
+    // Restore a shared take: controls first, then the kit load renders it.
+    if (shared.preset) $("preset").value = shared.preset;
+    if (shared.bars) $("bars").value = shared.bars;
+    if (shared.density) { $("density").value = shared.density; $("densityVal").textContent = (+shared.density).toFixed(2); }
+    if (shared.ghosts) { $("ghosts").value = shared.ghosts; $("ghostsVal").textContent = (+shared.ghosts).toFixed(2); }
+    if (shared.seed) seed = parseInt(shared.seed, 10);
+    await loadKit(shared.kit || "gm", true, shared.pattern);
+    if (shared.bpm) { $("bpm").value = shared.bpm; updateBpmHint(); await rerender(); }
+  } else {
+    await loadKit("gm", true);
+  }
   loadStats();
 })();
 </script>
